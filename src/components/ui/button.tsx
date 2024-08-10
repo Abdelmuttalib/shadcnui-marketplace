@@ -103,16 +103,21 @@ export interface ButtonLinkProps
   children?: React.ReactNode;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
+  target?: string;
 }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ className, variant, iconLeft, iconRight, size, ...props }, ref) => {
+  (
+    { className, variant, iconLeft, iconRight, target, size, ...props },
+    ref
+  ) => {
     return (
       <Link
         className={cn(buttonVariants({ variant, size, className }), {
           "inline-flex items-center justify-center gap-x-2":
             iconLeft || iconRight,
         })}
+        target={target}
         ref={ref}
         {...props}
       >

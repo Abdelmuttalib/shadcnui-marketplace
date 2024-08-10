@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button, ButtonLink, ButtonProps } from "@/components/ui/button";
 import { Bookmark } from "lucide-react";
 import { Typography } from "@/components/ui/typography";
 import { GradientBackground } from "@/components/gradient";
@@ -87,6 +87,17 @@ export function Hero() {
                   <span className="dark:opacity-70 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                     Coming soon...
                   </span>
+                </div>
+                <div>
+                  <ButtonLink
+                    href="https://github.com/Abdelmuttalib/shadcnui-marketplace"
+                    variant="ghost"
+                    target="_blank"
+                    iconLeft={<GitHubLogoIcon className="w-5" />}
+                    size="sm"
+                  >
+                    GitHub
+                  </ButtonLink>
                 </div>
 
                 {/* email input to register or waitlist */}
@@ -283,7 +294,12 @@ function ComponentsPreview() {
                   setOpen(false);
                 }}
                 triggerButton={
-                  <Button onClick={() => setOpen(true)}>Open Dialog</Button>
+                  <Button
+                    className="whitespace-nowrap"
+                    onClick={() => setOpen(true)}
+                  >
+                    Open Dialog
+                  </Button>
                 }
                 title="Dialog Title"
                 description="Dialog Description"
@@ -326,7 +342,6 @@ function ComponentsPreview() {
               <Skeleton className="h-6 w-full max-w-44" />
             </div>
           </section>
-          <section></section>
         </div>
       </div>
     </div>
@@ -403,6 +418,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import CustomDialog from "@/components/ui/animated-dialog";
 import { Skeleton } from "@/components/ui/skeleton";
 import ThemeSwitcher, { ThemeColorSelect } from "@/components/theme-select";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (

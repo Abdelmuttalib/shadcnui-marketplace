@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 import { ThemeColorWrapper } from "@/components/theme-color-wrapper";
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         <UICustomizer />
         <Component {...pageProps} />
+        <Analytics />
       </NextThemeProvider>
     </ThemeColorWrapper>
   );
