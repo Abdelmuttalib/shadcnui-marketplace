@@ -419,10 +419,30 @@ import CustomDialog from "@/components/ui/animated-dialog";
 import { Skeleton } from "@/components/ui/skeleton";
 import ThemeSwitcher, { ThemeColorSelect } from "@/components/theme-select";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title> shadcn-ui Marketplace</title>
+        <meta
+          name="description"
+          content="A marketplace for shadcn-ui components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, and guidelines."
+        />
+
+        <meta property="og:title" content="shadcn-ui Marketplace" />
+        <meta
+          property="og:description"
+          content="A marketplace for shadcn-ui components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, and guidelines."
+        />
+
+        {/* keywords */}
+        <meta
+          name="keywords"
+          content="shadcn-ui, marketplace, components, design system, tailwindcss, nextjs"
+        />
+      </Head>
       <main className="mb-40 space-y-40">
         <Hero />
       </main>
