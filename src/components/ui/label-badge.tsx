@@ -1,12 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { cn } from "@/utils/cn";
 
-import type { Label } from "@prisma/client";
 import type { ClassValue } from "clsx";
 
 interface LabelBadgeProps {
-  name: Label["name"];
-  color: Label["color"];
+  name: string;
+  color: string;
   className?: ClassValue;
 }
 

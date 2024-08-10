@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // import { Menu, Transition } from "@headlessui/react";
 // import { CheckIcon, LanguageIcon } from "@heroicons/react/20/solid";
 // import { Fragment } from "react";

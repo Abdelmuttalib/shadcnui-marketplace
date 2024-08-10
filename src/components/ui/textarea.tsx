@@ -3,7 +3,6 @@ import { cva } from "class-variance-authority";
 import React from "react";
 import { inputVariants } from "./input";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
