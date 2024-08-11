@@ -75,34 +75,33 @@ export function ThemeColorSelect() {
       <DropdownMenuContent className="w-24">
         {PRIMARY_THEME_COLORS?.map(
           ({ name, color }: { name: ThemeColorType; color: string }) => (
-            <DropdownMenuItem key={`${name}`}>
-              <button
-                onClick={() => {
-                  setThemeColor({
-                    colorName: name,
-                  });
+            <DropdownMenuItem
+              key={`${name}`}
+              onClick={() => {
+                setThemeColor({
+                  colorName: name,
+                });
+              }}
+              className={cn(
+                //  px-3 py-2.5
+                "flex w-full items-center font-medium capitalize text-foreground"
+                // {
+                //   "bg-primary-100 text-foreground":
+                //     name === themeColor.colorName,
+                //   "hover:bg-accent-hover": name !== themeColor.colorName,
+                // }
+              )}
+            >
+              <span
+                style={{
+                  backgroundColor: color,
                 }}
-                className={cn(
-                  //  px-3 py-2.5
-                  "flex w-full items-center font-medium capitalize text-foreground"
-                  // {
-                  //   "bg-primary-100 text-foreground":
-                  //     name === themeColor.colorName,
-                  //   "hover:bg-accent-hover": name !== themeColor.colorName,
-                  // }
-                )}
-              >
-                <span
-                  style={{
-                    backgroundColor: color,
-                  }}
-                  className={cn("mr-2 h-3 w-3 rounded-full")}
-                ></span>
-                <>{name}</>
-                {name == themeColor.colorName && (
-                  <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
-                )}
-              </button>
+                className={cn("mr-2 h-3 w-3 rounded-full")}
+              ></span>
+              <>{name}</>
+              {name == themeColor.colorName && (
+                <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
+              )}
             </DropdownMenuItem>
           )
         )}
