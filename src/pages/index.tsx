@@ -84,97 +84,117 @@ export function Hero() {
   }
 
   return (
-    <div className="relative flex flex-col min-h-[100svh] overflow-x-hidden pb-24 pt-36">
-      <Container className="relative isolate">
-        {/* <div
+    <>
+      <Head>
+        <title> shadcn ui Marketplace</title>
+        <meta
+          name="description"
+          content="A marketplace for shadcn ui kits and styles. Discover premium shadcn ui styles and ui designs for your web applications."
+        />
+
+        <meta property="og:title" content="shadcn ui Marketplace" />
+        <meta
+          property="og:description"
+          content="A marketplace for shadcn ui kits and styles. Discover premium shadcn ui styles and ui designs for your web applications."
+        />
+
+        {/* keywords */}
+        <meta
+          name="keywords"
+          content="shadcn ui, shadcn ui Marketplace, UI Kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, ShadCN UI, ShadCN UI Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
+        />
+      </Head>
+      <div className="relative flex flex-col min-h-[100svh] overflow-x-hidden pb-24 pt-36">
+        <Container className="relative isolate">
+          {/* <div
           aria-hidden="true"
           className="absolute inset-0 m-auto grid h-max w-full grid-cols-2 -space-x-52 opacity-40 dark:pb-32 dark:opacity-20"
         >
           <div className="h-57 bg-gradient-to-br from-primary to-purple-400  dark:from-blue-700"></div>
           <div className="h-32 bg-gradient-to-r from-brand-400 to-brand-300  dark:to-brand-600"></div>
         </div> */}
-        {/* <GradientBackground /> */}
-        <div className="relative grid grid-cols-1 gap-y-20 place-content-center place-items-center z-50">
-          <div className="relative max-w-xl text-center">
-            <div className="mx-auto space-y-8">
-              <Typography
-                as="h1"
-                variant="display-lg/medium"
-                className="text-left sm:text-center"
-              >
-                shadcn-ui components kits/styles
-              </Typography>
+          {/* <GradientBackground /> */}
+          <div className="relative grid grid-cols-1 gap-y-20 place-content-center place-items-center z-50">
+            <div className="relative max-w-xl text-center">
+              <div className="mx-auto space-y-8">
+                <Typography
+                  as="h1"
+                  variant="display-lg/medium"
+                  className="text-left sm:text-center"
+                >
+                  shadcn-ui components kits/styles
+                </Typography>
 
-              <Typography
-                as="p"
-                variant="base/regular"
-                className="mx-auto w-full max-w-4xl text-foreground-light text-left sm:text-center"
-              >
-                A marketplace for shadcn-ui components kits/styles. Create
-                beautiful and consistent web applications with a Design System
-                that provides a collection of components, styles, and
-                guidelines. Powered by shadcn-ui components.
-              </Typography>
-              {/* coming soon */}
-              <div className="flex flex-col items-center flex-wrap gap-x-4 gap-y-4">
-                <div className="space-y-4 w-full sm:max-w-xs mx-auto">
-                  <div>
-                    {/*  */}
+                <Typography
+                  as="p"
+                  variant="base/regular"
+                  className="mx-auto w-full max-w-4xl text-foreground-light text-left sm:text-center"
+                >
+                  A marketplace for shadcn-ui components kits/styles. Create
+                  beautiful and consistent web applications with a Design System
+                  that provides a collection of components, styles, and
+                  guidelines. Powered by shadcn-ui components.
+                </Typography>
+                {/* coming soon */}
+                <div className="flex flex-col items-center flex-wrap gap-x-4 gap-y-4">
+                  <div className="space-y-4 w-full sm:max-w-xs mx-auto">
                     <div>
-                      {!success ? (
-                        <form
-                          // @ts-ignore
-                          onSubmit={handleSubmit(onSubmit)}
-                          className="flex flex-col gap-y-4"
-                        >
-                          <div>
-                            <Input
-                              type="email"
-                              placeholder="Enter your email"
-                              {...register("email", {
-                                required: true,
-                              })}
-                              disabled={isSubmitting}
-                              // @ts-ignore
-                              size="lg"
-                            />
-                          </div>
-                          <Button
-                            type="submit"
-                            isLoading={isSubmitting}
-                            disabled={isSubmitting || success}
-                            size="lg"
+                      {/*  */}
+                      <div>
+                        {!success ? (
+                          <form
+                            // @ts-ignore
+                            onSubmit={handleSubmit(onSubmit)}
+                            className="flex flex-col gap-y-4"
                           >
-                            Join waitlist
-                          </Button>
-                        </form>
-                      ) : (
-                        <div>
-                          <p className="text-foreground-light text-sm">
-                            {message}
-                          </p>
-                        </div>
-                      )}
-                      {!success && message && (
-                        <div className="mt-2">
-                          <p className="text-foreground-light text-sm">
-                            {message}
-                          </p>
-                        </div>
-                      )}
+                            <div>
+                              <Input
+                                type="email"
+                                placeholder="Enter your email"
+                                {...register("email", {
+                                  required: true,
+                                })}
+                                disabled={isSubmitting}
+                                // @ts-ignore
+                                size="lg"
+                              />
+                            </div>
+                            <Button
+                              type="submit"
+                              isLoading={isSubmitting}
+                              disabled={isSubmitting || success}
+                              size="lg"
+                            >
+                              Join waitlist
+                            </Button>
+                          </form>
+                        ) : (
+                          <div>
+                            <p className="text-foreground-light text-sm">
+                              {message}
+                            </p>
+                          </div>
+                        )}
+                        {!success && message && (
+                          <div className="mt-2">
+                            <p className="text-foreground-light text-sm">
+                              {message}
+                            </p>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  {/*
+                    {/*
                   <span className="dark:opacity-70 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                     Coming soon...
                   </span> */}
 
-                  <div className="flex items-start sm:items-center justify-center gap-2">
-                    <ThemeSwitcher variant="outline" />
-                    <ThemeColorSelect />
+                    <div className="flex items-start sm:items-center justify-center gap-2">
+                      <ThemeSwitcher variant="outline" />
+                      <ThemeColorSelect />
+                    </div>
                   </div>
-                </div>
-                {/* <div>
+                  {/* <div>
                   <ButtonLink
                     href="https://github.com/Abdelmuttalib/shadcnui-marketplace"
                     variant="ghost"
@@ -186,8 +206,8 @@ export function Hero() {
                   </ButtonLink>
                 </div> */}
 
-                {/* email input to register or waitlist */}
-                {/* <div>
+                  {/* email input to register or waitlist */}
+                  {/* <div>
                   <div>
                     <Input
                       type="email"
@@ -196,139 +216,140 @@ export function Hero() {
                     />
                   </div>
                 </div> */}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <ComponentShowcase className="h-96 w-full max-w-md">
-              <GrayColors />
-            </ComponentShowcase>
-            <ComponentShowcase>
-              <div className="flex flex-wrap gap-4">
-                {buttonVariants.map((variant) => {
-                  return (
-                    <div className="space-x-7" key={variant}>
-                      {buttonSizes.reverse().map((size) => (
-                        <Button
-                          key={size}
-                          variant={variant}
-                          size={size}
-                          className="capitalize"
-                        >
-                          {variant?.replace("-", " ")}
-                        </Button>
-                      ))}
-                      {/* {["xs", "sm", "default", "lg"].reverse().map((size) => (
+            <div className="flex flex-wrap gap-4 justify-center">
+              <ComponentShowcase className="h-96 w-full max-w-md">
+                <GrayColors />
+              </ComponentShowcase>
+              <ComponentShowcase>
+                <div className="flex flex-wrap gap-4">
+                  {buttonVariants.map((variant) => {
+                    return (
+                      <div className="space-x-7" key={variant}>
+                        {buttonSizes.reverse().map((size) => (
+                          <Button
+                            key={size}
+                            variant={variant}
+                            size={size}
+                            className="capitalize"
+                          >
+                            {variant?.replace("-", " ")}
+                          </Button>
+                        ))}
+                        {/* {["xs", "sm", "default", "lg"].reverse().map((size) => (
                       <Button key={size} variant={variant} size={size}>
                         Button
                       </Button>
                     ))} */}
-                    </div>
-                  );
-                })}
-              </div>
-            </ComponentShowcase>
-            <ComponentShowcase>
-              <div className="flex flex-wrap gap-4">
-                {buttonVariants.map((variant) => {
-                  return (
-                    <div className="space-x-7" key={variant}>
-                      {buttonSizes.reverse().map((size) => (
-                        <IconButton key={size} variant={variant} size={size}>
-                          <Bookmark className="w-[22px]" />
-                        </IconButton>
-                      ))}
-                    </div>
-                  );
-                })}
-              </div>
-            </ComponentShowcase>
+                      </div>
+                    );
+                  })}
+                </div>
+              </ComponentShowcase>
+              <ComponentShowcase>
+                <div className="flex flex-wrap gap-4">
+                  {buttonVariants.map((variant) => {
+                    return (
+                      <div className="space-x-7" key={variant}>
+                        {buttonSizes.reverse().map((size) => (
+                          <IconButton key={size} variant={variant} size={size}>
+                            <Bookmark className="w-[22px]" />
+                          </IconButton>
+                        ))}
+                      </div>
+                    );
+                  })}
+                </div>
+              </ComponentShowcase>
 
-            <ComponentShowcase className="h-[39rem]  w-full max-w-lg">
-              <NotificationsCard />
-            </ComponentShowcase>
-            <ComponentShowcase className="h-96 w-96">
-              <BlogCard post={posts[0]} />
-            </ComponentShowcase>
-            <ComponentShowcase className="h-96 w-96">
-              <DataTable columns={columns} data={payments} />
-            </ComponentShowcase>
-            <ComponentShowcase className="h-[25rem] w-full max-w-2xl">
-              <SimpleCard />
-            </ComponentShowcase>
-            <ComponentShowcase className="h-96 w-full max-w-md">
-              <div className="-mt-2 p-2 bg-layer h-fit rounded-3xl lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                <div className="rounded-2xl bg-accent-hover/30 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                  <div className="mx-auto max-w-xs px-8">
-                    <p className="text-base font-semibold text-foreground-light">
-                      Pay once, own it forever
-                    </p>
-                    <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                      <span className="text-5xl font-bold tracking-tight text-foreground">
-                        $349
-                      </span>
-                      <span className="text-sm font-semibold leading-6 tracking-wide text-foreground-light">
-                        USD
-                      </span>
-                    </p>
-                    {/* className="mt-10 mb-2 block w-full rounded-md bg-primary-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" */}
-                    <Button fullWidth>Get access</Button>
-                    <p className="mt-6 text-xs leading-5 text-foreground-light">
-                      Invoices and receipts available for easy company
-                      reimbursement
-                    </p>
+              <ComponentShowcase className="h-[39rem]  w-full max-w-lg">
+                <NotificationsCard />
+              </ComponentShowcase>
+              <ComponentShowcase className="h-96 w-96">
+                <BlogCard post={posts[0]} />
+              </ComponentShowcase>
+              <ComponentShowcase className="h-96 w-96">
+                <DataTable columns={columns} data={payments} />
+              </ComponentShowcase>
+              <ComponentShowcase className="h-[25rem] w-full max-w-2xl">
+                <SimpleCard />
+              </ComponentShowcase>
+              <ComponentShowcase className="h-96 w-full max-w-md">
+                <div className="-mt-2 p-2 bg-layer h-fit rounded-3xl lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+                  <div className="rounded-2xl bg-accent-hover/30 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                    <div className="mx-auto max-w-xs px-8">
+                      <p className="text-base font-semibold text-foreground-light">
+                        Pay once, own it forever
+                      </p>
+                      <p className="mt-6 flex items-baseline justify-center gap-x-2">
+                        <span className="text-5xl font-bold tracking-tight text-foreground">
+                          $349
+                        </span>
+                        <span className="text-sm font-semibold leading-6 tracking-wide text-foreground-light">
+                          USD
+                        </span>
+                      </p>
+                      {/* className="mt-10 mb-2 block w-full rounded-md bg-primary-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" */}
+                      <Button fullWidth>Get access</Button>
+                      <p className="mt-6 text-xs leading-5 text-foreground-light">
+                        Invoices and receipts available for easy company
+                        reimbursement
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ComponentShowcase>
-            <ComponentShowcase className="h-[30.5rem] w-full max-w-sm">
-              <SignInCard />
-            </ComponentShowcase>
-            <ComponentShowcase className="h-[27.5rem] w-full max-w-7xl">
-              <PricingCard />
-            </ComponentShowcase>
-            {/* <ComponentsPreview2 /> */}
+              </ComponentShowcase>
+              <ComponentShowcase className="h-[30.5rem] w-full max-w-sm">
+                <SignInCard />
+              </ComponentShowcase>
+              <ComponentShowcase className="h-[27.5rem] w-full max-w-7xl">
+                <PricingCard />
+              </ComponentShowcase>
+              {/* <ComponentsPreview2 /> */}
 
-            {/* <ComponentsPreview /> */}
-          </div>
-          <div className="mt-96 space-y-4">
-            {/* <h3 className="text-2xl font-bold tracking-tight text-foreground">
+              {/* <ComponentsPreview /> */}
+            </div>
+            <div className="mt-96 space-y-4">
+              {/* <h3 className="text-2xl font-bold tracking-tight text-foreground">
               Sign up for the waitlist
             </h3> */}
 
-            <Typography as="h2" variant="xl/medium" className="">
-              Going beyond{" "}
-              <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
-                Default
-              </span>{" "}
-              and{" "}
-              <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
-                New York
-              </span>
-            </Typography>
-
-            <div className="flex items-center gap-x-1.5">
-              <CheckBadgeIcon className="w-5 text-foreground-500/80" />
-              <Typography
-                as="p"
-                variant="md/regular"
-                className="whitespace-nowrap text-foreground-light"
-              >
-                Powered by{" "}
-                <a
-                  href="https://ui.shadcn.com/"
-                  target="_blank"
-                  className="text-primary font-medium"
-                >
-                  shadcn-ui
-                </a>{" "}
-                components
+              <Typography as="h2" variant="xl/medium" className="">
+                Going beyond{" "}
+                <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
+                  Default
+                </span>{" "}
+                and{" "}
+                <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
+                  New York
+                </span>
               </Typography>
+
+              <div className="flex items-center gap-x-1.5">
+                <CheckBadgeIcon className="w-5 text-foreground-500/80" />
+                <Typography
+                  as="p"
+                  variant="md/regular"
+                  className="whitespace-nowrap text-foreground-light"
+                >
+                  Powered by{" "}
+                  <a
+                    href="https://ui.shadcn.com/"
+                    target="_blank"
+                    className="text-primary font-medium"
+                  >
+                    shadcn-ui
+                  </a>{" "}
+                  components
+                </Typography>
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   );
 }
 
@@ -1098,7 +1119,7 @@ import {
   PricingCard,
   SignInCard,
   SimpleCard,
-} from "./ui";
+} from "../components/ui-c";
 import { cn } from "@/utils/cn";
 import { formatDate, formatDateDayTime } from "@/utils/date";
 import Link from "next/link";
