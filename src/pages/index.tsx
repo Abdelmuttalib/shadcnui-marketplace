@@ -1,13 +1,14 @@
 import * as React from "react";
 
 import { Button, ButtonLink, ButtonProps } from "@/components/ui/button";
-import { Bookmark } from "lucide-react";
+import { Bookmark, CheckCheckIcon } from "lucide-react";
 import { Typography } from "@/components/ui/typography";
 import { GradientBackground } from "@/components/gradient";
 import Container from "@/components/container";
 import { IconButton } from "@/components/ui/icon-button";
 
 import { CheckBadgeIcon, CheckIcon } from "@heroicons/react/20/solid";
+import { ArrowPathIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 export function SuccessBadge() {
   return (
@@ -29,8 +30,59 @@ export function SuccessBadge() {
     </>
   );
 }
+// #030101, opacity 100%
+// #0300d6
+
+// hsl(100, 9%, 93%)
+// #edefec
+// rgb(237, 239, 236)
+
+import { useForm, SubmitHandler } from "react-hook-form";
+
+import { z } from "zod";
+
+const waitlistFormSchema = z.object({
+  email: z.string().email(),
+});
+
+type FormSchema = z.infer<typeof waitlistFormSchema>;
 
 export function Hero() {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [message, setMessage] = React.useState("");
+  const [success, setSuccess] = React.useState(false);
+
+  const { register, handleSubmit, reset } = useForm();
+
+  async function onSubmit(formData: FormSchema) {
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage("Thank you, You are on the list");
+        setSuccess(true);
+        reset();
+      } else {
+        setMessage(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <div className="relative flex flex-col min-h-[100svh] overflow-x-hidden pb-24 pt-36">
       <Container className="relative isolate">
@@ -38,57 +90,91 @@ export function Hero() {
           aria-hidden="true"
           className="absolute inset-0 m-auto grid h-max w-full grid-cols-2 -space-x-52 opacity-40 dark:pb-32 dark:opacity-20"
         >
-          <div className="h-56 bg-gradient-to-br from-primary to-purple-400  dark:from-blue-700"></div>
+          <div className="h-57 bg-gradient-to-br from-primary to-purple-400  dark:from-blue-700"></div>
           <div className="h-32 bg-gradient-to-r from-brand-400 to-brand-300  dark:to-brand-600"></div>
         </div> */}
-        <GradientBackground />
-        <div className="relative grid grid-cols-1 gap-y-20 lg:grid-cols-2 z-50">
-          <div className="relative lg:pr-32">
+        {/* <GradientBackground /> */}
+        <div className="relative grid grid-cols-1 gap-y-20 place-content-center place-items-center z-50">
+          <div className="relative max-w-xl text-center">
             <div className="mx-auto space-y-8">
-              <Typography as="h1" variant="display-lg/semibold">
-                shadcn-ui components kits
+              <Typography
+                as="h1"
+                variant="display-lg/medium"
+                className="text-left sm:text-center"
+              >
+                shadcn-ui components kits/styles
               </Typography>
 
               <Typography
                 as="p"
-                variant="lg/regular"
-                className="mx-auto w-full max-w-4xl text-foreground-light"
+                variant="base/regular"
+                className="mx-auto w-full max-w-4xl text-foreground-light text-left sm:text-center"
               >
-                A marketplace for shadcn-ui components kits. Create beautiful
-                and consistent web applications with a Design System that
-                provides a collection of components, styles, and guidelines.
+                A marketplace for shadcn-ui components kits/styles. Create
+                beautiful and consistent web applications with a Design System
+                that provides a collection of components, styles, and
+                guidelines. Powered by shadcn-ui components.
               </Typography>
               {/* coming soon */}
-              <div className="flex flex-col flex-wrap gap-x-4 gap-y-4">
-                <div className="flex items-start sm:items-center gap-2">
-                  <ThemeSwitcher variant="outline" />
-                  <ThemeColorSelect />
-                </div>
-                <div className="space-y-4 max-w-xs">
-                  <div className="flex items-center gap-x-1.5 rounded bg-layer-3 border px-2.5 py-2 backdrop-blur">
-                    <CheckBadgeIcon className="w-5 text-foreground-500/80" />
-                    <Typography
-                      as="p"
-                      variant="sm/regular"
-                      className="whitespace-nowrap text-foreground-light"
-                    >
-                      Powered by{" "}
-                      <a
-                        href="https://ui.shadcn.com/"
-                        target="_blank"
-                        className="text-primary-500 font-medium"
-                      >
-                        shadcn-ui
-                      </a>{" "}
-                      components
-                    </Typography>
+              <div className="flex flex-col items-center flex-wrap gap-x-4 gap-y-4">
+                <div className="space-y-4 w-full sm:max-w-xs mx-auto">
+                  <div>
+                    {/*  */}
+                    <div>
+                      {!success ? (
+                        <form
+                          // @ts-ignore
+                          onSubmit={handleSubmit(onSubmit)}
+                          className="flex flex-col gap-y-4"
+                        >
+                          <div>
+                            <Input
+                              type="email"
+                              placeholder="Enter your email"
+                              {...register("email", {
+                                required: true,
+                              })}
+                              disabled={isSubmitting}
+                              // @ts-ignore
+                              size="lg"
+                            />
+                          </div>
+                          <Button
+                            type="submit"
+                            isLoading={isSubmitting}
+                            disabled={isSubmitting || success}
+                            size="lg"
+                          >
+                            Join waitlist
+                          </Button>
+                        </form>
+                      ) : (
+                        <div>
+                          <p className="text-foreground-light text-sm">
+                            {message}
+                          </p>
+                        </div>
+                      )}
+                      {!success && message && (
+                        <div className="mt-2">
+                          <p className="text-foreground-light text-sm">
+                            {message}
+                          </p>
+                        </div>
+                      )}
+                    </div>
                   </div>
-
+                  {/*
                   <span className="dark:opacity-70 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                     Coming soon...
-                  </span>
+                  </span> */}
+
+                  <div className="flex items-start sm:items-center justify-center gap-2">
+                    <ThemeSwitcher variant="outline" />
+                    <ThemeColorSelect />
+                  </div>
                 </div>
-                <div>
+                {/* <div>
                   <ButtonLink
                     href="https://github.com/Abdelmuttalib/shadcnui-marketplace"
                     variant="ghost"
@@ -98,7 +184,7 @@ export function Hero() {
                   >
                     GitHub
                   </ButtonLink>
-                </div>
+                </div> */}
 
                 {/* email input to register or waitlist */}
                 {/* <div>
@@ -113,13 +199,529 @@ export function Hero() {
               </div>
             </div>
           </div>
-          <div className="">
-            <ComponentsPreview />
+          <div className="flex flex-wrap gap-4 justify-center">
+            <ComponentShowcase className="h-96 w-full max-w-md">
+              <GrayColors />
+            </ComponentShowcase>
+            <ComponentShowcase>
+              <div className="flex flex-wrap gap-4">
+                {buttonVariants.map((variant) => {
+                  return (
+                    <div className="space-x-7" key={variant}>
+                      {buttonSizes.reverse().map((size) => (
+                        <Button
+                          key={size}
+                          variant={variant}
+                          size={size}
+                          className="capitalize"
+                        >
+                          {variant?.replace("-", " ")}
+                        </Button>
+                      ))}
+                      {/* {["xs", "sm", "default", "lg"].reverse().map((size) => (
+                      <Button key={size} variant={variant} size={size}>
+                        Button
+                      </Button>
+                    ))} */}
+                    </div>
+                  );
+                })}
+              </div>
+            </ComponentShowcase>
+            <ComponentShowcase>
+              <div className="flex flex-wrap gap-4">
+                {buttonVariants.map((variant) => {
+                  return (
+                    <div className="space-x-7" key={variant}>
+                      {buttonSizes.reverse().map((size) => (
+                        <IconButton key={size} variant={variant} size={size}>
+                          <Bookmark className="w-[22px]" />
+                        </IconButton>
+                      ))}
+                    </div>
+                  );
+                })}
+              </div>
+            </ComponentShowcase>
+
+            <ComponentShowcase className="h-[39rem]  w-full max-w-lg">
+              <NotificationsCard />
+            </ComponentShowcase>
+            <ComponentShowcase className="h-96 w-96">
+              <BlogCard post={posts[0]} />
+            </ComponentShowcase>
+            <ComponentShowcase className="h-96 w-96">
+              <DataTable columns={columns} data={payments} />
+            </ComponentShowcase>
+            <ComponentShowcase className="h-[25rem] w-full max-w-2xl">
+              <SimpleCard />
+            </ComponentShowcase>
+            <ComponentShowcase className="h-96 w-full max-w-md">
+              <div className="-mt-2 p-2 bg-layer h-fit rounded-3xl lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+                <div className="rounded-2xl bg-accent-hover/30 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                  <div className="mx-auto max-w-xs px-8">
+                    <p className="text-base font-semibold text-foreground-light">
+                      Pay once, own it forever
+                    </p>
+                    <p className="mt-6 flex items-baseline justify-center gap-x-2">
+                      <span className="text-5xl font-bold tracking-tight text-foreground">
+                        $349
+                      </span>
+                      <span className="text-sm font-semibold leading-6 tracking-wide text-foreground-light">
+                        USD
+                      </span>
+                    </p>
+                    {/* className="mt-10 mb-2 block w-full rounded-md bg-primary-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" */}
+                    <Button fullWidth>Get access</Button>
+                    <p className="mt-6 text-xs leading-5 text-foreground-light">
+                      Invoices and receipts available for easy company
+                      reimbursement
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ComponentShowcase>
+            <ComponentShowcase className="h-[30.5rem] w-full max-w-sm">
+              <SignInCard />
+            </ComponentShowcase>
+            <ComponentShowcase className="h-[27.5rem] w-full max-w-7xl">
+              <PricingCard />
+            </ComponentShowcase>
+            {/* <ComponentsPreview2 /> */}
+
+            {/* <ComponentsPreview /> */}
+          </div>
+          <div className="mt-96 space-y-4">
+            {/* <h3 className="text-2xl font-bold tracking-tight text-foreground">
+              Sign up for the waitlist
+            </h3> */}
+
+            <Typography as="h2" variant="xl/medium" className="">
+              Going beyond{" "}
+              <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
+                Default
+              </span>{" "}
+              and{" "}
+              <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
+                New York
+              </span>
+            </Typography>
+
+            <div className="flex items-center gap-x-1.5">
+              <CheckBadgeIcon className="w-5 text-foreground-500/80" />
+              <Typography
+                as="p"
+                variant="md/regular"
+                className="whitespace-nowrap text-foreground-light"
+              >
+                Powered by{" "}
+                <a
+                  href="https://ui.shadcn.com/"
+                  target="_blank"
+                  className="text-primary font-medium"
+                >
+                  shadcn-ui
+                </a>{" "}
+                components
+              </Typography>
+            </div>
           </div>
         </div>
       </Container>
     </div>
   );
+}
+
+function ComponentShowcase({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={cn("grid gap-4 row-span-3", className)}>
+      <div>
+        <div
+          className={cn(
+            "relative border rounded-2xl bg-layer-2 w-96 h-72 overflow-hidden",
+            className
+          )}
+        >
+          {/* <GradientBackground /> */}
+          <div
+            className="absolute left-6 top-6 transform-gpu overflow-hidden opacity-30 blur-lg"
+            aria-hidden="true"
+          >
+            <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-primary to-[#9089fc]" />
+          </div>
+          {/* <div></div> */}
+          <div className="absolute w-full h-full left-12 top-12 m-auto p-3 bg-background rounded-xl shadow-2xl border">
+            {children}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export const payments: Payment[] = [
+  {
+    id: "728e",
+    amount: 100,
+    status: "pending",
+    email: "m@mail.com",
+  },
+  {
+    id: "489e",
+    amount: 125,
+    status: "processing",
+    email: "john@gmail.com",
+  },
+  {
+    id: "2f9e",
+    amount: 175,
+    status: "success",
+    email: "doe@gmail.com",
+  },
+];
+
+import { ColumnDef } from "@tanstack/react-table";
+
+// This type is used to define the shape of our data.
+// You can use a Zod schema here if you want.
+export type Payment = {
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
+
+function getPaymentStatusBadgeColor(status: string) {
+  switch (status) {
+    case "pending":
+      return "primary";
+    case "processing":
+      return "blue";
+    case "success":
+      return "green";
+    case "failed":
+      return "red";
+    default:
+      return "white";
+  }
+}
+
+export const columns: ColumnDef<Payment>[] = [
+  {
+    accessorKey: "id",
+    header: "ID",
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+    cell: ({ cell }) => {
+      return (
+        <Badge
+          variant={getPaymentStatusBadgeColor(
+            cell.getValue() as unknown as string
+          )}
+        >
+          <>{cell.getValue()}</>
+        </Badge>
+      );
+    },
+  },
+  // {
+  //   accessorKey: "amount",
+  //   header: "Amount",
+  // },
+];
+
+function ComponentsPreview2() {
+  return (
+    <div className="flex flex-col gap-y-10 rounded w-full">
+      <SimpleCard />
+      <div className="flex flex-wrap gap-4">
+        {buttonVariants.map((variant) => {
+          return (
+            <div className="space-x-7" key={variant}>
+              {buttonSizes.reverse().map((size) => (
+                <Button key={size} variant={variant} size={size}>
+                  Button
+                </Button>
+              ))}
+              {/* {["xs", "sm", "default", "lg"].reverse().map((size) => (
+                      <Button key={size} variant={variant} size={size}>
+                        Button
+                      </Button>
+                    ))} */}
+            </div>
+          );
+        })}
+      </div>
+      <GrayColors className="border" />
+      <div className="flex flex-wrap w-full gap-6">
+        <NotificationsCard />
+        <DataTable columns={columns} data={payments} />
+        <div className="-mt-2 p-2 bg-layer h-fit rounded-3xl lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div className="rounded-2xl bg-accent-hover/30 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+            <div className="mx-auto max-w-xs px-8">
+              <p className="text-base font-semibold text-foreground-light">
+                Pay once, own it forever
+              </p>
+              <p className="mt-6 flex items-baseline justify-center gap-x-2">
+                <span className="text-5xl font-bold tracking-tight text-foreground">
+                  $349
+                </span>
+                <span className="text-sm font-semibold leading-6 tracking-wide text-foreground-light">
+                  USD
+                </span>
+              </p>
+              {/* className="mt-10 mb-2 block w-full rounded-md bg-primary-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" */}
+              <Button fullWidth>Get access</Button>
+              <p className="mt-6 text-xs leading-5 text-foreground-light">
+                Invoices and receipts available for easy company reimbursement
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <BlogCard post={posts[0]} className="w-full h-fit" />
+          <SignInCard />
+        </div>
+      </div>
+
+      <PricingCard />
+      {/* <Pricing /> */}
+      {/* <ClassicCard /> */}
+
+      {/* <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        {posts.map((post) => (
+          <BlogCard post={post} />
+        ))}
+      </div> */}
+    </div>
+  );
+}
+
+function NotificationsCard() {
+  return (
+    <div className="w-full max-w-lg shadow rounded-lg p-6 bg-layer space-y-4">
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-medium text-foreground sm:text-2xl">
+          Notifications{" "}
+        </h3>
+        {/* <p>
+          <span className="text-xs font-medium text-gray-400 dark:text-gray-500">
+            {notifications.length} notifications
+          </span>
+        </p> */}
+        <div>
+          <Button
+            size="xs"
+            variant="secondary"
+            leftIcon={<CheckCheckIcon className="w-4" />}
+          >
+            Mark all as read
+          </Button>
+        </div>
+      </div>
+      <div>
+        <NotificationsTabs />
+      </div>
+    </div>
+  );
+}
+
+import { Tab } from "@headlessui/react";
+
+const notifications = [
+  {
+    id: 1,
+    avatar:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "John Doe",
+    message: "liked your post",
+    date: new Date(),
+    time: "2 minutes ago",
+    type: "following",
+    isRead: false,
+  },
+  {
+    id: 2,
+    avatar:
+      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "John Doe",
+    message: "commented on your photo",
+    date: new Date(),
+    time: "10 minutes ago",
+    type: "archive",
+    isRead: true,
+  },
+  {
+    id: 3,
+    avatar:
+      "https://images.unsplash.com/photo-1654110455429-cf322b40a906?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Jaden Clark",
+    message: "shared your post",
+    date: new Date(),
+    time: "5 hours ago",
+    type: "archive",
+    isRead: false,
+  },
+
+  {
+    id: 4,
+    avatar:
+      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Chris Lee",
+    message: "invited you to ProjectX",
+    date: new Date(),
+    time: "1 week ago",
+    type: "invites",
+    isRead: true,
+  },
+];
+
+const NotificationsTabs = () => {
+  const notificationsData = {
+    All: notifications,
+    Following: notifications?.filter(
+      (notification) => notification.type === "following"
+    ),
+    Invites: notifications?.filter(
+      (notification) => notification.type === "invites"
+    ),
+    Archive: notifications?.filter(
+      (notification) => notification.type === "archive"
+    ),
+  };
+
+  return (
+    <div className="w-full">
+      <Tab.Group>
+        <Tab.List className="flex bg-accent-hover/50 border w-full p-1.5 py-1 rounded">
+          {Object.keys(notificationsData).map((notificationLabel) => (
+            <Tab
+              key={notificationLabel}
+              as="button"
+              className={({ selected }) =>
+                cn(
+                  "capitalize w-full px-5 whitespace-nowrap py-2 rounded text-sm font-medium leading-5 sm:py-2",
+                  "focus:outline-none",
+                  selected
+                    ? "text-primary-600 dark:text-foreground bg-background shadow"
+                    : "text-foreground-lighter"
+                )
+              }
+            >
+              {notificationLabel.toLocaleLowerCase()} {/* @ts-ignore */}
+              <span className="bg-accent-hover/50 px-1.5 py-0.5 ml-0.5 rounded border text-xs font-medium">
+                {/* @ts-ignore */}
+                {notificationsData[notificationLabel].length}
+              </span>
+            </Tab>
+          ))}
+        </Tab.List>
+
+        <Tab.Panels>
+          <div>
+            {Object.values(notificationsData).map((notifications, idx) => (
+              <Tab.Panel key={idx} className="py-3 focus:outline-none">
+                <div className="w-full divide-y divide-border">
+                  {notifications?.map((notification) => (
+                    <Notification
+                      key={notification.id}
+                      notification={notification}
+                    />
+                  ))}
+                </div>
+              </Tab.Panel>
+            ))}
+          </div>
+        </Tab.Panels>
+      </Tab.Group>
+    </div>
+  );
+};
+
+function Notification({
+  notification,
+}: {
+  notification: (typeof notifications)[number];
+}) {
+  return (
+    <div
+      key={notification.id}
+      className={cn(
+        "relative flex w-full gap-4 px-4 py-2 hover:bg-primary-100/20 focus:bg-primary-100/30 sm:py-5",
+        "hover:bg-accent-hover/50",
+        {
+          "bg-accent-hover/50": !notification.isRead,
+        }
+      )}
+    >
+      {/* not read notification indicator  */}
+      {!notification.isRead && (
+        <div className="absolute top-3 right-4 h-2.5 w-2.5 rounded-full bg-primary dark:bg-primary-400"></div>
+      )}
+      <div className="h-fit w-fit">
+        <div className="relative">
+          <img
+            src={notification.avatar}
+            alt="avatar"
+            className="w-12 h-10 rounded-full block"
+          />
+          {/* online indicator  */}
+          {notification.id % 2 === 0 && (
+            <div className="absolute -top-0.5 -right-0.5 flex items-center gap-x-1.5">
+              <div className="flex-none rounded-full bg-emerald-500/20 p-[3px]">
+                <div className="h-2 w-2 rounded-full bg-emerald-500" />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="w-full flex flex-col gap-2">
+        <p className="font-medium text-sm">
+          {notification.name}
+          <span className="font-normal ml-1 text-foreground-light">
+            {notification.message}
+          </span>
+        </p>
+
+        {notification.id === 4 && (
+          <div className="flex gap-2">
+            <Button size="xs" variant="outline">
+              Decline
+            </Button>
+            <Button size="xs">Accept</Button>
+          </div>
+        )}
+        <div className="flex w-full justify-between">
+          <p className="text-xs font-medium text-gray-400 dark:text-gray-500">
+            <RenderAfterMount>
+              {formatDateDayTime(notification.date)}
+            </RenderAfterMount>
+          </p>
+          <p className="text-xs font-medium text-gray-400 dark:text-gray-500">
+            {notification.time}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function RenderAfterMount({ children }: { children: React.ReactNode }) {
+  const mounted = useMounted();
+
+  return mounted ? children : null;
 }
 
 const buttonVariants = [
@@ -138,6 +740,75 @@ const buttonSizes = [
   "default",
   //  "lg"
 ] as ButtonProps["size"][];
+
+function GrayColors({ className }: { className?: string }) {
+  return (
+    <div className="flex flex-wrap gap-4">
+      <div
+        className={cn(
+          "flex flex-wrap overflow-hidden rounded gap-2",
+          className
+        )}
+      >
+        {["50", "100", "200", "300", "400", "500", "600", "700", "800", "900"]
+          .reverse()
+          .map((gray) => {
+            const color = `bg-primary-${gray}`;
+
+            return (
+              <div key={color} className="flex flex-col text-xs items-center">
+                {gray}
+                <div
+                  className="size-10 rounded-lg"
+                  style={{
+                    backgroundColor: `hsl(var(--color-primary-${gray}))`,
+                  }}
+                ></div>
+              </div>
+            );
+          })}
+      </div>
+
+      <div
+        className={cn(
+          "flex flex-wrap overflow-hidden rounded gap-2",
+          className
+        )}
+      >
+        {[
+          "50",
+          "100",
+          "200",
+          "300",
+          "400",
+          "500",
+          "600",
+          "650",
+          "700",
+          "750",
+          "800",
+          "850",
+        ]
+          .reverse()
+          .map((gray) => {
+            const color = `bg-gray-${gray}`;
+
+            return (
+              <div key={color} className="flex flex-col text-xs items-center">
+                {gray}
+                <div
+                  className="size-10 rounded-lg"
+                  style={{
+                    backgroundColor: `hsl(var(--color-gray-${gray}))`,
+                  }}
+                ></div>
+              </div>
+            );
+          })}
+      </div>
+    </div>
+  );
+}
 
 function ComponentsPreview() {
   const [open, setOpen] = React.useState(false);
@@ -420,6 +1091,19 @@ import { Skeleton } from "@/components/ui/skeleton";
 import ThemeSwitcher, { ThemeColorSelect } from "@/components/theme-select";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Head from "next/head";
+import {
+  BlogCard,
+  posts,
+  Pricing,
+  PricingCard,
+  SignInCard,
+  SimpleCard,
+} from "./ui";
+import { cn } from "@/utils/cn";
+import { formatDate, formatDateDayTime } from "@/utils/date";
+import Link from "next/link";
+import { DataTable } from "@/components/ui/data-table-2";
+import { useMounted } from "@/hooks/use-mounted";
 
 export default function Home() {
   return (
@@ -742,7 +1426,7 @@ export function DesignSystemGuide() {
             <code>{`
   /* example */
 
-  import { type VariantProps, cva } from 'class-variance-authority';
+  import { type VariantProps, cva } from 'className-variance-authority';
 
   import cn from '@/lib/cn';
 

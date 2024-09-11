@@ -41,6 +41,22 @@
     --color-gray-900: 215 30% 3%; /* hsl(215 30% 3%) */
     --color-gray-950: 215 30% 0%; /* hsl(215 30% 0%) */
 
+    --color-grayy: 0 0% 42%; /* hsl(0 0% 42) */
+    --color-grayy-50: 0 0% 97%; /* hsl(0 0% 97) */
+    --color-grayy-100: 0 0% 93%; /* hsl(0 0% 93) */
+    --color-grayy-200: 0 0% 87%; /* hsl(0 0% 87) */
+    --color-grayy-300: 0 0% 75%; /* hsl(0 0% 75) */
+    --color-grayy-400: 0 0% 63%; /* hsl(0 0% 63) */
+    --color-grayy-500: 0 0% 42%; /* hsl(0 0% 42) */
+    --color-grayy-550: 0 0% 27%; /* hsl(0 0% 27) */
+    --color-grayy-650: 0 0% 20%; /* hsl(0 0% 20) */
+    --color-grayy-700: 0 0% 17%; /* hsl(0 0% 17) */
+    --color-grayy-750: 0 0% 13%; /* hsl(0 0% 13) */
+    --color-grayy-800: 0 0% 10%; /* hsl(0 0% 10) */
+    --color-grayy-850: 0 0% 8%; /* hsl(0 0% 8) */
+    --color-grayy-900: 0 0% 5%; /* hsl(0 0% 5) */
+    --color-grayy-950: 0 0% 2%; /* hsl(0 0% 2) */
+
     /* red */
     --color-red: 7 100% 61.4%; /* #FF513A */
     --color-red-50: 25.3 100% 96.3%; /* #FFF4EC */
@@ -154,9 +170,6 @@
     --color-text-lighter: var(--color-gray-500);
 
     --color-text-muted: var(--color-gray-500);
-    --color-text-muted-light: var(--color-gray-400);
-    --color-text-muted-dark: var(--color-gray-300);
-    --color-text-muted-darker: var(--color-gray-200);
 
     --font-xs: 0.75rem; /* 12px */
     --font-sm: 0.875rem; /* 14px */

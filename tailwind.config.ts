@@ -105,9 +105,6 @@ module.exports = {
           light: "hsl(var(--color-text-light))",
           lighter: "hsl(var(--color-text-lighter))",
           muted: "hsl(var(--color-text-muted))",
-          "muted-light": "hsl(var(--color-text-muted-light))",
-          "muted-dark": "hsl(var(--color-text-muted-dark))",
-          "muted-darker": "hsl(var(--color-text-muted-darker))",
         },
 
         black: "#040a15",

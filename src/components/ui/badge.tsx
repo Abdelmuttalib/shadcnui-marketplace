@@ -15,13 +15,13 @@ export type BadgeColor =
   | "dark-gray";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   // "whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-medium lowercase",
   {
     variants: {
       variant: {
         primary:
-          "border-primary-600/10 bg-primary-200/70 text-primary-900 dark:opacity-80",
+          "border-primary-600/10 bg-primary-100/60 text-primary-700 dark:opacity-80 dark:text-primary-800 dark:bg-primary-100/80",
 
         green:
           "border-green-600/10 bg-green-100/80 text-green-800 dark:opacity-80",
@@ -40,10 +40,9 @@ const badgeVariants = cva(
           "border-gray-600/10 bg-gray-200/70 text-gray-500/80 dark:text-gray-600",
       },
       size: {
-        default: "px-2.5 py-1.5",
-        xs: "px-2.5 py-1",
-        sm: "px-3 py-1.5",
-        lg: "px-5 py-3.5 text-base",
+        default: "px-2 py-0.5",
+        sm: "px-1.5 py-0.5",
+        lg: "px-2.5 py-1",
       },
     },
     defaultVariants: {
@@ -53,20 +52,27 @@ const badgeVariants = cva(
   }
 );
 
+interface BadgeProps
+  extends React.BaseHTMLAttributes<HTMLSpanElement>,
+    VariantProps<typeof badgeVariants> {
+  color?: BadgeColor;
+  size?: "sm" | "lg" | "default";
+  variant?: string;
+}
+
 const Badge = ({
   color = "primary",
   variant = "primary",
   children,
   className,
-}: {
-  color?: BadgeColor;
-  variant?: string;
-  children: ReactNode;
-  className?: string;
-}) => {
+  size = "default",
+}: BadgeProps) => {
   return (
     <span
-      className={cn(badgeVariants({ variant: variant, className }), className)}
+      className={cn(
+        badgeVariants({ variant: variant, size: size, className }),
+        className
+      )}
     >
       {children}
     </span>

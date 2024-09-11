@@ -39,7 +39,7 @@ const buttonVariants = cva(
       },
       size: {
         default: "px-4 h-10",
-        xs: "px-2.5 h-8",
+        xs: "px-2.5 h-8 leading-none",
         sm: "px-3 h-9",
         lg: "px-[18px] h-11",
       },
@@ -58,6 +58,7 @@ export interface ButtonProps
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  fullWidth?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -71,6 +72,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       asChild = false,
       isLoading = false,
       type,
+      fullWidth = false,
       ...props
     },
     ref
@@ -81,6 +83,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(buttonVariants({ variant, size, className }), {
           "inline-flex items-center justify-center gap-x-1.5":
             leftIcon || rightIcon,
+          "w-full sm:w-full": fullWidth,
         })}
         type={type ?? "button"}
         ref={ref}

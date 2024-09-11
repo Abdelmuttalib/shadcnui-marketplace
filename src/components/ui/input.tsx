@@ -41,10 +41,11 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
     error?: FieldError;
+    size?: "default" | "lg" | "sm";
   };
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, variant, size, error, ...props }, ref) => {
+  ({ className, variant, size = "default", error, ...props }, ref) => {
     return (
       <>
         <input
@@ -53,6 +54,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             // 'font-medium w-full flex-1 rounded-md border-0 ring-1 ring-inset shadow-sm ring-border text-sm bg-layer px-3 py-2 text-foreground placeholder-foreground-muted outline-none transition duration-200 hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-primary focus:bg-white focus:outline-none dark:text-gray-200 dark:hover:bg-gray-800/50 dark:focus:ring-primary-400 focus:dark:bg-gray-800/70 md:px-4 md:py-2.5',
             // disabled
             // 'flex h-10 w-full rounded-md border border-slate-300 bg-transparent py-2 px-3 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 dark:text-slate-50 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900',
+            // @ts-ignore
             inputVariants({ variant, size, ...props }),
             {
               "border-error-500 dark:border-error-400": error?.message,
