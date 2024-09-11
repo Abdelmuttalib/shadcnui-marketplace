@@ -15,7 +15,7 @@ export default function Document() {
         {/* SEO Meta Tags */}
         <meta
           name="keywords"
-          content="shadcn ui, shadcn ui Marketplace, UI Kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, ShadCN UI, ShadCN UI Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
+          content="shadcn ui, shadcn ui Marketplace, UI Kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, shadcn ui, shadcn ui Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
         />
         <meta
           name="description"
@@ -32,11 +32,11 @@ export default function Document() {
         />
         <meta
           property="og:title"
-          content="ShadCN UI Kits Marketplace - Premium ShadCN Styles"
+          content="shadcn ui Kits Marketplace - Premium ShadCN Styles"
         />
         <meta
           property="og:description"
-          content="Discover the best ShadCN UI kits and styles for modern web design."
+          content="Discover the best shadcn ui kits and styles for modern web design."
         />
         <meta property="og:image" content="/images/social-preview.jpg" />
 
@@ -48,11 +48,11 @@ export default function Document() {
         />
         <meta
           property="twitter:title"
-          content="ShadCN UI Kits Marketplace - Premium ShadCN Styles"
+          content="shadcn ui Kits Marketplace - Premium ShadCN Styles"
         />
         <meta
           property="twitter:description"
-          content="Discover the best ShadCN UI kits and styles for modern web design."
+          content="Discover the best shadcn ui kits and styles for modern web design."
         />
         <meta property="twitter:image" content="/images/social-preview.jpg" />
 
