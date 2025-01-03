@@ -30,29 +30,36 @@ export default function UIPage() {
 }
 
 export function SimpleCard() {
+  const [selectedSize, setSelectedSize] = useState("xs");
+
+  function onSelectSize(size: string) {
+    setSelectedSize(size);
+  }
+
   return (
-    <div className="relative shadow flex flex-col sm:flex-row overflow-hidden leading-none rounded max-w-[39rem] bg-layer">
+    <div className="relative shadow flex flex-col sm:flex-row overflow-hidden leading-none rounded max-w-[39rem] bg-background">
       {/* max-w-[223px] */}
-      <div className="relative w-full sm:max-w-48 h-full bg-red-400">
+      <div className="relative w-full sm:max-w-48 h-full max-h-96 lg:max-h-full">
         <img
           src="https://images.unsplash.com/photo-1613428792678-087d5d14238b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           // src="https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg"
           alt=""
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover lg:object-contain max-h-96 lg:max-h-full"
         />
       </div>
       <div className="p-6 space-y-6 w-full">
         <div className="flex flex-col gap-y-4">
           <div className="relative flex items-center justify-between">
-            <h2 className="inline-flex text-foreround text-lg font-semibold">
+            <h2 className="inline-flex text-foreground text-lg font-semibold">
               Classic Utility Jacket
             </h2>
-            <p className="text-gray-400 text-lg font-semibold">$110.00</p>
+            <p className="text-foreground text-lg font-semibold">$110.00</p>
           </div>
           <div>
-            <p className="text-sm text-foreground-light font-medium">
+            {/* <p className="text-sm text-muted-foreground font-medium">
               In stock
-            </p>
+            </p> */}
+            <Badge variant="green">In stock</Badge>
           </div>
         </div>
 
@@ -60,10 +67,11 @@ export function SimpleCard() {
           {["xs", "s", "m", "l", "xl"].map((size, i) => (
             <IconButton
               key={size + i + 2}
-              variant={size === "xs" ? "primary" : "ghost"}
-              className={cn("uppercase ", {
-                "font-medium": size === "xs",
+              variant={size === selectedSize ? "default" : "ghost"}
+              className={cn("uppercase text-muted-foreground ", {
+                "font-medium text-white": size === selectedSize,
               })}
+              onClick={() => onSelectSize(size)}
             >
               {size}
             </IconButton>
@@ -76,7 +84,7 @@ export function SimpleCard() {
         {/* actions */}
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
           <div className="flex flex-col sm:flex-row gap-2 w-full">
-            <Button variant="primary" className="sm:px-5">
+            <Button variant="default" className="sm:px-5">
               Buy now
             </Button>
             <Button variant="outline" className="sm:px-5">
@@ -105,7 +113,7 @@ export function SimpleCard() {
           </div>
         </div>
         <div>
-          <p className="text-foreground-light text-sm">
+          <p className="text-muted-foreground text-sm">
             Free shipping on all continental US orders.
           </p>
         </div>
@@ -145,7 +153,7 @@ export function ClassicCard() {
           {["xs", "s", "m", "l", "xl"].map((size, i) => (
             <IconButton
               key={size + i}
-              variant={size === "xs" ? "dark" : "outline"}
+              variant={size === "xs" ? "default" : "outline"}
               className={cn("uppercase rounded-none disabled:opacity-50", {
                 "font-medium": size === "xs",
               })}
@@ -163,7 +171,7 @@ export function ClassicCard() {
         <div className="flex justify-between items-center">
           <div className="flex gap-4">
             <Button
-              variant="dark"
+              variant="default"
               size="lg"
               className="px-8 rounded-none uppercase"
             >
@@ -274,7 +282,7 @@ export function CookieSettingsCard() {
         </div>
 
         <div className="w-full flex">
-          <Button fullWidth>Save Preferences</Button>
+          <Button className="w-full">Save Preferences</Button>
         </div>
       </div>
     </div>
@@ -306,14 +314,14 @@ export function SignInCard() {
         <body class="h-full">
         ```
       */}
-      <div className="flex flex-col justify-center shadow rounded bg-layer max-w-sm p-6">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h2 className="text-center text-2xl font-semibold leading-9 tracking-tight text-foreground">
+      <div className="flex flex-col justify-center rounded-lg border max-w-lg w-full p-8 bg-background">
+        <div className="sm:mx-auto sm:w-full sm:max-w-lg">
+          <h2 className="text-2xl font-semibold leading-9 tracking-tight text-foreground">
             Sign in to your account
           </h2>
         </div>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-lg">
           <form action="#" method="POST" className="space-y-6">
             <div>
               <label
@@ -361,7 +369,7 @@ export function SignInCard() {
             </div>
 
             <div>
-              <Button fullWidth>Sign in</Button>
+              <Button className="w-full">Sign in</Button>
             </div>
           </form>
 
@@ -504,12 +512,12 @@ export function BlogCard({
     <article
       key={post.id}
       className={cn(
-        "flex max-w-xl flex-col items-start justify-between bg-layer p-6 rounded-lg shadow",
+        "flex max-w-xl flex-col items-start border justify-between bg-overlay-on-surface-background p-6 rounded-lg shadow h-fit",
         className
       )}
     >
       <div className="flex items-center w-full justify-between gap-x-4 text-xs">
-        <time dateTime={post.datetime} className="text-foreground-lighter">
+        <time dateTime={post.datetime} className="text-foreground-subtle">
           {post.date}
         </time>
 
@@ -524,7 +532,7 @@ export function BlogCard({
           <span className="absolute inset-0" />
           {post.title}
         </h3>
-        <p className="mt-5 line-clamp-3 text-sm leading-6 text-foreground-light">
+        <p className="mt-5 line-clamp-3 text-sm leading-6 text-foreground-secondary">
           {post.description}
         </p>
       </div>
@@ -544,6 +552,7 @@ export function BlogCard({
 }
 
 import { CheckIcon } from "@heroicons/react/20/solid";
+import { useState } from "react";
 
 const includedFeatures = [
   "Private forum access",
@@ -675,7 +684,7 @@ export function PricingCard() {
               </span>
             </p>
             {/* className="mt-10 mb-2 block w-full rounded-md bg-primary-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" */}
-            <Button fullWidth>Get access</Button>
+            <Button className="w-full">Get access</Button>
             <p className="mt-6 text-xs leading-5 text-foreground-light">
               Invoices and receipts available for easy company reimbursement
             </p>

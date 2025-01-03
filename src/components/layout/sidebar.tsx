@@ -91,7 +91,7 @@ export function SideBar({
               <Link
                 href={link.href}
                 className={cn(
-                  "bg-background text-sm text-foreground-lighter hover:bg-layer-2 dark:hover:bg-layer-3 dark:hover:text-foreground-muted rounded py-2.5 px-4 inline-flex items-center gap-x-3 w-full font-medium",
+                  "bg-background text-sm text-foreground-lighter hover:bg-overlay-on-surface-background dark:hover:bg-layer-3 dark:hover:text-foreground-muted rounded py-2.5 px-4 inline-flex items-center gap-x-3 w-full font-medium",
                   {
                     "text-foreground hover:text-foreground dark:hover:text-foreground bg-layer-3":
                       pathname === link.href,

@@ -31,19 +31,46 @@ export default function ThemeSwitcher({
   if (!mounted) return null;
 
   return (
-    <IconButton
-      type="button"
-      variant={variant ?? "ghost"}
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className={cn("text-foreground-light sm:inline-flex", className)}
-    >
-      {theme === "light" ? (
-        <SunIcon className="w-5" />
-      ) : (
-        <MoonIcon className="w-5" />
-      )}
-    </IconButton>
+    <div className="flex flex-wrap gap-2">
+      <Button
+        type="button"
+        variant={variant ?? "ghost"}
+        onClick={() => setTheme("light")}
+        className={cn("text-foreground-light sm:inline-flex", className)}
+        iconLeft={<SunIcon className="w-5" />}
+        size="sm"
+        disabled={theme === "light"}
+      >
+        Light
+      </Button>
+      <Button
+        type="button"
+        variant={variant ?? "ghost"}
+        onClick={() => setTheme("dark")}
+        className={cn("text-foreground-light sm:inline-flex", className)}
+        iconLeft={<MoonIcon className="w-5" />}
+        size="sm"
+        disabled={theme === "dark"}
+      >
+        Dark
+      </Button>
+    </div>
   );
+
+  // return (
+  //   <IconButton
+  //     type="button"
+  //     variant={variant ?? "ghost"}
+  //     onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+  //     className={cn("text-foreground-light sm:inline-flex", className)}
+  //   >
+  //     {theme === "light" ? (
+  //       <SunIcon className="w-5" />
+  //     ) : (
+  //       <MoonIcon className="w-5" />
+  //     )}
+  //   </IconButton>
+  // );
 }
 
 import { Button } from "@/components/ui/button";
@@ -66,48 +93,75 @@ export function ThemeColorSelect() {
   const [themeColor, setThemeColor] = useThemeColor();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="px-3 w-auto">
-          <Pencil className="w-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-24">
-        {PRIMARY_THEME_COLORS?.map(
-          ({ name, color }: { name: ThemeColorType; color: string }) => (
-            <DropdownMenuItem
-              key={`${name}`}
-              onClick={() => {
-                setThemeColor({
-                  colorName: name,
-                });
+    <div className="flex flex-wrap gap-2">
+      {PRIMARY_THEME_COLORS?.map(
+        ({ name, color }: { name: ThemeColorType; color: string }) => (
+          <IconButton
+            key={`${name}`}
+            variant="ghost"
+            onClick={() => {
+              setThemeColor({
+                colorName: name,
+              });
+            }}
+            className={cn(
+              "flex items-center font-medium capitalize text-foreground  rounded-lg",
+              {
+                "ring-2 ring-primary ring-offset-background":
+                  name === themeColor.colorName,
+              }
+            )}
+            size="sm"
+          >
+            <span
+              style={{
+                backgroundColor: color,
               }}
-              className={cn(
-                //  px-3 py-2.5
-                "flex w-full items-center font-medium capitalize text-foreground"
-                // {
-                //   "bg-primary-100 text-foreground":
-                //     name === themeColor.colorName,
-                //   "hover:bg-accent-hover": name !== themeColor.colorName,
-                // }
-              )}
-            >
-              <span
-                style={{
-                  backgroundColor: color,
-                }}
-                className={cn("mr-2 h-3 w-3 rounded-full")}
-              ></span>
-              <>{name}</>
-              {name == themeColor.colorName && (
-                <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
-              )}
-            </DropdownMenuItem>
-          )
-        )}
-      </DropdownMenuContent>
-    </DropdownMenu>
+              className={cn("h-5 w-5 rounded-lg")}
+            ></span>
+          </IconButton>
+        )
+      )}
+    </div>
   );
+
+  // return (
+  //   <DropdownMenu>
+  //     <DropdownMenuTrigger asChild>
+  //       <Button variant="outline" className="px-3 w-auto">
+  //         <Pencil className="w-4" />
+  //       </Button>
+  //     </DropdownMenuTrigger>
+  //     <DropdownMenuContent className="w-24">
+  //       {PRIMARY_THEME_COLORS?.map(
+  //         ({ name, color }: { name: ThemeColorType; color: string }) => (
+  //           <DropdownMenuItem
+  //             key={`${name}`}
+  //             onClick={() => {
+  //               setThemeColor({
+  //                 colorName: name,
+  //               });
+  //             }}
+  //             className={cn(
+  //               "flex w-full items-center font-medium capitalize text-foreground"
+  //             )}
+  //           >
+  //             <span
+  //               style={{
+  //                 backgroundColor: color,
+  //               }}
+  //               className={cn("mr-2 h-3 w-3 rounded-full")}
+  //             ></span>
+  //             <>{name}</>
+  //             {name == themeColor.colorName && (
+  //               <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
+  //             )}
+  //           </DropdownMenuItem>
+  //         )
+  //       )}
+  //     </DropdownMenuContent>
+  //   </DropdownMenu>
+  // );
 }
 
 export function ThemeColorSelect2() {

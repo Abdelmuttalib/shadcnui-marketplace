@@ -1,14 +1,15 @@
 .theme-default {
-  --color-primary-50: 240 33.3% 97.6%; /* #F7F7FB */
-  --color-primary-100: 240 95% 92.2%; /* #D8D8FE */
-  --color-primary-200: 240 94.9% 84.7%; /* #B3B3FD */
-  --color-primary-300: 240 89.2% 74.5%; /* #8484F8 */
-  --color-primary-400: 240 89.5% 70%; /* #6E6EF7 */
-  --color-primary-500: 240 87.3% 60%; /* #4040F2 #4f46e5 */
-  --color-primary-600: 240 63.2% 51%; /* #3333D1  #4f46e5 */
-  --color-primary-700: 240 68.9% 44.1%; /* #2323BE */
-  --color-primary-800: 240 72.1% 33.7%; /* #181894 */
-  --color-primary-900: 240 73.2% 19%; /* #0D0D54 */
+  --color-primary-50: 226 100% 97%; /* hsl(226, 100%, 97%)  */
+  --color-primary-100: 226 100% 94%; /* hsl(226, 100%, 94%)  */
+  --color-primary-200: 228 96% 89%; /* hsl(228, 96%, 89%)  */
+  --color-primary-300: 230 94% 82%; /* hsl(230, 94%, 82%)  */
+  --color-primary-400: 234 89% 74%; /* hsl(234, 89%, 74%)  */
+  --color-primary-500: 239 84% 67%; /* hsl(239, 84%, 67%)  */
+  --color-primary-600: 243 75% 59%; /* hsl(243, 75%, 59%)  */
+  --color-primary-700: 245 58% 51%; /* hsl(245, 58%, 51%)  */
+  --color-primary-800: 244 55% 41%; /* hsl(244, 55%, 41%)  */
+  --color-primary-900: 242 47% 34%; /* hsl(242, 47%, 34%)  */
+  --color-primary-950: 244 47% 20%; /* hsl(244, 47%, 20%)  */
 
   --color-primary: var(--color-primary-500);
   --color-primary-hover: var(--color-primary-400);
@@ -17,17 +18,19 @@
 }
 
 .dark .theme-default {
-  --color-primary-50: 240 33.3% 97.6%; /* #F7F7FB */
-  --color-primary-100: 240 95% 92.2%; /* #D8D8FE */
-  --color-primary-200: 240 94.9% 84.7%; /* #B3B3FD */
-  --color-primary-300: 240 89.2% 74.5%; /* #8484F8 */
-  --color-primary-400: 240 89.5% 70%; /* #6E6EF7 */
-  --color-primary-500: 240 87.3% 60%; /* #4040F2 #4f46e5 */
-  --color-primary-600: 240 63.2% 51%; /* #3333D1  #4f46e5 */
-  --color-primary-700: 240 68.9% 44.1%; /* #2323BE */
-  --color-primary-800: 240 72.1% 33.7%; /* #181894 */
-  --color-primary-900: 240 73.2% 19%; /* #0D0D54 */
+  --color-primary-50: 226 100% 97%;
+  --color-primary-100: 226 100% 94%;
+  --color-primary-200: 228 96% 89%;
+  --color-primary-300: 230 94% 82%;
+  --color-primary-400: 234 89% 74%;
+  --color-primary-500: 239 84% 67%;
+  --color-primary-600: 243 75% 59%;
+  --color-primary-700: 245 58% 51%;
+  --color-primary-800: 244 55% 41%;
+  --color-primary-900: 242 47% 34%;
+  --color-primary-950: 244 47% 20%;
 
+  /* --color-primary: var(--color-primary-500); */
   --color-primary: var(--color-primary-400);
   --color-primary-hover: var(--color-primary-300);
   --color-primary-active: var(--color-primary-500);

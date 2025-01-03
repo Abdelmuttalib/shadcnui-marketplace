@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { Button, ButtonLink, ButtonProps } from "@/components/ui/button";
-import { Bookmark, CheckCheckIcon } from "lucide-react";
+import { Button, ButtonProps } from "@/components/ui/button";
+import { Bookmark, BookmarkIcon, CheckCheckIcon } from "lucide-react";
 import { Typography } from "@/components/ui/typography";
 import { GradientBackground } from "@/components/gradient";
 import Container from "@/components/container";
@@ -41,13 +41,129 @@ import { useForm, SubmitHandler } from "react-hook-form";
 
 import { z } from "zod";
 
-const waitlistFormSchema = z.object({
-  email: z.string().email(),
-});
+import {
+  Cloud,
+  CreditCard,
+  Github,
+  Keyboard,
+  LifeBuoy,
+  LogOut,
+  Mail,
+  MessageSquare,
+  Plus,
+  PlusCircle,
+  Settings,
+  User,
+  UserPlus,
+  Users,
+} from "lucide-react";
 
-type FormSchema = z.infer<typeof waitlistFormSchema>;
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-export function Hero() {
+function DropdownMenuDemo() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Open</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>
+            <User className="mr-2 h-4 w-4" />
+            <span>Profile</span>
+            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <CreditCard className="mr-2 h-4 w-4" />
+            <span>Billing</span>
+            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Settings className="mr-2 h-4 w-4" />
+            <span>Settings</span>
+            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Keyboard className="mr-2 h-4 w-4" />
+            <span>Keyboard shortcuts</span>
+            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>
+            <Users className="mr-2 h-4 w-4" />
+            <span>Team</span>
+          </DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger>
+              <UserPlus className="mr-2 h-4 w-4" />
+              <span>Invite users</span>
+            </DropdownMenuSubTrigger>
+            <DropdownMenuPortal>
+              <DropdownMenuSubContent>
+                <DropdownMenuItem>
+                  <Mail className="mr-2 h-4 w-4" />
+                  <span>Email</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <MessageSquare className="mr-2 h-4 w-4" />
+                  <span>Message</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <PlusCircle className="mr-2 h-4 w-4" />
+                  <span>More...</span>
+                </DropdownMenuItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuPortal>
+          </DropdownMenuSub>
+          <DropdownMenuItem>
+            <Plus className="mr-2 h-4 w-4" />
+            <span>New Team</span>
+            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Github className="mr-2 h-4 w-4" />
+          <span>GitHub</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <LifeBuoy className="mr-2 h-4 w-4" />
+          <span>Support</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem disabled>
+          <Cloud className="mr-2 h-4 w-4" />
+          <span>API</span>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <LogOut className="mr-2 h-4 w-4" />
+          <span>Log out</span>
+          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+const Showcase = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [message, setMessage] = React.useState("");
   const [success, setSuccess] = React.useState(false);
@@ -84,6 +200,135 @@ export function Hero() {
   }
 
   return (
+    <div className=" relative mx-auto grid w-full grid-cols-1 lg:grid-cols-6 px-4 sm:px-6 lg:px-8 gap-16">
+      <div className="col-span-2">
+        <h1 className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-bold tracking-tight text-foreground sm:text-7xl xl:max-w-[43.5rem]">
+          shadcn ui styles
+        </h1>
+        <p className="col-start-1 row-start-3 mt-2 max-w-lg text-lg text-muted-foreground">
+          Style Your Way, Redefining shadcn UI for Custom Interfaces
+        </p>
+        <div className="col-start-1 row-start-4 mt-10 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col items-center flex-wrap gap-x-4 gap-y-4">
+            <div className="space-y-4 w-full">
+              <div>
+                {/*  */}
+                <div>
+                  {!success ? (
+                    <form
+                      // @ts-ignore
+                      onSubmit={handleSubmit(onSubmit)}
+                      className="flex flex-col sm:flex-row gap-4"
+                    >
+                      <div>
+                        <Input
+                          type="email"
+                          placeholder="Enter your email"
+                          {...register("email", {
+                            required: true,
+                          })}
+                          disabled={isSubmitting}
+                        />
+                      </div>
+                      <Button
+                        type="submit"
+                        disabled={isSubmitting || success}
+                        size="lg"
+                      >
+                        Join waitlist
+                      </Button>
+                    </form>
+                  ) : (
+                    <div>
+                      <p className="text-foreground-light text-sm">{message}</p>
+                    </div>
+                  )}
+                  {!success && message && (
+                    <div className="mt-2">
+                      <p className="text-foreground-light text-sm">{message}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="space-x-4">
+                <div>
+                  <Badge variant="neutral" className="py-1">
+                    <CheckBadgeIcon className="w-5 text-foreground-subtle mr-1" />{" "}
+                    Powered by shadcn ui
+                  </Badge>
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-4">
+                <ThemeSwitcher variant="outline" />
+                <ThemeColorSelect />
+              </div>
+            </div>
+            <div className="mt-14 flex gap-4">
+              <BlogCard post={posts[0]} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="lg:col-span-4">
+        <div className="flex flex-wrap gap-8">
+          <div className="overflow-hidden h-fit">
+            <div className="border divide-y divide-slate-400/20 rounded-lg">
+              <SimpleCard />
+
+              <div className="p-4">
+                <Button className="w-full" variant="outline">
+                  View All
+                </Button>
+              </div>
+            </div>
+            <div className="pt-4 flex items-center gap-4 w-full">
+              <DropdownMenuDemo />
+              <div className="w-fit">
+                <Switch id="airplane-mode" />
+              </div>
+            </div>
+            <div className=" flex flex-wrap px-1 py-4 gap-4">
+              <Badge variant="green">Success</Badge>
+              <Badge variant="yellow">Warning</Badge>
+              <Badge variant="red">Failed</Badge>
+              <Badge variant="blue">Processing</Badge>
+              <Badge variant="neutral">Pending</Badge>
+            </div>
+
+            <DataTable columns={columns} data={payments} />
+          </div>
+          <div className="flex flex-col gap-4 items-center justify-end">
+            <div className="flex flex-wrap gap-2">
+              <Button>Button</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="destructive-outline">Destructive Outline</Button>
+              <IconButton>
+                <BookmarkIcon />
+              </IconButton>
+
+              <IconButton variant="outline">
+                <BookmarkIcon />
+              </IconButton>
+              <IconButton variant="destructive">
+                <BookmarkIcon />
+              </IconButton>
+            </div>
+            <NotificationsCard />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const waitlistFormSchema = z.object({
+  email: z.string().email(),
+});
+
+type FormSchema = z.infer<typeof waitlistFormSchema>;
+
+export function Hero() {
+  return (
     <>
       <Head>
         <title> shadcn ui Marketplace</title>
@@ -104,285 +349,58 @@ export function Hero() {
           content="shadcn ui, shadcn ui Marketplace, UI Kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, shadcn ui, shadcn ui Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
         />
       </Head>
-      <div className="relative flex flex-col min-h-[100svh] overflow-x-hidden pb-24 pt-36">
-        <Container className="relative isolate">
-          {/* <div
-          aria-hidden="true"
-          className="absolute inset-0 m-auto grid h-max w-full grid-cols-2 -space-x-52 opacity-40 dark:pb-32 dark:opacity-20"
-        >
-          <div className="h-57 bg-gradient-to-br from-primary to-purple-400  dark:from-blue-700"></div>
-          <div className="h-32 bg-gradient-to-r from-brand-400 to-brand-300  dark:to-brand-600"></div>
-        </div> */}
-          {/* <GradientBackground /> */}
-          <div className="relative grid grid-cols-1 gap-y-20 place-content-center place-items-center z-50">
-            <div className="relative max-w-xl text-center">
-              <div className="mx-auto space-y-8">
-                <Typography
-                  as="h1"
-                  variant="display-lg/medium"
-                  className="text-left sm:text-center"
-                >
-                  shadcn-ui components kits/styles
-                </Typography>
-
-                <Typography
-                  as="p"
-                  variant="base/regular"
-                  className="mx-auto w-full max-w-4xl text-foreground-light text-left sm:text-center"
-                >
-                  A marketplace for shadcn-ui components kits/styles. Create
-                  beautiful and consistent web applications with a Design System
-                  that provides a collection of components, styles, and
-                  guidelines. Powered by shadcn-ui components.
-                </Typography>
-                {/* coming soon */}
-                <div className="flex flex-col items-center flex-wrap gap-x-4 gap-y-4">
-                  <div className="space-y-4 w-full sm:max-w-xs mx-auto">
-                    <div>
-                      {/*  */}
-                      <div>
-                        {!success ? (
-                          <form
-                            // @ts-ignore
-                            onSubmit={handleSubmit(onSubmit)}
-                            className="flex flex-col gap-y-4"
-                          >
-                            <div>
-                              <Input
-                                type="email"
-                                placeholder="Enter your email"
-                                {...register("email", {
-                                  required: true,
-                                })}
-                                disabled={isSubmitting}
-                                // @ts-ignore
-                                size="lg"
-                              />
-                            </div>
-                            <Button
-                              type="submit"
-                              isLoading={isSubmitting}
-                              disabled={isSubmitting || success}
-                              size="lg"
-                            >
-                              Join waitlist
-                            </Button>
-                          </form>
-                        ) : (
-                          <div>
-                            <p className="text-foreground-light text-sm">
-                              {message}
-                            </p>
-                          </div>
-                        )}
-                        {!success && message && (
-                          <div className="mt-2">
-                            <p className="text-foreground-light text-sm">
-                              {message}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    {/*
-                  <span className="dark:opacity-70 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                    Coming soon...
-                  </span> */}
-
-                    <div className="flex items-start sm:items-center justify-center gap-2">
-                      <ThemeSwitcher variant="outline" />
-                      <ThemeColorSelect />
-                    </div>
-                  </div>
-                  {/* <div>
-                  <ButtonLink
-                    href="https://github.com/Abdelmuttalib/shadcnui-marketplace"
-                    variant="ghost"
-                    target="_blank"
-                    iconLeft={<GitHubLogoIcon className="w-5" />}
-                    size="sm"
-                  >
-                    GitHub
-                  </ButtonLink>
-                </div> */}
-
-                  {/* email input to register or waitlist */}
-                  {/* <div>
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="w-full"
-                    />
-                  </div>
-                </div> */}
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <ComponentShowcase className="h-96 w-full max-w-md">
-                <GrayColors />
-              </ComponentShowcase>
-              <ComponentShowcase>
-                <div className="flex flex-wrap gap-4">
-                  {buttonVariants.map((variant) => {
-                    return (
-                      <div className="space-x-7" key={variant}>
-                        {buttonSizes.reverse().map((size) => (
-                          <Button
-                            key={size}
-                            variant={variant}
-                            size={size}
-                            className="capitalize"
-                          >
-                            {variant?.replace("-", " ")}
-                          </Button>
-                        ))}
-                        {/* {["xs", "sm", "default", "lg"].reverse().map((size) => (
-                      <Button key={size} variant={variant} size={size}>
-                        Button
-                      </Button>
-                    ))} */}
-                      </div>
-                    );
-                  })}
-                </div>
-              </ComponentShowcase>
-              <ComponentShowcase>
-                <div className="flex flex-wrap gap-4">
-                  {buttonVariants.map((variant) => {
-                    return (
-                      <div className="space-x-7" key={variant}>
-                        {buttonSizes.reverse().map((size) => (
-                          <IconButton key={size} variant={variant} size={size}>
-                            <Bookmark className="w-[22px]" />
-                          </IconButton>
-                        ))}
-                      </div>
-                    );
-                  })}
-                </div>
-              </ComponentShowcase>
-
-              <ComponentShowcase className="h-[39rem]  w-full max-w-lg">
-                <NotificationsCard />
-              </ComponentShowcase>
-              <ComponentShowcase className="h-96 w-96">
-                <BlogCard post={posts[0]} />
-              </ComponentShowcase>
-              <ComponentShowcase className="h-96 w-96">
-                <DataTable columns={columns} data={payments} />
-              </ComponentShowcase>
-              <ComponentShowcase className="h-[25rem] w-full max-w-2xl">
-                <SimpleCard />
-              </ComponentShowcase>
-              <ComponentShowcase className="h-96 w-full max-w-md">
-                <div className="-mt-2 p-2 bg-layer h-fit rounded-3xl lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                  <div className="rounded-2xl bg-accent-hover/30 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                    <div className="mx-auto max-w-xs px-8">
-                      <p className="text-base font-semibold text-foreground-light">
-                        Pay once, own it forever
-                      </p>
-                      <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                        <span className="text-5xl font-bold tracking-tight text-foreground">
-                          $349
-                        </span>
-                        <span className="text-sm font-semibold leading-6 tracking-wide text-foreground-light">
-                          USD
-                        </span>
-                      </p>
-                      {/* className="mt-10 mb-2 block w-full rounded-md bg-primary-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" */}
-                      <Button fullWidth>Get access</Button>
-                      <p className="mt-6 text-xs leading-5 text-foreground-light">
-                        Invoices and receipts available for easy company
-                        reimbursement
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </ComponentShowcase>
-              <ComponentShowcase className="h-[30.5rem] w-full max-w-sm">
-                <SignInCard />
-              </ComponentShowcase>
-              <ComponentShowcase className="h-[27.5rem] w-full max-w-7xl">
-                <PricingCard />
-              </ComponentShowcase>
-              {/* <ComponentsPreview2 /> */}
-
-              {/* <ComponentsPreview /> */}
-            </div>
-            <div className="mt-96 space-y-4">
-              {/* <h3 className="text-2xl font-bold tracking-tight text-foreground">
-              Sign up for the waitlist
-            </h3> */}
-
-              <Typography as="h2" variant="xl/medium" className="">
-                Going beyond{" "}
-                <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
-                  Default
-                </span>{" "}
-                and{" "}
-                <span className="bg-layer-3 px-1.5 py-0.5 rounded border">
-                  New York
-                </span>
-              </Typography>
-
-              <div className="flex items-center gap-x-1.5">
-                <CheckBadgeIcon className="w-5 text-foreground-500/80" />
-                <Typography
-                  as="p"
-                  variant="md/regular"
-                  className="whitespace-nowrap text-foreground-light"
-                >
-                  Powered by{" "}
-                  <a
-                    href="https://ui.shadcn.com/"
-                    target="_blank"
-                    className="text-primary font-medium"
-                  >
-                    shadcn-ui
-                  </a>{" "}
-                  components
-                </Typography>
-              </div>
-            </div>
-          </div>
-        </Container>
+      <div className="relative flex flex-col pb-24 pt-36">
+        <Showcase />
       </div>
     </>
   );
 }
 
-function ComponentShowcase({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function CustomDialogDemo() {
+  const [open, setOpen] = React.useState(false);
   return (
-    <div className={cn("grid gap-4 row-span-3", className)}>
-      <div>
-        <div
-          className={cn(
-            "relative border rounded-2xl bg-layer-2 w-96 h-72 overflow-hidden",
-            className
-          )}
+    <CustomDialog
+      open={open}
+      onClose={() => {
+        setOpen(false);
+      }}
+      triggerButton={
+        <Button
+          className="whitespace-nowrap"
+          onClick={() => setOpen(true)}
+          variant="outline"
+          size="xs"
         >
-          {/* <GradientBackground /> */}
-          <div
-            className="absolute left-6 top-6 transform-gpu overflow-hidden opacity-30 blur-lg"
-            aria-hidden="true"
-          >
-            <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-primary to-[#9089fc]" />
+          Edit
+        </Button>
+      }
+      title="Dialog Title"
+      description="Dialog Description"
+    >
+      <div>
+        <form className="space-y-3">
+          <div>
+            <Input placeholder="email address" />
           </div>
-          {/* <div></div> */}
-          <div className="absolute w-full h-full left-12 top-12 m-auto p-3 bg-background rounded-xl shadow-2xl border">
-            {children}
+          <div className="flex items-center space-x-2">
+            <Checkbox id="airplane-mode" />
+            <Label htmlFor="airplane-mode" className="font-normal">
+              Accept Terms and Conditions
+            </Label>
           </div>
+        </form>
+
+        <div className="flex justify-end mt-4 gap-x-2">
+          <Button variant="outline" onClick={() => setOpen(false)} size="sm">
+            Close
+          </Button>
+
+          <Button variant="default" onClick={() => setOpen(false)} size="sm">
+            Submit
+          </Button>
         </div>
       </div>
-    </div>
+    </CustomDialog>
   );
 }
 
@@ -457,96 +475,36 @@ export const columns: ColumnDef<Payment>[] = [
       );
     },
   },
-  // {
-  //   accessorKey: "amount",
-  //   header: "Amount",
-  // },
+  {
+    accessorKey: " ",
+    header: "",
+    cell: ({}) => {
+      return (
+        <div className="flex items-center gap-x-2">
+          <CustomDialogDemo />
+
+          <Button variant="destructive-outline" size="xs">
+            Delete
+          </Button>
+        </div>
+      );
+    },
+  },
 ];
-
-function ComponentsPreview2() {
-  return (
-    <div className="flex flex-col gap-y-10 rounded w-full">
-      <SimpleCard />
-      <div className="flex flex-wrap gap-4">
-        {buttonVariants.map((variant) => {
-          return (
-            <div className="space-x-7" key={variant}>
-              {buttonSizes.reverse().map((size) => (
-                <Button key={size} variant={variant} size={size}>
-                  Button
-                </Button>
-              ))}
-              {/* {["xs", "sm", "default", "lg"].reverse().map((size) => (
-                      <Button key={size} variant={variant} size={size}>
-                        Button
-                      </Button>
-                    ))} */}
-            </div>
-          );
-        })}
-      </div>
-      <GrayColors className="border" />
-      <div className="flex flex-wrap w-full gap-6">
-        <NotificationsCard />
-        <DataTable columns={columns} data={payments} />
-        <div className="-mt-2 p-2 bg-layer h-fit rounded-3xl lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-          <div className="rounded-2xl bg-accent-hover/30 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-            <div className="mx-auto max-w-xs px-8">
-              <p className="text-base font-semibold text-foreground-light">
-                Pay once, own it forever
-              </p>
-              <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                <span className="text-5xl font-bold tracking-tight text-foreground">
-                  $349
-                </span>
-                <span className="text-sm font-semibold leading-6 tracking-wide text-foreground-light">
-                  USD
-                </span>
-              </p>
-              {/* className="mt-10 mb-2 block w-full rounded-md bg-primary-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" */}
-              <Button fullWidth>Get access</Button>
-              <p className="mt-6 text-xs leading-5 text-foreground-light">
-                Invoices and receipts available for easy company reimbursement
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <BlogCard post={posts[0]} className="w-full h-fit" />
-          <SignInCard />
-        </div>
-      </div>
-
-      <PricingCard />
-      {/* <Pricing /> */}
-      {/* <ClassicCard /> */}
-
-      {/* <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {posts.map((post) => (
-          <BlogCard post={post} />
-        ))}
-      </div> */}
-    </div>
-  );
-}
 
 function NotificationsCard() {
   return (
-    <div className="w-full max-w-lg shadow rounded-lg p-6 bg-layer space-y-4">
+    <div className="w-full max-w-lg shadow rounded-lg p-6 bg-background border space-y-4">
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-medium text-foreground sm:text-2xl">
           Notifications{" "}
         </h3>
-        {/* <p>
-          <span className="text-xs font-medium text-gray-400 dark:text-gray-500">
-            {notifications.length} notifications
-          </span>
-        </p> */}
+
         <div>
           <Button
             size="xs"
             variant="secondary"
-            leftIcon={<CheckCheckIcon className="w-4" />}
+            iconLeft={<CheckCheckIcon className="w-4" />}
           >
             Mark all as read
           </Button>
@@ -558,8 +516,6 @@ function NotificationsCard() {
     </div>
   );
 }
-
-import { Tab } from "@headlessui/react";
 
 const notifications = [
   {
@@ -625,48 +581,45 @@ const NotificationsTabs = () => {
 
   return (
     <div className="w-full">
-      <Tab.Group>
-        <Tab.List className="flex bg-accent-hover/50 border w-full p-1.5 py-1 rounded">
+      <Tabs defaultValue="All" className="w-full">
+        <TabsList className="w-full justify-start">
           {Object.keys(notificationsData).map((notificationLabel) => (
-            <Tab
+            <TabsTrigger
               key={notificationLabel}
-              as="button"
-              className={({ selected }) =>
-                cn(
-                  "capitalize w-full px-5 whitespace-nowrap py-2 rounded text-sm font-medium leading-5 sm:py-2",
-                  "focus:outline-none",
-                  selected
-                    ? "text-primary-600 dark:text-foreground bg-background shadow"
-                    : "text-foreground-lighter"
-                )
-              }
+              value={notificationLabel}
+              className="capitalize w-full"
             >
-              {notificationLabel.toLocaleLowerCase()} {/* @ts-ignore */}
-              <span className="bg-accent-hover/50 px-1.5 py-0.5 ml-0.5 rounded border text-xs font-medium">
+              {notificationLabel.toLocaleLowerCase()}{" "}
+              <span className="bg-accent-hover/50 px-1 py-0.5 ml-2 rounded border text-xs font-medium">
+                {
+                  notificationsData[
+                    notificationLabel as keyof typeof notificationsData
+                  ]?.length
+                }
                 {/* @ts-ignore */}
-                {notificationsData[notificationLabel].length}
               </span>
-            </Tab>
+            </TabsTrigger>
           ))}
-        </Tab.List>
-
-        <Tab.Panels>
-          <div>
-            {Object.values(notificationsData).map((notifications, idx) => (
-              <Tab.Panel key={idx} className="py-3 focus:outline-none">
-                <div className="w-full divide-y divide-border">
-                  {notifications?.map((notification) => (
-                    <Notification
-                      key={notification.id}
-                      notification={notification}
-                    />
-                  ))}
-                </div>
-              </Tab.Panel>
-            ))}
-          </div>
-        </Tab.Panels>
-      </Tab.Group>
+        </TabsList>
+        {Object.keys(notificationsData).map((nLabel, idx) => (
+          <TabsContent
+            key={idx}
+            className="py-3 focus:outline-none"
+            value={nLabel}
+          >
+            <div className="w-full divide-y divide-border">
+              {notificationsData[nLabel as keyof typeof notificationsData]?.map(
+                (notification) => (
+                  <Notification
+                    key={notification.id}
+                    notification={notification}
+                  />
+                )
+              )}
+            </div>
+          </TabsContent>
+        ))}
+      </Tabs>
     </div>
   );
 };
@@ -711,7 +664,7 @@ function Notification({
       <div className="w-full flex flex-col gap-2">
         <p className="font-medium text-sm">
           {notification.name}
-          <span className="font-normal ml-1 text-foreground-light">
+          <span className="font-normal ml-1 text-foreground">
             {notification.message}
           </span>
         </p>
@@ -725,12 +678,12 @@ function Notification({
           </div>
         )}
         <div className="flex w-full justify-between">
-          <p className="text-xs font-medium text-gray-400 dark:text-gray-500">
+          <p className="text-xs font-medium text-foreground-subtle">
             <RenderAfterMount>
               {formatDateDayTime(notification.date)}
             </RenderAfterMount>
           </p>
-          <p className="text-xs font-medium text-gray-400 dark:text-gray-500">
+          <p className="text-xs font-medium text-foreground-subtle">
             {notification.time}
           </p>
         </div>
@@ -746,14 +699,13 @@ function RenderAfterMount({ children }: { children: React.ReactNode }) {
 }
 
 const buttonVariants = [
-  "primary",
-  "primary-outline",
-  "outline",
+  "default",
   "secondary",
-  "ghost",
-  "dark",
+  "outline",
   "destructive",
   "destructive-outline",
+  "ghost",
+  "link",
 ] as ButtonProps["variant"][];
 
 const buttonSizes = [
@@ -979,56 +931,7 @@ function ComponentsPreview() {
             </div>
           </section>
           <section className="flex flex-col sm:flex-row gap-4">
-            <div>
-              <CustomDialog
-                open={open}
-                onClose={() => {
-                  setOpen(false);
-                }}
-                triggerButton={
-                  <Button
-                    className="whitespace-nowrap"
-                    onClick={() => setOpen(true)}
-                  >
-                    Open Dialog
-                  </Button>
-                }
-                title="Dialog Title"
-                description="Dialog Description"
-              >
-                <div>
-                  <form className="space-y-3">
-                    <div>
-                      <Input placeholder="email address" />
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Checkbox id="airplane-mode" />
-                      <Label htmlFor="airplane-mode" className="font-normal">
-                        Accept Terms and Conditions
-                      </Label>
-                    </div>
-                  </form>
-
-                  <div className="flex justify-end mt-4 gap-x-2">
-                    <Button
-                      variant="outline"
-                      onClick={() => setOpen(false)}
-                      size="sm"
-                    >
-                      Close
-                    </Button>
-
-                    <Button
-                      variant="primary"
-                      onClick={() => setOpen(false)}
-                      size="sm"
-                    >
-                      Submit
-                    </Button>
-                  </div>
-                </div>
-              </CustomDialog>
-            </div>
+            <div></div>
             <div className="p-4 rounded border space-y-3 w-full max-w-lg">
               <Skeleton className="h-6 w-full max-w-xs" />
               <Skeleton className="h-6 w-full max-w-44" />
@@ -1125,6 +1028,15 @@ import { formatDate, formatDateDayTime } from "@/utils/date";
 import Link from "next/link";
 import { DataTable } from "@/components/ui/data-table-2";
 import { useMounted } from "@/hooks/use-mounted";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -1148,9 +1060,20 @@ export default function Home() {
           content="shadcn-ui, marketplace, components, design system, tailwindcss, nextjs"
         />
       </Head>
-      <main className="mb-40 space-y-40">
-        <Hero />
-      </main>
+      <div className="flex flex-col min-h-screen">
+        <main className="mb-40 space-y-40 flex-grow">
+          <Hero />
+        </main>
+        <footer className="mt-auto pt-20 pb-8 border-t border-border">
+          <Container className="relative">
+            <div className="relative text-center">
+              <h3 className="bg-clip-text text-transparent bg-gradient-to-b from-foreground to-black pb-2 text-4xl lg:text-8xl font-semibold tracking-tight h-fit">
+                Beyond Default and New York
+              </h3>
+            </div>
+          </Container>
+        </footer>
+      </div>
       {/* <main
         className={`grid grid-cols-1 md:grid-cols-2 gap-10 min-h-screen items-center justify-between p-24 ${inter.className}`}
       >
@@ -1670,7 +1593,7 @@ export function DesignSystemGuide() {
             <div className="flex h-20 w-20 items-center justify-center rounded bg-layer">
               1
             </div>
-            <div className="flex h-20 w-20 items-center justify-center rounded bg-layer-2">
+            <div className="flex h-20 w-20 items-center justify-center rounded bg-overlay-on-surface-background">
               2
             </div>
             <div className="flex h-20 w-20 items-center justify-center rounded bg-layer-3">

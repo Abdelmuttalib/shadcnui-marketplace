@@ -52,9 +52,7 @@ export function ExamplesLayout({ children }: { children: React.ReactNode }) {
               <Button
                 key={example.label}
                 onClick={() => setCurrentExampleId(example.id)}
-                variant={
-                  example.id === currentExampleId ? "primary-outline" : "ghost"
-                }
+                variant={example.id === currentExampleId ? "default" : "ghost"}
               >
                 {example.label}
               </Button>

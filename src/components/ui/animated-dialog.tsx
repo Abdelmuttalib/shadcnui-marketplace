@@ -23,7 +23,7 @@ const DialogOverlay = React.forwardRef<
   >
     <div
       className={cn(
-        "fixed inset-0 bg-black/25 dark:bg-gray-900/70",
+        "fixed inset-0 bg-base/25 dark:bg-base/80 backdrop-blur-sm",
         className as ClassValue
       )}
     />
@@ -103,7 +103,7 @@ const DialogTitle: React.FC<DialogTitleProps> = ({
 }) => (
   <Dialog.Title
     as={as}
-    className={cn("text-lg font-medium leading-6 text-gray-900", className)}
+    className={cn("text-lg font-medium leading-6 text-foreground", className)}
     {...props}
   />
 );
@@ -228,15 +228,15 @@ export default function CustomDialog({
                 />
               </svg>
             </IconButton>
-            <DialogTitle as="div" className="-mt-2 space-y-0.5">
-              <Typography as="h1" variant="lg/medium">
+            <DialogTitle as="div" className="-mt-2 space-y-1">
+              <Typography as="h1" variant="xl/semibold">
                 {title}
               </Typography>
               {description && (
                 <Typography
                   as="p"
                   variant="sm/regular"
-                  className="text-foreground-light"
+                  className="text-foreground-secondary"
                 >
                   {description}
                 </Typography>

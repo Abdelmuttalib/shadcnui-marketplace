@@ -20,142 +20,53 @@ module.exports = {
         sans: "var(--font-sans)",
       },
 
-      fontSize: {
-        xs: "var(--font-xs)",
-        sm: "var(--font-sm)",
-        base: "var(--font-base)",
-        md: "var(--font-md)",
-        lg: "var(--font-lg)",
-        xl: "var(--font-xl)",
-        "2xl": "var(--font-display-xs)",
-        "3xl": "var(--font-display-sm)",
-        "4xl": "var(--font-display-md)",
-        "5xl": "var(--font-display-lg)",
-        "6xl": "var(--font-display-xl)",
-        "7xl": "var(--font-display-2xl)",
-        // "display-xs": "var(--font-display-xs)",
-        // "display-sm": "var(--font-display-sm)",
-        // "display-md": "var(--font-display-md)",
-        // "display-lg": "var(--font-display-lg)",
-        // "display-xl": "var(--font-display-xl)",
-        // "display-2xl": "var(--font-display-2xl)",
-      },
-
-      lineHeight: {
-        xs: "var(--line-height-xs)",
-        sm: "var(--line-height-sm)",
-        base: "var(--line-height-base)",
-        md: "var(--line-height-md)",
-        lg: "var(--line-height-lg)",
-        xl: "var(--line-height-xl)",
-        "2xl": "var(--line-height-display-xs)",
-        "3xl": "var(--line-height-display-sm)",
-        "4xl": "var(--line-height-display-md)",
-        "5xl": "var(--line-height-display-lg)",
-        "6xl": "var(--line-height-display-xl)",
-        "7xl": "var(--line-height-display-2xl)",
-        // "display-xs": "var(--line-height-display-xs)",
-        // "display-sm": "var(--line-height-display-sm)",
-        // "display-md": "var(--line-height-display-md)",
-        // "display-lg": "var(--line-height-display-lg)",
-        // "display-xl": "var(--line-height-display-xl)",
-        // "display-2xl": "var(--line-height-display-2xl)",
-      },
-
-      fontWeight: {
-        regular: "var(--font-weight-regular)",
-        medium: "var(--font-weight-medium)",
-        semibold: "var(--font-weight-semibold)",
-        bold: "var(--font-weight-bold)",
-      },
-
-      borderRadius: {
-        DEFAULT: "var(--border-radius)",
-        sm: "var(--border-radius-sm)",
-        md: "var(--border-radius-md)",
-        lg: "var(--border-radius-lg)",
-        xl: "var(--border-radius-xl)",
-        full: "9999px",
-      },
-
-      transitionDuration: {
-        short: "var(--transition-short)",
-        long: "var(--transition-long)",
-      },
-
       colors: {
-        background: {
-          DEFAULT: "hsl(var(--background))",
-          accent: "hsl(var(--color-accent))",
-        },
-
-        muted: "hsl(var(--background-muted))",
-
-        /* Hover/Selected */
-        accent: {
-          DEFAULT: "hsl(var(--color-accent))",
-          foreground: "hsl(var(--color-accent-foreground))",
-          hover: "hsl(var(--color-accent-hover))",
-        },
-
-        ring: "hsl(var(--color-ring))",
-
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
         foreground: {
-          DEFAULT: "hsl(var(--color-text))",
-          light: "hsl(var(--color-text-light))",
-          lighter: "hsl(var(--color-text-lighter))",
-          muted: "hsl(var(--color-text-muted))",
+          DEFAULT: "hsl(var(--foreground))",
+          secondary: "hsl(var(--foreground-secondary))",
+          subtle: "hsl(var(--foreground-subtle))",
         },
 
-        black: "#040a15",
-        layer: {
-          DEFAULT: "hsl(var(--layer-1))",
-          2: "hsl(var(--layer-2))",
-          3: "hsl(var(--layer-3))",
-          4: "hsl(var(--layer-4))",
+        overlay: {
+          DEFAULT: "hsl(var(--overlay))",
+          foreground: "hsl(var(--overlay-foreground))",
+          "on-surface": {
+            background: "hsl(var(--overlay-on-surface-background))",
+            foreground: "hsl(var(--overlay-on-surface-foreground))",
+            border: "hsl(var(--overlay-on-surface-border))",
+            hover: "hsl(var(--overlay-on-surface-hover))",
+            focus: "hsl(var(--overlay-on-surface-focus))",
+          },
         },
 
-        border: {
-          DEFAULT: "hsl(var(--color-border))",
-          light: "hsl(var(--color-border-light))",
-          lighter: "hsl(var(--color-border-lighter))",
-          hover: "hsl(var(--color-border-hover))",
-          "light-hover": "hsl(var(--color-border-light-hover))",
+        black: "hsl(var(--color-black))",
+        white: "hsl(var(--color-white))",
+
+        base: {
+          DEFAULT: "hsl(var(--color-base))",
+          25: "hsl(var(--color-base-25))",
+          50: "hsl(var(--color-base-50))",
+          100: "hsl(var(--color-base-100))",
+          200: "hsl(var(--color-base-200))",
+          300: "hsl(var(--color-base-300))",
+          400: "hsl(var(--color-base-400))",
+          500: "hsl(var(--color-base-500))",
+          600: "hsl(var(--color-base-600))",
+          700: "hsl(var(--color-base-700))",
+          750: "hsl(var(--color-base-750))",
+          800: "hsl(var(--color-base-800))",
+          850: "hsl(var(--color-base-850))",
+          900: "hsl(var(--color-base-900))",
+          950: "hsl(var(--color-base-950))",
         },
-
-        "input-border": "hsl(var(--color-input-border))",
-
-        info: {
-          DEFAULT: "hsl(var(--color-info))",
-          light: "hsl(var(--color-info-light))",
-          dark: "hsl(var(--color-info-dark))",
-        },
-
-        success: {
-          DEFAULT: "hsl(var(--color-success))",
-          light: "hsl(var(--color-success-light))",
-          dark: "hsl(var(--color-success-dark))",
-        },
-
-        error: {
-          DEFAULT: "hsl(var(--color-error))",
-          light: "hsl(var(--color-error-light))",
-          dark: "hsl(var(--color-error-dark))",
-        },
-
-        danger: {
-          DEFAULT: "hsl(var(--color-danger))",
-          light: "hsl(var(--color-danger-light))",
-          dark: "hsl(var(--color-danger-dark))",
-        },
-
-        warning: {
-          DEFAULT: "hsl(var(--color-warning))",
-          light: "hsl(var(--color-warning-light))",
-          dark: "hsl(var(--color-warning-dark))",
-        },
-
         primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+
           50: "hsl(var(--color-primary-50))",
           100: "hsl(var(--color-primary-100))",
           200: "hsl(var(--color-primary-200))",
@@ -166,10 +77,6 @@ module.exports = {
           700: "hsl(var(--color-primary-700))",
           800: "hsl(var(--color-primary-800))",
           900: "hsl(var(--color-primary-900))",
-          DEFAULT: "hsl(var(--color-primary))",
-          hover: "hsl(var(--color-primary-hover))",
-          active: "hsl(var(--color-primary-active))",
-          disabled: "hsl(var(--color-primary-disabled))",
         },
 
         gray: {
@@ -191,46 +98,39 @@ module.exports = {
           950: "hsl(var(--color-gray-950))",
         },
 
-        red: {
-          50: "hsl(var(--color-red-50))",
-          100: "hsl(var(--color-red-100))",
-          200: "hsl(var(--color-red-200))",
-          300: "hsl(var(--color-red-300))",
-          400: "hsl(var(--color-red-400))",
-          500: "hsl(var(--color-red-500))",
-          600: "hsl(var(--color-red-600))",
-          700: "hsl(var(--color-red-700))",
-          800: "hsl(var(--color-red-800))",
-          900: "hsl(var(--color-red-900))",
-          DEFAULT: "hsl(var(--color-red))",
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
-
-        green: {
-          50: "hsl(var(--color-green-50))",
-          100: "hsl(var(--color-green-100))",
-          200: "hsl(var(--color-green-200))",
-          300: "hsl(var(--color-green-300))",
-          400: "hsl(var(--color-green-400))",
-          500: "hsl(var(--color-green-500))",
-          600: "hsl(var(--color-green-600))",
-          700: "hsl(var(--color-green-700))",
-          800: "hsl(var(--color-green-800))",
-          900: "hsl(var(--color-green-900))",
-          DEFAULT: "hsl(var(--color-green))",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
-
-        yellow: {
-          50: "hsl(var(--color-yellow-50))",
-          100: "hsl(var(--color-yellow-100))",
-          200: "hsl(var(--color-yellow-200))",
-          300: "hsl(var(--color-yellow-300))",
-          400: "hsl(var(--color-yellow-400))",
-          500: "hsl(var(--color-yellow-500))",
-          600: "hsl(var(--color-yellow-600))",
-          700: "hsl(var(--color-yellow-700))",
-          800: "hsl(var(--color-yellow-800))",
-          900: "hsl(var(--color-yellow-900))",
-          DEFAULT: "hsl(var(--color-yellow))",
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
         },
       },
       keyframes: {

@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         attribute="class"
         themes={["light", "dark"]}
       >
-        <UICustomizer />
+        {/* <UICustomizer /> */}
         <Component {...pageProps} />
         <Analytics />
       </NextThemeProvider>

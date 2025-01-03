@@ -409,7 +409,7 @@ export function Chat() {
               </div>
               <Button
                 className="w-fit whitespace-nowrap"
-                leftIcon={<Send className="w-4" />}
+                iconLeft={<Send className="w-4" />}
               >
                 Send
               </Button>

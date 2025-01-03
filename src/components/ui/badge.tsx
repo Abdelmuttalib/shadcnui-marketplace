@@ -1,124 +1,77 @@
-// @ts-nocheck
-
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
-import { cva } from "class-variance-authority";
-import type { ReactNode } from "react";
 
-export type BadgeColor =
-  | "primary"
-  | "green"
-  | "yellow"
-  | "red"
-  | "blue"
-  | "gray"
-  | "white"
-  | "dark-gray";
+{
+  /* <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+        Badge
+      </span>
+      <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+        Badge
+      </span>
+      <span className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+        Badge
+      </span>
+      <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
+        Badge
+      </span>
+      <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+        Badge
+      </span>
+      <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
+        Badge
+      </span>
+      <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">
+        Badge
+      </span>
+      <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10">
+        Badge
+      </span> */
+}
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-  // "whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-medium lowercase",
+  "inline-flex items-center rounded-full ring-1 ring-iset px-2.5 py-0.5 text-xs font-medium transition-colors focus:outline-none",
   {
     variants: {
       variant: {
+        default: "ring-transparent bg-primary text-primary-foreground",
+        secondary: "ring-transparent bg-secondary text-secondary-foreground",
+        white: "ring-transparent bg-secondary text-secondary-foreground",
+        destructive:
+          "ring-transparent bg-destructive text-destructive-foreground",
+        outline: "text-foreground ring-transparent",
+
         primary:
-          "border-primary-600/10 bg-primary-100/60 text-primary-700 dark:opacity-80 dark:text-primary-800 dark:bg-primary-100/80",
+          "bg-primary-50 text-primary-600 ring-primary-500/20 dark:bg-primary-500/20 dark:text-primary-400 dark:ring-primary-500/40",
 
         green:
-          "border-green-600/10 bg-green-100/80 text-green-800 dark:opacity-80",
+          "bg-green-50 text-green-700 ring-green-600/20 dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/30",
 
         yellow:
-          "border-yellow-600/10 bg-yellow-100/80 text-yellow-800 dark:opacity-90",
+          "bg-yellow-50 text-yellow-800 ring-yellow-600/20 dark:bg-yellow-500/10 dark:text-yellow-500 dark:ring-yellow-500/30",
 
-        red: "border-red-600/10 bg-red-100/80 text-red-700 dark:opacity-90",
-        blue: "border-blue-600/10 bg-blue-100/50 text-blue-600 dark:bg-blue-100 dark:opacity-70",
+        red: "bg-red-50 text-red-700 ring-red-600/20 dark:bg-red-500/10 dark:text-red-500 dark:ring-red-500/30",
 
-        gray: "border-gray-600/10 bg-gray-200/70 text-gray-700",
+        blue: "bg-blue-50 text-blue-700 ring-blue-700/20 dark:bg-blue-500/10 dark:text-blue-500 dark:ring-blue-500/30",
 
-        white: "border-gray-500/10 bg-white text-gray-800",
-
-        "dark-gray":
-          "border-gray-600/10 bg-gray-200/70 text-gray-500/80 dark:text-gray-600",
-      },
-      size: {
-        default: "px-2 py-0.5",
-        sm: "px-1.5 py-0.5",
-        lg: "px-2.5 py-1",
+        neutral:
+          "bg-gray-50 text-gray-600 ring-gray-500/20 dark:bg-gray-500/20 dark:text-gray-400 dark:ring-gray-500/40",
       },
     },
     defaultVariants: {
-      variant: "primary",
-      size: "default",
+      variant: "default",
     },
   }
 );
 
-interface BadgeProps
-  extends React.BaseHTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof badgeVariants> {
-  color?: BadgeColor;
-  size?: "sm" | "lg" | "default";
-  variant?: string;
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {}
+
+function Badge({ className, variant, ...props }: BadgeProps) {
+  return (
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+  );
 }
 
-const Badge = ({
-  color = "primary",
-  variant = "primary",
-  children,
-  className,
-  size = "default",
-}: BadgeProps) => {
-  return (
-    <span
-      className={cn(
-        badgeVariants({ variant: variant, size: size, className }),
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
-};
-
 export default Badge;
-
-// export function BadgesExamples() {
-//   return (
-//     <div className="flex flex-col">
-//       <div className="flex">
-//         <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-//           Badge
-//         </span>
-//         <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-//           Badge
-//         </span>
-//         <span className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
-//           Badge
-//         </span>
-//         <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-//           Badge
-//         </span>
-//         <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-//           Badge
-//         </span>
-//         <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
-//           Badge
-//         </span>
-//         <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">
-//           Badge
-//         </span>
-//         <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10">
-//           Badge
-//         </span>
-//       </div>
-//       <div className="flex">
-//         <Badge color="green">Badge</Badge>
-//         <Badge color="yellow">Badge</Badge>
-//         <Badge color="red">Badge</Badge>
-//         <Badge color="blue">Badge</Badge>
-//         <Badge color="gray">Badge</Badge>
-//         <Badge color="white">Badge</Badge>
-//         <Badge color="dark-gray">Badge</Badge>
-//       </div>
-//     </div>
-//   );
-// }·

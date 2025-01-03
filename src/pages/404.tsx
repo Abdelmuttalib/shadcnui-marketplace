@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function NotFoundPage() {
   return (
@@ -14,9 +14,7 @@ export default function NotFoundPage() {
             {/* ’ */}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <ButtonLink href="/" variant="primary">
-              Go back home
-            </ButtonLink>
+            <Link href="/">Go back home</Link>
           </div>
         </div>
       </main>
