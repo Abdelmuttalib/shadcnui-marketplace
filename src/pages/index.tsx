@@ -77,9 +77,9 @@ function DropdownMenuDemo() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant="outline">Options</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-60">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
@@ -1045,7 +1045,7 @@ export default function Home() {
         <title> shadcn-ui Marketplace</title>
         <meta
           name="description"
-          content="A marketplace for shadcn-ui components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, and guidelines."
+          content="shadcn ui styles, A marketplace for shadcn-ui components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, and guidelines."
         />
 
         <meta property="og:title" content="shadcn-ui Marketplace" />
@@ -1057,20 +1057,21 @@ export default function Home() {
         {/* keywords */}
         <meta
           name="keywords"
-          content="shadcn-ui, marketplace, components, design system, tailwindcss, nextjs"
+          content="shadcn,ui, shadcn ui style, shadcn ui components, design system, design, components, ui kit, ui components, ui kits, react, react ui kit, react ui components, react components, component library, component kit, component ui kit, component ui components, components library, components kit, design system components, design system kit, design system ui kit, design system ui components, design systems, design ui kits, design ui components, ui design kits, ui design components, ui design systems, ui ui kits, ui ui components, open source, open source components, open source design systems, open source ui kits, open source ui components, shadcn ui, shadcn ui style, shadcn ui components, shadcn design system, shadcn design ui kits, shadcn design ui components, shadcn ui new york, shadcn ui design, shadcn ui styles, new york, new york style, new york components, new york design system, new york ui kits, new york ui components"
         />
       </Head>
       <div className="flex flex-col min-h-screen">
         <main className="mb-40 space-y-40 flex-grow">
           <Hero />
         </main>
-        <footer className="mt-auto pt-20 pb-8 border-t border-border">
+        <footer className="mt-auto pt-72 pb-[37rem] pl-96 border-t border-border">
           <Container className="relative">
-            <div className="relative text-center">
+            <DropdownMenuDemo />
+            {/* <div className="relative text-center">
               <h3 className="bg-clip-text text-transparent bg-gradient-to-b from-foreground to-black pb-2 text-4xl lg:text-8xl font-semibold tracking-tight h-fit">
                 Beyond Default and New York
               </h3>
-            </div>
+            </div> */}
           </Container>
         </footer>
       </div>
