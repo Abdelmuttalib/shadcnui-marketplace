@@ -281,10 +281,39 @@ const Showcase = () => {
                 </Button>
               </div>
             </div>
-            <div className="pt-4 flex items-center gap-4 w-full">
-              <DropdownMenuDemo />
-              <div className="w-fit">
-                <Switch id="airplane-mode" />
+            <div className="pt-4 flex flex-col gap-4">
+              <div className="flex items-center gap-4 w-full">
+                <DropdownMenuDemo />
+
+                <div className="w-fit">
+                  <Switch id="airplane-mode" />
+                </div>
+              </div>
+              <div className="">
+                <Pagination>
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious href="#" />
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationLink href="#">1</PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationLink href="#" isActive>
+                        2
+                      </PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationLink href="#">3</PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationEllipsis />
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationNext href="#" />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
               </div>
             </div>
             <div className=" flex flex-wrap px-1 py-4 gap-4">
@@ -1064,14 +1093,21 @@ export default function Home() {
         <main className="mb-40 space-y-40 flex-grow">
           <Hero />
         </main>
-        <footer className="mt-auto pt-72 pb-[37rem] pl-96 border-t border-border">
+        <footer className="mt-auto pt-16 pb-10 border-t border-border bg-gradient-to-b from-transparent to-black via-transparent">
           <Container className="relative">
-            <DropdownMenuDemo />
-            {/* <div className="relative text-center">
+            {/* <div className=" flex flex-wrap px-1 py-4 gap-4 -ml-56">
+              <Badge variant="green">Success</Badge>
+              <Badge variant="yellow">Warning</Badge>
+              <Badge variant="red">Failed</Badge>
+              <Badge variant="blue">Processing</Badge>
+              <Badge variant="neutral">Pending</Badge>
+            </div> */}
+            {/* <DropdownMenuDemo /> */}
+            <div className="relative text-center">
               <h3 className="bg-clip-text text-transparent bg-gradient-to-b from-foreground to-black pb-2 text-4xl lg:text-8xl font-semibold tracking-tight h-fit">
                 Beyond Default and New York
               </h3>
-            </div> */}
+            </div>
           </Container>
         </footer>
       </div>

@@ -54,7 +54,7 @@ export default function Document() {
           property="twitter:description"
           content="Discover the best shadcn ui kits and styles for modern web design."
         />
-        <meta property="twitter:image" content="/images/social-preview.jpg" />
+        <meta property="twitter:image" content="/ogt.png" />
 
         {/* Preload Fonts */}
         <link
