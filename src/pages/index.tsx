@@ -1795,8 +1795,8 @@ function ShowcaseCommingSoonSection({
             </div>
           </div>
         </div>
-        {components.map((component) => (
-          <li>
+        {components.map((component, index) => (
+          <li key={component.title + index}>
             <ComponentShowcaseCard {...component} />
           </li>
         ))}
@@ -1844,7 +1844,7 @@ function NotificationAlert() {
           <div className="mt-4">
             <div className="flex gap-x-2">
               <Button size="xs" variant="secondary">
-                Don't allow
+                Don&apos;t allow
               </Button>
               <Button size="xs">Allow</Button>
             </div>
@@ -1954,6 +1954,7 @@ export function ApplicationUI() {
         <div className="mt-4">
           {applicationUIComponentsData.map((section) => (
             <ShowcaseCommingSoonSection
+              key={section.title}
               title={section.title}
               components={section.components}
             />
