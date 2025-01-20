@@ -587,7 +587,7 @@ export const columns: ColumnDef<Payment>[] = [
             cell.getValue() as unknown as string
           )}
         >
-          <>{cell.getValue()}</>
+          <>{cell.getValue() as React.ReactNode}</>
         </Badge>
       );
     },
