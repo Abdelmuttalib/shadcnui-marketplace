@@ -4,10 +4,10 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 
-import { codeToHast } from "shiki/bundle/web";
-import { toJsxRuntime } from "hast-util-to-jsx-runtime";
+// import { codeToHast } from "shiki/bundle/web";
+// import { toJsxRuntime } from "hast-util-to-jsx-runtime";
 import { Fragment } from "react";
-import { jsx, jsxs } from "react/jsx-runtime";
+// import { jsx, jsxs } from "react/jsx-runtime";
 import { Button } from "@/components/ui/button";
 import { IconButton } from "@/components/ui/icon-button";
 
@@ -73,18 +73,20 @@ export default function NotFoundPage() {
 // })
 
 export async function highlightCode(code: string) {
-  const out = await codeToHast(code, {
-    lang: "tsx",
-    theme: "dark-plus",
-  });
+  // const out = await codeToHast(code, {
+  //   lang: "tsx",
+  //   theme: "dark-plus",
+  // });
 
-  return toJsxRuntime(out, {
-    Fragment,
-    // @ts-ignore - jsx-runtime is not typed
-    jsx,
-    // @ts-ignore - jsx-runtime is not typed
-    jsxs,
-  });
+  return code as unknown as JSX.Element;
+
+  // return toJsxRuntime(out, {
+  //   Fragment,
+  //   // @ts-ignore - jsx-runtime is not typed
+  //   jsx,
+  //   // @ts-ignore - jsx-runtime is not typed
+  //   jsxs,
+  // });
 }
 
 export async function highlight(code: string) {
