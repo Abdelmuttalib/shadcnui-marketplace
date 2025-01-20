@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 // import { codeToHtml } from "shiki";
-import copy from "copy-to-clipboard";
+// import copy from "copy-to-clipboard";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 
@@ -121,7 +121,7 @@ export function Code({
   const codeString = code ? code : extractTextFromChildren("dsdfdsf");
 
   const handleCopy = () => {
-    copy(codeString.trim());
+    // copy(codeString.trim());
     setCopied(true);
     setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
   };
