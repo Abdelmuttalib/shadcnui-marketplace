@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { codeToHtml } from "shiki";
+// import { codeToHtml } from "shiki";
 import copy from "copy-to-clipboard";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
@@ -88,20 +88,21 @@ export async function highlightCode(code: string) {
 }
 
 export async function highlight(code: string) {
-  const html = await codeToHtml(code, {
-    lang: "tsx",
-    theme: "github-dark-default",
-    transformers: [
-      {
-        code(node) {
-          node.properties["data-line-numbers"] = "";
-        },
-      },
-    ],
-  });
+  // const html = await codeToHtml(code, {
+  //   lang: "tsx",
+  //   theme: "github-dark-default",
+  //   transformers: [
+  //     {
+  //       code(node) {
+  //         node.properties["data-line-numbers"] = "";
+  //       },
+  //     },
+  //   ],
+  // });
 
   // html string to react element
-  return html;
+  // return html;
+  return code;
 }
 
 console.log(exampleCode); // highlighted html string
