@@ -248,20 +248,41 @@
   }
 
   pre {
-    @apply rounded bg-overlay-on-surface-background p-4 font-mono text-sm text-foreground;
+    @apply rounded bg-overlay-on-surface-background p-4 font-mono text-sm text-foreground overflow-auto max-h-[34rem] hide-scrollbar;
   }
 
-  .code {
+  /* code {
     @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
-  }
+  } */
 
   /* text select color */
   ::-moz-selection {
     /* Code for Firefox */
-    @apply bg-primary-600 text-white;
+    @apply bg-foreground text-background;
   }
 
   ::selection {
-    @apply bg-primary-600 text-white;
+    @apply bg-foreground text-background;
   }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+html {
+  /* font-size: 16px;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  scroll-behavior: smooth;
 }

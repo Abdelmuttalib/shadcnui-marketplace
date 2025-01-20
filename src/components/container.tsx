@@ -16,3 +16,11 @@ export default function Container({ children, className }: ContainerProps) {
     </div>
   );
 }
+
+export function ScreenContainer({ children, className }: ContainerProps) {
+  return (
+    <div className={cn("mx-auto max-w-screen-2xl px-2 md:px-4", className)}>
+      {children}
+    </div>
+  );
+}

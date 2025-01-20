@@ -6,6 +6,8 @@ import { ThemeProvider as NextThemeProvider } from "next-themes";
 import { ThemeColorWrapper } from "@/components/theme-color-wrapper";
 import { useThemeColor } from "@/hooks/use-theme-color";
 import { UICustomizer } from "@/components/ui-customizer";
+import ThemeSwitcher, { ThemeColorSelect } from "@/components/theme-select";
+import { cn } from "@/utils/cn";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [themeColor] = useThemeColor();
@@ -17,6 +19,8 @@ export default function App({ Component, pageProps }: AppProps) {
         attribute="class"
         themes={["light", "dark"]}
       >
+        <UICustomizer />
+
         {/* <UICustomizer /> */}
         <Component {...pageProps} />
         <Analytics />

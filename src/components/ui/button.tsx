@@ -2,6 +2,7 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
+import Link, { LinkProps } from "next/link";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 ease-in-out duration-100 transition-all",
@@ -62,7 +63,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }), {
-          "inline-flex items-center justify-center gap-x-1.5":
+          "inline-flex items-center justify-center gap-x-1":
             iconLeft || iconRight,
         })}
         ref={ref}
@@ -79,4 +80,49 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export interface ButtonLinkProps
+  extends LinkProps,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
+  className?: string;
+  children: React.ReactNode;
+}
+
+const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
+  (
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      iconLeft,
+      iconRight,
+      ...props
+    },
+    ref
+  ) => {
+    const Comp = asChild ? Slot : Link;
+
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }), {
+          "inline-flex items-center justify-center gap-x-1.5":
+            iconLeft || iconRight,
+        })}
+        ref={ref}
+        {...props}
+      >
+        <>
+          {iconLeft ? <>{iconLeft}</> : null}
+          <>{props.children}</>
+          {iconRight ? <>{iconRight}</> : null}
+        </>
+      </Comp>
+    );
+  }
+);
+ButtonLink.displayName = "ButtonLink";
+
+export { Button, ButtonLink, buttonVariants };

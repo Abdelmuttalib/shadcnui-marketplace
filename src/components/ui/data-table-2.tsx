@@ -70,7 +70,7 @@ export function DataTable<TData, TValue>({
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
-                  className="h-14 rounded-b text-foreground-light"
+                  className="h-14 rounded-b text-foreground-light bg-background"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id} className="px-3">
