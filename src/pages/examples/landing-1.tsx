@@ -84,7 +84,7 @@ export default function Landing1() {
                 Level
               </Typography>
               <Typography variant="display-xs/regular" className="max-w-4xl">
-                <strong>Result driven marketing.</strong> Ampry is a
+                <strong>Result driven marketing.</strong> ACME is a
                 next-generation marketing and technology company.
               </Typography>
               <div className="flex gap-4">
@@ -167,13 +167,13 @@ export default function Landing1() {
               <div className="flex flex-col justify-center items-center text-center gap-6">
                 <div className="flex flex-col gap-2">
                   <Typography variant="md/semibold" className="text-primary">
-                    Ampry Works for You
+                    ACME Works for You
                   </Typography>
                   <Typography
                     variant="display-lg/semibold"
                     className="leading-tight max-w-4xl text-foreground"
                   >
-                    How Ampry makes increasing profit uncomplicated
+                    How ACME makes increasing profit uncomplicated
                   </Typography>
                 </div>
                 <Typography
@@ -181,7 +181,7 @@ export default function Landing1() {
                   className="max-w-5xl text-foreground"
                 >
                   Looking to take your business to the next level? Look no
-                  further than Ampry. Our suite of powerful tools is designed to
+                  further than ACME. Our suite of powerful tools is designed to
                   help you generate more leads, improve your conversion rates,
                   and turn those visitors into customers.
                 </Typography>
@@ -202,7 +202,7 @@ export default function Landing1() {
               variant="lg/regular"
               className="max-w-5xl text-foreground-secondary"
             >
-              Join 250+ companies already growing with Ampry
+              Join 250+ companies already growing with ACME
             </Typography>
 
             <div className="margin-top margin-medium">
@@ -270,7 +270,7 @@ export default function Landing1() {
                           variant="display-lg/semibold"
                           className="leading-tight max-w-4xl text-foreground"
                         >
-                          Join Hundreds of Firms Growing with Ampry
+                          Join Hundreds of Firms Growing with ACME
                         </Typography>
                       </div>
                       <div className="flex flex-col gap-6">
@@ -344,17 +344,17 @@ export default function Landing1() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
                   {[
                     {
-                      title: "Ampry Leads",
+                      title: "ACME Leads",
                       description:
                         "Our bread and butter is lead generation, with millions of leads captured.",
                     },
                     {
-                      title: "Ampry Tech",
+                      title: "ACME Tech",
                       description:
                         "Cutting-edge software and strategies to maximize your conversion rates and take your business to the next level.",
                     },
                     {
-                      title: "Ampry Offers",
+                      title: "ACME Offers",
                       description:
                         "Turn would-be-lost leads into revenue for your business, over and over again.",
                     },
@@ -420,11 +420,11 @@ export default function Landing1() {
                         variant="display-md/semibold"
                         className="text-primary-600"
                       >
-                        Get more customers with&nbsp;Ampry.
+                        Get more customers with&nbsp;ACME.
                       </Typography>
                     </div>
                     <Typography as="p" variant="lg/regular" className="">
-                      Join the many firms already growing with Ampry.
+                      Join the many firms already growing with ACME.
                     </Typography>
                     <div className="mt-4">
                       <Button>Get Started</Button>
@@ -454,7 +454,7 @@ export default function Landing1() {
                             src="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/63462a28ab79234b65c5a678_ampry_site_logo_dark.svg"
                             loading="lazy"
                             role="button"
-                            alt="Ampry logo"
+                            alt="ACME logo"
                             className="uui-styleguide_logotype-2"
                           />
                         </div> */}
