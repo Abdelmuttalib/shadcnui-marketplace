@@ -248,7 +248,7 @@
   }
 
   pre {
-    @apply rounded bg-overlay-on-surface-background p-4 font-mono text-sm text-foreground overflow-auto max-h-[34rem] hide-scrollbar;
+    @apply rounded-lg bg-overlay-on-surface-background p-4 font-mono text-sm md:text-base text-foreground overflow-auto max-h-[45rem] hide-scrollbar;
   }
 
   /* code {

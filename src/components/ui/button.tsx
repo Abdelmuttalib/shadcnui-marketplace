@@ -63,7 +63,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }), {
-          "inline-flex items-center justify-center gap-x-1":
+          "inline-flex items-center justify-center gap-x-2":
             iconLeft || iconRight,
         })}
         ref={ref}

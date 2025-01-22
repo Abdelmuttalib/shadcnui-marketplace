@@ -1,14 +1,10 @@
 import { useTheme } from "next-themes";
 
-import {
-  IconButton,
-  IconButtonProps,
-  iconButtonVariants,
-} from "@/components/ui/icon-button";
+import { IconButton, IconButtonProps } from "@/components/ui/icon-button";
 
 import { Menu, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
-import { MoonIcon, Pencil, SunIcon } from "lucide-react";
+import { ChevronDownIcon, MoonIcon, Pencil, SunIcon } from "lucide-react";
 import { Fragment } from "react";
 
 import { type ThemeColorType, useThemeColor } from "@/hooks/use-theme-color";
@@ -30,50 +26,51 @@ export default function ThemeSwitcher({
 
   if (!mounted) return null;
 
-  return (
-    <div className="flex flex-wrap gap-2">
-      <Button
-        type="button"
-        variant={variant ?? "ghost"}
-        onClick={() => setTheme("light")}
-        className={cn("text-foreground-light sm:inline-flex", className)}
-        iconLeft={<SunIcon className="w-5" />}
-        size="sm"
-        disabled={theme === "light"}
-      >
-        Light
-      </Button>
-      <Button
-        type="button"
-        variant={variant ?? "ghost"}
-        onClick={() => setTheme("dark")}
-        className={cn("text-foreground-light sm:inline-flex", className)}
-        iconLeft={<MoonIcon className="w-5" />}
-        size="sm"
-        disabled={theme === "dark"}
-      >
-        Dark
-      </Button>
-    </div>
-  );
-
   // return (
-  //   <IconButton
-  //     type="button"
-  //     variant={variant ?? "ghost"}
-  //     onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-  //     className={cn("text-foreground-light sm:inline-flex", className)}
-  //   >
-  //     {theme === "light" ? (
-  //       <SunIcon className="w-5" />
-  //     ) : (
-  //       <MoonIcon className="w-5" />
-  //     )}
-  //   </IconButton>
+  //   <div className="flex flex-wrap gap-2">
+  //     <Button
+  //       type="button"
+  //       variant={variant ?? "ghost"}
+  //       onClick={() => setTheme("light")}
+  //       className={cn("text-foreground-light sm:inline-flex", className)}
+  //       iconLeft={<SunIcon className="w-5" />}
+  //       size="sm"
+  //       disabled={theme === "light"}
+  //     >
+  //       Light
+  //     </Button>
+  //     <Button
+  //       type="button"
+  //       variant={variant ?? "ghost"}
+  //       onClick={() => setTheme("dark")}
+  //       className={cn("text-foreground-light sm:inline-flex", className)}
+  //       iconLeft={<MoonIcon className="w-5" />}
+  //       size="sm"
+  //       disabled={theme === "dark"}
+  //     >
+  //       Dark
+  //     </Button>
+  //   </div>
   // );
+
+  return (
+    <IconButton
+      type="button"
+      size="xs"
+      variant={variant ?? "ghost"}
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className={cn("text-foreground-light sm:inline-flex", className)}
+    >
+      {theme === "light" ? (
+        <SunIcon className="w-5" />
+      ) : (
+        <MoonIcon className="w-5" />
+      )}
+    </IconButton>
+  );
 }
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -167,19 +164,35 @@ export function ThemeColorSelect() {
 export function ThemeColorSelect2() {
   const [themeColor, setThemeColor] = useThemeColor();
 
+  const themeColors = PRIMARY_THEME_COLORS.filter(
+    ({ name }) => name === themeColor.colorName
+  );
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button
           as="button"
           className={cn(
-            iconButtonVariants({
-              variant: "ghost",
+            buttonVariants({
+              variant: "outline",
+              size: "xs",
             }),
-            "hidden sm:flex"
+            "flex mx-2 border capitalize"
           )}
         >
-          <p className="w-5 text-foreground-light">i</p>
+          <span
+            className={cn("h-3.5 w-3.5 rounded")}
+            style={{
+              backgroundColor: themeColors?.[0]?.color,
+            }}
+          ></span>
+          <>{themeColor.colorName}</>
+          <ChevronDownIcon className="ml-2 h-3.5 w-3.5 text-foreground-secondary" />
+          {/* {name == themeColor.colorName && (
+                      <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
+                    )} */}
+          {/* <p className="w-5 text-foreground-light">i</p> */}
         </Menu.Button>
       </div>
       <Transition
@@ -191,7 +204,7 @@ export function ThemeColorSelect2() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-layer text-foreground shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-popover text-foreground shadow-lg ring-1 ring-border focus:outline-none p-1">
           <div className="relative">
             {PRIMARY_THEME_COLORS?.map(
               ({ name, color }: { name: ThemeColorType; color: string }) => (
@@ -203,11 +216,12 @@ export function ThemeColorSelect2() {
                       });
                     }}
                     className={cn(
-                      "flex w-full items-center px-3 py-2.5 font-medium capitalize text-foreground",
+                      "flex w-full items-center rounded px-3 py-2.5 capitalize text-foreground",
                       {
-                        "bg-primary-100 text-foreground":
+                        "bg-primary-100 dark:bg-muted-foreground/20 text-foreground":
                           name === themeColor.colorName,
-                        "hover:bg-accent-hover": name !== themeColor.colorName,
+                        "hover:bg-muted dark:hover:bg-muted-foreground/10":
+                          name !== themeColor.colorName,
                       }
                     )}
                   >
@@ -215,7 +229,7 @@ export function ThemeColorSelect2() {
                       style={{
                         backgroundColor: color,
                       }}
-                      className={cn("mr-2 h-4 w-4 rounded-full")}
+                      className={cn("mr-2 h-3.5 w-3.5 rounded")}
                     ></span>
                     <>{name}</>
                     {name == themeColor.colorName && (

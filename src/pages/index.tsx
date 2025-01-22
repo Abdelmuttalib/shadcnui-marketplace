@@ -1,7 +1,8 @@
 import * as React from "react";
 
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button, ButtonLink, ButtonProps } from "@/components/ui/button";
 import {
+  ArrowRightIcon,
   Bookmark,
   BookmarkIcon,
   CheckCheckIcon,
@@ -81,7 +82,7 @@ import {
 
 export function DropdownMenuDemo() {
   return (
-    <DropdownMenu defaultOpen>
+    <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Options</Button>
       </DropdownMenuTrigger>
@@ -1159,6 +1160,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Code, exampleCode, highlightCode } from "@/components/views/docs/code";
+import { DD } from "./dd";
+import { UICustomizer, UICustomizer2 } from "@/components/ui-customizer";
 
 function H() {
   return (
@@ -1259,8 +1262,21 @@ function H() {
                 projects and customize to your heart’s content. */}
                 Style Your Way, Redefining shadcn UI for Custom Interfaces
               </p>
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex flex-col gap-4">
                 <WaitlistForm />
+                <div className="space-y-2">
+                  <UICustomizer2 />
+
+                  <ButtonLink
+                    href="#examples"
+                    className="text-foreground-secondary"
+                    variant="outline"
+                    size="xs"
+                    iconRight={<ArrowRightIcon className="rotate-45" />}
+                  >
+                    examples
+                  </ButtonLink>
+                </div>
                 {/* <ButtonLink
                   href="/preview"
                   iconRight={<ArrowRightIcon className="w-4 h-4" />}
@@ -1994,6 +2010,9 @@ export default function Home() {
         <main className="mb-40 space-y-40 flex-grow">
           {/* <Hero /> */}
           <H />
+          <ScreenContainer>
+            <DD />
+          </ScreenContainer>
           <ApplicationUI />
         </main>
         <footer className="mt-auto pt-8 pb-6 border-t border-border">
