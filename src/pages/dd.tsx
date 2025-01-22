@@ -1,6 +1,8 @@
 import Badge from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { IconButton } from "@/components/ui/icon-button";
 import { Typography } from "@/components/ui/typography";
+import { cn } from "@/utils/cn";
 import { Cuboid } from "lucide-react";
 import React, { useState } from "react";
 
@@ -215,8 +217,8 @@ export function DD() {
         </div>
         <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-overlay-on-surface-background p-1">
           <div className="flex justify-between overflow-x-auto px-1 pt-1">
-            <div className="flex items-center gap-2">
-              <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 lg:flex dark:bg-gray-950/50 outline-none">
+            <div className="flex items-center justify-between w-full gap-2">
+              <div className="gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
                 <Button
                   variant={preview ? "outline" : "ghost"}
                   onClick={() => setPreview(true)}
@@ -269,13 +271,7 @@ export function DD() {
                   Code
                 </Button>
               </div>
-              {/* <div
-                role="radiogroup"
-                aria-required="false"
-                dir="ltr"
-                className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 lg:flex dark:bg-gray-950/50 outline-none"
-                tabIndex={0}
-              >
+              <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 sm:flex dark:bg-gray-950/50 outline-none">
                 {breakpoints.map((bp) => (
                   <IconButton
                     key={bp.label}
@@ -287,7 +283,7 @@ export function DD() {
                   </IconButton>
                 ))}
               </div>
-              <Separator orientation="vertical" className="h-6" /> */}
+              {/* <Separator orientation="vertical" className="h-6" /> */}
               {/* <IconLink
                 href="/examples/forms/login1"
                 variant="secondary"
@@ -415,7 +411,14 @@ export function DD() {
 
             {preview ? (
               <div
-                className="h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full"
+                className={cn(
+                  "h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full",
+                  {
+                    "max-w-md": breakpoint === "sm",
+                    "max-w-screen-md": breakpoint === "md",
+                    "max-w-full": breakpoint === "lg",
+                  }
+                )}
                 // style="flex: 30 1 0px; overflow: hidden;"
               >
                 <iframe
