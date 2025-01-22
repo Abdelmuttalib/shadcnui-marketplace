@@ -2,16 +2,17 @@ import { ScreenContainer } from "@/components/container";
 import { Button, ButtonLink } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { ArrowRightIcon, BookmarkIcon, MailIcon, Timer } from "lucide-react";
+
+import { Switch } from "@/components/ui/switch";
+import { applicationUIData } from "@/config";
+import Badge from "@/components/ui/badge";
+import { IconButton } from "@/components/ui/icon-button";
 import {
   DataTableDemo,
   DropdownMenuDemo,
   NotificationsCard,
   WaitlistForm,
-} from "..";
-import { Switch } from "@/components/ui/switch";
-import { applicationUIData } from "@/config";
-import Badge from "@/components/ui/badge";
-import { IconButton } from "@/components/ui/icon-button";
+} from "@/components/demo";
 
 export default function Blocks() {
   return (
