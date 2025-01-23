@@ -9,7 +9,6 @@ import { ScreenContainer } from "@/components/container";
 import { UICustomizer } from "@/components/ui-customizer";
 import { GradientBackground } from "../gradient";
 import { examplesRegistry, initialExamplesRegistry } from "@/config/data";
-import { Code } from "./docs/code";
 
 export function FeaturesExamples() {
   const examples = examplesRegistry.features;
