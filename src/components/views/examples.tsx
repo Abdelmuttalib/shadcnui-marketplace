@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import Badge from "@/components/ui/badge";
@@ -8,7 +8,8 @@ import { cn } from "@/utils/cn";
 import { ScreenContainer } from "@/components/container";
 import { UICustomizer } from "@/components/ui-customizer";
 import { GradientBackground } from "../gradient";
-import { examplesRegistry } from "@/config/data";
+import { examplesRegistry, initialExamplesRegistry } from "@/config/data";
+import { Code } from "./docs/code";
 
 export function FeaturesExamples() {
   const examples = examplesRegistry.features;
@@ -20,6 +21,8 @@ export function FeaturesExamples() {
           title={example.title}
           description={example.description}
           href={example.href}
+          code={example.code}
+          codePath={example.codePath}
           // className="mb-6 space-y-3 px-4 lg:mb-12 lg:px-0"
         />
       ))}
@@ -382,11 +385,15 @@ export function ExamplesLayout({
   title,
   description,
   href,
+  code,
+  codePath,
   children,
 }: {
   title: string;
   description?: string;
   href: string;
+  code: React.ReactNode;
+  codePath: string;
   children?: React.ReactNode;
 }) {
   const [preview, setPreview] = useState(true);
@@ -457,6 +464,18 @@ export function ExamplesLayout({
     },
   ];
 
+  const [_code, setCode] = useState<any>();
+
+  // Example usage of examplesRegistry
+  const fetchCode = async () => {
+    const cccode = await code; // Await the Promise to get the resolved string
+    setCode(cccode);
+  };
+
+  useEffect(() => {
+    fetchCode();
+  }, []);
+
   return (
     <div className="mt-16 md:mt-32 pt-10" id="examples">
       <div className="mb-6 space-y-3 px-4 lg:mb-12 lg:px-0">
@@ -477,7 +496,7 @@ export function ExamplesLayout({
       <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-overlay-on-surface-background p-1">
         <div className="flex justify-between overflow-x-auto px-1 pt-1">
           <div className="flex items-center justify-between w-full gap-2">
-            <div className="gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
+            <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none m-32">
               <Button
                 variant={preview ? "outline" : "ghost"}
                 onClick={() => setPreview(true)}
@@ -487,7 +506,7 @@ export function ExamplesLayout({
                 Preview
               </Button>
               <Button
-                variant={!preview ? "outline" : "outline"}
+                variant={!preview ? "outline" : "ghost"}
                 onClick={() => setPreview(false)}
                 size="sm"
                 iconLeft={
@@ -552,7 +571,7 @@ export function ExamplesLayout({
               <div className="w-full relative rounded-lg backdrop-blur-xl">
                 <div className="w-full overflow-auto">
                   <div className="min-w-full">
-                    {/* <Code code={exampleCode} /> */}
+                    {/* <Code code={_code} /> */}
                   </div>
                 </div>
               </div>

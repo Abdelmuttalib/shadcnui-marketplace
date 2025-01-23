@@ -175,8 +175,6 @@ function DocsLayoutSidebar({
 }) {
   const router = useRouter();
 
-  console.log(router.asPath);
-
   return (
     <aside
       className={cn(
