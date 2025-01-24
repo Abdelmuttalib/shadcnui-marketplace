@@ -6,6 +6,7 @@ import {
 } from "@/components/demo";
 
 const SOURCE_EXAMPLES_URL = "https://shadcn-default.vercel.app";
+// const SOURCE_EXAMPLES_URL = "http://localhost:3000";
 const SOURCE_CODES_URL = "@/code";
 
 // Async function to dynamically import and resolve the module
@@ -35,11 +36,11 @@ enum RegistryType {
 }
 
 export const initialExamplesRegistry = {
-  portfolio: [
+  portfolios: [
     {
       id: "portfolio-1",
       title: "Portfolio 1",
-      description: "Portfolio 1 description",
+      description: "a simple and modern portfolio template",
       registryType: RegistryType.Examples,
     },
   ],

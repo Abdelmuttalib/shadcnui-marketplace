@@ -2,7 +2,7 @@ export function GradientBackground() {
   return (
     <>
       <div
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden opacity-70 blur-3xl dark:opacity-35 sm:-top-80"
+        className="fixed inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden opacity-70 blur-3xl dark:opacity-35 sm:-top-80"
         aria-hidden="true"
       >
         <div

@@ -11,6 +11,7 @@ import {
 import { GradientBackground } from "@/components/gradient";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/utils/cn";
+import { AllExamples } from "..";
 
 export function Menu() {
   return (
@@ -1304,9 +1305,9 @@ export function ExamplesShowcaseDemo() {
     <div className="mt-16 md:mt-32 pt-10" id="features">
       <ScreenContainer>
         <div>
-          <PricingExamples />
+          {/* <PricingExamples /> */}
           <UICustomizer />
-          <div className="relative flex flex-col items-center justify-center text-center gap-4">
+          {/* <div className="relative flex flex-col items-center justify-center text-center gap-4">
             <GradientBackground />
             <Typography variant="display-lg/medium" className="tracking-tight">
               Examples & Templates
@@ -1318,9 +1319,10 @@ export function ExamplesShowcaseDemo() {
               Discover a wide range of examples and templates to help you
               quickly build your next project.
             </Typography>
-          </div>
-          <LandingPageExamples />
-          <FeaturesExamples />
+          </div> */}
+          <AllExamples />
+          {/* <LandingPageExamples />
+          <FeaturesExamples /> */}
         </div>
         {/* <SuggestedComponentsSection /> */}
       </ScreenContainer>

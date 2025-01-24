@@ -479,23 +479,23 @@ export function ExamplesLayout({
     <div className="mt-16 md:mt-32 pt-10" id="examples">
       <div className="mb-6 space-y-3 px-4 lg:mb-12 lg:px-0">
         <div className="space-y-2">
-          <Typography as="h2" variant="display-sm/medium">
+          <Typography as="h2" variant="display-xs/medium">
             {/* Landing Pages */}
             {title}
           </Typography>
-          {/* <Typography
+          <Typography
             as="h2"
             variant="md/regular"
             className="text-foreground-secondary"
           >
             {description}
-          </Typography> */}
+          </Typography>
         </div>
       </div>
       <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-overlay-on-surface-background p-1">
         <div className="flex justify-between overflow-x-auto px-1 pt-1">
           <div className="flex items-center justify-between w-full gap-2">
-            <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none m-32">
+            <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
               <Button
                 variant={preview ? "outline" : "ghost"}
                 onClick={() => setPreview(true)}
