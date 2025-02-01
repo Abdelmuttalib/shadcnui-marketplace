@@ -69,7 +69,7 @@ export function Styles() {
         </div>
         <ExamplesLayout
           // key={index}
-          title="Shadcn Carbon"
+          title="shadcn Carbon"
           description="a Carbon inspired design system style for shadcn ui"
           href={`${SOURCE_SHADCN_CARBON_URL}/showcase`}
           code={exampleCode}
