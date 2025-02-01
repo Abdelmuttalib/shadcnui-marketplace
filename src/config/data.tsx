@@ -6,6 +6,7 @@ import {
 } from "@/components/demo";
 
 const SOURCE_EXAMPLES_URL = "https://shadcn-default.vercel.app";
+export const SOURCE_SHADCN_CARBON_URL = "https://shadcn-carbon.vercel.app";
 // const SOURCE_EXAMPLES_URL = "http://localhost:3000";
 const SOURCE_CODES_URL = "@/code";
 
@@ -36,6 +37,14 @@ enum RegistryType {
 }
 
 export const initialExamplesRegistry = {
+  // styles: [
+  //   {
+  //     id: "style-1",
+  //     title: "Shadcn Carbon",
+  //     description: "a Carbon inspired design system style for shadcn ui",
+  //     registryType: RegistryType.Examples,
+  //   },
+  // ],
   portfolios: [
     {
       id: "portfolio-1",
