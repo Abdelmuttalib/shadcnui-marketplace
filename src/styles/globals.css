@@ -140,8 +140,8 @@
     /* --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%; */
 
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
+    --border: var(--color-base-50);
+    --input: var(--color-base-200);
     --ring: var(--color-background);
 
     --radius: 0.5rem;

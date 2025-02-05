@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 import { ThemeColorWrapper } from "@/components/theme-color-wrapper";
 import { useThemeColor } from "@/hooks/use-theme-color";
+import { StyleProvider } from "@/hooks/use-style";
+import { UICustomizer } from "@/components/ui-customizer";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [themeColor] = useThemeColor();
@@ -16,8 +18,10 @@ export default function App({ Component, pageProps }: AppProps) {
         attribute="class"
         themes={["light", "dark"]}
       >
-        {/* <UICustomizer /> */}
-        <Component {...pageProps} />
+        <StyleProvider>
+          {/* <UICustomizer /> */}
+          <Component {...pageProps} />
+        </StyleProvider>
         <Analytics />
       </NextThemeProvider>
     </ThemeColorWrapper>
