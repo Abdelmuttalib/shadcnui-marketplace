@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const STYLES_PATH: Record<string, string> = {
-  default: "http://localhost:3002",
+  default: "https://shadcn-default.vercel.app",
   carbon: "https://shadcn-carbon.vercel.app",
   linear: "https://shadcn-linear.vercel.app",
 };
