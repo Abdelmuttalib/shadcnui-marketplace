@@ -15,9 +15,9 @@ const getCode = async (modulePath: string) => {
   try {
     // "@/code/examples/landing-pages/landing-page-1"
     const mPath = `${SOURCE_CODES_URL}/`;
-    const modul = await import("@/code/examples/features/features-1"); // Import the module
+    // const modul = await import("@/code/examples/features/features-1/page"); // Import the module
     // const modul = await import(modulePath);
-    return modul.default; // Return the resolved string
+    // return modul.default; // Return the resolved string
   } catch (error) {
     console.error("Failed to load module:", error);
     return ""; // Return an empty string or handle the error as needed

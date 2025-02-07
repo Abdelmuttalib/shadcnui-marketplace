@@ -1,3 +1,5 @@
+"use client";
+
 import { useThemeColor } from "@/hooks/use-theme-color";
 import { cn } from "@/utils/cn";
 import { useEffect } from "react";
@@ -24,22 +26,5 @@ export function ThemeColorWrapper({
     }
   }, [themeColor]);
 
-  return (
-    <div
-      className={cn(
-        // `theme-${defaultTheme || themeColor}`,
-        "relative w-full",
-        // fonts,
-        // fontSizeClass,
-        className
-      )}
-      // style={
-      //   {
-      //     "--radius": `${defaultTheme ? 0.5 : config.radius}rem`,
-      //   } as React.CSSProperties
-      // }
-    >
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 }

@@ -511,9 +511,9 @@ export function NotificationAlert() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
             <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
@@ -701,9 +701,9 @@ export function DemoShowcase() {
                       y2="208"
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="32"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="32"
                     ></line>
                     <line
                       x1="192"
@@ -712,17 +712,17 @@ export function DemoShowcase() {
                       y2="192"
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="32"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="32"
                     ></line>
                   </svg>
                   {/* <svg
                   className="size-8 flex-none stroke-current text-foreground-subtle"
                   fill="none"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <ellipse cx="16" cy="16" rx="13" ry="5"></ellipse>
                   <ellipse
@@ -805,11 +805,11 @@ export function DemoShowcase() {
                           className="mr-2 size-5 stroke-foreground-subtle"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke-width="2"
+                          strokeWidth="2"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                           ></path>
                         </svg>
@@ -824,11 +824,11 @@ export function DemoShowcase() {
                             className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
+                            strokeWidth="2"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
                             ></path>
                           </svg>
@@ -839,11 +839,11 @@ export function DemoShowcase() {
                             className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
+                            strokeWidth="2"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
                             ></path>
                           </svg>
@@ -856,9 +856,9 @@ export function DemoShowcase() {
                             className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                           </svg>
@@ -869,9 +869,9 @@ export function DemoShowcase() {
                             className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
                           </svg>
@@ -882,9 +882,9 @@ export function DemoShowcase() {
                             className="mr-2.5 size-5 flex-none stroke-white"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
                           </svg>
@@ -895,9 +895,9 @@ export function DemoShowcase() {
                             className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
                           </svg>

@@ -1,9 +1,12 @@
+"use client";
+
 import * as React from "react";
 
 const STYLES_PATH: Record<string, string> = {
   default: "https://shadcn-default.vercel.app",
   carbon: "https://shadcn-carbon.vercel.app",
   linear: "https://shadcn-linear.vercel.app",
+  material: "https://shadcn-material.vercel.app",
 };
 
 export type Style = keyof typeof STYLES_PATH;
@@ -21,6 +24,8 @@ const StyleContext = React.createContext({
   setStylePath: (stylePath: string) => {},
   styleCategory: "mail",
   setStyleCategory: (styleCategory: string) => {},
+  styleUrl: STYLES_PATH.default,
+  setStyleUrl: (styleUrl: string) => {},
 });
 
 export const STYLE_CATEGORIES = [
@@ -38,6 +43,8 @@ type StyleCategory = (typeof STYLE_CATEGORIES)[number];
 
 export function StyleProvider({ children }: { children: React.ReactNode }) {
   const [style, setStyle] = React.useState<Style>(STYLES[0]);
+
+  const [styleUrl, setStyleUrl] = React.useState<string>(STYLES_PATH.default);
 
   const [stylePath, setStylePath] = React.useState<string>(STYLES_PATH.default);
 
@@ -57,6 +64,8 @@ export function StyleProvider({ children }: { children: React.ReactNode }) {
     setStylePath(
       `${STYLES_PATH[style]}/${STYLES_DIRECTORY_PATH}/${styleCategory}`
     );
+
+    setStyleUrl(STYLES_PATH[style]);
   }, [style, styleCategory]);
 
   return (
@@ -68,6 +77,8 @@ export function StyleProvider({ children }: { children: React.ReactNode }) {
         setStylePath,
         styleCategory,
         setStyleCategory,
+        styleUrl,
+        setStyleUrl,
         // fullPath,
         // setFullPath,
       }}
@@ -85,6 +96,8 @@ export function useStyle() {
     setStylePath,
     styleCategory,
     setStyleCategory,
+    styleUrl,
+    setStyleUrl,
   } = React.useContext(StyleContext);
 
   return {
@@ -94,5 +107,7 @@ export function useStyle() {
     setStylePath,
     styleCategory,
     setStyleCategory,
+    styleUrl,
+    setStyleUrl,
   };
 }

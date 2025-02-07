@@ -1,7 +1,9 @@
+"use client";
+
 import { siteConfig } from "@/config";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 function GradientBackground() {
   return (
@@ -120,9 +122,9 @@ const headerNavLinks = [
 export function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="fixed inset-0 w-full h-full min-h-screen flex flex-col overflow-y-auto pb-10">
-      <div className="relative">
+      {/* <div className="relative">
         <GradientBackground />
-      </div>
+      </div> */}
       <header className="border-b sticky top-0 z-40 block bg-background/[0.3] backdrop-blur-md">
         <div className="w-full h-14">
           <DocsLayoutContainer className="h-full flex items-center justify-between">
@@ -173,7 +175,7 @@ function DocsLayoutSidebar({
   children?: React.ReactNode;
   className?: string;
 }) {
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <aside
@@ -198,7 +200,8 @@ function DocsLayoutSidebar({
                   <li key={link.href}>
                     <DocsLayoutSidebarLink
                       {...link}
-                      active={router.asPath === `/docs${link.href}`}
+                      active={pathname === `/docs${link.href}`}
+                      // active={router.asPath === `/docs${link.href}`}
                     />
                   </li>
                 ) : null

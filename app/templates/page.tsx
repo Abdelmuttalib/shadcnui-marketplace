@@ -59,9 +59,9 @@ function H() {
                     y2="208"
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="32"
                   ></line>
                   <line
                     x1="192"
@@ -70,17 +70,17 @@ function H() {
                     y2="192"
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="32"
                   ></line>
                 </svg>
                 {/* <svg
                   className="size-8 flex-none stroke-current text-foreground-subtle"
                   fill="none"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <ellipse cx="16" cy="16" rx="13" ry="5"></ellipse>
                   <ellipse
@@ -196,9 +196,9 @@ function H() {
                     className="size-10 shrink-0 transform-cpu rounded-lg shadow-md shadow-sky-500/[.12]"
                     viewBox="0 0 40 40"
                     fill="none"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path
                       d="M.75 8A7.25 7.25 0 018 .75h24A7.25 7.25 0 0139.25 8v24A7.25 7.25 0 0132 39.25H8A7.25 7.25 0 01.75 32V8z"
@@ -232,9 +232,9 @@ function H() {
                     className="size-10 shrink-0 transform-cpu rounded-lg shadow-md shadow-sky-500/[.12]"
                     viewBox="0 0 40 40"
                     fill="none"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path
                       d="M.75 8A7.25 7.25 0 018 .75h24A7.25 7.25 0 0139.25 8v24A7.25 7.25 0 0132 39.25H8A7.25 7.25 0 01.75 32V8z"
@@ -270,9 +270,9 @@ function H() {
                     className="size-10 shrink-0 transform-cpu rounded-lg shadow-md shadow-sky-500/[.12]"
                     viewBox="0 0 40 40"
                     fill="none"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path
                       d="M.75 8A7.25 7.25 0 018 .75h24A7.25 7.25 0 0139.25 8v24A7.25 7.25 0 0132 39.25H8A7.25 7.25 0 01.75 32V8z"

@@ -17,7 +17,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: "var(--font-sans)",
+        sans: "var(--font-inter)",
+        // "plex-sans": "var(--font-plex)",
+        mono: "var(--font-ibm-plex-mono)",
       },
 
       colors: {

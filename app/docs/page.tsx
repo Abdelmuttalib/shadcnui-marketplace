@@ -1,10 +1,8 @@
-import { Example1 } from "@/components/examples/one";
+"use client";
+
 import { DocsLayout } from "@/components/layout/docs";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Typography } from "@/components/ui/typography";
-import { Code, exampleCode } from "@/components/views/docs/code";
-import { siteConfig } from "@/config";
 import { cn } from "@/utils/cn";
 
 export default function Docs() {
@@ -16,7 +14,7 @@ export default function Docs() {
       Beautifully designed components that you can copy and paste into your
       apps. Accessible. Customizable. Open Source.
       <br />
-      {Object.keys(siteConfig.paths.components).map((component) => (
+      {/* {Object.keys(siteConfig.paths.components).map((component) => (
         <Section
           key={component}
           id={component}
@@ -24,12 +22,11 @@ export default function Docs() {
           description="Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source."
           className="flex gap-4"
         >
-          {/* <Component /> */}
           <Button>Default</Button>
           <Button>Default</Button>
           <Button>Default</Button>
         </Section>
-      ))}
+      ))} */}
       **This is NOT a component library.** It&apos;s a collection of re-usable
       components that you can copy and paste into your apps.
       <br />
@@ -93,7 +90,7 @@ function Section({
                 </div>
               </TabsContent>
               <TabsContent value="HTML">
-                <Code code={exampleCode} />
+                {/* <Code style="default" /> */}
               </TabsContent>
             </Tabs>
           </div>

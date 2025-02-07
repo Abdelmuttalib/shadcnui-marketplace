@@ -1,15 +1,13 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-// import { codeToHtml } from "shiki";
-// import copy from "copy-to-clipboard";
-import { CheckIcon, CopyIcon } from "lucide-react";
-import { cn } from "@/utils/cn";
+import path from "path";
+import { readFile } from "fs/promises";
+import { codeToHtml } from "shiki";
+import { codeToHast } from "shiki/bundle/web";
+import { toJsxRuntime } from "hast-util-to-jsx-runtime";
+import { Fragment, ReactElement } from "react";
+import { jsx, jsxs } from "react/jsx-runtime";
 
-// import { codeToHast } from "shiki/bundle/web";
-// import { toJsxRuntime } from "hast-util-to-jsx-runtime";
-import { Fragment } from "react";
-// import { jsx, jsxs } from "react/jsx-runtime";
-import { Button } from "@/components/ui/button";
-import { IconButton } from "@/components/ui/icon-button";
+import { CopyCodeButton } from "./copy-code-button";
+import { Style } from "@/hooks/use-style";
 
 export const exampleCode = `
 import { ButtonLink } from "@/components/ui/button";
@@ -65,115 +63,120 @@ export default function NotFoundPage() {
     </>
   );
 }
-`; // input code
-
-// const html = await codeToHtml(code, {
-//   lang: 'javascript',
-//   theme: 'vitesse-dark'
-// })
+`;
 
 export async function highlightCode(code: string) {
-  // const out = await codeToHast(code, {
-  //   lang: "tsx",
-  //   theme: "dark-plus",
-  // });
+  const out = await codeToHast(code, {
+    lang: "tsx",
+    theme: "dark-plus",
+  });
 
-  return code as unknown as JSX.Element;
-
-  // return toJsxRuntime(out, {
-  //   Fragment,
-  //   // @ts-ignore - jsx-runtime is not typed
-  //   jsx,
-  //   // @ts-ignore - jsx-runtime is not typed
-  //   jsxs,
-  // });
+  return toJsxRuntime(out, {
+    Fragment,
+    // @ts-ignore - jsx-runtime is not typed
+    jsx,
+    // @ts-ignore - jsx-runtime is not typed
+    jsxs,
+  });
 }
 
 export async function highlight(code: string) {
-  // const html = await codeToHtml(code, {
-  //   lang: "tsx",
-  //   theme: "github-dark-default",
-  //   transformers: [
-  //     {
-  //       code(node) {
-  //         node.properties["data-line-numbers"] = "";
-  //       },
-  //     },
-  //   ],
-  // });
+  const html = await codeToHtml(code, {
+    lang: "tsx",
+    theme: "github-dark-default",
+    transformers: [
+      {
+        code(node) {
+          node.properties["data-line-numbers"] = "";
+        },
+      },
+    ],
+  });
 
   // html string to react element
-  // return html;
-  return code;
+  return html;
 }
 
-console.log(exampleCode); // highlighted html string
+interface Props {
+  params: { slug: string };
+}
 
-export function Code({
+// app/docs/[slug]/page.tsx
+
+export async function Code({
   initial,
-  code,
-}: {
+  style,
+  category,
+  component,
+  fileName,
+}: // code,
+{
   initial?: JSX.Element;
-  code: string;
+  style: Style;
+  category: string;
+  component: string;
+  fileName: string;
+  // code: string;
 }) {
-  const [nodes, setNodes] = useState(initial);
+  const exampleCodePath =
+    "https://shadcn-carbon.vercel.app/examples/features/features-1";
 
-  const [copied, setCopied] = useState(false);
+  const splittedCodePath = exampleCodePath.replace("https://", "").split("/");
 
-  const codeString = code ? code : extractTextFromChildren("dsdfdsf");
+  console.log(splittedCodePath);
 
-  const handleCopy = () => {
-    // copy(codeString.trim());
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
-  };
+  const filePath = path.join(
+    process.cwd(),
+    "src",
+    "code",
+    "examples",
+    category,
+    component,
+    fileName
+    // `s.tsx`
+    // `${params.slug}.tsx`
+  );
+  let code = "";
+  let codeString: ReactElement<any, any> | string;
 
-  useLayoutEffect(() => {
-    // @ts-ignore
-    void highlightCode(code).then(setNodes);
-  }, []);
+  try {
+    code = await readFile(filePath, "utf-8");
+    codeString = await highlightCode(code);
+  } catch (error) {
+    console.error("Failed to read file:", error);
+    code = "File not found.";
+    codeString = code;
+  }
 
-  useEffect(() => {
-    if (!nodes) return;
-    console.log("CodeBlock mounted", nodes, extractTextFromChildren(nodes));
-    return () => {
-      console.log("CodeBlock unmounted");
-    };
-  }, [nodes]);
-
-  return nodes ? (
-    <div className="relative border rounded-lg">
-      <IconButton
-        variant="outline"
-        size="xs"
-        onClick={handleCopy}
-        className="absolute top-2 right-2 transition-transform duration-300 ease-in-out [&_svg]:size-4 [&_svg]:transition-transform"
-      >
-        {copied ? <CheckIcon className="" /> : <CopyIcon className="" />}
-      </IconButton>
-      {nodes}
+  return (
+    <div className="relative border rounded-lg w-full">
+      <CopyCodeButton code={code} />
+      {codeString}
     </div>
-  ) : (
-    <p>Loading...</p>
   );
 }
 
-const extractTextFromChildren = (children: React.ReactNode): string => {
-  if (typeof children === "string") {
-    return children;
-  }
+// useLayoutEffect(() => {
+//   // @ts-ignore
+//   void highlightCode(code).then(setNodes);
+// }, []);
 
-  if (Array.isArray(children)) {
-    return children.map(extractTextFromChildren).join("");
-  }
+// const extractTextFromChildren = (children: React.ReactNode): string => {
+//   if (typeof children === "string") {
+//     return children;
+//   }
 
-  if (
-    React.isValidElement(children) &&
-    children.props &&
-    children.props.children
-  ) {
-    return extractTextFromChildren(children.props.children);
-  }
+//   if (Array.isArray(children)) {
+//     return children.map(extractTextFromChildren).join("");
+//   }
 
-  return "";
-};
+//   if (
+//     React.isValidElement(children) &&
+//     children.props &&
+//     children.props.children
+//   ) {
+//     return extractTextFromChildren(children.props.children);
+//   }
+
+//   return "";
+// };

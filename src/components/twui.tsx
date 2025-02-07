@@ -17,7 +17,7 @@ export default function DD() {
         >
           ge
         </ComponentPreview>
-        <Code code={exampleCode} />
+        <Code />
         <iframe
           src="https://afaqq.vercel.app"
           className="w-full min-h-[48rem] overflow-hidden hide-scrollbar light border rounded-lg"
@@ -42,8 +42,8 @@ export default function DD() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
               ></path>
             </svg>
@@ -80,8 +80,8 @@ export default function DD() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
               ></path>
             </svg>
@@ -98,7 +98,7 @@ export default function DD() {
                   <svg
                     viewBox="0 0 20 20"
                     fill="none"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     aria-hidden="true"
                     className="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"
                   >
@@ -131,8 +131,8 @@ export default function DD() {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
                     ></path>
                   </svg>
@@ -160,8 +160,8 @@ export default function DD() {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
                     ></path>
                   </svg>
@@ -189,8 +189,8 @@ export default function DD() {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
                     ></path>
                   </svg>
@@ -218,8 +218,8 @@ export default function DD() {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
                     ></path>
                   </svg>
@@ -239,7 +239,7 @@ export default function DD() {
                   <svg
                     viewBox="0 0 20 20"
                     fill="none"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     aria-hidden="true"
                     className="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"
                   >
@@ -312,13 +312,13 @@ function C({
             <rect
               width="100%"
               height="100%"
-              stroke-width="0"
+              strokeWidth="0"
               fill="url(#:r8:)"
             ></rect>
             <svg x="50%" y="16" className="overflow-visible">
-              <rect stroke-width="0" width="73" height="57" x="0" y="56"></rect>
+              <rect strokeWidth="0" width="73" height="57" x="0" y="56"></rect>
               <rect
-                stroke-width="0"
+                strokeWidth="0"
                 width="73"
                 height="57"
                 x="72"
@@ -360,13 +360,13 @@ function C({
             <rect
               width="100%"
               height="100%"
-              stroke-width="0"
+              strokeWidth="0"
               fill="url(#:r9:)"
             ></rect>
             <svg x="50%" y="16" className="overflow-visible">
-              <rect stroke-width="0" width="73" height="57" x="0" y="56"></rect>
+              <rect strokeWidth="0" width="73" height="57" x="0" y="56"></rect>
               <rect
-                stroke-width="0"
+                strokeWidth="0"
                 width="73"
                 height="57"
                 x="72"
@@ -385,21 +385,21 @@ function C({
             className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-primary-300/10 dark:group-hover:stroke-primary-400"
           >
             <path
-              stroke-width="0"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              strokeWidth="0"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M10 .5a9.5 9.5 0 0 1 5.598 17.177C14.466 15.177 12.383 13.5 10 13.5s-4.466 1.677-5.598 4.177A9.5 9.5 0 0 1 10 .5ZM12.5 8a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"
             ></path>
             <path
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M10 .5a9.5 9.5 0 0 1 5.598 17.177A9.458 9.458 0 0 1 10 19.5a9.458 9.458 0 0 1-5.598-1.823A9.5 9.5 0 0 1 10 .5Z"
             ></path>
             <path
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M4.402 17.677C5.534 15.177 7.617 13.5 10 13.5s4.466 1.677 5.598 4.177M10 5.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
             ></path>
           </svg>
@@ -467,8 +467,8 @@ function Sidebar() {
                     className="h-5 w-5 stroke-current"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M12.01 12a4.25 4.25 0 1 0-6.02-6 4.25 4.25 0 0 0 6.02 6Zm0 0 3.24 3.25"
                     ></path>
                   </svg>
@@ -495,7 +495,7 @@ function Sidebar() {
                   <svg
                     viewBox="0 0 10 9"
                     fill="none"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     aria-hidden="true"
                     className="w-2.5 stroke-zinc-900 dark:stroke-white"
                   >
@@ -559,8 +559,8 @@ function Sidebar() {
                         className="h-5 w-5 stroke-zinc-900 dark:stroke-white"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="M12.01 12a4.25 4.25 0 1 0-6.02-6 4.25 4.25 0 0 0 6.02 6Zm0 0 3.24 3.25"
                         ></path>
                       </svg>
@@ -586,7 +586,7 @@ function Sidebar() {
                     >
                       <path d="M12.5 10a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         d="M10 5.5v-1M13.182 6.818l.707-.707M14.5 10h1M13.182 13.182l.707.707M10 15.5v-1M6.11 13.889l.708-.707M4.5 10h1M6.11 6.111l.708.707"
                       ></path>
                     </svg>
@@ -856,7 +856,7 @@ function ComponentPreview({
                 </div>
               </TabsContent>
               <TabsContent value="code">
-                <Code code={exampleCode} />
+                <Code />
               </TabsContent>
             </Tabs>
           </div>
@@ -1012,8 +1012,8 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                     className="h-5 w-5 stroke-current"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M12.01 12a4.25 4.25 0 1 0-6.02-6 4.25 4.25 0 0 0 6.02 6Zm0 0 3.24 3.25"
                     ></path>
                   </svg>
@@ -1033,7 +1033,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                   <svg
                     viewBox="0 0 10 9"
                     fill="none"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     aria-hidden="true"
                     className="w-2.5 stroke-zinc-900 dark:stroke-white"
                   >
@@ -1083,8 +1083,8 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                         className="h-5 w-5 stroke-zinc-900 dark:stroke-white"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="M12.01 12a4.25 4.25 0 1 0-6.02-6 4.25 4.25 0 0 0 6.02 6Zm0 0 3.24 3.25"
                         ></path>
                       </svg>
@@ -1104,7 +1104,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                     >
                       <path d="M12.5 10a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         d="M10 5.5v-1M13.182 6.818l.707-.707M14.5 10h1M13.182 13.182l.707.707M10 15.5v-1M6.11 13.889l.708-.707M4.5 10h1M6.11 6.111l.708.707"
                       ></path>
                     </svg>
@@ -1248,33 +1248,33 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                         <rect
                           width="100%"
                           height="100%"
-                          stroke-width="0"
+                          strokeWidth="0"
                           fill="url(#:S1:)"
                         ></rect>
                         <svg x="-12" y="4" className="overflow-visible">
                           <rect
-                            stroke-width="0"
+                            strokeWidth="0"
                             width="73"
                             height="57"
                             x="288"
                             y="168"
                           ></rect>
                           <rect
-                            stroke-width="0"
+                            strokeWidth="0"
                             width="73"
                             height="57"
                             x="144"
                             y="56"
                           ></rect>
                           <rect
-                            stroke-width="0"
+                            strokeWidth="0"
                             width="73"
                             height="57"
                             x="504"
                             y="168"
                           ></rect>
                           <rect
-                            stroke-width="0"
+                            strokeWidth="0"
                             width="73"
                             height="57"
                             x="720"
@@ -1313,8 +1313,8 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
                     ></path>
                   </svg>
@@ -1352,8 +1352,8 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                     className="h-5 w-5 fill-zinc-700 transition group-hover:fill-zinc-900 dark:group-hover:fill-zinc-500"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M10 1.667c-4.605 0-8.334 3.823-8.334 8.544 0 3.78 2.385 6.974 5.698 8.106.417.075.573-.182.573-.406 0-.203-.011-.875-.011-1.592-2.093.397-2.635-.522-2.802-1.002-.094-.246-.5-1.005-.854-1.207-.291-.16-.708-.556-.01-.567.656-.01 1.124.62 1.281.876.75 1.292 1.948.93 2.427.705.073-.555.291-.93.531-1.143-1.854-.213-3.791-.95-3.791-4.218 0-.929.322-1.698.854-2.296-.083-.214-.375-1.09.083-2.265 0 0 .698-.224 2.292.876a7.576 7.576 0 0 1 2.083-.288c.709 0 1.417.096 2.084.288 1.593-1.11 2.291-.875 2.291-.875.459 1.174.167 2.05.084 2.263.53.599.854 1.357.854 2.297 0 3.278-1.948 4.005-3.802 4.219.302.266.563.78.563 1.58 0 1.143-.011 2.061-.011 2.35 0 .224.156.491.573.405a8.365 8.365 0 0 0 4.11-3.116 8.707 8.707 0 0 0 1.567-4.99c0-4.721-3.73-8.545-8.334-8.545Z"
                     ></path>
                   </svg>
@@ -1399,19 +1399,19 @@ function DocLayout({ children }: { children: React.ReactNode }) {
 //                             <rect
 //                               width="100%"
 //                               height="100%"
-//                               stroke-width="0"
+//                               strokeWidth="0"
 //                               fill="url(#:rc:)"
 //                             ></rect>
 //                             <svg x="50%" y="32" className="overflow-visible">
 //                               <rect
-//                                 stroke-width="0"
+//                                 strokeWidth="0"
 //                                 width="73"
 //                                 height="57"
 //                                 x="0"
 //                                 y="112"
 //                               ></rect>
 //                               <rect
-//                                 stroke-width="0"
+//                                 strokeWidth="0"
 //                                 width="73"
 //                                 height="57"
 //                                 x="72"
@@ -1453,19 +1453,19 @@ function DocLayout({ children }: { children: React.ReactNode }) {
 //                             <rect
 //                               width="100%"
 //                               height="100%"
-//                               stroke-width="0"
+//                               strokeWidth="0"
 //                               fill="url(#:rd:)"
 //                             ></rect>
 //                             <svg x="50%" y="32" className="overflow-visible">
 //                               <rect
-//                                 stroke-width="0"
+//                                 strokeWidth="0"
 //                                 width="73"
 //                                 height="57"
 //                                 x="0"
 //                                 y="112"
 //                               ></rect>
 //                               <rect
-//                                 stroke-width="0"
+//                                 strokeWidth="0"
 //                                 width="73"
 //                                 height="57"
 //                                 x="72"
@@ -1485,13 +1485,13 @@ function DocLayout({ children }: { children: React.ReactNode }) {
 //                           >
 //                             <path
 //                               fill="none"
-//                               stroke-linecap="round"
-//                               stroke-linejoin="round"
+//                               strokeLinecap="round"
+//                               strokeLinejoin="round"
 //                               d="M2.5 5.5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v8a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-8Z"
 //                             ></path>
 //                             <path
-//                               stroke-linecap="round"
-//                               stroke-linejoin="round"
+//                               strokeLinecap="round"
+//                               strokeLinejoin="round"
 //                               d="M10 10 4.526 5.256c-.7-.607-.271-1.756.655-1.756h9.638c.926 0 1.355 1.15.655 1.756L10 10Z"
 //                             ></path>
 //                           </svg>
