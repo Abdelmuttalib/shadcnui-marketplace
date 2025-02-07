@@ -17,7 +17,7 @@ export default function DD() {
         >
           ge
         </ComponentPreview>
-        <Code />
+        {/* <Code /> */}
         <iframe
           src="https://afaqq.vercel.app"
           className="w-full min-h-[48rem] overflow-hidden hide-scrollbar light border rounded-lg"
@@ -855,9 +855,7 @@ function ComponentPreview({
                   </iframe>
                 </div>
               </TabsContent>
-              <TabsContent value="code">
-                <Code />
-              </TabsContent>
+              <TabsContent value="code">{/* <Code /> */}</TabsContent>
             </Tabs>
           </div>
         </div>
