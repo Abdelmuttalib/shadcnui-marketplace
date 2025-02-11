@@ -38,10 +38,10 @@ export default function RootLayout({
             <body
               className={`${inter.variable} ${ibmPlexMono.variable} antialiased font-sans`}
             >
-              <div className="fixed right-2 top-2 z-[9999]">
+              {/* <div className="fixed right-2 top-2 z-[9999]">
                 <ThemeButton />
-              </div>
-              <TailwindIndicator />
+              </div> */}
+              {/* <TailwindIndicator /> */}
               {children}
               <Analytics />
             </body>
