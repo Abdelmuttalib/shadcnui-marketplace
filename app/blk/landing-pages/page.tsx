@@ -15,6 +15,7 @@ export default function FeaturesPage() {
           return (
             <ComponentPreview
               key={block.id + index}
+              id={block.id}
               title={block.title}
               description={block.description}
               category={block.category}

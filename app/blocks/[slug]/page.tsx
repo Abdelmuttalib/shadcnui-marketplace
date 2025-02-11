@@ -1,16 +1,13 @@
-import { notFound } from "next/navigation";
+import Link from "next/link";
 
 import { blocksRegistry } from "@/config/data";
 import { ComponentPreview } from "@/components/component-preview";
-import { ScreenContainer } from "@/components/container";
 import { SuggestedComponentsSection } from "@/components/suggestion-blocks";
 import { Code } from "@/components/views/docs/code";
 import BlocksBreadcrumb from "../components/blocks-breadcrumb";
 import { Typography } from "@/components/ui/typography";
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, HomeIcon } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
 
 interface Props {
   params: { slug: string };
@@ -30,7 +27,6 @@ export default function ComponentPage({ params }: Props) {
   return (
     <div>
       <div className="bg-gradient-to-r from-accent/40 to-background py-20">
-        {/* <ScreenContainer> */}
         <div className="space-y-2">
           <div className="border-y px-3">
             <div className="-mx-2">
@@ -62,10 +58,8 @@ export default function ComponentPage({ params }: Props) {
             </Typography>
           </div>
         </div>
-        {/* </ScreenContainer> */}
       </div>
       <div className="space-y-20 rounded-t-2xl overflow-hidden">
-        {/* <ScreenContainer> */}
         {blocksData.map((block, index) => {
           return (
             <ComponentPreview
@@ -81,86 +75,34 @@ export default function ComponentPage({ params }: Props) {
                 category={block.category}
                 component={block.id}
                 fileName={"page.tsx"}
-                // fileName={block.fileName}
               />
             </ComponentPreview>
           );
         })}
-        {/* </ScreenContainer> */}
 
         {/* suggestion */}
-        {/* <ScreenContainer> */}
         <div>
           <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
         </div>
-        {/* </ScreenContainer> */}
       </div>
     </div>
   );
 }
 
-// Custom 404 for /docs
+// Custom 404 for /blocks
 function BlocksNotFound({ slug }: { slug: string }) {
   const suggestedNotFoundLinks = [
     {
       title: "Home",
       href: "/",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-          />
-        </svg>
-      ),
     },
     {
       title: "Styles",
       href: "/styles",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-          />
-        </svg>
-      ),
     },
     {
       title: "Blocks",
       href: "/blocks",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-          />
-        </svg>
-      ),
     },
   ];
 

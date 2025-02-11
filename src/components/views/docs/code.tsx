@@ -111,13 +111,6 @@ export async function Code({
   component: string;
   fileName: string;
 }) {
-  const exampleCodePath =
-    "https://shadcn-carbon.vercel.app/examples/features/features-1";
-
-  const splittedCodePath = exampleCodePath.replace("https://", "").split("/");
-
-  console.log(splittedCodePath);
-
   const filePath = path.join(
     process.cwd(),
     "src",
@@ -126,7 +119,6 @@ export async function Code({
     category,
     component,
     fileName
-    // `s.tsx`
     // `${params.slug}.tsx`
   );
   let code = "";

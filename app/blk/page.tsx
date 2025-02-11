@@ -29,6 +29,7 @@ export default function Blocks({
       <ScreenContainer>
         <ComponentPreview
           title="Blocks"
+          id="blocks"
           description="Blocks are used to perform an action."
           // href="https://tailwindui.com/components/application-ui/data-display/data-tables"
 
@@ -44,6 +45,7 @@ export default function Blocks({
         </ComponentPreview>
         <ComponentPreview
           title="Blocks"
+          id="blocks"
           description="Blocks are used to perform an action."
           category="features"
           component="features-2"
@@ -56,6 +58,7 @@ export default function Blocks({
           />
         </ComponentPreview>
         <ComponentPreview
+          id="blocks"
           title="Blocks"
           description="Blocks are used to perform an action."
           category="features"
@@ -69,6 +72,7 @@ export default function Blocks({
           />
         </ComponentPreview>
         <ComponentPreview
+          id="blocks"
           title="Blocks"
           description="Blocks are used to perform an action."
           category="features"
