@@ -37,20 +37,84 @@ enum RegistryType {
 }
 
 export const initialExamplesRegistry = {
-  // styles: [
-  //   {
-  //     id: "style-1",
-  //     title: "Shadcn Carbon",
-  //     description: "a Carbon inspired design system style for shadcn ui",
-  //     registryType: RegistryType.Examples,
-  //   },
-  // ],
+  "hero-sections": [
+    {
+      id: "hero-section-1",
+      title: "Hero Section 1",
+      description: "a simple and modern hero section template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "hero-section-2",
+      title: "Hero Section 2",
+      description: "a simple and modern hero section template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "hero-section-3",
+      title: "Hero Section 3",
+      description: "a simple and modern hero section template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "hero-section-4",
+      title: "Hero Section 4",
+      description: "a simple and modern hero section template",
+      registryType: RegistryType.Blocks,
+    },
+  ],
+  "blog-sections": [
+    {
+      id: "blog-section-1",
+      title: "Blog Section 1",
+      description: "a simple and modern blog section template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "blog-section-2",
+      title: "Blog Section 2",
+      description: "a simple and modern blog section template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "blog-section-3",
+      title: "Blog Section 3",
+      description: "a simple and modern blog section template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "blog-section-4",
+      title: "Blog Section 4",
+      description: "a simple and modern blog section template",
+      registryType: RegistryType.Blocks,
+    },
+  ],
+  footers: [
+    {
+      id: "footer-1",
+      title: "Footer 1",
+      description: "a simple and modern footer template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "footer-2",
+      title: "Footer 2",
+      description: "a simple and modern footer template",
+      registryType: RegistryType.Blocks,
+    },
+    {
+      id: "footer-3",
+      title: "Footer 3",
+      description: "a simple and modern footer template",
+      registryType: RegistryType.Blocks,
+    },
+  ],
   portfolios: [
     {
       id: "portfolio-1",
       title: "Portfolio 1",
       description: "a simple and modern portfolio template",
-      registryType: RegistryType.Examples,
+      registryType: RegistryType.Blocks,
     },
   ],
   "landing-pages": [
@@ -58,20 +122,7 @@ export const initialExamplesRegistry = {
       id: "landing-page-1",
       title: "Landing Page 1",
       description: "Landing Page 1 description",
-      registryType: RegistryType.Examples,
-      // href: `${SOURCE_EXAMPLES_URL}/examples/landing-page`,
-      // dynamuc import example code from "@/code/examples/"
-      // code: getCode(),
-      // code: dynamic(() => import("@/code/examples/landing-pages/landing-page-1")),
-      // code: dynamic(() =>
-      //   import("@/code/examples/landing-pages/landing-page-1").then(
-      //     (module) => {
-      //       // Render the string content in a component
-      //       const CodeComponent = () => <pre>{module.default}</pre>;
-      //       return CodeComponent;
-      //     }
-      //   )
-      // ),
+      registryType: RegistryType.Blocks,
     },
   ],
   features: [
@@ -79,29 +130,74 @@ export const initialExamplesRegistry = {
       id: "features-1",
       title: "Features 1",
       description: "Features 1 description",
-      registryType: RegistryType.Examples,
+      registryType: RegistryType.Blocks,
       // href: `${SOURCE_EXAMPLES_URL}/examples/features-1`,
     },
     {
       id: "features-2",
       title: "Features 2",
       description: "Features 2 description",
-      registryType: RegistryType.Examples,
+      registryType: RegistryType.Blocks,
       // href: `${SOURCE_EXAMPLES_URL}/examples/features-2`,
     },
     {
       id: "features-3",
       title: "Features 3",
       description: "Features 3 description",
-      registryType: RegistryType.Examples,
+      registryType: RegistryType.Blocks,
       // href: `${SOURCE_EXAMPLES_URL}/examples/features-3`,
     },
     {
       id: "features-4",
       title: "Features 4",
       description: "Features 3 description",
-      registryType: RegistryType.Examples,
+      registryType: RegistryType.Blocks,
       // href: `${`${SOURCE_EXAMPLES_URL}/examples/features-3`}`,
+    },
+  ],
+
+  pricings: [
+    {
+      id: "pricing-1",
+      title: "Pricings 1",
+      description: "Pricings 1 description",
+      registryType: RegistryType.Blocks,
+      // href: `${SOURCE_EXAMPLES_URL}/examples/pricings-1`,
+    },
+    {
+      id: "pricing-2",
+      title: "Pricings 2",
+      description: "Pricings 2 description",
+      registryType: RegistryType.Blocks,
+      // href: `${SOURCE_EXAMPLES_URL}/examples/pricings-1`,
+    },
+    {
+      id: "pricing-3",
+      title: "Pricings 3",
+      description: "Pricings 3 description",
+      registryType: RegistryType.Blocks,
+      // href: `${SOURCE_EXAMPLES_URL}/examples/pricings-1`,
+    },
+    {
+      id: "pricing-4",
+      title: "Pricings 4",
+      description: "Pricings 4 description",
+      registryType: RegistryType.Blocks,
+      // href: `${SOURCE_EXAMPLES_URL}/examples/pricings-1`,
+    },
+    {
+      id: "pricing-5",
+      title: "Pricings 5",
+      description: "Pricings 5 description",
+      registryType: RegistryType.Blocks,
+      // href: `${SOURCE_EXAMPLES_URL}/examples/pricings-1`,
+    },
+    {
+      id: "pricing-6",
+      title: "Pricings 6",
+      description: "Pricings 6 description",
+      registryType: RegistryType.Blocks,
+      // href: `${SOURCE_EXAMPLES_URL}/examples/pricings-1`,
     },
   ],
 };
@@ -119,7 +215,7 @@ type ExamplesRegistryKey = keyof typeof initialExamplesRegistry;
 
 type ExamplesRegistry = Record<ExamplesRegistryKey, Example[]>;
 
-export const examplesRegistry = Object.fromEntries(
+export const blocksRegistry = Object.fromEntries(
   Object.entries(initialExamplesRegistry).map(([k, v]) => [
     k as ExamplesRegistryKey, // Preserve the key
     v.map((e) => ({
@@ -128,11 +224,12 @@ export const examplesRegistry = Object.fromEntries(
       href: `${SOURCE_EXAMPLES_URL}/${e.registryType}/${k}/${e.id}`,
       code: getCode(`${SOURCE_CODES_URL}/${e.registryType}/${k}/${e.id}`),
       codePath: `${SOURCE_CODES_URL}/${e.registryType}/${k}/${e.id}`,
+      fileName: "page.tsx",
     })),
   ])
 );
 
-// export const examplesRegistry: ExamplesRegistry = Object.entries(
+// export const blocksRegistry: ExamplesRegistry = Object.entries(
 //   initialExamplesRegistry
 // ).map(([k, v]) => ({
 //   [k]: v.map((e) => ({

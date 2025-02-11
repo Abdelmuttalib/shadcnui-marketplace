@@ -98,9 +98,9 @@ function DocsLayoutSidebarLink({
       href={href}
       // href={href}
       className={cn(
-        "block py-2.5 px-4 text-sm rounded rounded-l-none text-foreground-subtle hover:bg-base-25 dark:hover:bg-overlay-on-surface-background border-l-2 capitalize hover:text-foreground hover:border-primary-300",
+        "block py-2.5 px-4 text-sm rounded rounded-l-none text-foreground-subtle hover:bg-base-25 dark:hover:bg-card border-l-2 capitalize hover:text-foreground hover:border-primary-300",
         {
-          "border-primary font-medium text-foreground-light bg-base-25 dark:bg-overlay-on-surface-background":
+          "border-primary font-medium text-foreground-light bg-base-25 dark:bg-card":
             active,
         }
       )}

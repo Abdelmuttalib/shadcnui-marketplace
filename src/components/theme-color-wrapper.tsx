@@ -1,17 +1,13 @@
 "use client";
 
 import { useThemeColor } from "@/hooks/use-theme-color";
-import { cn } from "@/utils/cn";
 import { useEffect } from "react";
 
 interface ThemeColorWrapperProps extends React.ComponentProps<"div"> {
   defaultTheme?: string;
 }
 
-export function ThemeColorWrapper({
-  children,
-  className,
-}: ThemeColorWrapperProps) {
+export function ThemeColorWrapper({ children }: ThemeColorWrapperProps) {
   const [themeColor] = useThemeColor();
 
   useEffect(() => {

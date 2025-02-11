@@ -8,7 +8,7 @@ export function UICustomizer({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed left-1 right-1 top-1 z-50 mx-auto flex w-fit bg-overlay-on-surface-background items-center justify-center rounded-lg border px-2 py-1 text-sm",
+        "fixed left-1 right-1 top-1 z-50 mx-auto flex w-fit bg-card items-center justify-center rounded-lg border px-2 py-1 text-sm",
         className
       )}
     >
@@ -26,7 +26,7 @@ export function UICustomizer2({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex w-fit bg-overlay-on-surface-background items-center justify-center rounded-lg border px-2 py-1 text-sm",
+        "flex w-fit bg-card items-center justify-center rounded-lg border px-2 py-1 text-sm",
         className
       )}
     >

@@ -6,7 +6,7 @@ export default function ExamplesPage() {
 // import { GradientBackground } from "@/components/gradient";
 // import { Typography } from "@/components/ui/typography";
 // import { ExamplesLayout } from "@/components/views/examples";
-// import { examplesRegistry } from "@/config/data";
+// import { blocksRegistry } from "@/config/data";
 
 // export default function ExamplesPage() {
 //   return (
@@ -17,9 +17,9 @@ export default function ExamplesPage() {
 // }
 
 // export function AllExamples() {
-//   const ex1 = examplesRegistry["portfolios"];
-//   const ex2 = examplesRegistry["features"];
-//   const ex3 = examplesRegistry["landing-pages"];
+//   const ex1 = blocksRegistry["portfolios"];
+//   const ex2 = blocksRegistry["features"];
+//   const ex3 = blocksRegistry["landing-pages"];
 
 //   const examples = [ex1, ex2, ex3];
 
@@ -28,11 +28,11 @@ export default function ExamplesPage() {
 //       <ScreenContainer>
 //         <div className="relative flex flex-col items-center justify-center text-center gap-4">
 //           <GradientBackground />
-//           <Typography variant="display-lg/medium" className="tracking-tight">
+//           <Typography variant="5xl/medium" className="tracking-tight">
 //             Examples & Templates
 //           </Typography>
 //           <Typography
-//             variant="xl/regular"
+//             variant="xl/normal"
 //             className="text-foreground-secondary max-w-3xl"
 //           >
 //             Discover a wide range of examples and templates to help you quickly

@@ -1,91 +1,79 @@
-import { ScreenContainer } from "@/components/container";
-import { ComponentPreview } from "@/components/component-preview";
-import { Code } from "@/components/views/docs/code";
-import { Style } from "@/hooks/use-style";
+import { Typography } from "@/components/ui/typography";
+import { blocksRegistry } from "@/config/data";
+import BlocksBreadcrumb from "./components/blocks-breadcrumb";
 
-export default function Blocks({
-  params,
-  searchParams,
-}: {
-  params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  const f = [
-    {
-      title: "Blocks",
-      description: "Blocks are used to perform an action.",
-      href: "https://tailwindui.com/components/application-ui/data-display/data-tables",
-      code: "",
-    },
-  ];
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
-  console.log("params:", params);
-  console.log("searchParams:", searchParams);
-  const style = searchParams?.style;
+export default function BlocksPage() {
+  const blocksData = Object.keys(blocksRegistry);
 
   return (
     <div>
-      <ScreenContainer>
-        <ComponentPreview
-          title="Blocks"
-          description="Blocks are used to perform an action."
-          // href="https://tailwindui.com/components/application-ui/data-display/data-tables"
+      <div className="bg-gradient-to-r from-accent/40 to-background py-20">
+        <div className="space-y-2">
+          <div className="border-y px-3">
+            <div className="-mx-2">
+              <BlocksBreadcrumb />
+            </div>
+          </div>
+          <div className="border-y flex items-center gap-2">
+            <Typography
+              as={"h2"}
+              variant="3xl/semibold"
+              className="tracking-tight capitalize px-3"
+            >
+              Blocks
+            </Typography>
+            {/* <Badge>9 blocks</Badge> */}
+          </div>
 
-          category="features"
-          component="features-1"
-          fileName="index.tsx"
-        >
-          <Code
-            style={style as Style}
-            category="features"
-            component="features-1"
-            fileName="index.tsx"
-          />
-        </ComponentPreview>
-        <ComponentPreview
-          title="Blocks"
-          description="Blocks are used to perform an action."
-          category="features"
-          component="features-2"
-          fileName="index.tsx"
-        >
-          <Code
-            style={style as Style}
-            category="features"
-            component="features-2"
-            fileName="index.tsx"
-          />
-        </ComponentPreview>
-        <ComponentPreview
-          title="Blocks"
-          description="Blocks are used to perform an action."
-          category="features"
-          component="features-3"
-          fileName="index.tsx"
-        >
-          <Code
-            style={style as Style}
-            category="features"
-            component="features-3"
-            fileName="index.tsx"
-          />
-        </ComponentPreview>
-        <ComponentPreview
-          title="Blocks"
-          description="Blocks are used to perform an action."
-          category="features"
-          component="features-4"
-          fileName="index.tsx"
-        >
-          <Code
-            style={style as Style}
-            category="features"
-            component="features-3"
-            fileName="index.tsx"
-          />
-        </ComponentPreview>
-      </ScreenContainer>
-      {/* <H /> */}
+          <div className="border-y">
+            <Typography
+              as={"p"}
+              variant="md/normal"
+              className="text-muted-foreground max-w-4xl px-3"
+            >
+              Browse through our collection of shadcn ui components blocks. Each
+              block is a standalone component that can be used in your project.
+              Preview the blocks in different styles and see how they look
+              together.
+            </Typography>
+          </div>
+          <nav className="border-y mt-10">
+            <ul className="overflow-hidden p-2 px-3 flex flex-wrap gap-8">
+              {blocksData.map((block) => {
+                return (
+                  <li
+                    key={block}
+                    className="relative flex items-center gap-2 group"
+                  >
+                    <Link
+                      href={`/blocks/${block}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0"
+                    >
+                      <span className="sr-only">
+                        view {block}
+                        blocks
+                      </span>
+                    </Link>
+                    <Typography
+                      as="h4"
+                      variant="lg/normal"
+                      className="capitalize tracking-tight"
+                    >
+                      {block.replace("-", " ")}
+                    </Typography>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground/60 -rotate-45 group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1" />
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   );
 }

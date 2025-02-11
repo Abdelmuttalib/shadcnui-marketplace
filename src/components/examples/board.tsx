@@ -10,7 +10,7 @@ import {
 
 import { useMounted } from "@/hooks/use-mounted";
 
-import Badge from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 
 type Status = "backlog" | "todo" | "in progress" | "done";
@@ -319,7 +319,7 @@ export function Board() {
                                 </div>
                                 <Typography
                                   as="h3"
-                                  variant="sm/regular"
+                                  variant="sm/normal"
                                   className="capitalize text-foreground"
                                 >
                                   {task.title}

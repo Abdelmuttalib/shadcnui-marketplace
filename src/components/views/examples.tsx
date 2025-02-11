@@ -3,17 +3,16 @@
 import React, { useEffect, useState } from "react";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
-import Badge from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { ArrowRightIcon, Cuboid, Timer } from "lucide-react";
-import { IconButton } from "@/components/ui/icon-button";
 import { cn } from "@/utils/cn";
 import { ScreenContainer } from "@/components/container";
 import { UICustomizer } from "@/components/ui-customizer";
 import { GradientBackground } from "../gradient";
-import { examplesRegistry, initialExamplesRegistry } from "@/config/data";
+import { blocksRegistry, initialExamplesRegistry } from "@/config/data";
 
 export function FeaturesExamples() {
-  const examples = examplesRegistry.features;
+  const examples = blocksRegistry.features;
   return (
     <div>
       {examples.map((example, index) => (
@@ -39,11 +38,11 @@ export function FeaturesPage() {
           <UICustomizer />
           <div className="relative flex flex-col items-center justify-center text-center gap-4">
             <GradientBackground />
-            <Typography variant="display-lg/medium" className="tracking-tight">
+            <Typography variant="5xl/medium" className="tracking-tight">
               Examples & Templates
             </Typography>
             <Typography
-              variant="xl/regular"
+              variant="xl/normal"
               className="text-foreground-secondary max-w-3xl"
             >
               Discover a wide range of examples and templates to help you
@@ -70,11 +69,11 @@ export function ComponentShowcaseCard({
   examplesCount: number;
 }) {
   return (
-    <div className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-overlay-on-surface-background/80 shadow-sm ring-1 ring-border">
+    <div className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-card/80 shadow-sm ring-1 ring-border">
       <div className="relative shrink-0 bg-muted dark:bg-background/80 h-28 overflow-hidden rounded group flex flex-col">
         <Typography
           as="h2"
-          variant="display-sm/medium"
+          variant="3xl/medium"
           className="ml-10 mt-10 overflow-hidden w-full h-full rounded-md object-cover inline-flex"
         >
           {title}
@@ -84,7 +83,7 @@ export function ComponentShowcaseCard({
 
         {/* <Typography
           as="h2"
-          variant="md/regular"
+          variant="md/normal"
           className="text-foreground-secondary"
         >
           description
@@ -134,7 +133,7 @@ export function ComponentShowcaseCard2({
   component: React.ReactNode;
 }) {
   return (
-    <div className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-overlay-on-surface-background/80 shadow-sm ring-1 ring-border">
+    <div className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-card/80 shadow-sm ring-1 ring-border">
       <div className="relative shrink-0 bg-background/80 h-52 overflow-hidden rounded group">
         {/* bg-[url(/screenshots/engagement.png)] bg-[size:851px_344px] bg-no-repeat */}
         <div className="pl-10 pt-10 overflow-hidden">{component}</div>
@@ -167,7 +166,7 @@ export function ComponentShowcaseCard2({
         </p>
         {pro && (
           <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
-            <Badge variant="blue" className="ml-2">
+            <Badge variant="default" className="ml-2">
               Pro
             </Badge>
           </p>
@@ -198,8 +197,8 @@ export function ShowcaseCommingSoonCard({
   componentPreview?: React.ReactNode;
 }) {
   return (
-    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-overlay-on-surface-background hover:before:opacity-100">
-      <div className="relative aspect-video overflow-hidden rounded-lg bg-overlay-on-surface-background ring-1 ring-border">
+    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-card hover:before:opacity-100">
+      <div className="relative aspect-video overflow-hidden rounded-lg bg-card ring-1 ring-border">
         <img
           // "https://tailwindui.com/plus/img/category-thumbnails/application-ui/stacked.png"
           src={image.src}
@@ -228,7 +227,7 @@ export function ShowcaseCommingSoonCard({
       </p>
       {pro && (
         <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
-          <Badge variant="blue" className="ml-2">
+          <Badge variant="default" className="ml-2">
             Pro
           </Badge>
         </p>
@@ -344,13 +343,13 @@ function SuggestedComponentsSection() {
   return (
     <div className="lg:mt-72 mb-24">
       <div className="space-y-2">
-        <Typography as="h2" variant="display-xs/medium">
+        <Typography as="h2" variant="2xl/medium">
           {/* Landing Pages */}
           Explore more examples
         </Typography>
         {/* <Typography
           as="h2"
-          variant="md/regular"
+          variant="md/normal"
           className="text-foreground-secondary"
         >
           description
@@ -467,7 +466,7 @@ export function ExamplesLayout({
 
   const [_code, setCode] = useState<any>();
 
-  // Example usage of examplesRegistry
+  // Example usage of blocksRegistry
   const fetchCode = async () => {
     const cccode = await code; // Await the Promise to get the resolved string
     setCode(cccode);
@@ -481,20 +480,20 @@ export function ExamplesLayout({
     <div className="mt-16 md:mt-32 pt-10" id="examples">
       <div className="mb-6 space-y-3 px-4 lg:mb-12 lg:px-0">
         <div className="space-y-2">
-          <Typography as="h2" variant="display-xs/medium">
+          <Typography as="h2" variant="2xl/medium">
             {/* Landing Pages */}
             {title}
           </Typography>
           <Typography
             as="h2"
-            variant="md/regular"
+            variant="md/normal"
             className="text-foreground-secondary"
           >
             {description}
           </Typography>
         </div>
       </div>
-      <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-overlay-on-surface-background p-1">
+      <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-card p-1">
         <div className="flex justify-between overflow-x-auto px-1 pt-1">
           <div className="flex items-center justify-between w-full gap-2">
             <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
@@ -502,47 +501,45 @@ export function ExamplesLayout({
                 variant={preview ? "outline" : "ghost"}
                 onClick={() => setPreview(true)}
                 size="sm"
-                iconLeft={<Cuboid />}
               >
+                <Cuboid />
                 Preview
               </Button>
               <Button
                 variant={!preview ? "outline" : "ghost"}
                 onClick={() => setPreview(false)}
                 size="sm"
-                iconLeft={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-code flex-shrink-0 size-[1.125rem]"
-                  >
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
-                }
                 disabled
-                iconRight={<Badge variant="neutral">Coming Soon</Badge>}
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-code flex-shrink-0 size-[1.125rem]"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
                 Code
+                <Badge variant="outline">Coming Soon</Badge>
               </Button>
             </div>
             <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 sm:flex dark:bg-gray-950/50 outline-none">
               {breakpoints.map((bp) => (
-                <IconButton
+                <Button
                   key={bp.label}
                   variant={breakpoint === bp.label ? "outline" : "ghost"}
-                  size="xs"
+                  size="icon-sm"
                   onClick={() => setBreakpoint(bp.label)}
                 >
                   {bp.icon}
-                </IconButton>
+                </Button>
               ))}
             </div>
           </div>

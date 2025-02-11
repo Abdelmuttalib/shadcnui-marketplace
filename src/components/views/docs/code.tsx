@@ -7,7 +7,6 @@ import { Fragment, ReactElement } from "react";
 import { jsx, jsxs } from "react/jsx-runtime";
 
 import { CopyCodeButton } from "./copy-code-button";
-import { Style } from "@/hooks/use-style";
 
 export const exampleCode = `
 import { ButtonLink } from "@/components/ui/button";
@@ -104,19 +103,13 @@ interface Props {
 // app/docs/[slug]/page.tsx
 
 export async function Code({
-  initial,
-  style,
   category,
   component,
   fileName,
-}: // code,
-{
-  initial?: JSX.Element;
-  style: Style;
+}: {
   category: string;
   component: string;
   fileName: string;
-  // code: string;
 }) {
   const exampleCodePath =
     "https://shadcn-carbon.vercel.app/examples/features/features-1";

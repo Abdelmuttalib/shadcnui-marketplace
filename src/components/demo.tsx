@@ -161,7 +161,7 @@ export function CustomDialogDemo() {
           className="whitespace-nowrap"
           onClick={() => setOpen(true)}
           variant="outline"
-          size="xs"
+          size="sm"
         >
           Edit
         </Button>
@@ -221,10 +221,9 @@ import { ColumnDef } from "@tanstack/react-table";
 import { formatDateDayTime } from "@/utils/date";
 import { useMounted } from "@/hooks/use-mounted";
 import { cn } from "@/utils/cn";
-import { IconButton } from "./ui/icon-button";
-import Badge from "./ui/badge";
+import { Badge } from "./ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { DataTable } from "./ui/data-table-2";
+import { DataTable } from "./ui/data-table";
 import { ScreenContainer } from "./container";
 import { Typography } from "./ui/typography";
 
@@ -265,9 +264,9 @@ export const columns: ColumnDef<Payment>[] = [
     cell: ({ cell }) => {
       return (
         <Badge
-          variant={getPaymentStatusBadgeColor(
-            cell.getValue() as unknown as string
-          )}
+        // variant={getPaymentStatusBadgeColor(
+        //   cell.getValue() as unknown as string
+        // )}
         >
           <>{cell.getValue() as React.ReactNode}</>
         </Badge>
@@ -282,7 +281,7 @@ export const columns: ColumnDef<Payment>[] = [
         <div className="flex items-center gap-x-2">
           <CustomDialogDemo />
 
-          <Button variant="destructive-outline" size="xs">
+          <Button variant="destructive-outline" size="sm">
             Delete
           </Button>
         </div>
@@ -297,18 +296,15 @@ export function DataTableDemo() {
 
 export function NotificationsCard() {
   return (
-    <div className="w-full max-w-lg shadow rounded-lg p-4 md:p-6 bg-overlay-on-surface-background border space-y-4">
+    <div className="w-full max-w-lg shadow rounded-lg p-4 md:p-6 bg-card border space-y-4">
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-medium text-foreground sm:text-2xl">
           Notifications{" "}
         </h3>
 
         <div className="hidden sm:block">
-          <Button
-            size="xs"
-            variant="secondary"
-            iconLeft={<CheckCheckIcon className="w-4" />}
-          >
+          <Button size="sm" variant="secondary">
+            <CheckCheckIcon className="w-4" />
             Mark all as read
           </Button>
         </div>
@@ -474,10 +470,10 @@ function Notification({
 
         {notification.id === 4 && (
           <div className="flex gap-2">
-            <Button size="xs" variant="outline">
+            <Button size="sm" variant="outline">
               Decline
             </Button>
-            <Button size="xs">Accept</Button>
+            <Button size="sm">Accept</Button>
           </div>
         )}
         <div className="flex w-full justify-between">
@@ -498,7 +494,7 @@ function Notification({
 export function NotificationAlert() {
   return (
     <div
-      className="max-w-xs bg-overlay-on-surface-background border rounded-xl shadow-lg"
+      className="max-w-xs bg-card border rounded-xl shadow-lg"
       role="alert"
       tabIndex={-1}
       aria-labelledby="hs-toast-stack-toggle-label"
@@ -533,10 +529,10 @@ export function NotificationAlert() {
           </div>
           <div className="mt-4">
             <div className="flex gap-x-2">
-              <Button size="xs" variant="secondary">
+              <Button size="sm" variant="secondary">
                 Don&apos;t allow
               </Button>
-              <Button size="xs">Allow</Button>
+              <Button size="sm">Allow</Button>
             </div>
           </div>
         </div>
@@ -555,14 +551,14 @@ export function ButtonsDemo() {
   return (
     <div className="flex flex-wrap gap-2">
       <Button>Default</Button>
-      <IconButton variant="destructive-outline">
+      <Button size={"icon"} variant="destructive-outline">
         <BookmarkIcon />
-      </IconButton>
+      </Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="outline">Outline</Button>
-      <IconButton variant="secondary">
+      <Button size={"icon"} variant="secondary">
         <MailIcon />
-      </IconButton>
+      </Button>
       <Button variant="destructive">Destructive</Button>
     </div>
   );
@@ -571,11 +567,12 @@ export function ButtonsDemo() {
 export function BadgesDemo() {
   return (
     <div className="flex flex-wrap gap-4">
-      <Badge variant="neutral">Default</Badge>
+      <Badge variant="default">Default</Badge>
+      {/* <Badge variant="neutral">Default</Badge>
       <Badge variant="green">Default</Badge>
       <Badge variant="blue">Default</Badge>
       <Badge variant="red">Default</Badge>
-      <Badge variant="yellow">Default</Badge>
+      <Badge variant="yellow">Default</Badge> */}
     </div>
   );
 }
@@ -643,7 +640,7 @@ export function WaitlistForm() {
               {...register("email", {
                 required: true,
               })}
-              className="bg-overlay-on-surface-background"
+              className="bg-card"
               disabled={isSubmitting}
             />
           </div>
@@ -653,13 +650,13 @@ export function WaitlistForm() {
         </form>
       ) : (
         <div>
-          <Badge variant={"blue"} className="mt-2">
+          <Badge variant={"secondary"} className="mt-2">
             {message}
           </Badge>
         </div>
       )}
       {!success && message && (
-        <Badge variant={"red"} className="mt-2">
+        <Badge variant={"secondary"} className="mt-2">
           {message}
         </Badge>
       )}
@@ -681,7 +678,7 @@ export function DemoShowcase() {
 
               <Typography
                 as="p"
-                variant="display-lg/bold"
+                variant="5xl/bold"
                 className="mt-4 text-foreground tracking-tight"
               >
                 {/* Beautiful UI components, crafted with shadcn ui and Tailwind
@@ -775,9 +772,9 @@ export function DemoShowcase() {
                     href="#examples"
                     className="text-foreground-secondary"
                     variant="outline"
-                    size="xs"
-                    iconRight={<ArrowRightIcon className="rotate-45" />}
+                    size="sm"
                   >
+                    <ArrowRightIcon className="rotate-45" />
                     examples
                   </ButtonLink>
                 </div>
@@ -800,7 +797,7 @@ export function DemoShowcase() {
               <div className="z-20 flex flex-col">
                 <div className="relative p-4">
                   <div className="absolute top-8 right-0 bottom-0 left-11 bg-slate-900/[0.03]"></div>
-                  <div className="pointer-events-auto relative z-10 w-full rounded-lg bg-overlay-on-surface-background text-[0.8125rem]/5 text-foreground-secondary ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
+                  <div className="pointer-events-auto relative z-10 w-full rounded-lg bg-card text-[0.8125rem]/5 text-foreground-secondary ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
                     <div>
                       <div className="flex items-center px-3.5 py-2.5 text-foreground-secondary">
                         <svg
@@ -917,15 +914,10 @@ export function DemoShowcase() {
                     <Switch id="accept" />
                   </div>
                   <div className="relative">
-                    <Button
-                      variant="outline"
-                      className="shadow-xs"
-                      iconLeft={
-                        <svg className="mr-2.5 size-5 flex-none fill-foreground-subtle">
-                          <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
-                        </svg>
-                      }
-                    >
+                    <Button variant="outline" className="shadow-xs">
+                      <svg className="mr-2.5 size-5 flex-none fill-foreground-subtle">
+                        <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
+                      </svg>
                       Bookmark
                     </Button>
 

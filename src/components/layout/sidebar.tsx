@@ -12,7 +12,7 @@ import React from "react";
 
 // import LanguageSwitcher from "@/components/language-switcher";
 // import ThemeSwitcher from "@/components/theme-switcher";
-import { IconButton } from "@/components/ui/icon-button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/utils/cn";
 
 type DashboardLinkT = {
@@ -69,19 +69,19 @@ export function SideBar({
     >
       <div className="relative mx-4 flex-1 overflow-y-auto py-4 lg:pl-0">
         {setShowSidebarMenu && (
-          <IconButton
+          <Button
             className="absolute top-4 left-0 focus:border-2 focus:border-gray-800"
             variant="outline"
             size="sm"
             onClick={() => setShowSidebarMenu(false)}
           >
             <XMarkIcon className="w-6" aria-hidden="true" />
-          </IconButton>
+          </Button>
         )}
         <div className="mt-1">
           <Framer className="w-9 h-9 bg-primary-200/70 dark:bg-gray-hover rounded p-1.5" />
         </div>
-        {/* <Typography as='h5' variant='lg/regular'>
+        {/* <Typography as='h5' variant='lg/normal'>
             Dashboard
             <span className='ml-0.5 text-3xl text-primary'>.</span>
           </Typography> */}
@@ -91,7 +91,7 @@ export function SideBar({
               <Link
                 href={link.href}
                 className={cn(
-                  "bg-background text-sm text-foreground-lighter hover:bg-overlay-on-surface-background dark:hover:bg-layer-3 dark:hover:text-foreground-muted rounded py-2.5 px-4 inline-flex items-center gap-x-3 w-full font-medium",
+                  "bg-background text-sm text-foreground-lighter hover:bg-card dark:hover:bg-layer-3 dark:hover:text-foreground-muted rounded py-2.5 px-4 inline-flex items-center gap-x-3 w-full font-medium",
                   {
                     "text-foreground hover:text-foreground dark:hover:text-foreground bg-layer-3":
                       pathname === link.href,

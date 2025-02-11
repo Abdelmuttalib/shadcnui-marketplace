@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
-import "@/styles/globals.css";
+import "./globals.css";
 import { ThemeButton } from "@/components/theme-button";
 import { StyleProvider } from "@/hooks/use-style";
 import { ThemeColorWrapper } from "@/components/theme-color-wrapper";

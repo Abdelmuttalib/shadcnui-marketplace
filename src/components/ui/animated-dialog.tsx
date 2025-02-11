@@ -4,8 +4,8 @@ import { cn } from "@/utils/cn";
 import { Dialog, Transition } from "@headlessui/react";
 import type { ClassValue } from "clsx";
 import React, { Fragment } from "react";
-import { IconButton } from "./icon-button";
 import { Typography } from "./typography";
+import { Button } from "./button";
 
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof Transition.Child>,
@@ -23,7 +23,7 @@ const DialogOverlay = React.forwardRef<
   >
     <div
       className={cn(
-        "fixed inset-0 bg-base/25 dark:bg-base/80 backdrop-blur-sm",
+        "fixed inset-0 bg-black/25 dark:bg-black/80 backdrop-blur-sm",
         className as ClassValue
       )}
     />
@@ -62,9 +62,9 @@ const DialogPortal = React.forwardRef<
       > */}
       {children}
       {/* <DialogPrimitive.Close className="absolute right-2 top-2 rounded-sm ">
-        <IconButton variant="outline" className="h-7 w-7">
+        <Button variant="outline" className="h-7 w-7">
           <Cross2Icon className="h-5 w-5" />
-        </IconButton>
+        </Button>
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close> */}
       {/* </div> */}
@@ -207,8 +207,8 @@ export default function CustomDialog({
       <DialogRoot open={open} onClose={onClose}>
         <DialogPortal>
           <DialogContent className={cn("", className)}>
-            <IconButton
-              size="xs"
+            <Button
+              size="icon-sm"
               variant="outline"
               className="absolute right-2 top-2 h-7 w-7"
               onClick={onClose}
@@ -227,7 +227,7 @@ export default function CustomDialog({
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-            </IconButton>
+            </Button>
             <DialogTitle as="div" className="-mt-2 space-y-1">
               <Typography as="h1" variant="xl/semibold">
                 {title}
@@ -235,8 +235,8 @@ export default function CustomDialog({
               {description && (
                 <Typography
                   as="p"
-                  variant="sm/regular"
-                  className="text-foreground-secondary"
+                  variant="sm/normal"
+                  className="text-muted-foreground"
                 >
                   {description}
                 </Typography>

@@ -12,7 +12,7 @@ export default function LandingPage1() {
 // import { Typography } from "@/components/ui/typography";
 // import { ScreenContainer } from "@/components/container";
 // import { UICustomizer } from "@/components/ui-customizer";
-// import { examplesRegistry } from "@/config/data";
+// import { blocksRegistry } from "@/config/data";
 // import {
 //   ComponentShowcaseCard,
 //   ExamplesLayout,
@@ -785,7 +785,7 @@ export default function LandingPage1() {
 //                     <div key={p.plan}>
 //                       <div
 //                         className={cn(
-//                           "p-4 relative z-10 bg-overlay-on-surface-background border rounded-xl md:p-10",
+//                           "p-4 relative z-10 bg-card border rounded-xl md:p-10",
 //                           {
 //                             // "first:pt-0 last:pb-0": index === 0,
 //                           }
@@ -1319,11 +1319,11 @@ export default function LandingPage1() {
 //           <UICustomizer />
 //           {/* <div className="relative flex flex-col items-center justify-center text-center gap-4">
 //             <GradientBackground />
-//             <Typography variant="display-lg/medium" className="tracking-tight">
+//             <Typography variant="5xl/medium" className="tracking-tight">
 //               Examples & Templates
 //             </Typography>
 //             <Typography
-//               variant="xl/regular"
+//               variant="xl/normal"
 //               className="text-foreground-secondary max-w-3xl"
 //             >
 //               Discover a wide range of examples and templates to help you
@@ -1341,7 +1341,7 @@ export default function LandingPage1() {
 // }
 
 // function LandingPageExamples() {
-//   const examples = examplesRegistry["landing-pages"];
+//   const examples = blocksRegistry["landing-pages"];
 //   return (
 //     <div>
 //       {examples.map((example, index) => (
@@ -1372,13 +1372,13 @@ export default function LandingPage1() {
 //   return (
 //     <div className="lg:mt-72 mb-24">
 //       <div className="space-y-2">
-//         <Typography as="h2" variant="display-xs/medium">
+//         <Typography as="h2" variant="2xl/medium">
 //           {/* Landing Pages */}
 //           Explore more examples
 //         </Typography>
 //         {/* <Typography
 //           as="h2"
-//           variant="md/regular"
+//           variant="md/normal"
 //           className="text-foreground-secondary"
 //         >
 //           description

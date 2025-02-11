@@ -1,10 +1,8 @@
-import Badge from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { IconButton } from "@/components/ui/icon-button";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 
 export default function UIPage() {
   return (
@@ -59,13 +57,13 @@ export function SimpleCard() {
             {/* <p className="text-sm text-muted-foreground font-medium">
               In stock
             </p> */}
-            <Badge variant="green">In stock</Badge>
+            <Badge variant="default">In stock</Badge>
           </div>
         </div>
 
         <div className="flex gap-2">
           {["xs", "s", "m", "l", "xl"].map((size, i) => (
-            <IconButton
+            <Button
               key={size + i + 2}
               variant={size === selectedSize ? "default" : "ghost"}
               className={cn("uppercase text-muted-foreground ", {
@@ -74,7 +72,7 @@ export function SimpleCard() {
               onClick={() => onSelectSize(size)}
             >
               {size}
-            </IconButton>
+            </Button>
           ))}
         </div>
         {/* divider */}
@@ -92,7 +90,7 @@ export function SimpleCard() {
             </Button>
           </div>
           <div>
-            <IconButton variant="outline">
+            <Button variant="outline">
               <svg
                 width="20"
                 height="20"
@@ -109,7 +107,7 @@ export function SimpleCard() {
                   fill="currentColor"
                 ></path>
               </svg>
-            </IconButton>
+            </Button>
           </div>
         </div>
         <div>
@@ -151,7 +149,7 @@ export function ClassicCard() {
 
         <div className="flex gap-2">
           {["xs", "s", "m", "l", "xl"].map((size, i) => (
-            <IconButton
+            <Button
               key={size + i}
               variant={size === "xs" ? "default" : "outline"}
               className={cn("uppercase rounded-none disabled:opacity-50", {
@@ -160,7 +158,7 @@ export function ClassicCard() {
               disabled={size === "l"}
             >
               {size}
-            </IconButton>
+            </Button>
           ))}
         </div>
         {/* divider */}
@@ -186,7 +184,7 @@ export function ClassicCard() {
             </Button>
           </div>
           <div>
-            <IconButton
+            <Button
               variant="ghost"
               className="rounded-none text-foreground-lighter"
             >
@@ -206,7 +204,7 @@ export function ClassicCard() {
                   fill="currentColor"
                 ></path>
               </svg>
-            </IconButton>
+            </Button>
           </div>
         </div>
         <div>
@@ -465,7 +463,11 @@ export function BlogSection() {
 
                 <Badge
                   variant={
-                    post.id === 1 ? "primary" : post.id === 2 ? "green" : "blue"
+                    post.id === 1
+                      ? "default"
+                      : post.id === 2
+                      ? "default"
+                      : "default"
                   }
                 >
                   {post.category.title}
@@ -512,7 +514,7 @@ export function BlogCard({
     <article
       key={post.id}
       className={cn(
-        "flex max-w-xl flex-col items-start border justify-between bg-overlay-on-surface-background p-6 rounded-lg shadow h-fit",
+        "flex max-w-xl flex-col items-start border justify-between bg-card p-6 rounded-lg shadow h-fit",
         className
       )}
     >
@@ -522,7 +524,9 @@ export function BlogCard({
         </time>
 
         <Badge
-          variant={post.id === 1 ? "primary" : post.id === 2 ? "green" : "blue"}
+          variant={
+            post.id === 1 ? "default" : post.id === 2 ? "default" : "default"
+          }
         >
           {post.category.title}
         </Badge>

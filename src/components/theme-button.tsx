@@ -2,14 +2,13 @@
 
 import { MoonIcon } from "lucide-react";
 import { Button } from "./ui/button";
-import { IconButton } from "./ui/icon-button";
 
 export function ThemeButton() {
   return (
-    <IconButton
+    <Button
       type="button"
       variant={"secondary"}
-      size="sm"
+      size="icon-sm"
       onClick={() => {
         // set dark mode class to html
         document.documentElement.classList.toggle("dark");
@@ -17,6 +16,6 @@ export function ThemeButton() {
       className="h-8 w-8"
     >
       <MoonIcon />
-    </IconButton>
+    </Button>
   );
 }

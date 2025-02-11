@@ -19,7 +19,7 @@ export default function Container({ children, className }: ContainerProps) {
 
 export function ScreenContainer({ children, className }: ContainerProps) {
   return (
-    <div className={cn("mx-auto max-w-screen-2xl px-2 md:px-4", className)}>
+    <div className={cn("mx-auto max-w-[1440px] px-2 md:px-4", className)}>
       {children}
     </div>
   );

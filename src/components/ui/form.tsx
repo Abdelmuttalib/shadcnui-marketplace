@@ -1,18 +1,19 @@
+"use client";
+
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
 import {
   Controller,
-  type ControllerProps,
-  type FieldPath,
-  type FieldValues,
+  ControllerProps,
+  FieldPath,
+  FieldValues,
   FormProvider,
   useFormContext,
 } from "react-hook-form";
 
-import { Label } from "@/components/ui/label";
 import { cn } from "@/utils/cn";
-import { Typography, typographyVariants } from "./typography";
+import { Label } from "@/components/ui/label";
 
 const Form = FormProvider;
 
@@ -79,7 +80,7 @@ const FormItem = React.forwardRef<
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn(className)} {...props} />
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
   );
 });
@@ -89,15 +90,12 @@ const FormLabel = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
 >(({ className, ...props }, ref) => {
-  const { formItemId } = useFormField();
+  const { error, formItemId } = useFormField();
 
   return (
     <Label
       ref={ref}
-      className={cn(
-        "text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 dark:text-gray-300",
-        className
-      )}
+      className={cn(error && "text-destructive", className)}
       htmlFor={formItemId}
       {...props}
     />
@@ -138,7 +136,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-muted-foreground text-[0.8rem]", className)}
+      className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
   );
@@ -160,13 +158,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn(
-        typographyVariants({
-          variant: "xs/regular",
-        }),
-        "mt-1 h-5 rounded-sm bg-red-100 px-1.5 pt-0.5 text-error dark:bg-transparent",
-        className
-      )}
+      className={cn("text-sm font-medium text-destructive", className)}
       {...props}
     >
       {body}

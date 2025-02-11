@@ -1,6 +1,6 @@
-import { useTheme } from "next-themes";
+"use client";
 
-import { IconButton, IconButtonProps } from "@/components/ui/icon-button";
+import { useTheme } from "next-themes";
 
 import { Menu, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
@@ -18,7 +18,7 @@ export default function ThemeSwitcher({
   variant,
 }: {
   className?: string;
-  variant?: IconButtonProps["variant"];
+  variant?: ButtonProps["variant"];
 }) {
   const { theme, setTheme } = useTheme();
 
@@ -54,9 +54,9 @@ export default function ThemeSwitcher({
   // );
 
   return (
-    <IconButton
+    <Button
       type="button"
-      size="xs"
+      size="icon-sm"
       variant={variant ?? "ghost"}
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className={cn("text-foreground-light sm:inline-flex", className)}
@@ -66,11 +66,11 @@ export default function ThemeSwitcher({
       ) : (
         <MoonIcon className="w-5" />
       )}
-    </IconButton>
+    </Button>
   );
 }
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button, ButtonProps, buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -93,7 +93,7 @@ export function ThemeColorSelect() {
     <div className="flex flex-wrap gap-2">
       {PRIMARY_THEME_COLORS?.map(
         ({ name, color }: { name: ThemeColorType; color: string }) => (
-          <IconButton
+          <Button
             key={`${name}`}
             variant="ghost"
             onClick={() => {
@@ -108,7 +108,7 @@ export function ThemeColorSelect() {
                   name === themeColor.colorName,
               }
             )}
-            size="sm"
+            size="icon-sm"
           >
             <span
               style={{
@@ -116,7 +116,7 @@ export function ThemeColorSelect() {
               }}
               className={cn("h-5 w-5 rounded-lg")}
             ></span>
-          </IconButton>
+          </Button>
         )
       )}
     </div>
@@ -176,7 +176,7 @@ export function ThemeColorSelect2() {
           className={cn(
             buttonVariants({
               variant: "outline",
-              size: "xs",
+              size: "sm",
             }),
             "flex mx-2 border capitalize"
           )}

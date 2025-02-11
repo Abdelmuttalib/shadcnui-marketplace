@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 // import NotificationsDialog from "@/components/notifications/NotificationsDialog";
 // import ThemeSwitcher, { ThemeSelect } from "@/components/theme-switcher";
-import { IconButton } from "@/components/ui/icon-button";
+import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { SideBar } from "./sidebar";
 import { cn } from "@/utils/cn";
@@ -21,15 +21,15 @@ const Header = ({ pageTitle }: { pageTitle: string }) => {
       <header className="sticky top-0 z-40 flex-none bg-background/[0.5] py-4 backdrop-blur-md backdrop-filter dark:border-gray-800  dark:text-gray-200 lg:pl-0">
         <div className="flex h-10 items-center justify-between px-4 lg:px-6">
           <div className="flex items-center gap-3">
-            <IconButton
+            <Button
               className="bg-white focus:border-2 focus:border-gray-800 lg:hidden"
               variant="ghost"
               size="sm"
               onClick={() => setShowSidebarMenu(true)}
             >
               <Bars3Icon className="w-5" />
-            </IconButton>
-            <Typography as="h1" variant="display-xs/medium">
+            </Button>
+            <Typography as="h1" variant="2xl/medium">
               {pageTitle}
             </Typography>
           </div>

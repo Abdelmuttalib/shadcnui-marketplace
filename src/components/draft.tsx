@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Container, { ScreenContainer } from "@/components/container";
-import Head from "next/head";
+import { ScreenContainer } from "@/components/container";
 import { applicationUIComponentsData } from "@/config/data";
 import { ShowcaseCommingSoonSection2 } from "@/components/views/examples";
 import { Typography } from "@/components/ui/typography";
@@ -19,30 +18,31 @@ import { WaitlistDialog } from "@/components/waitlist-dialog";
 // rgb(237, 239, 236)
 
 export function StyleSelect({
-  defaultValue,
+  defaultStyle,
   onChange,
 }: {
-  defaultValue: any;
+  defaultStyle?: any;
   onChange?: any;
 }) {
   // update search params, 'style'
 
-  const router = useRouter();
+  const { style, setStyle, stylePath, styleUrl } = useStyle();
 
-  function onSelect(e: any) {
-    console.log(e);
-    router.push(`?style=${e}`);
+  function onStyleChange(e: any) {
+    setStyle(e);
   }
 
   return (
-    <Select defaultValue={defaultValue} onValueChange={onChange}>
+    <Select defaultValue={style || defaultStyle} onValueChange={onStyleChange}>
       <SelectTrigger className="w-36">
         <SelectValue
-          placeholder="strokeWidth"
+          placeholder="select a style"
           className="text-muted-foreground"
         >
           <span className="text-muted-foreground">style:</span>{" "}
-          <span className="capitalize font-medium">{defaultValue}</span>
+          <span className="capitalize font-medium">
+            {style || defaultStyle}
+          </span>
         </SelectValue>
       </SelectTrigger>
       <SelectContent>
@@ -87,16 +87,478 @@ export function ApplicationUI() {
   );
 }
 
+export function LandingPageLayout({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
+  const { style, setStyle, stylePath, setStylePath } = useStyle();
+
+  const links = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "Blocks",
+      href: "/blocks",
+    },
+    // {
+    //   title: "Styles",
+    //   href: "/styles",
+    // },
+  ];
+
+  return (
+    <div className="relative">
+      <div className="relative flex flex-col bg-background z-20">
+        <header className="sticky top-0 z-20 flex h-16 items-center border-b bg-background/[0.7] backdrop-blur-sm">
+          <nav className="sm:container sm:mx-auto flex items-center justify-between gap-2 px-4 w-full">
+            <div className="flex items-center gap-2">
+              <Link
+                href="/"
+                className="rounded-md bg-accent/60 px-2 py-0.5 text-xl font-medium text-foreground"
+              >
+                shadcn <span className="italic text-primary">styles</span>
+              </Link>
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <div className="hidden sm:flex items-center gap-4">
+                <nav>
+                  <ul className="inline-flex gap-6">
+                    {links.map((link) => (
+                      <li key={link.title}>
+                        <Link
+                          href={link.href}
+                          className="text-sm font-medium text-muted-foreground hover:text-foreground"
+                        >
+                          {link.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <ThemeSwitcher />
+              </div>
+              {/* <WaitlistDialog /> */}
+            </div>
+          </nav>
+        </header>
+        <div className="mx-auto flex max-w-screen-2xl w-full sm:px-4">
+          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
+          <div className="grid h-full flex-1 gap-72 pb-24 pt-14 md:pb-40">
+            {children}
+          </div>
+          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function StyleExamplesProvider({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
+  const { style, setStyle, stylePath, setStylePath } = useStyle();
+
+  const lightStylesShowcaseImages = [
+    {
+      name: "Carbon",
+      src: "/images/showcase/carbon-light.png",
+      alt: "Carbon IBM Style",
+    },
+    {
+      name: "Linear",
+      src: "/images/showcase/linear-light.png",
+      alt: "Linear Design System Style",
+    },
+    {
+      name: "Material",
+      src: "/images/showcase/material-light.png",
+      alt: "Material Design Style",
+    },
+  ];
+  const darkStylesShowcaseImages = [
+    {
+      name: "Carbon",
+      src: "/images/showcase/carbon-dark.png",
+      alt: "Carbon IBM Style",
+    },
+    {
+      name: "Linear",
+      src: "/images/showcase/linear-dark.png",
+      alt: "Linear Design System Style",
+    },
+    {
+      name: "Material",
+      src: "/images/showcase/material-dark.png",
+      alt: "Material Design Style",
+    },
+  ];
+
+  return (
+    <LandingPageLayout>
+      <section className="grid h-full flex-1 gap-8">
+        <div className="space-y-4 *:border-y *:border-border/80">
+          <Typography
+            as="h1"
+            variant="6xl/medium"
+            className="border-y px-4 tracking-tight"
+          >
+            shadcn ui <span className="italic">styles</span>
+          </Typography>
+          <Typography
+            as="p"
+            variant="lg/normal"
+            className="px-4 text-muted-foreground"
+          >
+            Discover the best shadcn ui kits and styles for modern web
+            interfaces.
+          </Typography>
+        </div>
+
+        <div className="border-y border-border/80 px-4">
+          <ExamplesNav />
+        </div>
+
+        <div className="mx-1 sm:mx-4 overflow-hidden">
+          <ShowcaseIFrame title={"title"} href={stylePath} />
+        </div>
+      </section>
+
+      <section className="grid h-full flex-1 gap-8">
+        <div className="space-y-4 *:border-y *:border-border/80">
+          <Typography
+            as="h1"
+            variant="3xl/medium"
+            className="border-y px-4 tracking-tight"
+          >
+            beyond{" "}
+            <span className="border-b-2 border-b-primary text-foreground">
+              Default
+            </span>{" "}
+            and{" "}
+            <span className="border-b-2 border-b-primary text-foreground">
+              New York
+            </span>
+          </Typography>
+          <Typography
+            as="p"
+            variant="lg/normal"
+            className="px-4 text-muted-foreground"
+          >
+            Discover custom styles for shadcn ui components.
+          </Typography>
+        </div>
+
+        <div className="border-y border-border/80 px-4">
+          {/*  */}
+          {/* <CalendarDemo /> */}
+        </div>
+        <div className="mb-6 border bg-accent p-1 sm:p-2 grid dark:hidden grid-cols-8 gap-4">
+          {lightStylesShowcaseImages.map((styleImage) => (
+            <div
+              key={styleImage.src + styleImage.alt}
+              className="col-span-8 rounded-2xl overflow-hidden"
+            >
+              <img
+                key={styleImage.name}
+                src={styleImage.src}
+                alt={styleImage.alt}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="mb-6 border bg-accent p-1 sm:p-2 hidden dark:grid grid-cols-8 gap-4">
+          {darkStylesShowcaseImages.map((styleImage) => (
+            <div
+              key={styleImage.src + styleImage.alt}
+              className="col-span-8 rounded-2xl overflow-hidden"
+            >
+              <img
+                key={styleImage.name}
+                src={styleImage.src}
+                alt={styleImage.alt}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+        {/* <div className="mb-6 border bg-accent p-1 sm:p-2 grid grid-cols-8 gap-4">
+          <div className="flex dark:hidden h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
+            {lightStylesShowcaseImages.map((styleImage) => (
+              <img
+                key={styleImage.name}
+                src={styleImage.src}
+                alt={styleImage.alt}
+                className="h-full w-full object-cover"
+              />
+            ))}
+          </div>
+          <div className="dark:flex hidden h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
+            {darkStylesShowcaseImages.map((styleImage) => (
+              <img
+                key={styleImage.name}
+                src={styleImage.src}
+                alt={styleImage.alt}
+                className="h-full w-full object-cover col-span-8"
+              />
+            ))}
+          </div>
+          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
+            <div className={cn("h-fit rounded-xl overflow-hidden w-full")}>
+              <div className="px-10 py-8 flex gap-4">
+                <div>dsd</div>
+                <div className="flex flex-col gap-2">
+                  <Typography as="h3" variant="2xl/medium" className="">
+                    Responsive design
+                  </Typography>
+                  <Typography
+                    as="p"
+                    variant="md/normal"
+                    className="text-muted-foreground max-w-3xl"
+                  >
+                    Okay, it&apos;s not exactly cutting edge, but just throw a
+                    screen size in front of literally any utility to apply it at
+                    a specific breakpoint.
+                  </Typography>
+                </div>
+              </div>
+              <div className="block h-full w-full"></div>
+            </div>
+          </div>
+          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-4">
+            <div className={cn("h-fit rounded-xl overflow-hidden w-full")}>
+              <div className="px-10 py-8 flex gap-4">
+                <div>
+                  <svg
+                    className="text-foreground"
+                    width="112"
+                    height="72"
+                    viewBox="0 0 112 72"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M62.3532 62.3285L94.3961 43.8285C95.5919 43.1382 96.1897 42.2333 96.1897 41.3285L96.1898 38.3285C96.1898 37.4237 95.5919 36.5189 94.3962 35.8285L48.4968 9.3285C46.1054 7.94779 42.228 7.94779 39.8366 9.3285L7.79365 27.8285C6.59792 28.5189 6.00005 29.4237 6.00005 30.3285V33.3427C6.00625 34.2428 6.6041 35.1418 7.7936 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3532 62.3285Z"
+                      fill="var(--site-background)"
+                    ></path>
+                    <path
+                      d="M7.7936 32.8285C6.59786 32.1381 5.99999 31.2333 6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285C96.1897 39.2333 95.5919 40.1381 94.3961 40.8285L62.3532 59.3285C59.9617 60.7092 56.0844 60.7092 53.6929 59.3285L7.7936 32.8285Z"
+                      fill="var(--site-background)"
+                    ></path>
+                    <path
+                      d="M6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285M6 30.3285C5.99999 31.2333 6.59786 32.1381 7.7936 32.8285L53.6929 59.3285C56.0844 60.7092 59.9617 60.7092 62.3532 59.3285L94.3961 40.8285C95.5919 40.1381 96.1897 39.2333 96.1897 38.3285M6 30.3285V33.3427C6.0062 34.2428 6.60405 35.1418 7.79355 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3531 62.3285L94.3961 43.8285C95.5918 43.1382 96.1897 42.2333 96.1897 41.3285L96.1897 38.3285"
+                      stroke="currentColor"
+                    ></path>
+                    <path
+                      d="M10.3922 31.3281C9.43562 30.7758 9.43562 29.8804 10.3922 29.3281L42.4351 10.8281C43.3917 10.2758 44.9427 10.2758 45.8992 10.8281L91.7986 37.3281C92.7552 37.8804 92.7552 38.7758 91.7986 39.3281L59.7557 57.8281C58.7991 58.3804 57.2481 58.3804 56.2916 57.8281L10.3922 31.3281Z"
+                      fill="var(--site-background)"
+                      stroke="currentColor"
+                      stroke-opacity="0.3"
+                    ></path>
+                    <path
+                      d="M91.1283 42.8285L104.119 35.3285C105.075 34.7762 105.554 34.0523 105.554 33.3284L105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284L48.9902 21.3284C48.9902 22.0523 49.4685 22.7762 50.4251 23.3285L84.2001 42.8285C86.1133 43.933 89.2151 43.933 91.1283 42.8285Z"
+                      fill="var(--site-background)"
+                    ></path>
+                    <path
+                      d="M105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284M105.554 30.3284C105.554 31.0523 105.075 31.7761 104.119 32.3284L91.1284 39.8284C89.2152 40.933 86.1133 40.933 84.2001 39.8284L50.4252 20.3284C49.4686 19.7761 48.9903 19.0523 48.9903 18.3284M105.554 30.3284L105.554 33.3284C105.554 34.0523 105.075 34.7762 104.119 35.3285L91.1283 42.8285C89.2151 43.933 86.1133 43.933 84.2001 42.8285L50.4251 23.3285C49.4685 22.7762 48.9902 22.0523 48.9902 21.3284L48.9903 18.3284"
+                      stroke="currentColor"
+                    ></path>
+                    <rect
+                      width="6"
+                      height="2"
+                      rx="1"
+                      transform="matrix(0.866025 -0.5 0.866025 0.5 56.4883 15.3281)"
+                      fill="currentColor"
+                    ></rect>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Typography as="h3" variant="2xl/medium" className="">
+                    Responsive design
+                  </Typography>
+                  <Typography
+                    as="p"
+                    variant="md/normal"
+                    className="text-muted-foreground max-w-3xl"
+                  >
+                    Okay, it&apos;s not exactly cutting edge, but just throw a
+                    screen size in front of literally any utility to apply it at
+                    a specific breakpoint.
+                  </Typography>
+                </div>
+              </div>
+              <div className="block h-full w-full"></div>
+            </div>
+          </div>
+          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-4">
+            <div className={cn("h-fit rounded-xl overflow-hidden w-full")}>
+              <div className="px-10 py-8 flex gap-4">
+                <div>
+                  <svg
+                    className="text-foreground"
+                    width="112"
+                    height="72"
+                    viewBox="0 0 112 72"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M62.3532 62.3285L94.3961 43.8285C95.5919 43.1382 96.1897 42.2333 96.1897 41.3285L96.1898 38.3285C96.1898 37.4237 95.5919 36.5189 94.3962 35.8285L48.4968 9.3285C46.1054 7.94779 42.228 7.94779 39.8366 9.3285L7.79365 27.8285C6.59792 28.5189 6.00005 29.4237 6.00005 30.3285V33.3427C6.00625 34.2428 6.6041 35.1418 7.7936 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3532 62.3285Z"
+                      fill="var(--site-background)"
+                    ></path>
+                    <path
+                      d="M7.7936 32.8285C6.59786 32.1381 5.99999 31.2333 6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285C96.1897 39.2333 95.5919 40.1381 94.3961 40.8285L62.3532 59.3285C59.9617 60.7092 56.0844 60.7092 53.6929 59.3285L7.7936 32.8285Z"
+                      fill="var(--site-background)"
+                    ></path>
+                    <path
+                      d="M6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285M6 30.3285C5.99999 31.2333 6.59786 32.1381 7.7936 32.8285L53.6929 59.3285C56.0844 60.7092 59.9617 60.7092 62.3532 59.3285L94.3961 40.8285C95.5919 40.1381 96.1897 39.2333 96.1897 38.3285M6 30.3285V33.3427C6.0062 34.2428 6.60405 35.1418 7.79355 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3531 62.3285L94.3961 43.8285C95.5918 43.1382 96.1897 42.2333 96.1897 41.3285L96.1897 38.3285"
+                      stroke="currentColor"
+                    ></path>
+                    <path
+                      d="M10.3922 31.3281C9.43562 30.7758 9.43562 29.8804 10.3922 29.3281L42.4351 10.8281C43.3917 10.2758 44.9427 10.2758 45.8992 10.8281L91.7986 37.3281C92.7552 37.8804 92.7552 38.7758 91.7986 39.3281L59.7557 57.8281C58.7991 58.3804 57.2481 58.3804 56.2916 57.8281L10.3922 31.3281Z"
+                      fill="var(--site-background)"
+                      stroke="currentColor"
+                      stroke-opacity="0.3"
+                    ></path>
+                    <path
+                      d="M91.1283 42.8285L104.119 35.3285C105.075 34.7762 105.554 34.0523 105.554 33.3284L105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284L48.9902 21.3284C48.9902 22.0523 49.4685 22.7762 50.4251 23.3285L84.2001 42.8285C86.1133 43.933 89.2151 43.933 91.1283 42.8285Z"
+                      fill="var(--site-background)"
+                    ></path>
+                    <path
+                      d="M105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284M105.554 30.3284C105.554 31.0523 105.075 31.7761 104.119 32.3284L91.1284 39.8284C89.2152 40.933 86.1133 40.933 84.2001 39.8284L50.4252 20.3284C49.4686 19.7761 48.9903 19.0523 48.9903 18.3284M105.554 30.3284L105.554 33.3284C105.554 34.0523 105.075 34.7762 104.119 35.3285L91.1283 42.8285C89.2151 43.933 86.1133 43.933 84.2001 42.8285L50.4251 23.3285C49.4685 22.7762 48.9902 22.0523 48.9902 21.3284L48.9903 18.3284"
+                      stroke="currentColor"
+                    ></path>
+                    <rect
+                      width="6"
+                      height="2"
+                      rx="1"
+                      transform="matrix(0.866025 -0.5 0.866025 0.5 56.4883 15.3281)"
+                      fill="currentColor"
+                    ></rect>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Typography as="h3" variant="2xl/medium" className="">
+                    Responsive design
+                  </Typography>
+                  <Typography
+                    as="p"
+                    variant="md/normal"
+                    className="text-muted-foreground max-w-3xl"
+                  >
+                    Okay, it&apos;s not exactly cutting edge, but just throw a
+                    screen size in front of literally any utility to apply it at
+                    a specific breakpoint.
+                  </Typography>
+                </div>
+              </div>
+              <div className="block h-full w-full"></div>
+            </div>
+          </div>
+          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
+            <div>
+              <div className="px-10 py-8 flex gap-4">
+                <div>
+                  {["default", "icon"].map((size) => {
+                    return (
+                      <div key={size} className="mb-4 flex flex-wrap gap-2">
+                        {[
+                          "default",
+                          "secondary",
+                          "outline",
+                          "destructive",
+                          "ghost",
+                          "link",
+                        ].map((variant) => {
+                          return (
+                            <Button
+                              key={size + variant}
+                              size={size as ButtonProps["size"]}
+                              variant={variant as ButtonProps["variant"]}
+                              className="capitalize"
+                            >
+                              {size === "icon" ? <BookmarkIcon /> : variant}
+                            </Button>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {["default", "secondary", "outline", "destructive"].map(
+                      (variant) => {
+                        return (
+                          <Badge
+                            key={variant}
+                            variant={variant as BadgeProps["variant"]}
+                            className="capitalize"
+                          >
+                            Badge
+                          </Badge>
+                        );
+                      }
+                    )}
+                  </div>
+                  <div className="mb-4 flex flex-col flex-wrap gap-4 max-w-md">
+                    <Input placeholder="email@example.com" />
+                    <Input placeholder="Disabled" value={"John Doe"} disabled />
+                    <Textarea placeholder="Lorem ipsum dolor sit amet  consectetur adipisicing elit. Voluptatem, minima." />
+                    <div className="flex items-center gap-2 justify-between">
+                      <Switch id="accept" />
+                      <Button variant="default" className="shadow-xs">
+                        Submit
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="mb-4 flex flex-wrap gap-2 max-w-md">
+                    <MenubarDemo />
+                    <ToggleGroupDemo />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <DataTableDemo />
+                  </div>
+                  <div>
+                    <TabsDemo />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="w-fit">
+                    <InputOTPDemo />
+                  </div>
+                  <div className="w-fit">
+                    <CommandDemo />
+                  </div>
+                  <div>
+                    <AccordionDemo />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+      </section>
+    </LandingPageLayout>
+  );
+}
+
 export function Styles() {
   return (
     <div className="relative isolate mt-16 md:mt-32 pt-10 z-10" id="styles">
       <ScreenContainer>
         <div className="relative flex flex-col gap-4">
-          <Typography variant="display-sm/semibold" className="">
+          <Typography variant="3xl/semibold" className="">
             Styles
           </Typography>
           <Typography
-            variant="xl/regular"
+            variant="xl/normal"
             className="text-foreground-secondary max-w-3xl"
           >
             Discover a wide range of examples and templates to help you quickly
@@ -119,85 +581,35 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/utils/cn";
-import { IconButton } from "@/components/ui/icon-button";
+import { Button, ButtonProps } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/theme-select";
-import { Code } from "./views/docs/code";
 import {
   DataTableDemo,
   DropdownMenuDemo,
   NotificationsCard,
   WaitlistForm,
 } from "./demo";
-import Badge from "./ui/badge";
-import { Button } from "./ui/button";
+import { Badge, BadgeProps } from "./ui/badge";
 import { BookmarkIcon, MailIcon, Timer } from "lucide-react";
 import { Switch } from "./ui/switch";
 import { useRouter } from "next/navigation";
-
-export function StyleExamplesProvider({
-  children,
-}: {
-  children?: React.ReactNode;
-}) {
-  const { style, setStyle, stylePath, setStylePath } = useStyle();
-
-  return (
-    <div className="relative">
-      <div className="relative flex flex-col bg-background z-20">
-        <header className="sticky top-0 z-20 flex h-16 items-center border-b bg-background/[0.7] backdrop-blur-sm">
-          <nav className="sm:container sm:mx-auto flex items-center justify-between gap-2 px-4 w-full">
-            <div className="flex items-center gap-2">
-              <Link
-                href="/"
-                className="rounded-md bg-accent/60 px-2 py-0.5 text-xl font-medium text-foreground"
-              >
-                shadcn <span className="italic text-primary-500">styles</span>
-              </Link>
-            </div>
-            <div className="flex items-center gap-2 text-sm">
-              <div className="hidden sm:block">
-                <ThemeSwitcher />
-              </div>
-              <WaitlistDialog />
-            </div>
-          </nav>
-        </header>
-        <div className="mx-auto flex max-w-screen-2xl w-full sm:px-4">
-          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,hsl(var(--border))_0,_hsl(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
-          <section className="grid h-full flex-1 gap-8 pb-24 pt-14 md:pb-40">
-            <div className="space-y-4 *:border-y *:border-border/80">
-              <Typography
-                as="h1"
-                variant="display-xl/medium"
-                className="border-y px-4 tracking-tight"
-              >
-                shadcn ui <span className="italic">styles</span>
-              </Typography>
-              <Typography
-                as="p"
-                variant="lg/regular"
-                className="px-4 text-muted-foreground"
-              >
-                Discover the best shadcn ui kits and styles for modern web
-                interfaces.
-              </Typography>
-            </div>
-
-            <div className="border-y border-border/80 px-4">
-              <ExamplesNav />
-            </div>
-
-            <div className="mx-1 sm:mx-4 overflow-hidden">
-              <ShowcaseIFrame title={"title"} href={stylePath} />
-            </div>
-            {/* </div> */}
-          </section>
-          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,hsl(var(--border))_0,_hsl(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
-        </div>
-      </div>
-    </div>
-  );
-}
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Checkbox } from "./ui/checkbox";
+import {
+  AccordionDemo,
+  AlertDialogDemo,
+  CalendarDemo,
+  CommandDemo,
+  DialogDemo,
+  DrawerDemo,
+  InputOTPDemo,
+  MenubarDemo,
+  PopoverDemo,
+  TabsDemo,
+  ToggleGroupDemo,
+} from "./showcase";
+import { InputOTP } from "./ui/input-otp";
 
 const DEFAULT_EXAMPLES_PATH = "/example";
 
@@ -373,20 +785,20 @@ export function SourceExamplesLayout({
       <ExamplesNav />
       <div className="mb-6 space-y-3 px-4 lg:mb-12 lg:px-0">
         <div className="space-y-2">
-          <Typography as="h2" variant="display-xs/medium">
+          <Typography as="h2" variant="2xl/medium">
             {/* Landing Pages */}
             {title}
           </Typography>
           <Typography
             as="h2"
-            variant="md/regular"
+            variant="md/normal"
             className="text-foreground-secondary"
           >
             {description}
           </Typography>
         </div>
       </div>
-      <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-overlay-on-surface-background p-1">
+      <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-card p-1">
         <div className="flex justify-between overflow-x-auto px-1 pt-1">
           <div className="flex items-center justify-between w-full gap-2">
             <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
@@ -410,14 +822,14 @@ export function SourceExamplesLayout({
             </div>
             <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 sm:flex dark:bg-gray-950/50 outline-none">
               {breakpoints.map((bp) => (
-                <IconButton
+                <Button
                   key={bp.label}
                   variant={breakpoint === bp.label ? "outline" : "ghost"}
-                  size="xs"
+                  size="icon-sm"
                   onClick={() => setBreakpoint(bp.label)}
                 >
                   {bp.icon}
-                </IconButton>
+                </Button>
               ))}
             </div>
           </div>
@@ -454,7 +866,13 @@ export function SourceExamplesLayout({
   );
 }
 
-function ShowcaseIFrame({ title, href }: { title: string; href: string }) {
+export function ShowcaseIFrame({
+  title,
+  href,
+}: {
+  title: string;
+  href: string;
+}) {
   const { style, setStyle } = useStyle();
 
   const [breakpoint, setBreakpoint] = React.useState("lg");
@@ -525,7 +943,7 @@ function ShowcaseIFrame({ title, href }: { title: string; href: string }) {
   ];
 
   return (
-    <div className="mb-6 space-y-2 rounded-lg sm:rounded-2xl border bg-gray-50 dark:bg-overlay-on-surface-background sm:p-1">
+    <div className="mb-6 space-y-2 rounded-lg sm:rounded-2xl border bg-gray-50 dark:bg-card sm:p-1">
       <div className="flex justify-between overflow-x-auto px-1 pt-1">
         <div className="flex items-center justify-between w-full gap-2">
           <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 sm:p-0.5 flex dark:bg-gray-950/50 outline-none">
@@ -557,14 +975,14 @@ function ShowcaseIFrame({ title, href }: { title: string; href: string }) {
           {/* <WaitlistForm /> */}
           {/* <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 sm:flex dark:bg-gray-950/50 outline-none">
             {breakpoints.map((bp) => (
-              <IconButton
+              <Button
                 key={bp.label}
                 variant={breakpoint === bp.label ? "outline" : "ghost"}
-                size="xs"
+                size="sm"
                 onClick={() => setBreakpoint(bp.label)}
               >
                 {bp.icon}
-              </IconButton>
+              </Button>
             ))}
           </div> */}
         </div>
@@ -758,7 +1176,7 @@ export function H() {
 
               <Typography
                 as="p"
-                variant="display-lg/bold"
+                variant="5xl/bold"
                 className="mt-4 text-foreground tracking-tight"
               >
                 {/* Beautiful UI components, crafted with shadcn ui and Tailwind
@@ -864,7 +1282,7 @@ export function H() {
               <div className="z-20 flex flex-col">
                 <div className="relative p-4">
                   <div className="absolute top-8 right-0 bottom-0 left-11 bg-slate-900/[0.03]"></div>
-                  <div className="pointer-events-auto relative z-10 w-full rounded-lg bg-overlay-on-surface-background text-[0.8125rem]/5 text-foreground-secondary ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
+                  <div className="pointer-events-auto relative z-10 w-full rounded-lg bg-card text-[0.8125rem]/5 text-foreground-secondary ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
                     <div>
                       <div className="flex items-center px-3.5 py-2.5 text-foreground-secondary">
                         <svg
@@ -981,19 +1399,14 @@ export function H() {
                     <Switch id="accept" />
                   </div>
                   <div className="relative">
-                    <Button
-                      variant="outline"
-                      className="shadow-xs"
-                      iconLeft={
-                        <svg className="mr-2.5 size-5 flex-none fill-foreground-subtle">
-                          <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
-                        </svg>
-                      }
-                    >
+                    <Button variant="outline" className="shadow-xs">
+                      <svg className="mr-2.5 size-5 flex-none fill-foreground-subtle">
+                        <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
+                      </svg>
                       Bookmark
                     </Button>
 
-                    {/* <div className="pointer-events-auto relative inline-flex rounded-md bg-background text-[0.8125rem]/5 font-medium text-foreground-secondary ring-1 shadow-xs ring-slate-700/10 hover:bg-overlay-on-surface-background hover:text-foreground">
+                    {/* <div className="pointer-events-auto relative inline-flex rounded-md bg-background text-[0.8125rem]/5 font-medium text-foreground-secondary ring-1 shadow-xs ring-slate-700/10 hover:bg-card hover:text-foreground">
                       <div className="flex px-3 py-2">
                         <svg className="mr-2.5 size-5 flex-none fill-foreground-subtle">
                           <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
@@ -1024,7 +1437,7 @@ export function H() {
                 </div>
                 <div className="relative md:p-4 mt-4 pb-4">
                   <NotificationAlert />
-                  {/* <div className="w-[24.5rem] divide-y divide-slate-400/20 rounded-lg bg-overlay-on-surface-background text-[0.8125rem]/5 text-foreground ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
+                  {/* <div className="w-[24.5rem] divide-y divide-slate-400/20 rounded-lg bg-card text-[0.8125rem]/5 text-foreground ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
                     <div className="flex items-center p-4">
                       <img
                         src="https://tailwindui.com/plus/img/avatar-1.jpg"
@@ -1206,8 +1619,8 @@ function ShowcaseCard({
   pro?: boolean;
 }) {
   return (
-    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-overlay-on-surface-background hover:before:opacity-100">
-      <div className="relative aspect-video overflow-hidden rounded-lg bg-overlay-on-surface-background ring-1 ring-border">
+    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-card hover:before:opacity-100">
+      <div className="relative aspect-video overflow-hidden rounded-lg bg-card ring-1 ring-border">
         <img
           // "https://tailwindui.com/plus/img/category-thumbnails/application-ui/stacked.png"
           src={image.src}
@@ -1236,7 +1649,7 @@ function ShowcaseCard({
       </p>
       {pro && (
         <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
-          <Badge variant="blue" className="ml-2">
+          <Badge variant="default" className="ml-2">
             Pro
           </Badge>
         </p>
@@ -1321,7 +1734,7 @@ function ComponentShowcaseCard({
   return (
     <div
       data-dark="true"
-      className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-overlay-on-surface-background shadow-sm ring-1 ring-border"
+      className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-card shadow-sm ring-1 ring-border"
     >
       <div className="relative shrink-0 bg-background/80 h-52 overflow-hidden">
         {/* bg-[url(/screenshots/engagement.png)] bg-[size:851px_344px] bg-no-repeat */}
@@ -1363,7 +1776,7 @@ function ComponentShowcaseCard({
         </p>
         {pro && (
           <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
-            <Badge variant="blue" className="ml-2">
+            <Badge variant="default" className="ml-2">
               Pro
             </Badge>
           </p>
@@ -1394,8 +1807,8 @@ function ShowcaseCommingSoonCard({
   componentPreview?: React.ReactNode;
 }) {
   return (
-    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-overlay-on-surface-background hover:before:opacity-100">
-      <div className="relative aspect-video overflow-hidden rounded-lg bg-overlay-on-surface-background ring-1 ring-border">
+    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-card hover:before:opacity-100">
+      <div className="relative aspect-video overflow-hidden rounded-lg bg-card ring-1 ring-border">
         <img
           // "https://tailwindui.com/plus/img/category-thumbnails/application-ui/stacked.png"
           src={image.src}
@@ -1424,7 +1837,7 @@ function ShowcaseCommingSoonCard({
       </p>
       {pro && (
         <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
-          <Badge variant="blue" className="ml-2">
+          <Badge variant="default" className="ml-2">
             Pro
           </Badge>
         </p>
@@ -1503,7 +1916,7 @@ function ShowcaseCommingSoonSection({
 function NotificationAlert() {
   return (
     <div
-      className="max-w-xs bg-overlay-on-surface-background border rounded-xl shadow-lg"
+      className="max-w-xs bg-card border rounded-xl shadow-lg"
       role="alert"
       tabIndex={-1}
       aria-labelledby="hs-toast-stack-toggle-label"
@@ -1538,10 +1951,10 @@ function NotificationAlert() {
           </div>
           <div className="mt-4">
             <div className="flex gap-x-2">
-              <Button size="xs" variant="secondary">
+              <Button size="sm" variant="secondary">
                 Don&apos;t allow
               </Button>
-              <Button size="xs">Allow</Button>
+              <Button size="sm">Allow</Button>
             </div>
           </div>
         </div>
@@ -1554,30 +1967,30 @@ function ButtonsDemo() {
   return (
     <div className="flex flex-wrap gap-2">
       <Button>Default</Button>
-      <IconButton variant="destructive-outline">
+      <Button variant="destructive-outline">
         <BookmarkIcon />
-      </IconButton>
+      </Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="outline">Outline</Button>
-      <IconButton variant="secondary">
+      <Button variant="secondary">
         <MailIcon />
-      </IconButton>
+      </Button>
       <Button variant="destructive">Destructive</Button>
     </div>
   );
 }
 
-function BadgesDemo() {
-  return (
-    <div className="flex flex-wrap gap-4">
-      <Badge variant="neutral">Default</Badge>
-      <Badge variant="green">Default</Badge>
-      <Badge variant="blue">Default</Badge>
-      <Badge variant="red">Default</Badge>
-      <Badge variant="yellow">Default</Badge>
-    </div>
-  );
-}
+// function BadgesDemo() {
+//   return (
+//     <div className="flex flex-wrap gap-4">
+//       <Badge variant="neutral">Default</Badge>
+//       <Badge variant="green">Default</Badge>
+//       <Badge variant="blue">Default</Badge>
+//       <Badge variant="red">Default</Badge>
+//       <Badge variant="yellow">Default</Badge>
+//     </div>
+//   );
+// }
 
 // export const applicationUIComponentsData = [
 //   {

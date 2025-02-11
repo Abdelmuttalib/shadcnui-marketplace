@@ -2,12 +2,32 @@
 
 import * as React from "react";
 
-const STYLES_PATH: Record<string, string> = {
+const DEV_STYLES_PATH: Record<string, string> = {
+  default: "http://localhost:3000",
+  carbon: "http://localhost:3000",
+  linear: "http://localhost:3001",
+  material: "http://localhost:3000",
+};
+
+const PROD_STYLES_PATH: Record<string, string> = {
   default: "https://shadcn-default.vercel.app",
   carbon: "https://shadcn-carbon.vercel.app",
   linear: "https://shadcn-linear.vercel.app",
   material: "https://shadcn-material.vercel.app",
 };
+
+// NEXT_PUBLIC_NODE_ENV
+
+function getStylesPath(env: string) {
+  if (env === "development") {
+    return DEV_STYLES_PATH;
+  }
+  return PROD_STYLES_PATH;
+}
+
+const STYLES_PATH: Record<string, string> = getStylesPath(
+  process.env.NEXT_PUBLIC_NODE_ENV!
+);
 
 export type Style = keyof typeof STYLES_PATH;
 
@@ -18,7 +38,7 @@ const STYLES_DIRECTORY_PATH = "example";
 // react context for the current style
 
 const StyleContext = React.createContext({
-  style: "default",
+  style: STYLES[0],
   setStyle: (style: Style) => {},
   stylePath: STYLES_PATH.default,
   setStylePath: (stylePath: string) => {},
@@ -42,7 +62,7 @@ export const STYLE_CATEGORIES = [
 type StyleCategory = (typeof STYLE_CATEGORIES)[number];
 
 export function StyleProvider({ children }: { children: React.ReactNode }) {
-  const [style, setStyle] = React.useState<Style>(STYLES[0]);
+  const [style, setStyle] = React.useState<Style>(STYLES[2]);
 
   const [styleUrl, setStyleUrl] = React.useState<string>(STYLES_PATH.default);
 

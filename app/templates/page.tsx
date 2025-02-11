@@ -28,7 +28,7 @@ export default function Templates() {
 
 function H() {
   return (
-    <div className="relative -mt-[5.75rem] overflow-hidden bg-base-25 dark:bg-overlay-on-surface-background pt-12 md:pt-[5.75rem]">
+    <div className="relative -mt-[5.75rem] overflow-hidden bg-base-25 dark:bg-card pt-12 md:pt-[5.75rem]">
       <Container>
         <div className="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/public/plus/img/beams-templates-header.png')] bg-[length:2000px_100%] bg-[position:calc(50%_+_220px)_-50px] bg-no-repeat lg:block"></div>
         <div className="max-w-container mx-auto px-4 pt-4 sm:px-6 lg:flex lg:px-8">
@@ -39,7 +39,7 @@ function H() {
 
             <Typography
               as="p"
-              variant="display-lg/bold"
+              variant="5xl/bold"
               className="mt-4 text-foreground tracking-tight"
             >
               Modern website templates, crafted with shadcn ui and Tailwind CSS.

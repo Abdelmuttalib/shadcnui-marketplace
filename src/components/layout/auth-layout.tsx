@@ -62,7 +62,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         <div className='absolute inset-0 h-full w-full bg-red-300'>
           <div className='mx-auto max-w-5xl py-32 sm:py-48 lg:py-56'>
             <div className='text-center'>
-              <h1 className='h2 sm:display-sm lg:display-lg bg-gradient-to-br from-primary-400 to-primary-800 bg-clip-text text-transparent'>
+              <h1 className='h2 sm:3xl lg:5xl bg-gradient-to-br from-primary-400 to-primary-800 bg-clip-text text-transparent'>
                 InSpect
               </h1>
               <p className='h2 bg-gradient-to-br from-gray-800 to-primary-800 bg-clip-text text-transparent'>
@@ -137,7 +137,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
     <div className='relative px-6 lg:px-8'>
       <div className='mx-auto max-w-5xl py-32 sm:py-48 lg:py-56'>
         <div className='text-center'>
-          <h1 className='h2 sm:display-sm lg:display-lg bg-gradient-to-br from-primary-400 to-primary-800 bg-clip-text text-transparent'>
+          <h1 className='h2 sm:3xl lg:5xl bg-gradient-to-br from-primary-400 to-primary-800 bg-clip-text text-transparent'>
             {t('app.name')}
           </h1>
           <p className='h2 bg-gradient-to-br from-gray-800 to-primary-800 bg-clip-text text-transparent'>

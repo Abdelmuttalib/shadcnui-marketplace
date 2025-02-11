@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Badge from "./ui/badge";
+import { Badge } from "./ui/badge";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -60,7 +60,7 @@ export function WaitlistDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button type="button" size="xs">
+        <Button type="button" size="sm">
           Join waitlist
         </Button>
       </DialogTrigger>
@@ -87,7 +87,7 @@ export function WaitlistDialog() {
                   {...register("email", {
                     required: true,
                   })}
-                  className="bg-overlay-on-surface-background"
+                  className="bg-card"
                   disabled={isSubmitting}
                 />
               </div>
@@ -97,13 +97,13 @@ export function WaitlistDialog() {
             </form>
           ) : (
             <div>
-              <Badge variant={"blue"} className="mt-2">
+              <Badge variant={"default"} className="mt-2">
                 {message}
               </Badge>
             </div>
           )}
           {!success && message && (
-            <Badge variant={"red"} className="mt-2">
+            <Badge variant={"default"} className="mt-2">
               {message}
             </Badge>
           )}

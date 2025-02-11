@@ -19,11 +19,9 @@ import { useState } from "react";
 import { formatShortDate } from "@/utils/date";
 
 import { Button } from "@/components/ui/button";
-import { IconButton } from "@/components/ui/icon-button";
 import { Input } from "@/components/ui/input";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/utils/cn";
-import { ExamplesLayout } from "@/components/layout/examples-layout";
 
 const chatsData = [
   {
@@ -234,9 +232,9 @@ export function Chat() {
             <Typography as="h3" variant="lg/medium">
               Messages
             </Typography>
-            <IconButton size="sm" variant="ghost">
+            <Button size="sm" variant="ghost">
               <MoreHorizontal className="w-5 text-foreground-light" />
-            </IconButton>
+            </Button>
             {/* <Video className='w-5 text-foreground-lighter' /> */}
             {/* <PhoneCall className='w-5 text-foreground-lighter' /> */}
           </div>
@@ -284,7 +282,7 @@ export function Chat() {
                     <div className="inline-flex w-full justify-between items-center">
                       <Typography
                         as="p"
-                        variant={indx % 2 === 0 ? "sm/medium" : "sm/regular"}
+                        variant={indx % 2 === 0 ? "sm/medium" : "sm/normal"}
                         className={cn("truncate text-foreground-lighter", {
                           "text-foreground": indx % 2 === 0,
                         })}
@@ -330,15 +328,15 @@ export function Chat() {
                 </div>
               </div>
               <div className="space-x-2">
-                <IconButton size="sm" variant="outline">
+                <Button size="sm" variant="outline">
                   <Video className="w-5 text-foreground-lighter" />
-                </IconButton>
-                <IconButton size="sm" variant="outline">
+                </Button>
+                <Button size="sm" variant="outline">
                   <Bookmark className="w-5 text-foreground-lighter" />
-                </IconButton>
-                <IconButton size="sm" variant="outline">
+                </Button>
+                <Button size="sm" variant="outline">
                   <Ban className="w-5 text-foreground-lighter" />
-                </IconButton>
+                </Button>
               </div>
             </div>
 
@@ -392,31 +390,29 @@ export function Chat() {
                   className="relative md:pr-16 bg-layer-3"
                 />
 
-                <IconButton
+                <Button
                   variant="ghost"
                   className="absolute right-9 mt-0.5"
                   size="sm"
                 >
                   <ImageIcon className="w-[18px] text-foreground-lighter" />
-                </IconButton>
-                <IconButton
+                </Button>
+                <Button
                   variant="ghost"
                   className="absolute right-1 mt-0.5"
                   size="sm"
                 >
                   <Paperclip className="w-[18px] text-foreground-lighter" />
-                </IconButton>
+                </Button>
               </div>
-              <Button
-                className="w-fit whitespace-nowrap"
-                iconLeft={<Send className="w-4" />}
-              >
+              <Button className="w-fit whitespace-nowrap">
+                <Send className="w-4" />
                 Send
               </Button>
-              {/* <IconButton size='lg'>
+              {/* <Button size='lg'>
                   Send
                   <Send className='w-5' />
-                </IconButton> */}
+                </Button> */}
             </div>
           </div>
         </div>
@@ -440,22 +436,22 @@ export function Chat() {
                   <div className="inline-flex items-center gap-x-1 text-foreground-lighter">
                     <MapPin className="w-[18px]" />
 
-                    <Typography as="h4" variant="sm/regular">
+                    <Typography as="h4" variant="sm/normal">
                       San Francisco, CA
                     </Typography>
                   </div>
                 </div>
 
                 <div className="flex gap-x-2">
-                  <IconButton variant="outline">
+                  <Button variant="outline">
                     <UserPlus className="w-5" />
-                  </IconButton>
-                  <IconButton variant="outline">
+                  </Button>
+                  <Button variant="outline">
                     <Heart className="w-5" />
-                  </IconButton>
-                  <IconButton variant="outline">
+                  </Button>
+                  <Button variant="outline">
                     <Phone className="w-5" />
-                  </IconButton>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -467,36 +463,36 @@ export function Chat() {
                 <div className="flex flex-col gap-y-1">
                   <Typography
                     as="p"
-                    variant="sm/regular"
+                    variant="sm/normal"
                     className="text-foreground-lighter"
                   >
                     Username
                   </Typography>
-                  <Typography as="p" variant="base/regular">
+                  <Typography as="p" variant="base/normal">
                     {selectedChat.user.username}
                   </Typography>
                 </div>
                 <div className="flex flex-col gap-y-1">
                   <Typography
                     as="p"
-                    variant="sm/regular"
+                    variant="sm/normal"
                     className="text-foreground-lighter"
                   >
                     Email
                   </Typography>
-                  <Typography as="p" variant="base/regular">
+                  <Typography as="p" variant="base/normal">
                     {selectedChat.user.username}@gmail.com
                   </Typography>
                 </div>
                 <div className="flex flex-col gap-y-1">
                   <Typography
                     as="p"
-                    variant="sm/regular"
+                    variant="sm/normal"
                     className="text-foreground-lighter"
                   >
                     Address
                   </Typography>
-                  <Typography as="p" variant="base/regular">
+                  <Typography as="p" variant="base/normal">
                     1234 Main St, San Francisco, CA 94123
                   </Typography>
                 </div>

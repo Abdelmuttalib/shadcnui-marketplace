@@ -1,27 +1,24 @@
 "use client";
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { cn } from "@/utils/cn";
-import { IconButton } from "@/components/ui/icon-button";
-import ThemeSwitcher from "@/components/theme-select";
-import { Code } from "./views/docs/code";
 import React from "react";
-import { ExamplesNav, StyleSelect } from "./draft";
+import { StyleSelect } from "./draft";
 import { useStyle } from "@/hooks/use-style";
 import { Typography } from "./ui/typography";
-import Badge from "./ui/badge";
-import { Button } from "./ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Cuboid } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Code } from "./views/docs/code";
+
+function GradientEffect() {
+  return (
+    <div className="bg-gray-500 absolute -top-10 -left-10 rounded-full blur-3xl p-4 flex flex-col gap-y-4 w-20 h-20 opacity-50 -z-20"></div>
+  );
+}
 
 export function ComponentPreview({
+  id,
   title,
   description,
   category,
@@ -29,6 +26,7 @@ export function ComponentPreview({
   fileName,
   children,
 }: {
+  id: string;
   title: string;
   description?: string;
   category: string;
@@ -104,73 +102,58 @@ export function ComponentPreview({
     },
   ];
 
-  const { style, setStyle, stylePath, styleUrl } = useStyle();
-
-  function onStyleChange(e: any) {
-    setStyle(e);
-  }
+  const { styleUrl } = useStyle();
 
   return (
-    <div className="mt-16 md:mt-32 pt-10" id="examples">
-      <div className="mb-6 space-y-3 px-4 lg:mb-12 lg:px-0">
+    <div className={cn("pt-10 w-full max-w-[1440px]")} id={id}>
+      <div className="mb-6 space-y-3 px-4 lg:mb-8 lg:px-0">
         <div className="space-y-2">
-          <Typography as="h2" variant="display-xs/medium">
+          <Typography as="h2" variant="2xl/medium" className="border-y px-3">
             {/* Landing Pages */}
             {title}
           </Typography>
-          <Typography
+          {/* <Typography
             as="h2"
-            variant="md/regular"
+            variant="md/normal"
             className="text-foreground-secondary"
           >
             {description}
-          </Typography>
+          </Typography> */}
         </div>
       </div>
-      <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-overlay-on-surface-background p-1">
-        <div className="flex justify-between overflow-x-auto px-1 pt-1">
-          <div className="flex items-center justify-between w-full gap-2">
-            <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/30 outline-none">
-              {/* <Tabs defaultValue="React" className="max-w-fit">
-              <TabsList className="grid w-full grid-cols-2 w-56">
-                <TabsTrigger value="React" title="React">
-                  React
-                </TabsTrigger>
-                <TabsTrigger value="HTML" title="HTML">
-                  HTML
-                </TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="React">
-                <div className="relative w-full">
-                  <iframe src="/" height={960}>
-                  </iframe>
-                </div>
-              </TabsContent>
-              <TabsContent value="HTML">
-                <Code code={exampleCode} />
-              </TabsContent>
-            </Tabs> */}
-
-              <Button
-                className={cn("bg-transparent", {
-                  "border-none": !preview,
-                })}
-                variant={preview ? "outline" : "outline"}
-                onClick={() => setPreview(true)}
-                size="sm"
-                iconLeft={<Cuboid />}
-              >
-                Preview
-              </Button>
-              <Button
-                className={cn("bg-transparent", {
-                  "border-none": preview,
-                })}
-                variant={!preview ? "outline" : "outline"}
-                onClick={() => setPreview(false)}
-                size="sm"
-                iconLeft={
+      <div
+        className={cn(
+          "relative mb-6 p-1 md:p-2 bg-accent",
+          "overflow-hidden"
+          // "shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)]",
+          // "relative overflow-hidden",
+          // "h-full w-full rounded-xl shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:pointer-events-none dark:before:absolute dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline"
+        )}
+      >
+        <GradientEffect />
+        <div className="flex flex-col gap-2 justify-between overflow-x-auto p-2 bg-background rounded-2xl border">
+          <div className="flex justify-between overflow-x-auto px-1">
+            <div className="flex items-center justify-between w-full gap-2">
+              <div className="gap-0.5 rounded-lg flex outline-none">
+                <Button
+                  className={cn("bg-transparent", {
+                    "border-none text-muted-foreground": !preview,
+                  })}
+                  variant={preview ? "outline" : "ghost"}
+                  onClick={() => setPreview(true)}
+                  size="sm"
+                >
+                  <Cuboid />
+                  Preview
+                </Button>
+                <Button
+                  className={cn("bg-transparent", {
+                    "border-none text-muted-foreground": preview,
+                  })}
+                  variant={!preview ? "outline" : "ghost"}
+                  onClick={() => setPreview(false)}
+                  size="sm"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -181,19 +164,15 @@ export function ComponentPreview({
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-code flex-shrink-0 size-[1.125rem]"
+                    className="lucide lucide-code"
                   >
                     <polyline points="16 18 22 12 16 6"></polyline>
                     <polyline points="8 6 2 12 8 18"></polyline>
                   </svg>
-                }
-                // disabled
-                // iconRight={<Badge variant="neutral">Coming Soon</Badge>}
-              >
-                Code
-              </Button>
-            </div>
-            {/* <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
+                  Code
+                </Button>
+              </div>
+              {/* <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
               <Select defaultValue={style} onValueChange={(e) => setStyle(e)}>
                 <SelectTrigger className="w-36">
                   <SelectValue
@@ -212,55 +191,56 @@ export function ComponentPreview({
                 </SelectContent>
               </Select>
             </div> */}
-            <div className="flex gap-2">
-              <div className="hidden gap-0.5 rounded-md sm:flex outline-none">
-                <StyleSelect defaultValue={style} onChange={onStyleChange} />
-              </div>
-              <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 md:flex dark:bg-gray-950/50 outline-none">
-                {breakpoints.map((bp) => (
-                  <IconButton
-                    key={bp.label}
-                    variant={breakpoint === bp.label ? "outline" : "ghost"}
-                    size="xs"
-                    onClick={() => setBreakpoint(bp.label)}
-                  >
-                    {bp.icon}
-                  </IconButton>
-                ))}
+              <div className="flex gap-2">
+                <div className="hidden gap-0.5 rounded-md sm:flex outline-none">
+                  <StyleSelect />
+                </div>
+                <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 md:flex dark:bg-gray-950/50 outline-none">
+                  {breakpoints.map((bp) => (
+                    <Button
+                      key={bp.label}
+                      variant={breakpoint === bp.label ? "outline" : "ghost"}
+                      size="icon-sm"
+                      onClick={() => setBreakpoint(bp.label)}
+                    >
+                      {bp.icon}
+                    </Button>
+                  ))}
+                </div>
               </div>
             </div>
+            <div className="hidden items-center gap-0.5 lg:flex"></div>
           </div>
-          <div className="hidden items-center gap-0.5 lg:flex"></div>
-        </div>
-        <div className="flex h-full w-full overflow-hidden gap-2">
-          {preview ? (
-            <div
-              className={cn(
-                "h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full",
-                {
-                  "max-w-md": breakpoint === "sm",
-                  "max-w-screen-md": breakpoint === "md",
-                  "max-w-full": breakpoint === "lg",
-                }
-              )}
-            >
-              <iframe
-                loading="lazy"
-                title={title}
-                className={cn("block h-full min-h-[45rem] w-full", {
-                  // "w-screen h-screen fixed inset-0": fullScreen,
-                })}
-                // https://shadcn-carbon.vercel.app
-                src={`${styleUrl}/examples/${category}/${component}`}
-                // src={href}
-              ></iframe>
-            </div>
-          ) : (
-            <div className="w-full">
-              {children}
-              {/* <Code /> */}
-            </div>
-          )}
+          <div className="flex h-full w-full overflow-hidden gap-2">
+            {preview ? (
+              <div
+                className={cn(
+                  "h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full",
+                  {
+                    "max-w-md": breakpoint === "sm",
+                    "max-w-screen-md": breakpoint === "md",
+                    "max-w-full": breakpoint === "lg",
+                  }
+                )}
+              >
+                <iframe
+                  loading="lazy"
+                  title={title}
+                  className={cn("block h-full min-h-[45rem] w-full", {
+                    // "w-screen h-screen fixed inset-0": fullScreen,
+                  })}
+                  // https://shadcn-carbon.vercel.app
+                  src={`${styleUrl}/examples/${category}/${component}`}
+                  // src={href}
+                ></iframe>
+              </div>
+            ) : (
+              <div className="w-full">
+                {children}
+                {/* <Code /> */}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

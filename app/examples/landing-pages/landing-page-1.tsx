@@ -210,13 +210,13 @@ export default function Landing1() {
               {/* <GradientBackground /> */}
 
               <Typography
-                variant="display-xl/semibold"
+                variant="6xl/semibold"
                 className="leading-tight max-w-4xl text-foreground"
               >
                 Client Acquisition Marketing to Take Your Law Firm to the Next
                 Level
               </Typography>
-              <Typography variant="display-xs/regular" className="max-w-4xl">
+              <Typography variant="2xl/normal" className="max-w-4xl">
                 <strong>Result driven marketing.</strong> ACME is a
                 next-generation marketing and technology company.
               </Typography>
@@ -254,7 +254,7 @@ export default function Landing1() {
                     className={cn(
                       "flex flex-col gap-y-4 p-4 lg:p-9 rounded-lg",
                       "bg-gradient-to-b to-background from-muted/80 border"
-                      // bg-overlay-on-surface-background
+                      // bg-card
                       // {
                       //   "lg:border-t ": index % 3 !== 0,
                       //   "lg:border-r ": index % 3 !== 2,
@@ -262,7 +262,7 @@ export default function Landing1() {
                       // },
                     )}
                   >
-                    <div className="p-1 lg:p-2 rounded-lg shadow size-fit bg-overlay-on-surface-background">
+                    <div className="p-1 lg:p-2 rounded-lg shadow size-fit bg-card">
                       {/* <i
                         data-lucide="circle-check"
                         className="size-6 lg:size-7 text-white fill-primary-700"
@@ -293,7 +293,7 @@ export default function Landing1() {
           </>
         </Container>
       </div>
-      <div className="w-full py-28 bg-primary-50 dark:bg-overlay-on-surface-background">
+      <div className="w-full py-28 bg-primary-50 dark:bg-card">
         <Container>
           <div className="page-padding">
             <div className="padding-vertical padding-xhuge">
@@ -303,14 +303,14 @@ export default function Landing1() {
                     ACME Works for You
                   </Typography>
                   <Typography
-                    variant="display-lg/semibold"
+                    variant="5xl/semibold"
                     className="leading-tight max-w-4xl text-foreground"
                   >
                     How ACME makes increasing profit uncomplicated
                   </Typography>
                 </div>
                 <Typography
-                  variant="xl/regular"
+                  variant="xl/normal"
                   className="max-w-5xl text-foreground"
                 >
                   Looking to take your business to the next level? Look no
@@ -330,9 +330,9 @@ export default function Landing1() {
       </div>
       <div className="w-full py-28 bg-background">
         <Container>
-          <div className="flex flex-col justify-center items-center text-center gap-4 bg-gray-50 dark:bg-overlay-on-surface-background rounded-lg p-8 pt-14">
+          <div className="flex flex-col justify-center items-center text-center gap-4 bg-gray-50 dark:bg-card rounded-lg p-8 pt-14">
             <Typography
-              variant="lg/regular"
+              variant="lg/normal"
               className="max-w-5xl text-foreground-secondary"
             >
               Join 250+ companies already growing with ACME
@@ -400,7 +400,7 @@ export default function Landing1() {
                     <div className="flex flex-col gap-8">
                       <div className="margin-bottom margin-small">
                         <Typography
-                          variant="display-lg/semibold"
+                          variant="5xl/semibold"
                           className="leading-tight max-w-4xl text-foreground"
                         >
                           Join Hundreds of Firms Growing with ACME
@@ -451,7 +451,7 @@ export default function Landing1() {
         </Container>
       </div>
 
-      <div className="w-full py-28 bg-primary-50 dark:bg-overlay-on-surface-background">
+      <div className="w-full py-28 bg-primary-50 dark:bg-card">
         <Container>
           <div>
             <div>
@@ -461,14 +461,14 @@ export default function Landing1() {
                     We&apos;re ready when you are.
                   </Typography>
                   <Typography
-                    variant="display-lg/semibold"
+                    variant="5xl/semibold"
                     className="leading-tight max-w-4xl text-foreground"
                   >
                     Ready to Take your Marketing to New Heights?
                   </Typography>
                 </div>
                 <Typography
-                  variant="lg/regular"
+                  variant="lg/normal"
                   className="max-w-5xl text-foreground-secondary"
                 >
                   Learn more below or simply set up a meeting to get started.
@@ -512,16 +512,12 @@ export default function Landing1() {
                             />
                           </div>
                         </div>
-                        <Typography
-                          as="h5"
-                          variant="display-xs/medium"
-                          className=""
-                        >
+                        <Typography as="h5" variant="2xl/medium" className="">
                           {c.title}
                         </Typography>
                         <Typography
                           as="p"
-                          variant="lg/regular"
+                          variant="lg/normal"
                           className="text-foreground-subtle mt-4"
                         >
                           {c.description}
@@ -545,18 +541,18 @@ export default function Landing1() {
           <div>
             <Container>
               <>
-                <div className="bg-gray-50 dark:bg-overlay-on-surface-background p-16 rounded-lg mt-36 mb-16">
+                <div className="bg-gray-50 dark:bg-card p-16 rounded-lg mt-36 mb-16">
                   <div className="flex flex-col gap-5 text-center">
                     <div>
                       <Typography
                         as="h3"
-                        variant="display-md/semibold"
+                        variant="4xl/semibold"
                         className="text-primary-600"
                       >
                         Get more customers with&nbsp;ACME.
                       </Typography>
                     </div>
-                    <Typography as="p" variant="lg/regular" className="">
+                    <Typography as="p" variant="lg/normal" className="">
                       Join the many firms already growing with ACME.
                     </Typography>
                     <div className="mt-4">

@@ -8,7 +8,7 @@ import { cn } from "@/utils/cn";
 export default function Docs() {
   return (
     <DocsLayout>
-      <Typography as="h1" variant="display-sm/medium">
+      <Typography as="h1" variant="3xl/medium">
         Introduction
       </Typography>
       Beautifully designed components that you can copy and paste into your
@@ -66,7 +66,7 @@ function Section({
           </Typography>
           <Typography
             as="p"
-            variant="md/regular"
+            variant="md/normal"
             className="text-foreground-secondary"
           >
             {description}
@@ -96,10 +96,7 @@ function Section({
           </div>
         </div>
         <div
-          className={cn(
-            "bg-overlay-on-surface-background p-6 border rounded-lg min-h-96",
-            className
-          )}
+          className={cn("bg-card p-6 border rounded-lg min-h-96", className)}
         >
           {children}
         </div>

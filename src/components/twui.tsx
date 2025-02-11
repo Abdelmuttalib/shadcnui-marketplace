@@ -290,7 +290,7 @@ function C({
   href: string;
 }) {
   return (
-    <div className="group relative flex rounded-2xl bg-overlay-on-surface-background transition-shadow hover:shadow-md hover:shadow-overlay-on-surface-background overflow-hidden">
+    <div className="group relative flex rounded-2xl bg-card transition-shadow hover:shadow-md hover:shadow-overlay-on-surface-background overflow-hidden">
       <div className="pointer-events-none">
         <div className="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50">
           <svg
@@ -328,7 +328,7 @@ function C({
           </svg>
         </div>
         <div
-          className="absolute inset-0 rounded-2xl bg-overlay-on-surface-background opacity-0 transition duration-300 group-hover:opacity-100"
+          className="absolute inset-0 rounded-2xl bg-card opacity-0 transition duration-300 group-hover:opacity-100"
           // style="mask-image: radial-gradient(180px at 0px 0px, white, transparent);"
           style={{
             maskImage: "radial-gradient(180px at 0px 0px, white, transparent);",
@@ -828,7 +828,7 @@ function ComponentPreview({
           </Typography>
           <Typography
             as="p"
-            variant="md/regular"
+            variant="md/normal"
             className="text-foreground-secondary"
           >
             {description}
@@ -860,10 +860,7 @@ function ComponentPreview({
           </div>
         </div>
         <div
-          className={cn(
-            "bg-overlay-on-surface-background p-6 border rounded-lg min-h-96",
-            className
-          )}
+          className={cn("bg-card p-6 border rounded-lg min-h-96", className)}
         >
           {children}
         </div>
@@ -1173,7 +1170,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                             <Link
                               aria-current="page"
                               className="flex justify-between gap-2 py-2 pr-3 text-sm transition pl-4 text-foreground-subtle hover:text-foreground"
-                              //  bg-overlay-on-surface-background
+                              //  bg-card
                               href={link.href}
                             >
                               <span className="truncate">{link.label}</span>
