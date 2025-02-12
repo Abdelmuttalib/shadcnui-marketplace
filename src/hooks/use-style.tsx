@@ -17,17 +17,23 @@ const PROD_STYLES_PATH: Record<string, string> = {
 };
 
 // NEXT_PUBLIC_NODE_ENV
+const NODE_ENV = process.env.NEXT_PUBLIC_NODE_ENV;
 
-function getStylesPath(env: string) {
+export function getStylesPath2(style: string) {
+  if (NODE_ENV === "development") {
+    return PROD_STYLES_PATH[style];
+  }
+  return PROD_STYLES_PATH[style];
+}
+
+export function getStylesPath(env: string) {
   if (env === "development") {
     return PROD_STYLES_PATH;
   }
   return PROD_STYLES_PATH;
 }
 
-const STYLES_PATH: Record<string, string> = getStylesPath(
-  process.env.NEXT_PUBLIC_NODE_ENV!
-);
+const STYLES_PATH: Record<string, string> = getStylesPath(NODE_ENV!);
 
 export type Style = keyof typeof STYLES_PATH;
 

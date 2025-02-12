@@ -5,7 +5,6 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { usePathname, useRouter } from "next/navigation";
@@ -13,10 +12,6 @@ import { usePathname, useRouter } from "next/navigation";
 export default function BlocksBreadcrumb() {
   // current path items
   const pathname = usePathname();
-  // const currentPath = navigate.pathname.split("/").slice(1);
-
-  console.log("pathname", pathname);
-  // /blocks/pricings
 
   return (
     <Breadcrumb>

@@ -103,10 +103,10 @@ export function LandingPageLayout({
       title: "Blocks",
       href: "/blocks",
     },
-    // {
-    //   title: "Styles",
-    //   href: "/styles",
-    // },
+    {
+      title: "Styles",
+      href: "/styles",
+    },
   ];
 
   return (
@@ -161,7 +161,15 @@ export function StyleExamplesProvider({
 }: {
   children?: React.ReactNode;
 }) {
-  const { style, setStyle, stylePath, setStylePath } = useStyle();
+  const { style, setStyle, stylePath, setStylePath, styleCategory } =
+    useStyle();
+
+  const styleNames = {
+    default: "Default Style",
+    carbon: "Carbon IBM inspired design system style for shadcn ui",
+    linear: "Linear Design System style for shadcn ui",
+    material: "Material Design style for shadcn ui",
+  };
 
   const lightStylesShowcaseImages = [
     {
@@ -545,6 +553,68 @@ export function StyleExamplesProvider({
           </div>
         </div> */}
       </section>
+      <section className="bg-gradient-to-r from-accent/40 to-background -mt-80">
+        <div className="py-20">
+          <div className="space-y-2">
+            {/* <div className="border-y px-3">
+            <div>
+              <StylesBreadcrumb />
+            </div>
+          </div> */}
+            <div className="border-y flex items-center gap-2">
+              <Typography
+                as={"h1"}
+                variant="5xl/semibold"
+                className="tracking-tight capitalize px-3"
+              >
+                Styles
+              </Typography>
+              {/* <Badge>{blocksData?.length} blocks</Badge> */}
+            </div>
+
+            {/* {stylePath}
+          {styleUrl} */}
+
+            <div className="border-y">
+              <Typography
+                as={"p"}
+                variant="lg/normal"
+                className="text-muted-foreground max-w-4xl px-3"
+              >
+                Discover shadcn ui styles and UI kits, beyond Default and New
+                York shadcn ui styles.
+              </Typography>
+            </div>
+          </div>
+        </div>
+        <div className="space-y-20 mt-2 overflow-hidden">
+          {/* <StyleSelect /> */}
+          <div className="border-y">
+            <ExamplesNav />
+          </div>
+          {STYLES.filter((style) => style !== "default").map((style, index) => {
+            return (
+              <StylePreview
+                key={style + index}
+                id={style}
+                // @ts-ignore
+                title={styleNames[style]}
+                styleProp={style}
+                // description="Carbon IBM inspired design system style for shadcn ui"
+                examplePage={styleCategory}
+                // component={block.id}
+              >
+                <></>
+              </StylePreview>
+            );
+          })}
+
+          {/* suggestion */}
+          {/* <div>
+          <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
+        </div> */}
+        </div>
+      </section>
     </LandingPageLayout>
   );
 }
@@ -610,6 +680,7 @@ import {
   ToggleGroupDemo,
 } from "./showcase";
 import { InputOTP } from "./ui/input-otp";
+import { StylePreview } from "../../app/styles/components/style-preview";
 
 const DEFAULT_EXAMPLES_PATH = "/example";
 
