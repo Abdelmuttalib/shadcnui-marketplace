@@ -20,7 +20,7 @@ const PROD_STYLES_PATH: Record<string, string> = {
 
 function getStylesPath(env: string) {
   if (env === "development") {
-    return DEV_STYLES_PATH;
+    return PROD_STYLES_PATH;
   }
   return PROD_STYLES_PATH;
 }

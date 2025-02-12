@@ -20,9 +20,29 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "shadcn ui styles",
+  title: {
+    default: "shadcn ui marketplace",
+    template: "%s | shadcn ui marketplace",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://shadcn-ui-marketplace.com",
+    title: "shadcn ui marketplace",
+    description:
+      "shadcn ui marketplace, A marketplace for shadcn ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. Going beyond default and new york shadcn ui styles.",
+    images: [
+      {
+        url: "https://shadcn-ui-marketplace.com/images/og-image.png",
+        width: 1919,
+        height: 963,
+        alt: "shadcn ui marketplace, shadcn ui styles",
+      },
+    ],
+  },
   description:
-    "shadcn ui styles, A marketplace for shadcn-ui components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, and guidelines.",
+    "shadcn ui marketplace, A marketplace for shadcn-ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. Going beyond default and new york shadcn ui styles.",
+  metadataBase: new URL("https://shadcn-ui-marketplace.com"),
 };
 
 export default function RootLayout({

@@ -8,10 +8,47 @@ import BlocksBreadcrumb from "../components/blocks-breadcrumb";
 import { Typography } from "@/components/ui/typography";
 import { ArrowRightIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Metadata, ResolvingMetadata } from "next";
 
 interface Props {
   params: { slug: string };
 }
+
+interface PProps {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export async function generateMetadata(
+  { params, searchParams }: PProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const slug = (await params).slug;
+
+  const blocksData = blocksRegistry[slug];
+
+  if (!blocksData) {
+    return {
+      title: "Page not found",
+      description: "The page you are looking for does not exist.",
+    };
+  }
+
+  return {
+    title: slug?.replace("-", " "),
+    description: `${slug?.replace("-", " ")} blocks`,
+    openGraph: {
+      title: slug?.replace("-", " "),
+      description: `${slug?.replace("-", " ")} blocks`,
+      images: ["/images/og-image.png"],
+    },
+  };
+}
+
+// export async function generateStaticParams() {
+//   return Object.keys(blocksRegistry).map((slug) => ({ slug }));
+// }
 
 export default function ComponentPage({ params }: Props) {
   const { slug } = params;
@@ -66,6 +103,7 @@ export default function ComponentPage({ params }: Props) {
               key={block.id + index}
               id={block.id}
               title={block.title}
+              plan={block.plan}
               description={block.description}
               category={block.category}
               component={block.id}

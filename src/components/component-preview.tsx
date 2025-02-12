@@ -10,6 +10,9 @@ import { Button } from "@/components/ui/button";
 import { Cuboid } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Code } from "./views/docs/code";
+import { BlockPlan } from "@/config/data";
+import { RichBadge } from "./ui/rich-badge";
+import Image from "next/image";
 
 function GradientEffect() {
   return (
@@ -21,6 +24,7 @@ export function ComponentPreview({
   id,
   title,
   description,
+  plan,
   category,
   component,
   fileName,
@@ -29,6 +33,7 @@ export function ComponentPreview({
   id: string;
   title: string;
   description?: string;
+  plan?: BlockPlan;
   category: string;
   component: string;
   fileName: string;
@@ -104,14 +109,31 @@ export function ComponentPreview({
 
   const { styleUrl } = useStyle();
 
+  function getPlanBadge() {
+    switch (plan) {
+      case BlockPlan.Free:
+        return "green";
+      case BlockPlan.Basic:
+        return "default";
+      case BlockPlan.Pro:
+        return "blue";
+      default:
+        return "neutral";
+    }
+  }
+
   return (
     <div className={cn("pt-10 w-full max-w-[1440px]")} id={id}>
-      <div className="mb-6 space-y-3 px-4 lg:mb-8 lg:px-0">
-        <div className="space-y-2">
-          <Typography as="h2" variant="2xl/medium" className="border-y px-3">
+      <div className="mb-6 space-y-3 lg:mb-8">
+        <div className="flex items-center gap-2 border-y">
+          <Typography as="h2" variant="2xl/medium" className="px-3">
             {/* Landing Pages */}
             {title}
           </Typography>
+
+          {/* <RichBadge variant={getPlanBadge()} className="capitalize">
+            {plan}
+          </RichBadge> */}
           {/* <Typography
             as="h2"
             variant="md/normal"
@@ -237,7 +259,28 @@ export function ComponentPreview({
             ) : (
               <div className="w-full">
                 {children}
-                {/* <Code /> */}
+                {/* {plan === BlockPlan.Pro ? (
+                  <div className="relative flex items-center justify-center rounded-lg overflow-hidden bg-card text-sm h-[45rem] max-h-[45rem] hide-scrollbar">
+                    <Image
+                      src="/images/code-placeholder.png"
+                      alt="Pro Badge"
+                      layout="fill"
+                      className="w-full mx-auto h-full"
+                    />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-4 bg-background/40 gap-4 backdrop-blur-sm rounded-lg overflow-hidden">
+                      <Typography
+                        as="p"
+                        variant="lg/normal"
+                        className="text-muted-foreground"
+                      >
+                        This block is only available for Pro users.
+                      </Typography>
+                      <Button>Upgrade to Pro</Button>
+                    </div>
+                  </div>
+                ) : (
+                  children
+                )} */}
               </div>
             )}
           </div>
