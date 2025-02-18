@@ -12,7 +12,7 @@ import { StylePreview } from "./components/style-preview";
 import React from "react";
 import { StylesBreadcrumb } from "./components/styles-breadcrumb";
 import { STYLES, useStyle } from "@/hooks/use-style";
-import { StyleSelect } from "@/components/draft";
+import { ExamplesTabsNav, StyleSelect } from "@/components/draft";
 import { ExamplesNav } from "./components/examples-nav";
 
 interface Props {
@@ -40,30 +40,19 @@ export default function StylesPage({ params }: Props) {
     | "playground"
     | "tasks";
 
-  const [examplePage, setExamplePage] = React.useState<ExamplePage>("mail");
-
-  const {
-    styleUrl,
-    setStyleUrl,
-    styleCategory,
-    setStyleCategory,
-    stylePath,
-    setStylePath,
-    style,
-    setStyle,
-  } = useStyle();
+  const { styleCategory } = useStyle();
 
   const styleNames = {
     default: "Default Style",
-    carbon: "Carbon IBM inspired design system style for shadcn ui",
-    linear: "Linear Design System style for shadcn ui",
-    material: "Material Design style for shadcn ui",
+    carbon: "Carbon IBM inspired design system style",
+    linear: "Linear Design System style",
+    material: "Material Design style",
   };
 
   return (
     <div className="bg-gradient-to-r from-accent/40 to-background">
-      <div className="py-20">
-        <div className="space-y-2">
+      <div className="pt-20 pb-4">
+        <div className="space-y-4">
           <div className="border-y px-3">
             <div>
               <StylesBreadcrumb />
@@ -73,11 +62,11 @@ export default function StylesPage({ params }: Props) {
             <Typography
               as={"h1"}
               variant="5xl/semibold"
-              className="tracking-tight capitalize px-3"
+              className="tracking-tighter capitalize px-3"
             >
               Styles
             </Typography>
-            <Badge>{blocksData?.length} blocks</Badge>
+            <Badge>3 styles</Badge>
           </div>
 
           {/* {stylePath}
@@ -95,10 +84,10 @@ export default function StylesPage({ params }: Props) {
           </div>
         </div>
       </div>
-      <div className="space-y-20 mt-6 overflow-hidden">
+      <div className="space-y-20 overflow-hidden">
         {/* <StyleSelect /> */}
-        <div className="border-y">
-          <ExamplesNav />
+        <div className="border-y px-3 py-2">
+          <ExamplesTabsNav />
         </div>
         {STYLES.filter((style) => style !== "default").map((style, index) => {
           return (

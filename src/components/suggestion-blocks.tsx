@@ -5,14 +5,14 @@ import { Typography } from "./ui/typography";
 import { blocksRegistry } from "@/config/data";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
+import { Card, CardContent } from "./ui/card";
+import Image from "next/image";
 
 export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
   const excluded = exclude || "";
 
   const suggestedComponentsData = Object.entries(blocksRegistry)
     .map(([k, v]) => {
-      console.log("k", k);
-      console.log("v", v);
       if (k === excluded) {
         return;
       }
@@ -20,49 +20,127 @@ export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
         title: k.replace(/-/g, " "),
         href: `/blocks/${k}`,
         examplesCount: v.length,
+        image: `/images/blocks/${k}-preview`,
       };
     })
     .filter((e) => e) as {
     title: string;
     href: string;
     examplesCount: number;
+    image: string;
   }[];
 
   return (
-    <div className="lg:mt-72 mb-24 space-y-2 py-16 bg-gradient-to-r from-accent/40 to-background">
+    <div className="lg:mt-72 mb-24 space-y-2">
       <div className="space-y-2 border-y px-3">
-        <Typography as="h2" variant="lg/medium">
+        <Typography as="h2" variant="lg/medium" className="tracking-tight">
           Explore more examples
         </Typography>
       </div>
-      <nav className="border-y mt-10">
-        <ul className="overflow-hidden p-2 px-3 flex flex-wrap gap-8">
+      <nav className="border-y py-4 px-3 mt-10">
+        <ul
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          // className="overflow-hidden p-2 px-3 flex flex-wrap gap-8"
+        >
           {suggestedComponentsData.map((block) => {
             return (
-              <li
+              <Link
                 key={block.title}
-                className="relative flex items-center gap-2 group"
+                href={block.href}
+                target="_blank"
+                // href={category.href}
+                className="group"
               >
-                <Link
-                  href={block.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0"
+                <Card
+                  className={`overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-foreground/5`}
+                  // className={`overflow-hidden transition-all duration-300 ${
+                  //   category.featured ? "md:col-span-2 md:row-span-2" : ""
+                  // } hover:shadow-lg hover:shadow-foreground/5`}
                 >
-                  <span className="sr-only">
-                    view {block.title}
-                    blocks
-                  </span>
-                </Link>
-                <Typography
-                  as="h4"
-                  variant="lg/normal"
-                  className="capitalize tracking-tight"
-                >
-                  {block.title.replace("-", " ")}
-                </Typography>
-                <ArrowRight className="h-4 w-4 text-muted-foreground/60 -rotate-45 group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1" />
-              </li>
+                  <CardContent className="p-0">
+                    <div className="relative aspect-video overflow-hidden">
+                      <Image
+                        // src={category.image || "/placeholder.svg"}
+                        // src={"/images/blocks/blog-preview.jpg"}
+                        src={"/images/blocks/blog-sections-dark.png"}
+                        // 1919 pixels
+                        // 963 pixels
+                        // scale down to smaller size
+                        width={1919 / 2}
+                        height={963 / 2}
+                        quality={100}
+                        alt={block.title}
+                        // layout="fill"
+                        // objectFit="cover"
+                        className="transition-all duration-300 ml-4 mt-11 rounded-md border group-hover:scale-110 group-hover:rounded-tl-none hidden"
+                      />
+                      <Image
+                        src={`${block.image}-light.png`}
+                        width={1919 / 2}
+                        height={963 / 2}
+                        quality={100}
+                        alt={block.title}
+                        className="transition-all duration-300 ml-4 mt-11 rounded-md border group-hover:scale-110 group-hover:rounded-tl-none block dark:hidden"
+                      />
+                      <Image
+                        src={`${block.image}-dark.png`}
+                        width={1919 / 2}
+                        height={963 / 2}
+                        quality={100}
+                        alt={block.title}
+                        className="transition-all duration-300 ml-4 mt-11 rounded-md border group-hover:scale-110 group-hover:rounded-tl-none hidden dark:block"
+                      />
+                      {/* <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-background to-transparent via-background h-20"></div> */}
+                      <div className="absolute top-2 left-4 right-4 flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-lg font-semibold tracking-tight text-foreground capitalize">
+                            {block.title}
+                          </h3>
+                          <Badge className="">
+                            {block.examplesCount}{" "}
+                            {block.examplesCount > 1 ? "Blocks" : "Block"}
+                            {/* 4 Blocks */}
+                            {/* 4 Examples */}
+                          </Badge>
+                        </div>
+                        <div className="bg-accent p-1 rounded-md hidden group-hover:block">
+                          <ArrowRight className="size-4 text-muted-foreground -rotate-45" />
+                        </div>
+                        {/* <div className="flex items-center">
+                          <category.icon className="size-4 text-muted-foreground mr-2" />
+                          <span className="text-sm text-muted-foreground">
+                            Explore blocks
+                          </span>
+                        </div> */}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+              // <li
+              //   key={block.title}
+              //   className="relative flex items-center gap-2 group"
+              // >
+              //   <Link
+              //     href={block.href}
+              //     target="_blank"
+              //     rel="noopener noreferrer"
+              //     className="absolute inset-0"
+              //   >
+              //     <span className="sr-only">
+              //       view {block.title}
+              //       blocks
+              //     </span>
+              //   </Link>
+              //   <Typography
+              //     as="h4"
+              //     variant="lg/normal"
+              //     className="capitalize tracking-tight"
+              //   >
+              //     {block.title.replace("-", " ")}
+              //   </Typography>
+              //   <ArrowRight className="h-4 w-4 text-muted-foreground/60 -rotate-45 group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1" />
+              // </li>
             );
           })}
         </ul>

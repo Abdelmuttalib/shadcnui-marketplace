@@ -1,11 +1,5 @@
 import Container from "@/components/container";
-import {
-  ExamplesNav,
-  LandingPageLayout,
-  ShowcaseIFrame,
-  StyleExamplesProvider,
-} from "@/components/draft";
-import { Typography } from "@/components/ui/typography";
+import { StyleExamplesProvider } from "@/components/draft";
 
 export default function Home() {
   return (

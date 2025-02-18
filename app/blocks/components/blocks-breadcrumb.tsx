@@ -7,6 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function BlocksBreadcrumb() {
@@ -17,18 +18,21 @@ export default function BlocksBreadcrumb() {
     <Breadcrumb>
       <BreadcrumbList>
         {pathname?.split("/").map((item, index) => {
-          // if (index === 0) {
-          //   return (
-          //     <BreadcrumbItem key={index}>
-          //       <BreadcrumbLink href="/">Home</BreadcrumbLink>
-          //     </BreadcrumbItem>
-          //   );
-          // }
-          if (index === 1) {
+          if (index === 0) {
             return (
               <BreadcrumbItem key={index}>
-                <BreadcrumbLink href="/blocks">Blocks</BreadcrumbLink>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
               </BreadcrumbItem>
+            );
+          }
+          if (index === 1) {
+            return (
+              <>
+                {index > 0 && <BreadcrumbSeparator />}
+                <BreadcrumbItem key={index}>
+                  <BreadcrumbLink href="/blocks">Blocks</BreadcrumbLink>
+                </BreadcrumbItem>
+              </>
             );
           }
           return (
@@ -37,12 +41,15 @@ export default function BlocksBreadcrumb() {
               <BreadcrumbItem key={index}>
                 <BreadcrumbLink
                   href={`/blocks/${item}`}
-                  className="capitalize"
+                  className={cn("capitalize", {
+                    "pointer-events-none text-foreground":
+                      `/blocks/${item}` === pathname,
+                  })}
                   // onClick={() => {
                   //   navigate(`/blocks/${item}`);
                   // }}
                 >
-                  {item}
+                  {item.replace("-", " ")}
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </>

@@ -121,11 +121,11 @@ const headerNavLinks = [
 
 export function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="fixed inset-0 w-full h-full min-h-screen flex flex-col overflow-y-auto pb-10">
+    <div className="fixed inset-0 w-full h-full min-h-screen flex flex-col pb-10 overflow-y-auto">
       {/* <div className="relative">
         <GradientBackground />
       </div> */}
-      <header className="border-b sticky top-0 z-40 block bg-background/[0.3] backdrop-blur-md">
+      {/* <header className="border-b sticky top-0 z-40 block bg-background/[0.3] backdrop-blur-md">
         <div className="w-full h-14">
           <DocsLayoutContainer className="h-full flex items-center justify-between">
             <div className="flex items-center">
@@ -139,12 +139,11 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
                   {link.title}
                 </Link>
               ))}
-              {/* <ThemeSwitcher /> */}
             </div>
           </DocsLayoutContainer>
         </div>
-      </header>
-      <div className="flex-1 pb-72">
+      </header> */}
+      <div className="flex-1 pb-72 pt-16 ">
         <DocsLayoutContainer className="flex h-full flex-1 gap-x-8 relative">
           <DocsLayoutSidebar className="fixed py-10" />
           <DocsLayoutMain className="ml-56 mr-10 max-w-2xl mx-auto py-10">

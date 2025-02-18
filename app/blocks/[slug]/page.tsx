@@ -62,11 +62,11 @@ export default function ComponentPage({ params }: Props) {
   }
 
   return (
-    <div>
-      <div className="bg-gradient-to-r from-accent/40 to-background py-20">
+    <div className="bg-gradient-to-r from-accent/40 to-background">
+      <div className="py-20">
         <div className="space-y-2">
           <div className="border-y px-3">
-            <div className="-mx-2">
+            <div className="">
               <BlocksBreadcrumb />
             </div>
           </div>

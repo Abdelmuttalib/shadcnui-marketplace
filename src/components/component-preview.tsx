@@ -7,7 +7,7 @@ import { useStyle } from "@/hooks/use-style";
 import { Typography } from "./ui/typography";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Cuboid } from "lucide-react";
+import { Cuboid, FullscreenIcon } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Code } from "./views/docs/code";
 import { BlockPlan } from "@/config/data";
@@ -122,18 +122,33 @@ export function ComponentPreview({
     }
   }
 
+  const [isFullScreen, setIsFullScreen] = React.useState(false);
+
+  function onFullScreen() {
+    setIsFullScreen((current) => !current);
+  }
+
+  function formatString(input: string) {
+    // Use a regular expression to find numbers and prepend '#' to them
+    return input.replace(/\d+/g, "#$&");
+  }
+
   return (
     <div className={cn("pt-10 w-full max-w-[1440px]")} id={id}>
-      <div className="mb-6 space-y-3 lg:mb-8">
+      <div className="mb-6 space-y-3">
         <div className="flex items-center gap-2 border-y">
-          <Typography as="h2" variant="2xl/medium" className="px-3">
-            {/* Landing Pages */}
-            {title}
+          <Typography
+            as="h2"
+            variant="xl/medium"
+            className="px-3 tracking-tight"
+          >
+            {/* {title} */}
+            {formatString(title)}
           </Typography>
 
-          {/* <RichBadge variant={getPlanBadge()} className="capitalize">
+          <RichBadge variant={getPlanBadge()} className="capitalize">
             {plan}
-          </RichBadge> */}
+          </RichBadge>
           {/* <Typography
             as="h2"
             variant="md/normal"
@@ -145,16 +160,19 @@ export function ComponentPreview({
       </div>
       <div
         className={cn(
-          "relative mb-6 p-1 md:p-2 bg-accent",
-          "overflow-hidden"
+          "relative mb-6 p-1 md:p-2",
+          "overflow-hidden",
+          {
+            "w-screen h-screen fixed inset-0 z-50 bg-background": isFullScreen,
+          }
           // "shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)]",
           // "relative overflow-hidden",
           // "h-full w-full rounded-xl shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:pointer-events-none dark:before:absolute dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline"
         )}
       >
-        <GradientEffect />
-        <div className="flex flex-col gap-2 justify-between overflow-x-auto p-2 bg-background rounded-2xl border">
-          <div className="flex justify-between overflow-x-auto px-1">
+        {/* <GradientEffect /> */}
+        <div className="flex flex-col gap-1 justify-between overflow-x-auto p-2 py-1.5 bg-background rounded-2xl border">
+          <div className="flex justify-between overflow-x-auto px-1 pt-1 pb-1">
             <div className="flex items-center justify-between w-full gap-2">
               <div className="gap-0.5 rounded-lg flex outline-none">
                 <Button
@@ -194,26 +212,7 @@ export function ComponentPreview({
                   Code
                 </Button>
               </div>
-              {/* <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
-              <Select defaultValue={style} onValueChange={(e) => setStyle(e)}>
-                <SelectTrigger className="w-36">
-                  <SelectValue
-                    placeholder="Select a style"
-                    className="text-muted-foreground"
-                  >
-                    <span className="text-muted-foreground">style:</span>{" "}
-                    <span className="capitalize font-medium">{style}</span>
-                  </SelectValue>
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectItem value="default">Default</SelectItem>
-                    <SelectItem value="carbon">Carbon</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-            </div> */}
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <div className="hidden gap-0.5 rounded-md sm:flex outline-none">
                   <StyleSelect />
                 </div>
@@ -229,15 +228,24 @@ export function ComponentPreview({
                     </Button>
                   ))}
                 </div>
+                {/* <div className="hidden gap-0.5 rounded-md border-[0.5px] p-0.5 md:flex outline-none">
+                  <Button
+                    variant={"ghost"}
+                    size="icon-sm"
+                    onClick={onFullScreen}
+                  >
+                    <FullscreenIcon />
+                  </Button>
+                </div> */}
               </div>
             </div>
-            <div className="hidden items-center gap-0.5 lg:flex"></div>
+            {/* <div className="hidden items-center gap-0.5 lg:flex">sfdf</div> */}
           </div>
           <div className="flex h-full w-full overflow-hidden gap-2">
             {preview ? (
               <div
                 className={cn(
-                  "h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full",
+                  "h-fit rounded-lg overflow-hidden border w-full",
                   {
                     "max-w-md": breakpoint === "sm",
                     "max-w-screen-md": breakpoint === "md",
@@ -249,17 +257,15 @@ export function ComponentPreview({
                   loading="lazy"
                   title={title}
                   className={cn("block h-full min-h-[45rem] w-full", {
-                    // "w-screen h-screen fixed inset-0": fullScreen,
+                    "w-full h-full": isFullScreen,
                   })}
-                  // https://shadcn-carbon.vercel.app
                   src={`${styleUrl}/examples/${category}/${component}`}
-                  // src={href}
                 ></iframe>
               </div>
             ) : (
               <div className="w-full">
-                {children}
-                {/* {plan === BlockPlan.Pro ? (
+                {/* {children} */}
+                {plan === BlockPlan.Pro ? (
                   <div className="relative flex items-center justify-center rounded-lg overflow-hidden bg-card text-sm h-[45rem] max-h-[45rem] hide-scrollbar">
                     <Image
                       src="/images/code-placeholder.png"
@@ -280,7 +286,7 @@ export function ComponentPreview({
                   </div>
                 ) : (
                   children
-                )} */}
+                )}
               </div>
             )}
           </div>

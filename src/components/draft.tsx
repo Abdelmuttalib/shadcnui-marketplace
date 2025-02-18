@@ -9,8 +9,6 @@ import Image from "next/image";
 import { STYLES, useStyle } from "@/hooks/use-style";
 import Link from "next/link";
 
-import { WaitlistDialog } from "@/components/waitlist-dialog";
-
 // #030101
 // #0300d6
 // hsl(100, 9%, 93%)
@@ -34,7 +32,7 @@ export function StyleSelect({
 
   return (
     <Select defaultValue={style || defaultStyle} onValueChange={onStyleChange}>
-      <SelectTrigger className="w-36">
+      <SelectTrigger className="w-36 bg-accent">
         <SelectValue
           placeholder="select a style"
           className="text-muted-foreground"
@@ -87,28 +85,29 @@ export function ApplicationUI() {
   );
 }
 
+export function MainNavLinks() {
+  const links = siteConfig.mainNavLinks;
+  return (
+    <>
+      {links.map((link) => (
+        <li key={link.title}>
+          <Link
+            href={link.href}
+            className="text-sm font-medium text-muted-foreground hover:text-foreground"
+          >
+            {link.title}
+          </Link>
+        </li>
+      ))}
+    </>
+  );
+}
+
 export function LandingPageLayout({
   children,
 }: {
   children?: React.ReactNode;
 }) {
-  const { style, setStyle, stylePath, setStylePath } = useStyle();
-
-  const links = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "Blocks",
-      href: "/blocks",
-    },
-    {
-      title: "Styles",
-      href: "/styles",
-    },
-  ];
-
   return (
     <div className="relative">
       <div className="relative flex flex-col bg-background z-20">
@@ -126,27 +125,18 @@ export function LandingPageLayout({
               <div className="hidden sm:flex items-center gap-4">
                 <nav>
                   <ul className="inline-flex gap-6">
-                    {links.map((link) => (
-                      <li key={link.title}>
-                        <Link
-                          href={link.href}
-                          className="text-sm font-medium text-muted-foreground hover:text-foreground"
-                        >
-                          {link.title}
-                        </Link>
-                      </li>
-                    ))}
+                    <MainNavLinks />
                   </ul>
                 </nav>
                 <ThemeSwitcher />
               </div>
-              {/* <WaitlistDialog /> */}
+              {/* <UserMenu /> */}
             </div>
           </nav>
         </header>
         <div className="mx-auto flex max-w-screen-2xl w-full sm:px-4">
           <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
-          <div className="grid h-full flex-1 gap-72 pb-24 pt-14 md:pb-40">
+          <div className="grid h-full flex-1 gap-72 pb-24 pt-14 md:pb-40 bg-gradient-to-r from-accent/40 to-background">
             {children}
           </div>
           <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
@@ -208,27 +198,79 @@ export function StyleExamplesProvider({
 
   return (
     <LandingPageLayout>
+      <div className="relative -mt-[5.75rem] overflow-hidden">
+        {/* <img
+          src="https://tailwindui.com/plus-assets/img/beams-home@95.jpg"
+          alt=""
+          className="absolute -top-[1rem] left-1/2 -ml-[40rem] w-[163.125rem] max-w-none sm:-ml-[67.5rem]"
+        /> */}
+        <div className="max-w-container relative mx-auto mt-16 grid w-full grid-cols-1 px-4 sm:mt-20 xl:mt-32  border-y">
+          <Typography
+            as={"h1"}
+            variant="6xl/medium"
+            className="col-start-1 row-start-1 mt-4 max-w-[36rem] tracking-tighter"
+          >
+            shadcn ui styles
+          </Typography>
+          <Typography
+            as="p"
+            variant="lg/normal"
+            className="text-muted-foreground col-start-1 row-start-2 mt-4 max-w-xl"
+          >
+            Discover the best shadcn ui kits and styles for modern web
+            interfaces.
+          </Typography>
+          <div className="col-start-1 row-start-3 mt-10 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 z-20">
+            {/* <Button size={"lg"} asChild>
+              <Link href="#">
+                <span>
+                  Browse components{" "}
+                  <span aria-hidden="true" className="hidden sm:inline">
+                    →
+                  </span>
+                </span>
+              </Link>
+            </Button> */}
+            <StyleSelect />
+            {/* <Button size={"lg"} variant={"outline"} asChild>
+              <Link href="#">
+                <span>
+                  Explore templates{" "}
+                  <span aria-hidden="true" className="hidden sm:inline">
+                    →
+                  </span>
+                </span>
+              </Link>
+            </Button> */}
+          </div>
+          {/* pointer-events-none  */}
+          {style === "default" ? <DefaultUI /> : null}
+          {style === "linear" ? <HeroUI /> : null}
+          {style === "carbon" ? <CarbonUI /> : null}
+          {style === "material" ? <MaterialUI /> : null}
+        </div>
+      </div>
       <section className="grid h-full flex-1 gap-8">
         <div className="space-y-4 *:border-y *:border-border/80">
           <Typography
-            as="h1"
-            variant="6xl/medium"
-            className="border-y px-4 tracking-tight"
+            as="h2"
+            variant="4xl/medium"
+            className="border-y px-4 tracking-tighter"
           >
-            shadcn ui <span className="italic">styles</span>
+            See it in action
           </Typography>
           <Typography
             as="p"
             variant="lg/normal"
             className="px-4 text-muted-foreground"
           >
-            Discover the best shadcn ui kits and styles for modern web
-            interfaces.
+            Preview shadcn blocks in different styles and see how they look
           </Typography>
         </div>
 
-        <div className="border-y border-border/80 px-4">
-          <ExamplesNav />
+        <div className="border-y border-border/80 px-4 py-4">
+          <ExamplesTabsNav />
+          {/* <ExamplesNav /> */}
         </div>
 
         <div className="mx-1 sm:mx-4 overflow-hidden">
@@ -240,10 +282,10 @@ export function StyleExamplesProvider({
         <div className="space-y-4 *:border-y *:border-border/80">
           <Typography
             as="h1"
-            variant="3xl/medium"
-            className="border-y px-4 tracking-tight"
+            variant="4xl/medium"
+            className="border-y px-4 tracking-tighter"
           >
-            beyond{" "}
+            Beyond{" "}
             <span className="border-b-2 border-b-primary text-foreground">
               Default
             </span>{" "}
@@ -252,6 +294,7 @@ export function StyleExamplesProvider({
               New York
             </span>
           </Typography>
+
           <Typography
             as="p"
             variant="lg/normal"
@@ -265,11 +308,11 @@ export function StyleExamplesProvider({
           {/*  */}
           {/* <CalendarDemo /> */}
         </div>
-        <div className="mb-6 border bg-accent p-1 sm:p-2 grid dark:hidden grid-cols-8 gap-4">
+        <div className="mb-6 border-y overflow p-1 sm:p-2 grid dark:hidden grid-cols-8 gap-4">
           {lightStylesShowcaseImages.map((styleImage) => (
             <div
               key={styleImage.src + styleImage.alt}
-              className="col-span-8 rounded-2xl overflow-hidden"
+              className="col-span-8 rounded-xl border overflow-hidden"
             >
               <img
                 key={styleImage.name}
@@ -280,11 +323,11 @@ export function StyleExamplesProvider({
             </div>
           ))}
         </div>
-        <div className="mb-6 border bg-accent p-1 sm:p-2 hidden dark:grid grid-cols-8 gap-4">
+        <div className="mb-6 border-y overflow p-1 sm:p-2 hidden dark:grid grid-cols-8 gap-4">
           {darkStylesShowcaseImages.map((styleImage) => (
             <div
               key={styleImage.src + styleImage.alt}
-              className="col-span-8 rounded-2xl overflow-hidden"
+              className="col-span-8 rounded-xl border overflow-hidden"
             >
               <img
                 key={styleImage.name}
@@ -553,8 +596,8 @@ export function StyleExamplesProvider({
           </div>
         </div> */}
       </section>
-      <section className="bg-gradient-to-r from-accent/40 to-background -mt-80">
-        <div className="py-20">
+      <section className="-mt-80">
+        <div className="pt-20 pb-4">
           <div className="space-y-2">
             {/* <div className="border-y px-3">
             <div>
@@ -587,10 +630,11 @@ export function StyleExamplesProvider({
             </div>
           </div>
         </div>
-        <div className="space-y-20 mt-2 overflow-hidden">
+        <div className="space-y-10 mt-2 overflow-hidden">
           {/* <StyleSelect /> */}
-          <div className="border-y">
-            <ExamplesNav />
+          <div className="border-y px-3 py-4">
+            <ExamplesTabsNav />
+            {/* <ExamplesNav /> */}
           </div>
           {STYLES.filter((style) => style !== "default").map((style, index) => {
             return (
@@ -651,7 +695,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/utils/cn";
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/theme-select";
 import {
   DataTableDemo,
@@ -659,28 +703,16 @@ import {
   NotificationsCard,
   WaitlistForm,
 } from "./demo";
-import { Badge, BadgeProps } from "./ui/badge";
+import { Badge } from "./ui/badge";
 import { BookmarkIcon, MailIcon, Timer } from "lucide-react";
 import { Switch } from "./ui/switch";
-import { useRouter } from "next/navigation";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Checkbox } from "./ui/checkbox";
-import {
-  AccordionDemo,
-  AlertDialogDemo,
-  CalendarDemo,
-  CommandDemo,
-  DialogDemo,
-  DrawerDemo,
-  InputOTPDemo,
-  MenubarDemo,
-  PopoverDemo,
-  TabsDemo,
-  ToggleGroupDemo,
-} from "./showcase";
-import { InputOTP } from "./ui/input-otp";
 import { StylePreview } from "../../app/styles/components/style-preview";
+import { UserMenu } from "../../app/components/user-menu";
+import { DefaultUI } from "../../app/ui/components/default-heroui";
+import { HeroUI } from "../../app/ui/components/heroui";
+import { CarbonUI } from "../../app/ui/components/carbon-heroui";
+import { MaterialUI } from "../../app/ui/components/material-heroui";
+import { siteConfig } from "@/config/site-config";
 
 const DEFAULT_EXAMPLES_PATH = "/example";
 
@@ -726,6 +758,54 @@ const examples = [
     code: "https://github.com/shadcn/ui/tree/main/apps/www/app/(app)/examples/authentication",
   },
 ];
+
+export function ExamplesTabsNav({ className, ...props }: ExamplesNavProps) {
+  // const pathname = usePathname();
+
+  const pathname = "/example/mail";
+
+  const { styleCategory, setStyleCategory } = useStyle();
+
+  return (
+    <div className="relative">
+      <div className="max-w-[600px] lg:max-w-none">
+        <div
+          className={cn(
+            // "my-4 flex gap-1 gap-y-3 flex-wrap items-center",
+            "md:inline-flex md:flex-nowrap md:p-0 md:h-10 p-1 md:items-center md:justify-center flex-wrap rounded-md border grid grid-cols-1 sm:grid-cols-2 bg-muted text-muted-foreground",
+            className
+          )}
+          {...props}
+        >
+          {examples.map((example, index) => {
+            const caseExampleName = example.name.toLowerCase();
+            return (
+              <button
+                key={example.href}
+                className={cn(
+                  "inline-flex h-full md:items-center md:justify-center whitespace-nowrap rounded-sm border border-transparent px-3 py-2 md:py-0 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring data-[state=active]: data-[state=active]: data-[state=active]: data-[state=active]:",
+                  styleCategory === caseExampleName
+                    ? "bg-background text-foreground shadow-sm border-border"
+                    : "text-muted-foreground"
+                )}
+                // className={cn(
+                //   "flex h-7 items-center justify-center rounded-md px-4 text-center text-sm transition-colors hover:bg-accent/80 hover:text-ring",
+                //   styleCategory === caseExampleName
+                //     ? "bg-accent font-medium text-ring"
+                //     : "text-muted-foreground"
+                // )}
+                onClick={() => setStyleCategory(caseExampleName)}
+              >
+                {example.name}
+              </button>
+            );
+          })}
+        </div>
+        {/* <ScrollBar orientation="horizontal"  /> */}
+      </div>
+    </div>
+  );
+}
 
 interface ExamplesNavProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -1014,10 +1094,10 @@ export function ShowcaseIFrame({
   ];
 
   return (
-    <div className="mb-6 space-y-2 rounded-lg sm:rounded-2xl border bg-gray-50 dark:bg-card sm:p-1">
+    <div className="mb-6 space-y-2 rounded-lg sm:rounded-2xl border bg-background sm:p-1">
       <div className="flex justify-between overflow-x-auto px-1 pt-1">
         <div className="flex items-center justify-between w-full gap-2">
-          <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 sm:p-0.5 flex dark:bg-gray-950/50 outline-none">
+          <div className="gap-0.5 rounded-lg pb-1 flex outline-none">
             <Select defaultValue={style} onValueChange={(e) => setStyle(e)}>
               <SelectTrigger className="sm:w-36 h-8 sm:h-10">
                 <SelectValue
@@ -1059,7 +1139,7 @@ export function ShowcaseIFrame({
         </div>
         <div className="hidden items-center gap-0.5 lg:flex"></div>
       </div>
-      <div className="flex h-full w-full overflow-hidden gap-2">
+      <div className="flex h-full w-full overflow-hidden gap-2 px-1">
         <div
           className={cn(
             "h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full",

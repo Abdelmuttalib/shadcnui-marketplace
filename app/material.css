@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --material-color-primary-50: 0.9434 0.0328 307.17; /* oklch(0.9434 0.0328 307.17) #f2e7fe */
+    --material-color-primary-100: 0.8263 0.1137 308.36; /* oklch(0.8263 0.1137 308.36) #dbb2ff */
+    --material-color-primary-200: 0.72 0.1723 303.07; /* oklch(0.72 0.1723 303.07) #bb86fc */
+    --material-color-primary-300: 0.6274 0.22 295.69; /* oklch(0.6274 0.22 295.69) #985eff */
+    --material-color-primary-400: 0.5556 0.2619 291.86; /* oklch(0.5556 0.2619 291.86) #7f39fb */
+    --material-color-primary-500: 0.4814 0.2784 286.54; /* oklch(0.4814 0.2784 286.54) #6200ee */
+    --material-color-primary-600: 0.4634 0.27 283.21; /* oklch(0.4634 0.27 283.21) #5600e8 */
+    --material-color-primary-700: 0.3732 0.2273 279.07; /* oklch(0.3732 0.2273 279.07) #3700b3 */
+    --material-color-primary-800: 0.3382 0.2051 279.66; /* oklch(0.3382 0.2051 279.66) #30009c */
+    --material-color-primary-900: 0.2641 0.1521 283.05; /* oklch(0.2641 0.1521 283.05) #23036a */
+    --material-color-primary-950: 0.2389 0.1521 283.05; /* oklch(0.2389 0.1521 283.05) #1e0062 */
+
+    /* Grayscale/Neutral */
+    --material-color-gray-50: 0.985 0 0; /* oklch(0.985 0 0) #f4f4f4 */
+    --material-color-gray-100: 0.97 0 0; /* oklch(0.97 0 0) #e0e0e0 */
+    --material-color-gray-200: 0.922 0 0; /* oklch(0.922 0 0) #c6c6c6 */
+    --material-color-gray-300: 0.87 0 0; /* oklch(0.87 0 0) #a8a8a8 */
+    --material-color-gray-400: 0.708 0 0; /* oklch(0.708 0 0) #8d8d8d */
+    --material-color-gray-500: 0.556 0 0; /* oklch(0.556 0 0) #6f6f6f */
+    --material-color-gray-600: 0.439 0 0; /* oklch(0.439 0 0) #525252 */
+    --material-color-gray-700: 0.351 0 0; /* oklch(0.371 0 0) #393939 */
+    --material-color-gray-800: 0.24 0 0; /* oklch(0.269 0 0) #262626 */
+    --material-color-gray-900: 0.205 0 0; /* oklch(0.205 0 0) #161616 */
+    --material-color-gray-950: 0.145 0 0; /* oklch(0.145 0 0) #0f0f0f */
+
+    --material-color-white: 100% 0 0; /* oklch(100% 0 0) #ffffff */
+    --material-color-black: 0% 0 0; /* oklch(0% 0 0) #000000 */
+
+    --material-color-destructive: 47.76% 0.193 23.59; /* oklch(47.76% 0.193 23.59) #B00020 */
+
+    --material-color-border: 0.88 0 0; /* oklch(0.88 0 0) #e0e0e0 */
+    --material-color-layer: var(
+      --material-color-white
+    ); /* oklch(100 0 0) #ffffff */
+
+    --material-color-background: var(--material-color-white);
+    --material-color-foreground: var(--material-color-gray-950);
+
+    --material-color-accent: var(
+      --material-color-gray-100
+    ); /* oklch(0.922 0 0) #c6c6c6 */
+    --material-color-muted: 0.95 0 0; /* oklch(95% 0 0) #eeeeee */
+    --material-color-muted-foreground: var(--material-color-gray-500);
+    --material-color-secondary22: 98% 0.0307 182.71; /* oklch(0.7976 0.0707 182.71) #88ccc1 */
+
+    --material-color-secondary: 0.96 0.0328 307.17; /* oklch(0.96 0.0328 307.17) #f8ecff */
+
+    --material-background: var(--material-color-background);
+    --material-foreground: var(--material-color-foreground);
+    --material-card: var(--material-color-layer);
+    --material-card-foreground: var(--material-color-foreground);
+    --material-popover: var(--material-color-layer);
+    --material-popover-foreground: var(--material-color-foreground);
+    --material-primary: var(--material-color-primary-500);
+    --material-primary-foreground: var(--material-color-white);
+
+    --material-secondary: var(
+      --material-color-secondary
+    ); /* var(--material-color-secondary) */
+    --material-secondary-foreground: var(--material-color-primary-500);
+
+    --material-muted: var(--material-color-muted);
+    --material-muted-foreground: var(--material-color-muted-foreground);
+    --material-accent: var(--material-color-secondary);
+    --material-accent-foreground: var(--material-color-primary-500);
+    --material-destructive: var(--material-color-destructive);
+    --material-destructive-foreground: var(--material-color-white);
+    --material-border: var(--material-color-border);
+    --material-input: var(--material-color-border);
+    --material-ring: var(--material-color-primary-100);
+
+    --material-radius: 0.4rem;
+
+    --material-chart-1: 55.65% 0.24 261.95; /* oklch(55.65% 0.24 261.95) */
+    --material-chart-2: 62.91% 0.1 192.36; /* oklch(62.91% 0.1 192.36) */
+    --material-chart-3: 66.89% 0.19 357.26; /* oklch(66.89% 0.19 357.26) */
+    --material-chart-4: 64.06% 0.16 246.5; /* oklch(64.06% 0.16 246.5) */
+    --material-chart-5: 66.62% 0.2 22.13; /* oklch(66.62% 0.2 22.13) */
+
+    /* --material-chart-1: 12 76% 61%;
+    --material-chart-2: 173 58% 39%;
+    --material-chart-3: 197 37% 24%;
+    --material-chart-4: 43 74% 66%;
+    --material-chart-5: 27 87% 67%; */
+
+    --material-sidebar-background: var(--material-color-background);
+    --material-sidebar-foreground: var(--material-color-foreground);
+    --material-sidebar-primary: var(--material-color-primary-500);
+    --material-sidebar-primary-foreground: var(--material-color-white);
+    --material-sidebar-accent: var(--material-color-accent);
+    --material-sidebar-accent-foreground: var(--material-color-foreground);
+    --material-sidebar-border: var(--material-color-border);
+    --material-sidebar-ring: var(--material-color-primary-500);
+  }
+  .dark {
+    --material-color-background: var(
+      --material-color-gray-900
+    ); /* oklch(0.145 0 0) #0f0f0f */
+    --material-color-foreground: var(
+      --material-color-white
+    ); /* oklch(100 0 0) #ffffff */
+
+    --material-color-layer: var(
+      --material-color-gray-800
+    ); /* oklch(0.985 0 0) #f4f4f4 */
+
+    --material-color-border: var(
+      --material-color-gray-700
+    ); /* oklch(0.87 0 0) #a8a8a8 */
+
+    --material-color-destructive: 0.6396 0.1336 10.23; /* oklch(0.6396 0.1336 10.23) #CF6679 */
+
+    --material-color-muted: var(
+      --material-color-gray-700
+    ); /* oklch(0.371 0 0) #393939 */
+    --material-color-muted-foreground: var(
+      --material-color-gray-400
+    ); /* oklch(0.87 0 0) #a8a8a8 */
+
+    --material-background: var(--material-color-background);
+    --material-foreground: var(--material-color-foreground);
+    --material-card: var(--material-color-layer);
+    --material-card-foreground: var(--material-color-foreground);
+    --material-popover: var(--material-color-layer);
+    --material-popover-foreground: var(--material-color-foreground);
+    --material-primary: var(--material-color-primary-200);
+    --material-primary-foreground: var(--material-color-black);
+    --material-secondary: var(--material-color-gray-700);
+    --material-secondary-foreground: var(--material-color-white);
+    --material-muted: var(--material-color-muted);
+    --material-muted-foreground: var(--material-color-muted-foreground);
+    --material-accent: var(--material-color-muted);
+    --material-accent-foreground: var(--material-color-foreground);
+    --material-destructive: var(--material-color-destructive);
+    --material-destructive-foreground: var(--material-color-black);
+    --material-border: var(--material-color-border);
+    --material-input: var(--material-color-border);
+    --material-ring: var(--material-color-primary-200);
+
+    --material-chart-1: 62.65% 0.24 261.95; /* oklch(62.65% 0.24 261.95) */
+    --material-chart-2: 68.91% 0.1 192.36; /* oklch(68.91% 0.1 192.36) */
+    --material-chart-3: 69.89% 0.19 357.26; /* oklch(69.89% 0.19 357.26) */
+    --material-chart-4: 69.06% 0.16 246.5; /* oklch(69.06% 0.16 246.5) */
+    --material-chart-5: 69.62% 0.2 22.13; /* oklch(69.62% 0.2 22.13) */
+
+    /* --material-chart-1: 220 70% 50%;
+    --material-chart-2: 160 60% 45%;
+    --material-chart-3: 30 80% 55%;
+    --material-chart-4: 280 65% 60%;
+    --material-chart-5: 340 75% 55%; */
+
+    --material-sidebar-background: var(--material-color-background);
+    --material-sidebar-foreground: var(--material-color-foreground);
+    --material-sidebar-primary: var(--material-color-primary-400);
+    --material-sidebar-primary-foreground: var(--material-color-white);
+    --material-sidebar-accent: var(--material-color-accent);
+    --material-sidebar-accent-foreground: var(--material-color-foreground);
+    --material-sidebar-border: var(--material-color-border);
+    --material-sidebar-ring: var(--material-color-primary-400);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

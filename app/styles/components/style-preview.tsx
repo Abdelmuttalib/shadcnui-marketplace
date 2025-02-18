@@ -8,6 +8,7 @@ import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import { Cuboid } from "lucide-react";
 import { BlockPlan } from "@/config/data";
+import { RichBadge } from "@/components/ui/rich-badge";
 
 export function StylePreview({
   id,
@@ -94,7 +95,7 @@ export function StylePreview({
     },
   ];
 
-  const { styleUrl } = useStyle();
+  const { styleCategory } = useStyle();
 
   function getPlanBadge() {
     switch (plan) {
@@ -111,7 +112,7 @@ export function StylePreview({
 
   return (
     <div className={cn("w-full max-w-[1440px]")} id={id}>
-      <div className="mb-6 space-y-3 lg:mb-8">
+      <div className="mb-6 space-y-2">
         <div className="flex items-center gap-2 border-y">
           <Typography
             as="h2"
@@ -122,9 +123,6 @@ export function StylePreview({
             {title}
           </Typography>
 
-          {/* <RichBadge variant={getPlanBadge()} className="capitalize">
-            {plan}
-          </RichBadge> */}
           {/* <Typography
             as="h2"
             variant="md/normal"
@@ -136,13 +134,18 @@ export function StylePreview({
       </div>
       <div
         className={cn(
-          "relative mb-6 p-1 md:p-2",
+          "relative mb-6 p-1 md:p-2 space-y-1",
           "overflow-hidden"
           // "shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)]",
           // "relative overflow-hidden",
           // "h-full w-full rounded-xl shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:pointer-events-none dark:before:absolute dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline"
         )}
       >
+        <div className="flex items-center gap-2 px-0.5">
+          <RichBadge variant="neutral" className="capitalize">
+            {styleCategory}
+          </RichBadge>
+        </div>
         <div className="flex flex-col gap-2 justify-between overflow-x-auto p-2 bg-background rounded-2xl border">
           <div className="hidden  justify-between overflow-x-auto px-1">
             <div className="flex items-center justify-between w-full gap-2">

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ScreenContainer } from "@/components/container";
 import BlocksBreadcrumb from "./components/blocks-breadcrumb";
 import { Typography } from "@/components/ui/typography";
-import { LandingPageLayout } from "@/components/draft";
+import { LandingPageLayout, MainNavLinks } from "@/components/draft";
 import Link from "next/link";
 import ThemeSwitcher from "@/components/theme-select";
 
@@ -53,7 +53,12 @@ function PageLayout({ children }: { children?: React.ReactNode }) {
               </Link>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <div className="hidden sm:block">
+              <div className="flex items-center gap-4">
+                <nav className="hidden sm:flex">
+                  <ul className="inline-flex gap-6">
+                    <MainNavLinks />
+                  </ul>
+                </nav>
                 <ThemeSwitcher />
               </div>
               {/* <WaitlistDialog /> */}

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import "./carbon.css";
+import "./default.css";
+import "./material.css";
 import { ThemeButton } from "@/components/theme-button";
 import { StyleProvider } from "@/hooks/use-style";
 import { ThemeColorWrapper } from "@/components/theme-color-wrapper";
@@ -58,10 +61,10 @@ export default function RootLayout({
             <body
               className={`${inter.variable} ${ibmPlexMono.variable} antialiased font-sans`}
             >
-              {/* <div className="fixed right-2 top-2 z-[9999]">
+              <div className="fixed right-2 top-2 z-[9999]">
                 <ThemeButton />
-              </div> */}
-              {/* <TailwindIndicator /> */}
+              </div>
+              <TailwindIndicator />
               {children}
               <Analytics />
             </body>

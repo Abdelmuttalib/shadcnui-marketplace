@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import Link from "next/link";
 import ThemeSwitcher from "@/components/theme-select";
+import { MainNavLinks } from "@/components/draft";
 
 export const metadata: Metadata = {
   title: "shadcn ui styles blocks",
@@ -49,7 +50,12 @@ function PageLayout({ children }: { children?: React.ReactNode }) {
               </Link>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <div className="hidden sm:block">
+              <div className="flex items-center gap-4">
+                <nav className="hidden sm:flex">
+                  <ul className="inline-flex gap-6">
+                    <MainNavLinks />
+                  </ul>
+                </nav>
                 <ThemeSwitcher />
               </div>
               {/* <WaitlistDialog /> */}
