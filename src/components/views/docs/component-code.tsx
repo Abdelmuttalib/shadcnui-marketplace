@@ -110,7 +110,7 @@ export async function ComponentCode({
 }: {
   style: string;
   component: string;
-  type: string;
+  type?: string;
   fileName: string;
 }) {
   const filePath = path.join(
