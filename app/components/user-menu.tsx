@@ -29,7 +29,7 @@ export function UserMenu() {
         return;
       }
       console.log("data", data);
-      setUser(data);
+      setUser(data as unknown as any);
     }
 
     getUser();
@@ -37,7 +37,7 @@ export function UserMenu() {
     supabase.auth.onAuthStateChange((event, session) => {
       console.log("event", event);
       console.log("session", session);
-      setUser(session?.user);
+      setUser(session?.user as unknown as any);
     });
   }, []);
 
