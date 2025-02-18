@@ -41,7 +41,7 @@ export async function generateMetadata(
     openGraph: {
       title: slug?.replace("-", " "),
       description: `${slug?.replace("-", " ")} blocks`,
-      images: ["/images/og-image.png"],
+      images: ["/images/og-image-2.png"],
     },
   };
 }

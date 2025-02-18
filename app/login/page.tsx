@@ -209,7 +209,7 @@ const SplitScreenLogin = () => (
             className="relative aspect-video bg-accent rounded-lg overflow-hidden"
           >
             <Image
-              src={`/images/og-image.png`}
+              src={`/images/og-image-2.png`}
               alt={`Image ${i + 1}`}
               // width={300}
               // height={300}
