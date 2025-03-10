@@ -21,7 +21,7 @@ type Components = {
 };
 
 export function StyleShowcaseCardLink({ style }: { style: Style }) {
-  const [components, setComponents] = useState<Components | {}>({});
+  const [components, setComponents] = useState<Components | {} | any>({});
 
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);

@@ -71,7 +71,7 @@ export default function ComponentPage({ params }: Props) {
     <div className="">
       <div className="bg-gradient-to-b from-accent/40 to-background py-20">
         <PageContainer>
-          <div className="space-y-2">
+          <div className="space-y-4">
             <div>
               <div>
                 <BlocksBreadcrumb />
@@ -87,7 +87,7 @@ export default function ComponentPage({ params }: Props) {
               </Typography>
               <Badge>{blocksData?.length} blocks</Badge>
             </div> */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <PageTitle>{blockPageTitle}</PageTitle>
               <Badge>{blocksData?.length} blocks</Badge>
             </div>

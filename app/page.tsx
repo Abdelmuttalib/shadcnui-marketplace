@@ -1,7 +1,6 @@
 "use client";
 
-import { ArrowRightIcon, ChevronRightIcon } from "lucide-react";
-import Image from "next/image";
+import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 
 import { PageContainer } from "@/components/common/page-container";
@@ -15,23 +14,18 @@ import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
 import { BlockCategoryPreviewCardLink } from "@/components/views/blocks/block-category-preview-card";
-import {
-  StyleShowcaseCardLink,
-  StyleShowcaseCardLoaderUI,
-} from "@/components/views/styles/style-showcase-card-link";
+import { StyleShowcaseCardLink } from "@/components/views/styles/style-showcase-card-link";
 import { blocksPreviewImagesData } from "@/config/data";
 import { STYLES, useStyle } from "@/hooks/use-style";
 import { cn } from "@/lib/utils";
 
-import { StylePreview } from "./styles/components/style-preview";
 import { CarbonUI } from "./ui/components/carbon-heroui";
 import { CatalystUI } from "./ui/components/catalyst-heroui";
 import { DefaultUI } from "./ui/components/default-heroui";
-import { HeroUI } from "./ui/components/heroui";
 import { LinearUI } from "./ui/components/linear-heroui";
 import { MaterialUI } from "./ui/components/material-heroui";
 
-export function Layout({ children }: { children?: React.ReactNode }) {
+function Layout({ children }: { children?: React.ReactNode }) {
   return (
     <div className="relative">
       <div className="relative mx-auto flex w-full max-w-screen-2xl">
