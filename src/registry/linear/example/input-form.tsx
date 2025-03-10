@@ -32,13 +32,11 @@ export default function InputForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-linear-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+    toast.message("You submitted the following values:", {
+      description: JSON.stringify(data, null, 2),
+    });
+    toast.message("You submitted the following values:", {
+      description: JSON.stringify(data, null, 2),
     });
   }
 
