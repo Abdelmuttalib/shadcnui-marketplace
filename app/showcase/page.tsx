@@ -10,7 +10,6 @@ import { ComponentCode } from "@/components/views/docs/component-code";
 import { RegistryIndex } from "@/registry";
 
 import BlocksBreadcrumb from "../blocks/components/blocks-breadcrumb";
-import { ComponentPreviewCode } from "../docs/components/component-preview-code";
 import { ComponentPreviewShowcase } from "../docs/components/component-showcase";
 
 const docsComponents = Object.keys(RegistryIndex["carbon"]);

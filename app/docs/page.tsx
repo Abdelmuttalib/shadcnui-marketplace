@@ -69,7 +69,7 @@ export default function Docs() {
         molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
       </DocsSection>
       <div className="mt-10">
-        {docsComponents.map((component) => (
+        {/* {docsComponents.map((component) => (
           <ComponentPreviewCode
             key={component}
             id={component}
@@ -84,9 +84,9 @@ export default function Docs() {
               fileName={component}
             />
           </ComponentPreviewCode>
-        ))}
+        ))} */}
 
-        <ComponentPreviewCode
+        {/* <ComponentPreviewCode
           id="button"
           title="Button"
           description="button description"
@@ -124,7 +124,7 @@ export default function Docs() {
             component="alert-dialog"
             fileName="alert-dialog"
           />
-        </ComponentPreviewCode>
+        </ComponentPreviewCode> */}
 
         {/* <ComponentPreviewCode
           id="checkbox"
