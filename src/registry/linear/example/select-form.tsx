@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/linear/ui/button";
@@ -22,7 +23,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/linear/ui/select";
-import { toast } from "@/registry/linear/ui/use-toast";
 
 const FormSchema = z.object({
   email: z

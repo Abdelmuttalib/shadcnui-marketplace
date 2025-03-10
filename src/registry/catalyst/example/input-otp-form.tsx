@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/catalyst/ui/button";
@@ -19,7 +20,6 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/registry/catalyst/ui/input-otp";
-import { toast } from "@/registry/catalyst/ui/use-toast";
 
 const FormSchema = z.object({
   pin: z.string().min(6, {
@@ -36,13 +36,8 @@ export default function InputOTPForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+    toast.message("You submitted the following values:", {
+      description: JSON.stringify(data, null, 2),
     });
   }
 

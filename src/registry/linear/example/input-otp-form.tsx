@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/linear/ui/button";
@@ -19,7 +20,6 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/registry/linear/ui/input-otp";
-import { toast } from "@/registry/linear/ui/use-toast";
 
 const FormSchema = z.object({
   pin: z.string().min(6, {

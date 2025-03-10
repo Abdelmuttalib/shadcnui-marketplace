@@ -74,6 +74,7 @@ export default function Docs() {
             key={component}
             id={component}
             title={component.replace("-", " ")}
+            // @ts-expect-error - dynamic loadable imported component
             description={RegistryIndex["carbon"][component].description}
             component={component}
           >

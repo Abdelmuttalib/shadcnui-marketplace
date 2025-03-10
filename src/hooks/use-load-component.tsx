@@ -6,12 +6,12 @@ function useLoadComponent(style: string, componentName: string) {
   const [component, setComponent] = useState({});
 
   useEffect(() => {
-    const loadComponent = async () => {
+    const _loadComponent = async () => {
       const md = await loadComponent(style, componentName);
       setComponent(md);
     };
 
-    loadComponent();
+    _loadComponent();
   }, [style, componentName]);
 
   return component;
@@ -32,6 +32,7 @@ export function useLoadComponents(style: string, _components: string[]) {
       _components.forEach(async (component) => {
         const comp = await loadComponent(style, component);
         console.log("comp", comp);
+        // @ts-expect-error - dynamic loadable imported component
         _comps[component] = comp;
         // _comps = { ..._comps, [component]: comp };
       });

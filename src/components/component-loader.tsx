@@ -8,7 +8,7 @@ import { loadComponent } from "@/lib/component-loader";
 // }
 
 export function ComponentLoader({ style }: { style: string }) {
-  const [components, setComponents] = useState({});
+  const [components, setComponents] = useState<any>({});
 
   useEffect(() => {
     const loadComponents = async () => {

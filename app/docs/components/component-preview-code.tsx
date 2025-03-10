@@ -4,7 +4,6 @@ import { Cuboid } from "lucide-react";
 import { Suspense, useEffect, useState } from "react";
 
 import { StyleSelect } from "@/components/draft";
-import { ButtonDemo } from "@/components/showcase";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Typography } from "@/components/ui/typography";
@@ -38,6 +37,7 @@ export function ComponentPreviewCode({
   const { style, setStyle } = useStyle();
   const [components, setComponents] = useState({});
 
+  // @ts-expect-error - dynamic loadable imported component
   const c = RegistryIndex[style][component];
   // c.demo, dynamic loadable imported component
   const Component = c.demo;

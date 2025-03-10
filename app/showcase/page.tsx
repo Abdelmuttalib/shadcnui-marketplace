@@ -79,6 +79,7 @@ export default function Showcase() {
                   key={component}
                   id={component}
                   title={component.replace("-", " ")}
+                  // @ts-expect-error - dynamic loadable imported component
                   description={RegistryIndex["carbon"][component].description}
                   component={component}
                   className="pt-0"

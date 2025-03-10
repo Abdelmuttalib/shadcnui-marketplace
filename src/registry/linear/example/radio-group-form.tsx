@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/linear/ui/button";
@@ -14,7 +15,6 @@ import {
   FormMessage,
 } from "@/registry/linear/ui/form";
 import { RadioGroup, RadioGroupItem } from "@/registry/linear/ui/radio-group";
-import { toast } from "@/registry/linear/ui/use-toast";
 
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {

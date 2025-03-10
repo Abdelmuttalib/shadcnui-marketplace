@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/catalyst/ui/button";
@@ -22,7 +23,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/catalyst/ui/select";
-import { toast } from "@/registry/catalyst/ui/use-toast";
 
 const FormSchema = z.object({
   email: z
@@ -38,13 +38,8 @@ export default function SelectForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+    toast.message("You submitted the following values:", {
+      description: JSON.stringify(data, null, 2),
     });
   }
 

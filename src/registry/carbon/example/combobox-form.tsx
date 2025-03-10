@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
@@ -29,7 +30,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/carbon/ui/popover";
-import { toast } from "@/registry/carbon/ui/use-toast";
 
 const languages = [
   { label: "English", value: "en" },
@@ -55,13 +55,8 @@ export default function ComboboxForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+    toast.message("You submitted the following values:", {
+      description: JSON.stringify(data, null, 2),
     });
   }
 

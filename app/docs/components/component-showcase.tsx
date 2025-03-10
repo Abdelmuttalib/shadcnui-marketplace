@@ -38,6 +38,7 @@ export function ComponentPreviewShowcase({
   const { style, setStyle } = useStyle();
   const [components, setComponents] = useState({});
 
+  // @ts-expect-error - dynamic loadable imported component
   const c = RegistryIndex[style][component];
   // c.demo, dynamic loadable imported component
   const Component = c.demo;

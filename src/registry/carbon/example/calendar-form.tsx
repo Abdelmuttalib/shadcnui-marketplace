@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
@@ -23,7 +24,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/carbon/ui/popover";
-import { toast } from "@/registry/carbon/ui/use-toast";
 
 const FormSchema = z.object({
   dob: z.date({
@@ -37,13 +37,8 @@ export default function CalendarForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+    toast.message("You submitted the following values:", {
+      description: JSON.stringify(data, null, 2),
     });
   }
 

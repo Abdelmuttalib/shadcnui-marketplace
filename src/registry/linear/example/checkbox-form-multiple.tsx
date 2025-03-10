@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/linear/ui/button";
@@ -15,7 +16,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/registry/linear/ui/form";
-import { toast } from "@/registry/linear/ui/use-toast";
 
 const items = [
   {

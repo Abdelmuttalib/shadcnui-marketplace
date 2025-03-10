@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
@@ -23,7 +24,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/linear/ui/popover";
-import { toast } from "@/registry/linear/ui/use-toast";
 
 const FormSchema = z.object({
   dob: z.date({

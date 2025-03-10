@@ -25,18 +25,6 @@ import { DefaultUI } from "./ui/components/default-heroui";
 import { LinearUI } from "./ui/components/linear-heroui";
 import { MaterialUI } from "./ui/components/material-heroui";
 
-function Layout({ children }: { children?: React.ReactNode }) {
-  return (
-    <div className="relative">
-      <div className="relative mx-auto flex w-full max-w-screen-2xl">
-        <div className="grid h-full flex-1 gap-72 pb-24 pt-14 md:pb-40">
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Home() {
   const { style, setStyle, stylePath, setStylePath, styleCategory } =
     useStyle();
@@ -200,7 +188,8 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="relative bg-gradient-to-b from-background via-accent to-background py-32">
+          <section className="relative py-32">
+            <div className="absolute inset-0 h-32 w-full bg-gradient-to-b from-accent/40 to-background"></div>
             <PageContainer>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-8">
                 <div className="col-span-1 md:col-span-2 xl:col-span-4">
@@ -249,7 +238,7 @@ export default function Home() {
                     key={style}
                     className="relative col-span-1 grid gap-4 overflow-hidden md:col-span-2 xl:col-span-2"
                   >
-                    <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+                    {/* <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
                       <Typography
                         as="h3"
                         variant="2xl/semibold"
@@ -265,7 +254,7 @@ export default function Home() {
                           </Link>
                         </Button>
                       </div>
-                    </div>
+                    </div> */}
                     <StyleShowcaseCardLink style={style} />
                   </div>
                 ))}
