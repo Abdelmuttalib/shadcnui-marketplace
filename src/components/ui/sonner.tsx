@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 "use client";
 
 import { useTheme } from "next-themes";
@@ -15,6 +13,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
       toastOptions={{
+        // @ts-expect-error - TODO: fix types
         classNames: {
           toast:
             "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",

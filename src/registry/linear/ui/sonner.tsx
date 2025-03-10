@@ -13,6 +13,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
       toastOptions={{
+        // @ts-expect-error - TODO: fix types
         classNames: {
           toast:
             "group toast group-[.toaster]:bg-linear-background group-[.toaster]:text-linear-foreground group-[.toaster]:border-linear-border group-[.toaster]:shadow-lg",
