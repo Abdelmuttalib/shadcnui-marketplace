@@ -86,11 +86,8 @@ export default function RootLayout({
             <body
               className={`${inter.variable} ${ibmPlexMono.variable} relative flex min-h-screen flex-col font-sans antialiased ${ibmPlexSans.variable} ${roboto.variable}`}
             >
+              <DevTools />
               <Toaster />
-              <div className="fixed right-2 top-2 z-[9999]">
-                <ThemeButton />
-              </div>
-              <TailwindIndicator />
               <Navbar />
               <main className="grid h-full flex-1 gap-72 pb-24 md:pb-40">
                 {children}
@@ -106,7 +103,28 @@ export default function RootLayout({
   );
 }
 
+function DevTools() {
+  return (
+    <>
+      <ThemeButtonWrapper />
+      <TailwindIndicator />
+    </>
+  );
+}
+
+function ThemeButtonWrapper() {
+  if (process.env.NODE_ENV === "production") return null;
+
+  return (
+    <div className="fixed right-2 top-2 z-[9999]">
+      <ThemeButton />
+    </div>
+  );
+}
+
 function TailwindIndicator() {
+  if (process.env.NODE_ENV === "production") return null;
+
   return (
     <div className="fixed bottom-2 right-2 z-[9999] text-sm">
       <div className="block sm:hidden">xs</div>
