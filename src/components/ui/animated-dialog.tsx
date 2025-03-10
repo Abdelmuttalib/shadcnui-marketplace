@@ -1,11 +1,13 @@
 // @ts-nocheck
 
-import { cn } from "@/utils/cn";
 import { Dialog, Transition } from "@headlessui/react";
 import type { ClassValue } from "clsx";
 import React, { Fragment } from "react";
-import { Typography } from "./typography";
+
+import { cn } from "@/utils/cn";
+
 import { Button } from "./button";
+import { Typography } from "./typography";
 
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof Transition.Child>,
@@ -23,7 +25,7 @@ const DialogOverlay = React.forwardRef<
   >
     <div
       className={cn(
-        "fixed inset-0 bg-black/25 dark:bg-black/80 backdrop-blur-sm",
+        "fixed inset-0 bg-black/25 backdrop-blur-sm dark:bg-black/80",
         className as ClassValue
       )}
     />
@@ -251,4 +253,4 @@ export default function CustomDialog({
   );
 }
 
-export { DialogRoot, DialogContent, DialogOverlay, DialogPortal, DialogTitle };
+export { DialogContent, DialogOverlay, DialogPortal, DialogRoot, DialogTitle };

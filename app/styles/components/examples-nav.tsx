@@ -58,10 +58,10 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
   const { styleCategory, setStyleCategory } = useStyle();
 
   return (
-    <div className="relative bg-background rounded-lg">
+    <div className="relative rounded-lg bg-background">
       <div className="max-w-[600px] lg:max-w-none">
         <div
-          className={cn("flex gap-1 gap-y-3 flex-wrap items-center", className)}
+          className={cn("flex flex-wrap items-center gap-1 gap-y-3", className)}
           {...props}
         >
           {examples.map((example, index) => {

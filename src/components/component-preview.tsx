@@ -1,22 +1,21 @@
 "use client";
 
-import { cn } from "@/utils/cn";
-import React from "react";
-import { StyleSelect } from "./draft";
-import { useStyle } from "@/hooks/use-style";
-import { Typography } from "./ui/typography";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Cuboid, FullscreenIcon } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Code } from "./views/docs/code";
-import { BlockPlan } from "@/config/data";
-import { RichBadge } from "./ui/rich-badge";
+import { Cuboid } from "lucide-react";
 import Image from "next/image";
+import React from "react";
+
+import { Button } from "@/components/ui/button";
+import { BlockPlan } from "@/config/data";
+import { useStyle } from "@/hooks/use-style";
+import { cn } from "@/utils/cn";
+
+import { StyleSelect } from "./draft";
+import { RichBadge } from "./ui/rich-badge";
+import { Typography } from "./ui/typography";
 
 function GradientEffect() {
   return (
-    <div className="bg-gray-500 absolute -top-10 -left-10 rounded-full blur-3xl p-4 flex flex-col gap-y-4 w-20 h-20 opacity-50 -z-20"></div>
+    <div className="absolute left-0 right-0 top-0 z-10 flex h-10 w-full flex-col gap-y-4 opacity-40 blur-3xl dark:bg-gray-500"></div>
   );
 }
 
@@ -134,14 +133,10 @@ export function ComponentPreview({
   }
 
   return (
-    <div className={cn("pt-10 w-full max-w-[1440px]")} id={id}>
+    <div className={cn("w-full max-w-[1440px] scroll-mt-12 pt-10")} id={id}>
       <div className="mb-6 space-y-3">
-        <div className="flex items-center gap-2 border-y">
-          <Typography
-            as="h2"
-            variant="xl/medium"
-            className="px-3 tracking-tight"
-          >
+        <div className="flex items-center gap-2">
+          <Typography as="h2" variant="xl/medium" className="tracking-tight">
             {/* {title} */}
             {formatString(title)}
           </Typography>
@@ -160,21 +155,21 @@ export function ComponentPreview({
       </div>
       <div
         className={cn(
-          "relative mb-6 p-1 md:p-2",
-          "overflow-hidden",
+          "relative mb-6",
+          "overflow-hidden rounded-2xl",
           {
-            "w-screen h-screen fixed inset-0 z-50 bg-background": isFullScreen,
+            "fixed inset-0 z-50 h-screen w-screen bg-background": isFullScreen,
           }
           // "shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)]",
           // "relative overflow-hidden",
           // "h-full w-full rounded-xl shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:pointer-events-none dark:before:absolute dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline"
         )}
       >
-        {/* <GradientEffect /> */}
-        <div className="flex flex-col gap-1 justify-between overflow-x-auto p-2 py-1.5 bg-background rounded-2xl border">
-          <div className="flex justify-between overflow-x-auto px-1 pt-1 pb-1">
-            <div className="flex items-center justify-between w-full gap-2">
-              <div className="gap-0.5 rounded-lg flex outline-none">
+        <GradientEffect />
+        <div className="relative z-10 flex flex-col justify-between gap-1 overflow-x-auto rounded-2xl border p-2 py-1.5">
+          <div className="flex justify-between overflow-x-auto px-1 pb-1 pt-1">
+            <div className="flex w-full items-center justify-between gap-2">
+              <div className="flex gap-0.5 rounded-lg outline-none">
                 <Button
                   className={cn("bg-transparent", {
                     "border-none text-muted-foreground": !preview,
@@ -212,11 +207,11 @@ export function ComponentPreview({
                   Code
                 </Button>
               </div>
-              <div className="flex gap-2 items-center">
-                <div className="hidden gap-0.5 rounded-md sm:flex outline-none">
+              <div className="flex items-center gap-2">
+                <div className="hidden gap-0.5 rounded-md outline-none sm:flex">
                   <StyleSelect />
                 </div>
-                <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 md:flex dark:bg-gray-950/50 outline-none">
+                <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 outline-none dark:bg-gray-950/50 md:flex">
                   {breakpoints.map((bp) => (
                     <Button
                       key={bp.label}
@@ -241,11 +236,11 @@ export function ComponentPreview({
             </div>
             {/* <div className="hidden items-center gap-0.5 lg:flex">sfdf</div> */}
           </div>
-          <div className="flex h-full w-full overflow-hidden gap-2">
+          <div className="flex h-full w-full gap-2 overflow-hidden">
             {preview ? (
               <div
                 className={cn(
-                  "h-fit rounded-lg overflow-hidden border w-full",
+                  "h-fit w-full overflow-hidden rounded-lg border",
                   {
                     "max-w-md": breakpoint === "sm",
                     "max-w-screen-md": breakpoint === "md",
@@ -257,7 +252,7 @@ export function ComponentPreview({
                   loading="lazy"
                   title={title}
                   className={cn("block h-full min-h-[45rem] w-full", {
-                    "w-full h-full": isFullScreen,
+                    "h-full w-full": isFullScreen,
                   })}
                   src={`${styleUrl}/examples/${category}/${component}`}
                 ></iframe>
@@ -266,14 +261,14 @@ export function ComponentPreview({
               <div className="w-full">
                 {/* {children} */}
                 {plan === BlockPlan.Pro ? (
-                  <div className="relative flex items-center justify-center rounded-lg overflow-hidden bg-card text-sm h-[45rem] max-h-[45rem] hide-scrollbar">
+                  <div className="hide-scrollbar relative flex h-[45rem] max-h-[45rem] items-center justify-center overflow-hidden rounded-lg bg-card text-sm">
                     <Image
                       src="/images/code-placeholder.png"
                       alt="Pro Badge"
                       layout="fill"
-                      className="w-full mx-auto h-full"
+                      className="mx-auto h-full w-full"
                     />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-4 bg-background/40 gap-4 backdrop-blur-sm rounded-lg overflow-hidden">
+                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 overflow-hidden rounded-lg bg-background/40 p-4 backdrop-blur-sm">
                       <Typography
                         as="p"
                         variant="lg/normal"

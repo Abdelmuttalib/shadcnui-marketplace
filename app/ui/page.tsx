@@ -1,24 +1,29 @@
 "use client";
 
+import Link from "next/link";
+
+import { PageContainer } from "@/components/common/page-container";
+import { UserMenu } from "@/components/common/user-menu";
+import { ComponentLoad } from "@/components/component-loader";
+import { StyleSelect } from "@/components/draft";
 import ThemeSwitcher from "@/components/theme-select";
 import { Button } from "@/components/ui/button";
-import { useStyle } from "@/hooks/use-style";
-import Link from "next/link";
-import { UserMenu } from "../components/user-menu";
-import { cn } from "@/lib/utils";
-import { HeroUI } from "./components/heroui";
-import { CarbonUI } from "./components/carbon-heroui";
-import { StyleSelect } from "@/components/draft";
-import { DefaultUI } from "./components/default-heroui";
-import { MaterialUI } from "./components/material-heroui";
 import { Typography } from "@/components/ui/typography";
+import { useStyle } from "@/hooks/use-style";
+import { cn } from "@/lib/utils";
+
+import { CarbonUI } from "./components/carbon-heroui";
+import { DefaultUI } from "./components/default-heroui";
+import { HeroUI } from "./components/heroui";
+import { MaterialUI } from "./components/material-heroui";
 
 export default function UIHero() {
   const { style, setStyle, stylePath, setStylePath } = useStyle();
 
   return (
-    <LandingPageLayout
-      className={cn("bg-gradient-to-r to-background from-accent/40", {
+    <PageContainer
+      size="xl"
+      className={cn("bg-gradient-to-r from-accent/40 to-background", {
         // "from-dft-background": style === "default",
         // "from-cb-background": style === "carbon",
         // "from-background": style === "linear",
@@ -39,7 +44,7 @@ export default function UIHero() {
           alt=""
           className="absolute -top-[1rem] left-1/2 -ml-[40rem] w-[163.125rem] max-w-none sm:-ml-[67.5rem]"
         /> */}
-        <div className="max-w-container relative mx-auto mt-16 grid w-full grid-cols-1 px-4 sm:mt-20 xl:mt-32  border-y">
+        <div className="max-w-container relative mx-auto mt-16 grid w-full grid-cols-1 border-y px-4 sm:mt-20  xl:mt-32">
           <Typography
             as={"h1"}
             variant="6xl/medium"
@@ -47,15 +52,16 @@ export default function UIHero() {
           >
             shadcn ui styles
           </Typography>
+
           <Typography
             as="p"
             variant="lg/normal"
-            className="text-muted-foreground col-start-1 row-start-2 mt-4 max-w-xl"
+            className="col-start-1 row-start-2 mt-4 max-w-xl text-muted-foreground"
           >
             Discover the best shadcn ui kits and styles for modern web
             interfaces.
           </Typography>
-          <div className="col-start-1 row-start-3 mt-10 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 z-20">
+          <div className="z-20 col-start-1 row-start-3 mt-10 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             {/* <Button size={"lg"} asChild>
               <Link href="#">
                 <span>
@@ -78,6 +84,7 @@ export default function UIHero() {
               </Link>
             </Button> */}
           </div>
+
           {/* pointer-events-none  */}
           {style === "default" ? <DefaultUI /> : null}
           {style === "linear" ? <HeroUI /> : null}
@@ -85,7 +92,7 @@ export default function UIHero() {
           {style === "material" ? <MaterialUI /> : null}
         </div>
       </div>
-    </LandingPageLayout>
+    </PageContainer>
   );
 }
 
@@ -115,9 +122,9 @@ function LandingPageLayout({
 
   return (
     <div className="relative">
-      <div className="relative flex flex-col bg-background z-20">
+      <div className="relative z-20 flex flex-col bg-background">
         <header className="sticky top-0 z-20 flex h-16 items-center border-b bg-background/[0.7] backdrop-blur-sm">
-          <nav className="sm:container sm:mx-auto flex items-center justify-between gap-2 px-4 w-full">
+          <nav className="flex w-full items-center justify-between gap-2 px-4 sm:container sm:mx-auto">
             <div className="flex items-center gap-2">
               <Link
                 href="/"
@@ -127,7 +134,7 @@ function LandingPageLayout({
               </Link>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <div className="hidden sm:flex items-center gap-4">
+              <div className="hidden items-center gap-4 sm:flex">
                 <nav>
                   <ul className="inline-flex gap-6">
                     {links.map((link) => (
@@ -149,8 +156,8 @@ function LandingPageLayout({
             </div>
           </nav>
         </header>
-        <div className="mx-auto flex max-w-screen-2xl w-full sm:px-4">
-          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
+        <div className="mx-auto flex w-full max-w-screen-2xl sm:px-4">
+          <div className="hidden min-h-screen w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed sm:block md:w-8 lg:w-12" />
           <div
             className={cn(
               "grid h-full flex-1 gap-72 pb-24 pt-14 md:pb-40",
@@ -159,7 +166,7 @@ function LandingPageLayout({
           >
             {children}
           </div>
-          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
+          <div className="hidden min-h-screen w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed sm:block md:w-8 lg:w-12" />
         </div>
       </div>
     </div>

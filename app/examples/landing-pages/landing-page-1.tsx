@@ -1,11 +1,11 @@
-import { UICustomizer } from "@/components/ui-customizer";
+import { Check, CheckCircle2 } from "lucide-react";
+import { ReactElement } from "react";
+
 import { Button, ButtonLink } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Typography } from "@/components/ui/typography";
+import { UICustomizer } from "@/components/ui-customizer";
 import { cn } from "@/utils/cn";
-import { Check, CheckCircle2 } from "lucide-react";
-
-import { ReactElement } from "react";
 
 export function Container({
   children,
@@ -17,7 +17,7 @@ export function Container({
   return (
     <div
       className={cn(
-        "max-w-7xl mx-auto w-full px-2 sm:px-4 lg:px-6 xl:px-8",
+        "mx-auto w-full max-w-7xl px-2 sm:px-4 lg:px-6 xl:px-8",
         className
       )}
     >
@@ -161,11 +161,11 @@ export function Container({
 
 export default function Landing1() {
   return (
-    <div className="w-full min-h-screen flex flex-col">
+    <div className="flex min-h-screen w-full flex-col">
       <UICustomizer />
-      <header className="w-full h-full bg-background flex justify-between">
+      <header className="flex h-full w-full justify-between bg-background">
         <Container>
-          <div className="h-20 flex justify-between items-center">
+          <div className="flex h-20 items-center justify-between">
             <div>
               <Typography
                 as="h6"
@@ -173,11 +173,11 @@ export default function Landing1() {
                 className="text-foreground"
               >
                 <span className="">ACME</span>
-                <span className="font-medium text-primary ml-1">INC</span>
+                <span className="ml-1 font-medium text-primary">INC</span>
               </Typography>
             </div>
             <div>
-              <nav className="space-x-8 hidden md:block">
+              <nav className="hidden space-x-8 md:block">
                 <a href="#" className="text-foreground-secondary">
                   Home
                 </a>
@@ -203,15 +203,15 @@ export default function Landing1() {
           </div>
         </Container>
       </header>
-      <div className="w-full h-full flex flex-col gap-y-4 lg:px-32 py-24 min-h-screen">
+      <div className="flex h-full min-h-screen w-full flex-col gap-y-4 py-24 lg:px-32">
         <Container className="relative w-full">
           <>
-            <div className="flex flex-col gap-y-8 relative">
+            <div className="relative flex flex-col gap-y-8">
               {/* <GradientBackground /> */}
 
               <Typography
                 variant="6xl/semibold"
-                className="leading-tight max-w-4xl text-foreground"
+                className="max-w-4xl leading-tight text-foreground"
               >
                 Client Acquisition Marketing to Take Your Law Firm to the Next
                 Level
@@ -228,7 +228,7 @@ export default function Landing1() {
                   Learn More
                 </Button>
               </div>
-              <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 rounded-lg gap-4 overflow-hidden">
+              <div className="mt-16 grid grid-cols-1 gap-4 overflow-hidden rounded-lg sm:grid-cols-2 xl:grid-cols-3">
                 {[
                   {
                     title: "SEO",
@@ -252,8 +252,8 @@ export default function Landing1() {
                   <div
                     key={item.title}
                     className={cn(
-                      "flex flex-col gap-y-4 p-4 lg:p-9 rounded-lg",
-                      "bg-gradient-to-b to-background from-muted/80 border"
+                      "flex flex-col gap-y-4 rounded-lg p-4 lg:p-9",
+                      "border bg-gradient-to-b from-muted/80 to-background"
                       // bg-card
                       // {
                       //   "lg:border-t ": index % 3 !== 0,
@@ -262,12 +262,12 @@ export default function Landing1() {
                       // },
                     )}
                   >
-                    <div className="p-1 lg:p-2 rounded-lg shadow size-fit bg-card">
+                    <div className="size-fit rounded-lg bg-card p-1 shadow lg:p-2">
                       {/* <i
                         data-lucide="circle-check"
                         className="size-6 lg:size-7 text-white fill-primary-700"
                       ></i> */}
-                      <CheckCircle2 className="size-6 lg:size-7 text-white fill-primary-700" />
+                      <CheckCircle2 className="fill-primary-700 size-6 text-white lg:size-7" />
                     </div>
                     <div className="flex flex-col gap-y-2">
                       <h3 className="text-xl font-medium capitalize">
@@ -293,18 +293,18 @@ export default function Landing1() {
           </>
         </Container>
       </div>
-      <div className="w-full py-28 bg-primary-50 dark:bg-card">
+      <div className="bg-primary-50 w-full py-28 dark:bg-card">
         <Container>
           <div className="page-padding">
             <div className="padding-vertical padding-xhuge">
-              <div className="flex flex-col justify-center items-center text-center gap-6">
+              <div className="flex flex-col items-center justify-center gap-6 text-center">
                 <div className="flex flex-col gap-2">
                   <Typography variant="md/semibold" className="text-primary">
                     ACME Works for You
                   </Typography>
                   <Typography
                     variant="5xl/semibold"
-                    className="leading-tight max-w-4xl text-foreground"
+                    className="max-w-4xl leading-tight text-foreground"
                   >
                     How ACME makes increasing profit uncomplicated
                   </Typography>
@@ -328,12 +328,12 @@ export default function Landing1() {
           </div>
         </Container>
       </div>
-      <div className="w-full py-28 bg-background">
+      <div className="w-full bg-background py-28">
         <Container>
-          <div className="flex flex-col justify-center items-center text-center gap-4 bg-gray-50 dark:bg-card rounded-lg p-8 pt-14">
+          <div className="flex flex-col items-center justify-center gap-4 rounded-lg bg-gray-50 p-8 pt-14 text-center dark:bg-card">
             <Typography
               variant="lg/normal"
-              className="max-w-5xl text-foreground-secondary"
+              className="text-foreground-secondary max-w-5xl"
             >
               Join 250+ companies already growing with ACME
             </Typography>
@@ -345,7 +345,7 @@ export default function Landing1() {
                     src="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/66a29adac36c93cdb2737e37_allveteran.webp"
                     loading="lazy"
                     alt="Company logo"
-                    className="w-36 h-20 object-contain"
+                    className="h-20 w-36 object-contain"
                   />
                 </div>
                 <div className="logo02_wrapper">
@@ -353,7 +353,7 @@ export default function Landing1() {
                     src="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/66a29ae83ff8af1f55dfd03c_allconsumer.svg"
                     loading="lazy"
                     alt="Company logo"
-                    className="w-36 h-20 object-contain"
+                    className="h-20 w-36 object-contain"
                   />
                 </div>
                 <div className="logo02_wrapper">
@@ -361,7 +361,7 @@ export default function Landing1() {
                     src="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/66a29b1a225206942bc568fa_benefits.webp"
                     loading="lazy"
                     alt="Company logo"
-                    className="w-36 h-20 object-contain"
+                    className="h-20 w-36 object-contain"
                   />
                 </div>
                 <div className="logo02_wrapper">
@@ -371,7 +371,7 @@ export default function Landing1() {
                     alt="Company logo"
                     sizes="106.5078125px"
                     srcSet="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/641a0920878cbeebb8d20f0a_ionsolar-logo-removebg-preview-p-500.png 500w, https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/641a0920878cbeebb8d20f0a_ionsolar-logo-removebg-preview-p-800.png 800w, https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/641a0920878cbeebb8d20f0a_ionsolar-logo-removebg-preview.png 912w"
-                    className="w-36 h-20 object-contain"
+                    className="h-20 w-36 object-contain"
                   />
                 </div>
                 <div className="logo01_wrapper logo1-2_wrapper">
@@ -381,7 +381,7 @@ export default function Landing1() {
                     sizes="94.453125px"
                     srcSet="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/640a4566ee44966daa9d6ef6_jellyfish_logo_color-black-designer-colors-Blue-for-website-p-500.png 500w, https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/640a4566ee44966daa9d6ef6_jellyfish_logo_color-black-designer-colors-Blue-for-website-p-800.png 800w, https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/640a4566ee44966daa9d6ef6_jellyfish_logo_color-black-designer-colors-Blue-for-website-p-1080.png 1080w, https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/640a4566ee44966daa9d6ef6_jellyfish_logo_color-black-designer-colors-Blue-for-website-p-1600.png 1600w, https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/640a4566ee44966daa9d6ef6_jellyfish_logo_color-black-designer-colors-Blue-for-website-p-2000.png 2000w, https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/640a4566ee44966daa9d6ef6_jellyfish_logo_color-black-designer-colors-Blue-for-website.png 2143w"
                     alt="Company logo"
-                    className="w-36 h-20 object-contain"
+                    className="h-20 w-36 object-contain"
                   />
                 </div>
               </div>
@@ -390,18 +390,18 @@ export default function Landing1() {
           </div>
         </Container>
       </div>
-      <div className="w-full py-28 bg-background">
+      <div className="w-full bg-background py-28">
         <Container>
           <section className="cta_2_homepage">
             <div className="page-padding">
               <div className="container-large">
                 <div className="padding-vertical padding-xhuge">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                  <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
                     <div className="flex flex-col gap-8">
                       <div className="margin-bottom margin-small">
                         <Typography
                           variant="5xl/semibold"
-                          className="leading-tight max-w-4xl text-foreground"
+                          className="max-w-4xl leading-tight text-foreground"
                         >
                           Join Hundreds of Firms Growing with ACME
                         </Typography>
@@ -415,7 +415,7 @@ export default function Landing1() {
                           <div key={t} className="flex items-center gap-3">
                             <div>
                               {/* <path fillRule="evenodd" clipRule="evenodd" d="M19.9457 8.62169L11.5923 16.6834L9.37568 14.315C8.96734 13.93 8.32568 13.9067 7.85901 14.2334C7.40401 14.5717 7.27568 15.1667 7.55568 15.645L10.1807 19.915C10.4373 20.3117 10.8807 20.5567 11.3823 20.5567C11.8607 20.5567 12.3157 20.3117 12.5723 19.915C12.9923 19.3667 21.0073 9.81169 21.0073 9.81169C22.0573 8.73836 20.7857 7.79336 19.9457 8.61002V8.62169Z" fill="#3F46FF"></path> */}
-                              <Check className="text-primary size-5" />
+                              <Check className="size-5 text-primary" />
                             </div>
                             <div className="cta02_item-text-wrapper">
                               <div className="text-size-medium">{t}</div>
@@ -451,7 +451,7 @@ export default function Landing1() {
         </Container>
       </div>
 
-      <div className="w-full py-28 bg-primary-50 dark:bg-card">
+      <div className="bg-primary-50 w-full py-28 dark:bg-card">
         <Container>
           <div>
             <div>
@@ -462,19 +462,19 @@ export default function Landing1() {
                   </Typography>
                   <Typography
                     variant="5xl/semibold"
-                    className="leading-tight max-w-4xl text-foreground"
+                    className="max-w-4xl leading-tight text-foreground"
                   >
                     Ready to Take your Marketing to New Heights?
                   </Typography>
                 </div>
                 <Typography
                   variant="lg/normal"
-                  className="max-w-5xl text-foreground-secondary"
+                  className="text-foreground-secondary max-w-5xl"
                 >
                   Learn more below or simply set up a meeting to get started.
                 </Typography>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
+                <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
                   {[
                     {
                       title: "ACME Leads",
@@ -499,11 +499,11 @@ export default function Landing1() {
                   ].map((c) => (
                     <div
                       key={c.title}
-                      className="bg-background p-5 md:p-8 rounded-xl border flex flex-col gap-4"
+                      className="flex flex-col gap-4 rounded-xl border bg-background p-5 md:p-8"
                     >
                       <div className="flex flex-col">
                         <div className="mb-8 md:mb-16">
-                          <div className="p-2 bg-primary-100 dark:border dark:bg-transparent rounded size-fit">
+                          <div className="bg-primary-100 size-fit rounded p-2 dark:border dark:bg-transparent">
                             <img
                               src="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/6408c23ae7c9a77ac359fc23_L.svg"
                               loading="lazy"
@@ -541,7 +541,7 @@ export default function Landing1() {
           <div>
             <Container>
               <>
-                <div className="bg-gray-50 dark:bg-card p-16 rounded-lg mt-36 mb-16">
+                <div className="mb-16 mt-36 rounded-lg bg-gray-50 p-16 dark:bg-card">
                   <div className="flex flex-col gap-5 text-center">
                     <div>
                       <Typography
@@ -562,7 +562,7 @@ export default function Landing1() {
                 </div>
                 <div className="flex flex-col">
                   <div className="py-14">
-                    <div className="flex flex-col gap-8 md:flex-row justify-between items-center">
+                    <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
                       <a
                         id="w-node-dde648c4-b69f-117b-0737-d4bbeb47e1af-eb47e198"
                         href="#"
@@ -574,7 +574,7 @@ export default function Landing1() {
                           className="text-foreground"
                         >
                           <span className="">ACME</span>
-                          <span className="font-medium text-primary ml-1">
+                          <span className="ml-1 font-medium text-primary">
                             INC
                           </span>
                         </Typography>
@@ -605,7 +605,7 @@ export default function Landing1() {
                           <div>Solutions</div>
                         </a>
                       </div>
-                      <div className="flex gap-6 text-foreground-subtle">
+                      <div className="text-foreground-subtle flex gap-6">
                         <a
                           aria-label="Visit our Facebook page"
                           href="#"
@@ -698,7 +698,7 @@ export default function Landing1() {
                     </div>
                   </div>
                   <Separator />
-                  <div className="w-full flex justify-center text-center pt-10 pb-4 text-foreground-subtle text-sm">
+                  <div className="text-foreground-subtle flex w-full justify-center pb-4 pt-10 text-center text-sm">
                     <div className="flex gap-6">
                       <div>© 2024 &nbsp;All Rights Reserved</div>
                     </div>

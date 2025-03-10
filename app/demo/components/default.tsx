@@ -47,9 +47,9 @@ import { ToggleDemo } from "@/components/showcase";
 import { ToggleGroupDemo } from "@/components/showcase";
 import { TooltipDemo } from "@/components/showcase";
 
-export default function SinkPage() {
+export function DefaultSinkPage() {
   return (
-    <div className="grid lg:grid-cols-2 gap-4">
+    <div className="grid gap-4 lg:grid-cols-3">
       <ComponentWrapper name="chart" className="w-full">
         <ChartDemo />
       </ComponentWrapper>

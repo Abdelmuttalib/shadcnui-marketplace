@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import { Typography } from "@/components/ui/typography";
 
 export default function HeroSectionPage() {
   const appName = "Acme";

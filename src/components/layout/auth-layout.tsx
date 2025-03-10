@@ -43,7 +43,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
 
               <p className="label-sm absolute bottom-6 left-5 text-gray-600">
                 Copyright © {new Date().getFullYear()}{" "}
-                <span className="underline decoration-primary-600 decoration-2 underline-offset-2 duration-200 ease-in-out hover:text-primary-500">
+                <span className="decoration-primary-600 hover:text-primary-500 underline decoration-2 underline-offset-2 duration-200 ease-in-out">
                   Invix
                 </span>
                 . All rights reserved

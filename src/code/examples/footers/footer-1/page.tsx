@@ -1,5 +1,5 @@
+import { Facebook, Github,Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 
 import { Typography } from "@/components/ui/typography";
 

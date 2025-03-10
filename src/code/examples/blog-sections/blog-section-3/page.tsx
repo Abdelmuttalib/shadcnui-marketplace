@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight,CalendarDays, Clock } from "lucide-react";
 import Link from "next/link";
-import { CalendarDays, Clock, ArrowRight } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import React from "react";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 
 function formatDate(dateString: string): string {

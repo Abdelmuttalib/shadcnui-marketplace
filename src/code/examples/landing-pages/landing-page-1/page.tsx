@@ -1,12 +1,12 @@
 "use client";
 
+import { Check, CheckCircle2 } from "lucide-react";
 import { ReactElement } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
-import { Check, CheckCircle2 } from "lucide-react";
 
 function Container({
   children,

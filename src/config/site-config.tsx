@@ -5,7 +5,8 @@ export const siteConfig = {
   url: "https://shadcn-ui-marketplace.com",
   logo: "/images/logo.png",
   favicon: "/favicon.ico",
-  twitter: "@shadcnuistyles",
+  twitterUrl: "https://x.com/shadcnui_styles",
+  twitterHandle: "@shadcnui_styles",
 
   mainNavLinks: [
     {
@@ -20,5 +21,9 @@ export const siteConfig = {
       title: "Styles",
       href: "/styles",
     },
+    // {
+    //   title: "Docs",
+    //   href: "/docs",
+    // },
   ],
 };

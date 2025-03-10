@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import copy from "copy-to-clipboard";
+import { CheckIcon, CopyIcon } from "lucide-react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { CheckIcon, CopyIcon } from "lucide-react";
 
 export function CopyCodeButton({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
@@ -21,7 +21,7 @@ export function CopyCodeButton({ code }: { code: string }) {
       variant="outline"
       size="sm"
       onClick={onCopyCode}
-      className="absolute top-2 right-2 transition-transform duration-300 ease-in-out [&_svg]:size-4 [&_svg]:transition-transform"
+      className="absolute right-2 top-2 bg-background transition-transform duration-300 ease-in-out [&_svg]:size-4 [&_svg]:transition-transform"
     >
       {copied ? <CheckIcon /> : <CopyIcon />} {copied ? "Copied" : "Copy"}
     </Button>

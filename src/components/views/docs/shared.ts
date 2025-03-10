@@ -17,5 +17,3 @@
 //     jsxs,
 //   }) as JSX.Element;
 // }
-
-

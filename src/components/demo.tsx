@@ -1,21 +1,6 @@
 "use client";
 
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-import {
   ArrowRightIcon,
   BookmarkIcon,
   CheckCheckIcon,
@@ -30,11 +15,26 @@ import {
   User,
   UserPlus,
 } from "lucide-react";
-import { Button, ButtonLink } from "@/components/ui/button";
 import React from "react";
+
 import CustomDialog from "@/components/ui/animated-dialog";
-import { Input } from "@/components/ui/input";
+import { Button, ButtonLink } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export function DropdownMenuDemo() {
@@ -182,7 +182,7 @@ export function CustomDialogDemo() {
           </div>
         </form>
 
-        <div className="flex justify-end mt-4 gap-x-2">
+        <div className="mt-4 flex justify-end gap-x-2">
           <Button variant="outline" onClick={() => setOpen(false)} size="sm">
             Close
           </Button>
@@ -218,13 +218,15 @@ export const payments: Payment[] = [
 ];
 
 import { ColumnDef } from "@tanstack/react-table";
-import { formatDateDayTime } from "@/utils/date";
+
 import { useMounted } from "@/hooks/use-mounted";
 import { cn } from "@/utils/cn";
-import { Badge } from "./ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { DataTable } from "./ui/data-table";
+import { formatDateDayTime } from "@/utils/date";
+
 import { ScreenContainer } from "./container";
+import { Badge } from "./ui/badge";
+import { DataTable } from "./ui/data-table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Typography } from "./ui/typography";
 
 export type Payment = {
@@ -296,8 +298,8 @@ export function DataTableDemo() {
 
 export function NotificationsCard() {
   return (
-    <div className="w-full max-w-lg shadow rounded-lg p-4 md:p-6 bg-card border space-y-4">
-      <div className="flex justify-between items-center">
+    <div className="w-full max-w-lg space-y-4 rounded-lg border bg-card p-4 shadow md:p-6">
+      <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium text-foreground sm:text-2xl">
           Notifications{" "}
         </h3>
@@ -386,10 +388,10 @@ const NotificationsTabs = () => {
             <TabsTrigger
               key={notificationLabel}
               value={notificationLabel}
-              className="capitalize w-full"
+              className="w-full capitalize"
             >
               {notificationLabel.toLocaleLowerCase()}{" "}
-              <span className="bg-accent-hover/50 px-1 py-0.5 ml-2 rounded border text-xs font-medium">
+              <span className="bg-accent-hover/50 ml-2 rounded border px-1 py-0.5 text-xs font-medium">
                 {
                   notificationsData[
                     notificationLabel as keyof typeof notificationsData
@@ -432,7 +434,7 @@ function Notification({
     <div
       key={notification.id}
       className={cn(
-        "relative flex w-full gap-4 px-4 py-4 hover:bg-primary-100/20 focus:bg-primary-100/30 sm:py-5",
+        "hover:bg-primary-100/20 focus:bg-primary-100/30 relative flex w-full gap-4 px-4 py-4 sm:py-5",
         "hover:bg-accent-hover/50",
         {
           "bg-accent-hover/50": !notification.isRead,
@@ -441,18 +443,18 @@ function Notification({
     >
       {/* not read notification indicator  */}
       {!notification.isRead && (
-        <div className="absolute top-3 right-4 h-2.5 w-2.5 rounded-full bg-primary dark:bg-primary-400"></div>
+        <div className="dark:bg-primary-400 absolute right-4 top-3 h-2.5 w-2.5 rounded-full bg-primary"></div>
       )}
       <div className="h-fit w-fit">
         <div className="relative">
           <img
             src={notification.avatar}
             alt="avatar"
-            className="w-12 h-10 rounded-full block"
+            className="block h-10 w-12 rounded-full"
           />
           {/* online indicator  */}
           {notification.id % 2 === 0 && (
-            <div className="absolute -top-0.5 -right-0.5 flex items-center gap-x-1.5">
+            <div className="absolute -right-0.5 -top-0.5 flex items-center gap-x-1.5">
               <div className="flex-none rounded-full bg-emerald-500/20 p-[3px]">
                 <div className="h-2 w-2 rounded-full bg-emerald-500" />
               </div>
@@ -460,10 +462,10 @@ function Notification({
           )}
         </div>
       </div>
-      <div className="w-full flex flex-col gap-2">
-        <p className="font-medium text-sm">
+      <div className="flex w-full flex-col gap-2">
+        <p className="text-sm font-medium">
           {notification.name}
-          <span className="font-normal ml-1 text-foreground">
+          <span className="ml-1 font-normal text-foreground">
             {notification.message}
           </span>
         </p>
@@ -477,12 +479,12 @@ function Notification({
           </div>
         )}
         <div className="flex w-full justify-between">
-          <p className="text-xs font-medium text-foreground-subtle">
+          <p className="text-foreground-subtle text-xs font-medium">
             <RenderAfterMount>
               {formatDateDayTime(notification.date)}
             </RenderAfterMount>
           </p>
-          <p className="text-xs font-medium text-foreground-subtle">
+          <p className="text-foreground-subtle text-xs font-medium">
             {notification.time}
           </p>
         </div>
@@ -494,7 +496,7 @@ function Notification({
 export function NotificationAlert() {
   return (
     <div
-      className="max-w-xs bg-card border rounded-xl shadow-lg"
+      className="max-w-xs rounded-xl border bg-card shadow-lg"
       role="alert"
       tabIndex={-1}
       aria-labelledby="hs-toast-stack-toggle-label"
@@ -502,7 +504,7 @@ export function NotificationAlert() {
       <div className="flex p-4">
         <div className="shrink-0">
           <svg
-            className="size-5 text-foreground-subtle mt-1"
+            className="text-foreground-subtle mt-1 size-5"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -520,11 +522,11 @@ export function NotificationAlert() {
         <div className="ms-4">
           <h3
             id="hs-toast-stack-toggle-label"
-            className="text-foreground font-semibold"
+            className="font-semibold text-foreground"
           >
             App notifications
           </h3>
-          <div className="mt-1 text-sm text-foreground-subtle">
+          <div className="text-foreground-subtle mt-1 text-sm">
             enable notifications to receive updates from the app.
           </div>
           <div className="mt-4">
@@ -578,10 +580,10 @@ export function BadgesDemo() {
 }
 
 import { useForm } from "react-hook-form";
-
 import { z } from "zod";
-import { UICustomizer2 } from "./ui-customizer";
+
 import { Switch } from "./ui/switch";
+import { UICustomizer2 } from "./ui-customizer";
 
 const waitlistFormSchema = z.object({
   email: z.string().email(),
@@ -631,7 +633,7 @@ export function WaitlistForm() {
         <form
           // @ts-ignore
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col sm:flex-row gap-2"
+          className="flex flex-col gap-2 sm:flex-row"
         >
           <div>
             <Input
@@ -667,11 +669,11 @@ export function WaitlistForm() {
 export function DemoShowcase() {
   return (
     <>
-      <div className="relative -mt-[5.75rem] overflow-hidden pt-12 md:pt-[5.75rem] bg-base-25/50 dark:bg-background">
+      <div className="bg-base-25/50 relative -mt-[5.75rem] overflow-hidden pt-12 dark:bg-background md:pt-[5.75rem]">
         <ScreenContainer>
           <div className="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/publichttps://tailwindui.com/plus/img/avatar-1.jpg')] bg-[length:1000px_700px] bg-[position:calc(50%_+_190px)_-50px] bg-no-repeat lg:block"></div>
-          <div className="max-w-container mx-auto px-4 pt-4 sm:px-6 flex flex-col lg:flex-row lg:px-8">
-            <div className="relative z-20 mx-auto max-w-[40rem] pt-16 pb-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pt-20 lg:pr-4 lg:pb-24">
+          <div className="max-w-container mx-auto flex flex-col px-4 pt-4 sm:px-6 lg:flex-row lg:px-8">
+            <div className="relative z-20 mx-auto max-w-[40rem] pb-16 pt-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
               <h1 className="text-base/7 font-semibold text-primary">
                 Powered by shadcn ui
               </h1>
@@ -679,14 +681,14 @@ export function DemoShowcase() {
               <Typography
                 as="p"
                 variant="5xl/bold"
-                className="mt-4 text-foreground tracking-tight"
+                className="mt-4 tracking-tight text-foreground"
               >
                 {/* Beautiful UI components, crafted with shadcn ui and Tailwind
                 CSS. */}
                 shadcn ui <span className="italic">styles</span>
               </Typography>
-              <div className="flex flex-wrap gap-6 mt-4">
-                <div className="flex items-center text-sm font-medium text-foreground-secondary">
+              <div className="mt-4 flex flex-wrap gap-6">
+                <div className="text-foreground-secondary flex items-center text-sm font-medium">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 256 256"
@@ -740,11 +742,11 @@ export function DemoShowcase() {
                 </svg> */}
                   <span className="ml-2.5">shadcn ui</span>
                 </div>
-                <div className="flex items-center text-sm font-medium text-foreground-secondary">
+                <div className="text-foreground-secondary flex items-center text-sm font-medium">
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 36 36"
-                    className="h-6 w-6 inline-flex items-center justify-center mt-2"
+                    className="mt-2 inline-flex h-6 w-6 items-center justify-center"
                     fill="none"
                   >
                     <path
@@ -757,7 +759,7 @@ export function DemoShowcase() {
                 </div>
               </div>
 
-              <p className="mt-4 text-base/7 text-foreground-secondary">
+              <p className="text-foreground-secondary mt-4 text-base/7">
                 {/* Over 500+ professionally designed, fully responsive, expertly
                 crafted component examples you can drop into your Tailwind
                 projects and customize to your heart’s content. */}
@@ -796,12 +798,12 @@ export function DemoShowcase() {
             <div className="relative z-10 mt-12 select-none lg:flex">
               <div className="z-20 flex flex-col">
                 <div className="relative p-4">
-                  <div className="absolute top-8 right-0 bottom-0 left-11 bg-slate-900/[0.03]"></div>
-                  <div className="pointer-events-auto relative z-10 w-full rounded-lg bg-card text-[0.8125rem]/5 text-foreground-secondary ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
+                  <div className="absolute bottom-0 left-11 right-0 top-8 bg-slate-900/[0.03]"></div>
+                  <div className="text-foreground-secondary pointer-events-auto relative z-10 w-full rounded-lg bg-card text-[0.8125rem]/5 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
                     <div>
-                      <div className="flex items-center px-3.5 py-2.5 text-foreground-secondary">
+                      <div className="text-foreground-secondary flex items-center px-3.5 py-2.5">
                         <svg
-                          className="mr-2 size-5 stroke-foreground-subtle"
+                          className="stroke-foreground-subtle mr-2 size-5"
                           fill="none"
                           viewBox="0 0 24 24"
                           strokeWidth="2"
@@ -815,12 +817,12 @@ export function DemoShowcase() {
                         Search projects...
                       </div>
                       <div className="border-t border-slate-400/20 px-3.5 py-3">
-                        <div className="mb-1.5 text-[0.6875rem] font-semibold text-foreground-subtle">
+                        <div className="text-foreground-subtle mb-1.5 text-[0.6875rem] font-semibold">
                           Recent searches
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -835,7 +837,7 @@ export function DemoShowcase() {
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -852,7 +854,7 @@ export function DemoShowcase() {
                       <div className="border-t border-slate-400/20 px-3.5 py-3">
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -865,7 +867,7 @@ export function DemoShowcase() {
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -876,7 +878,7 @@ export function DemoShowcase() {
                           </svg>
                           Add new folder...
                         </div>
-                        <div className="flex items-center rounded-md p-1.5 bg-primary text-white">
+                        <div className="flex items-center rounded-md bg-primary p-1.5 text-white">
                           <svg
                             className="mr-2.5 size-5 flex-none stroke-white"
                             fill="none"
@@ -891,7 +893,7 @@ export function DemoShowcase() {
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -915,15 +917,15 @@ export function DemoShowcase() {
                   </div>
                   <div className="relative">
                     <Button variant="outline" className="shadow-xs">
-                      <svg className="mr-2.5 size-5 flex-none fill-foreground-subtle">
+                      <svg className="fill-foreground-subtle mr-2.5 size-5 flex-none">
                         <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
                       </svg>
                       Bookmark
                     </Button>
 
                     <div className="z-0">
-                      <div className="absolute -top-12 right-0 -bottom-8 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                      <div className="absolute -top-12 -bottom-8 left-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                      <div className="absolute -bottom-8 -top-12 right-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                      <div className="absolute -bottom-8 -top-12 left-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                     </div>
                   </div>
                 </div>
@@ -939,7 +941,7 @@ export function DemoShowcase() {
                   {/* <div className="w-full h-full z-10 absolute"></div> */}
                   <NotificationsCard />
                 </div>
-                <div className="relative md:p-4 mt-4 pb-4">
+                <div className="relative mt-4 pb-4 md:p-4">
                   <NotificationAlert />
                 </div>
               </div>

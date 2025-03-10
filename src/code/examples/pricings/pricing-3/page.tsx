@@ -1,10 +1,11 @@
 "use client";
 
-import { Check, Sparkles, MessageSquare, Users } from "lucide-react";
+import { Check, MessageSquare, Sparkles, Users } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { Typography } from "@/components/ui/typography";
+import { cn } from "@/lib/utils";
 
 const pricingTiers = [
   {

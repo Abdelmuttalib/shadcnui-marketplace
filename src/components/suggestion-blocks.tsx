@@ -1,12 +1,14 @@
 "use client";
 
 import { ArrowRight, ArrowRightIcon } from "lucide-react";
-import { Typography } from "./ui/typography";
-import { blocksRegistry } from "@/config/data";
-import { Badge } from "./ui/badge";
-import Link from "next/link";
-import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
+import Link from "next/link";
+
+import { blocksRegistry } from "@/config/data";
+
+import { Badge } from "./ui/badge";
+import { Card, CardContent } from "./ui/card";
+import { Typography } from "./ui/typography";
 
 export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
   const excluded = exclude || "";
@@ -31,15 +33,15 @@ export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
   }[];
 
   return (
-    <div className="lg:mt-72 mb-24 space-y-2">
-      <div className="space-y-2 border-y px-3">
+    <div className="mb-24 space-y-2 lg:mt-72">
+      <div className="space-y-2">
         <Typography as="h2" variant="lg/medium" className="tracking-tight">
           Explore more examples
         </Typography>
       </div>
-      <nav className="border-y py-4 px-3 mt-10">
+      <nav className="mt-10 py-4">
         <ul
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2"
           // className="overflow-hidden p-2 px-3 flex flex-wrap gap-8"
         >
           {suggestedComponentsData.map((block) => {
@@ -58,29 +60,14 @@ export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
                   // } hover:shadow-lg hover:shadow-foreground/5`}
                 >
                   <CardContent className="p-0">
-                    <div className="relative aspect-video overflow-hidden">
-                      <Image
-                        // src={category.image || "/placeholder.svg"}
-                        // src={"/images/blocks/blog-preview.jpg"}
-                        src={"/images/blocks/blog-sections-dark.png"}
-                        // 1919 pixels
-                        // 963 pixels
-                        // scale down to smaller size
-                        width={1919 / 2}
-                        height={963 / 2}
-                        quality={100}
-                        alt={block.title}
-                        // layout="fill"
-                        // objectFit="cover"
-                        className="transition-all duration-300 ml-4 mt-11 rounded-md border group-hover:scale-110 group-hover:rounded-tl-none hidden"
-                      />
+                    <div className="relative aspect-video overflow-hidden bg-accent/50 dark:bg-inherit">
                       <Image
                         src={`${block.image}-light.png`}
                         width={1919 / 2}
                         height={963 / 2}
                         quality={100}
                         alt={block.title}
-                        className="transition-all duration-300 ml-4 mt-11 rounded-md border group-hover:scale-110 group-hover:rounded-tl-none block dark:hidden"
+                        className="ml-4 mt-11 block rounded-md border transition-all duration-300 group-hover:scale-110 group-hover:rounded-tl-none dark:hidden"
                       />
                       <Image
                         src={`${block.image}-dark.png`}
@@ -88,12 +75,12 @@ export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
                         height={963 / 2}
                         quality={100}
                         alt={block.title}
-                        className="transition-all duration-300 ml-4 mt-11 rounded-md border group-hover:scale-110 group-hover:rounded-tl-none hidden dark:block"
+                        className="ml-4 mt-11 hidden rounded-md border transition-all duration-300 group-hover:scale-110 group-hover:rounded-tl-none dark:block"
                       />
                       {/* <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-background to-transparent via-background h-20"></div> */}
-                      <div className="absolute top-2 left-4 right-4 flex items-center justify-between gap-2">
+                      <div className="absolute left-4 right-4 top-2 flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
-                          <h3 className="text-lg font-semibold tracking-tight text-foreground capitalize">
+                          <h3 className="text-lg font-semibold capitalize tracking-tight text-foreground">
                             {block.title}
                           </h3>
                           <Badge className="">
@@ -103,8 +90,8 @@ export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
                             {/* 4 Examples */}
                           </Badge>
                         </div>
-                        <div className="bg-accent p-1 rounded-md hidden group-hover:block">
-                          <ArrowRight className="size-4 text-muted-foreground -rotate-45" />
+                        <div className="hidden rounded-md bg-accent p-1 group-hover:block">
+                          <ArrowRight className="size-4 -rotate-45 text-muted-foreground" />
                         </div>
                         {/* <div className="flex items-center">
                           <category.icon className="size-4 text-muted-foreground mr-2" />
@@ -145,7 +132,7 @@ export function SuggestedComponentsSection({ exclude }: { exclude?: string }) {
           })}
         </ul>
       </nav>
-      {/* <div className="space-y-2 border-y px-3">
+      {/* <div className="space-y-2">
         <Typography as="h2" variant="lg/medium">
           Explore more examples
         </Typography>
@@ -181,17 +168,17 @@ export function SuggestionLinkCard({
   examplesCount: number;
 }) {
   return (
-    <div className="border lg:col-span-4 group relative flex flex-col overflow-hidden rounded-xl bg-background gap-4 py-6">
+    <div className="group relative flex flex-col gap-4 overflow-hidden rounded-xl border bg-background py-6 lg:col-span-4">
       <div className="absolute inset-0 bg-gradient-to-br from-background to-accent/40 group-hover:to-30%"></div>
 
-      <div className="relative shrink-0 overflow-hidden rounded group flex flex-col px-4">
+      <div className="group relative flex shrink-0 flex-col overflow-hidden rounded px-4">
         <Typography
           as="h2"
           variant="xl/medium"
-          className="overflow-hidden w-full h-full rounded-md object-cover inline-flex capitalize"
+          className="inline-flex h-full w-full overflow-hidden rounded-md object-cover capitalize"
         >
           {title}
-          <ArrowRightIcon className="hidden group-hover:block size-5 -rotate-45 text-muted-foreground z-40" />
+          <ArrowRightIcon className="z-40 hidden size-5 -rotate-45 text-muted-foreground group-hover:block" />
         </Typography>
       </div>
       <div className="border-t pt-2">
@@ -199,7 +186,7 @@ export function SuggestionLinkCard({
           <span className="absolute -inset-2.5 z-10"></span>
         </a>
 
-        <Badge className="relative text-sm font-medium text-foreground-subtle">
+        <Badge className="text-foreground-subtle relative text-sm font-medium">
           {examplesCount} examples
         </Badge>
       </div>

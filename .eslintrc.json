@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["simple-import-sort"],
+
+  "rules": {
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "react/no-unescaped-entities": "warn",
+    "@next/next/no-html-link-for-pages": "warn"
+  },
+
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  }
 }

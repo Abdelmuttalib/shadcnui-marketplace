@@ -1,17 +1,15 @@
 "use client";
 
-import { useTheme } from "next-themes";
-
 import { Menu, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import { ChevronDownIcon, MoonIcon, Pencil, SunIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 import { Fragment } from "react";
 
+import { useMounted } from "@/hooks/use-mounted";
 import { type ThemeColorType, useThemeColor } from "@/hooks/use-theme-color";
-
 import { cn } from "@/utils/cn";
 import { PRIMARY_THEME_COLORS } from "@/utils/theme-colors";
-import { useMounted } from "@/hooks/use-mounted";
 
 export default function ThemeSwitcher({
   className,
@@ -102,7 +100,7 @@ export function ThemeColorSelect() {
               });
             }}
             className={cn(
-              "flex items-center font-medium capitalize text-foreground  rounded-lg",
+              "flex items-center rounded-lg font-medium capitalize  text-foreground",
               {
                 "ring-2 ring-primary ring-offset-background":
                   name === themeColor.colorName,
@@ -178,7 +176,7 @@ export function ThemeColorSelect2() {
               variant: "outline",
               size: "sm",
             }),
-            "flex mx-2 border capitalize"
+            "mx-2 flex border capitalize"
           )}
         >
           <span
@@ -188,7 +186,7 @@ export function ThemeColorSelect2() {
             }}
           ></span>
           <>{themeColor.colorName}</>
-          <ChevronDownIcon className="ml-2 h-3.5 w-3.5 text-foreground-secondary" />
+          <ChevronDownIcon className="text-foreground-secondary ml-2 h-3.5 w-3.5" />
           {/* {name == themeColor.colorName && (
                       <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
                     )} */}
@@ -204,7 +202,7 @@ export function ThemeColorSelect2() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-popover text-foreground shadow-lg ring-1 ring-border focus:outline-none p-1">
+        <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-popover p-1 text-foreground shadow-lg ring-1 ring-border focus:outline-none">
           <div className="relative">
             {PRIMARY_THEME_COLORS?.map(
               ({ name, color }: { name: ThemeColorType; color: string }) => (
@@ -218,7 +216,7 @@ export function ThemeColorSelect2() {
                     className={cn(
                       "flex w-full items-center rounded px-3 py-2.5 capitalize text-foreground",
                       {
-                        "bg-primary-100 dark:bg-muted-foreground/20 text-foreground":
+                        "bg-primary-100 text-foreground dark:bg-muted-foreground/20":
                           name === themeColor.colorName,
                         "hover:bg-muted dark:hover:bg-muted-foreground/10":
                           name !== themeColor.colorName,

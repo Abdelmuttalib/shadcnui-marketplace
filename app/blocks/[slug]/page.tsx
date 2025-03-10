@@ -1,14 +1,18 @@
+import { ArrowRightIcon } from "lucide-react";
+import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 
-import { blocksRegistry } from "@/config/data";
+import { PageContainer } from "@/components/common/page-container";
+import { PageSubTitle, PageTitle } from "@/components/common/page-header";
 import { ComponentPreview } from "@/components/component-preview";
 import { SuggestedComponentsSection } from "@/components/suggestion-blocks";
-import { Code } from "@/components/views/docs/code";
-import BlocksBreadcrumb from "../components/blocks-breadcrumb";
-import { Typography } from "@/components/ui/typography";
-import { ArrowRightIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Metadata, ResolvingMetadata } from "next";
+import { Typography } from "@/components/ui/typography";
+import { Code } from "@/components/views/docs/code";
+import { blocksRegistry } from "@/config/data";
+
+import BlocksBreadcrumb from "../components/blocks-breadcrumb";
+import { PreviewContainer } from "../components/preview-container";
 
 interface Props {
   params: { slug: string };
@@ -61,66 +65,78 @@ export default function ComponentPage({ params }: Props) {
     return <BlocksNotFound slug={slug} />;
   }
 
+  const blockPageTitle = slug?.replace("-", " ");
+
   return (
-    <div className="bg-gradient-to-r from-accent/40 to-background">
-      <div className="py-20">
-        <div className="space-y-2">
-          <div className="border-y px-3">
-            <div className="">
-              <BlocksBreadcrumb />
+    <div className="">
+      <div className="bg-gradient-to-b from-accent/40 to-background py-20">
+        <PageContainer>
+          <div className="space-y-2">
+            <div>
+              <div>
+                <BlocksBreadcrumb />
+              </div>
+            </div>
+            {/* <div className="flex items-center gap-2">
+              <Typography
+                as={"h2"}
+                variant="3xl/semibold"
+                className="capitalize tracking-tight"
+              >
+                {blockPageTitle}
+              </Typography>
+              <Badge>{blocksData?.length} blocks</Badge>
+            </div> */}
+            <div className="flex items-center gap-2">
+              <PageTitle>{blockPageTitle}</PageTitle>
+              <Badge>{blocksData?.length} blocks</Badge>
+            </div>
+
+            <div>
+              <PageSubTitle
+                as={"p"}
+                className="max-w-2xl text-muted-foreground"
+              >
+                {blockPageTitle} blocks for your website. crafted with shadcn ui
+                and tailwindcss. Preview the blocks in different styles and see
+                how they look together. copy & paste blocks directly to your
+                project.
+              </PageSubTitle>
             </div>
           </div>
-          <div className="border-y flex items-center gap-2">
-            <Typography
-              as={"h2"}
-              variant="3xl/semibold"
-              className="tracking-tight capitalize px-3"
-            >
-              {slug?.replace("-", " ")}
-            </Typography>
-            <Badge>{blocksData?.length} blocks</Badge>
-          </div>
-
-          <div className="border-y">
-            <Typography
-              as={"p"}
-              variant="md/normal"
-              className="text-muted-foreground max-w-4xl px-3"
-            >
-              Use these shadcn ui hero section examples to add important
-              messaging, product photos, and call-to-actions to the top of your
-              website. These hero examples are designed and built by the
-              Tailwind CSS team, and include a variety of different styles and
-              layouts.
-            </Typography>
-          </div>
-        </div>
+        </PageContainer>
       </div>
-      <div className="space-y-20 rounded-t-2xl overflow-hidden">
-        {blocksData.map((block, index) => {
-          return (
-            <ComponentPreview
-              key={block.id + index}
-              id={block.id}
-              title={block.title}
-              plan={block.plan}
-              description={block.description}
-              category={block.category}
-              component={block.id}
-              fileName={block.fileName}
-            >
-              <Code
-                category={block.category}
-                component={block.id}
-                fileName={"page.tsx"}
-              />
-            </ComponentPreview>
-          );
-        })}
+      <div className="space-y-20">
+        <PreviewContainer>
+          <div className="space-y-28">
+            {blocksData.map((block, index) => {
+              return (
+                <ComponentPreview
+                  key={block.id + index}
+                  id={block.id}
+                  title={block.title}
+                  plan={block.plan}
+                  description={block.description}
+                  category={block.category}
+                  component={block.id}
+                  fileName={block.fileName}
+                >
+                  <Code
+                    category={block.category}
+                    component={block.id}
+                    fileName={"page.tsx"}
+                  />
+                </ComponentPreview>
+              );
+            })}
+          </div>
+        </PreviewContainer>
 
         {/* suggestion */}
         <div>
-          <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
+          <PageContainer>
+            <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
+          </PageContainer>
         </div>
       </div>
     </div>
@@ -145,16 +161,16 @@ function BlocksNotFound({ slug }: { slug: string }) {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex h-screen flex-col items-center justify-center">
       <section className="">
-        <div className="container flex py-64 min-h-screen px-6 mx-auto">
+        <div className="container mx-auto flex min-h-screen px-6 py-64">
           <div className="w-full ">
-            <div className="flex flex-col items-center max-w-lg mx-auto text-center">
+            <div className="mx-auto flex max-w-lg flex-col items-center text-center">
               <Badge>
                 <Typography
                   as="span"
                   variant="sm/medium"
-                  className="text-primary font-mono"
+                  className="font-mono text-primary"
                 >
                   404 error
                 </Typography>
@@ -162,7 +178,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
               <Typography
                 as="p"
                 variant="4xl/semibold"
-                className="mt-4 text-foreground tracking-tight"
+                className="mt-4 tracking-tight text-foreground"
               >
                 Page not found
               </Typography>
@@ -175,11 +191,11 @@ function BlocksNotFound({ slug }: { slug: string }) {
               </Typography>
             </div>
 
-            <div className="grid w-full max-w-6xl grid-cols-1 gap-4 mx-auto mt-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto mt-10 grid w-full max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {suggestedNotFoundLinks.map((link) => (
                 <div
                   key={link.title}
-                  className="relative group p-3.5 py-1.5 hover:border-primary rounded-lg bg-card border flex flex-col gap-2"
+                  className="group relative flex flex-col gap-2 rounded-lg border bg-card p-3.5 py-1.5 hover:border-primary"
                 >
                   <div className="flex items-center gap-4">
                     {/* <span className="text-muted-foreground">
@@ -215,7 +231,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
 
                   <Link
                     href={link.href}
-                    className="absolute inset-0 inline-flex items-center mt-4 text-sm text-blue-500 gap-x-2 dark:text-blue-400 hover:underline"
+                    className="absolute inset-0 mt-4 inline-flex items-center gap-x-2 text-sm text-blue-500 hover:underline dark:text-blue-400"
                   >
                     <span className="sr-only">{link.title}</span>
                   </Link>

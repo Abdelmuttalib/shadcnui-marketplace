@@ -1,14 +1,14 @@
+import {
+  ChevronRight,
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 import Link from "next/link";
 
 import { Typography } from "@/components/ui/typography";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Github,
-  ChevronRight,
-} from "lucide-react";
 
 const footerSections = [
   {

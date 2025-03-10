@@ -1,9 +1,11 @@
 "use client";
 
-import { siteConfig } from "@/config";
-import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import { PageContainer } from "@/components/common/page-container";
+import { siteConfig } from "@/config";
+import { cn } from "@/utils/cn";
 
 function GradientBackground() {
   return (
@@ -58,23 +60,23 @@ const docsLayoutLinks = [
     links: [
       {
         title: "Introduction",
-        href: "/docs",
+        href: "/docs#introduction",
       },
       {
         title: "Installation",
-        href: "/docs/installation",
+        href: "/docs#installation",
       },
       {
         title: "Components",
-        href: "/docs/components",
+        href: "/docs#components",
       },
       {
         title: "Guides",
-        href: "/docs/guides",
+        href: "/docs#guides",
       },
       {
         title: "CSS",
-        href: "/docs/css",
+        href: "/docs#css",
       },
     ],
   },
@@ -98,9 +100,9 @@ function DocsLayoutSidebarLink({
       href={href}
       // href={href}
       className={cn(
-        "block py-2.5 px-4 text-sm rounded rounded-l-none text-foreground-subtle hover:bg-base-25 dark:hover:bg-card border-l-2 capitalize hover:text-foreground hover:border-primary-300",
+        "text-foreground-subtle hover:bg-base-25 hover:border-primary-300 block rounded rounded-l-none border-l-2 px-4 py-2.5 text-sm capitalize hover:text-foreground dark:hover:bg-card",
         {
-          "border-primary font-medium text-foreground-light bg-base-25 dark:bg-card":
+          "text-foreground-light bg-base-25 border-primary font-medium dark:bg-card":
             active,
         }
       )}
@@ -121,7 +123,7 @@ const headerNavLinks = [
 
 export function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="fixed inset-0 w-full h-full min-h-screen flex flex-col pb-10 overflow-y-auto">
+    <div className="flex h-full min-h-screen w-full flex-col overflow-y-auto pb-10">
       {/* <div className="relative">
         <GradientBackground />
       </div> */}
@@ -143,10 +145,10 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
           </DocsLayoutContainer>
         </div>
       </header> */}
-      <div className="flex-1 pb-72 pt-16 ">
-        <DocsLayoutContainer className="flex h-full flex-1 gap-x-8 relative">
-          <DocsLayoutSidebar className="fixed py-10" />
-          <DocsLayoutMain className="ml-56 mr-10 max-w-2xl mx-auto py-10">
+      <div className="flex-1 pb-72 pt-12">
+        <PageContainer className="relative flex h-full flex-1 gap-x-8">
+          <DocsLayoutSidebar className="fixed pb-72" />
+          <DocsLayoutMain className="mx-auto ml-56 mr-10 max-w-2xl">
             {children}
           </DocsLayoutMain>
           {/* <DocsLayoutSidebarReferrer className="fixed bg-red-300">
@@ -156,13 +158,8 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
               </a>
             </p>
           </DocsLayoutSidebarReferrer> */}
-        </DocsLayoutContainer>
+        </PageContainer>
       </div>
-      {/* <footer className="border-t mt-auto h-80">
-        <DocsLayoutContainer>
-          <p>© {new Date().getFullYear()}</p>
-        </DocsLayoutContainer>
-      </footer> */}
     </div>
   );
 }
@@ -179,7 +176,7 @@ function DocsLayoutSidebar({
   return (
     <aside
       className={cn(
-        "w-56 mr-10 h-full overflow-auto scrollbar-hide",
+        "scrollbar-hide mr-10 h-full max-h-[45rem] w-44 overflow-auto",
         "hide-scrollbar",
         className
       )}
@@ -221,7 +218,7 @@ function DocsLayoutMain({
   className?: string;
 }) {
   return (
-    <main className={cn("flex-1 h-full min-h-screen", className)}>
+    <main className={cn("h-full min-h-screen flex-1", className)}>
       {children}
     </main>
   );
@@ -249,6 +246,6 @@ function DocsLayoutContainer({
   className?: string;
 }) {
   return (
-    <div className={cn("w-full max-w-7xl mx-auto", className)}>{children}</div>
+    <div className={cn("mx-auto w-full max-w-7xl", className)}>{children}</div>
   );
 }

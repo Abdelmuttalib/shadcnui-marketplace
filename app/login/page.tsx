@@ -1,4 +1,8 @@
+import { ArrowRightIcon, LockIcon, MailIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -7,13 +11,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowRightIcon, LockIcon, MailIcon } from "lucide-react";
-import { login, signInWithGitHub, signup } from "./actions";
 import { blocksRegistry } from "@/config/data";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+
+import { login, signInWithGitHub, signup } from "./actions";
 
 export default function LoginPage() {
   const blocksImagesData = Object.keys(blocksRegistry).map((block) => ({
@@ -23,31 +24,36 @@ export default function LoginPage() {
   }));
 
   return (
-    <div className="min-h-screen items-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 overflow-hidden">
+    <div className="grid min-h-screen grid-cols-1 items-center justify-center overflow-hidden md:grid-cols-2 lg:grid-cols-5">
       <div className="flex flex-col items-center justify-center lg:col-span-2">
         <MinimalistLogin />
       </div>
-      <div className="lg:col-span-3 w-full h-full pl-20 bg-gradient-to-b from-background to-accent/60 pt-20 relative lg:border-l">
+      <div className="relative h-full w-full bg-gradient-to-b from-accent/60 to-accent/60 pl-20 pt-20 lg:col-span-3 lg:border-l">
         {blocksImagesData.map((block, idx) => (
           <Link
             key={block.name}
             href={block.href}
             className={cn(
-              "group bg-accent rounded-lg overflow-hidden border shadow-lg shadow-foreground/5 hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105",
+              "group overflow-hidden rounded-lg border bg-accent shadow-lg transition-all duration-300 ease-in-out hover:scale-105",
               {
                 absolute: true,
               }
             )}
             style={{
               top: idx * 200 + 50,
+              left: idx * 50 + 50,
+              // right: idx % 2 === 0 ? idx * 50 + 50 : 0,
               // left: idx * 50 + 50,
             }}
           >
-            <span className="bg-accent/60 m-1 rounded-md absolute top-6 left-0 opacity-0 group-hover:opacity-100">
-              <ArrowRightIcon className="h-10 w-10 text-muted-foreground/60 transition-all duration-300 ease-in-out -rotate-45" />
+            <span className="absolute left-0 top-6 m-1 rounded-md border bg-accent opacity-0 group-hover:opacity-100">
+              <ArrowRightIcon className="h-8 w-8 -rotate-45 text-muted-foreground/80 transition-all duration-300 ease-in-out" />
             </span>
-            <span className="bg-accent/60 m-1 rounded-md absolute top-0 left-0  text-muted-foreground/60 text-sm capitalize px-1 font-medium">
-              <span className="">{block.name.replace("-", " ")} blocks</span>
+            <span className="absolute left-0 top-0 m-1 rounded-md border bg-accent px-1 text-sm font-medium capitalize text-muted-foreground/80">
+              <span>
+                {block.name.replace("-", " ")}
+                {/* blocks */}
+              </span>
             </span>
             {/* <div
               className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-background to-transparent"
@@ -58,22 +64,22 @@ export default function LoginPage() {
             <Image
               src={`${block.image}-light.png`}
               alt={block.name}
-              width={1919 / 2}
-              height={963 / 2}
+              width={1919 / 2.5}
+              height={963 / 2.5}
               // width={300}
               // height={300}
               // layout="fill"
-              className="object-cover w-full h-full block dark:hidden"
+              className="block h-full w-full object-contain dark:hidden"
             />
             <Image
               src={`${block.image}-dark.png`}
               alt={block.name}
-              width={1919 / 2}
-              height={963 / 2}
+              width={1919 / 2.5}
+              height={963 / 2.5}
               // width={300}
               // height={300}
               // layout="fill"
-              className="object-cover w-full h-full hidden dark:block"
+              className="hidden h-full w-full object-contain dark:block"
             />
           </Link>
         ))}
@@ -118,7 +124,7 @@ const LoginForm = ({ className = "" }) => (
             required
           />
           <MailIcon
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            className="absolute left-3 top-1/2 -translate-y-1/2 transform text-gray-400"
             size={18}
           />
         </div>
@@ -134,7 +140,7 @@ const LoginForm = ({ className = "" }) => (
             required
           />
           <LockIcon
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            className="absolute left-3 top-1/2 -translate-y-1/2 transform text-gray-400"
             size={18}
           />
         </div>
@@ -187,8 +193,8 @@ const LoginForm = ({ className = "" }) => (
 );
 
 const SplitScreenLogin = () => (
-  <div className="min-h-screen flex">
-    <div className="flex-1 flex items-center justify-center">
+  <div className="flex min-h-screen">
+    <div className="flex flex-1 items-center justify-center">
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Welcome back</CardTitle>
@@ -201,12 +207,12 @@ const SplitScreenLogin = () => (
         </CardContent>
       </Card>
     </div>
-    <div className="hidden lg:flex flex-1 bg-accent">
+    <div className="hidden flex-1 bg-accent lg:flex">
       <div className="grid grid-cols-2 gap-4 p-6">
         {[...Array(4)].map((_, i) => (
           <div
             key={i}
-            className="relative aspect-video bg-accent rounded-lg overflow-hidden"
+            className="relative aspect-video overflow-hidden rounded-lg bg-accent"
           >
             <Image
               src={`/images/og-image-2.png`}
@@ -214,7 +220,7 @@ const SplitScreenLogin = () => (
               // width={300}
               // height={300}
               layout="fill"
-              className="object-cover w-full h-full"
+              className="h-full w-full object-cover"
             />
           </div>
         ))}
@@ -251,7 +257,7 @@ const MinimalistLogin = () => (
 
 const FullScreenLogin = () => (
   <div
-    className="min-h-screen flex items-center justify-center bg-cover bg-center"
+    className="flex min-h-screen items-center justify-center bg-cover bg-center"
     style={{
       backgroundImage:
         "url('/placeholder.svg?height=1080&width=1920&text=Background')",

@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import * as React from "react";
+
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 const socials = [
   {
@@ -1330,9 +1331,7 @@ export default function Portfolio1() {
         <div className="border-t py-6">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <p className="text-xs text-muted-foreground">
-                © 2025 Portfolio.
-              </p>
+              <p className="text-xs text-muted-foreground">© 2025 Portfolio.</p>
             </div>
 
             <ul className="flex flex-wrap items-center">

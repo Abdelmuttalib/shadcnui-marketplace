@@ -1,9 +1,10 @@
+import Link from "next/link";
+import { useTheme } from "next-themes";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Typography } from "@/components/ui/typography";
 import { Code, exampleCode } from "@/components/views/docs/code";
 import { cn } from "@/utils/cn";
-import { useTheme } from "next-themes";
-import Link from "next/link";
 
 export default function DD() {
   return (
@@ -20,7 +21,7 @@ export default function DD() {
         {/* <Code /> */}
         <iframe
           src="https://afaqq.vercel.app"
-          className="w-full min-h-[48rem] overflow-hidden hide-scrollbar light border rounded-lg"
+          className="hide-scrollbar light min-h-[48rem] w-full overflow-hidden rounded-lg border"
         ></iframe>
         <h1>API Documentation</h1>
         <p className="lead">
@@ -30,7 +31,7 @@ export default function DD() {
         </p>
         <div className="not-prose mb-16 mt-6 flex gap-3">
           <Link
-            className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-primary-400/10 dark:text-primary-400 dark:ring-1 dark:ring-inset dark:ring-primary-400/20 dark:hover:bg-primary-400/10 dark:hover:text-primary-300 dark:hover:ring-primary-300"
+            className="dark:bg-primary-400/10 dark:text-primary-400 dark:ring-primary-400/20 dark:hover:bg-primary-400/10 dark:hover:text-primary-300 dark:hover:ring-primary-300 inline-flex justify-center gap-0.5 overflow-hidden rounded-full bg-zinc-900 px-3 py-1 text-sm font-medium text-white transition hover:bg-zinc-700 dark:ring-1 dark:ring-inset"
             href="/quickstart"
           >
             Quickstart
@@ -38,7 +39,7 @@ export default function DD() {
               viewBox="0 0 20 20"
               fill="none"
               aria-hidden="true"
-              className="mt-0.5 h-5 w-5 -mr-1"
+              className="-mr-1 mt-0.5 h-5 w-5"
             >
               <path
                 stroke="currentColor"
@@ -49,7 +50,7 @@ export default function DD() {
             </svg>
           </Link>
           <Link
-            className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full py-1 px-3 text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white"
+            className="hover:bg-zinc-900/2.5 inline-flex justify-center gap-0.5 overflow-hidden rounded-full px-3 py-1 text-sm font-medium text-zinc-700 ring-1 ring-inset ring-zinc-900/10 transition hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white"
             href="/sdks"
           >
             Explore SDKs
@@ -68,7 +69,7 @@ export default function DD() {
         </p>
         <div className="not-prose">
           <Link
-            className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
+            className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 inline-flex justify-center gap-0.5 overflow-hidden text-sm font-medium transition"
             href="/sdks"
           >
             Get your API key
@@ -76,7 +77,7 @@ export default function DD() {
               viewBox="0 0 20 20"
               fill="none"
               aria-hidden="true"
-              className="mt-0.5 h-5 w-5 relative top-px -mr-1"
+              className="relative top-px -mr-1 mt-0.5 h-5 w-5"
             >
               <path
                 stroke="currentColor"
@@ -109,7 +110,7 @@ export default function DD() {
               Guides
             </Link>
           </h2>
-          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-4 dark:border-white/5">
+          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 dark:border-white/5 sm:grid-cols-2 xl:grid-cols-4">
             <div>
               <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">
                 Authentication
@@ -119,7 +120,7 @@ export default function DD() {
               </p>
               <p className="mt-4">
                 <Link
-                  className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 inline-flex justify-center gap-0.5 overflow-hidden text-sm font-medium transition"
                   href="/authentication"
                 >
                   Read more
@@ -127,7 +128,7 @@ export default function DD() {
                     viewBox="0 0 20 20"
                     fill="none"
                     aria-hidden="true"
-                    className="mt-0.5 h-5 w-5 relative top-px -mr-1"
+                    className="relative top-px -mr-1 mt-0.5 h-5 w-5"
                   >
                     <path
                       stroke="currentColor"
@@ -148,7 +149,7 @@ export default function DD() {
               </p>
               <p className="mt-4">
                 <Link
-                  className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 inline-flex justify-center gap-0.5 overflow-hidden text-sm font-medium transition"
                   href="/pagination"
                 >
                   Read more
@@ -156,7 +157,7 @@ export default function DD() {
                     viewBox="0 0 20 20"
                     fill="none"
                     aria-hidden="true"
-                    className="mt-0.5 h-5 w-5 relative top-px -mr-1"
+                    className="relative top-px -mr-1 mt-0.5 h-5 w-5"
                   >
                     <path
                       stroke="currentColor"
@@ -177,7 +178,7 @@ export default function DD() {
               </p>
               <p className="mt-4">
                 <Link
-                  className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 inline-flex justify-center gap-0.5 overflow-hidden text-sm font-medium transition"
                   href="/errors"
                 >
                   Read more
@@ -185,7 +186,7 @@ export default function DD() {
                     viewBox="0 0 20 20"
                     fill="none"
                     aria-hidden="true"
-                    className="mt-0.5 h-5 w-5 relative top-px -mr-1"
+                    className="relative top-px -mr-1 mt-0.5 h-5 w-5"
                   >
                     <path
                       stroke="currentColor"
@@ -206,7 +207,7 @@ export default function DD() {
               </p>
               <p className="mt-4">
                 <Link
-                  className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 inline-flex justify-center gap-0.5 overflow-hidden text-sm font-medium transition"
                   href="/webhooks"
                 >
                   Read more
@@ -214,7 +215,7 @@ export default function DD() {
                     viewBox="0 0 20 20"
                     fill="none"
                     aria-hidden="true"
-                    className="mt-0.5 h-5 w-5 relative top-px -mr-1"
+                    className="relative top-px -mr-1 mt-0.5 h-5 w-5"
                   >
                     <path
                       stroke="currentColor"
@@ -250,7 +251,7 @@ export default function DD() {
               Resources
             </Link>
           </h2>
-          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-4 dark:border-white/5">
+          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 dark:border-white/5 sm:grid-cols-2 xl:grid-cols-4">
             <C
               title={"Contacts"}
               href="/contacts"
@@ -290,12 +291,12 @@ function C({
   href: string;
 }) {
   return (
-    <div className="group relative flex rounded-2xl bg-card transition-shadow hover:shadow-md hover:shadow-overlay-on-surface-background overflow-hidden">
+    <div className="hover:shadow-overlay-on-surface-background group relative flex overflow-hidden rounded-2xl bg-card transition-shadow hover:shadow-md">
       <div className="pointer-events-none">
         <div className="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50">
           <svg
             aria-hidden="true"
-            className="absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/[0.02] stroke-black/5 dark:fill-white/1 dark:stroke-white/2.5"
+            className="dark:fill-white/1 dark:stroke-white/2.5 absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/[0.02] stroke-black/5"
           >
             <defs>
               <pattern
@@ -343,7 +344,7 @@ function C({
         >
           <svg
             aria-hidden="true"
-            className="absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/50 stroke-black/70 dark:fill-white/2.5 dark:stroke-white/10"
+            className="dark:fill-white/2.5 absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/50 stroke-black/70 dark:stroke-white/10"
           >
             <defs>
               <pattern
@@ -376,13 +377,13 @@ function C({
           </svg>
         </div>
       </div>
-      <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-zinc-900/7.5 group-hover:ring-zinc-900/10 dark:ring-white/10 dark:group-hover:ring-white/20"></div>
+      <div className="ring-zinc-900/7.5 absolute inset-0 rounded-2xl ring-1 ring-inset group-hover:ring-zinc-900/10 dark:ring-white/10 dark:group-hover:ring-white/20"></div>
       <div className="relative rounded-2xl px-4 pb-4 pt-16">
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900/5 ring-1 ring-zinc-900/25 backdrop-blur-[2px] transition duration-300 group-hover:bg-white/50 group-hover:ring-zinc-900/25 dark:bg-white/7.5 dark:ring-white/15 dark:group-hover:bg-primary-300/10 dark:group-hover:ring-primary-400">
+        <div className="dark:bg-white/7.5 dark:group-hover:bg-primary-300/10 dark:group-hover:ring-primary-400 flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900/5 ring-1 ring-zinc-900/25 backdrop-blur-[2px] transition duration-300 group-hover:bg-white/50 group-hover:ring-zinc-900/25 dark:ring-white/15">
           <svg
             viewBox="0 0 20 20"
             aria-hidden="true"
-            className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-primary-300/10 dark:group-hover:stroke-primary-400"
+            className="dark:group-hover:fill-primary-300/10 dark:group-hover:stroke-primary-400 h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400"
           >
             <path
               strokeWidth="0"
@@ -410,7 +411,7 @@ function C({
             {title}
           </Link>
         </h3>
-        <p className="mt-1 text-sm text-foreground-secondary">{description}</p>
+        <p className="text-foreground-secondary mt-1 text-sm">{description}</p>
       </div>
     </div>
   );
@@ -423,7 +424,7 @@ function Sidebar() {
         type="button"
         data-headlessui-focus-guard="true"
         aria-hidden="true"
-        className="fixed top-0 left-0 w-px -m-1 overflow-hidden whitespace-nowrap border-none p-0 h-0"
+        className="fixed left-0 top-0 -m-1 h-0 w-px overflow-hidden whitespace-nowrap border-none p-0"
         style={{
           clip: "rect(0px, 0px, 0px, 0px)",
         }}
@@ -451,14 +452,14 @@ function Sidebar() {
             data-open=""
           >
             <div
-              className="data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 lg:left-72 lg:z-30 lg:px-8 xl:left-80 bg-white dark:bg-zinc-900"
+              className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 bg-white px-4 transition data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in dark:bg-zinc-900 sm:px-6 lg:left-72 lg:z-30 lg:px-8 xl:left-80"
               // style="--bg-opacity-light: 0.5; --bg-opacity-dark: 0.2;"
             >
-              <div className="absolute inset-x-0 top-full h-px transition bg-zinc-900/7.5 dark:bg-white/7.5"></div>
+              <div className="bg-zinc-900/7.5 dark:bg-white/7.5 absolute inset-x-0 top-full h-px transition"></div>
               <div className="hidden lg:block lg:max-w-md lg:flex-auto">
                 <button
                   type="button"
-                  className="hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 ui-not-focus-visible:outline-none lg:flex dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20"
+                  className="ui-not-focus-visible:outline-none hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 lg:flex"
                 >
                   <svg
                     viewBox="0 0 20 20"
@@ -473,13 +474,13 @@ function Sidebar() {
                     ></path>
                   </svg>
                   Find something...
-                  <kbd className="ml-auto text-2xs text-zinc-400 dark:text-zinc-500">
+                  <kbd className="text-2xs ml-auto text-zinc-400 dark:text-zinc-500">
                     <kbd className="font-sans">Ctrl </kbd>
                     <kbd className="font-sans">K</kbd>
                   </kbd>
                 </button>
                 <div
-                  className="fixed top-0 left-0 w-px -m-1 overflow-hidden whitespace-nowrap border-none p-0 h-0"
+                  className="fixed left-0 top-0 -m-1 h-0 w-px overflow-hidden whitespace-nowrap border-none p-0"
                   style={{
                     clip: "rect(0px, 0px, 0px, 0px)",
                   }}
@@ -549,7 +550,7 @@ function Sidebar() {
                   <div className="contents lg:hidden">
                     <button
                       type="button"
-                      className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 ui-not-focus-visible:outline-none lg:hidden dark:hover:bg-white/5"
+                      className="ui-not-focus-visible:outline-none flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5 lg:hidden"
                       aria-label="Find something..."
                     >
                       <svg
@@ -566,7 +567,7 @@ function Sidebar() {
                       </svg>
                     </button>
                     <div
-                      className="fixed top-0 left-0 w-px -m-1 overflow-hidden whitespace-nowrap border-none p-0 h-0 hidden"
+                      className="fixed left-0 top-0 -m-1 hidden h-0 w-px overflow-hidden whitespace-nowrap border-none p-0"
                       style={{
                         clip: "rect(0px, 0px, 0px, 0px)",
                       }}
@@ -602,7 +603,7 @@ function Sidebar() {
                 </div>
                 <div className="hidden min-[416px]:contents">
                   <Link
-                    className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-emerald-400/10 dark:text-emerald-400 dark:ring-1 dark:ring-inset dark:ring-emerald-400/20 dark:hover:bg-emerald-400/10 dark:hover:text-emerald-300 dark:hover:ring-emerald-300"
+                    className="inline-flex justify-center gap-0.5 overflow-hidden rounded-full bg-zinc-900 px-3 py-1 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-emerald-400/10 dark:text-emerald-400 dark:ring-1 dark:ring-inset dark:ring-emerald-400/20 dark:hover:bg-emerald-400/10 dark:hover:text-emerald-300 dark:hover:ring-emerald-300"
                     href="#"
                   >
                     Sign in
@@ -610,7 +611,7 @@ function Sidebar() {
                 </div>
               </div>
             </div>
-            <div className="fixed bottom-0 left-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 ring-zinc-900/7.5 duration-500 ease-in-out data-[closed]:-translate-x-full min-[416px]:max-w-sm sm:px-6 sm:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
+            <div className="ring-zinc-900/7.5 fixed bottom-0 left-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 duration-500 ease-in-out data-[closed]:-translate-x-full dark:bg-zinc-900 dark:ring-zinc-800 min-[416px]:max-w-sm sm:px-6 sm:pb-10">
               <nav>
                 <ul role="list">
                   <li className="md:hidden">
@@ -642,14 +643,14 @@ function Sidebar() {
                       Guides
                     </h2>
                     <div className="relative mt-3 pl-2">
-                      <div className="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5 h-[64px] rounded-lg"></div>
+                      <div className="bg-zinc-800/2.5 dark:bg-white/2.5 absolute inset-x-0 top-0 h-[64px] rounded-lg will-change-transform"></div>
                       <div className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
-                      <div className="absolute top-1 left-2 h-6 w-px bg-emerald-500"></div>
+                      <div className="absolute left-2 top-1 h-6 w-px bg-emerald-500"></div>
                       <ul role="list" className="border-l border-transparent">
                         <li className="relative">
                           <Link
                             aria-current="page"
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-900 dark:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-900 transition dark:text-white"
                             href="/"
                           >
                             <span className="truncate">Introduction</span>
@@ -657,7 +658,7 @@ function Sidebar() {
                           <ul role="list">
                             <li>
                               <Link
-                                className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                                className="flex justify-between gap-2 py-1 pl-7 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                                 href="/#guides"
                               >
                                 <span className="truncate">Guides</span>
@@ -665,7 +666,7 @@ function Sidebar() {
                             </li>
                             <li>
                               <Link
-                                className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                                className="flex justify-between gap-2 py-1 pl-7 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                                 href="/#resources"
                               >
                                 <span className="truncate">Resources</span>
@@ -675,7 +676,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/quickstart"
                           >
                             <span className="truncate">Quickstart</span>
@@ -683,7 +684,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/sdks"
                           >
                             <span className="truncate">SDKs</span>
@@ -691,7 +692,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/authentication"
                           >
                             <span className="truncate">Authentication</span>
@@ -699,7 +700,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/pagination"
                           >
                             <span className="truncate">Pagination</span>
@@ -707,7 +708,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/errors"
                           >
                             <span className="truncate">Errors</span>
@@ -715,7 +716,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/webhooks"
                           >
                             <span className="truncate">Webhooks</span>
@@ -733,7 +734,7 @@ function Sidebar() {
                       <ul role="list" className="border-l border-transparent">
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/contacts"
                           >
                             <span className="truncate">Contacts</span>
@@ -741,7 +742,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/conversations"
                           >
                             <span className="truncate">Conversations</span>
@@ -749,7 +750,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/messages"
                           >
                             <span className="truncate">Messages</span>
@@ -757,7 +758,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/groups"
                           >
                             <span className="truncate">Groups</span>
@@ -765,7 +766,7 @@ function Sidebar() {
                         </li>
                         <li className="relative">
                           <Link
-                            className="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                             href="/attachments"
                           >
                             <span className="truncate">Attachments</span>
@@ -776,7 +777,7 @@ function Sidebar() {
                   </li>
                   <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
                     <Link
-                      className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400 w-full"
+                      className="inline-flex w-full justify-center gap-0.5 overflow-hidden rounded-full bg-zinc-900 px-3 py-1 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400"
                       href="#"
                     >
                       Sign in
@@ -792,7 +793,7 @@ function Sidebar() {
         type="button"
         data-headlessui-focus-guard="true"
         aria-hidden="true"
-        className="fixed top-0 left-0 w-px -m-1 overflow-hidden whitespace-nowrap border-none p-0 h-0"
+        className="fixed left-0 top-0 -m-1 h-0 w-px overflow-hidden whitespace-nowrap border-none p-0"
         style={{
           clip: "rect(0px, 0px, 0px, 0px)",
         }}
@@ -819,7 +820,7 @@ function ComponentPreview({
   return (
     <section
       id={id}
-      className={cn("pt-20 pb-16 flex flex-col gap-4 min-h-[39rem]")}
+      className={cn("flex min-h-[39rem] flex-col gap-4 pb-16 pt-20")}
     >
       <div className="flex flex-col gap-4">
         <div className="space-y-2">
@@ -835,7 +836,7 @@ function ComponentPreview({
           </Typography>
           <div className="pt-2">
             <Tabs defaultValue="preview" className="space-y-4">
-              <TabsList className="grid w-full grid-cols-2 max-w-56">
+              <TabsList className="grid w-full max-w-56 grid-cols-2">
                 <TabsTrigger value="preview" title="Preview">
                   Preview
                 </TabsTrigger>
@@ -849,7 +850,7 @@ function ComponentPreview({
                   <iframe
                     src="https://afaqq.vercel.app"
                     height={960}
-                    className="w-full border rounded-lg"
+                    className="w-full rounded-lg border"
                   >
                     {/* <Example1 /> */}
                   </iframe>
@@ -860,7 +861,7 @@ function ComponentPreview({
           </div>
         </div>
         <div
-          className={cn("bg-card p-6 border rounded-lg min-h-96", className)}
+          className={cn("min-h-96 rounded-lg border bg-card p-6", className)}
         >
           {children}
         </div>
@@ -991,10 +992,10 @@ function DocLayout({ children }: { children: React.ReactNode }) {
               </Link>
             </div>
             <div
-              className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 lg:left-72 lg:z-30 lg:px-8 xl:left-80 backdrop-blur-sm lg:left-72 xl:left-80 dark:backdrop-blur bg-white/[var(--bg-opacity-light)] dark:bg-zinc-900/[var(--bg-opacity-dark)]"
+              className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 bg-white/[var(--bg-opacity-light)] px-4 backdrop-blur-sm transition dark:bg-zinc-900/[var(--bg-opacity-dark)] dark:backdrop-blur sm:px-6 lg:left-72 lg:left-72 lg:z-30 lg:px-8 xl:left-80 xl:left-80"
               // style="--bg-opacity-light: 0.5; --bg-opacity-dark: 0.2;"
             >
-              <div className="absolute inset-x-0 top-full h-px transition bg-zinc-900/7.5 dark:bg-white/7.5"></div>
+              <div className="bg-zinc-900/7.5 dark:bg-white/7.5 absolute inset-x-0 top-full h-px transition"></div>
               {/* <div className="hidden lg:block lg:max-w-md lg:flex-auto">
                 <button
                   type="button"
@@ -1054,7 +1055,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                     {navLinks.map((navLink) => (
                       <li key={navLink.label}>
                         <Link
-                          className="text-sm leading-5 text-foreground-secondary transition  hover:text-foreground"
+                          className="text-foreground-secondary text-sm leading-5 transition  hover:text-foreground"
                           href={navLink.href}
                         >
                           {navLink.label}
@@ -1068,7 +1069,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                   <div className="contents lg:hidden">
                     <button
                       type="button"
-                      className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 ui-not-focus-visible:outline-none lg:hidden dark:hover:bg-white/5"
+                      className="ui-not-focus-visible:outline-none flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5 lg:hidden"
                       aria-label="Find something..."
                     >
                       <svg
@@ -1115,7 +1116,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                 </div>
                 <div className="hidden min-[416px]:contents">
                   <Link
-                    className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-primary-400/10 dark:text-primary-400 dark:ring-1 dark:ring-inset dark:ring-primary-400/20 dark:hover:bg-primary-400/10 dark:hover:text-primary-300 dark:hover:ring-primary-300"
+                    className="dark:bg-primary-400/10 dark:text-primary-400 dark:ring-primary-400/20 dark:hover:bg-primary-400/10 dark:hover:text-primary-300 dark:hover:ring-primary-300 inline-flex justify-center gap-0.5 overflow-hidden rounded-full bg-zinc-900 px-3 py-1 text-sm font-medium text-white transition hover:bg-zinc-700 dark:ring-1 dark:ring-inset"
                     href="#"
                   >
                     Sign in
@@ -1143,7 +1144,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                     </h2>
                     <div className="relative mt-3 pl-2">
                       <div
-                        className="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
+                        className="bg-zinc-800/2.5 dark:bg-white/2.5 absolute inset-x-0 top-0 will-change-transform"
                         // style="height: 96px; top: 0px; opacity: 1; border-radius: 8px; transform: none; transform-origin: 50% 50% 0px;"
 
                         style={{
@@ -1157,7 +1158,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                       ></div>
                       <div className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
                       <div
-                        className="absolute left-2 h-6 w-px bg-primary-500"
+                        className="bg-primary-500 absolute left-2 h-6 w-px"
                         // style="top: 4px; opacity: 1;"
                         style={{
                           top: "4px",
@@ -1169,7 +1170,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                           <li className="relative" key={link.label + index}>
                             <Link
                               aria-current="page"
-                              className="flex justify-between gap-2 py-2 pr-3 text-sm transition pl-4 text-foreground-subtle hover:text-foreground"
+                              className="text-foreground-subtle flex justify-between gap-2 py-2 pl-4 pr-3 text-sm transition hover:text-foreground"
                               //  bg-card
                               href={link.href}
                             >
@@ -1187,7 +1188,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                                   >
                                     <li>
                                       <Link
-                                        className="flex justify-between gap-2 py-1.5 pr-3 text-sm transition pl-7 text-foreground-subtle"
+                                        className="text-foreground-subtle flex justify-between gap-2 py-1.5 pl-7 pr-3 text-sm transition"
                                         href={subLink.href}
                                       >
                                         <span className="truncate">
@@ -1207,7 +1208,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
 
                 <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
                   <Link
-                    className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-primary-500 dark:text-white dark:hover:bg-primary-400 w-full"
+                    className="dark:bg-primary-500 dark:hover:bg-primary-400 inline-flex w-full justify-center gap-0.5 overflow-hidden rounded-full bg-zinc-900 px-3 py-1 text-sm font-medium text-white transition hover:bg-zinc-700 dark:text-white"
                     href="#"
                   >
                     Sign in
@@ -1220,13 +1221,13 @@ function DocLayout({ children }: { children: React.ReactNode }) {
         <div className="relative flex h-full flex-col px-4 pt-14 sm:px-6 lg:px-8">
           <main className="flex-auto">
             <article className="flex h-full flex-col pb-10 pt-16">
-              <div className="flex-auto prose dark:prose-invert [html_:where(&amp;>*)]:mx-auto [html_:where(&amp;>*)]:max-w-2xl [html_:where(&amp;>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&amp;>*)]:lg:max-w-3xl lg:max-w-screen-xl lg:mx-auto">
+              <div className="prose dark:prose-invert flex-auto lg:mx-auto lg:max-w-screen-xl [html_:where(&>*)]:mx-auto [html_:where(&>*)]:max-w-2xl [html_:where(&>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&>*)]:lg:max-w-3xl">
                 <div className="absolute inset-0 -z-10 mx-0 max-w-none overflow-hidden">
                   <div className="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#36b49f] to-[#DBFF75] opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-[#36b49f]/30 dark:to-[#DBFF75]/30 dark:opacity-100">
                       <svg
                         aria-hidden="true"
-                        className="absolute inset-x-0 inset-y-[-50%] h-[200%] w-full skew-y-[-18deg] fill-black/40 stroke-black/50 mix-blend-overlay dark:fill-white/2.5 dark:stroke-white/5"
+                        className="dark:fill-white/2.5 absolute inset-x-0 inset-y-[-50%] h-[200%] w-full skew-y-[-18deg] fill-black/40 stroke-black/50 mix-blend-overlay dark:stroke-white/5"
                       >
                         <defs>
                           <pattern
@@ -1295,7 +1296,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
             <div className="flex">
               <div className="ml-auto flex flex-col items-end gap-3">
                 <Link
-                  className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-100 py-1 px-3 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800/40 dark:text-zinc-400 dark:ring-1 dark:ring-inset dark:ring-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
+                  className="inline-flex justify-center gap-0.5 overflow-hidden rounded-full bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-900 transition hover:bg-zinc-200 dark:bg-zinc-800/40 dark:text-zinc-400 dark:ring-1 dark:ring-inset dark:ring-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
                   aria-label="Next: Quickstart"
                   href="/quickstart"
                 >
@@ -1304,7 +1305,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                     viewBox="0 0 20 20"
                     fill="none"
                     aria-hidden="true"
-                    className="mt-0.5 h-5 w-5 -mr-1"
+                    className="-mr-1 mt-0.5 h-5 w-5"
                   >
                     <path
                       stroke="currentColor"
@@ -1324,7 +1325,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 sm:flex-row dark:border-white/5">
+            <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 dark:border-white/5 sm:flex-row">
               <p className="text-xs text-zinc-600 dark:text-zinc-400">
                 © Copyright 2025. All rights reserved.
               </p>

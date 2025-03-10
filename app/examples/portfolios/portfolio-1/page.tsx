@@ -1,7 +1,8 @@
-import * as React from "react";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
+import * as React from "react";
+
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/utils/cn";
 
 const socials = [
@@ -400,7 +401,7 @@ export default function Portfolio1() {
   return (
     <div>
       <header className="sticky inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start">
-        <nav className="bg-background/[0.7] relative mx-2 mt-4 w-full max-w-2xl rounded-[2rem] border py-2.5 backdrop-blur sm:mx-auto sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-0">
+        <nav className="relative mx-2 mt-4 w-full max-w-2xl rounded-[2rem] border bg-background/[0.7] py-2.5 backdrop-blur sm:mx-auto sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-0">
           <div className="flex items-center justify-between px-4 md:px-0">
             <div className="flex items-center">
               <a

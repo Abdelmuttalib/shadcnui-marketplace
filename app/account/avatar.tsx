@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { createClient } from "@/utils/supabase/client";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
+
+import { createClient } from "@/utils/supabase/client";
 
 export default function Avatar({
   uid,
@@ -81,7 +82,7 @@ export default function Avatar({
         />
       ) : (
         <div
-          className="avatar no-image bg-accent border rounded-md"
+          className="avatar no-image rounded-md border bg-accent"
           style={{ height: size, width: size }}
         />
       )}

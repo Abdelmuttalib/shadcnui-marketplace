@@ -1,13 +1,14 @@
 "use client";
 
-import * as React from "react";
-import { ScreenContainer } from "@/components/container";
-import { applicationUIComponentsData } from "@/config/data";
-import { ShowcaseCommingSoonSection2 } from "@/components/views/examples";
-import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
-import { STYLES, useStyle } from "@/hooks/use-style";
 import Link from "next/link";
+import * as React from "react";
+
+import { ScreenContainer } from "@/components/container";
+import { Typography } from "@/components/ui/typography";
+import { ShowcaseCommingSoonSection2 } from "@/components/views/examples";
+import { applicationUIComponentsData } from "@/config/data";
+import { STYLES, useStyle } from "@/hooks/use-style";
 
 // #030101
 // #0300d6
@@ -32,13 +33,13 @@ export function StyleSelect({
 
   return (
     <Select defaultValue={style || defaultStyle} onValueChange={onStyleChange}>
-      <SelectTrigger className="w-36 bg-accent">
+      <SelectTrigger className="w-36">
         <SelectValue
           placeholder="select a style"
           className="text-muted-foreground"
         >
           <span className="text-muted-foreground">style:</span>{" "}
-          <span className="capitalize font-medium">
+          <span className="font-medium capitalize">
             {style || defaultStyle}
           </span>
         </SelectValue>
@@ -65,7 +66,7 @@ export function ApplicationUI() {
         <h2 className="text-xl font-bold text-foreground">
           shadcn ui Application UI Styles
         </h2>
-        <p className="mt-3 text-sm/7 text-foreground-secondary">
+        <p className="text-foreground-secondary mt-3 text-sm/7">
           {/* Form layouts, tables, modal dialogs — everything you need to build
           beautiful responsive web applications. */}
           Button styles, tables, badges and everything of shadcn ui components
@@ -87,13 +88,21 @@ export function ApplicationUI() {
 
 export function MainNavLinks() {
   const links = siteConfig.mainNavLinks;
+
+  const pathname = usePathname();
+
   return (
     <>
       {links.map((link) => (
         <li key={link.title}>
           <Link
             href={link.href}
-            className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            className={cn(
+              "rounded-md px-2.5 py-1.5 text-sm text-muted-foreground hover:text-foreground",
+              {
+                "border bg-accent text-foreground": pathname === link.href,
+              }
+            )}
           >
             {link.title}
           </Link>
@@ -103,574 +112,12 @@ export function MainNavLinks() {
   );
 }
 
-export function LandingPageLayout({
-  children,
-}: {
-  children?: React.ReactNode;
-}) {
-  return (
-    <div className="relative">
-      <div className="relative flex flex-col bg-background z-20">
-        <header className="sticky top-0 z-20 flex h-16 items-center border-b bg-background/[0.7] backdrop-blur-sm">
-          <nav className="sm:container sm:mx-auto flex items-center justify-between gap-2 px-4 w-full">
-            <div className="flex items-center gap-2">
-              <Link
-                href="/"
-                className="rounded-md bg-accent/60 px-2 py-0.5 text-xl font-medium text-foreground"
-              >
-                shadcn <span className="italic text-primary">styles</span>
-              </Link>
-            </div>
-            <div className="flex items-center gap-2 text-sm">
-              <div className="hidden sm:flex items-center gap-4">
-                <nav>
-                  <ul className="inline-flex gap-6">
-                    <MainNavLinks />
-                  </ul>
-                </nav>
-                <ThemeSwitcher />
-              </div>
-              {/* <UserMenu /> */}
-            </div>
-          </nav>
-        </header>
-        <div className="mx-auto flex max-w-screen-2xl w-full sm:px-4">
-          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
-          <div className="grid h-full flex-1 gap-72 pb-24 pt-14 md:pb-40 bg-gradient-to-r from-accent/40 to-background">
-            {children}
-          </div>
-          <div className="min-h-screen hidden sm:block w-6 border-x bg-[image:repeating-linear-gradient(315deg,oklch(var(--border))_0,_oklch(var(--border))_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed md:w-8 lg:w-12" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export function StyleExamplesProvider({
-  children,
-}: {
-  children?: React.ReactNode;
-}) {
-  const { style, setStyle, stylePath, setStylePath, styleCategory } =
-    useStyle();
-
-  const styleNames = {
-    default: "Default Style",
-    carbon: "Carbon IBM inspired design system style for shadcn ui",
-    linear: "Linear Design System style for shadcn ui",
-    material: "Material Design style for shadcn ui",
-  };
-
-  const lightStylesShowcaseImages = [
-    {
-      name: "Carbon",
-      src: "/images/showcase/carbon-light.png",
-      alt: "Carbon IBM Style",
-    },
-    {
-      name: "Linear",
-      src: "/images/showcase/linear-light.png",
-      alt: "Linear Design System Style",
-    },
-    {
-      name: "Material",
-      src: "/images/showcase/material-light.png",
-      alt: "Material Design Style",
-    },
-  ];
-  const darkStylesShowcaseImages = [
-    {
-      name: "Carbon",
-      src: "/images/showcase/carbon-dark.png",
-      alt: "Carbon IBM Style",
-    },
-    {
-      name: "Linear",
-      src: "/images/showcase/linear-dark.png",
-      alt: "Linear Design System Style",
-    },
-    {
-      name: "Material",
-      src: "/images/showcase/material-dark.png",
-      alt: "Material Design Style",
-    },
-  ];
-
-  return (
-    <LandingPageLayout>
-      <div className="relative -mt-[5.75rem] overflow-hidden">
-        {/* <img
-          src="https://tailwindui.com/plus-assets/img/beams-home@95.jpg"
-          alt=""
-          className="absolute -top-[1rem] left-1/2 -ml-[40rem] w-[163.125rem] max-w-none sm:-ml-[67.5rem]"
-        /> */}
-        <div className="max-w-container relative mx-auto mt-16 grid w-full grid-cols-1 px-4 sm:mt-20 xl:mt-32  border-y">
-          <Typography
-            as={"h1"}
-            variant="6xl/medium"
-            className="col-start-1 row-start-1 mt-4 max-w-[36rem] tracking-tighter"
-          >
-            shadcn ui styles
-          </Typography>
-          <Typography
-            as="p"
-            variant="lg/normal"
-            className="text-muted-foreground col-start-1 row-start-2 mt-4 max-w-xl"
-          >
-            Discover the best shadcn ui kits and styles for modern web
-            interfaces.
-          </Typography>
-          <div className="col-start-1 row-start-3 mt-10 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 z-20">
-            {/* <Button size={"lg"} asChild>
-              <Link href="#">
-                <span>
-                  Browse components{" "}
-                  <span aria-hidden="true" className="hidden sm:inline">
-                    →
-                  </span>
-                </span>
-              </Link>
-            </Button> */}
-            <StyleSelect />
-            {/* <Button size={"lg"} variant={"outline"} asChild>
-              <Link href="#">
-                <span>
-                  Explore templates{" "}
-                  <span aria-hidden="true" className="hidden sm:inline">
-                    →
-                  </span>
-                </span>
-              </Link>
-            </Button> */}
-          </div>
-          {/* pointer-events-none  */}
-          {style === "default" ? <DefaultUI /> : null}
-          {style === "linear" ? <HeroUI /> : null}
-          {style === "carbon" ? <CarbonUI /> : null}
-          {style === "material" ? <MaterialUI /> : null}
-        </div>
-      </div>
-      <section className="grid h-full flex-1 gap-8">
-        <div className="space-y-4 *:border-y *:border-border/80">
-          <Typography
-            as="h2"
-            variant="4xl/medium"
-            className="border-y px-4 tracking-tighter"
-          >
-            See it in action
-          </Typography>
-          <Typography
-            as="p"
-            variant="lg/normal"
-            className="px-4 text-muted-foreground"
-          >
-            Preview shadcn blocks in different styles and see how they look
-          </Typography>
-        </div>
-
-        <div className="border-y border-border/80 px-4 py-4">
-          <ExamplesTabsNav />
-          {/* <ExamplesNav /> */}
-        </div>
-
-        <div className="mx-1 sm:mx-4 overflow-hidden">
-          <ShowcaseIFrame title={"title"} href={stylePath} />
-        </div>
-      </section>
-
-      <section className="grid h-full flex-1 gap-8">
-        <div className="space-y-4 *:border-y *:border-border/80">
-          <Typography
-            as="h1"
-            variant="4xl/medium"
-            className="border-y px-4 tracking-tighter"
-          >
-            Beyond{" "}
-            <span className="border-b-2 border-b-primary text-foreground">
-              Default
-            </span>{" "}
-            and{" "}
-            <span className="border-b-2 border-b-primary text-foreground">
-              New York
-            </span>
-          </Typography>
-
-          <Typography
-            as="p"
-            variant="lg/normal"
-            className="px-4 text-muted-foreground"
-          >
-            Discover custom styles for shadcn ui components.
-          </Typography>
-        </div>
-
-        <div className="border-y border-border/80 px-4">
-          {/*  */}
-          {/* <CalendarDemo /> */}
-        </div>
-        <div className="mb-6 border-y overflow p-1 sm:p-2 grid dark:hidden grid-cols-8 gap-4">
-          {lightStylesShowcaseImages.map((styleImage) => (
-            <div
-              key={styleImage.src + styleImage.alt}
-              className="col-span-8 rounded-xl border overflow-hidden"
-            >
-              <img
-                key={styleImage.name}
-                src={styleImage.src}
-                alt={styleImage.alt}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="mb-6 border-y overflow p-1 sm:p-2 hidden dark:grid grid-cols-8 gap-4">
-          {darkStylesShowcaseImages.map((styleImage) => (
-            <div
-              key={styleImage.src + styleImage.alt}
-              className="col-span-8 rounded-xl border overflow-hidden"
-            >
-              <img
-                key={styleImage.name}
-                src={styleImage.src}
-                alt={styleImage.alt}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-        {/* <div className="mb-6 border bg-accent p-1 sm:p-2 grid grid-cols-8 gap-4">
-          <div className="flex dark:hidden h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
-            {lightStylesShowcaseImages.map((styleImage) => (
-              <img
-                key={styleImage.name}
-                src={styleImage.src}
-                alt={styleImage.alt}
-                className="h-full w-full object-cover"
-              />
-            ))}
-          </div>
-          <div className="dark:flex hidden h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
-            {darkStylesShowcaseImages.map((styleImage) => (
-              <img
-                key={styleImage.name}
-                src={styleImage.src}
-                alt={styleImage.alt}
-                className="h-full w-full object-cover col-span-8"
-              />
-            ))}
-          </div>
-          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
-            <div className={cn("h-fit rounded-xl overflow-hidden w-full")}>
-              <div className="px-10 py-8 flex gap-4">
-                <div>dsd</div>
-                <div className="flex flex-col gap-2">
-                  <Typography as="h3" variant="2xl/medium" className="">
-                    Responsive design
-                  </Typography>
-                  <Typography
-                    as="p"
-                    variant="md/normal"
-                    className="text-muted-foreground max-w-3xl"
-                  >
-                    Okay, it&apos;s not exactly cutting edge, but just throw a
-                    screen size in front of literally any utility to apply it at
-                    a specific breakpoint.
-                  </Typography>
-                </div>
-              </div>
-              <div className="block h-full w-full"></div>
-            </div>
-          </div>
-          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-4">
-            <div className={cn("h-fit rounded-xl overflow-hidden w-full")}>
-              <div className="px-10 py-8 flex gap-4">
-                <div>
-                  <svg
-                    className="text-foreground"
-                    width="112"
-                    height="72"
-                    viewBox="0 0 112 72"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M62.3532 62.3285L94.3961 43.8285C95.5919 43.1382 96.1897 42.2333 96.1897 41.3285L96.1898 38.3285C96.1898 37.4237 95.5919 36.5189 94.3962 35.8285L48.4968 9.3285C46.1054 7.94779 42.228 7.94779 39.8366 9.3285L7.79365 27.8285C6.59792 28.5189 6.00005 29.4237 6.00005 30.3285V33.3427C6.00625 34.2428 6.6041 35.1418 7.7936 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3532 62.3285Z"
-                      fill="var(--site-background)"
-                    ></path>
-                    <path
-                      d="M7.7936 32.8285C6.59786 32.1381 5.99999 31.2333 6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285C96.1897 39.2333 95.5919 40.1381 94.3961 40.8285L62.3532 59.3285C59.9617 60.7092 56.0844 60.7092 53.6929 59.3285L7.7936 32.8285Z"
-                      fill="var(--site-background)"
-                    ></path>
-                    <path
-                      d="M6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285M6 30.3285C5.99999 31.2333 6.59786 32.1381 7.7936 32.8285L53.6929 59.3285C56.0844 60.7092 59.9617 60.7092 62.3532 59.3285L94.3961 40.8285C95.5919 40.1381 96.1897 39.2333 96.1897 38.3285M6 30.3285V33.3427C6.0062 34.2428 6.60405 35.1418 7.79355 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3531 62.3285L94.3961 43.8285C95.5918 43.1382 96.1897 42.2333 96.1897 41.3285L96.1897 38.3285"
-                      stroke="currentColor"
-                    ></path>
-                    <path
-                      d="M10.3922 31.3281C9.43562 30.7758 9.43562 29.8804 10.3922 29.3281L42.4351 10.8281C43.3917 10.2758 44.9427 10.2758 45.8992 10.8281L91.7986 37.3281C92.7552 37.8804 92.7552 38.7758 91.7986 39.3281L59.7557 57.8281C58.7991 58.3804 57.2481 58.3804 56.2916 57.8281L10.3922 31.3281Z"
-                      fill="var(--site-background)"
-                      stroke="currentColor"
-                      stroke-opacity="0.3"
-                    ></path>
-                    <path
-                      d="M91.1283 42.8285L104.119 35.3285C105.075 34.7762 105.554 34.0523 105.554 33.3284L105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284L48.9902 21.3284C48.9902 22.0523 49.4685 22.7762 50.4251 23.3285L84.2001 42.8285C86.1133 43.933 89.2151 43.933 91.1283 42.8285Z"
-                      fill="var(--site-background)"
-                    ></path>
-                    <path
-                      d="M105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284M105.554 30.3284C105.554 31.0523 105.075 31.7761 104.119 32.3284L91.1284 39.8284C89.2152 40.933 86.1133 40.933 84.2001 39.8284L50.4252 20.3284C49.4686 19.7761 48.9903 19.0523 48.9903 18.3284M105.554 30.3284L105.554 33.3284C105.554 34.0523 105.075 34.7762 104.119 35.3285L91.1283 42.8285C89.2151 43.933 86.1133 43.933 84.2001 42.8285L50.4251 23.3285C49.4685 22.7762 48.9902 22.0523 48.9902 21.3284L48.9903 18.3284"
-                      stroke="currentColor"
-                    ></path>
-                    <rect
-                      width="6"
-                      height="2"
-                      rx="1"
-                      transform="matrix(0.866025 -0.5 0.866025 0.5 56.4883 15.3281)"
-                      fill="currentColor"
-                    ></rect>
-                  </svg>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Typography as="h3" variant="2xl/medium" className="">
-                    Responsive design
-                  </Typography>
-                  <Typography
-                    as="p"
-                    variant="md/normal"
-                    className="text-muted-foreground max-w-3xl"
-                  >
-                    Okay, it&apos;s not exactly cutting edge, but just throw a
-                    screen size in front of literally any utility to apply it at
-                    a specific breakpoint.
-                  </Typography>
-                </div>
-              </div>
-              <div className="block h-full w-full"></div>
-            </div>
-          </div>
-          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-4">
-            <div className={cn("h-fit rounded-xl overflow-hidden w-full")}>
-              <div className="px-10 py-8 flex gap-4">
-                <div>
-                  <svg
-                    className="text-foreground"
-                    width="112"
-                    height="72"
-                    viewBox="0 0 112 72"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M62.3532 62.3285L94.3961 43.8285C95.5919 43.1382 96.1897 42.2333 96.1897 41.3285L96.1898 38.3285C96.1898 37.4237 95.5919 36.5189 94.3962 35.8285L48.4968 9.3285C46.1054 7.94779 42.228 7.94779 39.8366 9.3285L7.79365 27.8285C6.59792 28.5189 6.00005 29.4237 6.00005 30.3285V33.3427C6.00625 34.2428 6.6041 35.1418 7.7936 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3532 62.3285Z"
-                      fill="var(--site-background)"
-                    ></path>
-                    <path
-                      d="M7.7936 32.8285C6.59786 32.1381 5.99999 31.2333 6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285C96.1897 39.2333 95.5919 40.1381 94.3961 40.8285L62.3532 59.3285C59.9617 60.7092 56.0844 60.7092 53.6929 59.3285L7.7936 32.8285Z"
-                      fill="var(--site-background)"
-                    ></path>
-                    <path
-                      d="M6 30.3285C6.00001 29.4237 6.59787 28.5189 7.7936 27.8285L39.8365 9.3285C42.228 7.94779 46.1053 7.94779 48.4968 9.3285L94.3961 35.8285C95.5919 36.5189 96.1897 37.4237 96.1897 38.3285M6 30.3285C5.99999 31.2333 6.59786 32.1381 7.7936 32.8285L53.6929 59.3285C56.0844 60.7092 59.9617 60.7092 62.3532 59.3285L94.3961 40.8285C95.5919 40.1381 96.1897 39.2333 96.1897 38.3285M6 30.3285V33.3427C6.0062 34.2428 6.60405 35.1418 7.79355 35.8285L53.6929 62.3285C56.0844 63.7092 59.9617 63.7092 62.3531 62.3285L94.3961 43.8285C95.5918 43.1382 96.1897 42.2333 96.1897 41.3285L96.1897 38.3285"
-                      stroke="currentColor"
-                    ></path>
-                    <path
-                      d="M10.3922 31.3281C9.43562 30.7758 9.43562 29.8804 10.3922 29.3281L42.4351 10.8281C43.3917 10.2758 44.9427 10.2758 45.8992 10.8281L91.7986 37.3281C92.7552 37.8804 92.7552 38.7758 91.7986 39.3281L59.7557 57.8281C58.7991 58.3804 57.2481 58.3804 56.2916 57.8281L10.3922 31.3281Z"
-                      fill="var(--site-background)"
-                      stroke="currentColor"
-                      stroke-opacity="0.3"
-                    ></path>
-                    <path
-                      d="M91.1283 42.8285L104.119 35.3285C105.075 34.7762 105.554 34.0523 105.554 33.3284L105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284L48.9902 21.3284C48.9902 22.0523 49.4685 22.7762 50.4251 23.3285L84.2001 42.8285C86.1133 43.933 89.2151 43.933 91.1283 42.8285Z"
-                      fill="var(--site-background)"
-                    ></path>
-                    <path
-                      d="M105.554 30.3284C105.554 29.6046 105.075 28.8807 104.119 28.3284L70.3437 8.82843C68.4306 7.72386 65.3287 7.72386 63.4155 8.82843L50.4252 16.3284C49.4686 16.8807 48.9903 17.6046 48.9903 18.3284M105.554 30.3284C105.554 31.0523 105.075 31.7761 104.119 32.3284L91.1284 39.8284C89.2152 40.933 86.1133 40.933 84.2001 39.8284L50.4252 20.3284C49.4686 19.7761 48.9903 19.0523 48.9903 18.3284M105.554 30.3284L105.554 33.3284C105.554 34.0523 105.075 34.7762 104.119 35.3285L91.1283 42.8285C89.2151 43.933 86.1133 43.933 84.2001 42.8285L50.4251 23.3285C49.4685 22.7762 48.9902 22.0523 48.9902 21.3284L48.9903 18.3284"
-                      stroke="currentColor"
-                    ></path>
-                    <rect
-                      width="6"
-                      height="2"
-                      rx="1"
-                      transform="matrix(0.866025 -0.5 0.866025 0.5 56.4883 15.3281)"
-                      fill="currentColor"
-                    ></rect>
-                  </svg>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Typography as="h3" variant="2xl/medium" className="">
-                    Responsive design
-                  </Typography>
-                  <Typography
-                    as="p"
-                    variant="md/normal"
-                    className="text-muted-foreground max-w-3xl"
-                  >
-                    Okay, it&apos;s not exactly cutting edge, but just throw a
-                    screen size in front of literally any utility to apply it at
-                    a specific breakpoint.
-                  </Typography>
-                </div>
-              </div>
-              <div className="block h-full w-full"></div>
-            </div>
-          </div>
-          <div className="flex h-full w-full overflow-hidden gap-2 bg-background rounded-2xl border border-input col-span-8">
-            <div>
-              <div className="px-10 py-8 flex gap-4">
-                <div>
-                  {["default", "icon"].map((size) => {
-                    return (
-                      <div key={size} className="mb-4 flex flex-wrap gap-2">
-                        {[
-                          "default",
-                          "secondary",
-                          "outline",
-                          "destructive",
-                          "ghost",
-                          "link",
-                        ].map((variant) => {
-                          return (
-                            <Button
-                              key={size + variant}
-                              size={size as ButtonProps["size"]}
-                              variant={variant as ButtonProps["variant"]}
-                              className="capitalize"
-                            >
-                              {size === "icon" ? <BookmarkIcon /> : variant}
-                            </Button>
-                          );
-                        })}
-                      </div>
-                    );
-                  })}
-                  <div className="mb-4 flex flex-wrap gap-2">
-                    {["default", "secondary", "outline", "destructive"].map(
-                      (variant) => {
-                        return (
-                          <Badge
-                            key={variant}
-                            variant={variant as BadgeProps["variant"]}
-                            className="capitalize"
-                          >
-                            Badge
-                          </Badge>
-                        );
-                      }
-                    )}
-                  </div>
-                  <div className="mb-4 flex flex-col flex-wrap gap-4 max-w-md">
-                    <Input placeholder="email@example.com" />
-                    <Input placeholder="Disabled" value={"John Doe"} disabled />
-                    <Textarea placeholder="Lorem ipsum dolor sit amet  consectetur adipisicing elit. Voluptatem, minima." />
-                    <div className="flex items-center gap-2 justify-between">
-                      <Switch id="accept" />
-                      <Button variant="default" className="shadow-xs">
-                        Submit
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div className="mb-4 flex flex-wrap gap-2 max-w-md">
-                    <MenubarDemo />
-                    <ToggleGroupDemo />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <div>
-                    <DataTableDemo />
-                  </div>
-                  <div>
-                    <TabsDemo />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <div className="w-fit">
-                    <InputOTPDemo />
-                  </div>
-                  <div className="w-fit">
-                    <CommandDemo />
-                  </div>
-                  <div>
-                    <AccordionDemo />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-      </section>
-      <section className="-mt-80">
-        <div className="pt-20 pb-4">
-          <div className="space-y-2">
-            {/* <div className="border-y px-3">
-            <div>
-              <StylesBreadcrumb />
-            </div>
-          </div> */}
-            <div className="border-y flex items-center gap-2">
-              <Typography
-                as={"h1"}
-                variant="5xl/semibold"
-                className="tracking-tight capitalize px-3"
-              >
-                Styles
-              </Typography>
-              {/* <Badge>{blocksData?.length} blocks</Badge> */}
-            </div>
-
-            {/* {stylePath}
-          {styleUrl} */}
-
-            <div className="border-y">
-              <Typography
-                as={"p"}
-                variant="lg/normal"
-                className="text-muted-foreground max-w-4xl px-3"
-              >
-                Discover shadcn ui styles and UI kits, beyond Default and New
-                York shadcn ui styles.
-              </Typography>
-            </div>
-          </div>
-        </div>
-        <div className="space-y-10 mt-2 overflow-hidden">
-          {/* <StyleSelect /> */}
-          <div className="border-y px-3 py-4">
-            <ExamplesTabsNav />
-            {/* <ExamplesNav /> */}
-          </div>
-          {STYLES.filter((style) => style !== "default").map((style, index) => {
-            return (
-              <StylePreview
-                key={style + index}
-                id={style}
-                // @ts-ignore
-                title={styleNames[style]}
-                styleProp={style}
-                // description="Carbon IBM inspired design system style for shadcn ui"
-                examplePage={styleCategory}
-                // component={block.id}
-              >
-                <></>
-              </StylePreview>
-            );
-          })}
-
-          {/* suggestion */}
-          {/* <div>
-          <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
-        </div> */}
-        </div>
-      </section>
-    </LandingPageLayout>
-  );
-}
-
 export function Styles() {
   return (
-    <div className="relative isolate mt-16 md:mt-32 pt-10 z-10" id="styles">
+    <div className="relative isolate z-10 mt-16 pt-10 md:mt-32" id="styles">
       <ScreenContainer>
         <div className="relative flex flex-col gap-4">
-          <Typography variant="3xl/semibold" className="">
-            Styles
-          </Typography>
+          <Typography variant="3xl/semibold">Styles</Typography>
           <Typography
             variant="xl/normal"
             className="text-foreground-secondary max-w-3xl"
@@ -679,13 +126,16 @@ export function Styles() {
             build your next project.
           </Typography>
         </div>
-        <StyleExamplesProvider />
         <StylesShowcase />
       </ScreenContainer>
     </div>
   );
 }
 
+import { BookmarkIcon, MailIcon, Timer } from "lucide-react";
+import { usePathname } from "next/navigation";
+
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -694,9 +144,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { siteConfig } from "@/config/site-config";
 import { cn } from "@/utils/cn";
-import { Button } from "@/components/ui/button";
-import ThemeSwitcher from "@/components/theme-select";
+
 import {
   DataTableDemo,
   DropdownMenuDemo,
@@ -704,15 +154,7 @@ import {
   WaitlistForm,
 } from "./demo";
 import { Badge } from "./ui/badge";
-import { BookmarkIcon, MailIcon, Timer } from "lucide-react";
 import { Switch } from "./ui/switch";
-import { StylePreview } from "../../app/styles/components/style-preview";
-import { UserMenu } from "../../app/components/user-menu";
-import { DefaultUI } from "../../app/ui/components/default-heroui";
-import { HeroUI } from "../../app/ui/components/heroui";
-import { CarbonUI } from "../../app/ui/components/carbon-heroui";
-import { MaterialUI } from "../../app/ui/components/material-heroui";
-import { siteConfig } from "@/config/site-config";
 
 const DEFAULT_EXAMPLES_PATH = "/example";
 
@@ -772,7 +214,7 @@ export function ExamplesTabsNav({ className, ...props }: ExamplesNavProps) {
         <div
           className={cn(
             // "my-4 flex gap-1 gap-y-3 flex-wrap items-center",
-            "md:inline-flex md:flex-nowrap md:p-0 md:h-10 p-1 md:items-center md:justify-center flex-wrap rounded-md border grid grid-cols-1 sm:grid-cols-2 bg-muted text-muted-foreground",
+            "grid grid-cols-1 flex-wrap rounded-md border bg-accent p-1 text-muted-foreground sm:grid-cols-2 md:inline-flex md:h-10 md:flex-nowrap md:items-center md:justify-center md:p-0",
             className
           )}
           {...props}
@@ -783,9 +225,9 @@ export function ExamplesTabsNav({ className, ...props }: ExamplesNavProps) {
               <button
                 key={example.href}
                 className={cn(
-                  "inline-flex h-full md:items-center md:justify-center whitespace-nowrap rounded-sm border border-transparent px-3 py-2 md:py-0 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring data-[state=active]: data-[state=active]: data-[state=active]: data-[state=active]:",
+                  "data-[state=active]: data-[state=active]: data-[state=active]: data-[state=active]: inline-flex h-full whitespace-nowrap rounded-sm border border-transparent px-3 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:items-center md:justify-center md:py-0",
                   styleCategory === caseExampleName
-                    ? "bg-background text-foreground shadow-sm border-border"
+                    ? "border-border bg-background text-foreground shadow-sm"
                     : "text-muted-foreground"
                 )}
                 // className={cn(
@@ -821,7 +263,7 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
       <div className="max-w-[600px] lg:max-w-none">
         <div
           className={cn(
-            "my-4 flex gap-1 gap-y-3 flex-wrap items-center",
+            "my-4 flex flex-wrap items-center gap-1 gap-y-3",
             className
           )}
           {...props}
@@ -932,7 +374,7 @@ export function SourceExamplesLayout({
   const { style, setStyle } = useStyle();
 
   return (
-    <div className="mt-16 md:mt-32 pt-10" id="examples">
+    <div className="mt-16 pt-10 md:mt-32" id="examples">
       <ExamplesNav />
       <div className="mb-6 space-y-3 px-4 lg:mb-12 lg:px-0">
         <div className="space-y-2">
@@ -949,10 +391,10 @@ export function SourceExamplesLayout({
           </Typography>
         </div>
       </div>
-      <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 dark:bg-card p-1">
+      <div className="mb-6 space-y-2 rounded-2xl border bg-gray-50 p-1 dark:bg-card">
         <div className="flex justify-between overflow-x-auto px-1 pt-1">
-          <div className="flex items-center justify-between w-full gap-2">
-            <div className="gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 flex dark:bg-gray-950/50 outline-none">
+          <div className="flex w-full items-center justify-between gap-2">
+            <div className="flex gap-0.5 rounded-lg border-[0.5px] bg-gray-100 p-0.5 outline-none dark:bg-gray-950/50">
               <Select defaultValue={style} onValueChange={(e) => setStyle(e)}>
                 <SelectTrigger className="w-36">
                   <SelectValue
@@ -960,7 +402,7 @@ export function SourceExamplesLayout({
                     className="text-muted-foreground"
                   >
                     <span className="text-muted-foreground">style:</span>{" "}
-                    <span className="capitalize font-medium">{style}</span>
+                    <span className="font-medium capitalize">{style}</span>
                   </SelectValue>
                 </SelectTrigger>
                 <SelectContent>
@@ -971,7 +413,7 @@ export function SourceExamplesLayout({
                 </SelectContent>
               </Select>
             </div>
-            <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 sm:flex dark:bg-gray-950/50 outline-none">
+            <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 outline-none dark:bg-gray-950/50 sm:flex">
               {breakpoints.map((bp) => (
                 <Button
                   key={bp.label}
@@ -986,11 +428,11 @@ export function SourceExamplesLayout({
           </div>
           <div className="hidden items-center gap-0.5 lg:flex"></div>
         </div>
-        <div className="flex h-full w-full overflow-hidden gap-2">
+        <div className="flex h-full w-full gap-2 overflow-hidden">
           {preview ? (
             <div
               className={cn(
-                "h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full",
+                "h-fit w-full overflow-hidden rounded-lg border dark:shadow dark:shadow-gray-950",
                 {
                   "max-w-md": breakpoint === "sm",
                   "max-w-screen-md": breakpoint === "md",
@@ -1001,7 +443,7 @@ export function SourceExamplesLayout({
               <iframe
                 loading="lazy"
                 title={title}
-                className="block h-full min-h-[45rem] w-full dark"
+                className="dark block h-full min-h-[45rem] w-full"
                 src={href}
               ></iframe>
             </div>
@@ -1094,18 +536,18 @@ export function ShowcaseIFrame({
   ];
 
   return (
-    <div className="mb-6 space-y-2 rounded-lg sm:rounded-2xl border bg-background sm:p-1">
+    <div className="mb-6 space-y-2 rounded-lg border bg-background sm:rounded-2xl sm:p-1">
       <div className="flex justify-between overflow-x-auto px-1 pt-1">
-        <div className="flex items-center justify-between w-full gap-2">
-          <div className="gap-0.5 rounded-lg pb-1 flex outline-none">
+        <div className="flex w-full items-center justify-between gap-2">
+          <div className="flex gap-0.5 rounded-lg pb-1 outline-none">
             <Select defaultValue={style} onValueChange={(e) => setStyle(e)}>
-              <SelectTrigger className="sm:w-36 h-8 sm:h-10">
+              <SelectTrigger className="h-8 sm:h-10 sm:w-36">
                 <SelectValue
                   placeholder="Select a style"
                   className="text-muted-foreground"
                 >
                   <span className="text-muted-foreground">style:</span>{" "}
-                  <span className="capitalize font-medium">{style}</span>
+                  <span className="font-medium capitalize">{style}</span>
                 </SelectValue>
               </SelectTrigger>
               <SelectContent>
@@ -1123,26 +565,12 @@ export function ShowcaseIFrame({
               </SelectContent>
             </Select>
           </div>
-          {/* <WaitlistForm /> */}
-          {/* <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 sm:flex dark:bg-gray-950/50 outline-none">
-            {breakpoints.map((bp) => (
-              <Button
-                key={bp.label}
-                variant={breakpoint === bp.label ? "outline" : "ghost"}
-                size="sm"
-                onClick={() => setBreakpoint(bp.label)}
-              >
-                {bp.icon}
-              </Button>
-            ))}
-          </div> */}
         </div>
-        <div className="hidden items-center gap-0.5 lg:flex"></div>
       </div>
-      <div className="flex h-full w-full overflow-hidden gap-2 px-1">
+      <div className="flex h-full w-full gap-2 overflow-hidden px-1">
         <div
           className={cn(
-            "h-fit rounded-lg overflow-hidden border dark:shadow dark:shadow-gray-950 w-full",
+            "h-fit w-full overflow-hidden rounded-lg border dark:shadow dark:shadow-gray-950",
             {
               "max-w-md": breakpoint === "sm",
               "max-w-screen-md": breakpoint === "md",
@@ -1153,7 +581,7 @@ export function ShowcaseIFrame({
           <iframe
             loading="lazy"
             title={title}
-            className="block h-full aspect-video w-full"
+            className="block aspect-video h-full w-full"
             src={href}
           ></iframe>
         </div>
@@ -1166,7 +594,7 @@ function StylesShowcase() {
   return (
     <section
       id="product-carbon"
-      className="py-8 first:pt-0 sm:py-10 lg:py-12 z-10"
+      className="z-10 py-8 first:pt-0 sm:py-10 lg:py-12"
     >
       <div>
         <iframe
@@ -1174,7 +602,7 @@ function StylesShowcase() {
           src="http://localhost:3000/source/cards"
           // src="http://localhost:3002/source/cards"
           title="YouTube video player"
-          className="w-full h-[45rem]"
+          className="h-[45rem] w-full"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -1189,7 +617,7 @@ function StylesShowcase() {
               </a>
             </h2>
           </div>
-          <p className="text-sm/6 text-muted-foreground capitalize">
+          <p className="text-sm/6 capitalize text-muted-foreground">
             Application UI kit
           </p>
           <p className="mt-3 text-sm/6 text-muted-foreground">
@@ -1205,7 +633,7 @@ function StylesShowcase() {
             or included with all-access
           </p>
         </div>
-        <div className="lg:relative grid lg:grid-cols-1 lg:col-span-2 lg:gap-4">
+        <div className="grid lg:relative lg:col-span-2 lg:grid-cols-1 lg:gap-4">
           {/* <div className="sticky left-0 z-10 hidden w-8 flex-none bg-linear-to-r from-white lg:block"></div> */}
           {/* <a
               tabIndex={-1}
@@ -1232,12 +660,12 @@ function StylesShowcase() {
                   // height="380"
                   width={1280}
                   height={720}
-                  className="w-full rounded-xl bg-muted border"
+                  className="w-full rounded-xl border bg-muted"
                 />
                 {!index && (
                   <a
                     href="https://tailwindui.com/templates/catalyst"
-                    className="absolute inset-0 lg:left-8 z-10"
+                    className="absolute inset-0 z-10 lg:left-8"
                   >
                     <span className=" sr-only">Carbon</span>
                   </a>
@@ -1267,7 +695,7 @@ function StylesShowcase() {
               className="w-full rounded-xl bg-muted hidden lg:block"
             /> */}
         </div>
-        <div className="lg:relative grid lg:grid-cols-2 lg:gap-4 lg:col-span-3">
+        <div className="grid lg:relative lg:col-span-3 lg:grid-cols-2 lg:gap-4">
           {/* <div className="sticky left-0 z-10 hidden w-8 flex-none bg-linear-to-r from-white lg:block"></div> */}
           {/* <a
               tabIndex={-1}
@@ -1294,12 +722,12 @@ function StylesShowcase() {
                   // height="380"
                   width={1280}
                   height={720}
-                  className="w-full rounded-xl bg-muted border"
+                  className="w-full rounded-xl border bg-muted"
                 />
                 {!index && (
                   <a
                     href="https://tailwindui.com/templates/catalyst"
-                    className="absolute inset-0 lg:left-8 z-10"
+                    className="absolute inset-0 z-10 lg:left-8"
                   >
                     <span className=" sr-only">Carbon</span>
                   </a>
@@ -1316,11 +744,11 @@ function StylesShowcase() {
 export function H() {
   return (
     <>
-      <div className="relative -mt-[5.75rem] overflow-hidden pt-12 md:pt-[5.75rem] bg-gray-200/50">
+      <div className="relative -mt-[5.75rem] overflow-hidden bg-gray-200/50 pt-12 md:pt-[5.75rem]">
         <ScreenContainer>
           <div className="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/publichttps://tailwindui.com/plus/img/avatar-1.jpg')] bg-[length:1000px_700px] bg-[position:calc(50%_+_190px)_-50px] bg-no-repeat lg:block"></div>
-          <div className="max-w-container mx-auto px-4 pt-4 sm:px-6 flex flex-col lg:flex-row lg:px-8">
-            <div className="relative z-20 mx-auto max-w-[40rem] pt-16 pb-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pt-20 lg:pr-4 lg:pb-24">
+          <div className="max-w-container mx-auto flex flex-col px-4 pt-4 sm:px-6 lg:flex-row lg:px-8">
+            <div className="relative z-20 mx-auto max-w-[40rem] pb-16 pt-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
               <h1 className="text-base/7 font-semibold text-primary">
                 Powered by shadcn ui
               </h1>
@@ -1328,14 +756,14 @@ export function H() {
               <Typography
                 as="p"
                 variant="5xl/bold"
-                className="mt-4 text-foreground tracking-tight"
+                className="mt-4 tracking-tight text-foreground"
               >
                 {/* Beautiful UI components, crafted with shadcn ui and Tailwind
                 CSS. */}
                 shadcn ui <span className="italic">styles</span>
               </Typography>
-              <div className="flex flex-wrap gap-6 mt-4">
-                <div className="flex items-center text-sm font-medium text-foreground-secondary">
+              <div className="mt-4 flex flex-wrap gap-6">
+                <div className="text-foreground-secondary flex items-center text-sm font-medium">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 256 256"
@@ -1389,11 +817,11 @@ export function H() {
                 </svg> */}
                   <span className="ml-2.5">shadcn ui</span>
                 </div>
-                <div className="flex items-center text-sm font-medium text-foreground-secondary">
+                <div className="text-foreground-secondary flex items-center text-sm font-medium">
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 36 36"
-                    className="h-6 w-6 inline-flex items-center justify-center mt-2"
+                    className="mt-2 inline-flex h-6 w-6 items-center justify-center"
                     fill="none"
                   >
                     <path
@@ -1406,7 +834,7 @@ export function H() {
                 </div>
               </div>
 
-              <p className="mt-4 text-base/7 text-foreground-secondary">
+              <p className="text-foreground-secondary mt-4 text-base/7">
                 {/* Over 500+ professionally designed, fully responsive, expertly
                 crafted component examples you can drop into your Tailwind
                 projects and customize to your heart’s content. */}
@@ -1432,12 +860,12 @@ export function H() {
             <div className="relative z-10 mt-12 select-none lg:flex">
               <div className="z-20 flex flex-col">
                 <div className="relative p-4">
-                  <div className="absolute top-8 right-0 bottom-0 left-11 bg-slate-900/[0.03]"></div>
-                  <div className="pointer-events-auto relative z-10 w-full rounded-lg bg-card text-[0.8125rem]/5 text-foreground-secondary ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
+                  <div className="absolute bottom-0 left-11 right-0 top-8 bg-slate-900/[0.03]"></div>
+                  <div className="text-foreground-secondary pointer-events-auto relative z-10 w-full rounded-lg bg-card text-[0.8125rem]/5 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
                     <div>
-                      <div className="flex items-center px-3.5 py-2.5 text-foreground-secondary">
+                      <div className="text-foreground-secondary flex items-center px-3.5 py-2.5">
                         <svg
-                          className="mr-2 size-5 stroke-foreground-subtle"
+                          className="stroke-foreground-subtle mr-2 size-5"
                           fill="none"
                           viewBox="0 0 24 24"
                           strokeWidth="2"
@@ -1451,12 +879,12 @@ export function H() {
                         Search projects...
                       </div>
                       <div className="border-t border-slate-400/20 px-3.5 py-3">
-                        <div className="mb-1.5 text-[0.6875rem] font-semibold text-foreground-subtle">
+                        <div className="text-foreground-subtle mb-1.5 text-[0.6875rem] font-semibold">
                           Recent searches
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -1471,7 +899,7 @@ export function H() {
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -1488,7 +916,7 @@ export function H() {
                       <div className="border-t border-slate-400/20 px-3.5 py-3">
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -1501,7 +929,7 @@ export function H() {
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -1512,7 +940,7 @@ export function H() {
                           </svg>
                           Add new folder...
                         </div>
-                        <div className="flex items-center rounded-md p-1.5 bg-primary text-white">
+                        <div className="flex items-center rounded-md bg-primary p-1.5 text-white">
                           <svg
                             className="mr-2.5 size-5 flex-none stroke-white"
                             fill="none"
@@ -1527,7 +955,7 @@ export function H() {
                         </div>
                         <div className="flex items-center rounded-md p-1.5">
                           <svg
-                            className="mr-2.5 size-5 flex-none stroke-foreground-subtle"
+                            className="stroke-foreground-subtle mr-2.5 size-5 flex-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -1551,7 +979,7 @@ export function H() {
                   </div>
                   <div className="relative">
                     <Button variant="outline" className="shadow-xs">
-                      <svg className="mr-2.5 size-5 flex-none fill-foreground-subtle">
+                      <svg className="fill-foreground-subtle mr-2.5 size-5 flex-none">
                         <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
                       </svg>
                       Bookmark
@@ -1569,8 +997,8 @@ export function H() {
                       </div>
                     </div> */}
                     <div className="z-0">
-                      <div className="absolute -top-12 right-0 -bottom-8 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                      <div className="absolute -top-12 -bottom-8 left-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                      <div className="absolute -bottom-8 -top-12 right-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                      <div className="absolute -bottom-8 -top-12 left-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                     </div>
                   </div>
                 </div>
@@ -1586,7 +1014,7 @@ export function H() {
                   {/* <div className="w-full h-full z-10 absolute"></div> */}
                   <NotificationsCard />
                 </div>
-                <div className="relative md:p-4 mt-4 pb-4">
+                <div className="relative mt-4 pb-4 md:p-4">
                   <NotificationAlert />
                   {/* <div className="w-[24.5rem] divide-y divide-slate-400/20 rounded-lg bg-card text-[0.8125rem]/5 text-foreground ring-1 shadow-xl shadow-black/5 ring-slate-700/10">
                     <div className="flex items-center p-4">
@@ -1770,7 +1198,7 @@ function ShowcaseCard({
   pro?: boolean;
 }) {
   return (
-    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-card hover:before:opacity-100">
+    <div className="before:bg-base-25/50 group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:opacity-0 hover:before:opacity-100 dark:before:bg-card">
       <div className="relative aspect-video overflow-hidden rounded-lg bg-card ring-1 ring-border">
         <img
           // "https://tailwindui.com/plus/img/category-thumbnails/application-ui/stacked.png"
@@ -1794,12 +1222,12 @@ function ShowcaseCard({
           </span>
         </a>
       </h4>
-      <p className="relative mt-1.5 text-xs font-medium text-foreground-subtle">
+      <p className="text-foreground-subtle relative mt-1.5 text-xs font-medium">
         {/* 9 components */}
         {componentCount} blocks
       </p>
       {pro && (
-        <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
+        <p className="pointer-events-none absolute right-1.5 top-1.5 z-10">
           <Badge variant="default" className="ml-2">
             Pro
           </Badge>
@@ -1885,12 +1313,12 @@ function ComponentShowcaseCard({
   return (
     <div
       data-dark="true"
-      className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-card shadow-sm ring-1 ring-border"
+      className="max-lg:rounded-b-4xl lg:rounded-br-4xl group relative flex flex-col overflow-hidden rounded-lg bg-card shadow-sm ring-1 ring-border lg:col-span-4"
     >
-      <div className="relative shrink-0 bg-background/80 h-52 overflow-hidden">
+      <div className="relative h-52 shrink-0 overflow-hidden bg-background/80">
         {/* bg-[url(/screenshots/engagement.png)] bg-[size:851px_344px] bg-no-repeat */}
-        <div className="pl-10 pt-10 overflow-hidden">{component}</div>
-        <div className="absolute inset-0 bg-gradient-to-t from-overlay-on-surface-background to-100%"></div>
+        <div className="overflow-hidden pl-10 pt-10">{component}</div>
+        <div className="from-overlay-on-surface-background absolute inset-0 bg-gradient-to-t to-100%"></div>
       </div>
       <div className="p-4">
         {/* <h3
@@ -1907,7 +1335,7 @@ function ComponentShowcaseCard({
           events to B2B sales, helping you build a reputation as a thought
           leader.
         </p> */}
-        <h4 className="font-medium text-lg/5 tracking-tight text-foreground">
+        <h4 className="text-lg/5 font-medium tracking-tight text-foreground">
           {/* <a href={href}> */}
           <span className="absolute -inset-2.5 z-10"></span>
           <span className="relative inline-flex items-center gap-1">
@@ -1921,12 +1349,12 @@ function ComponentShowcaseCard({
           </span>
           {/* </a> */}
         </h4>
-        <p className="relative mt-1.5 text-sm font-medium text-foreground-subtle">
+        <p className="text-foreground-subtle relative mt-1.5 text-sm font-medium">
           9 Blocks
           {/* {componentCount} blocks */}
         </p>
         {pro && (
-          <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
+          <p className="pointer-events-none absolute right-1.5 top-1.5 z-10">
             <Badge variant="default" className="ml-2">
               Pro
             </Badge>
@@ -1958,7 +1386,7 @@ function ShowcaseCommingSoonCard({
   componentPreview?: React.ReactNode;
 }) {
   return (
-    <div className="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-base-25/50 before:opacity-0 dark:before:bg-card hover:before:opacity-100">
+    <div className="before:bg-base-25/50 group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:opacity-0 hover:before:opacity-100 dark:before:bg-card">
       <div className="relative aspect-video overflow-hidden rounded-lg bg-card ring-1 ring-border">
         <img
           // "https://tailwindui.com/plus/img/category-thumbnails/application-ui/stacked.png"
@@ -1982,12 +1410,12 @@ function ShowcaseCommingSoonCard({
           </span>
         </a>
       </h4>
-      <p className="relative mt-1.5 text-xs font-medium text-foreground-subtle">
+      <p className="text-foreground-subtle relative mt-1.5 text-xs font-medium">
         {/* 9 components */}
         {componentCount} blocks
       </p>
       {pro && (
-        <p className="pointer-events-none absolute top-1.5 right-1.5 z-10">
+        <p className="pointer-events-none absolute right-1.5 top-1.5 z-10">
           <Badge variant="default" className="ml-2">
             Pro
           </Badge>
@@ -2040,15 +1468,15 @@ function ShowcaseCommingSoonSection({
       className="grid scroll-mt-12 grid-cols-1 gap-x-8 gap-y-10 py-10 lg:py-6"
     >
       {/* <h3 className="text-base font-semibold text-foreground">{title}</h3> */}
-      <ul className="relative col-span-3 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 p-3">
-        <div className="absolute inset-0 h-full bg-gradient-to-b from-background/70 border to-background z-20 rounded-2xl w-full">
-          <div className="w-full h-full flex p-5 md:p-0 mt-32 md:mt-0 md:items-center md:justify-center">
+      <ul className="relative col-span-3 grid grid-cols-1 gap-6 p-3 sm:grid-cols-2 md:grid-cols-4">
+        <div className="absolute inset-0 z-20 h-full w-full rounded-2xl border bg-gradient-to-b from-background/70 to-background">
+          <div className="mt-32 flex h-full w-full p-5 md:mt-0 md:items-center md:justify-center md:p-0">
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-2">
                 <Timer />
                 <h2 className="font-medium">Coming soon</h2>
               </div>
-              <p className="mt-3 text-sm text-foreground-secondary">
+              <p className="text-foreground-secondary mt-3 text-sm">
                 We are working hard to bring you this styles. Stay tuned!
               </p>
             </div>
@@ -2067,7 +1495,7 @@ function ShowcaseCommingSoonSection({
 function NotificationAlert() {
   return (
     <div
-      className="max-w-xs bg-card border rounded-xl shadow-lg"
+      className="max-w-xs rounded-xl border bg-card shadow-lg"
       role="alert"
       tabIndex={-1}
       aria-labelledby="hs-toast-stack-toggle-label"
@@ -2075,7 +1503,7 @@ function NotificationAlert() {
       <div className="flex p-4">
         <div className="shrink-0">
           <svg
-            className="size-5 text-foreground-subtle mt-1"
+            className="text-foreground-subtle mt-1 size-5"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -2093,11 +1521,11 @@ function NotificationAlert() {
         <div className="ms-4">
           <h3
             id="hs-toast-stack-toggle-label"
-            className="text-foreground font-semibold"
+            className="font-semibold text-foreground"
           >
             App notifications
           </h3>
-          <div className="mt-1 text-sm text-foreground-subtle">
+          <div className="text-foreground-subtle mt-1 text-sm">
             enable notifications to receive updates from the app.
           </div>
           <div className="mt-4">

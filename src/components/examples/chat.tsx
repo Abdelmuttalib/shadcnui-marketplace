@@ -16,12 +16,11 @@ import {
 import Head from "next/head";
 import { useState } from "react";
 
-import { formatShortDate } from "@/utils/date";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/utils/cn";
+import { formatShortDate } from "@/utils/date";
 
 const chatsData = [
   {
@@ -225,22 +224,22 @@ export function Chat() {
         <title>Chat</title>
       </Head>
 
-      <div className="w-full flex flex-col md:flex-row h-[90svh] divide-x border-t border-border divide-border">
+      <div className="flex h-[90svh] w-full flex-col divide-x divide-border border-t border-border md:flex-row">
         {/* messages */}
-        <div className="w-full md:max-w-md bg-background flex flex-col gap-y-5 py-4 h-full">
-          <div className="md:px-6  md:pr-3.5 w-full items-center justify-between flex">
+        <div className="flex h-full w-full flex-col gap-y-5 bg-background py-4 md:max-w-md">
+          <div className="flex  w-full items-center justify-between md:px-6 md:pr-3.5">
             <Typography as="h3" variant="lg/medium">
               Messages
             </Typography>
             <Button size="sm" variant="ghost">
-              <MoreHorizontal className="w-5 text-foreground-light" />
+              <MoreHorizontal className="text-foreground-light w-5" />
             </Button>
             {/* <Video className='w-5 text-foreground-lighter' /> */}
             {/* <PhoneCall className='w-5 text-foreground-lighter' /> */}
           </div>
-          <div className="md:px-6 w-full">
+          <div className="w-full md:px-6">
             <div className="relative">
-              <Search className="w-[18px] text-foreground-lighter absolute left-2 md:left-3 top-1/2 transform -translate-y-1/2 z-10" />
+              <Search className="text-foreground-lighter absolute left-2 top-1/2 z-10 w-[18px] -translate-y-1/2 transform md:left-3" />
               <Input
                 type="text"
                 placeholder="Search"
@@ -248,25 +247,25 @@ export function Chat() {
               />
             </div>
           </div>
-          <div className="flex md:flex-col w-full overflow-x-auto gap-x-2 gap-y-1">
+          <div className="flex w-full gap-x-2 gap-y-1 overflow-x-auto md:flex-col">
             {/* user */}
             {chats.map((chat, indx) => {
               return (
                 <div
                   key={chat.id}
-                  className={cn("md:grid md:grid-cols-6 md:py-4 md:px-6", {
+                  className={cn("md:grid md:grid-cols-6 md:px-6 md:py-4", {
                     "md:bg-gray-hover": chat.id === selectedChat.id,
                   })}
                   onClick={() => setSelectedChat(chat)}
                 >
-                  <div className="md:col-span-1 block w-12 h-12 rounded-full overflow-hidden">
+                  <div className="block h-12 w-12 overflow-hidden rounded-full md:col-span-1">
                     <img
                       src={chat.user.avatar}
                       alt={`${chat.user.username} avatar photo`}
-                      className="object-cover w-full h-full"
+                      className="h-full w-full object-cover"
                     />
                   </div>
-                  <div className="hidden md:block md:col-span-5">
+                  <div className="hidden md:col-span-5 md:block">
                     <div className="inline-flex w-full justify-between">
                       <Typography as="h3" variant="sm/medium">
                         {chat.user.username}
@@ -279,18 +278,18 @@ export function Chat() {
                         {formatShortDate(chat.messages.sent[0].time)}
                       </Typography>
                     </div>
-                    <div className="inline-flex w-full justify-between items-center">
+                    <div className="inline-flex w-full items-center justify-between">
                       <Typography
                         as="p"
                         variant={indx % 2 === 0 ? "sm/medium" : "sm/normal"}
-                        className={cn("truncate text-foreground-lighter", {
+                        className={cn("text-foreground-lighter truncate", {
                           "text-foreground": indx % 2 === 0,
                         })}
                       >
                         {chat.messages.sent[0].message}
                       </Typography>
                       {indx % 2 === 0 && (
-                        <span className="bg-primary w-2.5 h-2.5 rounded"></span>
+                        <span className="h-2.5 w-2.5 rounded bg-primary"></span>
                       )}
                     </div>
                   </div>
@@ -301,10 +300,10 @@ export function Chat() {
         </div>
         {/* chat */}
         <div className="w-full">
-          <div className="flex flex-col h-full gap-y-5 bg-background">
-            <div className="w-full flex justify-between items-center px-6 py-3 bg-background shadow-sm">
+          <div className="flex h-full flex-col gap-y-5 bg-background">
+            <div className="flex w-full items-center justify-between bg-background px-6 py-3 shadow-sm">
               <div className="flex gap-x-4">
-                <div className="w-16 h-16 block col-span-1 rounded-full overflow-hidden">
+                <div className="col-span-1 block h-16 w-16 overflow-hidden rounded-full">
                   <img
                     src={selectedChat.user.avatar}
                     alt={`${selectedChat.user.username} avatar photo`}
@@ -316,7 +315,7 @@ export function Chat() {
                     {selectedChat.user.username}
                   </Typography>
                   <div className="inline-flex items-center gap-x-1">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 block"></span>
+                    <span className="block h-2 w-2 rounded-full bg-emerald-500"></span>
                     <Typography
                       as="h3"
                       variant="sm/medium"
@@ -329,29 +328,29 @@ export function Chat() {
               </div>
               <div className="space-x-2">
                 <Button size="sm" variant="outline">
-                  <Video className="w-5 text-foreground-lighter" />
+                  <Video className="text-foreground-lighter w-5" />
                 </Button>
                 <Button size="sm" variant="outline">
-                  <Bookmark className="w-5 text-foreground-lighter" />
+                  <Bookmark className="text-foreground-lighter w-5" />
                 </Button>
                 <Button size="sm" variant="outline">
-                  <Ban className="w-5 text-foreground-lighter" />
+                  <Ban className="text-foreground-lighter w-5" />
                 </Button>
               </div>
             </div>
 
-            <div className="flex-1 bg-background h-full px-2 md:px-6 rounded py-4">
+            <div className="h-full flex-1 rounded bg-background px-2 py-4 md:px-6">
               <div className="flex flex-col gap-y-5 py-7">
-                <div className="flex flex-col h-full gap-y-7">
-                  <div className="flex gap-x-2 items-start justify-start">
-                    <div className="w-10 h-10 rounded-full overflow-hidden">
+                <div className="flex h-full flex-col gap-y-7">
+                  <div className="flex items-start justify-start gap-x-2">
+                    <div className="h-10 w-10 overflow-hidden rounded-full">
                       <img
                         src={selectedChat.user.avatar}
                         alt={`${selectedChat.user.username} avatar photo`}
-                        className="w-full h-full object-cover"
+                        className="h-full w-full object-cover"
                       />
                     </div>
-                    <div className="bg-layer-3 rounded-lg border border-border p-3 flex-none">
+                    <div className="bg-layer-3 flex-none rounded-lg border border-border p-3">
                       <Typography
                         as="p"
                         variant="sm/medium"
@@ -361,33 +360,33 @@ export function Chat() {
                       </Typography>
                     </div>
                   </div>
-                  <div className="flex justify-end gap-x-2 items-start">
-                    <div className="bg-primary rounded-lg p-2.5 md:p-3">
+                  <div className="flex items-start justify-end gap-x-2">
+                    <div className="rounded-lg bg-primary p-2.5 md:p-3">
                       <Typography
                         as="p"
                         variant="sm/medium"
-                        className="max-w-[15rem] md:max-w-full text-white"
+                        className="max-w-[15rem] text-white md:max-w-full"
                       >
                         {selectedChat.messages.reply[0].message}
                       </Typography>
                     </div>
-                    <div className="w-10 h-10 rounded-full overflow-hidden">
+                    <div className="h-10 w-10 overflow-hidden rounded-full">
                       <img
                         src={selectedChat.user.avatar}
                         alt={`${selectedChat.user.username} avatar photo`}
-                        className="object-cover w-full h-full"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex md:px-6 gap-x-2 bg-background py-6">
-              <div className="w-full relative">
+            <div className="flex gap-x-2 bg-background py-6 md:px-6">
+              <div className="relative w-full">
                 <Input
                   type="text"
                   placeholder="Type a message"
-                  className="relative md:pr-16 bg-layer-3"
+                  className="bg-layer-3 relative md:pr-16"
                 />
 
                 <Button
@@ -395,14 +394,14 @@ export function Chat() {
                   className="absolute right-9 mt-0.5"
                   size="sm"
                 >
-                  <ImageIcon className="w-[18px] text-foreground-lighter" />
+                  <ImageIcon className="text-foreground-lighter w-[18px]" />
                 </Button>
                 <Button
                   variant="ghost"
                   className="absolute right-1 mt-0.5"
                   size="sm"
                 >
-                  <Paperclip className="w-[18px] text-foreground-lighter" />
+                  <Paperclip className="text-foreground-lighter w-[18px]" />
                 </Button>
               </div>
               <Button className="w-fit whitespace-nowrap">
@@ -417,7 +416,7 @@ export function Chat() {
           </div>
         </div>
         {/* messages */}
-        <div className="w-full hidden 2xl:flex max-w-md px-6 flex-col gap-y-7 py-4 h-full bg-background">
+        <div className="hidden h-full w-full max-w-md flex-col gap-y-7 bg-background px-6 py-4 2xl:flex">
           <Typography as="h4" variant="lg/medium">
             Profile Details
           </Typography>
@@ -426,14 +425,14 @@ export function Chat() {
               <img
                 src={selectedChat.user.avatar}
                 alt={`${selectedChat.user.username} avatar photo`}
-                className="w-32 h-32 rounded-full object-cover"
+                className="h-32 w-32 rounded-full object-cover"
               />
               <div className="space-y-4">
-                <div className="flex items-center flex-col">
+                <div className="flex flex-col items-center">
                   <Typography as="h4" variant="lg/medium">
                     {selectedChat.user.username}
                   </Typography>
-                  <div className="inline-flex items-center gap-x-1 text-foreground-lighter">
+                  <div className="text-foreground-lighter inline-flex items-center gap-x-1">
                     <MapPin className="w-[18px]" />
 
                     <Typography as="h4" variant="sm/normal">
@@ -455,7 +454,7 @@ export function Chat() {
                 </div>
               </div>
             </div>
-            <div className="space-y-4 mt-16">
+            <div className="mt-16 space-y-4">
               <Typography as="h4" variant="base/medium">
                 User Information
               </Typography>
@@ -502,21 +501,21 @@ export function Chat() {
               <Typography as="h4" variant="base/medium">
                 Media
               </Typography>
-              <div className="grid grid-cols-3 gap-x-2 w-full">
+              <div className="grid w-full grid-cols-3 gap-x-2">
                 <img
                   src="https://images.unsplash.com/photo-1611784237648-eeb9be60c61d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt={`${selectedChat.user.username} avatar photo`}
-                  className="w-full h-32 object-cover"
+                  className="h-32 w-full object-cover"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1607968565043-36af90dde238?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt={`${selectedChat.user.username} avatar photo`}
-                  className="w-full h-32 object-cover"
+                  className="h-32 w-full object-cover"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt={`${selectedChat.user.username} avatar photo`}
-                  className="w-full h-32 object-cover"
+                  className="h-32 w-full object-cover"
                 />
               </div>
             </div>

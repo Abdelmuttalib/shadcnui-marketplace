@@ -1,6 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
+
 import { Chat } from "@/components/examples/chat";
+import { Button } from "@/components/ui/button";
+
 import { Board } from "../examples/board";
 
 export function ExamplesLayout({ children }: { children: React.ReactNode }) {
@@ -41,8 +43,8 @@ export function ExamplesLayout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className="w-full h-full">
-      <div className="w-full max-w-[95rem] px-4 py-16 mx-auto flex flex-col gap-y-10 lg:px-8">
+    <div className="h-full w-full">
+      <div className="mx-auto flex w-full max-w-[95rem] flex-col gap-y-10 px-4 py-16 lg:px-8">
         <div>
           <h1 className="text-6xl font-semibold text-primary">InSpect 2.0</h1>
         </div>
@@ -58,7 +60,7 @@ export function ExamplesLayout({ children }: { children: React.ReactNode }) {
               </Button>
             ))}
           </div>
-          <div className="flex flex-col gap-y-4 border p-4 rounded bg-accent-hover">
+          <div className="bg-accent-hover flex flex-col gap-y-4 rounded border p-4">
             {/* <div className="relative isolate">
               <GradientBackground />
             </div> */}

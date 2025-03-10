@@ -13,8 +13,159 @@ export default {
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-ibm-plex-mono)"],
+        carbon: ["var(--font-carbon)"],
+        material: ["var(--font-roboto)"],
       },
       colors: {
+        linear: {
+          gray: {
+            50: "oklch(var(--linear-color-gray-50) / <alpha-value>)",
+            100: "oklch(var(--linear-color-gray-100) / <alpha-value>)",
+            200: "oklch(var(--linear-color-gray-200) / <alpha-value>)",
+            300: "oklch(var(--linear-color-gray-300) / <alpha-value>)",
+            400: "oklch(var(--linear-color-gray-400) / <alpha-value>)",
+            500: "oklch(var(--linear-color-gray-500) / <alpha-value>)",
+            600: "oklch(var(--linear-color-gray-600) / <alpha-value>)",
+            700: "oklch(var(--linear-color-gray-700) / <alpha-value>)",
+            800: "oklch(var(--linear-color-gray-800) / <alpha-value>)",
+            900: "oklch(var(--linear-color-gray-900) / <alpha-value>)",
+            950: "oklch(var(--linear-color-gray-950) / <alpha-value>)",
+          },
+          background: "oklch(var(--linear-background) / <alpha-value>)",
+          foreground: "oklch(var(--linear-foreground) / <alpha-value>)",
+          card: {
+            DEFAULT: "oklch(var(--linear-card) / <alpha-value>)",
+            foreground: "oklch(var(--linear-card-foreground) / <alpha-value>)",
+          },
+          popover: {
+            DEFAULT: "oklch(var(--linear-popover) / <alpha-value>)",
+            foreground:
+              "oklch(var(--linear-popover-foreground) / <alpha-value>)",
+          },
+          primary: {
+            DEFAULT: "oklch(var(--linear-primary) / <alpha-value>)",
+            foreground:
+              "oklch(var(--linear-primary-foreground) / <alpha-value>)",
+          },
+          secondary: {
+            DEFAULT: "oklch(var(--linear-secondary) / <alpha-value>)",
+            foreground:
+              "oklch(var(--linear-secondary-foreground) / <alpha-value>)",
+          },
+          muted: {
+            DEFAULT: "oklch(var(--linear-muted) / <alpha-value>)",
+            foreground: "oklch(var(--linear-muted-foreground) / <alpha-value>)",
+          },
+          accent: {
+            DEFAULT: "oklch(var(--linear-accent) / <alpha-value>)",
+            foreground:
+              "oklch(var(--linear-accent-foreground) / <alpha-value>)",
+          },
+          destructive: {
+            DEFAULT: "oklch(var(--linear-destructive) / <alpha-value>)",
+            foreground:
+              "oklch(var(--linear-destructive-foreground) / <alpha-value>)",
+          },
+          border: "oklch(var(--linear-border) / <alpha-value>)",
+          input: "oklch(var(--linear-input) / <alpha-value>)",
+          ring: "oklch(var(--linear-ring) / <alpha-value>)",
+          chart: {
+            "1": "oklch(var(--linear-chart-1) / <alpha-value>)",
+            "2": "oklch(var(--linear-chart-2) / <alpha-value>)",
+            "3": "oklch(var(--linear-chart-3) / <alpha-value>)",
+            "4": "oklch(var(--linear-chart-4) / <alpha-value>)",
+            "5": "oklch(var(--linear-chart-5) / <alpha-value>)",
+          },
+          sidebar: {
+            DEFAULT: "oklch(var(--linear-sidebar-background) / <alpha-value>)",
+            foreground:
+              "oklch(var(--linear-sidebar-foreground) / <alpha-value>)",
+            primary: "oklch(var(--linear-sidebar-primary) / <alpha-value>)",
+            "primary-foreground":
+              "oklch(var(--linear-sidebar-primary-foreground) / <alpha-value>)",
+            accent: "oklch(var(--linear-sidebar-accent) / <alpha-value>)",
+            "accent-foreground":
+              "oklch(var(--linear-sidebar-accent-foreground) / <alpha-value>)",
+            border: "oklch(var(--linear-sidebar-border) / <alpha-value>)",
+            ring: "oklch(var(--linear-sidebar-ring) / <alpha-value>)",
+          },
+        },
+        catalyst: {
+          gray: {
+            50: "oklch(var(--color-gray-50) / <alpha-value>)",
+            100: "oklch(var(--color-gray-100) / <alpha-value>)",
+            200: "oklch(var(--color-gray-200) / <alpha-value>)",
+            300: "oklch(var(--color-gray-300) / <alpha-value>)",
+            400: "oklch(var(--color-gray-400) / <alpha-value>)",
+            500: "oklch(var(--color-gray-500) / <alpha-value>)",
+            600: "oklch(var(--color-gray-600) / <alpha-value>)",
+            700: "oklch(var(--color-gray-700) / <alpha-value>)",
+            800: "oklch(var(--color-gray-800) / <alpha-value>)",
+            900: "oklch(var(--color-gray-900) / <alpha-value>)",
+            950: "oklch(var(--color-gray-950) / <alpha-value>)",
+          },
+          background: "oklch(var(--catalyst-background) / <alpha-value>)",
+          foreground: "oklch(var(--catalyst-foreground) / <alpha-value>)",
+          card: {
+            DEFAULT: "oklch(var(--catalyst-card) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-card-foreground) / <alpha-value>)",
+          },
+          popover: {
+            DEFAULT: "oklch(var(--catalyst-popover) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-popover-foreground) / <alpha-value>)",
+          },
+          primary: {
+            DEFAULT: "oklch(var(--catalyst-primary) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-primary-foreground) / <alpha-value>)",
+          },
+          secondary: {
+            DEFAULT: "oklch(var(--catalyst-secondary) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-secondary-foreground) / <alpha-value>)",
+          },
+          muted: {
+            DEFAULT: "oklch(var(--catalyst-muted) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-muted-foreground) / <alpha-value>)",
+          },
+          accent: {
+            DEFAULT: "oklch(var(--catalyst-accent) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-accent-foreground) / <alpha-value>)",
+          },
+          destructive: {
+            DEFAULT: "oklch(var(--catalyst-destructive) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-destructive-foreground) / <alpha-value>)",
+          },
+          border: "oklch(var(--catalyst-border) / <alpha-value>)",
+          input: "oklch(var(--catalyst-input) / <alpha-value>)",
+          ring: "oklch(var(--catalyst-ring) / <alpha-value>)",
+          chart: {
+            "1": "oklch(var(--catalyst-chart-1) / <alpha-value>)",
+            "2": "oklch(var(--catalyst-chart-2) / <alpha-value>)",
+            "3": "oklch(var(--catalyst-chart-3) / <alpha-value>)",
+            "4": "oklch(var(--catalyst-chart-4) / <alpha-value>)",
+            "5": "oklch(var(--catalyst-chart-5) / <alpha-value>)",
+          },
+          sidebar: {
+            DEFAULT:
+              "oklch(var(--catalyst-sidebar-background) / <alpha-value>)",
+            foreground:
+              "oklch(var(--catalyst-sidebar-foreground) / <alpha-value>)",
+            primary: "oklch(var(--catalyst-sidebar-primary) / <alpha-value>)",
+            "primary-foreground":
+              "oklch(var(--catalyst-sidebar-primary-foreground) / <alpha-value>)",
+            accent: "oklch(var(--catalyst-sidebar-accent) / <alpha-value>)",
+            "accent-foreground":
+              "oklch(var(--catalyst-sidebar-accent-foreground) / <alpha-value>)",
+            border: "oklch(var(--catalyst-sidebar-border) / <alpha-value>)",
+            ring: "oklch(var(--catalyst-sidebar-ring) / <alpha-value>)",
+          },
+        },
         material: {
           gray: {
             50: "oklch(var(--material-color-gray-50) / <alpha-value>)",
@@ -321,6 +472,12 @@ export default {
         "material-md": "calc(var(--material-radius) - 2px)",
         "material-sm": "calc(var(--material-radius) - 4px)",
         "material-lg": "calc(var(--material-radius))",
+        "catalyst-lg": "var(--catalyst-radius)",
+        "catalyst-md": "calc(var(--catalyst-radius) - 2px)",
+        "catalyst-sm": "calc(var(--catalyst-radius) - 4px)",
+        "linear-md": "calc(var(--linear-radius) - 2px)",
+        "linear-sm": "calc(var(--linear-radius) - 4px)",
+        "linear-lg": "calc(var(--linear-radius))",
       },
       keyframes: {
         "accordion-down": {

@@ -1,19 +1,25 @@
 "use client";
 
-import Link from "next/link";
-
-import { blocksRegistry } from "@/config/data";
-import { SuggestedComponentsSection } from "@/components/suggestion-blocks";
-import { Typography } from "@/components/ui/typography";
 import { ArrowRightIcon } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Metadata } from "next";
-import { StylePreview } from "./components/style-preview";
+import Link from "next/link";
 import React from "react";
+
+import { PageContainer } from "@/components/common/page-container";
+import { PageSubTitle, PageTitle } from "@/components/common/page-header";
+import { ExamplesTabsNav } from "@/components/draft";
+import {
+  StyleCssWrapper,
+  StyleFontWrapper,
+} from "@/components/style-font-wrapper";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Typography } from "@/components/ui/typography";
+import { StyleShowcaseCardLink } from "@/components/views/styles/style-showcase-card-link";
+import { blocksRegistry } from "@/config/data";
+import { STYLES, STYLES_LENGTH, stylesInfo, useStyle } from "@/hooks/use-style";
+
+import { StylePreview } from "./components/style-preview";
 import { StylesBreadcrumb } from "./components/styles-breadcrumb";
-import { STYLES, useStyle } from "@/hooks/use-style";
-import { ExamplesTabsNav, StyleSelect } from "@/components/draft";
-import { ExamplesNav } from "./components/examples-nav";
 
 interface Props {
   params: { slug: string };
@@ -42,74 +48,121 @@ export default function StylesPage({ params }: Props) {
 
   const { styleCategory } = useStyle();
 
-  const styleNames = {
-    default: "Default Style",
-    carbon: "Carbon IBM inspired design system style",
-    linear: "Linear Design System style",
-    material: "Material Design style",
-  };
-
   return (
-    <div className="bg-gradient-to-r from-accent/40 to-background">
-      <div className="pt-20 pb-4">
-        <div className="space-y-4">
-          <div className="border-y px-3">
+    <div>
+      <div className="relative space-y-20 bg-gradient-to-b from-accent/80 to-background py-20">
+        <PageContainer>
+          <div className="space-y-4">
             <div>
               <StylesBreadcrumb />
             </div>
-          </div>
-          <div className="border-y flex items-center gap-2">
-            <Typography
-              as={"h1"}
-              variant="5xl/semibold"
-              className="tracking-tighter capitalize px-3"
-            >
-              Styles
-            </Typography>
-            <Badge>3 styles</Badge>
-          </div>
 
-          {/* {stylePath}
-          {styleUrl} */}
+            <div className="flex items-center gap-2">
+              <PageTitle as={"h1"}>Styles</PageTitle>
+              <Badge>{STYLES_LENGTH} styles</Badge>
+            </div>
 
-          <div className="border-y">
-            <Typography
-              as={"p"}
-              variant="lg/normal"
-              className="text-muted-foreground max-w-4xl px-3"
-            >
-              Discover shadcn ui styles and UI kits, beyond Default and New York
-              shadcn ui styles.
-            </Typography>
+            <div>
+              <PageSubTitle className="max-w-2xl text-muted-foreground">
+                Discover shadcn ui styles and UI kits, beyond Default and New
+                York shadcn ui styles.
+              </PageSubTitle>
+            </div>
           </div>
-        </div>
+        </PageContainer>
+
+        <PageContainer>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-8">
+            {["default", "carbon", "linear", "catalyst", "material"]
+              .filter((s) => s !== "default")
+              .map((style, index) => {
+                return (
+                  <StyleCssWrapper key={style + index}>
+                    <StyleFontWrapper style={style}>
+                      <StyleShowcaseCardLink style={style} />
+                    </StyleFontWrapper>
+                  </StyleCssWrapper>
+                );
+              })}
+          </div>
+        </PageContainer>
       </div>
-      <div className="space-y-20 overflow-hidden">
-        {/* <StyleSelect /> */}
-        <div className="border-y px-3 py-2">
-          <ExamplesTabsNav />
-        </div>
-        {STYLES.filter((style) => style !== "default").map((style, index) => {
-          return (
-            <StylePreview
-              key={style + index}
-              id={style}
-              // @ts-ignore
-              title={styleNames[style]}
-              styleProp={style}
-              // description="Carbon IBM inspired design system style for shadcn ui"
-              examplePage={styleCategory}
-              // component={block.id}
-            >
-              <></>
-            </StylePreview>
-          );
-        })}
+      <div className="flex flex-col gap-8 py-20">
+        <div className="mt-10">
+          <PageContainer className="flex flex-col gap-4">
+            <PageTitle as={"h2"}>See it in action</PageTitle>
 
-        {/* suggestion */}
-        {/* <div>
-          <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
-        </div> */}
+            <PageSubTitle className="max-w-2xl text-muted-foreground">
+              Preview custom shadcn styles in different examples and see how
+              they look
+            </PageSubTitle>
+          </PageContainer>
+        </div>
+        <div className="sticky top-16 z-30 w-full bg-background/[0.7] py-2 backdrop-blur-sm">
+          <PageContainer className="flex flex-col gap-6">
+            <ExamplesTabsNav />
+          </PageContainer>
+        </div>
+        <div className="grid gap-10">
+          {STYLES.filter((style) => style !== "default").map((style, index) => {
+            return (
+              <div key={style + index}>
+                <div className="relative grid grid-cols-1 gap-4 lg:gap-10 xl:grid-cols-5">
+                  <div className="relative xl:col-span-2">
+                    <div className="sticky top-20 z-10 space-y-4 p-4 pt-10 xl:ml-auto xl:max-w-md xl:p-0 xl:pt-28">
+                      <div className="flex flex-col gap-2">
+                        <div className="flex items-center gap-4">
+                          <Typography
+                            as={"h1"}
+                            variant="4xl/semibold"
+                            className="capitalize tracking-tighter"
+                          >
+                            {/* @ts-ignore */}
+                            {stylesInfo[style as any].title}{" "}
+                            <span className="text-3xl font-normal italic">
+                              Style
+                            </span>
+                          </Typography>
+                          {/* <Badge>Pro</Badge> */}
+                        </div>
+
+                        <div>
+                          <Typography
+                            as={"p"}
+                            variant="lg/normal"
+                            className="max-w-4xl text-muted-foreground"
+                          >
+                            {/* @ts-ignore */}
+                            {stylesInfo[style].description}
+                          </Typography>
+                        </div>
+                      </div>
+                      <div className="mt-2 flex gap-2">
+                        <Button variant={"default"} size={"sm"} asChild>
+                          <Link href={`/styles/${style}`}>
+                            View Style
+                            <ArrowRightIcon className="h-4 w-4 -rotate-45" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid p-4 py-0 lg:py-4 xl:col-span-3">
+                    <StylePreview
+                      key={style + index}
+                      id={style}
+                      title={""}
+                      styleProp={style}
+                      styleCat={styleCategory}
+                      examplePage={styleCategory}
+                      iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem]"
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -133,16 +186,16 @@ function BlocksNotFound({ slug }: { slug: string }) {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex h-screen flex-col items-center justify-center">
       <section className="">
-        <div className="container flex py-64 min-h-screen px-6 mx-auto">
+        <div className="container mx-auto flex min-h-screen px-6 py-64">
           <div className="w-full ">
-            <div className="flex flex-col items-center max-w-lg mx-auto text-center">
+            <div className="mx-auto flex max-w-lg flex-col items-center text-center">
               <Badge>
                 <Typography
                   as="span"
                   variant="sm/medium"
-                  className="text-primary font-mono"
+                  className="font-mono text-primary"
                 >
                   404 error
                 </Typography>
@@ -150,7 +203,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
               <Typography
                 as="p"
                 variant="4xl/semibold"
-                className="mt-4 text-foreground tracking-tight"
+                className="mt-4 tracking-tight text-foreground"
               >
                 Page not found
               </Typography>
@@ -163,11 +216,11 @@ function BlocksNotFound({ slug }: { slug: string }) {
               </Typography>
             </div>
 
-            <div className="grid w-full max-w-6xl grid-cols-1 gap-4 mx-auto mt-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto mt-10 grid w-full max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {suggestedNotFoundLinks.map((link) => (
                 <div
                   key={link.title}
-                  className="relative group p-3.5 py-1.5 hover:border-primary rounded-lg bg-card border flex flex-col gap-2"
+                  className="group relative flex flex-col gap-2 rounded-lg border bg-card p-3.5 py-1.5 hover:border-primary"
                 >
                   <div className="flex items-center gap-4">
                     {/* <span className="text-muted-foreground">
@@ -203,7 +256,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
 
                   <Link
                     href={link.href}
-                    className="absolute inset-0 inline-flex items-center mt-4 text-sm text-blue-500 gap-x-2 dark:text-blue-400 hover:underline"
+                    className="absolute inset-0 mt-4 inline-flex items-center gap-x-2 text-sm text-blue-500 hover:underline dark:text-blue-400"
                   >
                     <span className="sr-only">{link.title}</span>
                   </Link>

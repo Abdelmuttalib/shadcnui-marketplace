@@ -1,18 +1,19 @@
-import type React from "react";
-import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
-  Zap,
-  Rocket,
-  Puzzle,
   Lock,
-  VideoIcon,
-  PlayIcon,
   PlayCircle,
+  PlayIcon,
+  Puzzle,
+  Rocket,
+  VideoIcon,
+  Zap,
 } from "lucide-react";
-import { Typography } from "@/components/ui/typography";
+import type React from "react";
+
 import { AvatarDemo } from "@/components/showcase";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Typography } from "@/components/ui/typography";
 
 export default function Home() {
   return (

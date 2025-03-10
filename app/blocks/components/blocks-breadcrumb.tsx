@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,7 +10,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { cn } from "@/lib/utils";
-import { usePathname, useRouter } from "next/navigation";
 
 export default function BlocksBreadcrumb() {
   // current path items

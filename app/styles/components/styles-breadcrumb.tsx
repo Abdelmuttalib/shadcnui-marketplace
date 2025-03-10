@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,7 +10,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { usePathname, useRouter } from "next/navigation";
 
 export function StylesBreadcrumb() {
   const pathname = usePathname();

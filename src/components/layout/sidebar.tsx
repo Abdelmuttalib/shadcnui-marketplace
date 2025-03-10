@@ -70,7 +70,7 @@ export function SideBar({
       <div className="relative mx-4 flex-1 overflow-y-auto py-4 lg:pl-0">
         {setShowSidebarMenu && (
           <Button
-            className="absolute top-4 left-0 focus:border-2 focus:border-gray-800"
+            className="absolute left-0 top-4 focus:border-2 focus:border-gray-800"
             variant="outline"
             size="sm"
             onClick={() => setShowSidebarMenu(false)}
@@ -79,7 +79,7 @@ export function SideBar({
           </Button>
         )}
         <div className="mt-1">
-          <Framer className="w-9 h-9 bg-primary-200/70 dark:bg-gray-hover rounded p-1.5" />
+          <Framer className="bg-primary-200/70 dark:bg-gray-hover h-9 w-9 rounded p-1.5" />
         </div>
         {/* <Typography as='h5' variant='lg/normal'>
             Dashboard
@@ -91,9 +91,9 @@ export function SideBar({
               <Link
                 href={link.href}
                 className={cn(
-                  "bg-background text-sm text-foreground-lighter hover:bg-card dark:hover:bg-layer-3 dark:hover:text-foreground-muted rounded py-2.5 px-4 inline-flex items-center gap-x-3 w-full font-medium",
+                  "text-foreground-lighter dark:hover:bg-layer-3 dark:hover:text-foreground-muted inline-flex w-full items-center gap-x-3 rounded bg-background px-4 py-2.5 text-sm font-medium hover:bg-card",
                   {
-                    "text-foreground hover:text-foreground dark:hover:text-foreground bg-layer-3":
+                    "bg-layer-3 text-foreground hover:text-foreground dark:hover:text-foreground":
                       pathname === link.href,
                     "": pathname !== link.href,
                   }

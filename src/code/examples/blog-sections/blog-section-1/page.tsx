@@ -1,10 +1,11 @@
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { ImageIcon } from "lucide-react";
+import Link from "next/link";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Typography, typographyVariants } from "@/components/ui/typography";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
 
 function formatDate(dateString: string): string {
   const options: Intl.DateTimeFormatOptions = {

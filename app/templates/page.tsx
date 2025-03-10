@@ -1,8 +1,9 @@
+import type { ClassValue } from "clsx";
+import type { ReactNode } from "react";
+
 import { ButtonLink } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/utils/cn";
-import type { ClassValue } from "clsx";
-import type { ReactNode } from "react";
 
 interface ContainerProps {
   children: ReactNode;
@@ -28,11 +29,11 @@ export default function Templates() {
 
 function H() {
   return (
-    <div className="relative -mt-[5.75rem] overflow-hidden bg-base-25 dark:bg-card pt-12 md:pt-[5.75rem]">
+    <div className="bg-base-25 relative -mt-[5.75rem] overflow-hidden pt-12 dark:bg-card md:pt-[5.75rem]">
       <Container>
         <div className="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/public/plus/img/beams-templates-header.png')] bg-[length:2000px_100%] bg-[position:calc(50%_+_220px)_-50px] bg-no-repeat lg:block"></div>
         <div className="max-w-container mx-auto px-4 pt-4 sm:px-6 lg:flex lg:px-8">
-          <div className="relative z-20 mx-auto max-w-[40rem] pt-16 pb-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pt-20 lg:pr-4 lg:pb-24">
+          <div className="relative z-20 mx-auto max-w-[40rem] pb-16 pt-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
             <h1 className="text-base/7 font-semibold text-primary">
               By the makers of Tailwind CSS
             </h1>
@@ -40,12 +41,12 @@ function H() {
             <Typography
               as="p"
               variant="5xl/bold"
-              className="mt-4 text-foreground tracking-tight"
+              className="mt-4 tracking-tight text-foreground"
             >
               Modern website templates, crafted with shadcn ui and Tailwind CSS.
             </Typography>
-            <div className="flex flex-wrap gap-6 mt-4">
-              <div className="flex items-center text-sm font-medium text-foreground-secondary">
+            <div className="mt-4 flex flex-wrap gap-6">
+              <div className="text-foreground-secondary flex items-center text-sm font-medium">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
@@ -99,11 +100,11 @@ function H() {
                 </svg> */}
                 <span className="ml-2.5">shadcn ui</span>
               </div>
-              <div className="flex items-center text-sm font-medium text-foreground-secondary">
+              <div className="text-foreground-secondary flex items-center text-sm font-medium">
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 36 36"
-                  className="h-6 w-6 inline-flex items-center justify-center mt-2"
+                  className="mt-2 inline-flex h-6 w-6 items-center justify-center"
                   fill="none"
                 >
                   <path
@@ -115,7 +116,7 @@ function H() {
                 <span className="ml-2.5">Tailwind CSS</span>
               </div>
             </div>
-            <p className="mt-4 text-base/7 text-foreground-secondary">
+            <p className="text-foreground-secondary mt-4 text-base/7">
               Visually-stunning, easy to customize site templates built with
               React and Next.js. The perfect starting point for your next
               project and the ultimate resource for learning how experts build
@@ -135,53 +136,53 @@ function H() {
           <div className="relative z-10 hidden lg:block">
             <div className="mt-6 flex">
               <div className="relative shrink-0 p-4">
-                <div className="relative z-10 overflow-hidden rounded-sm ring-1 shadow-xl ring-slate-900/5">
+                <div className="relative z-10 overflow-hidden rounded-sm shadow-xl ring-1 ring-slate-900/5">
                   <img
                     className="h-[404px] w-[336px]"
                     src="https://tailwindui.com/plus/img/headers/templates/salient.png"
                   />
                 </div>
                 <div className="z-0">
-                  <div className="absolute top-0 -right-12 left-0 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="absolute -right-12 left-0 top-0 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                   <div className="absolute -top-8 bottom-0 left-12 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                   <div className="absolute -right-12 bottom-14 left-0 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                  <div className="absolute -top-2 right-0 -bottom-8 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                  <div className="absolute right-10 bottom-full -mb-px flex h-8 items-end overflow-hidden">
-                    <div className="flex -mb-px h-[2px] w-80 -scale-x-100">
-                      <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
-                      <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
+                  <div className="absolute -bottom-8 -top-2 right-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="absolute bottom-full right-10 -mb-px flex h-8 items-end overflow-hidden">
+                    <div className="-mb-px flex h-[2px] w-80 -scale-x-100">
+                      <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                      <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="relative mt-14 shrink-0 p-4">
-                <div className="overflow-hidden rounded-sm ring-1 shadow-xl ring-slate-900/5">
+                <div className="overflow-hidden rounded-sm shadow-xl ring-1 ring-slate-900/5">
                   <img
                     className="h-[404px] w-[336px]"
                     src="https://tailwindui.com/plus/img/headers/templates/keynote.png"
                   />
                 </div>
                 <div>
-                  <div className="absolute top-0 -right-8 -left-4 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                  <div className="absolute -top-20 right-0 -bottom-12 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                  <div className="absolute -right-8 bottom-0 -left-4 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                  <div className="absolute top-[calc(100%-1px)] right-10 -mb-px flex h-8 items-start overflow-hidden">
-                    <div className="flex -mt-px h-[2px] w-80 -scale-x-100">
-                      <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
-                      <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
+                  <div className="absolute -left-4 -right-8 top-0 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="absolute -bottom-12 -top-20 right-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="absolute -left-4 -right-8 bottom-0 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="absolute right-10 top-[calc(100%-1px)] -mb-px flex h-8 items-start overflow-hidden">
+                    <div className="-mt-px flex h-[2px] w-80 -scale-x-100">
+                      <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                      <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="relative shrink-0 p-4">
-                <div className="overflow-hidden rounded-sm ring-1 shadow-xl ring-slate-900/5">
+                <div className="overflow-hidden rounded-sm shadow-xl ring-1 ring-slate-900/5">
                   <img
                     className="h-[404px] w-[336px]"
                     src="https://tailwindui.com/plus/img/headers/templates/primer.png"
                   />
                 </div>
                 <div>
-                  <div className="absolute top-0 -right-8 -left-12 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="absolute -left-12 -right-8 top-0 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 </div>
               </div>
             </div>
@@ -220,7 +221,7 @@ function H() {
                   <h2 className="text-sm/6 font-semibold text-foreground">
                     Built with modern technologies
                   </h2>
-                  <p className="mt-2 text-sm/6 text-foreground-secondary">
+                  <p className="text-foreground-secondary mt-2 text-sm/6">
                     Each template is a well-structured Next.js project, giving
                     you a codebase that’s productive and enjoyable to work in.
                   </p>
@@ -258,7 +259,7 @@ function H() {
                   <h2 className="text-sm/6 font-semibold text-foreground">
                     Easy to customize
                   </h2>
-                  <p className="mt-2 text-sm/6 text-foreground-secondary">
+                  <p className="text-foreground-secondary mt-2 text-sm/6">
                     Everything is styled with utility classNamees, just open the
                     markup in your editor and change whatever you want.
                   </p>
@@ -296,7 +297,7 @@ function H() {
                   <h2 className="text-sm/6 font-semibold text-foreground">
                     Built by experts
                   </h2>
-                  <p className="mt-2 text-sm/6 text-foreground-secondary">
+                  <p className="text-foreground-secondary mt-2 text-sm/6">
                     All of the code follows Tailwind CSS best practices, because
                     it’s written by the same team who created and maintain the
                     framework.

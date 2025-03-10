@@ -8,10 +8,9 @@ import {
   resetServerContext,
 } from "react-beautiful-dnd";
 
-import { useMounted } from "@/hooks/use-mounted";
-
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
+import { useMounted } from "@/hooks/use-mounted";
 
 type Status = "backlog" | "todo" | "in progress" | "done";
 
@@ -232,7 +231,7 @@ export function Board() {
     <>
       <div className="flex justify-center">
         <DragDropContext onDragEnd={handleOnDragEnd}>
-          <div className="flex flex-col md:flex-row gap-5 w-full h-full bg-background px-5 py-4">
+          <div className="flex h-full w-full flex-col gap-5 bg-background px-5 py-4 md:flex-row">
             {/* Column/Status */}
             {statuses.map((status) => {
               const tasksByStatus = tasks.filter(
@@ -241,25 +240,25 @@ export function Board() {
               return (
                 <div
                   key={status}
-                  className="w-full h-full min-h-screen flex flex-col gap-y-3 bg-background"
+                  className="flex h-full min-h-screen w-full flex-col gap-y-3 bg-background"
                 >
                   {/* <XCircle className='w-8 h-8 text-red-500 dark:text-red-400' /> */}
                   {/* <Circle className='w-8 h-8 text-gray-500 dark:text-gray-400' />
 
                   <Radius className='w-8 h-8 text-blue-500 dark:text-blue-400' />
                   <CheckCircle2 className='w-8 h-8 text-green-500 dark:text-green-400' /> */}
-                  <div className="inline-flex px-3 items-center gap-x-2">
+                  <div className="inline-flex items-center gap-x-2 px-3">
                     {status === "backlog" && (
-                      <CircleDashed className="w-[18px] h-[18px] text-foreground-light" />
+                      <CircleDashed className="text-foreground-light h-[18px] w-[18px]" />
                     )}
                     {status === "todo" && (
-                      <Circle className="w-[18px] h-[18px] text-foreground-light" />
+                      <Circle className="text-foreground-light h-[18px] w-[18px]" />
                     )}
                     {status === "in progress" && (
-                      <Radius className="w-[18px] h-[18px] text-foreground-light" />
+                      <Radius className="text-foreground-light h-[18px] w-[18px]" />
                     )}
                     {status === "done" && (
-                      <CheckCircle2 className="w-[18px] h-[18px] text-foreground-light" />
+                      <CheckCircle2 className="text-foreground-light h-[18px] w-[18px]" />
                     )}
                     <Typography
                       as="h3"
@@ -269,7 +268,7 @@ export function Board() {
                       {status}
                       <Badge
                         color="white"
-                        className="text-xs border border-border text-current p-1 px-1.5 ml-4 dark:bg-layer"
+                        className="dark:bg-layer ml-4 border border-border p-1 px-1.5 text-xs text-current"
                       >
                         {tasksByStatus.length}
                       </Badge>
@@ -279,7 +278,7 @@ export function Board() {
                   <Droppable droppableId={status}>
                     {(provided, snapshot) => (
                       <div
-                        className={`space-y-3 h-full min-h-full flex-1 rounded bg-background ${
+                        className={`h-full min-h-full flex-1 space-y-3 rounded bg-background ${
                           snapshot.isDraggingOver
                             ? "bg-layer-3/50 dark:bg-gray-hover/50"
                             : ""
@@ -299,20 +298,20 @@ export function Board() {
                                 {...provided.draggableProps}
                                 {...provided.dragHandleProps}
                                 ref={provided.innerRef}
-                                className="border border-border rounded p-4 py-3 flex flex-col gap-y-2 bg-layer"
+                                className="bg-layer flex flex-col gap-y-2 rounded border border-border p-4 py-3"
                               >
                                 <div className="inline-flex items-center justify-between">
                                   <Typography
                                     as="span"
                                     variant="xs/medium"
-                                    className="capitalize text-foreground-muted-light dark:text-foreground-lighter"
+                                    className="text-foreground-muted-light dark:text-foreground-lighter capitalize"
                                   >
                                     CYB-246
                                   </Typography>
                                   <Typography
                                     as="span"
                                     variant="xs/medium"
-                                    className="capitalize text-foreground-muted-light dark:text-foreground-lighter"
+                                    className="text-foreground-muted-light dark:text-foreground-lighter capitalize"
                                   >
                                     Mar 15
                                   </Typography>
@@ -331,7 +330,7 @@ export function Board() {
                                 >
                                   {task.description}
                                 </Typography> */}
-                                <div className="flex justify-between items-center gap-2 mt-2">
+                                <div className="mt-2 flex items-center justify-between gap-2">
                                   <Badge
                                     color={
                                       task.status === "done"
@@ -342,14 +341,14 @@ export function Board() {
                                         ? "blue"
                                         : "gray"
                                     }
-                                    className="capitalize border text-xs px-2 py-0.5"
+                                    className="border px-2 py-0.5 text-xs capitalize"
                                   >
                                     {task.status}
                                   </Badge>
                                   <div className="flex items-center">
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
-                                      className="w-6 h-6 rounded-full mr-2 object-cover"
+                                      className="mr-2 h-6 w-6 rounded-full object-cover"
                                       src={task.assigneeAvatarUrl}
                                       alt="Assignee avatar"
                                     />

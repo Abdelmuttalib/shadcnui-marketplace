@@ -1,5 +1,9 @@
 "use client";
 
+import { Bookmark, HeartIcon } from "lucide-react";
+import Link from "next/link";
+
+import { StyleSelect } from "@/components/draft";
 import {
   AccordionDemo,
   CheckboxDemo,
@@ -23,42 +27,39 @@ import {
 import ThemeSwitcher from "@/components/theme-select";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useStyle } from "@/hooks/use-style";
-import { Bookmark, HeartIcon } from "lucide-react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Checkbox } from "@/components/ui/checkbox";
-import { StyleSelect } from "@/components/draft";
 
 export function HeroUI() {
   return (
     <div className="col-start-1 row-start-5 flex md:row-span-3 md:row-start-3 lg:row-span-4 lg:row-start-2 xl:row-span-5 xl:row-start-1 xl:justify-end">
-      <div className="mt-12 -ml-[32rem] h-[46.375rem] origin-top select-none sm:-mt-20 sm:-ml-[24rem] sm:h-auto md:mt-10 md:-ml-64 lg:mt-0 lg:-ml-16 xl:-mr-4 xl:ml-0">
+      <div className="-ml-[32rem] mt-12 h-[46.375rem] origin-top select-none sm:-ml-[24rem] sm:-mt-20 sm:h-auto md:-ml-64 md:mt-10 lg:-ml-16 lg:mt-0 xl:-mr-4 xl:ml-0">
         <div className="flex justify-end">
           <div className="relative flex items-end">
             <div className="absolute -inset-x-8 bottom-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            <div className="absolute top-full left-16 -mt-px h-8 overflow-hidden">
-              <div className="flex -mt-px h-[2px] w-56">
-                <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
-                <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
+            <div className="absolute left-16 top-full -mt-px h-8 overflow-hidden">
+              <div className="-mt-px flex h-[2px] w-56">
+                <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
               </div>
             </div>
             <div>
               <div className="p-4">
-                <div className="ml-auto justify-end hidden lg:flex">
+                <div className="ml-auto hidden justify-end lg:flex">
                   <Switch />
                 </div>
               </div>
               <div className="p-4">
                 <div className="ml-auto flex justify-end sm:pt-6 md:pt-0">
-                  <div className="flex flex-wrap flex-col gap-2 lg:flex-row">
-                    <Badge className="flex-none w-fit">Default</Badge>
-                    <Badge className="flex-none w-fit" variant={"outline"}>
+                  <div className="flex flex-col flex-wrap gap-2 lg:flex-row">
+                    <Badge className="w-fit flex-none">Default</Badge>
+                    <Badge className="w-fit flex-none" variant={"outline"}>
                       Outline
                     </Badge>
-                    <Badge className="flex-none w-fit" variant={"destructive"}>
+                    <Badge className="w-fit flex-none" variant={"destructive"}>
                       Destructive
                     </Badge>
                   </div>
@@ -71,14 +72,14 @@ export function HeroUI() {
                   </div>
                 </div>
               </div>
-              <div className="relative z-10 p-4 flex flex-col items-end gap-2 text-right">
+              <div className="relative z-10 flex flex-col items-end gap-2 p-4 text-right">
                 <div className="absolute -inset-y-8 right-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 <div className="absolute -inset-y-8 left-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 <div className="absolute -inset-x-8 bottom-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 {/* <div className="absolute -inset-y-8 left-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
               <div className="absolute -inset-x-8 top-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
               <div className="absolute inset-0 -right-px bg-linear-to-br from-white/0 via-white/25 to-white/0"></div> */}
-                <div className="flex gap-2 justify-end">
+                <div className="flex justify-end gap-2">
                   <Tabs defaultValue="tab1">
                     <TabsList className="">
                       <TabsTrigger value="tab1">Tab 1</TabsTrigger>
@@ -87,13 +88,13 @@ export function HeroUI() {
                     </TabsList>
                   </Tabs>
                   <Button size={"icon"}>
-                    <HeartIcon className="w-4 h-4" />
+                    <HeartIcon className="h-4 w-4" />
                   </Button>
                   <Button size={"icon"} variant={"secondary"}>
-                    <HeartIcon className="w-4 h-4" />
+                    <HeartIcon className="h-4 w-4" />
                   </Button>
                 </div>
-                <div className="flex justify-end gap-2 items-center">
+                <div className="flex items-center justify-end gap-2">
                   <PopoverDemo />
                   <Button size={"default"} variant={"secondary"}>
                     <Bookmark />
@@ -107,12 +108,12 @@ export function HeroUI() {
               <div className="absolute -inset-y-8 left-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
               <div className="absolute -inset-x-8 top-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
               <div className="absolute bottom-full left-40 -mb-px flex h-8 items-end overflow-hidden">
-                <div className="flex -mb-px h-[2px] w-56">
-                  <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
-                  <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
+                <div className="-mb-px flex h-[2px] w-56">
+                  <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                  <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                 </div>
               </div>
-              <div className="w-[24.5rem] divide-y divide-muted-foreground/20 rounded-lg bg-card text-[0.8125rem]/5 text-foreground shadow-xl shadow-black/5 border">
+              <div className="w-[24.5rem] divide-y divide-muted-foreground/20 rounded-lg border bg-card text-[0.8125rem]/5 text-foreground shadow-xl shadow-black/5">
                 <div className="flex items-center p-4">
                   <img
                     src="https://avatar.vercel.sh/avatar-1.png"
@@ -175,7 +176,7 @@ export function HeroUI() {
             <div className="absolute -inset-y-8 right-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
             <div className="absolute -inset-y-8 left-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
             <div className="absolute -inset-x-8 bottom-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            <div className="flex w-fit gap-2 items-center">
+            <div className="flex w-fit items-center gap-2">
               <InputOTPDemo />
               <SheetDemo />
               <InputDemo />
@@ -257,7 +258,7 @@ export function HeroUI() {
               <div className="absolute -inset-x-8 bottom-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
               <div className="absolute -inset-x-8 top-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
               <div>
-                <div className="flex justify-end gap-2 items-center p-4">
+                <div className="flex items-center justify-end gap-2 p-4">
                   <MenubarDemo />
                   <DrawerDemo />
                   {/* <div className="pointer-events-auto flex divide-x divide-muted-foreground/20 overflow-hidden rounded-md bg-card text-[0.8125rem]/5 font-medium text-muted-foreground shadow-xs border">
@@ -277,9 +278,9 @@ export function HeroUI() {
                   <div className="absolute -inset-y-8 left-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                   <div className="absolute -inset-y-8 right-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                   <div className="absolute bottom-full left-16 -mb-px flex h-8 items-end overflow-hidden">
-                    <div className="flex -mb-px h-[2px] w-56">
-                      <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
-                      <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
+                    <div className="-mb-px flex h-[2px] w-56">
+                      <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                      <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                     </div>
                   </div>
                   <div className="flex w-[23.5625rem] items-center">
@@ -308,7 +309,7 @@ export function HeroUI() {
                     <SliderDemo />
                   </div>
 
-                  <div className="pointer-events-auto w-[21rem] rounded-lg bg-card p-4 shadow-xl shadow-black/5 border">
+                  <div className="pointer-events-auto w-[21rem] rounded-lg border bg-card p-4 shadow-xl shadow-black/5">
                     <ContextMenuDemo />
                   </div>
                 </div>
@@ -320,13 +321,13 @@ export function HeroUI() {
                 <div className="absolute -inset-y-8 left-0 w-px bg-foreground/10 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 <div className="absolute -inset-x-8 bottom-0 h-px bg-foreground/10 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 <div className="absolute -top-px right-16 h-8 overflow-hidden">
-                  <div className="flex -mt-px h-[2px] w-56 -scale-x-100">
-                    <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
-                    <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
+                  <div className="-mt-px flex h-[2px] w-56 -scale-x-100">
+                    <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                    <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                   </div>
                 </div>
 
-                <div className="pointer-events-auto w-[28.125rem] text-[0.8125rem]/5 text-muted-foreground flex justify-end gap-2">
+                <div className="pointer-events-auto flex w-[28.125rem] justify-end gap-2 text-[0.8125rem]/5 text-muted-foreground">
                   <div>
                     <SelectDemo />
                   </div>
@@ -348,8 +349,8 @@ export function HeroUI() {
                   <div className="px-3 py-2">Devon Webb</div>
                 </div> */}
                 </div>
-                <div className="relative rounded-md p-4 w-full">
-                  <div className="pointer-events-auto  space-y-1 rounded-lg font-medium text-muted-foreground text-sm shadow-xl shadow-black/5">
+                <div className="relative w-full rounded-md p-4">
+                  <div className="pointer-events-auto  space-y-1 rounded-lg text-sm font-medium text-muted-foreground shadow-xl shadow-black/5">
                     <AccordionDemo />
                   </div>
                 </div>

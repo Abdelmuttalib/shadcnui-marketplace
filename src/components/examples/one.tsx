@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -42,7 +42,7 @@ export function Example1() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm/6 font-semibold text-foreground-secondary"
+                className="text-foreground-secondary text-sm/6 font-semibold"
               >
                 {item.name}
               </a>
@@ -121,7 +121,7 @@ export function Example1() {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground-secondary ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div className="text-foreground-secondary relative rounded-full px-3 py-1 text-sm/6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Announcing our next round of funding.{" "}
               <a href="#" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -133,7 +133,7 @@ export function Example1() {
             <h1 className="text-balance text-5xl font-semibold tracking-tight text-foreground sm:text-7xl">
               Data to enrich your online business
             </h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-foreground-subtle sm:text-xl/8">
+            <p className="text-foreground-subtle mt-8 text-pretty text-lg font-medium sm:text-xl/8">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
             </p>

@@ -1,10 +1,11 @@
 "use client";
 
-import { Check, Sparkles, MessageSquare, Users } from "lucide-react";
+import { Check, MessageSquare, Sparkles, Users } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { Typography } from "@/components/ui/typography";
+import { cn } from "@/lib/utils";
 
 const pricingTiers = [
   {
@@ -156,7 +157,11 @@ export function PricingCard({
         </CardHeader>
         <CardContent className="grid gap-6">
           <Button
-            className={`w-full ${highlighted ? "bg-primary text-primary-foreground hover:bg-primary/90" : ""}`}
+            className={`w-full ${
+              highlighted
+                ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                : ""
+            }`}
             variant={highlighted ? "default" : "outline"}
           >
             {highlighted && <Sparkles className="mr-2 h-4 w-4" />}
@@ -178,10 +183,14 @@ export function PricingCard({
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`flex items-start gap-2 ${feature.included ? "" : "text-muted-foreground"}`}
+                className={`flex items-start gap-2 ${
+                  feature.included ? "" : "text-muted-foreground"
+                }`}
               >
                 <Check
-                  className={`h-4 w-4 ${feature.included ? "text-primary" : "text-muted-foreground"}`}
+                  className={`h-4 w-4 ${
+                    feature.included ? "text-primary" : "text-muted-foreground"
+                  }`}
                 />
                 <span className="text-sm">{feature.text}</span>
               </div>

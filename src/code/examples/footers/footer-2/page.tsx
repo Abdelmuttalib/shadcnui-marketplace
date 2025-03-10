@@ -1,12 +1,12 @@
-import Link from "next/link";
 import {
+  ChevronRight,
   Facebook,
-  Twitter,
+  Github,
   Instagram,
   Linkedin,
-  Github,
-  ChevronRight,
+  Twitter,
 } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

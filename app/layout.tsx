@@ -1,14 +1,27 @@
-import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
-import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import "./carbon.css";
 import "./default.css";
 import "./material.css";
-import { ThemeButton } from "@/components/theme-button";
-import { StyleProvider } from "@/hooks/use-style";
-import { ThemeColorWrapper } from "@/components/theme-color-wrapper";
+import "./catalyst.css";
+import "./linear.css";
+
+import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
+import {
+  IBM_Plex_Mono,
+  //
+  IBM_Plex_Sans,
+  Inter,
+  Roboto,
+} from "next/font/google";
+
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
 import { NextThemesProvider } from "@/components/next-themes-provider";
+import { ThemeButton } from "@/components/theme-button";
+import { ThemeColorWrapper } from "@/components/theme-color-wrapper";
+import { StyleProvider } from "@/hooks/use-style";
+import { Toaster } from "@/registry/carbon/ui/toaster";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,6 +33,18 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-carbon",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -59,13 +84,18 @@ export default function RootLayout({
         <NextThemesProvider>
           <StyleProvider>
             <body
-              className={`${inter.variable} ${ibmPlexMono.variable} antialiased font-sans`}
+              className={`${inter.variable} ${ibmPlexMono.variable} relative flex min-h-screen flex-col font-sans antialiased ${ibmPlexSans.variable} ${roboto.variable}`}
             >
+              <Toaster />
               <div className="fixed right-2 top-2 z-[9999]">
                 <ThemeButton />
               </div>
               <TailwindIndicator />
-              {children}
+              <Navbar />
+              <main className="grid h-full flex-1 gap-72 pb-24 md:pb-40">
+                {children}
+              </main>
+              <Footer />
               <Analytics />
             </body>
           </StyleProvider>

@@ -1,5 +1,6 @@
-import { blocksRegistry } from "@/config/data";
 import type { MetadataRoute } from "next";
+
+import { blocksRegistry } from "@/config/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const BASE_URL = "https://shadcn-ui-marketplace.com";

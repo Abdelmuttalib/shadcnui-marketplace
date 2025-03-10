@@ -1,10 +1,10 @@
-import path from "path";
 import { readFile } from "fs/promises";
-import { codeToHtml } from "shiki";
-import { codeToHast } from "shiki/bundle/web";
 import { toJsxRuntime } from "hast-util-to-jsx-runtime";
+import path from "path";
 import { Fragment, ReactElement } from "react";
 import { jsx, jsxs } from "react/jsx-runtime";
+import { codeToHtml } from "shiki";
+import { codeToHast } from "shiki/bundle/web";
 
 import { CopyCodeButton } from "./copy-code-button";
 
@@ -116,8 +116,7 @@ export async function ComponentCode({
   const filePath = path.join(
     process.cwd(),
     "src",
-    "components",
-    "ui",
+    "registry",
     style,
     "ui",
     `${fileName}.tsx`
@@ -136,7 +135,14 @@ export async function ComponentCode({
 
   try {
     _code = await readFile(filePath, "utf-8");
-    code = _code.replaceAll("-cb", "");
+    code = _code
+      .replaceAll("-cb", "")
+      .replaceAll("-material", "")
+      .replaceAll("-dft", "")
+      .replaceAll("@/registry/carbon", "@/components")
+      .replaceAll("@/registry/material", "@/components")
+      .replaceAll("@/registry/linear", "@/components")
+      .replaceAll("@/registry/default", "@/components");
     codeString = await highlightCode(code);
   } catch (error) {
     console.error("Failed to read file:", error);
@@ -145,7 +151,7 @@ export async function ComponentCode({
   }
 
   return (
-    <div className="relative border rounded-lg w-full">
+    <div className="relative w-full rounded-lg border">
       <CopyCodeButton code={code} />
       {codeString}
     </div>

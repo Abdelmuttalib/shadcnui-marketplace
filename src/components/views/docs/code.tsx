@@ -1,10 +1,10 @@
-import path from "path";
 import { readFile } from "fs/promises";
-import { codeToHtml } from "shiki";
-import { codeToHast } from "shiki/bundle/web";
 import { toJsxRuntime } from "hast-util-to-jsx-runtime";
+import path from "path";
 import { Fragment, ReactElement } from "react";
 import { jsx, jsxs } from "react/jsx-runtime";
+import { codeToHtml } from "shiki";
+import { codeToHast } from "shiki/bundle/web";
 
 import { CopyCodeButton } from "./copy-code-button";
 
@@ -126,6 +126,7 @@ export async function Code({
 
   try {
     code = await readFile(filePath, "utf-8");
+
     codeString = await highlightCode(code);
   } catch (error) {
     console.error("Failed to read file:", error);
@@ -134,7 +135,7 @@ export async function Code({
   }
 
   return (
-    <div className="relative border rounded-lg w-full">
+    <div className="relative w-full rounded-lg border">
       <CopyCodeButton code={code} />
       {codeString}
     </div>

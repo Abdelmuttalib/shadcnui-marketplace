@@ -338,7 +338,6 @@ export function CollapsibleDemo() {
 
 import { Check } from "lucide-react";
 
-import { cn } from "@/utils/cn";
 import {
   Command,
   CommandEmpty,
@@ -352,6 +351,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { cn } from "@/utils/cn";
 
 const frameworks = [
   {
@@ -1389,10 +1389,10 @@ export function ChartLineDemo() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 leading-none font-medium">
+            <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="text-muted-foreground flex items-center gap-2 leading-none">
+            <div className="flex items-center gap-2 leading-none text-muted-foreground">
               Showing total visitors for the last 6 months
             </div>
           </div>
@@ -1452,10 +1452,10 @@ export function ChartBarDemo() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 leading-none font-medium">
+        <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="text-muted-foreground leading-none">
+        <div className="leading-none text-muted-foreground">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
@@ -1525,10 +1525,10 @@ export function ChartAreaDemo() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 leading-none font-medium">
+            <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="text-muted-foreground flex items-center gap-2 leading-none">
+            <div className="flex items-center gap-2 leading-none text-muted-foreground">
               January - June 2024
             </div>
           </div>
@@ -1720,7 +1720,7 @@ export function FormDemo() {
                   defaultValue={field.value}
                   className="flex flex-col space-y-1"
                 >
-                  <FormItem className="flex items-center space-y-0 space-x-3">
+                  <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>
                       <RadioGroupItem value="all" />
                     </FormControl>
@@ -1728,7 +1728,7 @@ export function FormDemo() {
                       All new messages
                     </FormLabel>
                   </FormItem>
-                  <FormItem className="flex items-center space-y-0 space-x-3">
+                  <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>
                       <RadioGroupItem value="mentions" />
                     </FormControl>
@@ -1736,7 +1736,7 @@ export function FormDemo() {
                       Direct messages and mentions
                     </FormLabel>
                   </FormItem>
-                  <FormItem className="flex items-center space-y-0 space-x-3">
+                  <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>
                       <RadioGroupItem value="none" />
                     </FormControl>
@@ -1752,7 +1752,7 @@ export function FormDemo() {
           control={form.control}
           name="mobile"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-y-0 space-x-3 rounded-md border p-4 shadow">
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow">
               <FormControl>
                 <Checkbox
                   checked={field.value}
@@ -1791,7 +1791,7 @@ export function FormDemo() {
                     return (
                       <FormItem
                         key={item.id}
-                        className="flex flex-row items-start space-y-0 space-x-3"
+                        className="flex flex-row items-start space-x-3 space-y-0"
                       >
                         <FormControl>
                           <Checkbox
@@ -2057,7 +2057,7 @@ export function CardDemo() {
           </ol>
         </CardContent>
         <CardFooter>
-          <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
+          <div className="flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
@@ -2459,7 +2459,6 @@ export function DataTableDemo() {
 }
 
 import { Button } from "@/components/ui/button";
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function TabsDemo() {
@@ -2586,6 +2585,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+
 import { DataTable } from "./ui/data-table";
 
 export function TooltipDemo() {

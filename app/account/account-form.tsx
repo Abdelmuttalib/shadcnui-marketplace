@@ -1,12 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { createClient } from "@/utils/supabase/client";
 import { type User } from "@supabase/supabase-js";
+import Image from "next/image";
+import { useCallback, useEffect, useState } from "react";
+
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { createClient } from "@/utils/supabase/client";
+
 import Avatar from "./avatar";
 
 // ...
@@ -82,7 +84,7 @@ export default function AccountForm({ user }: { user: User | null }) {
   }
 
   return (
-    <div className="bg-card max-w-xl rounded-md border mx-auto p-6 my-44 flex flex-col gap-4">
+    <div className="mx-auto my-44 flex max-w-xl flex-col gap-4 rounded-md border bg-card p-6">
       {/* ... */}
       <Avatar
         uid={user?.id ?? null}

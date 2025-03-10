@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
-
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import React from "react";
+
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
-import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {

@@ -1,7 +1,8 @@
 "use client";
 
-import { useThemeColor } from "@/hooks/use-theme-color";
 import { useEffect } from "react";
+
+import { useThemeColor } from "@/hooks/use-theme-color";
 
 interface ThemeColorWrapperProps extends React.ComponentProps<"div"> {
   defaultTheme?: string;

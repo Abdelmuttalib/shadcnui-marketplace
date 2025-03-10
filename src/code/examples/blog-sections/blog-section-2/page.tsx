@@ -1,14 +1,14 @@
 "use client";
 
-import React from "react";
+import { ArrowRight,CalendarDays, Clock } from "lucide-react";
 import Link from "next/link";
-import { CalendarDays, Clock, ArrowRight } from "lucide-react";
+import React from "react";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const blogPosts = [
   {

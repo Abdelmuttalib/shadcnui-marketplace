@@ -1,4 +1,7 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,9 +14,8 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+
 import { Badge } from "./ui/badge";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 const waitlistFormSchema = z.object({
   email: z.string().email(),
@@ -64,7 +66,7 @@ export function WaitlistDialog() {
           Join waitlist
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] pt-10 md:pt-4">
+      <DialogContent className="pt-10 sm:max-w-[425px] md:pt-4">
         <DialogHeader>
           <DialogTitle>Join waitlist</DialogTitle>
           <DialogDescription>

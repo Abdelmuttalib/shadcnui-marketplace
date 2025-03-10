@@ -39,8 +39,8 @@
       --material-color-white
     ); /* oklch(100 0 0) #ffffff */
 
-    --material-color-background: var(--material-color-white);
-    --material-color-foreground: var(--material-color-gray-950);
+    --material-color-background: var(--material-color-white); /* #ffffff */
+    --material-color-foreground: var(--material-color-gray-950); /* #0f0f0f */
 
     --material-color-accent: var(
       --material-color-gray-100

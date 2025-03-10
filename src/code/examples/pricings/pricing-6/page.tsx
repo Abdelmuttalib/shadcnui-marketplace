@@ -1,7 +1,9 @@
 "use client";
 
-import { Briefcase, Rocket, Building } from "lucide-react";
+import { Briefcase, Building,Rocket } from "lucide-react";
 import { Check } from "lucide-react";
+import type React from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,9 +11,8 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import type React from "react";
-import { cn } from "@/lib/utils";
 import { Typography } from "@/components/ui/typography";
+import { cn } from "@/lib/utils";
 
 const pricingTiers = [
   {

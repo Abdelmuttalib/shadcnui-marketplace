@@ -1,55 +1,55 @@
 import { ComponentWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/components/showcase-carbon";
-import { AlertDemo } from "@/components/showcase-carbon";
-import { AlertDialogDemo } from "@/components/showcase-carbon";
-import { AspectRatioDemo } from "@/components/showcase-carbon";
-import { AvatarDemo } from "@/components/showcase-carbon";
-import { BadgeDemo } from "@/components/showcase-carbon";
-import { BreadcrumbDemo } from "@/components/showcase-carbon";
-import { ButtonDemo } from "@/components/showcase-carbon";
-import { CalendarDemo } from "@/components/showcase-carbon";
-import { CardDemo } from "@/components/showcase-carbon";
-import { CarouselDemo } from "@/components/showcase-carbon";
-import { ChartDemo } from "@/components/showcase-carbon";
-import { CheckboxDemo } from "@/components/showcase-carbon";
-import { CollapsibleDemo } from "@/components/showcase-carbon";
-import { ComboboxDemo } from "@/components/showcase-carbon";
-import { CommandDemo } from "@/components/showcase-carbon";
-import { ContextMenuDemo } from "@/components/showcase-carbon";
-import { DatePickerDemo } from "@/components/showcase-carbon";
-import { DialogDemo } from "@/components/showcase-carbon";
-import { DrawerDemo } from "@/components/showcase-carbon";
-import { DropdownMenuDemo } from "@/components/showcase-carbon";
-import { FormDemo } from "@/components/showcase-carbon";
-import { HoverCardDemo } from "@/components/showcase-carbon";
-import { InputDemo } from "@/components/showcase-carbon";
-import { InputOTPDemo } from "@/components/showcase-carbon";
-import { LabelDemo } from "@/components/showcase-carbon";
-import { MenubarDemo } from "@/components/showcase-carbon";
-import { NavigationMenuDemo } from "@/components/showcase-carbon";
-import { PaginationDemo } from "@/components/showcase-carbon";
-import { PopoverDemo } from "@/components/showcase-carbon";
-import { ProgressDemo } from "@/components/showcase-carbon";
-import { RadioGroupDemo } from "@/components/showcase-carbon";
-import { ResizableDemo } from "@/components/showcase-carbon";
-import { ScrollAreaDemo } from "@/components/showcase-carbon";
-import { SelectDemo } from "@/components/showcase-carbon";
-import { SeparatorDemo } from "@/components/showcase-carbon";
-import { SheetDemo } from "@/components/showcase-carbon";
-import { SkeletonDemo } from "@/components/showcase-carbon";
-import { SliderDemo } from "@/components/showcase-carbon";
-import { SonnerDemo } from "@/components/showcase-carbon";
-import { SwitchDemo } from "@/components/showcase-carbon";
-import { TableDemo } from "@/components/showcase-carbon";
-import { TabsDemo } from "@/components/showcase-carbon";
-import { TextareaDemo } from "@/components/showcase-carbon";
-import { ToggleDemo } from "@/components/showcase-carbon";
-import { ToggleGroupDemo } from "@/components/showcase-carbon";
-import { TooltipDemo } from "@/components/showcase-carbon";
+import { AccordionDemo } from "@/components/demo/showcase-carbon";
+import { AlertDemo } from "@/components/demo/showcase-carbon";
+import { AlertDialogDemo } from "@/components/demo/showcase-carbon";
+import { AspectRatioDemo } from "@/components/demo/showcase-carbon";
+import { AvatarDemo } from "@/components/demo/showcase-carbon";
+import { BadgeDemo } from "@/components/demo/showcase-carbon";
+import { BreadcrumbDemo } from "@/components/demo/showcase-carbon";
+import { ButtonDemo } from "@/components/demo/showcase-carbon";
+import { CalendarDemo } from "@/components/demo/showcase-carbon";
+import { CardDemo } from "@/components/demo/showcase-carbon";
+import { CarouselDemo } from "@/components/demo/showcase-carbon";
+import { ChartDemo } from "@/components/demo/showcase-carbon";
+import { CheckboxDemo } from "@/components/demo/showcase-carbon";
+import { CollapsibleDemo } from "@/components/demo/showcase-carbon";
+import { ComboboxDemo } from "@/components/demo/showcase-carbon";
+import { CommandDemo } from "@/components/demo/showcase-carbon";
+import { ContextMenuDemo } from "@/components/demo/showcase-carbon";
+import { DatePickerDemo } from "@/components/demo/showcase-carbon";
+import { DialogDemo } from "@/components/demo/showcase-carbon";
+import { DrawerDemo } from "@/components/demo/showcase-carbon";
+import { DropdownMenuDemo } from "@/components/demo/showcase-carbon";
+import { FormDemo } from "@/components/demo/showcase-carbon";
+import { HoverCardDemo } from "@/components/demo/showcase-carbon";
+import { InputDemo } from "@/components/demo/showcase-carbon";
+import { InputOTPDemo } from "@/components/demo/showcase-carbon";
+import { LabelDemo } from "@/components/demo/showcase-carbon";
+import { MenubarDemo } from "@/components/demo/showcase-carbon";
+import { NavigationMenuDemo } from "@/components/demo/showcase-carbon";
+import { PaginationDemo } from "@/components/demo/showcase-carbon";
+import { PopoverDemo } from "@/components/demo/showcase-carbon";
+import { ProgressDemo } from "@/components/demo/showcase-carbon";
+import { RadioGroupDemo } from "@/components/demo/showcase-carbon";
+import { ResizableDemo } from "@/components/demo/showcase-carbon";
+import { ScrollAreaDemo } from "@/components/demo/showcase-carbon";
+import { SelectDemo } from "@/components/demo/showcase-carbon";
+import { SeparatorDemo } from "@/components/demo/showcase-carbon";
+import { SheetDemo } from "@/components/demo/showcase-carbon";
+import { SkeletonDemo } from "@/components/demo/showcase-carbon";
+import { SliderDemo } from "@/components/demo/showcase-carbon";
+import { SonnerDemo } from "@/components/demo/showcase-carbon";
+import { SwitchDemo } from "@/components/demo/showcase-carbon";
+import { TableDemo } from "@/components/demo/showcase-carbon";
+import { TabsDemo } from "@/components/demo/showcase-carbon";
+import { TextareaDemo } from "@/components/demo/showcase-carbon";
+import { ToggleDemo } from "@/components/demo/showcase-carbon";
+import { ToggleGroupDemo } from "@/components/demo/showcase-carbon";
+import { TooltipDemo } from "@/components/demo/showcase-carbon";
 
-export default function CarbonSinkPage() {
+export function CarbonSinkPage() {
   return (
-    <div className="grid lg:grid-cols-2 gap-4">
+    <div className="grid gap-4 lg:grid-cols-3">
       <ComponentWrapper name="chart" className="w-full">
         <ChartDemo />
       </ComponentWrapper>
