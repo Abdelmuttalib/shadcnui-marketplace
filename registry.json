@@ -1,0 +1,58 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcnmarketplace",
+  "homepage": "http://localhost:3000",
+  "items": [
+    {
+      "name": "hello-world",
+      "type": "registry:block",
+      "title": "Hello World",
+      "description": "A simple hello world component.",
+      "files": [
+        {
+          "path": "registry/carbon/hello-world/hello-world.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "carbon",
+      "type": "registry:style",
+      "title": "Carbon Style",
+      "description": "IBM's Carbon Design System",
+      "dependencies": ["@radix-ui/react-checkbox"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/carbon/ui/button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/carbon/ui/select.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/carbon/ui/typography.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/carbon/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "font-sans": "Inter, sans-serif"
+        },
+        "light": {
+          "background": "100% 0 0",
+          "foreground": "0 0 0"
+        },
+        "dark": {
+          "background": "100% 0 0",
+          "foreground": "0 0 0"
+        }
+      }
+    }
+  ]
+}

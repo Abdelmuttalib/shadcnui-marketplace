@@ -1,0 +1,5 @@
+{
+  "name": "catalyst",
+  "label": "Catalyst",
+  "components": ["button", "input", "badge"]
+}

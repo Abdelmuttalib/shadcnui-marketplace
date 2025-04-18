@@ -10,6 +10,7 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "sort-imports": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
+    "registry:build": "shadcn build",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
@@ -67,16 +68,18 @@
     "react": "^18",
     "react-beautiful-dnd": "^13.1.1",
     "react-colorful": "^5.6.1",
-    "react-day-picker": "^9.5.1",
+    "react-day-picker": "^8.10.1",
     "react-dom": "^18",
     "react-hook-form": "^7.52.2",
     "react-resizable-panels": "^2.1.7",
     "recharts": "^2.15.1",
+    "shadcn": "2.4.0-canary.20",
     "sonner": "^0.3.5",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
