@@ -16,7 +16,7 @@ function getTasks() {
   return data;
 }
 
-export function TaskPage() {
+export default function TaskPage() {
   const tasks = getTasks();
 
   return (

@@ -5,16 +5,16 @@ import { CheckIcon, CopyIcon } from "lucide-react";
 import React from "react";
 
 import { useStyleStore } from "@/hooks/use-style-store";
+import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 
-import { useThemePalette } from "../theme-customizer";
 import { Button } from "../ui/button";
 import { StringCode } from "./string-code";
 import { getStyleDefaultRadius, themePalettes } from "./theme-palettes";
 
 export function ThemeCSSGenerator() {
   const { style } = useStyleStore();
-  const { selectedPalette, selectedRadius } = useThemePalette();
-  const palette = themePalettes[selectedPalette as keyof typeof themePalettes];
+  const { activePalette, activeRadius } = useThemePaletteStore();
+  const palette = themePalettes[activePalette as keyof typeof themePalettes];
 
   const [copied, setCopied] = React.useState(false);
 
@@ -53,7 +53,7 @@ export function ThemeCSSGenerator() {
 @layer base {
   :root {
 ${lightVars}
-    --radius: ${selectedRadius || getStyleDefaultRadius(style)};
+    --radius: ${activeRadius || getStyleDefaultRadius(style)};
   }
   .dark {
 ${darkVars}

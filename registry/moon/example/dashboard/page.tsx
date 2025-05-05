@@ -29,7 +29,7 @@ const metadata: Metadata = {
   description: "Example dashboard app built using the components.",
 };
 
-export function DashboardPage() {
+export default function DashboardPage() {
   return (
     <>
       <div className="flex h-full min-h-full flex-col">

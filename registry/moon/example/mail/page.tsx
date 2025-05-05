@@ -1,7 +1,7 @@
 import { Mail } from "./components/mail";
 import { accounts, mails } from "./data";
 
-export function MailPage() {
+export default function MailPage() {
   return (
     <>
       <div className="flex h-full flex-col bg-moon-background">

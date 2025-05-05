@@ -24,12 +24,12 @@ const metadata: Metadata = {
   description: "Example music app using the components.",
 };
 
-export function MusicPage() {
+export default function MusicPage() {
   return (
     <>
       <div className="block">
         <Menu />
-        <div className="border-t-moon-border border-t">
+        <div className="border-t border-t-moon-border">
           <div className="bg-moon-background">
             <div className="grid grid-cols-3 lg:grid-cols-5">
               <Sidebar playlists={playlists} className="hidden lg:block" />
@@ -62,7 +62,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             Listen Now
                           </h2>
-                          <p className="text-moon-muted-foreground text-sm">
+                          <p className="text-sm text-moon-muted-foreground">
                             Top picks for you. Updated daily.
                           </p>
                         </div>
@@ -89,7 +89,7 @@ export function MusicPage() {
                         <h2 className="text-2xl font-semibold tracking-tight">
                           Made for You
                         </h2>
-                        <p className="text-moon-muted-foreground text-sm">
+                        <p className="text-sm text-moon-muted-foreground">
                           Your personal playlists. Updated daily.
                         </p>
                       </div>
@@ -121,7 +121,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             New Episodes
                           </h2>
-                          <p className="text-moon-muted-foreground text-sm">
+                          <p className="text-sm text-moon-muted-foreground">
                             Your favorite podcasts. Updated daily.
                           </p>
                         </div>

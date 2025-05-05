@@ -2,21 +2,12 @@
 
 import React from "react";
 
-import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
-import { Typography } from "@/components/ui/typography";
 import { BlockPlan } from "@/config/data";
-import {
-  getStylesPath2,
-  PageExampleType,
-  Style,
-  useStyleStore,
-} from "@/hooks/use-style-store";
+import { PageExampleType, Style, useStyleStore } from "@/hooks/use-style-store";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
-} from "@/lib/styles";
-import {
   getStyleVariablesPrefix,
   renderStylePageExample,
 } from "@/registry/styles";
@@ -25,26 +16,19 @@ import { cn } from "@/utils/cn";
 export function StylePageExamplePreview({
   id,
   styleProp = "carbon",
-  styleCat,
   plan,
   pageExampleTypeProp,
   className,
   coloredEdge = false,
-  iframeClassName,
-  children,
   style,
   hideBadge = false,
 }: {
   id: string;
   styleProp?: Style;
-  styleCat?: string;
   plan?: BlockPlan;
-  examplePage: string;
   className?: string;
   coloredEdge?: boolean;
   pageExampleTypeProp?: PageExampleType;
-  iframeClassName?: string;
-  children?: React.ReactNode;
   style?: React.CSSProperties;
   hideBadge?: boolean;
 }) {
@@ -123,7 +107,7 @@ export function StylePageExamplePreview({
           <div className="flex h-full w-full gap-2 overflow-hidden">
             <div
               className={cn(
-                "h-fit w-full overflow-hidden rounded-lg border dark:shadow dark:shadow-gray-950",
+                "h-fit min-h-[32rem] w-full overflow-hidden rounded-lg border dark:shadow dark:shadow-gray-950",
                 getStyleFontClassname(styleProp),
                 getStyleBackgroundClassname(styleProp)
                 // {

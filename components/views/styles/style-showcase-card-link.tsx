@@ -10,8 +10,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Typography } from "@/components/ui/typography";
 import { Style } from "@/hooks/use-style-store";
 import { loadComponentDemo } from "@/lib/component-loader";
-import { getStyleBackgroundClassname } from "@/lib/styles";
 import { cn } from "@/lib/utils";
+import { getStyleBackgroundClassname } from "@/registry/styles";
 
 type Components = {
   Badge: React.ComponentType;

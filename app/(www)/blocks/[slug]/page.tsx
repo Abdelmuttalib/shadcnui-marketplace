@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 import { Code } from "@/components/views/docs/code";
 import { blocksRegistry } from "@/config/data";
+import { registryStyleBlocks } from "@/registry/linear/block";
 
 import BlocksBreadcrumb from "../components/blocks-breadcrumb";
 import { PreviewContainer } from "../components/preview-container";
@@ -88,9 +89,17 @@ export default function ComponentPage({ params }: Props) {
               <Badge>{blocksData?.length} blocks</Badge>
             </div> */}
             <div className="flex items-center gap-4">
-              <PageTitle>{blockPageTitle}</PageTitle>
+              <PageTitle as="h1" className="capitalize">
+                {blockPageTitle}
+              </PageTitle>
               <Badge>{blocksData?.length} blocks</Badge>
             </div>
+            {/* <div>
+              <iframe
+                src="http://localhost:3000/styles"
+                className="h-[35rem] w-full border"
+              ></iframe>
+            </div> */}
 
             <div>
               <PageSubTitle
@@ -106,6 +115,14 @@ export default function ComponentPage({ params }: Props) {
           </div>
         </PageContainer>
       </div>
+      <div>
+        <PageContainer size={"xl"}>
+          <div className="rounded-md border bg-linear-background">
+            {registryStyleBlocks["blog-sections"][1].component}
+          </div>
+        </PageContainer>
+      </div>
+
       <div className="space-y-20">
         <PreviewContainer>
           <div className="space-y-28">
@@ -209,7 +226,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
                       >
                         <path
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                         />
                       </svg>

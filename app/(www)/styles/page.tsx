@@ -4,41 +4,32 @@ import { ArrowRightIcon, Brush, Undo2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-import { PageBreadcrumb } from "@/components/common/page-breadcrumb";
 import { PageContainer } from "@/components/common/page-container";
 import {
   PageHeader,
   PageSubTitle,
   PageTitle,
 } from "@/components/common/page-header";
-import { StyleSelect } from "@/components/common/style-select";
-import {
-  mainColors,
-  ThemePaletteSelect,
-} from "@/components/common/theme-palettes";
 import { ExamplesTabsNav } from "@/components/draft";
 import {
   StyleCssWrapper,
   StyleFontWrapper,
 } from "@/components/style-font-wrapper";
-import { useThemePalette } from "@/components/theme-customizer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
 import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
-import { blocksRegistry } from "@/config/data";
 import {
   STYLES,
   STYLES_LENGTH,
   stylesDataList,
-  useStyle,
+  useStyleStore,
 } from "@/hooks/use-style-store";
+import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { cn } from "@/lib/utils";
-import {
-  getStyleVariablesPrefix,
-  renderStyleCardShowcase,
-} from "@/registry/styles";
+import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
+import { getStyleVariablesPrefix } from "@/registry/styles";
 
 interface Props {
   params: { slug: string };
@@ -107,24 +98,8 @@ export const Logo: React.FC<LogoProps> = ({ size = "md" }) => {
 
 export default function StylesPage({ params }: Props) {
   const { slug } = params;
-  const BLOCK_PAGE_NAME = slug;
 
-  // Get the component dynamically based on slug
-  const blocksData = blocksRegistry[slug];
-
-  type ExamplePage =
-    | "authentication"
-    | "cards"
-    | "dashboard"
-    | "forms"
-    | "mail"
-    | "music"
-    | "playground"
-    | "tasks";
-
-  const { pageExampleType, style } = useStyleStore();
-
-  const { selectedPalette, onResetPalette } = useThemePalette();
+  const { pageExampleType } = useStyleStore();
 
   return (
     <div className="relative">
@@ -200,13 +175,14 @@ export default function StylesPage({ params }: Props) {
                                 Palette
                               </RichBadge>
                               <div className="flex rounded-sm border">
-                                {mainColors.map((color, index) => (
+                                {mainPaletteColorsKeys.map((color, index) => (
                                   <div
                                     key={`light-${color}`}
                                     className={cn("size-6", {
                                       "rounded-l-sm": index === 0,
                                       "rounded-r-sm":
-                                        index === mainColors.length - 1,
+                                        index ===
+                                        mainPaletteColorsKeys.length - 1,
                                     })}
                                     style={{
                                       // backgroundColor: `oklch(${palette.light[color]})`,
@@ -230,8 +206,7 @@ export default function StylesPage({ params }: Props) {
                           <StylePageExamplePreview
                             id="dashboard"
                             styleProp={style}
-                            styleCat={pageExampleType || "dashboard"}
-                            examplePage={pageExampleType || "dashboard"}
+                            pageExampleTypeProp={pageExampleType || "dashboard"}
                             hideBadge={true}
                             className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
                             iframeClassName="w-[70vw] max-w-[70vw]"
@@ -313,13 +288,14 @@ export default function StylesPage({ params }: Props) {
                                   Default {styleData.title} Palette
                                 </p>
                                 <div className="flex rounded-sm border">
-                                  {mainColors.map((color, index) => (
+                                  {mainPaletteColorsKeys.map((color, index) => (
                                     <div
                                       key={`light-${color}`}
                                       className={cn("size-7", {
                                         "rounded-l-sm": index === 0,
                                         "rounded-r-sm":
-                                          index === mainColors.length - 1,
+                                          index ===
+                                          mainPaletteColorsKeys.length - 1,
                                       })}
                                       style={{
                                         // backgroundColor: `oklch(${palette.light[color]})`,
@@ -353,22 +329,12 @@ export default function StylesPage({ params }: Props) {
                       <StylePageExamplePreview
                         id="dashboard"
                         styleProp={styleData.name}
-                        styleCat="dashboard"
-                        examplePage="dashboard"
+                        pageExampleTypeProp="dashboard"
                         hideBadge={true}
                         className=" overflow-auto"
                         iframeClassName="h-[45rem] overflow-auto"
                         // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
                       />
-                      {/* <StylePreview
-                        key={styleData.title + index}
-                        id={styleData.name}
-                        title={""}
-                        styleProp={styleData.name}
-                        styleCat={pageExampleType}
-                        examplePage={pageExampleType}
-                        iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem]"
-                      /> */}
                     </div>
                   </div>
                 </div>
@@ -405,8 +371,7 @@ export default function StylesPage({ params }: Props) {
                       key={styleData.title + styleData.name + index}
                       id="dashboard"
                       styleProp={styleData.name}
-                      styleCat="dashboard"
-                      examplePage="dashboard"
+                      pageExampleTypeProp="dashboard"
                       hideBadge={true}
                       className={`sticky top-32 overflow-auto`}
                       coloredEdge

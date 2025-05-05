@@ -1,36 +1,12 @@
-// themePaletteStore.ts
+// theme-palette-store.ts
 import { create } from "zustand";
 
-export type ThemePaletteName =
-  | "palette-1"
-  | "palette-2"
-  | "palette-3"
-  | "palette-4"
-  | "palette-5"
-  | "palette-6"
-  | "palette-7"
-  | "palette-8"
-  | "palette-9"
-  | "palette-10"
-  | "palette-11"
-  | "palette-12";
-
-export type ThemeRadius =
-  | "0rem"
-  | "0.1rem"
-  | "0.2rem"
-  | "0.3rem"
-  | "0.4rem"
-  | "0.5rem"
-  | "0.6rem"
-  | "0.7rem"
-  | "0.8rem"
-  | "0.9rem"
-  | "1rem"
-  | "";
-
-export const DEFAULT_THEME_PALETTE: ThemePaletteName = "palette-11";
-export const DEFAULT_RADIUS: ThemeRadius = "";
+import {
+  DEFAULT_RADIUS,
+  DEFAULT_THEME_PALETTE,
+  ThemePaletteName,
+  ThemeRadius,
+} from "@/registry/registry-palettes";
 
 type ThemePaletteState = {
   activePalette: ThemePaletteName | "";

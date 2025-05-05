@@ -1,9 +1,9 @@
 import { Separator } from "@/registry/moon/ui/separator";
 
-import { ProfileForm } from "./profile-form";
 import { SettingsLayout } from "./layout";
+import { ProfileForm } from "./profile-form";
 
-export function SettingsProfilePage() {
+export default function SettingsProfilePage() {
   return (
     <SettingsLayout>
       <div className="space-y-6">

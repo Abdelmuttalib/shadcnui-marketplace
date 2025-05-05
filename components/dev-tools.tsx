@@ -1,13 +1,13 @@
 import { StyleSelect } from "@/components/common/style-select";
 
-import { ThemePaletteSelect } from "./common/theme-palettes";
+import { ThemePaletteSelect } from "./common/theme-palette-select";
 import { ThemeButton } from "./theme-button";
 import ThemeSwitcher from "./theme-select";
 
 export function DevTools() {
   return (
     <>
-      <ThemeButtonWrapper />
+      {/* <ThemeButtonWrapper /> */}
       <TailwindIndicator />
     </>
   );

@@ -111,7 +111,7 @@ export default function CarbonStylePage() {
 import Link from "next/link";
 
 import { PageContainer } from "@/components/common/page-container";
-import { mainColors } from "@/components/common/theme-palettes";
+import { mainColors } from "@/components/common/theme-palette-select";
 import {
   StyleCssWrapper,
   StyleFontWrapper,

@@ -3,10 +3,11 @@
 import * as React from "react";
 
 import { Style } from "@/hooks/use-style-store";
-import { getStyleBackgroundClassname } from "@/lib/styles";
 import { cn } from "@/lib/utils";
-
-import { getStyleFontClassname } from "./style-font-wrapper";
+import {
+  getStyleBackgroundClassname,
+  getStyleFontClassname,
+} from "@/registry/styles";
 
 export function ComponentWrapper({
   className,

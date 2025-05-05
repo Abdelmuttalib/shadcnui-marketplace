@@ -35,7 +35,7 @@ const metadata: Metadata = {
   description: "The OpenAI Playground built using the components.",
 };
 
-export function PlaygroundPage() {
+export default function PlaygroundPage() {
   return (
     <>
       <div className="flex h-full flex-col bg-moon-background px-6">

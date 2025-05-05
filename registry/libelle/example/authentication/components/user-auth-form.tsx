@@ -50,10 +50,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       </form>
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t" />
+          <span className="w-full border-t border-t-libelle-border" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-libelle-background text-libelle-muted-foreground px-2">
+          <span className="bg-libelle-background px-2 text-libelle-muted-foreground">
             Or continue with
           </span>
         </div>

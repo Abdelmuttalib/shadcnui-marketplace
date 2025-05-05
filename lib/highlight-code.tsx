@@ -1,7 +1,6 @@
 import { toJsxRuntime } from "hast-util-to-jsx-runtime";
 import { Fragment } from "react";
 import { jsx, jsxs } from "react/jsx-runtime";
-import { codeToHtml } from "shiki";
 import { codeToHast } from "shiki/bundle/web";
 
 export async function highlightCode(code: string) {
@@ -19,19 +18,19 @@ export async function highlightCode(code: string) {
   });
 }
 
-export async function highlight(code: string) {
-  const html = await codeToHtml(code, {
-    lang: "tsx",
-    theme: "github-dark-default",
-    transformers: [
-      {
-        code(node) {
-          node.properties["data-line-numbers"] = "";
-        },
-      },
-    ],
-  });
+// export async function highlight(code: string) {
+//   const html = await codeToHtml(code, {
+//     lang: "tsx",
+//     theme: "github-dark-default",
+//     transformers: [
+//       {
+//         code(node) {
+//           node.properties["data-line-numbers"] = "";
+//         },
+//       },
+//     ],
+//   });
 
-  // html string to react element
-  return html;
-}
+//   // html string to react element
+//   return html;
+// }

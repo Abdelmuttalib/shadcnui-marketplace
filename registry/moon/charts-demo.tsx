@@ -29,9 +29,9 @@ import { Component as ChartRadialStacked } from "@/registry/moon/charts/chart-ra
 import { Component as ChartRadialText } from "@/registry/moon/charts/chart-radial-text";
 import { Component as ChartTooltipAdvanced } from "@/registry/moon/charts/chart-tooltip-advanced";
 
-export function ChartsPage() {
+export default function ChartsPage() {
   return (
-    <div>
+    <div className="bg-moon-background">
       <PageContainer size={"full"} className="lg:p-4">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {/* <ChartAreaDefault /> */}

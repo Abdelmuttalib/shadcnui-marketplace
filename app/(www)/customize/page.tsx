@@ -1,24 +1,31 @@
+"use client";
+
 import { ArrowRightIcon } from "lucide-react";
 
 import { StyleHero } from "@/components/common/style-hero";
 import { ThemeCSSGenerator } from "@/components/common/theme-css-generator";
-import { ThemePaletteSelector } from "@/components/common/theme-palettes";
+import { ThemeCustomizerDialog } from "@/components/common/theme-customizer";
+import { ThemePaletteSelector } from "@/components/common/theme-palette-select";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
+import { useStyleStore } from "@/hooks/use-style-store";
+import { cn } from "@/lib/utils";
+import { getStyleVariablesPrefix } from "@/registry/styles";
 
 import { PageExamples } from "./components/example-page";
 
 export default function CustomizePage() {
+  const { style } = useStyleStore();
+
+  const bgClass = `to-${getStyleVariablesPrefix(style)}-background`;
+
   return (
     <div>
       <div className="relative grid grid-cols-1 gap-10 xl:grid-cols-7">
         <div className="relative xl:col-span-2">
-          <div className="sticky top-16 z-10 flex flex-col gap-y-2 overflow-auto p-4">
-            {/* <div className="">
-              <div>
-                <StylesBreadcrumb />
-              </div>
-            </div> */}
+          <div className="to-moon-desctructive sticky left-0 top-16 size-56 bg-gradient-to-r from-moon-primary via-moon-secondary to-moon-primary opacity-40 blur-2xl"></div>
+          <ThemeCustomizerDialog />
+          {/* <div className="sticky top-16 z-10 flex flex-col gap-y-2 overflow-auto p-4">
             <div className="flex items-center gap-2">
               <Typography
                 as={"h1"}
@@ -48,9 +55,15 @@ export default function CustomizePage() {
               </Button>
               <Button variant="secondary">How does it work?</Button>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="relative grid gap-8 bg-gradient-to-r from-accent to-background p-4 xl:col-span-5">
+        <div
+          className={cn(
+            "relative grid gap-8 bg-gradient-to-r from-background p-4 xl:col-span-5",
+            bgClass,
+            {}
+          )}
+        >
           <div className="relative max-w-[95%]">
             <StyleHero />
           </div>

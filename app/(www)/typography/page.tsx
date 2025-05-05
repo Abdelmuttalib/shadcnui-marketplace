@@ -133,7 +133,7 @@ export default function TypographyPage() {
                         </ScrollArea>
                       </TabsContent>
                       <TabsContent value="code">
-                        <div className="">
+                        <div>
                           <StringCode c={typographyComponentCode} />
                           {/* <pre className="rounded-lg bg-accent/60">
                         <code className="language-tsx">

@@ -50,9 +50,7 @@ export function MoonCardShowcase() {
           <div className="flex items-start justify-between">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <CardTitle className="text-xl font-semibold">
-                  shadcn/ui
-                </CardTitle>
+                <CardTitle className="">shadcn/ui</CardTitle>
                 <Badge variant="outline" className="text-xs font-normal">
                   Public
                 </Badge>
@@ -102,32 +100,32 @@ export function MoonCardShowcase() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="flex flex-wrap gap-2 text-sm text-moon-muted-foreground">
-            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted p-1 px-2 text-sm">
+          <div className="flex flex-wrap gap-2 text-sm text-moon-foreground/70">
+            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted/60 p-1 px-2 text-sm">
               <span>
                 <CircleDot className="h-4 w-4 text-blue-500" />
               </span>
               <span>TypeScript</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted/60 p-1 px-2 text-sm">
               <span>
                 <Star className="h-4 w-4" />
               </span>{" "}
               <span>20.1k stars</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted/60 p-1 px-2 text-sm">
               <span>
                 <GitFork className="h-4 w-4" />
               </span>{" "}
               <span>1.2k forks</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted/60 p-1 px-2 text-sm">
               <span>
                 <Eye className="h-4 w-4" />
               </span>{" "}
               <span>342 watching</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-moon-md border border-moon-input/60 bg-moon-muted/60 p-1 px-2 text-sm">
               <span>
                 <AlertCircle className="h-4 w-4" />
               </span>

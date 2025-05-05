@@ -4,12 +4,10 @@ import "./themes.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
+import { ThemeCustomizerDialog } from "@/components/common/theme-customizer";
 import { DevTools } from "@/components/dev-tools";
 import { NextThemesProvider } from "@/components/next-themes-provider";
-import {
-  ThemeCustomizerWrapper,
-  ThemePaletteProvider,
-} from "@/components/theme-customizer";
+import { ThemeCustomizerWrapper } from "@/components/theme-customizer";
 import { Toaster } from "@/components/ui/toaster";
 import { fontVariables } from "@/lib/fonts";
 
@@ -46,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <link
           href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap"
           rel="stylesheet"
@@ -55,21 +53,21 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap"
           rel="stylesheet"
         />
-      </head>
+
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=general-sans@1,2&display=swap"
+          rel="stylesheet"
+        />
+      </head> */}
       <NextThemesProvider>
-        <ThemeCustomizerWrapper>
-          <body
-            className={`${fontVariables} font-sans antialiased`}
-            // style={{
-            //   fontFamily: "Satoshi, sans-serif",
-            // }}
-          >
-            <DevTools />
-            <Toaster />
-            <Analytics />
-            {children}
-          </body>
-        </ThemeCustomizerWrapper>
+        <ThemeCustomizerWrapper />
+        {/* <ThemeCustomizerDialog _show={true} onClose={undefined} /> */}
+        <body className={`${fontVariables} font-sans antialiased`}>
+          <DevTools />
+          <Toaster />
+          <Analytics />
+          {children}
+        </body>
       </NextThemesProvider>
     </html>
   );

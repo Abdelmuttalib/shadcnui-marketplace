@@ -8,7 +8,10 @@ export function PageTitle({ className, ...props }: TypographyProps) {
     <Typography
       as="h1"
       variant="5xl/semibold"
-      className={cn("font-[490] tracking-tighter", className)}
+      className={cn(
+        "bg-gradient-to-r from-foreground to-foreground/50 bg-clip-text font-[490] tracking-tighter text-transparent",
+        className
+      )}
       {...props}
     />
   );

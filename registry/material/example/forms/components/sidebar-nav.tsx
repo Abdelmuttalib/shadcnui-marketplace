@@ -40,8 +40,8 @@ export function SidebarNav({
             // buttonVariants({ variant: "ghost" }),
             "justify-start capitalize",
             currentTab === item.title.toLocaleLowerCase()
-              ? "border-material-ring bg-material-muted/50 hover:bg-material-muted"
-              : "hover:bg-material-accent"
+              ? "border-material-accent bg-material-accent text-material-accent-foreground hover:bg-material-accent hover:text-material-accent-foreground"
+              : "hover:bg-material-accent hover:text-material-accent-foreground"
           )}
         >
           {item.title}

@@ -32,7 +32,7 @@ export function PageExampleSelect({
 
   return (
     <Select defaultValue={pageExampleType} onValueChange={onPageExampleChange}>
-      <SelectTrigger className="w-fit max-w-52 border-input">
+      <SelectTrigger className="">
         <SelectValue
           placeholder="select a style"
           className="text-muted-foreground"

@@ -13,26 +13,6 @@ import {
   Ubuntu,
   Work_Sans,
 } from "next/font/google";
-// local font, under public/fonts
-// GeneralSans-Variable.woff (Variable font)
-// GeneralSans-VariableItalic.woff (Variable Italic font)
-import localFont from "next/font/local";
-
-// const generalSans = localFont({
-//   src: [
-//     {
-//       path: "../../public/fonts/GeneralSans-Variable.woff",
-//       weight: "200 300 400 500 600 700 800",
-//       style: "normal",
-//     },
-//     {
-//       path: "../../public/fonts/GeneralSans-VariableItalic.woff",
-//       weight: "200 300 400 500 600 700 800",
-//       style: "italic",
-//     },
-//   ],
-//   variable: "--font-general-sans",
-// });
 
 const dmSerifDisplay = Inter_Tight({
   variable: "--font-dm-serif-display",

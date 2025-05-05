@@ -33,10 +33,10 @@ function DemoContainer({
   );
 }
 
-export function CardsPage() {
+export default function CardsPage() {
   return (
     <>
-      <div className="rounded-moon-lg hidden items-start justify-center gap-6 p-8 lg:grid lg:grid-cols-2 2xl:grid-cols-3">
+      <div className="grid items-start justify-center gap-6 rounded-moon-lg p-8 lg:grid-cols-2 2xl:grid-cols-3">
         <div className="col-span-2 grid items-start gap-6 lg:col-span-1">
           <DemoContainer>
             <DemoCreateAccount />

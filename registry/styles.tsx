@@ -160,6 +160,68 @@ import { WedgesCardShowcase } from "@/registry/wedges/wedges-card-showcase";
 import { WedgesUI } from "@/registry/wedges/wedges-hero";
 import { WedgesShowcaseComponents } from "@/registry/wedges/wedges-showcase-components";
 
+export function getStyleBackgroundClassname(style: Style) {
+  switch (style) {
+    case "default":
+      return "bg-dft-background";
+    case "carbon":
+      return "bg-cb-background";
+    case "linear":
+      return "bg-linear-background";
+    case "material":
+      return "bg-material-background";
+    case "catalyst":
+      return "bg-catalyst-background";
+    case "spectrum":
+      return "bg-spctm-background";
+    case "wedges":
+      return "bg-wedges-background";
+    case "moon":
+      return "bg-moon-background";
+    case "lucid":
+      return "bg-lucid-background";
+    case "snow":
+      return "bg-snow-background";
+    case "neon":
+      return "bg-neon-background";
+    case "libelle":
+      return "bg-libelle-background";
+    default:
+      return "bg-linear-background";
+  }
+}
+
+export function getStyleFontClassname(style: Style) {
+  switch (style) {
+    case "default":
+      return "font-sans";
+    case "carbon":
+      return "font-carbon";
+    case "linear":
+      return "font-sans";
+    case "material":
+      return "font-material";
+    case "catalyst":
+      return "font-sans";
+    case "spectrum":
+      return "font-spectrum";
+    case "wedges":
+      return "font-sans";
+    case "snow":
+      return "font-sans";
+    case "moon":
+      return "font-sans";
+    case "lucid":
+      return "font-sans";
+    case "neon":
+      return "font-poppins";
+    case "libelle":
+      return "font-outfit";
+    default:
+      return "font-sans";
+  }
+}
+
 export function renderStyleCardShowcase(style: Style) {
   switch (style) {
     case "carbon":

@@ -102,7 +102,7 @@ export function Navbar() {
               </Link>
             </div>
             <div className="flex items-center gap-4">
-              <nav className="hidden sm:flex">
+              <nav className="hidden lg:flex">
                 <ul className="inline-flex gap-2">
                   <MainNavLinks />
                 </ul>

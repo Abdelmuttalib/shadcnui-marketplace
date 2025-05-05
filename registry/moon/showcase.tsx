@@ -96,7 +96,7 @@ export function AspectRatioDemo() {
         src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
         alt="Photo by Drew Beamer"
         fill
-        className="rounded-moon-md h-full w-full object-cover"
+        className="h-full w-full rounded-moon-md object-cover"
       />
     </AspectRatio>
   );
@@ -326,14 +326,14 @@ export function CollapsibleDemo() {
           </Button>
         </CollapsibleTrigger>
       </div>
-      <div className="rounded-moon-md border-moon-border border px-4 py-2 font-mono text-sm shadow-sm">
+      <div className="rounded-moon-md border border-moon-border px-4 py-2 font-mono text-sm shadow-sm">
         @radix-ui/primitives
       </div>
       <CollapsibleContent className="space-y-2">
-        <div className="rounded-moon-md border-moon-border border px-4 py-2 font-mono text-sm shadow-sm">
+        <div className="rounded-moon-md border border-moon-border px-4 py-2 font-mono text-sm shadow-sm">
           @radix-ui/colors
         </div>
-        <div className="rounded-moon-md border-moon-border border px-4 py-2 font-mono text-sm shadow-sm">
+        <div className="rounded-moon-md border border-moon-border px-4 py-2 font-mono text-sm shadow-sm">
           @stitches/react
         </div>
       </CollapsibleContent>
@@ -445,7 +445,7 @@ import { CommandSeparator, CommandShortcut } from "@/registry/moon/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-moon-sm border-moon-border border shadow-md md:min-w-[450px]">
+    <Command className="rounded-moon-sm border border-moon-border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
@@ -505,7 +505,7 @@ import {
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="rounded-moon-md border-moon-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
+      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-moon-md border border-dashed border-moon-border text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
@@ -720,7 +720,7 @@ export function DrawerDemo() {
                 <div className="text-7xl font-bold tracking-tighter">
                   {goal}
                 </div>
-                <div className="text-moon-muted-foreground text-[0.70rem] uppercase">
+                <div className="text-[0.70rem] uppercase text-moon-muted-foreground">
                   Calories/day
                 </div>
               </div>
@@ -859,7 +859,7 @@ export function HoverCardDemo() {
             </p>
             <div className="flex items-center pt-2">
               <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
-              <span className="text-moon-muted-foreground text-xs">
+              <span className="text-xs text-moon-muted-foreground">
                 Joined December 2021
               </span>
             </div>
@@ -1080,14 +1080,14 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="rounded-moon-md from-moon-accent/50 to-moon-accent flex h-full w-full select-none flex-col justify-end bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-moon-md bg-gradient-to-b from-moon-accent/50 to-moon-accent p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <CalendarIcon className="h-6 w-6" />
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
-                    <p className="text-moon-muted-foreground text-sm leading-tight">
+                    <p className="text-sm leading-tight text-moon-muted-foreground">
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
@@ -1144,13 +1144,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "rounded-moon-md hover:text-moon-accent-foreground focus:text-moon-accent-foreground hover:bg-moon-accent focus:bg-moon-accent block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors",
+            "block select-none space-y-1 rounded-moon-md p-3 leading-none no-underline outline-none transition-colors hover:bg-moon-accent hover:text-moon-accent-foreground focus:bg-moon-accent focus:text-moon-accent-foreground",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-moon-muted-foreground line-clamp-2 text-sm leading-snug">
+          <p className="line-clamp-2 text-sm leading-snug text-moon-muted-foreground">
             {children}
           </p>
         </a>
@@ -1209,7 +1209,7 @@ export function PopoverDemo() {
         <div className="grid gap-4">
           <div className="space-y-2">
             <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-moon-muted-foreground text-sm">
+            <p className="text-sm text-moon-muted-foreground">
               Set the dimensions for the layer.
             </p>
           </div>
@@ -1297,7 +1297,7 @@ export function ResizableDemo() {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="border-moon-border rounded-moon-lg max-w-md border md:min-w-[450px]"
+      className="max-w-md rounded-moon-lg border border-moon-border md:min-w-[450px]"
     >
       <ResizablePanel defaultSize={50}>
         <div className="flex h-[200px] items-center justify-center p-6">
@@ -1333,7 +1333,7 @@ const tags = Array.from({ length: 50 }).map(
 
 export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="rounded-moon-md border-moon-border h-72 w-48 border">
+    <ScrollArea className="h-72 w-48 rounded-moon-md border border-moon-border">
       <div className="p-4">
         <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
         {tags.map((tag) => (
@@ -1376,7 +1376,7 @@ export function SeparatorDemo() {
     <div>
       <div className="space-y-1">
         <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-moon-muted-foreground text-sm">
+        <p className="text-sm text-moon-muted-foreground">
           An open-source UI component library.
         </p>
       </div>
@@ -1952,7 +1952,7 @@ export function Chart4() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="text-moon-muted-foreground flex items-center gap-2 leading-none">
+            <div className="flex items-center gap-2 leading-none text-moon-muted-foreground">
               January - June 2024
             </div>
           </div>
@@ -2061,7 +2061,7 @@ export function Chart5() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="text-moon-muted-foreground flex items-center gap-2 leading-none">
+            <div className="flex items-center gap-2 leading-none text-moon-muted-foreground">
               January - June 2024
             </div>
           </div>
@@ -2130,7 +2130,7 @@ export function Chart6() {
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="text-moon-muted-foreground leading-none">
+        <div className="leading-none text-moon-muted-foreground">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
@@ -2212,7 +2212,7 @@ export function Chart7() {
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="text-moon-muted-foreground leading-none">
+        <div className="leading-none text-moon-muted-foreground">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>

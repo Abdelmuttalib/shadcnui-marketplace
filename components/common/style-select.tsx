@@ -8,8 +8,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { STYLES, useStyleStore } from "@/hooks/use-style-store";
+import { stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
+import { getStyleVariablesPrefix } from "@/registry/styles";
 
 export function StyleSelect({
   defaultStyle,
@@ -26,9 +27,7 @@ export function StyleSelect({
 
   return (
     <Select defaultValue={style || defaultStyle} onValueChange={onStyleChange}>
-      <SelectTrigger
-        className={cn("w-fit max-w-48 border-input", triggerClassName)}
-      >
+      <SelectTrigger className={cn("", triggerClassName)}>
         <SelectValue
           placeholder="select a style"
           className="text-muted-foreground"
@@ -41,11 +40,26 @@ export function StyleSelect({
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          {STYLES.map((style) => (
+          {stylesDataList.map((style) => {
+            const hoverBgColor = `focus:bg-${getStyleVariablesPrefix(
+              style.name
+            )}-primary`;
+
+            return (
+              <SelectItem
+                value={style.name}
+                key={style.name}
+                className={`${hoverBgColor} capitalize focus:bg-opacity-15`}
+              >
+                {style.title}
+              </SelectItem>
+            );
+          })}
+          {/* {STYLES.map((style) => (
             <SelectItem value={style} key={style} className="capitalize">
               {style}
             </SelectItem>
-          ))}
+          ))} */}
         </SelectGroup>
       </SelectContent>
     </Select>
