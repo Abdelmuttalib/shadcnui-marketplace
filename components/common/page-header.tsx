@@ -50,7 +50,9 @@ export function PageHeader({
       </div>
 
       <div className="flex items-center gap-2">
-        <PageTitle as={"h1"}>{title}</PageTitle>
+        <PageTitle as={"h1"} className="capitalize">
+          {title}
+        </PageTitle>
         {badge ? badge : null}
       </div>
 

@@ -19,6 +19,7 @@ type BlockCategoryPreviewCardProps = {
     image: string;
     count: number;
   };
+  newTab?: boolean;
 };
 
 export function BlockCategoryPreviewCard({
@@ -74,9 +75,10 @@ export function BlockCategoryPreviewCard({
 
 export function BlockCategoryPreviewCardLink({
   block,
+  newTab = false,
 }: BlockCategoryPreviewCardProps) {
   return (
-    <Link href={block.href} target="_blank" className="group">
+    <Link href={block.href} className="group" target={newTab ? "_blank" : ""}>
       <BlockCategoryPreviewCard block={block} />
     </Link>
   );

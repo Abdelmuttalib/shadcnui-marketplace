@@ -5,8 +5,8 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
-import { BlockPlan } from "@/config/data";
-import { getStylesPath2, useStyleStore } from "@/hooks/use-style-store";
+import { BlockPlan } from "@/config/types";
+import { getStylesPath2, Style, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/utils/cn";
 
 export function StylePreview({
@@ -197,7 +197,7 @@ export function StylePreview({
                   )}
                   // https://shadcn-carbon.vercel.app
                   src={`${getStylesPath2(
-                    styleProp as string
+                    styleProp as Style
                   )}/example/${examplePage}`}
                   // src={href}
                 ></iframe>

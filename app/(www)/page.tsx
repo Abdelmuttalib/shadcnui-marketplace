@@ -1,18 +1,14 @@
 "use client";
 
-import { ArrowRightIcon, Undo2 } from "lucide-react";
 import {
-  Brush,
   CodeIcon,
   LayersIcon,
   PaletteIcon,
   RepeatIcon,
   SparklesIcon,
   Wand2Icon,
-  Zap,
 } from "lucide-react";
 import { ArrowRight, Download, Paintbrush, Wrench } from "lucide-react";
-import { useMemo } from "react";
 
 import { PageContainer } from "@/components/common/page-container";
 import { PageExampleSelect } from "@/components/common/page-example-select";
@@ -22,15 +18,8 @@ import { StyleGradientBackgroundColorComponent } from "@/components/common/style
 import { StyleHeroUI } from "@/components/common/style-hero-ui";
 import { StylePreviewCard } from "@/components/common/style-preview-card";
 import { StyleSelect } from "@/components/common/style-select";
-import { StyleShowcaseComponents } from "@/components/common/style-showcase-components";
 import { ThemePaletteSelect } from "@/components/common/theme-palette-select";
 import { StyleFontWrapper } from "@/components/style-font-wrapper";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -39,23 +28,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
-import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
-import { siteConfig } from "@/config/site-config";
-import {
-  Style,
-  STYLES,
-  stylesDataList,
-  useStyleStore,
-} from "@/hooks/use-style-store";
-import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
+import { blocksRegistry } from "@/config/blocks-registry";
+import { stylesDataList } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
-import {
-  getStyleVariablesPrefix,
-  renderStyleHero,
-  renderStyleShowcaseComponents,
-} from "@/registry/styles";
 
 export function FeaturesSection() {
   const features = [
@@ -279,11 +255,13 @@ export default function Home() {
             </PageContainer>
           </div>
 
-          <LandingPageSection sectionId="features">
-            <FeaturesSection />
-          </LandingPageSection>
+          {JSON.stringify(blocksRegistry, null, 2)}
 
-          <LandingPageSection
+          {/* <LandingPageSection sectionId="features">
+            <FeaturesSection />
+          </LandingPageSection> */}
+
+          {/* <LandingPageSection
             sectionId="shadcn-ui-styles"
             className="flex flex-col gap-8"
           >
@@ -292,18 +270,7 @@ export default function Home() {
                 <PageTitle>
                   <span className="lowercase">A Marketplace for shadcn ui</span>
                   <br />
-                  {/* <span className="m-4 space-x-4 divide-x-2 divide-foreground/20 rounded-lg border">
-                    <span className="decoration capitalize italic text-foreground underline decoration-blue-500 underline-offset-4">
-                      Styles
-                    </span>{" "}
-                    <span className="decoration capitalize italic text-foreground underline decoration-orange-500 underline-offset-4">
-                      Palletes
-                    </span>{" "}
-                    <span className="decoration capitalize italic text-foreground underline decoration-emerald-500 underline-offset-4">
-                      Blocks
-                    </span>
-                  </span> */}
-                  <span className="flex w-fit gap-4 divide-x-2 rounded-lg border bg-accent/30">
+                  <span className="flex w-fit gap-4 divide-x-2 rounded-lg border bg-accent/10">
                     <span className="decoration p-4 capitalize italic text-foreground underline decoration-blue-500 underline-offset-4">
                       Styles
                     </span>{" "}
@@ -315,67 +282,9 @@ export default function Home() {
                     </span>
                   </span>
                 </PageTitle>
-
-                {/* <div className="flex w-fit gap-4 divide-x-2 rounded-lg border bg-accent/30">
-                  <PageTitle
-                    as="span"
-                    className="decoration p-4 capitalize italic text-foreground underline decoration-blue-500 underline-offset-4"
-                  >
-                    Styles
-                  </PageTitle>{" "}
-                  <PageTitle
-                    as="span"
-                    className="decoration p-4 capitalize italic text-foreground underline decoration-orange-500 underline-offset-4"
-                  >
-                    Palletes
-                  </PageTitle>{" "}
-                  <PageTitle
-                    as="span"
-                    className="decoration p-4 capitalize italic text-foreground underline decoration-emerald-500 underline-offset-4"
-                  >
-                    Blocks
-                  </PageTitle>
-                </div> */}
-
-                {/* <Typography
-                  as="p"
-                  variant="lg/normal"
-                  className="text-muted-foreground"
-                >
-                  Discover the best shadcn ui kits and styles for modern web
-                  interfaces.
-                </Typography> */}
               </div>
             </PageContainer>
-            {/* <PageContainer>
-              <div>
-                <div className="flex items-end justify-between gap-4 py-4">
-                  <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-                    <div className="flex w-full flex-col gap-2 md:w-auto">
-                      <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
-                        Choose style
-                      </h2>
-                      <div className="w-full">
-                        <StyleSelect />
-                      </div>
-                    </div>
-                    <div className="flex w-full flex-col gap-2 md:w-auto">
-                      <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
-                        Choose example
-                      </h2>
-                      <PageExampleSelect />
-                    </div>
-                    <div className="flex w-full flex-col gap-2 md:w-auto">
-                      <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
-                        Choose palette
-                      </h2>
-                      <ThemePaletteSelect />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </PageContainer> */}
-          </LandingPageSection>
+          </LandingPageSection> */}
 
           <LandingPageSection
             sectionId="shadcn-ui-styles"
@@ -446,13 +355,13 @@ export default function Home() {
             </div>
           </LandingPageSection>
 
-          <LandingPageSection sectionId="how-it-works">
+          {/* <LandingPageSection sectionId="how-it-works">
             <PageContainer>
               <div>
                 <HowItWorksSection />
               </div>
             </PageContainer>
-          </LandingPageSection>
+          </LandingPageSection> */}
 
           <LandingPageSection sectionId="styles">
             <div>

@@ -191,6 +191,37 @@ export function getStyleBackgroundClassname(style: Style) {
   }
 }
 
+export function getStyleForegroundClassname(style: Style) {
+  switch (style) {
+    case "default":
+      return "text-dft-foreground";
+    case "carbon":
+      return "text-cb-foreground";
+    case "linear":
+      return "text-linear-foreground";
+    case "material":
+      return "text-material-foreground";
+    case "catalyst":
+      return "text-catalyst-foreground";
+    case "spectrum":
+      return "text-spctm-foreground";
+    case "wedges":
+      return "text-wedges-foreground";
+    case "moon":
+      return "text-moon-foreground";
+    case "lucid":
+      return "text-lucid-foreground";
+    case "snow":
+      return "text-snow-foreground";
+    case "neon":
+      return "text-neon-foreground";
+    case "libelle":
+      return "text-libelle-foreground";
+    default:
+      return "text-linear-foreground";
+  }
+}
+
 export function getStyleFontClassname(style: Style) {
   switch (style) {
     case "default":

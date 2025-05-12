@@ -7,8 +7,7 @@ import React from "react";
 
 import { StyleSelect } from "@/components/common/style-select";
 import { Button } from "@/components/ui/button";
-import { BlockPlan } from "@/config/data";
-import { useStyleStore } from "@/hooks/use-style-store";
+import { BlockPlan } from "@/config/types";
 import { cn } from "@/utils/cn";
 
 import { RichBadge } from "./ui/rich-badge";
@@ -16,7 +15,7 @@ import { Typography } from "./ui/typography";
 
 function GradientEffect() {
   return (
-    <div className="absolute left-0 right-0 top-0 z-10 flex h-10 w-full flex-col gap-y-4 opacity-40 blur-3xl dark:bg-gray-500"></div>
+    <div className="absolute left-0 right-0 top-0 -z-10 flex h-10 w-full flex-col gap-y-4 opacity-60 blur-3xl dark:bg-gray-500"></div>
   );
 }
 
@@ -128,12 +127,14 @@ export function ComponentPreview({
 
   function formatString(input: string) {
     // Use a regular expression to find numbers and prepend '#' to them
-    return input.replace(/\d+/g, "#$&");
+    // instead make numbers as 01, 02, 03, ..., 11, 12, 13, ...
+    return input.replace(/\b(\d)\b/g, "0$1");
+    // return input.replace(/\d+/g, "#$&");
   }
 
   return (
     <div className={cn("w-full max-w-[1440px] scroll-mt-12 pt-10")} id={id}>
-      <div className="mb-6 space-y-3">
+      <div className="mb-4 space-y-3">
         <div className="flex items-center gap-2">
           <Typography as="h2" variant="xl/medium" className="tracking-tight">
             {/* {title} */}
@@ -164,8 +165,8 @@ export function ComponentPreview({
           // "h-full w-full rounded-xl shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:pointer-events-none dark:before:absolute dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline"
         )}
       >
-        <GradientEffect />
-        <div className="relative z-10 flex flex-col justify-between gap-1 overflow-x-auto rounded-2xl border p-2 py-1.5">
+        {/* <GradientEffect /> */}
+        <div className="relative z-10 flex flex-col justify-between gap-1 overflow-x-auto">
           <div className="flex justify-between overflow-x-auto px-1 pb-1 pt-1">
             <div className="flex w-full items-center justify-between gap-2">
               <div className="flex gap-0.5 rounded-lg outline-none">
@@ -210,13 +211,16 @@ export function ComponentPreview({
                 <div className="hidden gap-0.5 rounded-md outline-none sm:flex">
                   <StyleSelect />
                 </div>
-                <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 outline-none dark:bg-gray-950/50 md:flex">
+                <div className="hidden h-10 gap-0.5 rounded-md border border-input px-0.5 md:flex md:items-center">
                   {breakpoints.map((bp) => (
                     <Button
                       key={bp.label}
                       variant={breakpoint === bp.label ? "outline" : "ghost"}
                       size="icon-sm"
                       onClick={() => setBreakpoint(bp.label)}
+                      className={cn("", {
+                        " border-input bg-input/40": breakpoint === bp.label,
+                      })}
                     >
                       {bp.icon}
                     </Button>

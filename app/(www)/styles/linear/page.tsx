@@ -88,9 +88,6 @@ export default function LinearStylePage() {
           })}
 
           {/* suggestion */}
-          {/* <div>
-          <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
-        </div> */}
         </div>
       </div>
     </div>

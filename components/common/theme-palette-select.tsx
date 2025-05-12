@@ -82,9 +82,11 @@ export function ThemePaletteSelect() {
                       style={{
                         backgroundColor: `oklch(${
                           palette[
-                            resolvedTheme === "system"
-                              ? "light"
-                              : (resolvedTheme as "light" | "dark")
+                            resolvedTheme
+                              ? resolvedTheme === "system"
+                                ? "light"
+                                : (resolvedTheme as "light" | "dark")
+                              : "light"
                           ][color as ThemePaletteVariableKey]
                         })`,
                       }}

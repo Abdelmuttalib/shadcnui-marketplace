@@ -1,108 +1,17 @@
 "use client";
 
-import { DotsVerticalIcon } from "@radix-ui/react-icons";
-import {
-  ArrowRight,
-  BarChart,
-  FileText,
-  FolderIcon,
-  Home,
-  LayoutGrid,
-  LogIn,
-  Mail,
-  Search,
-  ShoppingCart,
-  TagIcon,
-  Users,
-} from "lucide-react";
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import { Search } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { PageContainer } from "@/components/common/page-container";
 import { PageTitle } from "@/components/common/page-header";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Typography } from "@/components/ui/typography";
 import { BlockCategoryPreviewCardLink } from "@/components/views/blocks/block-category-preview-card";
-import { blocksRegistry } from "@/config/data";
+import { blocksRegistry } from "@/config/blocks-registry";
+import { BlockCategory } from "@/registry/registry-blocks";
 
 import BlocksBreadcrumb from "./components/blocks-breadcrumb";
-
-const categories = [
-  {
-    name: "Blog Sections",
-    icon: FileText,
-    href: "/blocks/blog",
-    image: "/images/blog-preview.jpg",
-    featured: true,
-  },
-  {
-    name: "Login & Authentication",
-    icon: LogIn,
-    href: "/blocks/login",
-    image: "/images/login-preview.jpg",
-  },
-  {
-    name: "Hero Sections",
-    icon: Home,
-    href: "/blocks/hero",
-    image: "/images/hero-preview.jpg",
-  },
-  {
-    name: "E-commerce Components",
-    icon: ShoppingCart,
-    href: "/blocks/ecommerce",
-    image: "/images/ecommerce-preview.jpg",
-  },
-  {
-    name: "Team Showcases",
-    icon: Users,
-    href: "/blocks/team",
-    image: "/images/team-preview.jpg",
-  },
-  {
-    name: "Dashboard Layouts",
-    icon: BarChart,
-    href: "/blocks/dashboard",
-    image: "/images/dashboard-preview.jpg",
-    new: true,
-  },
-  {
-    name: "Contact Forms",
-    icon: Mail,
-    href: "/blocks/contact",
-    image: "/images/contact-preview.jpg",
-  },
-  {
-    name: "Page Layouts",
-    icon: LayoutGrid,
-    href: "/blocks/layouts",
-    image: "/images/layouts-preview.jpg",
-  },
-];
-
-{
-  /* <div className="absolute inset-0 overflow-hidden">
-<div
-  className="absolute -top-1/2 -left-1/4 w-2/3 h-2/3 bg-blue-300  rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-80"
-  style={{ transform: `translateY(${scrollY * 0.2}px)` }}
-></div>
-<div
-  className="absolute -bottom-1/2 -right-1/4 w-2/3 h-2/3 bg-purple-300 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-80"
-  style={{ transform: `translateY(${scrollY * -0.2}px)` }}
-></div>
-</div> */
-}
-
-// export const metadata: Metadata = {
-//   title: "shadcn ui styles blocks",
-//   description:
-//     "shadcn ui styles, A marketplace for shadcn-ui components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, and guidelines.",
-// };
 
 export default function BlocksPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -114,7 +23,7 @@ export default function BlocksPage() {
     name: block.replace("-", " "),
     href: `/blocks/${block}`,
     image: `/images/blocks/${block}-preview`,
-    count: blocksRegistry[block].length,
+    count: blocksRegistry[block as BlockCategory].length,
   }));
 
   useEffect(() => {
@@ -172,18 +81,6 @@ export default function BlocksPage() {
                 />
               </div>
             </div>
-
-            {/* <div className="w-full">
-              <div className="relative w-full max-w-md py-2">
-                <p className="text-sm text-muted-foreground">Search by:</p>
-                <Tabs defaultValue={searchBy} className="mt-1">
-                  <TabsList>
-                    <TabsTrigger value="category">Categories</TabsTrigger>
-                    <TabsTrigger value="block">Blocks</TabsTrigger>
-                  </TabsList>
-                </Tabs>
-              </div>
-            </div> */}
           </div>
         </PageContainer>
         <div className="space-y-20 overflow-hidden px-4 py-6 sm:px-6 lg:px-8">

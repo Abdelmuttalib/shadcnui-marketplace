@@ -13,8 +13,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Typography } from "@/components/ui/typography";
-import { ShowcaseCommingSoonSection2 } from "@/components/views/examples";
-import { applicationUIComponentsData } from "@/config/data";
 import {
   pageExampleTypes,
   Style,
@@ -43,15 +41,7 @@ export function ApplicationUI() {
           Button styles, tables, badges and everything of shadcn ui components
           with multiple styles to choose from.
         </p>
-        <div className="mt-4">
-          {applicationUIComponentsData.map((section) => (
-            <ShowcaseCommingSoonSection2
-              key={section.title}
-              title={section.title}
-              components={section.components}
-            />
-          ))}
-        </div>
+        <div className="mt-4"></div>
       </ScreenContainer>
     </section>
   );

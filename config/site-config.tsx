@@ -11,10 +11,10 @@ const mainLinks = [
     label: "Styles",
     href: "/styles",
   },
-  {
-    label: "Customize",
-    href: "/customize",
-  },
+  // {
+  //   label: "Customize",
+  //   href: "/customize",
+  // },
   {
     label: "Typography",
     href: "/typography",
@@ -25,10 +25,10 @@ const mainLinks = [
 const BASE_SITE_URL = "https://shadcnmarketplace.com";
 
 export const siteConfig = {
-  name: "shadcn ui styles",
+  name: "shadcn ui marketplace",
   description:
-    "shadcn ui styles, A marketplace for shadcn-ui components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, and guidelines.",
-  url: "https://shadcn-ui-marketplace.com",
+    "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, palettes, and guidelines.",
+  url: BASE_SITE_URL,
   logo: "/images/logo.png",
   favicon: "/favicon.ico",
   twitterUrl: "https://x.com/shadcnui_styles",

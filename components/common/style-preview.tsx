@@ -5,7 +5,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
-import { BlockPlan } from "@/config/data";
+import { BlockPlan } from "@/config/types";
 import { getStylesPath2, Style, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/utils/cn";
 

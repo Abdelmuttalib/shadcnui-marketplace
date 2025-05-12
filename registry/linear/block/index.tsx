@@ -1,7 +1,20 @@
+import { BlockCategory } from "@/registry/registry-blocks";
+
 import { default as BlogSection1 } from "./blog-sections/blog-section-1/page";
 import { default as BlogSection2 } from "./blog-sections/blog-section-2/page";
 
-export const registryStyleBlocks = {
+export type RegistryStyleBlocks = Record<BlockCategory, BlockItem[]>;
+
+export type BlockItem = {
+  id: string;
+  title: string;
+  description: string;
+  registryType: "blocks";
+  plan: "free" | "pro";
+  component: React.ReactNode;
+};
+
+export const registryStyleBlocks: RegistryStyleBlocks = {
   "blog-sections": [
     {
       id: "blog-section-1",
@@ -20,4 +33,12 @@ export const registryStyleBlocks = {
       component: <BlogSection2 />,
     },
   ],
+  "hero-sections": [],
+  footers: [],
+  features: [],
+  "landing-pages": [],
+  pricings: [],
+  testimonials: [],
+  "login-forms": [],
+  portfolios: [],
 };

@@ -1,18 +1,18 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
+import React from "react";
 
+import { BlockPreview } from "@/components/common/block-preview";
 import { PageContainer } from "@/components/common/page-container";
-import { PageSubTitle, PageTitle } from "@/components/common/page-header";
-import { ComponentPreview } from "@/components/component-preview";
-import { SuggestedComponentsSection } from "@/components/suggestion-blocks";
+import { PageHeader } from "@/components/common/page-header";
+import { StringCode } from "@/components/common/string-code";
+import { SuggestedBlocks } from "@/components/suggested-blocks";
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
-import { Code } from "@/components/views/docs/code";
-import { blocksRegistry } from "@/config/data";
+import { blocksRegistry } from "@/lib/generate-registry";
 import { registryStyleBlocks } from "@/registry/linear/block";
 
-import BlocksBreadcrumb from "../components/blocks-breadcrumb";
 import { PreviewContainer } from "../components/preview-container";
 
 interface Props {
@@ -68,67 +68,35 @@ export default function ComponentPage({ params }: Props) {
 
   const blockPageTitle = slug?.replace("-", " ");
 
-  return (
-    <div className="">
-      <div className="bg-gradient-to-b from-accent/40 to-background py-20">
-        <PageContainer>
-          <div className="space-y-4">
-            <div>
-              <div>
-                <BlocksBreadcrumb />
-              </div>
-            </div>
-            {/* <div className="flex items-center gap-2">
-              <Typography
-                as={"h2"}
-                variant="3xl/semibold"
-                className="capitalize tracking-tight"
-              >
-                {blockPageTitle}
-              </Typography>
-              <Badge>{blocksData?.length} blocks</Badge>
-            </div> */}
-            <div className="flex items-center gap-4">
-              <PageTitle as="h1" className="capitalize">
-                {blockPageTitle}
-              </PageTitle>
-              <Badge>{blocksData?.length} blocks</Badge>
-            </div>
-            {/* <div>
-              <iframe
-                src="http://localhost:3000/styles"
-                className="h-[35rem] w-full border"
-              ></iframe>
-            </div> */}
+  const BlockComponent = registryStyleBlocks["blog-sections"][0].component;
 
-            <div>
-              <PageSubTitle
-                as={"p"}
-                className="max-w-2xl text-muted-foreground"
-              >
-                {blockPageTitle} blocks for your website. crafted with shadcn ui
-                and tailwindcss. Preview the blocks in different styles and see
-                how they look together. copy & paste blocks directly to your
-                project.
-              </PageSubTitle>
-            </div>
-          </div>
+  return (
+    <div>
+      <div className="bg-gradient-to-b from-accent/30 to-background py-20">
+        <PageContainer>
+          <PageHeader
+            title={blockPageTitle}
+            description={`${blockPageTitle} blocks for your website. crafted with shadcn ui and tailwindcss. Preview the blocks in different styles and see how they look together. copy & paste blocks directly to your project.`}
+            badge={<Badge>{blocksData?.length} blocks</Badge>}
+          />
         </PageContainer>
       </div>
-      <div>
+
+      {/* <div>
         <PageContainer size={"xl"}>
           <div className="rounded-md border bg-linear-background">
-            {registryStyleBlocks["blog-sections"][1].component}
+            {registryBlocks[""]}
+            {registryStyleBlocks["blog-sections"][0].component ?? null}
           </div>
         </PageContainer>
-      </div>
+      </div> */}
 
       <div className="space-y-20">
         <PreviewContainer>
           <div className="space-y-28">
             {blocksData.map((block, index) => {
               return (
-                <ComponentPreview
+                <BlockPreview
                   key={block.id + index}
                   id={block.id}
                   title={block.title}
@@ -138,12 +106,13 @@ export default function ComponentPage({ params }: Props) {
                   component={block.id}
                   fileName={block.fileName}
                 >
-                  <Code
+                  {/* <Code
                     category={block.category}
                     component={block.id}
                     fileName={"page.tsx"}
-                  />
-                </ComponentPreview>
+                  /> */}
+                  <StringCode c={block.code} />
+                </BlockPreview>
               );
             })}
           </div>
@@ -151,8 +120,8 @@ export default function ComponentPage({ params }: Props) {
 
         {/* suggestion */}
         <div>
-          <PageContainer>
-            <SuggestedComponentsSection exclude={BLOCK_PAGE_NAME} />
+          <PageContainer size={"xl"}>
+            <SuggestedBlocks exclude={BLOCK_PAGE_NAME} />
           </PageContainer>
         </div>
       </div>

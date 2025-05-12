@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { StyleShowcaseCardPlain } from "@/components/views/styles/style-showcase-card-link";
-import { blocksRegistry } from "@/config/data";
+import { blocksRegistry } from "@/config/blocks-registry";
 
 import { login, signInWithGitHub, signup } from "./actions";
 

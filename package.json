@@ -2,6 +2,7 @@
   "name": "shadcnui-marketplace",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "tdev": "next dev --turbo",
@@ -11,6 +12,7 @@
     "format": "prettier --write .",
     "sort-imports": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "registry:build": "shadcn build",
+    "generate:registry": "ts-node lib/generate-registry.ts",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
