@@ -71,7 +71,6 @@ export function StylePreviewCard({
           pageExampleTypeProp={pageExampleType || "dashboard"}
           hideBadge={true}
           className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
-          iframeClassName="w-[70vw] max-w-[70vw]"
         />
       </div>
     </div>

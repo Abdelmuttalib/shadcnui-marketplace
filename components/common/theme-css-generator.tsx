@@ -4,12 +4,11 @@ import copy from "copy-to-clipboard";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import React from "react";
 
-import { useStyleStore } from "@/hooks/use-style-store";
+import { Style, STYLES_DATA, useStyleStore } from "@/hooks/use-style-store";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
+import { themePalettes } from "@/registry/registry-palettes";
 
 import { Button } from "../ui/button";
-import { StringCode } from "./string-code";
-import { getStyleDefaultRadius, themePalettes } from "./theme-palettes";
 
 export function ThemeCSSGenerator() {
   const { style } = useStyleStore();
@@ -23,6 +22,10 @@ export function ThemeCSSGenerator() {
     // copy(typeof code === "string" ? code.trim() : "");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+  }
+
+  function getStyleDefaultRadius(style: Style) {
+    return STYLES_DATA[style]?.defaultRadius || "0.6rem";
   }
 
   function generateCSS() {
