@@ -47,7 +47,7 @@ const sizeMap = {
   lg: 14,
 };
 
-export const Logo: React.FC<LogoProps> = ({ size = "md" }) => {
+const Logo: React.FC<LogoProps> = ({ size = "md" }) => {
   const pxSize = typeof size === "number" ? size : sizeMap[size];
 
   const outerSize = `${pxSize * 1.1}px`; // circle
