@@ -4,7 +4,6 @@ import "./themes.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
-import { ThemeCustomizerDialog } from "@/components/common/theme-customizer";
 import { DevTools } from "@/components/dev-tools";
 import { NextThemesProvider } from "@/components/next-themes-provider";
 import { ThemeCustomizerWrapper } from "@/components/theme-customizer";
@@ -19,10 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shadcn-ui-marketplace.com",
+    url: "https://shadcnmarketplace.com",
     title: "shadcn ui marketplace",
     description:
-      "shadcn ui marketplace, A marketplace for shadcn ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. Going beyond default and new york shadcn ui styles.",
+      "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
     images: [
       {
         url: "https://shadcn-ui-marketplace.com/images/og-image-2.png",
@@ -33,8 +32,8 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "shadcn ui marketplace, A marketplace for shadcn-ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. Going beyond default and new york shadcn ui styles.",
-  metadataBase: new URL("https://shadcn-ui-marketplace.com"),
+    "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
+  metadataBase: new URL("https://shadcnmarketplace.com"),
 };
 
 export default function RootLayout({
@@ -44,24 +43,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <head>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap"
-          rel="stylesheet"
-        />
-
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=general-sans@1,2&display=swap"
-          rel="stylesheet"
-        />
-      </head> */}
       <NextThemesProvider>
         <ThemeCustomizerWrapper />
-        {/* <ThemeCustomizerDialog _show={true} onClose={undefined} /> */}
         <body className={`${fontVariables} font-sans antialiased`}>
           <DevTools />
           <Toaster />

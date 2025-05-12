@@ -1,7 +1,5 @@
 "use client";
 
-import { ArrowRightIcon, Brush, Undo2 } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 
 import { PageContainer } from "@/components/common/page-container";
@@ -16,7 +14,6 @@ import {
   StyleFontWrapper,
 } from "@/components/style-font-wrapper";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
 import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
@@ -26,7 +23,6 @@ import {
   stylesDataList,
   useStyleStore,
 } from "@/hooks/use-style-store";
-import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
 import { getStyleVariablesPrefix } from "@/registry/styles";
@@ -96,9 +92,7 @@ export const Logo: React.FC<LogoProps> = ({ size = "md" }) => {
   );
 };
 
-export default function StylesPage({ params }: Props) {
-  const { slug } = params;
-
+export default function StylesPage() {
   const { pageExampleType } = useStyleStore();
 
   return (

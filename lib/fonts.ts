@@ -1,42 +1,12 @@
 import {
-  DM_Sans,
   IBM_Plex_Mono,
   IBM_Plex_Sans,
   Inter,
-  Inter_Tight,
-  Jost,
   Outfit,
   Poppins,
-  Public_Sans,
   Roboto,
-  Source_Sans_3,
   Ubuntu,
-  Work_Sans,
 } from "next/font/google";
-
-const dmSerifDisplay = Inter_Tight({
-  variable: "--font-dm-serif-display",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const publicSans = Public_Sans({
-  variable: "--font-public-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const workSans = Work_Sans({
-  variable: "--font-work-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -81,4 +51,4 @@ const outfit = Outfit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const fontVariables = `${inter.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable} ${roboto.variable} ${ubuntu.variable} ${publicSans.variable} ${dmSans.variable} ${workSans.variable} ${poppins.variable} ${dmSerifDisplay.variable} ${outfit.variable}`;
+export const fontVariables = `${inter.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable} ${roboto.variable} ${ubuntu.variable} ${poppins.variable} ${outfit.variable}`;
