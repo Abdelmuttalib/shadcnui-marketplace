@@ -41,11 +41,6 @@ export function ThemePaletteSelect() {
         </SelectTrigger>
         <SelectContent className="w-full">
           {themePalettesListEntries.map(([paletteName, palette], index) => {
-            // const hoverBgColor = `hover:bg-[oklch(${
-            //   palette[theme || "light"]["primary"]
-            // } / 0.3)]`;
-            // console.log("paletteName", palette[theme]["primary"]);
-            // oklch(0.93 0.1703 128.84 / 0.3)
             console.log(
               "PALETTE",
               paletteName,
@@ -56,28 +51,17 @@ export function ThemePaletteSelect() {
             return (
               <SelectItem
                 key={`theme-palette-${paletteName}`}
-                className={cn(
-                  "flex rounded-sm lg:flex-row"
-                  // hoverBgColor
-                )}
-                // style={{
-                //   backgroundColor: `oklch(${
-                //     palette[theme][color as ThemePaletteVariableKey]
-                //   })`,
-                // }}
+                className={cn("flex rounded-sm lg:flex-row")}
                 value={paletteName as ThemePaletteName}
-                // title={`${color}`}
               >
                 <div className="flex rounded-md border border-foreground/15">
                   {mainPaletteColorsKeys.map((color, index) => (
                     <div
                       key={`theme-palette-${paletteName}-${color}-${index}`}
                       className={cn("size-5", {
-                        // "rounded-full": index === 0,
                         "rounded-l-sm": index === 0,
                         "rounded-r-sm":
                           index === mainPaletteColorsKeys.length - 1,
-                        // "rounded-r-sm": index === mainColors.length - 1,
                       })}
                       style={{
                         backgroundColor: `oklch(${

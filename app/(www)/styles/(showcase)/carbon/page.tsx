@@ -1,19 +1,24 @@
 "use client";
 
 import { ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
 
+import { PageContainer } from "@/components/common/page-container";
 import { PageTitle } from "@/components/common/page-header";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  StyleCssWrapper,
+  StyleFontWrapper,
+} from "@/components/style-font-wrapper";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
 import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
 import { PAGE_EXAMPLE_TYPES, useStyleStore } from "@/hooks/use-style-store";
+import { Style, STYLES } from "@/hooks/use-style-store";
+import { cn } from "@/lib/utils";
+import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
+import { getStyleVariablesPrefix } from "@/registry/styles";
 
 export default function CarbonStylePage() {
   const { style } = useStyleStore();
@@ -76,11 +81,8 @@ export default function CarbonStylePage() {
                 key={styleCat + index}
                 id={`${style}-${styleCat}-example`}
                 styleProp={"carbon"}
-                styleCat={styleCat}
-                examplePage={styleCat}
                 hideBadge={true}
                 className="overflow-auto"
-                iframeClassName="h-[45rem] overflow-auto"
                 // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
               />
               // <StylePreview
@@ -107,19 +109,6 @@ export default function CarbonStylePage() {
     </div>
   );
 }
-
-import Link from "next/link";
-
-import { PageContainer } from "@/components/common/page-container";
-import { mainColors } from "@/components/common/theme-palette-select";
-import {
-  StyleCssWrapper,
-  StyleFontWrapper,
-} from "@/components/style-font-wrapper";
-import { RichBadge } from "@/components/ui/rich-badge";
-import { Style, STYLES } from "@/hooks/use-style-store";
-import { cn } from "@/lib/utils";
-import { getStyleVariablesPrefix } from "@/registry/styles";
 
 export function SuggestedStyles({ excludedStyle }: { excludedStyle: Style }) {
   const suggestedStyles = STYLES.filter(
@@ -164,12 +153,13 @@ export function SuggestedStyles({ excludedStyle }: { excludedStyle: Style }) {
                           Palette
                         </RichBadge>
                         <div className="flex rounded-sm border">
-                          {mainColors.map((color, index) => (
+                          {mainPaletteColorsKeys.map((color, index) => (
                             <div
                               key={`light-${color}`}
                               className={cn("size-6", {
                                 "rounded-l-sm": index === 0,
-                                "rounded-r-sm": index === mainColors.length - 1,
+                                "rounded-r-sm":
+                                  index === mainPaletteColorsKeys.length - 1,
                               })}
                               style={{
                                 // backgroundColor: `oklch(${palette.light[color]})`,
@@ -193,11 +183,8 @@ export function SuggestedStyles({ excludedStyle }: { excludedStyle: Style }) {
                     <StylePageExamplePreview
                       id="dashboard"
                       styleProp={style}
-                      styleCat="dashboard"
-                      examplePage="dashboard"
                       hideBadge={true}
                       className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
-                      iframeClassName="w-[70vw] max-w-[70vw]"
                     />
                   </div>
                 </div>
