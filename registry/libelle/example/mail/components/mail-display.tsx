@@ -95,7 +95,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 </TooltipTrigger>
               </PopoverTrigger>
               <PopoverContent className="flex w-[535px] p-0">
-                <div className="border-r-libelle-border flex flex-col gap-2 border-r px-2 py-4">
+                <div className="flex flex-col gap-2 border-r border-r-libelle-border px-2 py-4">
                   <div className="px-4 text-sm font-medium">Snooze until</div>
                   <div className="grid min-w-[250px] gap-1">
                     <Button
@@ -103,7 +103,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Later today{" "}
-                      <span className="text-libelle-muted-foreground ml-auto">
+                      <span className="ml-auto text-libelle-muted-foreground">
                         {format(addHours(today, 4), "E, h:m b")}
                       </span>
                     </Button>
@@ -112,7 +112,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Tomorrow
-                      <span className="text-libelle-muted-foreground ml-auto">
+                      <span className="ml-auto text-libelle-muted-foreground">
                         {format(addDays(today, 1), "E, h:m b")}
                       </span>
                     </Button>
@@ -121,7 +121,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       This weekend
-                      <span className="text-libelle-muted-foreground ml-auto">
+                      <span className="ml-auto text-libelle-muted-foreground">
                         {format(nextSaturday(today), "E, h:m b")}
                       </span>
                     </Button>
@@ -130,7 +130,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Next week
-                      <span className="text-libelle-muted-foreground ml-auto">
+                      <span className="ml-auto text-libelle-muted-foreground">
                         {format(addDays(today, 7), "E, h:m b")}
                       </span>
                     </Button>
@@ -212,7 +212,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
               </div>
             </div>
             {mail.date && (
-              <div className="text-libelle-muted-foreground ml-auto text-xs">
+              <div className="ml-auto text-xs text-libelle-muted-foreground">
                 {format(new Date(mail.date), "PPpp")}
               </div>
             )}
@@ -250,7 +250,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </div>
         </div>
       ) : (
-        <div className="text-libelle-muted-foreground p-8 text-center">
+        <div className="p-8 text-center text-libelle-muted-foreground">
           No message selected
         </div>
       )}

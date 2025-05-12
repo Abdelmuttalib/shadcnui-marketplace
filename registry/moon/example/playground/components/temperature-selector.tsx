@@ -27,7 +27,7 @@ export function TemperatureSelector({
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <Label htmlFor="temperature">Temperature</Label>
-              <span className="rounded-moon-md text-moon-muted-foreground w-12 border border-transparent px-2 py-0.5 text-right text-sm hover:border-border">
+              <span className="w-12 rounded-moon-md border border-transparent px-2 py-0.5 text-right text-sm text-moon-muted-foreground hover:border-border">
                 {value}
               </span>
             </div>

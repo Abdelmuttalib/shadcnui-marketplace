@@ -1,6 +1,6 @@
 "use client";
 
-import { useStyleStore } from "@/hooks/use-style-store";
+import { PageExampleType, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/utils/cn";
 
 const DEFAULT_EXAMPLES_PATH = "/example";
@@ -53,8 +53,6 @@ interface ExamplesNavProps extends React.HTMLAttributes<HTMLDivElement> {}
 export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
   // const pathname = usePathname();
 
-  const pathname = "/example/mail";
-
   const { pageExampleType, setPageExampleType } = useStyleStore();
 
   return (
@@ -75,7 +73,9 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
                     ? "bg-accent/60 font-semibold text-ring"
                     : "text-muted-foreground"
                 )}
-                onClick={() => setPageExampleType(caseExampleName)}
+                onClick={() =>
+                  setPageExampleType(caseExampleName as PageExampleType)
+                }
               >
                 {example.name}
               </button>

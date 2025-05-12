@@ -45,7 +45,7 @@ export function DataTableFacetedFilter<TData, TValue>({
         <Button
           variant="outline"
           size="sm"
-          className="border-snow-border h-8 border-dashed"
+          className="h-8 border-dashed border-snow-border"
         >
           <PlusCircledIcon className="mr-2 h-4 w-4" />
           {title}
@@ -109,7 +109,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "rounded-snow-sm border-snow-ring mr-2 flex h-4 w-4 items-center justify-center border",
+                        "mr-2 flex h-4 w-4 items-center justify-center rounded-snow-sm border border-snow-ring",
                         isSelected
                           ? "bg-snow-ring [&_svg]:text-snow-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -118,7 +118,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="text-snow-muted-foreground mr-2 h-4 w-4" />
+                      <option.icon className="mr-2 h-4 w-4 text-snow-muted-foreground" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

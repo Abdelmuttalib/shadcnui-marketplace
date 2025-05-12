@@ -66,7 +66,7 @@ export function LibelleCardShowcase() {
                 CSS.
               </CardDescription>
             </div>
-            <div className="rounded-libelle-md bg-libelle-secondary text-libelle-secondary-foreground flex items-center gap-1">
+            <div className="flex items-center gap-1 rounded-libelle-md bg-libelle-secondary text-libelle-secondary-foreground">
               <Button variant="secondary" size={"sm"}>
                 <Star className="h-4 w-4" />
                 Star
@@ -106,32 +106,32 @@ export function LibelleCardShowcase() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="text-libelle-muted-foreground flex flex-wrap gap-2 text-sm">
-            <div className="rounded-libelle-md border-libelle-input/60 bg-libelle-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
+          <div className="flex flex-wrap gap-2 text-sm text-libelle-muted-foreground">
+            <div className="flex items-center gap-1.5 rounded-libelle-md border border-libelle-input/60 bg-libelle-muted p-1 px-2 text-sm">
               <span>
                 <CircleDot className="h-4 w-4 text-blue-500" />
               </span>
               <span>TypeScript</span>
             </div>
-            <div className="rounded-libelle-md border-libelle-input/60 bg-libelle-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-libelle-md border border-libelle-input/60 bg-libelle-muted p-1 px-2 text-sm">
               <span>
                 <Star className="h-4 w-4" />
               </span>{" "}
               <span>20.1k stars</span>
             </div>
-            <div className="rounded-libelle-md border-libelle-input/60 bg-libelle-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-libelle-md border border-libelle-input/60 bg-libelle-muted p-1 px-2 text-sm">
               <span>
                 <GitFork className="h-4 w-4" />
               </span>{" "}
               <span>1.2k forks</span>
             </div>
-            <div className="rounded-libelle-md border-libelle-input/60 bg-libelle-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-libelle-md border border-libelle-input/60 bg-libelle-muted p-1 px-2 text-sm">
               <span>
                 <Eye className="h-4 w-4" />
               </span>{" "}
               <span>342 watching</span>
             </div>
-            <div className="rounded-libelle-md border-libelle-input/60 bg-libelle-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
+            <div className="flex items-center gap-1.5 rounded-libelle-md border border-libelle-input/60 bg-libelle-muted p-1 px-2 text-sm">
               <span>
                 <AlertCircle className="h-4 w-4" />
               </span>{" "}
@@ -186,31 +186,31 @@ export function LibelleCardShowcase() {
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium">Contributors</span>
               <div className="flex -space-x-2">
-                <Avatar className="border-libelle-background h-6 w-6 border-2">
+                <Avatar className="h-6 w-6 border-2 border-libelle-background">
                   <AvatarImage src="https://avatar.vercel.sh/SC" />
                   <AvatarFallback className="text-xs">SC</AvatarFallback>
                 </Avatar>
-                <Avatar className="border-libelle-background h-6 w-6 border-2">
+                <Avatar className="h-6 w-6 border-2 border-libelle-background">
                   <AvatarImage src="https://avatar.vercel.sh/JD" />
                   <AvatarFallback className="text-xs">JD</AvatarFallback>
                 </Avatar>
-                <Avatar className="border-libelle-background h-6 w-6 border-2">
+                <Avatar className="h-6 w-6 border-2 border-libelle-background">
                   <AvatarImage src="https://avatar.vercel.sh/WK" />
                   <AvatarFallback className="text-xs">WK</AvatarFallback>
                 </Avatar>
-                <Avatar className="border-libelle-background h-6 w-6 border-2">
+                <Avatar className="h-6 w-6 border-2 border-libelle-background">
                   <AvatarImage src="https://avatar.vercel.sh/BR" />
                   <AvatarFallback className="text-xs">BR</AvatarFallback>
                 </Avatar>
               </div>
             </div>
-            <div className="text-libelle-muted-foreground flex items-center gap-1 text-sm">
+            <div className="flex items-center gap-1 text-sm text-libelle-muted-foreground">
               <Calendar className="h-3.5 w-3.5" />
               <span>Updated April 2023</span>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="border-t-libelle-border flex items-center justify-between border-t pt-4">
+        <CardFooter className="flex items-center justify-between border-t border-t-libelle-border pt-4">
           <div className="flex items-center gap-2">
             <TooltipProvider>
               <Tooltip>

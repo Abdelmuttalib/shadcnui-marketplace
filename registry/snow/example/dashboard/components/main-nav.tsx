@@ -13,25 +13,25 @@ export function MainNav({
     >
       <Link
         href="#"
-        className="hover:text-snow-primary text-sm font-medium transition-colors"
+        className="text-sm font-medium transition-colors hover:text-snow-primary"
       >
         Overview
       </Link>
       <Link
         href="#"
-        className="text-snow-muted-foreground hover:text-snow-primary text-sm font-medium transition-colors"
+        className="text-sm font-medium text-snow-muted-foreground transition-colors hover:text-snow-primary"
       >
         Customers
       </Link>
       <Link
         href="#"
-        className="text-snow-muted-foreground hover:text-snow-primary text-sm font-medium transition-colors"
+        className="text-sm font-medium text-snow-muted-foreground transition-colors hover:text-snow-primary"
       >
         Products
       </Link>
       <Link
         href="#"
-        className="text-snow-muted-foreground hover:text-snow-primary text-sm font-medium transition-colors"
+        className="text-sm font-medium text-snow-muted-foreground transition-colors hover:text-snow-primary"
       >
         Settings
       </Link>

@@ -248,7 +248,7 @@ const Sidebar = React.forwardRef<
         >
           <div
             data-sidebar="sidebar"
-            className="group-data-[variant=floating]:rounded-spctm-lg flex h-full w-full flex-col bg-spctm-sidebar group-data-[variant=floating]:border group-data-[variant=floating]:border-spctm-sidebar-border group-data-[variant=floating]:shadow"
+            className="flex h-full w-full flex-col bg-spctm-sidebar group-data-[variant=floating]:rounded-spctm-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-spctm-sidebar-border group-data-[variant=floating]:shadow"
           >
             {children}
           </div>
@@ -439,7 +439,7 @@ const SidebarGroupLabel = React.forwardRef<
       ref={ref}
       data-sidebar="group-label"
       className={cn(
-        "rounded-spctm-md flex h-8 shrink-0 items-center px-2 text-xs font-medium text-spctm-sidebar-foreground/70 outline-none ring-spctm-sidebar-ring transition-[margin,opa] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+        "flex h-8 shrink-0 items-center rounded-spctm-md px-2 text-xs font-medium text-spctm-sidebar-foreground/70 outline-none ring-spctm-sidebar-ring transition-[margin,opa] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
         "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
         className
       )}
@@ -460,7 +460,7 @@ const SidebarGroupAction = React.forwardRef<
       ref={ref}
       data-sidebar="group-action"
       className={cn(
-        "rounded-spctm-md absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center p-0 text-spctm-sidebar-foreground outline-none ring-spctm-sidebar-ring transition-transform hover:bg-spctm-sidebar-accent hover:text-spctm-sidebar-accent-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-spctm-md p-0 text-spctm-sidebar-foreground outline-none ring-spctm-sidebar-ring transition-transform hover:bg-spctm-sidebar-accent hover:text-spctm-sidebar-accent-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:absolute after:-inset-2 after:md:hidden",
         "group-data-[collapsible=icon]:hidden",
@@ -607,7 +607,7 @@ const SidebarMenuAction = React.forwardRef<
       ref={ref}
       data-sidebar="menu-action"
       className={cn(
-        "rounded-spctm-md absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center p-0 text-spctm-sidebar-foreground outline-none ring-spctm-sidebar-ring transition-transform hover:bg-spctm-sidebar-accent hover:text-spctm-sidebar-accent-foreground focus-visible:ring-2 peer-hover/menu-button:text-spctm-sidebar-accent-foreground [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-spctm-md p-0 text-spctm-sidebar-foreground outline-none ring-spctm-sidebar-ring transition-transform hover:bg-spctm-sidebar-accent hover:text-spctm-sidebar-accent-foreground focus-visible:ring-2 peer-hover/menu-button:text-spctm-sidebar-accent-foreground [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:absolute after:-inset-2 after:md:hidden",
         "peer-data-[size=sm]/menu-button:top-1",
@@ -632,7 +632,7 @@ const SidebarMenuBadge = React.forwardRef<
     ref={ref}
     data-sidebar="menu-badge"
     className={cn(
-      "rounded-spctm-md pointer-events-none absolute right-1 flex h-5 min-w-5 select-none items-center justify-center px-1 text-xs font-medium tabular-nums text-spctm-sidebar-foreground",
+      "pointer-events-none absolute right-1 flex h-5 min-w-5 select-none items-center justify-center rounded-spctm-md px-1 text-xs font-medium tabular-nums text-spctm-sidebar-foreground",
       "peer-hover/menu-button:text-spctm-sidebar-accent-foreground peer-data-[active=true]/menu-button:text-spctm-sidebar-accent-foreground",
       "peer-data-[size=sm]/menu-button:top-1",
       "peer-data-[size=default]/menu-button:top-1.5",
@@ -661,14 +661,14 @@ const SidebarMenuSkeleton = React.forwardRef<
       ref={ref}
       data-sidebar="menu-skeleton"
       className={cn(
-        "rounded-spctm-md flex h-8 items-center gap-2 px-2",
+        "flex h-8 items-center gap-2 rounded-spctm-md px-2",
         className
       )}
       {...props}
     >
       {showIcon && (
         <Skeleton
-          className="rounded-spctm-md size-4"
+          className="size-4 rounded-spctm-md"
           data-sidebar="menu-skeleton-icon"
         />
       )}
@@ -726,7 +726,7 @@ const SidebarMenuSubButton = React.forwardRef<
       data-size={size}
       data-active={isActive}
       className={cn(
-        "rounded-spctm-md flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden px-2 text-spctm-sidebar-foreground outline-none ring-spctm-sidebar-ring hover:bg-spctm-sidebar-accent hover:text-spctm-sidebar-accent-foreground focus-visible:ring-2 active:bg-spctm-sidebar-accent active:text-spctm-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-spctm-sidebar-accent-foreground",
+        "flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-spctm-md px-2 text-spctm-sidebar-foreground outline-none ring-spctm-sidebar-ring hover:bg-spctm-sidebar-accent hover:text-spctm-sidebar-accent-foreground focus-visible:ring-2 active:bg-spctm-sidebar-accent active:text-spctm-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-spctm-sidebar-accent-foreground",
         "data-[active=true]:bg-spctm-sidebar-accent data-[active=true]:text-spctm-sidebar-accent-foreground",
         size === "sm" && "text-xs",
         size === "md" && "text-sm",

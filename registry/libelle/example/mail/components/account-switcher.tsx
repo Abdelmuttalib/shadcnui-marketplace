@@ -51,7 +51,7 @@ export function AccountSwitcher({
       <SelectContent className="bg-libelle-popover">
         {accounts.map((account) => (
           <SelectItem key={account.email} value={account.email}>
-            <div className="[&_svg]:text-libelle-foreground flex items-center gap-3 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0">
+            <div className="flex items-center gap-3 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0 [&_svg]:text-libelle-foreground">
               {account.icon}
               {account.email}
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, Building,Rocket } from "lucide-react";
+import { Briefcase, Building, Rocket } from "lucide-react";
 import { Check } from "lucide-react";
 import type React from "react";
 

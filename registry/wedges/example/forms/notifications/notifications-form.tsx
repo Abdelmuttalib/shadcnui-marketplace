@@ -50,7 +50,7 @@ export function NotificationsForm() {
   function onSubmit(data: NotificationsFormValues) {
     toast.message("You submitted the following values:", {
       description: (
-        <pre className="mt-2 rounded-wedges-md bg-wedges-gray-950 p-4">
+        <pre className="bg-wedges-gray-950 mt-2 rounded-wedges-md p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),

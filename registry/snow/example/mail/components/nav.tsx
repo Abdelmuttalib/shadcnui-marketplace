@@ -48,7 +48,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               <TooltipContent side="right" className="flex items-center gap-4">
                 {link.title}
                 {link.label && (
-                  <span className="text-snow-muted-foreground ml-auto">
+                  <span className="ml-auto text-snow-muted-foreground">
                     {link.label}
                   </span>
                 )}
@@ -61,7 +61,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               className={cn(
                 buttonVariants({ variant: link.variant, size: "sm" }),
                 link.variant === "default" &&
-                  "dark:bg-snow-muted dark:hover:bg-snow-muted dark:text-white dark:hover:text-white",
+                  "dark:bg-snow-muted dark:text-white dark:hover:bg-snow-muted dark:hover:text-white",
                 "justify-start"
               )}
             >

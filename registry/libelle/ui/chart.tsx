@@ -52,7 +52,7 @@ const ChartContainer = React.forwardRef<
         data-chart={chartId}
         ref={ref}
         className={cn(
-          "[&_.recharts-cartesian-axis-tick_text]:fill-libelle-muted-foreground [&_.recharts-curve.recharts-tooltip-cursor]:stroke-libelle-border [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-libelle-border [&_.recharts-radial-bar-libelle-background-sector]:fill-libelle-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-libelle-muted flex aspect-video justify-center text-xs [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none",
+          "flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-libelle-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-libelle-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-libelle-border [&_.recharts-radial-bar-libelle-background-sector]:fill-libelle-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-libelle-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none",
           className
         )}
         {...props}
@@ -179,7 +179,7 @@ const ChartTooltipContent = React.forwardRef<
       <div
         ref={ref}
         className={cn(
-          "rounded-libelle-lg border-libelle-border border-libelle-border/50 bg-libelle-background grid min-w-[8rem] items-start gap-1.5 border px-2.5 py-1.5 text-xs shadow-xl",
+          "grid min-w-[8rem] items-start gap-1.5 rounded-libelle-lg border border-libelle-border border-libelle-border/50 bg-libelle-background px-2.5 py-1.5 text-xs shadow-xl",
           className
         )}
       >
@@ -194,7 +194,7 @@ const ChartTooltipContent = React.forwardRef<
               <div
                 key={item.dataKey}
                 className={cn(
-                  "[&>svg]:text-libelle-muted-foreground flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5",
+                  "flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5 [&>svg]:text-libelle-muted-foreground",
                   indicator === "dot" && "items-center"
                 )}
               >
@@ -239,7 +239,7 @@ const ChartTooltipContent = React.forwardRef<
                         </span>
                       </div>
                       {item.value && (
-                        <span className="text-libelle-foreground font-mono font-medium tabular-nums">
+                        <span className="font-mono font-medium tabular-nums text-libelle-foreground">
                           {item.value.toLocaleString()}
                         </span>
                       )}
@@ -293,7 +293,7 @@ const ChartLegendContent = React.forwardRef<
             <div
               key={item.value}
               className={cn(
-                "[&>svg]:text-libelle-muted-foreground flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3"
+                "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-libelle-muted-foreground"
               )}
             >
               {itemConfig?.icon && !hideIcon ? (

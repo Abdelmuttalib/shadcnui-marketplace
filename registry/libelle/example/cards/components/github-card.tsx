@@ -35,7 +35,7 @@ export function DemoGithub() {
             your apps. Accessible. Customizable. Open Source.
           </CardDescription>
         </div>
-        <div className="rounded-libelle-md bg-libelle-secondary text-libelle-secondary-foreground flex items-center space-x-1">
+        <div className="flex items-center space-x-1 rounded-libelle-md bg-libelle-secondary text-libelle-secondary-foreground">
           <Button variant="secondary" className="px-2 shadow-none">
             <StarIcon className="mr-2 h-4 w-4" />
             Star
@@ -44,7 +44,7 @@ export function DemoGithub() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" className="px-2 shadow-none">
-                <ChevronDownIcon className="text-libelle-secondary-foreground h-4 w-4" />
+                <ChevronDownIcon className="h-4 w-4 text-libelle-secondary-foreground" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -69,7 +69,7 @@ export function DemoGithub() {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="text-libelle-muted-foreground flex space-x-4 text-sm">
+        <div className="flex space-x-4 text-sm text-libelle-muted-foreground">
           <div className="flex items-center">
             <CircleIcon className="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
             TypeScript

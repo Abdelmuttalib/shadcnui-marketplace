@@ -53,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-libelle-muted-foreground text-sm">
+                  <p className="text-sm text-libelle-muted-foreground">
                     m@example.com
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-libelle-muted-foreground text-sm">
+                  <p className="text-sm text-libelle-muted-foreground">
                     b@example.com
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-libelle-muted-foreground text-sm">
+                  <p className="text-sm text-libelle-muted-foreground">
                     p@example.com
                   </p>
                 </div>

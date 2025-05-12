@@ -34,7 +34,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="card" id="card" className="peer sr-only" />
             <Label
               htmlFor="card"
-              className="rounded-snow-md border-snow-muted bg-snow-popover hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary flex flex-col items-center justify-between border-2 p-4"
+              className="flex flex-col items-center justify-between rounded-snow-md border-2 border-snow-muted bg-snow-popover p-4 hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ export function DemoPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="rounded-snow-md border-snow-muted bg-snow-popover hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary flex flex-col items-center justify-between border-2 p-4"
+              className="flex flex-col items-center justify-between rounded-snow-md border-2 border-snow-muted bg-snow-popover p-4 hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -70,7 +70,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
             <Label
               htmlFor="apple"
-              className="rounded-snow-md border-snow-muted bg-snow-popover hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary flex flex-col items-center justify-between border-2 p-4"
+              className="flex flex-col items-center justify-between rounded-snow-md border-2 border-snow-muted bg-snow-popover p-4 hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

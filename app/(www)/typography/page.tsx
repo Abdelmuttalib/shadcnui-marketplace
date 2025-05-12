@@ -7,67 +7,67 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Typography, TypographyProps } from "@/components/ui/typography";
 
 const typographyVariantsList: TypographyProps["variant"][] = [
-  "xs/normal",
-  "xs/medium",
-  "xs/semibold",
-  "xs/bold",
-  "xs/extrabold",
-  "sm/normal",
-  "sm/medium",
-  "sm/semibold",
-  "sm/bold",
-  "sm/extrabold",
-  "base/normal",
-  "base/medium",
-  "base/semibold",
-  "base/bold",
-  "base/extrabold",
-  "md/normal",
-  "md/medium",
-  "md/semibold",
-  "md/bold",
-  "md/extrabold",
-  "lg/normal",
-  "lg/medium",
-  "lg/semibold",
-  "lg/bold",
-  "lg/extrabold",
-  "xl/normal",
-  "xl/medium",
-  "xl/semibold",
-  "xl/bold",
-  "xl/extrabold",
-  "2xl/normal",
-  "2xl/medium",
-  "2xl/semibold",
-  "2xl/bold",
-  "2xl/extrabold",
-  "3xl/normal",
-  "3xl/medium",
-  "3xl/semibold",
-  "3xl/bold",
-  "3xl/extrabold",
-  "4xl/normal",
-  "4xl/medium",
-  "4xl/semibold",
-  "4xl/bold",
-  "4xl/extrabold",
-  "5xl/normal",
-  "5xl/medium",
-  "5xl/semibold",
-  "5xl/bold",
-  "5xl/extrabold",
-  "6xl/normal",
-  "6xl/medium",
-  "6xl/semibold",
-  "6xl/bold",
-  "6xl/extrabold",
-  "7xl/normal",
-  "7xl/medium",
-  "7xl/semibold",
-  "7xl/bold",
   "7xl/extrabold",
-].reverse();
+  "7xl/bold",
+  "7xl/semibold",
+  "7xl/medium",
+  "7xl/normal",
+  "6xl/extrabold",
+  "6xl/bold",
+  "6xl/semibold",
+  "6xl/medium",
+  "6xl/normal",
+  "5xl/extrabold",
+  "5xl/bold",
+  "5xl/semibold",
+  "5xl/medium",
+  "5xl/normal",
+  "4xl/extrabold",
+  "4xl/bold",
+  "4xl/semibold",
+  "4xl/medium",
+  "4xl/normal",
+  "3xl/extrabold",
+  "3xl/bold",
+  "3xl/semibold",
+  "3xl/medium",
+  "3xl/normal",
+  "2xl/extrabold",
+  "2xl/bold",
+  "2xl/semibold",
+  "2xl/medium",
+  "2xl/normal",
+  "xl/extrabold",
+  "xl/bold",
+  "xl/semibold",
+  "xl/medium",
+  "xl/normal",
+  "lg/extrabold",
+  "lg/bold",
+  "lg/semibold",
+  "lg/medium",
+  "lg/normal",
+  "md/extrabold",
+  "md/bold",
+  "md/semibold",
+  "md/medium",
+  "md/normal",
+  "base/extrabold",
+  "base/bold",
+  "base/semibold",
+  "base/medium",
+  "base/normal",
+  "sm/extrabold",
+  "sm/bold",
+  "sm/semibold",
+  "sm/medium",
+  "sm/normal",
+  "xs/extrabold",
+  "xs/bold",
+  "xs/semibold",
+  "xs/medium",
+  "xs/normal",
+];
 
 export default function TypographyPage() {
   // const s = Object.keys(typographyVariants);
@@ -278,7 +278,8 @@ export default function TypographyPage() {
                         You can control the text size and weight using the{" "}
                         <code>variant</code> prop. It uses a string format:{" "}
                         <code>&lt;fontSize&gt;/&lt;fontWeight&gt;</code> (e.g.{" "}
-                        <code>"xl/bold"</code>,<code>"sm/medium"</code>).
+                        <code>&quot;xl/bold&quot;</code>,
+                        <code>&quot;sm/medium&quot;</code>).
                       </p>
 
                       <div className="mt-4 overflow-x-auto rounded-lg border">
@@ -298,7 +299,7 @@ export default function TypographyPage() {
                               <td className="px-4 py-3">xs</td>
                               <td className="px-4 py-3">
                                 <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
-                                  variant="xs/bold"
+                                  variant=&quot;xs/bold&quot;
                                 </code>
                                 → text-xs font-bold
                               </td>
@@ -307,7 +308,7 @@ export default function TypographyPage() {
                               <td className="px-4 py-3">base</td>
                               <td className="px-4 py-3">
                                 <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
-                                  variant="base/medium"
+                                  variant=&quot;base/medium&quot;
                                 </code>
                                 → text-sm font-medium
                               </td>
@@ -316,7 +317,7 @@ export default function TypographyPage() {
                               <td className="px-4 py-3">4xl</td>
                               <td className="px-4 py-3">
                                 <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
-                                  variant="4xl/semibold"
+                                  variant=&quot;4xl/semibold&quot;
                                 </code>
                                 → text-2xl font-semibold
                               </td>
@@ -325,7 +326,7 @@ export default function TypographyPage() {
                               <td className="px-4 py-3">7xl</td>
                               <td className="px-4 py-3">
                                 <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
-                                  variant="7xl/extrabold"
+                                  variant=&quot;7xl/extrabold&quot;
                                 </code>
                                 → text-5xl sm:text-6xl md:text-7xl
                                 font-extrabold
@@ -360,7 +361,7 @@ export default function TypographyPage() {
                             <td className="px-4 py-3">variant</td>
                             <td className="px-4 py-3">
                               <code className="rounded border bg-accent px-1 py-0.5 italic">
-                                "xs/normal" | "2xl/bold"
+                                &quot;xs/normal&quot; | &quot;2xl/bold&quot;
                               </code>
                             </td>
                             <td className="px-4 py-3">

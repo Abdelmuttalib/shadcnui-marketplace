@@ -23,7 +23,7 @@ export function MailList({ items }: MailListProps) {
           <button
             key={item.id}
             className={cn(
-              "rounded-libelle-lg border-libelle-border hover:bg-libelle-accent flex flex-col items-start gap-2 border p-3 text-left text-sm transition-all",
+              "flex flex-col items-start gap-2 rounded-libelle-lg border border-libelle-border p-3 text-left text-sm transition-all hover:bg-libelle-accent",
               mail.selected === item.id && "bg-libelle-muted"
             )}
             onClick={() =>
@@ -56,7 +56,7 @@ export function MailList({ items }: MailListProps) {
               </div>
               <div className="text-xs font-medium">{item.subject}</div>
             </div>
-            <div className="text-libelle-muted-foreground line-clamp-2 text-xs">
+            <div className="line-clamp-2 text-xs text-libelle-muted-foreground">
               {item.text.substring(0, 300)}
             </div>
             {item.labels.length ? (

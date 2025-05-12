@@ -45,7 +45,7 @@ export function AppearanceForm() {
   function onSubmit(data: AppearanceFormValues) {
     toast.message("You submitted the following values:", {
       description: (
-        <pre className="bg-lucid-gray-950 rounded-lucid-md mt-2 p-4">
+        <pre className="bg-lucid-gray-950 mt-2 rounded-lucid-md p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
@@ -66,25 +66,25 @@ export function AppearanceForm() {
                   <select
                     className={cn(
                       buttonVariants({ variant: "outline" }),
-                      "hover:text-lucid-foreground w-[200px] appearance-none border-b border-b-gray-500 bg-input font-normal hover:bg-input"
+                      "w-[200px] appearance-none border-b border-b-gray-500 bg-input font-normal hover:bg-input hover:text-lucid-foreground"
                     )}
                     {...field}
                   >
                     <option
                       value="inter"
-                      className="text-lucid-foreground bg-input"
+                      className="bg-input text-lucid-foreground"
                     >
                       Inter
                     </option>
                     <option
                       value="manrope"
-                      className="text-lucid-foreground bg-input"
+                      className="bg-input text-lucid-foreground"
                     >
                       Manrope
                     </option>
                     <option
                       value="system"
-                      className="text-lucid-foreground bg-input"
+                      className="bg-input text-lucid-foreground"
                     >
                       System
                     </option>
@@ -119,19 +119,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="light" className="sr-only" />
                     </FormControl>
-                    <div className="rounded-lucid-md items-center border-2 border-muted p-1 hover:border-accent">
+                    <div className="items-center rounded-lucid-md border-2 border-muted p-1 hover:border-accent">
                       <div className="space-y-2 rounded-sm bg-[#ecedef] p-2">
-                        <div className="shadow-xs rounded-lucid-md space-y-2 bg-white p-2">
-                          <div className="rounded-lucid-lg h-2 w-[80px] bg-[#ecedef]" />
-                          <div className="rounded-lucid-lg h-2 w-[100px] bg-[#ecedef]" />
+                        <div className="shadow-xs space-y-2 rounded-lucid-md bg-white p-2">
+                          <div className="h-2 w-[80px] rounded-lucid-lg bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-lucid-lg bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs rounded-lucid-md flex items-center space-x-2 bg-white p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-lucid-md bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="rounded-lucid-lg h-2 w-[100px] bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-lucid-lg bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs rounded-lucid-md flex items-center space-x-2 bg-white p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-lucid-md bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="rounded-lucid-lg h-2 w-[100px] bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-lucid-lg bg-[#ecedef]" />
                         </div>
                       </div>
                     </div>
@@ -145,19 +145,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="dark" className="sr-only" />
                     </FormControl>
-                    <div className="rounded-lucid-md hover:bg-lucid-accent items-center border-2 border-muted bg-popover p-1 hover:text-accent-foreground">
+                    <div className="items-center rounded-lucid-md border-2 border-muted bg-popover p-1 hover:bg-lucid-accent hover:text-accent-foreground">
                       <div className="space-y-2 rounded-sm bg-slate-950 p-2">
-                        <div className="shadow-xs rounded-lucid-md space-y-2 bg-slate-800 p-2">
-                          <div className="rounded-lucid-lg h-2 w-[80px] bg-slate-400" />
-                          <div className="rounded-lucid-lg h-2 w-[100px] bg-slate-400" />
+                        <div className="shadow-xs space-y-2 rounded-lucid-md bg-slate-800 p-2">
+                          <div className="h-2 w-[80px] rounded-lucid-lg bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-lucid-lg bg-slate-400" />
                         </div>
-                        <div className="shadow-xs rounded-lucid-md flex items-center space-x-2 bg-slate-800 p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-lucid-md bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="rounded-lucid-lg h-2 w-[100px] bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-lucid-lg bg-slate-400" />
                         </div>
-                        <div className="shadow-xs rounded-lucid-md flex items-center space-x-2 bg-slate-800 p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-lucid-md bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="rounded-lucid-lg h-2 w-[100px] bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-lucid-lg bg-slate-400" />
                         </div>
                       </div>
                     </div>

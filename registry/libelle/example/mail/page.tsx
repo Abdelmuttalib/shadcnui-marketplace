@@ -4,7 +4,7 @@ import { accounts, mails } from "./data";
 export function MailPage() {
   return (
     <>
-      <div className="bg-libelle-background flex h-full flex-col">
+      <div className="flex h-full flex-col bg-libelle-background">
         <Mail
           accounts={accounts}
           mails={mails}

@@ -27,16 +27,6 @@ import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
 import { getStyleVariablesPrefix } from "@/registry/styles";
 
-interface Props {
-  params: { slug: string };
-}
-
-// export async function generateStaticParams() {
-//   return Object.keys(blocksRegistry).map((slug) => ({ slug }));
-// }
-
-// components/Logo.tsx
-
 type LogoProps = {
   size?: "sm" | "md" | "lg" | number; // or allow custom px size
 };
@@ -47,7 +37,7 @@ const sizeMap = {
   lg: 14,
 };
 
-const Logo: React.FC<LogoProps> = ({ size = "md" }) => {
+function Logo({ size = "md" }: LogoProps) {
   const pxSize = typeof size === "number" ? size : sizeMap[size];
 
   const outerSize = `${pxSize * 1.1}px`; // circle
@@ -90,7 +80,7 @@ const Logo: React.FC<LogoProps> = ({ size = "md" }) => {
       </div>
     </div>
   );
-};
+}
 
 export default function StylesPage() {
   const { pageExampleType } = useStyleStore();

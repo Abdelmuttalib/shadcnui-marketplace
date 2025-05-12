@@ -80,7 +80,7 @@ export function AccountForm() {
   function onSubmit(data: AccountFormValues) {
     toast.message("You submitted the following values:", {
       description: (
-        <pre className="bg-snow-gray-950 rounded-snow-md mt-2 p-4">
+        <pre className="bg-snow-gray-950 mt-2 rounded-snow-md p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),

@@ -4,12 +4,8 @@
   "type": "registry:style",
   "title": "Carbon Style",
   "description": "IBM's Carbon Design System",
-  "dependencies": [
-    "@radix-ui/react-checkbox"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-checkbox"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "registry/carbon/ui/button.tsx",

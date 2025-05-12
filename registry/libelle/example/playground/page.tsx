@@ -38,7 +38,7 @@ const metadata: Metadata = {
 export function PlaygroundPage() {
   return (
     <>
-      <div className="bg-libelle-background flex h-full flex-col px-6">
+      <div className="flex h-full flex-col bg-libelle-background px-6">
         <div className="container mx-auto flex flex-col items-start justify-between space-y-2 py-4 sm:flex-row sm:items-center sm:space-y-0 md:h-16">
           <h2 className="text-lg font-semibold">Playground</h2>
           <div className="ml-auto flex w-full space-x-2 sm:justify-end lg:-mr-4">
@@ -261,7 +261,7 @@ export function PlaygroundPage() {
                         placeholder="We're writing to [inset]. Congrats from OpenAI!"
                         className="h-full min-h-[300px] lg:min-h-[700px] xl:min-h-[700px]"
                       />
-                      <div className="rounded-libelle-md bg-libelle-muted border"></div>
+                      <div className="rounded-libelle-md border bg-libelle-muted"></div>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>
@@ -292,7 +292,7 @@ export function PlaygroundPage() {
                           />
                         </div>
                       </div>
-                      <div className="rounded-libelle-md bg-libelle-muted mt-[21px] min-h-[400px] border lg:min-h-[700px]" />
+                      <div className="mt-[21px] min-h-[400px] rounded-libelle-md border bg-libelle-muted lg:min-h-[700px]" />
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>

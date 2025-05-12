@@ -77,7 +77,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
             >
               <div className="grid gap-2">
                 <h4 className="font-medium leading-none">{peekedModel.name}</h4>
-                <div className="text-snow-muted-foreground text-sm">
+                <div className="text-sm text-snow-muted-foreground">
                   {peekedModel.description}
                 </div>
                 {peekedModel.strengths ? (
@@ -85,7 +85,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                     <h5 className="text-sm font-medium leading-none">
                       Strengths
                     </h5>
-                    <ul className="text-snow-muted-foreground text-sm">
+                    <ul className="text-sm text-snow-muted-foreground">
                       {peekedModel.strengths}
                     </ul>
                   </div>

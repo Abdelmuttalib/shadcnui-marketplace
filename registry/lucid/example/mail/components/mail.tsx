@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-lucid-background/60 bg-lucid-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="text-lucid-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
+                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-lucid-muted-foreground" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

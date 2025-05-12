@@ -45,7 +45,7 @@ export function AppearanceForm() {
   function onSubmit(data: AppearanceFormValues) {
     toast.message("You submitted the following values:", {
       description: (
-        <pre className="bg-snow-gray-950 rounded-snow-md mt-2 p-4">
+        <pre className="bg-snow-gray-950 mt-2 rounded-snow-md p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
@@ -66,25 +66,25 @@ export function AppearanceForm() {
                   <select
                     className={cn(
                       buttonVariants({ variant: "outline" }),
-                      "hover:text-snow-foreground w-[200px] appearance-none border-b border-b-gray-500 bg-input font-normal hover:bg-input"
+                      "w-[200px] appearance-none border-b border-b-gray-500 bg-input font-normal hover:bg-input hover:text-snow-foreground"
                     )}
                     {...field}
                   >
                     <option
                       value="inter"
-                      className="text-snow-foreground bg-input"
+                      className="bg-input text-snow-foreground"
                     >
                       Inter
                     </option>
                     <option
                       value="manrope"
-                      className="text-snow-foreground bg-input"
+                      className="bg-input text-snow-foreground"
                     >
                       Manrope
                     </option>
                     <option
                       value="system"
-                      className="text-snow-foreground bg-input"
+                      className="bg-input text-snow-foreground"
                     >
                       System
                     </option>
@@ -119,19 +119,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="light" className="sr-only" />
                     </FormControl>
-                    <div className="rounded-snow-md items-center border-2 border-muted p-1 hover:border-accent">
+                    <div className="items-center rounded-snow-md border-2 border-muted p-1 hover:border-accent">
                       <div className="space-y-2 rounded-sm bg-[#ecedef] p-2">
-                        <div className="shadow-xs rounded-snow-md space-y-2 bg-white p-2">
-                          <div className="rounded-snow-lg h-2 w-[80px] bg-[#ecedef]" />
-                          <div className="rounded-snow-lg h-2 w-[100px] bg-[#ecedef]" />
+                        <div className="shadow-xs space-y-2 rounded-snow-md bg-white p-2">
+                          <div className="h-2 w-[80px] rounded-snow-lg bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-snow-lg bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs rounded-snow-md flex items-center space-x-2 bg-white p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-snow-md bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="rounded-snow-lg h-2 w-[100px] bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-snow-lg bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs rounded-snow-md flex items-center space-x-2 bg-white p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-snow-md bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="rounded-snow-lg h-2 w-[100px] bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-snow-lg bg-[#ecedef]" />
                         </div>
                       </div>
                     </div>
@@ -145,19 +145,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="dark" className="sr-only" />
                     </FormControl>
-                    <div className="rounded-snow-md hover:bg-snow-accent items-center border-2 border-muted bg-popover p-1 hover:text-accent-foreground">
+                    <div className="items-center rounded-snow-md border-2 border-muted bg-popover p-1 hover:bg-snow-accent hover:text-accent-foreground">
                       <div className="space-y-2 rounded-sm bg-slate-950 p-2">
-                        <div className="shadow-xs rounded-snow-md space-y-2 bg-slate-800 p-2">
-                          <div className="rounded-snow-lg h-2 w-[80px] bg-slate-400" />
-                          <div className="rounded-snow-lg h-2 w-[100px] bg-slate-400" />
+                        <div className="shadow-xs space-y-2 rounded-snow-md bg-slate-800 p-2">
+                          <div className="h-2 w-[80px] rounded-snow-lg bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-snow-lg bg-slate-400" />
                         </div>
-                        <div className="shadow-xs rounded-snow-md flex items-center space-x-2 bg-slate-800 p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-snow-md bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="rounded-snow-lg h-2 w-[100px] bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-snow-lg bg-slate-400" />
                         </div>
-                        <div className="shadow-xs rounded-snow-md flex items-center space-x-2 bg-slate-800 p-2">
+                        <div className="shadow-xs flex items-center space-x-2 rounded-snow-md bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="rounded-snow-lg h-2 w-[100px] bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-snow-lg bg-slate-400" />
                         </div>
                       </div>
                     </div>

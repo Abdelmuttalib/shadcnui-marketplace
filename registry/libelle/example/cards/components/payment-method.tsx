@@ -34,7 +34,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="card" id="card" className="peer sr-only" />
             <Label
               htmlFor="card"
-              className="rounded-libelle-md border-libelle-muted bg-libelle-popover hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary flex flex-col items-center justify-between border-2 p-4"
+              className="flex flex-col items-center justify-between rounded-libelle-md border-2 border-libelle-muted bg-libelle-popover p-4 hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ export function DemoPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="rounded-libelle-md border-libelle-muted bg-libelle-popover hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary flex flex-col items-center justify-between border-2 p-4"
+              className="flex flex-col items-center justify-between rounded-libelle-md border-2 border-libelle-muted bg-libelle-popover p-4 hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -70,7 +70,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
             <Label
               htmlFor="apple"
-              className="rounded-libelle-md border-libelle-muted bg-libelle-popover hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary flex flex-col items-center justify-between border-2 p-4"
+              className="flex flex-col items-center justify-between rounded-libelle-md border-2 border-libelle-muted bg-libelle-popover p-4 hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

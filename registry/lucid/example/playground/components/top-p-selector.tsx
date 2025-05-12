@@ -25,7 +25,7 @@ export function TopPSelector({ defaultValue }: TopPSelectorProps) {
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <Label htmlFor="top-p">Top P</Label>
-              <span className="rounded-lucid-md text-lucid-muted-foreground w-12 border border-transparent px-2 py-0.5 text-right text-sm hover:border-border">
+              <span className="w-12 rounded-lucid-md border border-transparent px-2 py-0.5 text-right text-sm text-lucid-muted-foreground hover:border-border">
                 {value}
               </span>
             </div>

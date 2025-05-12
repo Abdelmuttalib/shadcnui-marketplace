@@ -14,7 +14,7 @@ const metadata: Metadata = {
 export function AuthenticationPage() {
   return (
     <>
-      <div className="bg-libelle-background container relative mx-auto grid h-full min-h-full grid-cols-1 flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="container relative mx-auto grid h-full min-h-full grid-cols-1 flex-col items-center justify-center bg-libelle-background lg:max-w-none lg:grid-cols-2 lg:px-0">
         <Link
           href="#"
           className={cn(
@@ -24,7 +24,7 @@ export function AuthenticationPage() {
         >
           Login
         </Link>
-        <div className="bg-libelle-muted dark:border-r-libelle-border relative hidden h-full flex-col p-10 text-white dark:border-r lg:flex">
+        <div className="relative hidden h-full flex-col bg-libelle-muted p-10 text-white dark:border-r dark:border-r-libelle-border lg:flex">
           <div className="absolute inset-0 bg-gray-900" />
           <div className="relative z-20 flex items-center text-lg font-medium">
             <svg
@@ -58,23 +58,23 @@ export function AuthenticationPage() {
               <h1 className="text-2xl font-semibold tracking-tight">
                 Create an account
               </h1>
-              <p className="text-libelle-muted-foreground text-sm">
+              <p className="text-sm text-libelle-muted-foreground">
                 Enter your email below to create your account
               </p>
             </div>
             <UserAuthForm />
-            <p className="text-libelle-muted-foreground px-8 text-center text-sm">
+            <p className="px-8 text-center text-sm text-libelle-muted-foreground">
               By clicking continue, you agree to our{" "}
               <Link
                 href="#"
-                className="hover:text-libelle-primary underline underline-offset-4"
+                className="underline underline-offset-4 hover:text-libelle-primary"
               >
                 Terms of Service
               </Link>{" "}
               and{" "}
               <Link
                 href="#"
-                className="hover:text-libelle-primary underline underline-offset-4"
+                className="underline underline-offset-4 hover:text-libelle-primary"
               >
                 Privacy Policy
               </Link>

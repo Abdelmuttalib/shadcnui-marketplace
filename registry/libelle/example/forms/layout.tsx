@@ -39,7 +39,7 @@ interface SettingsLayoutProps {
 export function SettingsLayout({ children }: SettingsLayoutProps) {
   return (
     <>
-      <div className="bg-libelle-background block space-y-6 p-8 pb-16">
+      <div className="block space-y-6 bg-libelle-background p-8 pb-16">
         <div className="space-y-0.5">
           <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
           <p className="text-libelle-muted-foreground">

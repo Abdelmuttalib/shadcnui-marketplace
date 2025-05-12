@@ -9,7 +9,7 @@ export function SettingsProfilePage() {
       <div className="space-y-6">
         <div>
           <h3 className="text-lg font-medium">Profile</h3>
-          <p className="text-libelle-muted-foreground text-sm">
+          <p className="text-sm text-libelle-muted-foreground">
             This is how others will see you on the site.
           </p>
         </div>

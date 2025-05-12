@@ -13,7 +13,7 @@ import { Label } from "@/registry/lucid/ui/label";
 
 export function PodcastEmptyPlaceholder() {
   return (
-    <div className="rounded-lucid-md flex h-[450px] shrink-0 items-center justify-center border border-dashed">
+    <div className="flex h-[450px] shrink-0 items-center justify-center rounded-lucid-md border border-dashed">
       <div className="mx-auto flex max-w-[420px] flex-col items-center justify-center text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ export function PodcastEmptyPlaceholder() {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          className="text-lucid-muted-foreground h-10 w-10"
+          className="h-10 w-10 text-lucid-muted-foreground"
           viewBox="0 0 24 24"
         >
           <circle cx="12" cy="11" r="1" />
@@ -31,7 +31,7 @@ export function PodcastEmptyPlaceholder() {
         </svg>
 
         <h3 className="mt-4 text-lg font-semibold">No episodes added</h3>
-        <p className="text-lucid-muted-foreground mb-4 mt-2 text-sm">
+        <p className="mb-4 mt-2 text-sm text-lucid-muted-foreground">
           You have not added any podcasts. Add one below.
         </p>
         <Dialog>
