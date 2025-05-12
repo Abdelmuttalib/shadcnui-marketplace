@@ -209,7 +209,6 @@ export default function StylesPage({ params }: Props) {
                             pageExampleTypeProp={pageExampleType || "dashboard"}
                             hideBadge={true}
                             className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
-                            iframeClassName="w-[70vw] max-w-[70vw]"
                           />
                         </div>
                       </div>
@@ -232,7 +231,7 @@ export default function StylesPage({ params }: Props) {
             </PageSubTitle>
           </PageContainer>
         </div>
-        <div className="sticky top-16 z-30 w-full bg-background/[0.7] py-2 backdrop-blur-sm">
+        <div className="sticky top-14 z-30 w-full bg-background/[0.7] py-2 backdrop-blur-sm">
           <PageContainer className="flex flex-col gap-6">
             <ExamplesTabsNav />
           </PageContainer>
@@ -266,16 +265,6 @@ export default function StylesPage({ params }: Props) {
                           </div>
 
                           <div>
-                            <Typography
-                              as={"p"}
-                              variant="lg/normal"
-                              className="max-w-4xl text-muted-foreground"
-                            >
-                              {/* @ts-ignore */}
-                              {/* {stylesInfo[style].description} */}
-                            </Typography>
-                          </div>
-                          <div>
                             <div className="flex items-center gap-2">
                               <div className="flex flex-col gap-2">
                                 {/* <RichBadge
@@ -287,7 +276,7 @@ export default function StylesPage({ params }: Props) {
                                 <p className="text-sm text-muted-foreground">
                                   Default {styleData.title} Palette
                                 </p>
-                                <div className="flex rounded-sm border">
+                                <div className="flex w-fit rounded-sm border">
                                   {mainPaletteColorsKeys.map((color, index) => (
                                     <div
                                       key={`light-${color}`}
@@ -309,7 +298,7 @@ export default function StylesPage({ params }: Props) {
                             </div>
                           </div>
                         </div>
-                        <div className="mt-2 flex gap-2">
+                        {/* <div className="mt-2 flex gap-2">
                           <Button variant={"default"} size={"sm"} asChild>
                             <Link href={styleData.styleSitePath}>
                               View Style
@@ -322,7 +311,7 @@ export default function StylesPage({ params }: Props) {
                               Customize
                             </Link>
                           </Button>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     <div className="grid p-4 py-0 lg:py-4 xl:col-span-4">
@@ -331,8 +320,7 @@ export default function StylesPage({ params }: Props) {
                         styleProp={styleData.name}
                         pageExampleTypeProp="dashboard"
                         hideBadge={true}
-                        className=" overflow-auto"
-                        iframeClassName="h-[45rem] overflow-auto"
+                        className="overflow-auto"
                         // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
                       />
                     </div>
@@ -375,8 +363,6 @@ export default function StylesPage({ params }: Props) {
                       hideBadge={true}
                       className={`sticky top-32 overflow-auto`}
                       coloredEdge
-                      iframeClassName="h-[45rem] overflow-auto"
-                      // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
                     />
                   );
                 })}

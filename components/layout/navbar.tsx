@@ -1,14 +1,11 @@
-"use client";
-
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import React from "react";
 
 import { PageContainer } from "@/components/common/page-container";
 import { ThemeToggle } from "@/components/common/theme";
-import { UserMenu } from "@/components/common/user-menu";
+import { LogoSvg } from "@/components/logo-svg";
 
-import { LogoSvg } from "../logo-svg";
 import { MainNavLinks } from "./main-nav-links";
 
 function Banner({
@@ -76,8 +73,6 @@ function Banner({
 }
 
 export function Navbar() {
-  const [showBanner, setShowBanner] = React.useState(true);
-
   return (
     <>
       {/* {showBanner ? <Banner setShowBanner={setShowBanner} /> : null} */}
@@ -110,7 +105,6 @@ export function Navbar() {
             </div>
             <div className="flex items-center gap-2">
               <ThemeToggle />
-              <UserMenu />
             </div>
           </nav>
         </PageContainer>

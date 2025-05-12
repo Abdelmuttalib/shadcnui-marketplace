@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 import { PageContainer } from "@/components/common/page-container";
