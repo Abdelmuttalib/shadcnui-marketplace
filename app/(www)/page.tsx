@@ -1,5 +1,3 @@
-"use client";
-
 import {
   CodeIcon,
   LayersIcon,
@@ -29,11 +27,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
-import { blocksRegistry } from "@/config/blocks-registry";
 import { stylesDataList } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 
-export function FeaturesSection() {
+function FeaturesSection() {
   const features = [
     {
       icon: PaletteIcon,
@@ -131,7 +128,7 @@ export function FeaturesSection() {
   );
 }
 
-export function HowItWorksSection() {
+function HowItWorksSection() {
   const steps = [
     {
       number: "01",
@@ -254,8 +251,6 @@ export default function Home() {
               </div>
             </PageContainer>
           </div>
-
-          {JSON.stringify(blocksRegistry, null, 2)}
 
           {/* <LandingPageSection sectionId="features">
             <FeaturesSection />
