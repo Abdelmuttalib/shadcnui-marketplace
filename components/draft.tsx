@@ -22,31 +22,6 @@ import { cn } from "@/utils/cn";
 
 import { PageExampleSelect } from "./common/page-example-select";
 
-// #030101
-// #0300d6
-// hsl(100, 9%, 93%)
-// #edefec
-// rgb(237, 239, 236)
-
-export function ApplicationUI() {
-  return (
-    <section id="product-application-ui" className="scroll-mt-28">
-      <ScreenContainer>
-        <h2 className="text-xl font-bold text-foreground">
-          shadcn ui Application UI Styles
-        </h2>
-        <p className="text-foreground-secondary mt-3 text-sm/7">
-          {/* Form layouts, tables, modal dialogs — everything you need to build
-          beautiful responsive web applications. */}
-          Button styles, tables, badges and everything of shadcn ui components
-          with multiple styles to choose from.
-        </p>
-        <div className="mt-4"></div>
-      </ScreenContainer>
-    </section>
-  );
-}
-
 export function ExamplesTabsNav({ className, ...props }: ExamplesNavProps) {
   const { pageExampleType, setPageExampleType } = useStyleStore();
 
