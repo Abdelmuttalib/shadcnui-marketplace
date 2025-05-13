@@ -22,7 +22,7 @@ export async function StringCode({
   }
 
   return (
-    <div className="relative w-full rounded-lg border">
+    <div className="relative w-full max-w-full overflow-x-hidden rounded-lg border">
       {!disableCopyButton ? <CopyButton code={code} /> : null}
       {codeString}
     </div>
