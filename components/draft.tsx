@@ -64,30 +64,28 @@ export function ExamplesTabsNav({ className, ...props }: ExamplesNavProps) {
           )}
           {...props}
         >
-          {pageExampleTypes
-            .filter((_p) => _p !== "board")
-            .map((_pageExampleType, index) => {
-              return (
-                <button
-                  key={_pageExampleType}
-                  className={cn(
-                    "inline-flex h-full whitespace-nowrap rounded-sm border border-transparent px-3 py-2 text-sm font-medium capitalize ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:items-center md:justify-center md:py-0",
-                    _pageExampleType === pageExampleType
-                      ? "border-input bg-background text-foreground shadow-sm"
-                      : "text-muted-foreground hover:bg-input/70"
-                  )}
-                  // className={cn(
-                  //   "flex h-7 items-center justify-center rounded-md px-4 text-center text-sm transition-colors hover:bg-accent/80 hover:text-ring",
-                  //   pageExampleType === caseExampleName
-                  //     ? "bg-accent font-medium text-ring"
-                  //     : "text-muted-foreground"
-                  // )}
-                  onClick={() => setPageExampleType(_pageExampleType)}
-                >
-                  {_pageExampleType}
-                </button>
-              );
-            })}
+          {pageExampleTypes.map((_pageExampleType, index) => {
+            return (
+              <button
+                key={_pageExampleType}
+                className={cn(
+                  "inline-flex h-full whitespace-nowrap rounded-sm border border-transparent px-3 py-2 text-sm font-medium capitalize ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:items-center md:justify-center md:py-0",
+                  _pageExampleType === pageExampleType
+                    ? "border-input bg-background text-foreground shadow-sm"
+                    : "text-muted-foreground hover:bg-input/70"
+                )}
+                // className={cn(
+                //   "flex h-7 items-center justify-center rounded-md px-4 text-center text-sm transition-colors hover:bg-accent/80 hover:text-ring",
+                //   pageExampleType === caseExampleName
+                //     ? "bg-accent font-medium text-ring"
+                //     : "text-muted-foreground"
+                // )}
+                onClick={() => setPageExampleType(_pageExampleType)}
+              >
+                {_pageExampleType}
+              </button>
+            );
+          })}
         </div>
         {/* <ScrollBar orientation="horizontal"  /> */}
       </div>
