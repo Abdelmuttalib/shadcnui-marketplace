@@ -72,14 +72,13 @@ export function Footer() {
                     <Icons.twitter className="text-muted-foreground" />
                   </a>
                 </Button>
-                <Button asChild variant={"ghost"} size={"icon-sm"}>
+                {/* <Button asChild variant={"ghost"} size={"icon-sm"}>
                   <a
                     href={siteConfig.twitterUrl}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <span className="sr-only">Twitter link</span>
-                    {/* <GithubIcon className="text-muted-foreground" /> */}
                     <Icons.gitHub className="text-muted-foreground" />
                   </a>
                 </Button>
@@ -92,7 +91,7 @@ export function Footer() {
                     <span className="sr-only">Twitter link</span>
                     <MailIcon className="text-muted-foreground" />
                   </a>
-                </Button>
+                </Button> */}
               </div>
               <Separator orientation="vertical" />
               {/* <Separator orientation="horizontal" /> */}
