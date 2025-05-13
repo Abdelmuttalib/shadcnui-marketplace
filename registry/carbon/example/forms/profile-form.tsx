@@ -76,11 +76,7 @@ export function ProfileForm() {
 
   function onSubmit(data: ProfileFormValues) {
     toast.message("You submitted the following values:", {
-      description: (
-        <pre className="mt-2 rounded-cb-md bg-black p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 
