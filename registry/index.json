@@ -1,0 +1,6 @@
+{
+  "styles": [
+    { "name": "carbon", "label": "Carbon" },
+    { "name": "catalyst", "label": "Catalyst" }
+  ]
+}
