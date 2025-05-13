@@ -88,6 +88,8 @@ export function StylesPreviewCards() {
 }
 
 export function StylesPagesExamplesPreviews() {
+  const { pageExampleType } = useStyleStore();
+
   return (
     <div className="grid gap-10">
       {stylesDataList
@@ -171,7 +173,7 @@ export function StylesPagesExamplesPreviews() {
                   <StylePageExamplePreview
                     id="dashboard"
                     styleProp={styleData.name}
-                    pageExampleTypeProp="dashboard"
+                    pageExampleTypeProp={pageExampleType || "dashboard"}
                     hideBadge={true}
                     className="overflow-auto"
                     // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
@@ -186,6 +188,8 @@ export function StylesPagesExamplesPreviews() {
 }
 
 export function StylesExamples() {
+  const { pageExampleType } = useStyleStore();
+
   return (
     <>
       {stylesDataList
@@ -203,7 +207,7 @@ export function StylesExamples() {
               key={styleData.title + styleData.name + index}
               id="dashboard"
               styleProp={styleData.name}
-              pageExampleTypeProp="dashboard"
+              pageExampleTypeProp={pageExampleType || "dashboard"}
               hideBadge={true}
               className={`sticky top-32 overflow-auto`}
               coloredEdge
