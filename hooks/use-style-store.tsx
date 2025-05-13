@@ -291,8 +291,8 @@ export const stylesDataList = Object.values(STYLES_DATA);
 export const STYLES_LENGTH = STYLES.length;
 
 export const PAGE_EXAMPLE_TYPES: PageExampleType[] = [
-  "charts",
-  "board",
+  // "charts",
+  // "board",
   "mail",
   "dashboard",
   "cards",
