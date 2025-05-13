@@ -10,8 +10,8 @@ import { StringCode } from "@/components/common/string-code";
 import { SuggestedBlocks } from "@/components/suggested-blocks";
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
-import { blocksRegistry } from "@/lib/generate-registry";
-import { registryStyleBlocks } from "@/registry/linear/block";
+import { blocksRegistry } from "@/config/blocks-registry";
+import { blockCategories, BlockCategory } from "@/registry/registry-blocks";
 
 import { PreviewContainer } from "../components/preview-container";
 
@@ -29,9 +29,19 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const slug = (await params).slug;
+  // blockCategories
+  const slug = (await params).slug.toLocaleLowerCase();
 
-  const blocksData = blocksRegistry[slug];
+  const isBlock = blockCategories.includes(slug as unknown as BlockCategory);
+
+  if (!isBlock) {
+    return {
+      title: "Page not found",
+      description: "The page you are looking for does not exist.",
+    };
+  }
+
+  const blocksData = blocksRegistry[slug as BlockCategory];
 
   if (!blocksData) {
     return {
@@ -56,19 +66,25 @@ export async function generateMetadata(
 // }
 
 export default function ComponentPage({ params }: Props) {
-  const { slug } = params;
-  const BLOCK_PAGE_NAME = slug;
+  const slug = params.slug.toLocaleLowerCase();
+  const BLOCK_PAGE_NAME = blockCategories.includes(
+    slug as unknown as BlockCategory
+  )
+    ? slug
+    : "";
+
+  if (!BLOCK_PAGE_NAME) {
+    return <BlocksNotFound slug={slug} />;
+  }
 
   // Get the component dynamically based on slug
-  const blocksData = blocksRegistry[slug];
+  const blocksData = blocksRegistry[slug as BlockCategory];
 
   if (!blocksData) {
     return <BlocksNotFound slug={slug} />;
   }
 
   const blockPageTitle = slug?.replace("-", " ");
-
-  const BlockComponent = registryStyleBlocks["blog-sections"][0].component;
 
   return (
     <div>

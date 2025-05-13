@@ -39,6 +39,16 @@ export type RegistryBlocks = Record<Style, any>;
 
 export type BlocksRegistry = Record<BlockCategory, BlockData[]>;
 
+export const blockCategories: BlockCategory[] = [
+  "blog-sections",
+  "hero-sections",
+  "footers",
+  "features",
+  "landing-pages",
+  "pricings",
+  "portfolios",
+];
+
 export const registryBlocks = {
   linear: linearStyleBlocks,
 };

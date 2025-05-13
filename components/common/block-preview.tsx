@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
 import { BlockPlan } from "@/config/types";
+import { RegistryItemPlan } from "@/registry/registry-blocks";
 import { cn } from "@/utils/cn";
 
 export function BlockPreview({
@@ -25,7 +26,7 @@ export function BlockPreview({
   id: string;
   title: string;
   description?: string;
-  plan?: BlockPlan;
+  plan?: RegistryItemPlan;
   category: string;
   component: string;
   fileName: string;
