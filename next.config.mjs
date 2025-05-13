@@ -10,6 +10,8 @@ const nextConfig = {
     return config;
   },
 
+  transpilePackages: ["shiki"],
+
   images: {
     domains: ["images.unsplash.com"],
   },

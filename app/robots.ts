@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const BASE_URL = "https://shadcn-ui-marketplace.com";
+  const BASE_URL = "https://shadcnmarketplace.com";
 
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/blocks"],
+      allow: ["/", "/blocks", "/styles", "/typography"],
       disallow: [],
     },
     sitemap: `${BASE_URL}/sitemap.xml`,
