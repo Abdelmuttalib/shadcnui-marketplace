@@ -2,7 +2,6 @@
   "name": "shadcnui-marketplace",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "tdev": "next dev --turbo",
