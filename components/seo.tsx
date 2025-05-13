@@ -49,7 +49,7 @@ export function Seo() {
       />
       <meta
         property="twitter:image"
-        content="https://www.shadcnmarketplace.com/ogt.png"
+        content="https://www.shadcnmarketplace.com/og.png"
       />
 
       {/* Preload Fonts */}

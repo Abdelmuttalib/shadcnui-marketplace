@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
     images: [
       {
-        url: "https://shadcn-ui-marketplace.com/images/og-image-2.png",
+        url: "https://shadcn-ui-marketplace.com/images/og.png",
         width: 1919,
         height: 963,
         alt: "shadcn ui marketplace, shadcn ui styles",

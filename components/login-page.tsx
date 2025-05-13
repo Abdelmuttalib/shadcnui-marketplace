@@ -226,7 +226,7 @@
 //             className="relative aspect-video overflow-hidden rounded-lg bg-accent"
 //           >
 //             <Image
-//               src={`/images/og-image-2.png`}
+//               src={`/images/og.png`}
 //               alt={`Image ${i + 1}`}
 //               // width={300}
 //               // height={300}
