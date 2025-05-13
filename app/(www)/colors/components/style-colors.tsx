@@ -1,3 +1,5 @@
+"use client";
+
 import { Typography } from "@/components/ui/typography";
 import { Style, STYLES } from "@/hooks/use-style-store";
 import { getStyleVariablesPrefix } from "@/registry/styles";

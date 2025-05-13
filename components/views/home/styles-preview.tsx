@@ -1,3 +1,5 @@
+"use client";
+
 import { StylePreviewCard } from "@/components/common/style-preview-card";
 import { stylesDataList } from "@/hooks/use-style-store";
 

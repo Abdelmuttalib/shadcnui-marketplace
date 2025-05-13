@@ -1,5 +1,3 @@
-import React from "react";
-
 import { PageContainer } from "@/components/common/page-container";
 import {
   PageHeader,
@@ -57,9 +55,6 @@ export default function StylesPage() {
                 </div>
               }
             />
-            {/* <div>
-              <ExamplesTabsNav />
-            </div> */}
           </div>
         </PageContainer>
 

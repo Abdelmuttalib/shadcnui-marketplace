@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Style, STYLES, useStyleStore } from "@/hooks/use-style-store";
+import { Style, useStyleStore } from "@/hooks/use-style-store";
 import { getStyleVariablesPrefix } from "@/registry/styles";
 import { cn } from "@/utils/cn";
 
@@ -12,29 +12,6 @@ export function StyleGradientBackgroundColorComponent({
   className?: string;
 }) {
   const { style } = useStyleStore();
-
-  const gradientClasses = React.useMemo(() => {
-    return {
-      fromVia: STYLES.map((_style) => {
-        const cls = `from-${getStyleVariablesPrefix(
-          _style
-        )}-background via-${getStyleVariablesPrefix(
-          _style
-        )}-background to-background`;
-
-        return {
-          [cls]: style === _style,
-        };
-      }),
-      from: STYLES.map((_style) => {
-        const cls = `from-${getStyleVariablesPrefix(_style)}-background`;
-
-        return {
-          [cls]: style === _style,
-        };
-      }),
-    };
-  }, [style]);
 
   function getGradientClasses(style: Style) {
     const stylePrefix = getStyleVariablesPrefix(style);
