@@ -22,10 +22,7 @@ export function Seo() {
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta
-        property="og:url"
-        content="https://www.shadcn-ui-marketplace.com/"
-      />
+      <meta property="og:url" content="https://www.shadcnmarketplace.com/" />
       <meta
         property="og:title"
         content="shadcn ui Kits Marketplace - Premium ShadCN Styles"
@@ -40,7 +37,7 @@ export function Seo() {
       <meta property="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:url"
-        content="https://www.shadcn-ui-marketplace.com/"
+        content="https://www.shadcnmarketplace.com/"
       />
       <meta
         property="twitter:title"
@@ -52,7 +49,7 @@ export function Seo() {
       />
       <meta
         property="twitter:image"
-        content="https://www.shadcn-ui-marketplace.com/ogt.png"
+        content="https://www.shadcnmarketplace.com/ogt.png"
       />
 
       {/* Preload Fonts */}
