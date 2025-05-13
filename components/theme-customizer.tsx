@@ -81,12 +81,6 @@ export function ThemeCustomizerWrapper({ children }: ThemeWrapperProps) {
             htmlElement
           );
         } else {
-          console.log(
-            "theme",
-            theme,
-            themePalettes[activePalette],
-            activePalette
-          );
           onAddInlineStylesToHtmlElement(
             themePalettes[activePalette][
               (theme ? (theme as "light" | "dark") : "light") || "light"

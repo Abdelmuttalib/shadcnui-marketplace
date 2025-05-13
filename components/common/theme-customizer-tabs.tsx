@@ -630,9 +630,7 @@ module.exports = {
                 </pre> */}
               {/* <StringCode c={"console.log"} /> */}
               <ClientStringCode c={generateConfigCode()} />
-              {/* <CodeBlock lang="tsx">
-                {['console.log("Hello")', 'console.log("World")'].join("\n")}
-              </CodeBlock> */}
+
               {/* <StringCode StringCode c={generateConfigCode()}></StringCode> */}
               {/* <pre>
                   <code></code>

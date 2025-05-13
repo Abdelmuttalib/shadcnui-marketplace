@@ -24,15 +24,6 @@ export function ThemePaletteSelect() {
 
   const { activePalette, setActivePalette } = useThemePaletteStore();
 
-  React.useEffect(() => {
-    console.log(
-      "theme, resolvedTheme, systemTheme",
-      theme,
-      resolvedTheme,
-      systemTheme
-    );
-  }, [theme, resolvedTheme, systemTheme]);
-
   return (
     <div>
       <Select value={activePalette} onValueChange={setActivePalette}>
@@ -41,13 +32,6 @@ export function ThemePaletteSelect() {
         </SelectTrigger>
         <SelectContent className="w-full">
           {themePalettesListEntries.map(([paletteName, palette], index) => {
-            console.log(
-              "PALETTE",
-              paletteName,
-              theme,
-              resolvedTheme,
-              systemTheme
-            );
             return (
               <SelectItem
                 key={`theme-palette-${paletteName}`}

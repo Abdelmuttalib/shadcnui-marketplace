@@ -283,4 +283,4 @@ async function generateBlockRegistry() {
   writeFileContent(writeFilePath, writeFileContentVar);
 }
 
-generateBlockRegistry();
+// generateBlockRegistry();

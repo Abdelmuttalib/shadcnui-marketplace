@@ -15,7 +15,6 @@ import {
 export function PageBreadcrumb() {
   const pathname = usePathname();
 
-  console.log("pathname", pathname);
   // /styles
 
   return (

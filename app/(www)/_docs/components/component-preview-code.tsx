@@ -41,7 +41,6 @@ export function ComponentPreviewCode({
   const c = RegistryIndex[style][component];
   // c.demo, dynamic loadable imported component
   const Component = c.demo;
-  console.log("c", Component, component, c, RegistryIndex);
 
   useEffect(() => {
     const loadComponents = async () => {
@@ -54,8 +53,6 @@ export function ComponentPreviewCode({
 
     loadComponents();
   }, []);
-
-  console.log("components", components);
 
   return (
     <div className={cn("w-full max-w-[1440px] pt-28", className)} id={id}>

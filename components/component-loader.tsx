@@ -64,15 +64,9 @@ export function ComponentLoad({
 }) {
   const loadedComponents = useLoadComponents(style, _components);
 
-  useEffect(() => {
-    console.log("loadedComponents2222", loadedComponents);
-  }, [loadedComponents]);
-
   if (!loadedComponents) {
     return <div>Loading components...</div>;
   }
-
-  console.log("loadedComponents", loadedComponents);
 
   return (
     <div>

@@ -105,9 +105,7 @@ export function ThemeCustomizerDialog({
   // const [show, setShow] = React.useState<boolean>(_show || true);
   const show = true;
 
-  function setShow(value: boolean) {
-    console.log("setShow", value);
-  }
+  function setShow(value: boolean) {}
 
   function onShow() {
     setShow(true);
