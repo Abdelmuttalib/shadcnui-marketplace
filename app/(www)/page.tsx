@@ -27,6 +27,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
+import { StylesPreview } from "@/components/views/home/styles-preview";
 import { stylesDataList } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 
@@ -382,7 +383,8 @@ export default function Home() {
                 </PageContainer>
                 <PageContainer size={"full"}>
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                    {stylesDataList
+                    <StylesPreview />
+                    {/* {stylesDataList
                       .filter((style) => style.name !== "default")
                       .map((style) => (
                         <StylePreviewCard
@@ -391,7 +393,7 @@ export default function Home() {
                           style={style.name}
                           href={`/styles/${style.name}`}
                         />
-                      ))}
+                      ))} */}
                   </div>
                 </PageContainer>
               </div>
