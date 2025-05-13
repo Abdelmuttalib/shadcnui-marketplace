@@ -1767,7 +1767,8 @@
   } */
 
   pre {
-    @apply hide-scrollbar max-h-[45rem] overflow-auto whitespace-pre-wrap rounded-lg bg-card p-4 font-mono text-sm leading-relaxed;
+    @apply hide-scrollbar max-h-[45rem] max-w-[95vw] overflow-auto overflow-x-auto rounded-lg bg-card p-4 font-mono text-sm leading-relaxed;
+    white-space: pre;
   }
 
   /* code {

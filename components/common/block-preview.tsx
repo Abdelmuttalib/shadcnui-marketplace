@@ -127,7 +127,10 @@ export function BlockPreview({
   }
 
   return (
-    <div className={cn("w-full max-w-[1440px] scroll-mt-12 pt-10")} id={id}>
+    <div
+      id={id}
+      className={cn("w-full max-w-full scroll-mt-12 pt-10 xl:max-w-[1440px]")}
+    >
       <div className="mb-4 space-y-3">
         <div className="flex items-center gap-2">
           <Typography as="h2" variant="xl/medium" className="tracking-tight">
@@ -159,7 +162,7 @@ export function BlockPreview({
           // "h-full w-full rounded-xl shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:pointer-events-none dark:before:absolute dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline"
         )}
       >
-        <div className="relative z-10 flex flex-col justify-between gap-1 overflow-x-auto">
+        <div className="relative z-10 flex max-w-full flex-col justify-between gap-1 overflow-hidden">
           <div className="flex justify-between overflow-x-auto px-1 pb-1 pt-1">
             <div className="flex w-full items-center justify-between gap-2">
               <div className="flex gap-0.5 rounded-lg outline-none">
@@ -243,9 +246,9 @@ export function BlockPreview({
                 ></iframe>
               </div>
             ) : (
-              <div className="w-full">
-                {/* {children} */}
-                {plan === BlockPlan.Pro ? (
+              <div className="w-full max-w-full overflow-x-auto">
+                {children}
+                {/* {plan === BlockPlan.Pro ? (
                   <div className="hide-scrollbar relative flex h-[45rem] max-h-[45rem] items-center justify-center overflow-hidden rounded-lg bg-card text-sm">
                     <Image
                       src="/images/code-placeholder.png"
@@ -268,7 +271,7 @@ export function BlockPreview({
                   </div>
                 ) : (
                   children
-                )}
+                )} */}
               </div>
             )}
           </div>
