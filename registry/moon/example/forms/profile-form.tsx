@@ -76,11 +76,7 @@ export function ProfileForm() {
 
   function onSubmit(data: ProfileFormValues) {
     toast.message("You submitted the following values:", {
-      description: (
-        <pre className="bg-moon-gray-950 mt-2 rounded-moon-md p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 

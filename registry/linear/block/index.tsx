@@ -38,7 +38,5 @@ export const registryStyleBlocks: RegistryStyleBlocks = {
   features: [],
   "landing-pages": [],
   pricings: [],
-  testimonials: [],
-  "login-forms": [],
   portfolios: [],
 };

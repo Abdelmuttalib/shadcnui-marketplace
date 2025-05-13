@@ -44,11 +44,7 @@ export function AppearanceForm() {
 
   function onSubmit(data: AppearanceFormValues) {
     toast.message("You submitted the following values:", {
-      description: (
-        <pre className="bg-snow-gray-950 mt-2 rounded-snow-md p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      description: JSON.stringify(data, null, 2),
     });
   }
 

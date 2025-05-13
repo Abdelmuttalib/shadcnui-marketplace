@@ -1,6 +1,6 @@
+import { faker } from "@faker-js/faker";
 import fs from "fs";
 import path from "path";
-import { faker } from "@faker-js/faker";
 
 import { labels, priorities, statuses } from "./data";
 
