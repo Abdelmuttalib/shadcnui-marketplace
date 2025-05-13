@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/carbon/example/cards/activity-goal";
-import { CardsCalendar } from "@/registry/carbon/example/cards/calendar";
-import { CardsChat } from "@/registry/carbon/example/cards/chat";
-import { CardsCookieSettings } from "@/registry/carbon/example/cards/cookie-settings";
-import { CardsCreateAccount } from "@/registry/carbon/example/cards/create-account";
-import { CardsDataTable } from "@/registry/carbon/example/cards/data-table";
-import { CardsMetric } from "@/registry/carbon/example/cards/metric";
-import { CardsPaymentMethod } from "@/registry/carbon/example/cards/payment-method";
-import { CardsReportIssue } from "@/registry/carbon/example/cards/report-issue";
-import { CardsShare } from "@/registry/carbon/example/cards/share";
-import { CardsStats } from "@/registry/carbon/example/cards/stats";
-import { CardsTeamMembers } from "@/registry/carbon/example/cards/team-members";
+import { CardsActivityGoal } from "@/registry/carbon/demo/cards/activity-goal";
+import { CardsCalendar } from "@/registry/carbon/demo/cards/calendar";
+import { CardsChat } from "@/registry/carbon/demo/cards/chat";
+import { CardsCookieSettings } from "@/registry/carbon/demo/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/carbon/demo/cards/create-account";
+import { CardsDataTable } from "@/registry/carbon/demo/cards/data-table";
+import { CardsMetric } from "@/registry/carbon/demo/cards/metric";
+import { CardsPaymentMethod } from "@/registry/carbon/demo/cards/payment-method";
+import { CardsReportIssue } from "@/registry/carbon/demo/cards/report-issue";
+import { CardsShare } from "@/registry/carbon/demo/cards/share";
+import { CardsStats } from "@/registry/carbon/demo/cards/stats";
+import { CardsTeamMembers } from "@/registry/carbon/demo/cards/team-members";
 
 export default function CardsDemo() {
   return (
