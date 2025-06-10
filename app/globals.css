@@ -371,7 +371,7 @@
     --wedges-destructive-foreground: 1 0 0; /* oklch(1 0 0) #ffffff */
 
     --wedges-background: 1 0 0; /* oklch(1 0 0) #ffffff */
-    --wedges-foreground: 5% 0 0;
+    --wedges-foreground: 5% 0 0; /* oklch(5 0 0) #ffffff */
     --wedges-card: 1 0 0; /* oklch(5 0 0) #ffffff */
     --wedges-card-foreground: 5% 0 0;
     --wedges-popover: 1 0 0; /* oklch(1 0 0) #ffffff */
