@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch",
+  "type": "registry:ui",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "dependencies": [
+    "@radix-ui/react-switch"
+  ],
+  "files": [
+    {
+      "path": "ui/switch.tsx",
+      "content": "\"use client\";\n\nimport * as SwitchPrimitives from \"@radix-ui/react-switch\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Switch = React.forwardRef<\n  React.ElementRef<typeof SwitchPrimitives.Root>,\n  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>\n>(({ className, ...props }, ref) => (\n  <SwitchPrimitives.Root\n    className={cn(\n      \"group peer relative inline-flex h-4 w-8 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent bg-input transition-colors focus-visible:outline-none focus-visible:ring-ring focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary\",\n      className\n    )}\n    {...props}\n    ref={ref}\n  >\n    <SwitchPrimitives.Thumb\n      className={cn(\n        \"pointer-events-none z-10 block h-5 w-5 rounded-full border border-border bg-white shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-3 data-[state=unchecked]:-translate-x-0.5 dark:border-none\"\n      )}\n    ></SwitchPrimitives.Thumb>\n    <span className=\"absolute -inset-2.5 hidden rounded-full bg-primary/15 group-hover:block group-focus-visible:block\"></span>\n  </SwitchPrimitives.Root>\n));\nSwitch.displayName = SwitchPrimitives.Root.displayName;\n\nexport { Switch };\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

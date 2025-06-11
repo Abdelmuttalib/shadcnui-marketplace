@@ -1,0 +1,68 @@
+{
+  "name": "spectrum",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/spectrum/accordion.json",
+    "http://localhost:3000/r/styles/spectrum/alert-dialog.json",
+    "http://localhost:3000/r/styles/spectrum/alert.json",
+    "http://localhost:3000/r/styles/spectrum/aspect-ratio.json",
+    "http://localhost:3000/r/styles/spectrum/avatar.json",
+    "http://localhost:3000/r/styles/spectrum/badge.json",
+    "http://localhost:3000/r/styles/spectrum/breadcrumb.json",
+    "http://localhost:3000/r/styles/spectrum/button.json",
+    "http://localhost:3000/r/styles/spectrum/calendar.json",
+    "http://localhost:3000/r/styles/spectrum/card.json",
+    "http://localhost:3000/r/styles/spectrum/carousel.json",
+    "http://localhost:3000/r/styles/spectrum/chart.json",
+    "http://localhost:3000/r/styles/spectrum/checkbox.json",
+    "http://localhost:3000/r/styles/spectrum/collapsible.json",
+    "http://localhost:3000/r/styles/spectrum/command.json",
+    "http://localhost:3000/r/styles/spectrum/context-menu.json",
+    "http://localhost:3000/r/styles/spectrum/dialog.json",
+    "http://localhost:3000/r/styles/spectrum/drawer.json",
+    "http://localhost:3000/r/styles/spectrum/dropdown-menu.json",
+    "http://localhost:3000/r/styles/spectrum/form.json",
+    "http://localhost:3000/r/styles/spectrum/hover-card.json",
+    "http://localhost:3000/r/styles/spectrum/index.json",
+    "http://localhost:3000/r/styles/spectrum/input-otp.json",
+    "http://localhost:3000/r/styles/spectrum/input.json",
+    "http://localhost:3000/r/styles/spectrum/label.json",
+    "http://localhost:3000/r/styles/spectrum/menubar.json",
+    "http://localhost:3000/r/styles/spectrum/navigation-menu.json",
+    "http://localhost:3000/r/styles/spectrum/pagination.json",
+    "http://localhost:3000/r/styles/spectrum/popover.json",
+    "http://localhost:3000/r/styles/spectrum/progress.json",
+    "http://localhost:3000/r/styles/spectrum/radio-group.json",
+    "http://localhost:3000/r/styles/spectrum/resizable.json",
+    "http://localhost:3000/r/styles/spectrum/scroll-area.json",
+    "http://localhost:3000/r/styles/spectrum/select.json",
+    "http://localhost:3000/r/styles/spectrum/separator.json",
+    "http://localhost:3000/r/styles/spectrum/sheet.json",
+    "http://localhost:3000/r/styles/spectrum/sidebar.json",
+    "http://localhost:3000/r/styles/spectrum/skeleton.json",
+    "http://localhost:3000/r/styles/spectrum/slider.json",
+    "http://localhost:3000/r/styles/spectrum/sonner.json",
+    "http://localhost:3000/r/styles/spectrum/switch.json",
+    "http://localhost:3000/r/styles/spectrum/table.json",
+    "http://localhost:3000/r/styles/spectrum/tabs.json",
+    "http://localhost:3000/r/styles/spectrum/textarea.json",
+    "http://localhost:3000/r/styles/spectrum/toggle-group.json",
+    "http://localhost:3000/r/styles/spectrum/toggle.json",
+    "http://localhost:3000/r/styles/spectrum/tooltip.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {},
+  "files": []
+}

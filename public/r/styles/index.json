@@ -1,0 +1,50 @@
+[
+  {
+    "name": "default",
+    "label": "Default"
+  },
+  {
+    "name": "carbon",
+    "label": "Carbon"
+  },
+  {
+    "name": "catalyst",
+    "label": "Catalyst"
+  },
+  {
+    "name": "linear",
+    "label": "Linear"
+  },
+  {
+    "name": "material",
+    "label": "Material"
+  },
+  {
+    "name": "spectrum",
+    "label": "Spectrum"
+  },
+  {
+    "name": "wedges",
+    "label": "Wedges"
+  },
+  {
+    "name": "moon",
+    "label": "Moon"
+  },
+  {
+    "name": "lucid",
+    "label": "Lucid"
+  },
+  {
+    "name": "snow",
+    "label": "Snow"
+  },
+  {
+    "name": "neon",
+    "label": "Neon"
+  },
+  {
+    "name": "libelle",
+    "label": "Libelle"
+  }
+]

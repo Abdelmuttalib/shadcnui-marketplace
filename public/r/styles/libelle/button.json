@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "type": "registry:ui",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "dependencies": [
+    "@radix-ui/react-slot"
+  ],
+  "files": [
+    {
+      "path": "ui/button.tsx",
+      "content": "import { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport Link, { LinkProps } from \"next/link\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default:\n          \"bg-primary text-primary-foreground hover:bg-primary/90\",\n        destructive:\n          \"border border-destructive/30 bg-destructive/15 text-destructive hover:bg-destructive/35\",\n        outline:\n          \"border border-primary text-primary hover:bg-accent hover:text-accent-foreground\",\n        secondary:\n          \"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-10 px-4 py-2\",\n        sm: \"h-9 rounded-md px-3\",\n        lg: \"h-11 rounded-md px-8\",\n        icon: \"h-10 w-10\",\n        \"icon-sm\": \"h-9 w-9\",\n        \"icon-lg\": \"h-11 w-11\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n);\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean;\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }))}\n        ref={ref}\n        {...props}\n      ></Comp>\n    );\n  }\n);\n\nButton.displayName = \"Button\";\n\nexport interface ButtonLinkProps\n  extends LinkProps,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean;\n  iconLeft?: React.ReactNode;\n  iconRight?: React.ReactNode;\n  className?: string;\n  children: React.ReactNode;\n}\n\nconst ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(\n  (\n    {\n      className,\n      variant,\n      size,\n      asChild = false,\n      iconLeft,\n      iconRight,\n      ...props\n    },\n    ref\n  ) => {\n    const Comp = asChild ? Slot : Link;\n\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }), {\n          \"inline-flex items-center justify-center gap-x-1.5\":\n            iconLeft || iconRight,\n        })}\n        ref={ref}\n        {...props}\n      >\n        <>\n          {iconLeft ? <>{iconLeft}</> : null}\n          <>{props.children}</>\n          {iconRight ? <>{iconRight}</> : null}\n        </>\n      </Comp>\n    );\n  }\n);\nButtonLink.displayName = \"ButtonLink\";\n\nexport { Button, ButtonLink, buttonVariants };\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

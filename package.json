@@ -2,6 +2,7 @@
   "name": "shadcnui-marketplace",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "tdev": "next dev --turbo",
@@ -103,6 +104,7 @@
     "prettier-plugin-tailwindcss": "^0.2.8",
     "shiki": "^1.26.1",
     "tailwindcss": "^3.4.1",
+    "ts-morph": "^26.0.0",
     "typescript": "^5"
   }
 }

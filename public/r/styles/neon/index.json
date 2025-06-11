@@ -1,0 +1,68 @@
+{
+  "name": "neon",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/neon/accordion.json",
+    "http://localhost:3000/r/styles/neon/alert-dialog.json",
+    "http://localhost:3000/r/styles/neon/alert.json",
+    "http://localhost:3000/r/styles/neon/aspect-ratio.json",
+    "http://localhost:3000/r/styles/neon/avatar.json",
+    "http://localhost:3000/r/styles/neon/badge.json",
+    "http://localhost:3000/r/styles/neon/breadcrumb.json",
+    "http://localhost:3000/r/styles/neon/button.json",
+    "http://localhost:3000/r/styles/neon/calendar.json",
+    "http://localhost:3000/r/styles/neon/card.json",
+    "http://localhost:3000/r/styles/neon/carousel.json",
+    "http://localhost:3000/r/styles/neon/chart.json",
+    "http://localhost:3000/r/styles/neon/checkbox.json",
+    "http://localhost:3000/r/styles/neon/collapsible.json",
+    "http://localhost:3000/r/styles/neon/command.json",
+    "http://localhost:3000/r/styles/neon/context-menu.json",
+    "http://localhost:3000/r/styles/neon/dialog.json",
+    "http://localhost:3000/r/styles/neon/drawer.json",
+    "http://localhost:3000/r/styles/neon/dropdown-menu.json",
+    "http://localhost:3000/r/styles/neon/form.json",
+    "http://localhost:3000/r/styles/neon/hover-card.json",
+    "http://localhost:3000/r/styles/neon/index.json",
+    "http://localhost:3000/r/styles/neon/input-otp.json",
+    "http://localhost:3000/r/styles/neon/input.json",
+    "http://localhost:3000/r/styles/neon/label.json",
+    "http://localhost:3000/r/styles/neon/menubar.json",
+    "http://localhost:3000/r/styles/neon/navigation-menu.json",
+    "http://localhost:3000/r/styles/neon/pagination.json",
+    "http://localhost:3000/r/styles/neon/popover.json",
+    "http://localhost:3000/r/styles/neon/progress.json",
+    "http://localhost:3000/r/styles/neon/radio-group.json",
+    "http://localhost:3000/r/styles/neon/resizable.json",
+    "http://localhost:3000/r/styles/neon/scroll-area.json",
+    "http://localhost:3000/r/styles/neon/select.json",
+    "http://localhost:3000/r/styles/neon/separator.json",
+    "http://localhost:3000/r/styles/neon/sheet.json",
+    "http://localhost:3000/r/styles/neon/sidebar.json",
+    "http://localhost:3000/r/styles/neon/skeleton.json",
+    "http://localhost:3000/r/styles/neon/slider.json",
+    "http://localhost:3000/r/styles/neon/sonner.json",
+    "http://localhost:3000/r/styles/neon/switch.json",
+    "http://localhost:3000/r/styles/neon/table.json",
+    "http://localhost:3000/r/styles/neon/tabs.json",
+    "http://localhost:3000/r/styles/neon/textarea.json",
+    "http://localhost:3000/r/styles/neon/toggle-group.json",
+    "http://localhost:3000/r/styles/neon/toggle.json",
+    "http://localhost:3000/r/styles/neon/tooltip.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {},
+  "files": []
+}

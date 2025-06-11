@@ -1,0 +1,68 @@
+{
+  "name": "libelle",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/libelle/accordion.json",
+    "http://localhost:3000/r/styles/libelle/alert-dialog.json",
+    "http://localhost:3000/r/styles/libelle/alert.json",
+    "http://localhost:3000/r/styles/libelle/aspect-ratio.json",
+    "http://localhost:3000/r/styles/libelle/avatar.json",
+    "http://localhost:3000/r/styles/libelle/badge.json",
+    "http://localhost:3000/r/styles/libelle/breadcrumb.json",
+    "http://localhost:3000/r/styles/libelle/button.json",
+    "http://localhost:3000/r/styles/libelle/calendar.json",
+    "http://localhost:3000/r/styles/libelle/card.json",
+    "http://localhost:3000/r/styles/libelle/carousel.json",
+    "http://localhost:3000/r/styles/libelle/chart.json",
+    "http://localhost:3000/r/styles/libelle/checkbox.json",
+    "http://localhost:3000/r/styles/libelle/collapsible.json",
+    "http://localhost:3000/r/styles/libelle/command.json",
+    "http://localhost:3000/r/styles/libelle/context-menu.json",
+    "http://localhost:3000/r/styles/libelle/dialog.json",
+    "http://localhost:3000/r/styles/libelle/drawer.json",
+    "http://localhost:3000/r/styles/libelle/dropdown-menu.json",
+    "http://localhost:3000/r/styles/libelle/form.json",
+    "http://localhost:3000/r/styles/libelle/hover-card.json",
+    "http://localhost:3000/r/styles/libelle/index.json",
+    "http://localhost:3000/r/styles/libelle/input-otp.json",
+    "http://localhost:3000/r/styles/libelle/input.json",
+    "http://localhost:3000/r/styles/libelle/label.json",
+    "http://localhost:3000/r/styles/libelle/menubar.json",
+    "http://localhost:3000/r/styles/libelle/navigation-menu.json",
+    "http://localhost:3000/r/styles/libelle/pagination.json",
+    "http://localhost:3000/r/styles/libelle/popover.json",
+    "http://localhost:3000/r/styles/libelle/progress.json",
+    "http://localhost:3000/r/styles/libelle/radio-group.json",
+    "http://localhost:3000/r/styles/libelle/resizable.json",
+    "http://localhost:3000/r/styles/libelle/scroll-area.json",
+    "http://localhost:3000/r/styles/libelle/select.json",
+    "http://localhost:3000/r/styles/libelle/separator.json",
+    "http://localhost:3000/r/styles/libelle/sheet.json",
+    "http://localhost:3000/r/styles/libelle/sidebar.json",
+    "http://localhost:3000/r/styles/libelle/skeleton.json",
+    "http://localhost:3000/r/styles/libelle/slider.json",
+    "http://localhost:3000/r/styles/libelle/sonner.json",
+    "http://localhost:3000/r/styles/libelle/switch.json",
+    "http://localhost:3000/r/styles/libelle/table.json",
+    "http://localhost:3000/r/styles/libelle/tabs.json",
+    "http://localhost:3000/r/styles/libelle/textarea.json",
+    "http://localhost:3000/r/styles/libelle/toggle-group.json",
+    "http://localhost:3000/r/styles/libelle/toggle.json",
+    "http://localhost:3000/r/styles/libelle/tooltip.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {},
+  "files": []
+}

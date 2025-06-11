@@ -1,0 +1,68 @@
+{
+  "name": "default",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/default/accordion.json",
+    "http://localhost:3000/r/styles/default/alert-dialog.json",
+    "http://localhost:3000/r/styles/default/alert.json",
+    "http://localhost:3000/r/styles/default/aspect-ratio.json",
+    "http://localhost:3000/r/styles/default/avatar.json",
+    "http://localhost:3000/r/styles/default/badge.json",
+    "http://localhost:3000/r/styles/default/breadcrumb.json",
+    "http://localhost:3000/r/styles/default/button.json",
+    "http://localhost:3000/r/styles/default/calendar.json",
+    "http://localhost:3000/r/styles/default/card.json",
+    "http://localhost:3000/r/styles/default/carousel.json",
+    "http://localhost:3000/r/styles/default/chart.json",
+    "http://localhost:3000/r/styles/default/checkbox.json",
+    "http://localhost:3000/r/styles/default/collapsible.json",
+    "http://localhost:3000/r/styles/default/command.json",
+    "http://localhost:3000/r/styles/default/context-menu.json",
+    "http://localhost:3000/r/styles/default/dialog.json",
+    "http://localhost:3000/r/styles/default/drawer.json",
+    "http://localhost:3000/r/styles/default/dropdown-menu.json",
+    "http://localhost:3000/r/styles/default/form.json",
+    "http://localhost:3000/r/styles/default/hover-card.json",
+    "http://localhost:3000/r/styles/default/index.json",
+    "http://localhost:3000/r/styles/default/input-otp.json",
+    "http://localhost:3000/r/styles/default/input.json",
+    "http://localhost:3000/r/styles/default/label.json",
+    "http://localhost:3000/r/styles/default/menubar.json",
+    "http://localhost:3000/r/styles/default/navigation-menu.json",
+    "http://localhost:3000/r/styles/default/pagination.json",
+    "http://localhost:3000/r/styles/default/popover.json",
+    "http://localhost:3000/r/styles/default/progress.json",
+    "http://localhost:3000/r/styles/default/radio-group.json",
+    "http://localhost:3000/r/styles/default/resizable.json",
+    "http://localhost:3000/r/styles/default/scroll-area.json",
+    "http://localhost:3000/r/styles/default/select.json",
+    "http://localhost:3000/r/styles/default/separator.json",
+    "http://localhost:3000/r/styles/default/sheet.json",
+    "http://localhost:3000/r/styles/default/sidebar.json",
+    "http://localhost:3000/r/styles/default/skeleton.json",
+    "http://localhost:3000/r/styles/default/slider.json",
+    "http://localhost:3000/r/styles/default/sonner.json",
+    "http://localhost:3000/r/styles/default/switch.json",
+    "http://localhost:3000/r/styles/default/table.json",
+    "http://localhost:3000/r/styles/default/tabs.json",
+    "http://localhost:3000/r/styles/default/textarea.json",
+    "http://localhost:3000/r/styles/default/toggle-group.json",
+    "http://localhost:3000/r/styles/default/toggle.json",
+    "http://localhost:3000/r/styles/default/tooltip.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {},
+  "files": []
+}
