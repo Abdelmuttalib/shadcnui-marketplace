@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/moon/textarea.json",
     "http://localhost:3000/r/styles/moon/toggle-group.json",
     "http://localhost:3000/r/styles/moon/toggle.json",
-    "http://localhost:3000/r/styles/moon/tooltip.json"
+    "http://localhost:3000/r/styles/moon/tooltip.json",
+    "http://localhost:3000/r/styles/moon/use-mobile.json",
+    "http://localhost:3000/r/styles/moon/utils.json"
   ],
   "tailwind": {
     "config": {

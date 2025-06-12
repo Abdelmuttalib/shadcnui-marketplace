@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/catalyst/textarea.json",
     "http://localhost:3000/r/styles/catalyst/toggle-group.json",
     "http://localhost:3000/r/styles/catalyst/toggle.json",
-    "http://localhost:3000/r/styles/catalyst/tooltip.json"
+    "http://localhost:3000/r/styles/catalyst/tooltip.json",
+    "http://localhost:3000/r/styles/catalyst/use-mobile.json",
+    "http://localhost:3000/r/styles/catalyst/utils.json"
   ],
   "tailwind": {
     "config": {

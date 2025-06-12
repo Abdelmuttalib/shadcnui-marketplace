@@ -3,7 +3,7 @@ import { type Registry } from "shadcn/registry";
 // import { z } from "zod";
 // import { blocks } from "@/registry/registry-blocks"
 // import { charts } from "@/registry/registry-charts"
-// import { examples } from "@/registry/registry-examples"
+import { examples } from "@/registry/registry-examples";
 import { hooks } from "@/registry/registry-hooks";
 // import { internal } from "@/registry/registry-internal";
 import { lib } from "@/registry/registry-lib";
@@ -23,6 +23,6 @@ export const registry = {
 
     // Internal use only.
     // ...internal,
-    // ...examples,
+    ...examples,
   ],
 } satisfies Registry;

@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/wedges/textarea.json",
     "http://localhost:3000/r/styles/wedges/toggle-group.json",
     "http://localhost:3000/r/styles/wedges/toggle.json",
-    "http://localhost:3000/r/styles/wedges/tooltip.json"
+    "http://localhost:3000/r/styles/wedges/tooltip.json",
+    "http://localhost:3000/r/styles/wedges/use-mobile.json",
+    "http://localhost:3000/r/styles/wedges/utils.json"
   ],
   "tailwind": {
     "config": {

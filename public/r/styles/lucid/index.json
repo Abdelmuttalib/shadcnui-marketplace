@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/lucid/textarea.json",
     "http://localhost:3000/r/styles/lucid/toggle-group.json",
     "http://localhost:3000/r/styles/lucid/toggle.json",
-    "http://localhost:3000/r/styles/lucid/tooltip.json"
+    "http://localhost:3000/r/styles/lucid/tooltip.json",
+    "http://localhost:3000/r/styles/lucid/use-mobile.json",
+    "http://localhost:3000/r/styles/lucid/utils.json"
   ],
   "tailwind": {
     "config": {

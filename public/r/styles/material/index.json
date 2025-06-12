@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/material/textarea.json",
     "http://localhost:3000/r/styles/material/toggle-group.json",
     "http://localhost:3000/r/styles/material/toggle.json",
-    "http://localhost:3000/r/styles/material/tooltip.json"
+    "http://localhost:3000/r/styles/material/tooltip.json",
+    "http://localhost:3000/r/styles/material/use-mobile.json",
+    "http://localhost:3000/r/styles/material/utils.json"
   ],
   "tailwind": {
     "config": {

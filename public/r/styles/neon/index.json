@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/neon/textarea.json",
     "http://localhost:3000/r/styles/neon/toggle-group.json",
     "http://localhost:3000/r/styles/neon/toggle.json",
-    "http://localhost:3000/r/styles/neon/tooltip.json"
+    "http://localhost:3000/r/styles/neon/tooltip.json",
+    "http://localhost:3000/r/styles/neon/use-mobile.json",
+    "http://localhost:3000/r/styles/neon/utils.json"
   ],
   "tailwind": {
     "config": {

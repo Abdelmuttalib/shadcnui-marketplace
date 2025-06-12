@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/snow/textarea.json",
     "http://localhost:3000/r/styles/snow/toggle-group.json",
     "http://localhost:3000/r/styles/snow/toggle.json",
-    "http://localhost:3000/r/styles/snow/tooltip.json"
+    "http://localhost:3000/r/styles/snow/tooltip.json",
+    "http://localhost:3000/r/styles/snow/use-mobile.json",
+    "http://localhost:3000/r/styles/snow/utils.json"
   ],
   "tailwind": {
     "config": {

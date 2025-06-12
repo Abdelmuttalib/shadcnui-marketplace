@@ -1937,7 +1937,7 @@ export const themePalettes: ThemePalette = {
       "chart-5": "0.86 0.0483 137.86" /* oklch(0.86 0.0483 137.86) */,
 
       "sidebar-background":
-        "0.21 0.0232 250.35" /* oklch(0.21 0.0048 145.42) */,
+        "0.18 0.0018 145.42" /* oklch(0.18 0.0018 145.42) */,
       "sidebar-foreground":
         "0.95 0.0093 230.11" /* oklch(0.95 0.0093 230.11) */,
       "sidebar-primary": "0.52 0.0483 137.86" /* oklch(0.52 0.0483 137.86) */,
@@ -2039,7 +2039,7 @@ export const themePalettes: ThemePalette = {
       "chart-5": "0.86 0.0483 137.86" /* oklch(0.86 0.0483 137.86) */,
 
       "sidebar-background":
-        "0.21 0.0232 250.35" /* oklch(0.21 0.0048 145.42) */,
+        "0.21 0.0048 145.42" /* oklch(0.21 0.0048 145.42) */,
       "sidebar-foreground":
         "0.95 0.0093 230.11" /* oklch(0.95 0.0093 230.11) */,
       "sidebar-primary": "0.52 0.0483 137.86" /* oklch(0.52 0.0483 137.86) */,

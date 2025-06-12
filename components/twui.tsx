@@ -11,13 +11,6 @@ export default function DD() {
     <div>
       {/* <Sidebar /> */}
       <DocLayout>
-        <ComponentPreview
-          id="landing-page-1"
-          title="Landing Page"
-          description="landing page template with shadcn ui"
-        >
-          ge
-        </ComponentPreview>
         {/* <Code /> */}
         <iframe
           src="https://afaqq.vercel.app"
@@ -801,72 +794,6 @@ function Sidebar() {
         // style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
       ></button>
     </div>
-  );
-}
-
-function ComponentPreview({
-  id,
-  title,
-  description,
-  className,
-  children,
-}: {
-  id: string;
-  title: string;
-  description: string;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section
-      id={id}
-      className={cn("flex min-h-[39rem] flex-col gap-4 pb-16 pt-20")}
-    >
-      <div className="flex flex-col gap-4">
-        <div className="space-y-2">
-          <Typography as="h2" variant="xl/semibold" className="capitalize">
-            {title}
-          </Typography>
-          <Typography
-            as="p"
-            variant="md/normal"
-            className="text-foreground-secondary"
-          >
-            {description}
-          </Typography>
-          <div className="pt-2">
-            <Tabs defaultValue="preview" className="space-y-4">
-              <TabsList className="grid w-full max-w-56 grid-cols-2">
-                <TabsTrigger value="preview" title="Preview">
-                  Preview
-                </TabsTrigger>
-                <TabsTrigger value="code" title="Code">
-                  Code
-                </TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="preview">
-                <div className="relative w-full">
-                  <iframe
-                    src="https://afaqq.vercel.app"
-                    height={960}
-                    className="w-full rounded-lg border"
-                  >
-                    {/* <Example1 /> */}
-                  </iframe>
-                </div>
-              </TabsContent>
-              <TabsContent value="code">{/* <Code /> */}</TabsContent>
-            </Tabs>
-          </div>
-        </div>
-        <div
-          className={cn("min-h-96 rounded-lg border bg-card p-6", className)}
-        >
-          {children}
-        </div>
-      </div>
-    </section>
   );
 }
 

@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/spectrum/textarea.json",
     "http://localhost:3000/r/styles/spectrum/toggle-group.json",
     "http://localhost:3000/r/styles/spectrum/toggle.json",
-    "http://localhost:3000/r/styles/spectrum/tooltip.json"
+    "http://localhost:3000/r/styles/spectrum/tooltip.json",
+    "http://localhost:3000/r/styles/spectrum/use-mobile.json",
+    "http://localhost:3000/r/styles/spectrum/utils.json"
   ],
   "tailwind": {
     "config": {

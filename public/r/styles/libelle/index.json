@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/libelle/textarea.json",
     "http://localhost:3000/r/styles/libelle/toggle-group.json",
     "http://localhost:3000/r/styles/libelle/toggle.json",
-    "http://localhost:3000/r/styles/libelle/tooltip.json"
+    "http://localhost:3000/r/styles/libelle/tooltip.json",
+    "http://localhost:3000/r/styles/libelle/use-mobile.json",
+    "http://localhost:3000/r/styles/libelle/utils.json"
   ],
   "tailwind": {
     "config": {

@@ -20,7 +20,7 @@ import {
 } from "@/registry/registry-palettes";
 
 export function ThemePaletteSelect() {
-  const { theme, resolvedTheme, systemTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const { activePalette, setActivePalette } = useThemePaletteStore();
 

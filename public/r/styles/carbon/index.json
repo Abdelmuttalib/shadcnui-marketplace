@@ -54,7 +54,9 @@
     "http://localhost:3000/r/styles/carbon/textarea.json",
     "http://localhost:3000/r/styles/carbon/toggle-group.json",
     "http://localhost:3000/r/styles/carbon/toggle.json",
-    "http://localhost:3000/r/styles/carbon/tooltip.json"
+    "http://localhost:3000/r/styles/carbon/tooltip.json",
+    "http://localhost:3000/r/styles/carbon/use-mobile.json",
+    "http://localhost:3000/r/styles/carbon/utils.json"
   ],
   "tailwind": {
     "config": {
