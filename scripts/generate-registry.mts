@@ -712,8 +712,15 @@ async function buildStyles(registry: Registry) {
 async function buildStylesIndex() {
   for (const style of styles) {
     const targetPath = path.join(REGISTRY_PATH, "styles", style.name);
-    const styleFiles = await fs.readdir(targetPath).then((file) => file);
-    // console.log("files", files);
+    const targetUIPath = path.join("registry", style.name, "ui");
+    const styleFiles = await fs.readdir(targetUIPath).then((files) => {
+      return files.map((file) => file.replace(/\.[^/.]+$/, ""));
+      // get filename without extension
+      // file = file.map((file) => file.replace(/\.[^/.]+$/, ""););
+      // return file.replace(/\.[^/.]+$/, "");
+    });
+    // const styleFiles = await fs.readdir(targetPath).then((file) => file);
+    console.log("files", styleFiles);
 
     const payload: z.infer<typeof registryItemSchema> = {
       name: style.name,
@@ -726,7 +733,7 @@ async function buildStylesIndex() {
       registryDependencies: [
         "utils",
         ...styleFiles.map(
-          (file) => `http://localhost:3000/r/styles/${style.name}/${file}`
+          (file) => `http://localhost:3000/r/styles/${style.name}/${file}.json`
         ),
       ],
       tailwind: {
@@ -756,7 +763,7 @@ try {
   }
 
   // await syncStyles();
-  await buildRegistry(result.data);
+  // await buildRegistry(result.data);
   await buildStyles(result.data);
   await buildStylesIndex();
   await buildThemes();

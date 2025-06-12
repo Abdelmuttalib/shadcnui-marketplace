@@ -158,7 +158,7 @@ export function LinearShowcaseComponents() {
             <CardTitle>Card</CardTitle>
           </CardHeader>
           <CardContent className="-mt-4">
-            <p className="text-cb-muted-foreground">
+            <p className="text-linear-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               euismod.
             </p>

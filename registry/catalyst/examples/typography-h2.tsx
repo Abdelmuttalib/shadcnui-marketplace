@@ -1,7 +1,13 @@
+import { Typography } from "@/registry/catalyst/ui/typography";
+
 export default function TypographyH2() {
   return (
-    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+    <Typography
+      as="h2"
+      variant="3xl/semibold"
+      className="scroll-m-20 border-b border-b-catalyst-border pb-2 tracking-tight first:mt-0"
+    >
       The People of the Kingdom
-    </h2>
+    </Typography>
   );
 }

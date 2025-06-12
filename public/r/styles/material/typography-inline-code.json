@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-inline-code",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-inline-code.tsx",
+      "content": "import { Typography } from \"@/registry/material/ui/typography\";\n\nexport default function TypographyInlineCode() {\n  return (\n    <Typography\n      as=\"code\"\n      variant=\"sm/semibold\"\n      className=\"relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono\"\n    >\n      @radix-ui/react-alert-dialog\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

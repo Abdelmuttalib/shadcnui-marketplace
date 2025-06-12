@@ -24,12 +24,12 @@
     "http://localhost:3000/r/styles/neon/collapsible.json",
     "http://localhost:3000/r/styles/neon/command.json",
     "http://localhost:3000/r/styles/neon/context-menu.json",
+    "http://localhost:3000/r/styles/neon/data-table.json",
     "http://localhost:3000/r/styles/neon/dialog.json",
     "http://localhost:3000/r/styles/neon/drawer.json",
     "http://localhost:3000/r/styles/neon/dropdown-menu.json",
     "http://localhost:3000/r/styles/neon/form.json",
     "http://localhost:3000/r/styles/neon/hover-card.json",
-    "http://localhost:3000/r/styles/neon/index.json",
     "http://localhost:3000/r/styles/neon/input-otp.json",
     "http://localhost:3000/r/styles/neon/input.json",
     "http://localhost:3000/r/styles/neon/label.json",
@@ -55,16 +55,17 @@
     "http://localhost:3000/r/styles/neon/toggle-group.json",
     "http://localhost:3000/r/styles/neon/toggle.json",
     "http://localhost:3000/r/styles/neon/tooltip.json",
-    "http://localhost:3000/r/styles/neon/use-mobile.json",
-    "http://localhost:3000/r/styles/neon/utils.json"
+    "http://localhost:3000/r/styles/neon/typography.json"
   ],
   "tailwind": {
     "config": {
-      "plugins": [
-        "require(\"tailwindcss-animate\")"
-      ]
+      "plugins": ["require(\"tailwindcss-animate\")"]
     }
   },
-  "cssVars": {},
+  "cssVars": {
+    "light": {
+      "radius": "0rem"
+    }
+  },
   "files": []
 }

@@ -1,5 +1,13 @@
+import { Typography } from "@/registry/catalyst/ui/typography";
+
 export default function TypographyMuted() {
   return (
-    <p className="text-sm text-muted-foreground">Enter your email address.</p>
+    <Typography
+      as="p"
+      variant="sm/normal"
+      className="text-catalyst-muted-foreground"
+    >
+      Enter your email address.
+    </Typography>
   );
 }

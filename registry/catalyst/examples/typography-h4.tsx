@@ -1,7 +1,13 @@
+import { Typography } from "@/registry/catalyst/ui/typography";
+
 export default function TypographyH4() {
   return (
-    <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+    <Typography
+      as="h4"
+      variant="xl/semibold"
+      className="scroll-m-20 tracking-tight"
+    >
       People stopped telling jokes
-    </h4>
+    </Typography>
   );
 }

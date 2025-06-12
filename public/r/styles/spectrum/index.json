@@ -24,12 +24,12 @@
     "http://localhost:3000/r/styles/spectrum/collapsible.json",
     "http://localhost:3000/r/styles/spectrum/command.json",
     "http://localhost:3000/r/styles/spectrum/context-menu.json",
+    "http://localhost:3000/r/styles/spectrum/data-table.json",
     "http://localhost:3000/r/styles/spectrum/dialog.json",
     "http://localhost:3000/r/styles/spectrum/drawer.json",
     "http://localhost:3000/r/styles/spectrum/dropdown-menu.json",
     "http://localhost:3000/r/styles/spectrum/form.json",
     "http://localhost:3000/r/styles/spectrum/hover-card.json",
-    "http://localhost:3000/r/styles/spectrum/index.json",
     "http://localhost:3000/r/styles/spectrum/input-otp.json",
     "http://localhost:3000/r/styles/spectrum/input.json",
     "http://localhost:3000/r/styles/spectrum/label.json",
@@ -55,8 +55,7 @@
     "http://localhost:3000/r/styles/spectrum/toggle-group.json",
     "http://localhost:3000/r/styles/spectrum/toggle.json",
     "http://localhost:3000/r/styles/spectrum/tooltip.json",
-    "http://localhost:3000/r/styles/spectrum/use-mobile.json",
-    "http://localhost:3000/r/styles/spectrum/utils.json"
+    "http://localhost:3000/r/styles/spectrum/typography.json"
   ],
   "tailwind": {
     "config": {

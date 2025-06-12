@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-h1",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-h1.tsx",
+      "content": "import { Typography } from \"@/registry/spectrum/ui/typography\";\n\nexport default function TypographyH1() {\n  return (\n    <Typography\n      as=\"h1\"\n      variant=\"5xl/extrabold\"\n      className=\"scroll-m-20 tracking-tight\"\n    >\n      Taxing Laughter: The Joke Tax Chronicles\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

@@ -1,7 +1,13 @@
+import { Typography } from "@/registry/catalyst/ui/typography";
+
 export default function TypographyH3() {
   return (
-    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+    <Typography
+      as="h3"
+      variant="2xl/semibold"
+      className="scroll-m-20 tracking-tight"
+    >
       The Joke Tax
-    </h3>
+    </Typography>
   );
 }

@@ -24,12 +24,12 @@
     "http://localhost:3000/r/styles/catalyst/collapsible.json",
     "http://localhost:3000/r/styles/catalyst/command.json",
     "http://localhost:3000/r/styles/catalyst/context-menu.json",
+    "http://localhost:3000/r/styles/catalyst/data-table.json",
     "http://localhost:3000/r/styles/catalyst/dialog.json",
     "http://localhost:3000/r/styles/catalyst/drawer.json",
     "http://localhost:3000/r/styles/catalyst/dropdown-menu.json",
     "http://localhost:3000/r/styles/catalyst/form.json",
     "http://localhost:3000/r/styles/catalyst/hover-card.json",
-    "http://localhost:3000/r/styles/catalyst/index.json",
     "http://localhost:3000/r/styles/catalyst/input-otp.json",
     "http://localhost:3000/r/styles/catalyst/input.json",
     "http://localhost:3000/r/styles/catalyst/label.json",
@@ -55,8 +55,7 @@
     "http://localhost:3000/r/styles/catalyst/toggle-group.json",
     "http://localhost:3000/r/styles/catalyst/toggle.json",
     "http://localhost:3000/r/styles/catalyst/tooltip.json",
-    "http://localhost:3000/r/styles/catalyst/use-mobile.json",
-    "http://localhost:3000/r/styles/catalyst/utils.json"
+    "http://localhost:3000/r/styles/catalyst/typography.json"
   ],
   "tailwind": {
     "config": {

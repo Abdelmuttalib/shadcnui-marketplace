@@ -5,7 +5,7 @@ import { type Registry } from "shadcn/registry";
 // import { charts } from "@/registry/registry-charts"
 import { examples } from "@/registry/registry-examples";
 import { hooks } from "@/registry/registry-hooks";
-// import { internal } from "@/registry/registry-internal";
+import { internal } from "@/registry/registry-internal";
 import { lib } from "@/registry/registry-lib";
 import { themes } from "@/registry/registry-themes";
 import { ui } from "@/registry/registry-ui";
@@ -22,7 +22,7 @@ export const registry = {
     ...themes,
 
     // Internal use only.
-    // ...internal,
+    ...internal,
     ...examples,
   ],
 } satisfies Registry;

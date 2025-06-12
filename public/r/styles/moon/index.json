@@ -24,12 +24,12 @@
     "http://localhost:3000/r/styles/moon/collapsible.json",
     "http://localhost:3000/r/styles/moon/command.json",
     "http://localhost:3000/r/styles/moon/context-menu.json",
+    "http://localhost:3000/r/styles/moon/data-table.json",
     "http://localhost:3000/r/styles/moon/dialog.json",
     "http://localhost:3000/r/styles/moon/drawer.json",
     "http://localhost:3000/r/styles/moon/dropdown-menu.json",
     "http://localhost:3000/r/styles/moon/form.json",
     "http://localhost:3000/r/styles/moon/hover-card.json",
-    "http://localhost:3000/r/styles/moon/index.json",
     "http://localhost:3000/r/styles/moon/input-otp.json",
     "http://localhost:3000/r/styles/moon/input.json",
     "http://localhost:3000/r/styles/moon/label.json",
@@ -55,8 +55,7 @@
     "http://localhost:3000/r/styles/moon/toggle-group.json",
     "http://localhost:3000/r/styles/moon/toggle.json",
     "http://localhost:3000/r/styles/moon/tooltip.json",
-    "http://localhost:3000/r/styles/moon/use-mobile.json",
-    "http://localhost:3000/r/styles/moon/utils.json"
+    "http://localhost:3000/r/styles/moon/typography.json"
   ],
   "tailwind": {
     "config": {

@@ -157,7 +157,7 @@ export function SnowShowcaseComponents() {
             <CardTitle>Card</CardTitle>
           </CardHeader>
           <CardContent className="-mt-4">
-            <p className="text-cb-muted-foreground">
+            <p className="text-snow-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               euismod.
             </p>

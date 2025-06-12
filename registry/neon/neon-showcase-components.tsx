@@ -158,7 +158,7 @@ export function NeonShowcaseComponents() {
             <CardTitle>Card</CardTitle>
           </CardHeader>
           <CardContent className="-mt-4">
-            <p className="text-cb-muted-foreground">
+            <p className="text-neon-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               euismod.
             </p>
@@ -339,7 +339,7 @@ export function NeonHeadlessShowcaseComponents() {
           <CardTitle>Card</CardTitle>
         </CardHeader>
         <CardContent className="-mt-4">
-          <p className="text-cb-muted-foreground">
+          <p className="text-neon-muted-foreground">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             euismod.
           </p>

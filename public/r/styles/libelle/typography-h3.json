@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-h3",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-h3.tsx",
+      "content": "import { Typography } from \"@/registry/libelle/ui/typography\";\n\nexport default function TypographyH3() {\n  return (\n    <Typography\n      as=\"h3\"\n      variant=\"2xl/semibold\"\n      className=\"scroll-m-20 tracking-tight\"\n    >\n      The Joke Tax\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

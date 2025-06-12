@@ -1,5 +1,9 @@
+import { Typography } from "@/registry/catalyst/ui/typography";
+
 export default function TypographySmall() {
   return (
-    <small className="text-sm font-medium leading-none">Email address</small>
+    <Typography as="small" variant="sm/medium" className="leading-none">
+      Email address
+    </Typography>
   );
 }

@@ -24,12 +24,12 @@
     "http://localhost:3000/r/styles/lucid/collapsible.json",
     "http://localhost:3000/r/styles/lucid/command.json",
     "http://localhost:3000/r/styles/lucid/context-menu.json",
+    "http://localhost:3000/r/styles/lucid/data-table.json",
     "http://localhost:3000/r/styles/lucid/dialog.json",
     "http://localhost:3000/r/styles/lucid/drawer.json",
     "http://localhost:3000/r/styles/lucid/dropdown-menu.json",
     "http://localhost:3000/r/styles/lucid/form.json",
     "http://localhost:3000/r/styles/lucid/hover-card.json",
-    "http://localhost:3000/r/styles/lucid/index.json",
     "http://localhost:3000/r/styles/lucid/input-otp.json",
     "http://localhost:3000/r/styles/lucid/input.json",
     "http://localhost:3000/r/styles/lucid/label.json",
@@ -55,8 +55,7 @@
     "http://localhost:3000/r/styles/lucid/toggle-group.json",
     "http://localhost:3000/r/styles/lucid/toggle.json",
     "http://localhost:3000/r/styles/lucid/tooltip.json",
-    "http://localhost:3000/r/styles/lucid/use-mobile.json",
-    "http://localhost:3000/r/styles/lucid/utils.json"
+    "http://localhost:3000/r/styles/lucid/typography.json"
   ],
   "tailwind": {
     "config": {

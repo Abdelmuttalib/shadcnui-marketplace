@@ -24,12 +24,12 @@
     "http://localhost:3000/r/styles/carbon/collapsible.json",
     "http://localhost:3000/r/styles/carbon/command.json",
     "http://localhost:3000/r/styles/carbon/context-menu.json",
+    "http://localhost:3000/r/styles/carbon/data-table.json",
     "http://localhost:3000/r/styles/carbon/dialog.json",
     "http://localhost:3000/r/styles/carbon/drawer.json",
     "http://localhost:3000/r/styles/carbon/dropdown-menu.json",
     "http://localhost:3000/r/styles/carbon/form.json",
     "http://localhost:3000/r/styles/carbon/hover-card.json",
-    "http://localhost:3000/r/styles/carbon/index.json",
     "http://localhost:3000/r/styles/carbon/input-otp.json",
     "http://localhost:3000/r/styles/carbon/input.json",
     "http://localhost:3000/r/styles/carbon/label.json",
@@ -55,16 +55,17 @@
     "http://localhost:3000/r/styles/carbon/toggle-group.json",
     "http://localhost:3000/r/styles/carbon/toggle.json",
     "http://localhost:3000/r/styles/carbon/tooltip.json",
-    "http://localhost:3000/r/styles/carbon/use-mobile.json",
-    "http://localhost:3000/r/styles/carbon/utils.json"
+    "http://localhost:3000/r/styles/carbon/typography.json"
   ],
   "tailwind": {
     "config": {
-      "plugins": [
-        "require(\"tailwindcss-animate\")"
-      ]
+      "plugins": ["require(\"tailwindcss-animate\")"]
     }
   },
-  "cssVars": {},
+  "cssVars": {
+    "light": {
+      "radius": "0rem"
+    }
+  },
   "files": []
 }

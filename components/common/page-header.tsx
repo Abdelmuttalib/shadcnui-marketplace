@@ -9,7 +9,7 @@ export function PageTitle({ className, ...props }: TypographyProps) {
       as="h1"
       variant="5xl/semibold"
       className={cn(
-        "bg-gradient-to-r from-foreground to-foreground/50 bg-clip-text font-[490] tracking-tighter text-transparent",
+        "bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text font-[490] tracking-tighter text-transparent dark:to-foreground/50",
         className
       )}
       {...props}

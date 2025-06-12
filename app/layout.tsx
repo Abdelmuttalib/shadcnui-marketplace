@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import { DevTools } from "@/components/dev-tools";
 import { NextThemesProvider } from "@/components/next-themes-provider";
 import { ThemeCustomizerWrapper } from "@/components/theme-customizer";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 import { fontVariables } from "@/lib/fonts";
 
 export const metadata: Metadata = {

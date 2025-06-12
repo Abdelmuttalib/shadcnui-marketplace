@@ -3,7 +3,7 @@
 import Image from "next/image";
 import * as React from "react";
 
-import { Index } from "@/__registry__";
+// import { Index } from "@/__registry__";
 // import { CopyButton } from "@/components/copy-button"
 import { Icons } from "@/components/icons";
 // import { StyleSwitcher } from "@/components/style-switcher";
@@ -38,16 +38,19 @@ export function ComponentPreview({
   ...props
 }: ComponentPreviewProps) {
   // const [config] = useConfig();
+  const Index = {};
   const { style } = useStyleStore();
   // const index = styles.findIndex((style) => style.name === "carbon");
-  const index = 0;
   // const index = styles.findIndex((style) => style.name === config.style);
 
-  const Codes = React.Children.toArray(children) as React.ReactElement[];
-  const Code = Codes[index];
+  // const Codes = React.Children.toArray(children) as React.ReactElement[];
+  // const Code = Codes[index];
 
   const Preview = React.useMemo(() => {
-    const Component = Index[style][name]?.component;
+    const Component = () => {
+      return <div>hello</div>;
+    };
+    // const Component = Index[style][name]?.component;
 
     if (!Component) {
       return (
@@ -63,19 +66,19 @@ export function ComponentPreview({
 
     console.log("Component", Component);
     return <Component />;
-  }, [name]);
+  }, [name, style]);
   // config.style
 
-  const codeString = React.useMemo(() => {
-    if (
-      typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
-    ) {
-      const [Button] = React.Children.toArray(
-        Code.props.children
-      ) as React.ReactElement[];
-      return Button?.props?.value || Button?.props?.__rawString__ || null;
-    }
-  }, [Code]);
+  // const codeString = React.useMemo(() => {
+  //   if (
+  //     typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
+  //   ) {
+  //     const [Button] = React.Children.toArray(
+  //       Code.props.children
+  //     ) as React.ReactElement[];
+  //     return Button?.props?.value || Button?.props?.__rawString__ || null;
+  //   }
+  // }, [Code]);
 
   // if (type === "block") {
   //   return (

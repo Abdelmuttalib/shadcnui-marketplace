@@ -1,3 +1,9 @@
+import { Typography } from "@/registry/catalyst/ui/typography";
+
 export default function TypographyLarge() {
-  return <div className="text-lg font-semibold">Are you absolutely sure?</div>;
+  return (
+    <Typography as="p" variant="lg/semibold">
+      Are you absolutely sure?
+    </Typography>
+  );
 }

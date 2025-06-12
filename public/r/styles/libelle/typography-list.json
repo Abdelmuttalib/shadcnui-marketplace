@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-list",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-list.tsx",
+      "content": "import { Typography } from \"@/registry/libelle/ui/typography\";\n\nexport default function TypographyList() {\n  return (\n    <ul className=\"my-6 ml-6 list-disc [&>li]:mt-2\">\n      <Typography as=\"li\">1st level of puns: 5 gold coins</Typography>\n      <Typography as=\"li\">2nd level of jokes: 10 gold coins</Typography>\n      <Typography as=\"li\">3rd level of one-liners : 20 gold coins</Typography>\n    </ul>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

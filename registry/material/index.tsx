@@ -6,7 +6,7 @@ import React from "react";
 
 export const MaterialStyleRegistryIndex = {
   button: {
-    demo: React.lazy(() => import("./demo/button-demo")),
+    demo: React.lazy(() => import("./examples/button-demo")),
     code: "",
     title: "Button",
     description: "Buttons are used to perform an action.",
@@ -114,7 +114,7 @@ export const MaterialStyleRegistryIndex = {
   //   description: "Toggles are used to select one or more items.",
   // },
   tabs: {
-    demo: dynamic(() => import("./demo/tabs-demo")),
+    demo: dynamic(() => import("./examples/tabs-demo")),
     code: "",
     title: "Tabs",
     description: "Tabs are used to display different content.",

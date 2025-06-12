@@ -537,6 +537,17 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "data-table",
+    type: "registry:ui",
+    dependencies: ["@tanstack/react-table"],
+    files: [
+      {
+        path: "ui/data-table.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "tabs",
     type: "registry:ui",
     dependencies: ["@radix-ui/react-tabs"],
@@ -587,6 +598,16 @@ export const ui: Registry["items"] = [
     files: [
       {
         path: "ui/tooltip.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "typography",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/typography.tsx",
         type: "registry:ui",
       },
     ],
