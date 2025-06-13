@@ -3,6 +3,7 @@
 import { Check, Copy, Sparkles } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import { toast } from "sonner";
 
 import { stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
@@ -16,9 +17,7 @@ import {
 
 import { Button } from "../ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import { toast } from "../ui/use-toast";
 import { ClientStringCode } from "./client-string-code";
-import { StringCode } from "./string-code";
 
 export function ThemeCustomizerTabs() {
   const [copied, setCopied] = useState(false);
@@ -60,8 +59,7 @@ module.exports = {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(generateConfigCode());
     setCopied(true);
-    toast({
-      title: "Copied to clipboard",
+    toast.success("Copied to clipboard", {
       description: "The configuration has been copied to your clipboard",
     });
     setTimeout(() => setCopied(false), 2000);
