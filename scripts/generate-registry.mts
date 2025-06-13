@@ -667,11 +667,16 @@ async function buildStyles(registry: Registry) {
               path: file.path,
               type: file.type,
               // content: sourceFile.getText().replaceAll("-cb", ""),
+              // replace all @/registry/{style}/ui with @/components/ui
               content: sourceFile
                 .getText()
                 .replaceAll(
                   /-(dft|cb|catalyst|linear|material|spctm|wedges|moon|lucid|snow|neon|libelle)\b/g,
                   ""
+                )
+                .replaceAll(
+                  /@\/registry\/(default|carbon|catalyst|linear|material|spectrum|wedges|moon|lucid|snow|neon|libelle)\/ui/g,
+                  "@/components/ui"
                 ),
               target,
             };
@@ -776,7 +781,7 @@ try {
   // await buildRegistry(result.data);
   await buildStyles(result.data);
   await buildStylesIndex(isProd ? BASE_SITE_URL : "http://localhost:3000");
-  // await buildThemes();
+  await buildThemes();
 
   // await buildRegistryIcons();
   // await buildIcons();
