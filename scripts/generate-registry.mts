@@ -355,7 +355,7 @@ async function buildThemes() {
       process.cwd(),
       "public",
       "r",
-      "theme",
+      "themes",
       `${k}.json`
     );
 
