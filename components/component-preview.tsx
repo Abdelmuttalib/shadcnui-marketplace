@@ -64,7 +64,6 @@ export function ComponentPreview({
       );
     }
 
-    console.log("Component", Component);
     return <Component />;
   }, [name, style]);
   // config.style
@@ -106,8 +105,6 @@ export function ComponentPreview({
   //     </div>
   //   );
   // }
-
-  console.log("type", type);
 
   return (
     <div
