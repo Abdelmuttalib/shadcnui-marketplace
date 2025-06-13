@@ -2,11 +2,16 @@ import { PageContainer } from "@/components/common/page-container";
 import { PageExampleSelect } from "@/components/common/page-example-select";
 import { PageSubTitle, PageTitle } from "@/components/common/page-header";
 import { ShowcaseStylePageExamplePreview } from "@/components/common/showcase-style-page-example-preview";
+import { StringCode } from "@/components/common/string-code";
 import { StyleGradientBackgroundColorComponent } from "@/components/common/style-background-color-component";
 import { StyleHeroUI } from "@/components/common/style-hero-ui";
 import { StyleSelect } from "@/components/common/style-select";
-import { ThemePaletteSelect } from "@/components/common/theme-palette-select";
+import {
+  ThemePaletteReset,
+  ThemePaletteSelect,
+} from "@/components/common/theme-palette-select";
 import { StyleFontWrapper } from "@/components/style-font-wrapper";
+import { StylePaletteCommand } from "@/components/style-palette-command";
 import { Typography } from "@/components/ui/typography";
 import { StylesPreview } from "@/components/views/home/styles-preview";
 import { cn } from "@/lib/utils";
@@ -110,7 +115,7 @@ export default function Home() {
             </PageContainer>
             <PageContainer>
               <div>
-                <div className="flex items-end justify-between gap-4 py-4">
+                <div className="flex items-end justify-between gap-4 py-2">
                   <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                     <div className="flex w-full flex-col gap-2 md:w-auto">
                       <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
@@ -127,9 +132,16 @@ export default function Home() {
                       <PageExampleSelect />
                     </div>
                     <div className="flex w-full flex-col gap-2 md:w-auto">
-                      <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
-                        Choose palette
-                      </h2>
+                      <div className="inline-flex justify-between">
+                        <div>
+                          <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
+                            Choose palette
+                          </h2>
+                        </div>
+                        <div>
+                          <ThemePaletteReset />
+                        </div>
+                      </div>
                       <ThemePaletteSelect />
                     </div>
                   </div>
@@ -146,8 +158,14 @@ export default function Home() {
                 </div>
               </div>
             </PageContainer>
+            <PageContainer>
+              <div>
+                <StylePaletteCommand />
+                {/* <StringCode c="console.log" /> */}
+              </div>
+            </PageContainer>
 
-            <div className="relative flex h-full min-h-screen gap-8 py-4">
+            <div className="relative flex h-full min-h-screen gap-8 py-2">
               <PageContainer size="xl" className="relative">
                 <ShowcaseStylePageExamplePreview />
               </PageContainer>

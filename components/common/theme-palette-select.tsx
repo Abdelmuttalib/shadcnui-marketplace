@@ -1,8 +1,10 @@
 "use client";
 
+import { Undo2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
 
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -68,5 +70,23 @@ export function ThemePaletteSelect() {
         </SelectContent>
       </Select>
     </div>
+  );
+}
+
+export function ThemePaletteReset() {
+  const { activePalette, onResetPalette } = useThemePaletteStore();
+
+  return (
+    <Button
+      onClick={onResetPalette}
+      size={"icon-xs"}
+      variant={"secondary"}
+      disabled={activePalette === ""}
+      aria-label="Reset Palette"
+      title="Reset Palette"
+    >
+      <Undo2 className="h-4 w-4" />
+      <span className="sr-only">Reset Palette</span>
+    </Button>
   );
 }

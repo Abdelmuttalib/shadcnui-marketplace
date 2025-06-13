@@ -64,6 +64,10 @@
       ]
     }
   },
-  "cssVars": {},
+  "cssVars": {
+    "light": {
+      "radius": "0.4rem"
+    }
+  },
   "files": []
 }

@@ -15,6 +15,7 @@ import { registry } from "../registry/registry-core";
 import { styles } from "../registry/registry-styles";
 import { themePalettes } from "../registry/registry-themes";
 import { registryCategories } from "@/registry/registry-categories";
+import { BASE_SITE_URL } from "@/config/site-config";
 
 const REGISTRY_PATH = path.join(process.cwd(), "public/r");
 
@@ -709,7 +710,7 @@ async function buildStyles(registry: Registry) {
 // ----------------------------------------------------------------------------
 // Build registry/styles/[name]/index.json.
 // ----------------------------------------------------------------------------
-async function buildStylesIndex() {
+async function buildStylesIndex(siteRegistryUrl: string) {
   for (const style of styles) {
     const targetPath = path.join(REGISTRY_PATH, "styles", style.name);
     const targetUIPath = path.join("registry", style.name, "ui");
@@ -720,7 +721,7 @@ async function buildStylesIndex() {
       // return file.replace(/\.[^/.]+$/, "");
     });
     // const styleFiles = await fs.readdir(targetPath).then((file) => file);
-    console.log("files", styleFiles);
+    // console.log("files", styleFiles);
 
     const payload: z.infer<typeof registryItemSchema> = {
       name: style.name,
@@ -733,7 +734,7 @@ async function buildStylesIndex() {
       registryDependencies: [
         "utils",
         ...styleFiles.map(
-          (file) => `http://localhost:3000/r/styles/${style.name}/${file}.json`
+          (file) => `${siteRegistryUrl}/r/styles/${style.name}/${file}.json`
         ),
       ],
       tailwind: {
@@ -741,7 +742,11 @@ async function buildStylesIndex() {
           plugins: [`require("tailwindcss-animate")`],
         },
       },
-      cssVars: {},
+      cssVars: {
+        light: {
+          radius: style.defaultRadius,
+        },
+      },
       files: [],
     };
 
@@ -762,11 +767,16 @@ try {
     process.exit(1);
   }
 
+  const args = process.argv.slice(2);
+  const envArg = args.find((arg) => arg.startsWith("--env="));
+  const env = envArg ? envArg.split("=")[1] : "development";
+  const isProd = env === "production";
+
   // await syncStyles();
   // await buildRegistry(result.data);
   await buildStyles(result.data);
-  await buildStylesIndex();
-  await buildThemes();
+  await buildStylesIndex(isProd ? BASE_SITE_URL : "http://localhost:3000");
+  // await buildThemes();
 
   // await buildRegistryIcons();
   // await buildIcons();

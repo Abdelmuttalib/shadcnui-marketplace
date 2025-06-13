@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "next dev",
     "tdev": "next dev --turbo",
-    "build": "next build",
+    "build": "pnpm generate:registry-prod && next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
     "sort-imports": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "registry:build": "shadcn build",
-    "generate:registry": "ts-node lib/generate-registry.ts",
+    "generate:registry-prod": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/generate-registry.mts --env=production",
+    "generate:registry-local": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/generate-registry.mts --env=development",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
