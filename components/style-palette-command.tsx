@@ -5,19 +5,32 @@ import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 
 // import { StringCode } from "./common/string-code";
 import { ClientStringCode } from "./common/client-string-code";
+import { BASE_SITE_URL } from "@/config/site-config";
+
+function getRegistryUrl(env: string) {
+  if (env === "production") {
+    return BASE_SITE_URL;
+  }
+  return "http://localhost:3000";
+}
 
 export function StylePaletteCommand() {
+  const NODE_ENV = process.env.NODE_ENV;
+  const isProd = NODE_ENV === "production";
+
   const { style } = useStyleStore();
   const { activePalette } = useThemePaletteStore();
 
   const packageManagerCommand = "pnpm dlx";
 
   const styleCommand = style
-    ? `shadcn add "http://localhost:3000/r/styles/${style}/index.json" --overwrite`
+    ? `shadcn add "${getRegistryUrl(
+        NODE_ENV
+      )}/r/styles/${style}/index.json" --overwrite`
     : "";
 
   const paletteCommand = activePalette
-    ? `shadcn add "http://localhost:3000/r/theme/${activePalette}.json"`
+    ? `shadcn add "${getRegistryUrl(NODE_ENV)}/r/theme/${activePalette}.json"`
     : "";
 
   const outputCommand = `${packageManagerCommand} ${styleCommand} ${
