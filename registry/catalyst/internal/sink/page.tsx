@@ -1,6 +1,3 @@
-"use client";
-
-import { ComponentPreview } from "@/components/component-preview";
 import { AccordionDemo } from "@/registry/catalyst/internal/sink/components/accordion-demo";
 import { AlertDemo } from "@/registry/catalyst/internal/sink/components/alert-demo";
 import { AlertDialogDemo } from "@/registry/catalyst/internal/sink/components/alert-dialog-demo";
@@ -102,9 +99,6 @@ export default function SinkPage() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          <div className="bg-red-300">
-            <ComponentPreview name="button-demo"></ComponentPreview>
-          </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <ComponentWrapper name="Accordion">
               <AccordionDemo />
