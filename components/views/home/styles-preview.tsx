@@ -13,9 +13,9 @@ export function StylesPreview() {
             key={style.name}
             title={style.title}
             style={style.name}
-            link={{
-              href: `/styles/${style.name}`,
-            }}
+            // link={{
+            //   href: `/styles/${style.name}`,
+            // }}
           />
         ))}
     </>
