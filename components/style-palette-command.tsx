@@ -1,11 +1,11 @@
 "use client";
 
+import { BASE_SITE_URL } from "@/config/site-config";
 import { useStyleStore } from "@/hooks/use-style-store";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 
 // import { StringCode } from "./common/string-code";
 import { ClientStringCode } from "./common/client-string-code";
-import { BASE_SITE_URL } from "@/config/site-config";
 
 function getRegistryUrl(env: string) {
   if (env === "production") {
@@ -30,7 +30,7 @@ export function StylePaletteCommand() {
     : "";
 
   const paletteCommand = activePalette
-    ? `shadcn add "${getRegistryUrl(NODE_ENV)}/r/theme/${activePalette}.json"`
+    ? `shadcn add "${getRegistryUrl(NODE_ENV)}/r/themes/${activePalette}.json"`
     : "";
 
   const outputCommand = `${packageManagerCommand} ${styleCommand} ${
