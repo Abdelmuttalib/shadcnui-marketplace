@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-h4",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-h4.tsx",
+      "content": "import { Typography } from \"@/registry/spectrum/ui/typography\";\n\nexport default function TypographyH4() {\n  return (\n    <Typography\n      as=\"h4\"\n      variant=\"xl/semibold\"\n      className=\"scroll-m-20 tracking-tight\"\n    >\n      People stopped telling jokes\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

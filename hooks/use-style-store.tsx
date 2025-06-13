@@ -318,13 +318,6 @@ export type PageExampleType =
 const DEFAULT_PAGE_EXAMPLE_TYPE: PageExampleType = "cards";
 export const pageExampleTypes = PAGE_EXAMPLE_TYPES;
 
-const StyleContext = React.createContext({
-  style: STYLES[0],
-  setStyle: (style: Style) => {},
-  pageExampleType: DEFAULT_PAGE_EXAMPLE_TYPE,
-  setPageExampleType: (pageExampleType: PageExampleType) => {},
-});
-
 export type Style = (typeof STYLES)[number];
 
 type StyleState = {
@@ -343,24 +336,3 @@ export const useStyleStore = create<StyleState>((set) => ({
   pageExampleType: DEFAULT_PAGE_EXAMPLE_TYPE,
   setPageExampleType: (type) => set({ pageExampleType: type }),
 }));
-
-// export function StyleProvider({ children }: { children: React.ReactNode }) {
-//   const [style, setStyle] = React.useState<Style>(STYLES[7]);
-
-//   const [pageExampleType, setPageExampleType] = React.useState<PageExampleType>(
-//     DEFAULT_PAGE_EXAMPLE_TYPE
-//   );
-
-//   return (
-//     <StyleContext.Provider
-//       value={{
-//         style,
-//         setStyle,
-//         pageExampleType,
-//         setPageExampleType,
-//       }}
-//     >
-//       {children}
-//     </StyleContext.Provider>
-//   );
-// }

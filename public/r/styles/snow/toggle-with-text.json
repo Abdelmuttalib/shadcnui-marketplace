@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-with-text",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "registryDependencies": [
+    "toggle"
+  ],
+  "files": [
+    {
+      "path": "examples/toggle-with-text.tsx",
+      "content": "import { Italic } from \"lucide-react\";\n\nimport { Toggle } from \"@/registry/snow/ui/toggle\";\n\nexport default function ToggleWithText() {\n  return (\n    <Toggle aria-label=\"Toggle italic\">\n      <Italic className=\"mr-2 h-4 w-4\" />\n      Italic\n    </Toggle>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

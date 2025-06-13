@@ -22,7 +22,7 @@ const mainLinks = [
 ];
 
 // multiple domains can be added here
-const BASE_SITE_URL = "https://shadcnmarketplace.com";
+export const BASE_SITE_URL = "https://shadcnmarketplace.com";
 
 export const siteConfig = {
   name: "shadcn ui marketplace",
@@ -33,6 +33,8 @@ export const siteConfig = {
   favicon: "/favicon.ico",
   twitterUrl: "https://x.com/shadcnui_styles",
   twitterHandle: "@shadcnui_styles",
+
+  siteUrl: "https://shadcnmarketplace.com",
 
   mainNavLinks: mainLinks,
   footerLinks: mainLinks,

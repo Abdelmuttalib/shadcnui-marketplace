@@ -1,0 +1,73 @@
+{
+  "name": "material",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/material/accordion.json",
+    "http://localhost:3000/r/styles/material/alert-dialog.json",
+    "http://localhost:3000/r/styles/material/alert.json",
+    "http://localhost:3000/r/styles/material/aspect-ratio.json",
+    "http://localhost:3000/r/styles/material/avatar.json",
+    "http://localhost:3000/r/styles/material/badge.json",
+    "http://localhost:3000/r/styles/material/breadcrumb.json",
+    "http://localhost:3000/r/styles/material/button.json",
+    "http://localhost:3000/r/styles/material/calendar.json",
+    "http://localhost:3000/r/styles/material/card.json",
+    "http://localhost:3000/r/styles/material/carousel.json",
+    "http://localhost:3000/r/styles/material/chart.json",
+    "http://localhost:3000/r/styles/material/checkbox.json",
+    "http://localhost:3000/r/styles/material/collapsible.json",
+    "http://localhost:3000/r/styles/material/command.json",
+    "http://localhost:3000/r/styles/material/context-menu.json",
+    "http://localhost:3000/r/styles/material/data-table.json",
+    "http://localhost:3000/r/styles/material/dialog.json",
+    "http://localhost:3000/r/styles/material/drawer.json",
+    "http://localhost:3000/r/styles/material/dropdown-menu.json",
+    "http://localhost:3000/r/styles/material/form.json",
+    "http://localhost:3000/r/styles/material/hover-card.json",
+    "http://localhost:3000/r/styles/material/input-otp.json",
+    "http://localhost:3000/r/styles/material/input.json",
+    "http://localhost:3000/r/styles/material/label.json",
+    "http://localhost:3000/r/styles/material/menubar.json",
+    "http://localhost:3000/r/styles/material/navigation-menu.json",
+    "http://localhost:3000/r/styles/material/pagination.json",
+    "http://localhost:3000/r/styles/material/popover.json",
+    "http://localhost:3000/r/styles/material/progress.json",
+    "http://localhost:3000/r/styles/material/radio-group.json",
+    "http://localhost:3000/r/styles/material/resizable.json",
+    "http://localhost:3000/r/styles/material/scroll-area.json",
+    "http://localhost:3000/r/styles/material/select.json",
+    "http://localhost:3000/r/styles/material/separator.json",
+    "http://localhost:3000/r/styles/material/sheet.json",
+    "http://localhost:3000/r/styles/material/sidebar.json",
+    "http://localhost:3000/r/styles/material/skeleton.json",
+    "http://localhost:3000/r/styles/material/slider.json",
+    "http://localhost:3000/r/styles/material/sonner.json",
+    "http://localhost:3000/r/styles/material/switch.json",
+    "http://localhost:3000/r/styles/material/table.json",
+    "http://localhost:3000/r/styles/material/tabs.json",
+    "http://localhost:3000/r/styles/material/textarea.json",
+    "http://localhost:3000/r/styles/material/toggle-group.json",
+    "http://localhost:3000/r/styles/material/toggle.json",
+    "http://localhost:3000/r/styles/material/tooltip.json",
+    "http://localhost:3000/r/styles/material/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.75rem"
+    }
+  },
+  "files": []
+}

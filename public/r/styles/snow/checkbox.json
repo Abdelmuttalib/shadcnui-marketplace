@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "type": "registry:ui",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "dependencies": [
+    "@radix-ui/react-checkbox"
+  ],
+  "files": [
+    {
+      "path": "ui/checkbox.tsx",
+      "content": "\"use client\";\n\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\";\nimport { Check } from \"lucide-react\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <CheckboxPrimitive.Root\n    ref={ref}\n    className={cn(\n      \"peer size-[1.125rem] shrink-0 rounded-[5px] border border-border ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring  disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground\",\n      className\n    )}\n    {...props}\n  >\n    <CheckboxPrimitive.Indicator\n      className={cn(\"flex items-center justify-center text-current\")}\n    >\n      <Check className=\"h-3 w-4\" />\n    </CheckboxPrimitive.Indicator>\n  </CheckboxPrimitive.Root>\n));\nCheckbox.displayName = CheckboxPrimitive.Root.displayName;\n\nexport { Checkbox };\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

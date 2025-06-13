@@ -1,0 +1,73 @@
+{
+  "name": "carbon",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/carbon/accordion.json",
+    "http://localhost:3000/r/styles/carbon/alert-dialog.json",
+    "http://localhost:3000/r/styles/carbon/alert.json",
+    "http://localhost:3000/r/styles/carbon/aspect-ratio.json",
+    "http://localhost:3000/r/styles/carbon/avatar.json",
+    "http://localhost:3000/r/styles/carbon/badge.json",
+    "http://localhost:3000/r/styles/carbon/breadcrumb.json",
+    "http://localhost:3000/r/styles/carbon/button.json",
+    "http://localhost:3000/r/styles/carbon/calendar.json",
+    "http://localhost:3000/r/styles/carbon/card.json",
+    "http://localhost:3000/r/styles/carbon/carousel.json",
+    "http://localhost:3000/r/styles/carbon/chart.json",
+    "http://localhost:3000/r/styles/carbon/checkbox.json",
+    "http://localhost:3000/r/styles/carbon/collapsible.json",
+    "http://localhost:3000/r/styles/carbon/command.json",
+    "http://localhost:3000/r/styles/carbon/context-menu.json",
+    "http://localhost:3000/r/styles/carbon/data-table.json",
+    "http://localhost:3000/r/styles/carbon/dialog.json",
+    "http://localhost:3000/r/styles/carbon/drawer.json",
+    "http://localhost:3000/r/styles/carbon/dropdown-menu.json",
+    "http://localhost:3000/r/styles/carbon/form.json",
+    "http://localhost:3000/r/styles/carbon/hover-card.json",
+    "http://localhost:3000/r/styles/carbon/input-otp.json",
+    "http://localhost:3000/r/styles/carbon/input.json",
+    "http://localhost:3000/r/styles/carbon/label.json",
+    "http://localhost:3000/r/styles/carbon/menubar.json",
+    "http://localhost:3000/r/styles/carbon/navigation-menu.json",
+    "http://localhost:3000/r/styles/carbon/pagination.json",
+    "http://localhost:3000/r/styles/carbon/popover.json",
+    "http://localhost:3000/r/styles/carbon/progress.json",
+    "http://localhost:3000/r/styles/carbon/radio-group.json",
+    "http://localhost:3000/r/styles/carbon/resizable.json",
+    "http://localhost:3000/r/styles/carbon/scroll-area.json",
+    "http://localhost:3000/r/styles/carbon/select.json",
+    "http://localhost:3000/r/styles/carbon/separator.json",
+    "http://localhost:3000/r/styles/carbon/sheet.json",
+    "http://localhost:3000/r/styles/carbon/sidebar.json",
+    "http://localhost:3000/r/styles/carbon/skeleton.json",
+    "http://localhost:3000/r/styles/carbon/slider.json",
+    "http://localhost:3000/r/styles/carbon/sonner.json",
+    "http://localhost:3000/r/styles/carbon/switch.json",
+    "http://localhost:3000/r/styles/carbon/table.json",
+    "http://localhost:3000/r/styles/carbon/tabs.json",
+    "http://localhost:3000/r/styles/carbon/textarea.json",
+    "http://localhost:3000/r/styles/carbon/toggle-group.json",
+    "http://localhost:3000/r/styles/carbon/toggle.json",
+    "http://localhost:3000/r/styles/carbon/tooltip.json",
+    "http://localhost:3000/r/styles/carbon/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0rem"
+    }
+  },
+  "files": []
+}

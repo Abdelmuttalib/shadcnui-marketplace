@@ -1,0 +1,73 @@
+{
+  "name": "snow",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/snow/accordion.json",
+    "http://localhost:3000/r/styles/snow/alert-dialog.json",
+    "http://localhost:3000/r/styles/snow/alert.json",
+    "http://localhost:3000/r/styles/snow/aspect-ratio.json",
+    "http://localhost:3000/r/styles/snow/avatar.json",
+    "http://localhost:3000/r/styles/snow/badge.json",
+    "http://localhost:3000/r/styles/snow/breadcrumb.json",
+    "http://localhost:3000/r/styles/snow/button.json",
+    "http://localhost:3000/r/styles/snow/calendar.json",
+    "http://localhost:3000/r/styles/snow/card.json",
+    "http://localhost:3000/r/styles/snow/carousel.json",
+    "http://localhost:3000/r/styles/snow/chart.json",
+    "http://localhost:3000/r/styles/snow/checkbox.json",
+    "http://localhost:3000/r/styles/snow/collapsible.json",
+    "http://localhost:3000/r/styles/snow/command.json",
+    "http://localhost:3000/r/styles/snow/context-menu.json",
+    "http://localhost:3000/r/styles/snow/data-table.json",
+    "http://localhost:3000/r/styles/snow/dialog.json",
+    "http://localhost:3000/r/styles/snow/drawer.json",
+    "http://localhost:3000/r/styles/snow/dropdown-menu.json",
+    "http://localhost:3000/r/styles/snow/form.json",
+    "http://localhost:3000/r/styles/snow/hover-card.json",
+    "http://localhost:3000/r/styles/snow/input-otp.json",
+    "http://localhost:3000/r/styles/snow/input.json",
+    "http://localhost:3000/r/styles/snow/label.json",
+    "http://localhost:3000/r/styles/snow/menubar.json",
+    "http://localhost:3000/r/styles/snow/navigation-menu.json",
+    "http://localhost:3000/r/styles/snow/pagination.json",
+    "http://localhost:3000/r/styles/snow/popover.json",
+    "http://localhost:3000/r/styles/snow/progress.json",
+    "http://localhost:3000/r/styles/snow/radio-group.json",
+    "http://localhost:3000/r/styles/snow/resizable.json",
+    "http://localhost:3000/r/styles/snow/scroll-area.json",
+    "http://localhost:3000/r/styles/snow/select.json",
+    "http://localhost:3000/r/styles/snow/separator.json",
+    "http://localhost:3000/r/styles/snow/sheet.json",
+    "http://localhost:3000/r/styles/snow/sidebar.json",
+    "http://localhost:3000/r/styles/snow/skeleton.json",
+    "http://localhost:3000/r/styles/snow/slider.json",
+    "http://localhost:3000/r/styles/snow/sonner.json",
+    "http://localhost:3000/r/styles/snow/switch.json",
+    "http://localhost:3000/r/styles/snow/table.json",
+    "http://localhost:3000/r/styles/snow/tabs.json",
+    "http://localhost:3000/r/styles/snow/textarea.json",
+    "http://localhost:3000/r/styles/snow/toggle-group.json",
+    "http://localhost:3000/r/styles/snow/toggle.json",
+    "http://localhost:3000/r/styles/snow/tooltip.json",
+    "http://localhost:3000/r/styles/snow/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.4rem"
+    }
+  },
+  "files": []
+}

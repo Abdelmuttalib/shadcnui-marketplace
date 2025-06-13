@@ -1,0 +1,73 @@
+{
+  "name": "catalyst",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/catalyst/accordion.json",
+    "http://localhost:3000/r/styles/catalyst/alert-dialog.json",
+    "http://localhost:3000/r/styles/catalyst/alert.json",
+    "http://localhost:3000/r/styles/catalyst/aspect-ratio.json",
+    "http://localhost:3000/r/styles/catalyst/avatar.json",
+    "http://localhost:3000/r/styles/catalyst/badge.json",
+    "http://localhost:3000/r/styles/catalyst/breadcrumb.json",
+    "http://localhost:3000/r/styles/catalyst/button.json",
+    "http://localhost:3000/r/styles/catalyst/calendar.json",
+    "http://localhost:3000/r/styles/catalyst/card.json",
+    "http://localhost:3000/r/styles/catalyst/carousel.json",
+    "http://localhost:3000/r/styles/catalyst/chart.json",
+    "http://localhost:3000/r/styles/catalyst/checkbox.json",
+    "http://localhost:3000/r/styles/catalyst/collapsible.json",
+    "http://localhost:3000/r/styles/catalyst/command.json",
+    "http://localhost:3000/r/styles/catalyst/context-menu.json",
+    "http://localhost:3000/r/styles/catalyst/data-table.json",
+    "http://localhost:3000/r/styles/catalyst/dialog.json",
+    "http://localhost:3000/r/styles/catalyst/drawer.json",
+    "http://localhost:3000/r/styles/catalyst/dropdown-menu.json",
+    "http://localhost:3000/r/styles/catalyst/form.json",
+    "http://localhost:3000/r/styles/catalyst/hover-card.json",
+    "http://localhost:3000/r/styles/catalyst/input-otp.json",
+    "http://localhost:3000/r/styles/catalyst/input.json",
+    "http://localhost:3000/r/styles/catalyst/label.json",
+    "http://localhost:3000/r/styles/catalyst/menubar.json",
+    "http://localhost:3000/r/styles/catalyst/navigation-menu.json",
+    "http://localhost:3000/r/styles/catalyst/pagination.json",
+    "http://localhost:3000/r/styles/catalyst/popover.json",
+    "http://localhost:3000/r/styles/catalyst/progress.json",
+    "http://localhost:3000/r/styles/catalyst/radio-group.json",
+    "http://localhost:3000/r/styles/catalyst/resizable.json",
+    "http://localhost:3000/r/styles/catalyst/scroll-area.json",
+    "http://localhost:3000/r/styles/catalyst/select.json",
+    "http://localhost:3000/r/styles/catalyst/separator.json",
+    "http://localhost:3000/r/styles/catalyst/sheet.json",
+    "http://localhost:3000/r/styles/catalyst/sidebar.json",
+    "http://localhost:3000/r/styles/catalyst/skeleton.json",
+    "http://localhost:3000/r/styles/catalyst/slider.json",
+    "http://localhost:3000/r/styles/catalyst/sonner.json",
+    "http://localhost:3000/r/styles/catalyst/switch.json",
+    "http://localhost:3000/r/styles/catalyst/table.json",
+    "http://localhost:3000/r/styles/catalyst/tabs.json",
+    "http://localhost:3000/r/styles/catalyst/textarea.json",
+    "http://localhost:3000/r/styles/catalyst/toggle-group.json",
+    "http://localhost:3000/r/styles/catalyst/toggle.json",
+    "http://localhost:3000/r/styles/catalyst/tooltip.json",
+    "http://localhost:3000/r/styles/catalyst/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.6rem"
+    }
+  },
+  "files": []
+}

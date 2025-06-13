@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-destructive",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "registryDependencies": [
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "examples/toast-destructive.tsx",
+      "content": "\"use client\";\n\nimport { toast } from \"sonner\";\n\nimport { Button } from \"@/registry/lucid/ui/button\";\n\nexport default function ToastDestructive() {\n  return (\n    <Button\n      variant=\"outline\"\n      onClick={() => {\n        toast.error(\"Uh oh! Something went wrong.\", {\n          description: \"There was a problem with your request.\",\n          action: {\n            label: \"Try again\",\n            onClick: () => console.log(\"Try again\"),\n          },\n        });\n      }}\n    >\n      Show Toast\n    </Button>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

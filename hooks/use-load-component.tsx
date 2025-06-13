@@ -31,7 +31,6 @@ export function useLoadComponents(style: string, _components: string[]) {
       let _comps = {};
       _components.forEach(async (component) => {
         const comp = await loadComponent(style, component);
-        console.log("comp", comp);
         // @ts-expect-error - dynamic loadable imported component
         _comps[component] = comp;
         // _comps = { ..._comps, [component]: comp };

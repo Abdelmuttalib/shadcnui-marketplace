@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-h2",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-h2.tsx",
+      "content": "import { Typography } from \"@/registry/default/ui/typography\";\n\nexport default function TypographyH2() {\n  return (\n    <Typography\n      as=\"h2\"\n      variant=\"3xl/semibold\"\n      className=\"scroll-m-20 border-b border-b-border pb-2 tracking-tight first:mt-0\"\n    >\n      The People of the Kingdom\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-large",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-large.tsx",
+      "content": "import { Typography } from \"@/registry/neon/ui/typography\";\n\nexport default function TypographyLarge() {\n  return (\n    <Typography as=\"p\" variant=\"lg/semibold\">\n      Are you absolutely sure?\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

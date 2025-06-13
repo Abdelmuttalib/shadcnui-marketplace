@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-lead",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-lead.tsx",
+      "content": "import { Typography } from \"@/registry/libelle/ui/typography\";\n\nexport default function TypographyLead() {\n  return (\n    <Typography\n      as=\"p\"\n      variant=\"xl/normal\"\n      className=\"text-muted-foreground\"\n    >\n      A modal dialog that interrupts the user with important content and expects\n      a response.\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

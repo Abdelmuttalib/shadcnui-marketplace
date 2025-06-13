@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "data-table",
+  "type": "registry:ui",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "dependencies": [
+    "@tanstack/react-table"
+  ],
+  "files": [
+    {
+      "path": "ui/data-table.tsx",
+      "content": "\"use client\";\n\nimport {\n  ColumnDef,\n  flexRender,\n  getCoreRowModel,\n  useReactTable,\n} from \"@tanstack/react-table\";\n\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/linear/ui/table\";\n\ninterface DataTableProps<TData, TValue> {\n  columns: ColumnDef<TData, TValue>[];\n  data: TData[];\n}\n\nexport function DataTable<TData, TValue>({\n  columns,\n  data,\n}: DataTableProps<TData, TValue>) {\n  const table = useReactTable({\n    data,\n    columns,\n    getCoreRowModel: getCoreRowModel(),\n  });\n\n  return (\n    <div className=\"rounded-md border\">\n      <Table>\n        <TableHeader>\n          {table.getHeaderGroups().map((headerGroup) => (\n            <TableRow key={headerGroup.id}>\n              {headerGroup.headers.map((header) => {\n                return (\n                  <TableHead key={header.id}>\n                    {header.isPlaceholder\n                      ? null\n                      : flexRender(\n                          header.column.columnDef.header,\n                          header.getContext()\n                        )}\n                  </TableHead>\n                );\n              })}\n            </TableRow>\n          ))}\n        </TableHeader>\n        <TableBody>\n          {table.getRowModel().rows?.length ? (\n            table.getRowModel().rows.map((row) => (\n              <TableRow\n                key={row.id}\n                data-state={row.getIsSelected() && \"selected\"}\n              >\n                {row.getVisibleCells().map((cell) => (\n                  <TableCell key={cell.id}>\n                    {flexRender(cell.column.columnDef.cell, cell.getContext())}\n                  </TableCell>\n                ))}\n              </TableRow>\n            ))\n          ) : (\n            <TableRow>\n              <TableCell colSpan={columns.length} className=\"h-24 text-center\">\n                No results.\n              </TableCell>\n            </TableRow>\n          )}\n        </TableBody>\n      </Table>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

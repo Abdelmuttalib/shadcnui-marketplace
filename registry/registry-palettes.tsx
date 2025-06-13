@@ -211,13 +211,13 @@ export const themePalettes: ThemePalette = {
       primary: "0.56 0.007 250" /* oklch(0.56 0.007 250) */,
       "primary-foreground": "100% 0 250" /* oklch(100% 0 250) */,
       destructive: "56% 0.22 20" /* oklch(56% 0.22 20) */,
-      "destructive-foreground": "1 0 0",
+      "destructive-foreground": "1 0 0" /* oklch(1 0 0) */,
 
-      "chart-1": "55% 0.22 260" /* oklch(55% 0.22 260) */,
-      "chart-2": "63% 0.1 190" /* oklch(63% 0.1 190) */,
-      "chart-3": "67% 0.18 360" /* oklch(67% 0.18 360) */,
-      "chart-4": "64% 0.15 245" /* oklch(64% 0.15 245) */,
-      "chart-5": "66% 0.2 25" /* oklch(66% 0.2 25) */,
+      "chart-1": "0.55 0.22 260" /* oklch(0.55 0.22 260) */,
+      "chart-2": "0.63 0.1 190" /* oklch(0.63 0.1 190) */,
+      "chart-3": "0.67 0.18 360" /* oklch(0.67 0.18 360) */,
+      "chart-4": "0.64 0.15 245" /* oklch(0.64 0.15 245) */,
+      "chart-5": "0.66 0.2 25" /* oklch(0.66 0.2 25) */,
 
       background: "1 0 0" /* oklch(1 0 0) */,
       foreground: "0.12 0.005 250" /* oklch(0.12 0.005 250) */,
@@ -1937,7 +1937,7 @@ export const themePalettes: ThemePalette = {
       "chart-5": "0.86 0.0483 137.86" /* oklch(0.86 0.0483 137.86) */,
 
       "sidebar-background":
-        "0.21 0.0232 250.35" /* oklch(0.21 0.0048 145.42) */,
+        "0.18 0.0018 145.42" /* oklch(0.18 0.0018 145.42) */,
       "sidebar-foreground":
         "0.95 0.0093 230.11" /* oklch(0.95 0.0093 230.11) */,
       "sidebar-primary": "0.52 0.0483 137.86" /* oklch(0.52 0.0483 137.86) */,
@@ -2039,7 +2039,7 @@ export const themePalettes: ThemePalette = {
       "chart-5": "0.86 0.0483 137.86" /* oklch(0.86 0.0483 137.86) */,
 
       "sidebar-background":
-        "0.21 0.0232 250.35" /* oklch(0.21 0.0048 145.42) */,
+        "0.21 0.0048 145.42" /* oklch(0.21 0.0048 145.42) */,
       "sidebar-foreground":
         "0.95 0.0093 230.11" /* oklch(0.95 0.0093 230.11) */,
       "sidebar-primary": "0.52 0.0483 137.86" /* oklch(0.52 0.0483 137.86) */,
@@ -2059,6 +2059,43 @@ export const themePalettesListEntries = Object.entries(themePalettes);
 
 export const DEFAULT_THEME_PALETTE = "";
 export const DEFAULT_RADIUS = "";
+
+/* gray */
+// --color-gray: 211.2 10% 49.2%; /* hsl(211.2, 10%, 49.2%) */
+// --color-gray-50: 0 0% 98%; /* hsl(210 10.5% 98%) */
+// --color-gray-100: 210 10.5% 94.5%; /* hsl(210 10.5% 94.5%) */
+// --color-gray-200: 210 10.5% 92.5%; /* hsl(210 10.5% 92.5%) */
+// --color-gray-300: 210 10.8% 85.5%; /* hsl(210 10.8% 85.5%) */
+// --color-gray-400: 211.8 10.8% 69.2%; /* hsl(211.8, 10.8%, 69.2%) */
+// --color-gray-500: 215.4 16.3% 46.9%; /* hsl(215.4 16.3% 46.9%) */
+// --color-gray-600: 215 30% 21%; /* hsl(215 30% 21%) */
+// --color-gray-650: 215 30% 18%; /* hsl(215 30% 18%) */
+// --color-gray-700: 215 30% 15%; /* hsl(215 30% 15%) */
+// --color-gray-750: 215 30% 12%; /* hsl(215 30% 12%) */
+// --color-gray-800: 215 30% 9%; /* hsl(215 30% 9%) */
+// --color-gray-850: 215 30% 6%; /* hsl(215 30% 6%) */
+// --color-gray-900: 215 30% 3%; /* hsl(215 30% 3%) */
+// --color-gray-950: 215 30% 0%; /* hsl(215 30% 0%) */
+
+/* hsl(211.2 10% 100%) */
+
+/* hsl(211.2, 10%, 49.2%) */
+/* #717D8A */
+
+/* #040a15 */
+/* hsl(218.8, 68%, 4.9%) */
+
+/* --color-gray-50-: f9fafb; */
+/* --color-gray-100: #f3f4f6; */
+/* --color-gray-200: #e5e7eb; */
+/* --color-gray-300: #d1d5db; */
+/* --color-gray-400: #9ca3af; */
+/* --color-gray-500: #6b7280; */
+/* --color-gray-600: #4b5563; */
+/* --color-gray-700: #374151; */
+/* --color-gray-800: #1f2937; */
+/* --color-gray-900: #111827; */
+/* --color-gray-950: #030712; */
 
 /*
     --gray-1: #fcfcfc;

@@ -1,0 +1,73 @@
+{
+  "name": "moon",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/moon/accordion.json",
+    "http://localhost:3000/r/styles/moon/alert-dialog.json",
+    "http://localhost:3000/r/styles/moon/alert.json",
+    "http://localhost:3000/r/styles/moon/aspect-ratio.json",
+    "http://localhost:3000/r/styles/moon/avatar.json",
+    "http://localhost:3000/r/styles/moon/badge.json",
+    "http://localhost:3000/r/styles/moon/breadcrumb.json",
+    "http://localhost:3000/r/styles/moon/button.json",
+    "http://localhost:3000/r/styles/moon/calendar.json",
+    "http://localhost:3000/r/styles/moon/card.json",
+    "http://localhost:3000/r/styles/moon/carousel.json",
+    "http://localhost:3000/r/styles/moon/chart.json",
+    "http://localhost:3000/r/styles/moon/checkbox.json",
+    "http://localhost:3000/r/styles/moon/collapsible.json",
+    "http://localhost:3000/r/styles/moon/command.json",
+    "http://localhost:3000/r/styles/moon/context-menu.json",
+    "http://localhost:3000/r/styles/moon/data-table.json",
+    "http://localhost:3000/r/styles/moon/dialog.json",
+    "http://localhost:3000/r/styles/moon/drawer.json",
+    "http://localhost:3000/r/styles/moon/dropdown-menu.json",
+    "http://localhost:3000/r/styles/moon/form.json",
+    "http://localhost:3000/r/styles/moon/hover-card.json",
+    "http://localhost:3000/r/styles/moon/input-otp.json",
+    "http://localhost:3000/r/styles/moon/input.json",
+    "http://localhost:3000/r/styles/moon/label.json",
+    "http://localhost:3000/r/styles/moon/menubar.json",
+    "http://localhost:3000/r/styles/moon/navigation-menu.json",
+    "http://localhost:3000/r/styles/moon/pagination.json",
+    "http://localhost:3000/r/styles/moon/popover.json",
+    "http://localhost:3000/r/styles/moon/progress.json",
+    "http://localhost:3000/r/styles/moon/radio-group.json",
+    "http://localhost:3000/r/styles/moon/resizable.json",
+    "http://localhost:3000/r/styles/moon/scroll-area.json",
+    "http://localhost:3000/r/styles/moon/select.json",
+    "http://localhost:3000/r/styles/moon/separator.json",
+    "http://localhost:3000/r/styles/moon/sheet.json",
+    "http://localhost:3000/r/styles/moon/sidebar.json",
+    "http://localhost:3000/r/styles/moon/skeleton.json",
+    "http://localhost:3000/r/styles/moon/slider.json",
+    "http://localhost:3000/r/styles/moon/sonner.json",
+    "http://localhost:3000/r/styles/moon/switch.json",
+    "http://localhost:3000/r/styles/moon/table.json",
+    "http://localhost:3000/r/styles/moon/tabs.json",
+    "http://localhost:3000/r/styles/moon/textarea.json",
+    "http://localhost:3000/r/styles/moon/toggle-group.json",
+    "http://localhost:3000/r/styles/moon/toggle.json",
+    "http://localhost:3000/r/styles/moon/tooltip.json",
+    "http://localhost:3000/r/styles/moon/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.6rem"
+    }
+  },
+  "files": []
+}

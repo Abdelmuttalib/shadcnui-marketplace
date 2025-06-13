@@ -1,0 +1,73 @@
+{
+  "name": "lucid",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/lucid/accordion.json",
+    "http://localhost:3000/r/styles/lucid/alert-dialog.json",
+    "http://localhost:3000/r/styles/lucid/alert.json",
+    "http://localhost:3000/r/styles/lucid/aspect-ratio.json",
+    "http://localhost:3000/r/styles/lucid/avatar.json",
+    "http://localhost:3000/r/styles/lucid/badge.json",
+    "http://localhost:3000/r/styles/lucid/breadcrumb.json",
+    "http://localhost:3000/r/styles/lucid/button.json",
+    "http://localhost:3000/r/styles/lucid/calendar.json",
+    "http://localhost:3000/r/styles/lucid/card.json",
+    "http://localhost:3000/r/styles/lucid/carousel.json",
+    "http://localhost:3000/r/styles/lucid/chart.json",
+    "http://localhost:3000/r/styles/lucid/checkbox.json",
+    "http://localhost:3000/r/styles/lucid/collapsible.json",
+    "http://localhost:3000/r/styles/lucid/command.json",
+    "http://localhost:3000/r/styles/lucid/context-menu.json",
+    "http://localhost:3000/r/styles/lucid/data-table.json",
+    "http://localhost:3000/r/styles/lucid/dialog.json",
+    "http://localhost:3000/r/styles/lucid/drawer.json",
+    "http://localhost:3000/r/styles/lucid/dropdown-menu.json",
+    "http://localhost:3000/r/styles/lucid/form.json",
+    "http://localhost:3000/r/styles/lucid/hover-card.json",
+    "http://localhost:3000/r/styles/lucid/input-otp.json",
+    "http://localhost:3000/r/styles/lucid/input.json",
+    "http://localhost:3000/r/styles/lucid/label.json",
+    "http://localhost:3000/r/styles/lucid/menubar.json",
+    "http://localhost:3000/r/styles/lucid/navigation-menu.json",
+    "http://localhost:3000/r/styles/lucid/pagination.json",
+    "http://localhost:3000/r/styles/lucid/popover.json",
+    "http://localhost:3000/r/styles/lucid/progress.json",
+    "http://localhost:3000/r/styles/lucid/radio-group.json",
+    "http://localhost:3000/r/styles/lucid/resizable.json",
+    "http://localhost:3000/r/styles/lucid/scroll-area.json",
+    "http://localhost:3000/r/styles/lucid/select.json",
+    "http://localhost:3000/r/styles/lucid/separator.json",
+    "http://localhost:3000/r/styles/lucid/sheet.json",
+    "http://localhost:3000/r/styles/lucid/sidebar.json",
+    "http://localhost:3000/r/styles/lucid/skeleton.json",
+    "http://localhost:3000/r/styles/lucid/slider.json",
+    "http://localhost:3000/r/styles/lucid/sonner.json",
+    "http://localhost:3000/r/styles/lucid/switch.json",
+    "http://localhost:3000/r/styles/lucid/table.json",
+    "http://localhost:3000/r/styles/lucid/tabs.json",
+    "http://localhost:3000/r/styles/lucid/textarea.json",
+    "http://localhost:3000/r/styles/lucid/toggle-group.json",
+    "http://localhost:3000/r/styles/lucid/toggle.json",
+    "http://localhost:3000/r/styles/lucid/tooltip.json",
+    "http://localhost:3000/r/styles/lucid/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.5rem"
+    }
+  },
+  "files": []
+}

@@ -1,0 +1,73 @@
+{
+  "name": "wedges",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/wedges/accordion.json",
+    "http://localhost:3000/r/styles/wedges/alert-dialog.json",
+    "http://localhost:3000/r/styles/wedges/alert.json",
+    "http://localhost:3000/r/styles/wedges/aspect-ratio.json",
+    "http://localhost:3000/r/styles/wedges/avatar.json",
+    "http://localhost:3000/r/styles/wedges/badge.json",
+    "http://localhost:3000/r/styles/wedges/breadcrumb.json",
+    "http://localhost:3000/r/styles/wedges/button.json",
+    "http://localhost:3000/r/styles/wedges/calendar.json",
+    "http://localhost:3000/r/styles/wedges/card.json",
+    "http://localhost:3000/r/styles/wedges/carousel.json",
+    "http://localhost:3000/r/styles/wedges/chart.json",
+    "http://localhost:3000/r/styles/wedges/checkbox.json",
+    "http://localhost:3000/r/styles/wedges/collapsible.json",
+    "http://localhost:3000/r/styles/wedges/command.json",
+    "http://localhost:3000/r/styles/wedges/context-menu.json",
+    "http://localhost:3000/r/styles/wedges/data-table.json",
+    "http://localhost:3000/r/styles/wedges/dialog.json",
+    "http://localhost:3000/r/styles/wedges/drawer.json",
+    "http://localhost:3000/r/styles/wedges/dropdown-menu.json",
+    "http://localhost:3000/r/styles/wedges/form.json",
+    "http://localhost:3000/r/styles/wedges/hover-card.json",
+    "http://localhost:3000/r/styles/wedges/input-otp.json",
+    "http://localhost:3000/r/styles/wedges/input.json",
+    "http://localhost:3000/r/styles/wedges/label.json",
+    "http://localhost:3000/r/styles/wedges/menubar.json",
+    "http://localhost:3000/r/styles/wedges/navigation-menu.json",
+    "http://localhost:3000/r/styles/wedges/pagination.json",
+    "http://localhost:3000/r/styles/wedges/popover.json",
+    "http://localhost:3000/r/styles/wedges/progress.json",
+    "http://localhost:3000/r/styles/wedges/radio-group.json",
+    "http://localhost:3000/r/styles/wedges/resizable.json",
+    "http://localhost:3000/r/styles/wedges/scroll-area.json",
+    "http://localhost:3000/r/styles/wedges/select.json",
+    "http://localhost:3000/r/styles/wedges/separator.json",
+    "http://localhost:3000/r/styles/wedges/sheet.json",
+    "http://localhost:3000/r/styles/wedges/sidebar.json",
+    "http://localhost:3000/r/styles/wedges/skeleton.json",
+    "http://localhost:3000/r/styles/wedges/slider.json",
+    "http://localhost:3000/r/styles/wedges/sonner.json",
+    "http://localhost:3000/r/styles/wedges/switch.json",
+    "http://localhost:3000/r/styles/wedges/table.json",
+    "http://localhost:3000/r/styles/wedges/tabs.json",
+    "http://localhost:3000/r/styles/wedges/textarea.json",
+    "http://localhost:3000/r/styles/wedges/toggle-group.json",
+    "http://localhost:3000/r/styles/wedges/toggle.json",
+    "http://localhost:3000/r/styles/wedges/tooltip.json",
+    "http://localhost:3000/r/styles/wedges/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.5rem"
+    }
+  },
+  "files": []
+}

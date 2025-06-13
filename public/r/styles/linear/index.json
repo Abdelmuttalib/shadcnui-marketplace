@@ -1,0 +1,73 @@
+{
+  "name": "linear",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "http://localhost:3000/r/styles/linear/accordion.json",
+    "http://localhost:3000/r/styles/linear/alert-dialog.json",
+    "http://localhost:3000/r/styles/linear/alert.json",
+    "http://localhost:3000/r/styles/linear/aspect-ratio.json",
+    "http://localhost:3000/r/styles/linear/avatar.json",
+    "http://localhost:3000/r/styles/linear/badge.json",
+    "http://localhost:3000/r/styles/linear/breadcrumb.json",
+    "http://localhost:3000/r/styles/linear/button.json",
+    "http://localhost:3000/r/styles/linear/calendar.json",
+    "http://localhost:3000/r/styles/linear/card.json",
+    "http://localhost:3000/r/styles/linear/carousel.json",
+    "http://localhost:3000/r/styles/linear/chart.json",
+    "http://localhost:3000/r/styles/linear/checkbox.json",
+    "http://localhost:3000/r/styles/linear/collapsible.json",
+    "http://localhost:3000/r/styles/linear/command.json",
+    "http://localhost:3000/r/styles/linear/context-menu.json",
+    "http://localhost:3000/r/styles/linear/data-table.json",
+    "http://localhost:3000/r/styles/linear/dialog.json",
+    "http://localhost:3000/r/styles/linear/drawer.json",
+    "http://localhost:3000/r/styles/linear/dropdown-menu.json",
+    "http://localhost:3000/r/styles/linear/form.json",
+    "http://localhost:3000/r/styles/linear/hover-card.json",
+    "http://localhost:3000/r/styles/linear/input-otp.json",
+    "http://localhost:3000/r/styles/linear/input.json",
+    "http://localhost:3000/r/styles/linear/label.json",
+    "http://localhost:3000/r/styles/linear/menubar.json",
+    "http://localhost:3000/r/styles/linear/navigation-menu.json",
+    "http://localhost:3000/r/styles/linear/pagination.json",
+    "http://localhost:3000/r/styles/linear/popover.json",
+    "http://localhost:3000/r/styles/linear/progress.json",
+    "http://localhost:3000/r/styles/linear/radio-group.json",
+    "http://localhost:3000/r/styles/linear/resizable.json",
+    "http://localhost:3000/r/styles/linear/scroll-area.json",
+    "http://localhost:3000/r/styles/linear/select.json",
+    "http://localhost:3000/r/styles/linear/separator.json",
+    "http://localhost:3000/r/styles/linear/sheet.json",
+    "http://localhost:3000/r/styles/linear/sidebar.json",
+    "http://localhost:3000/r/styles/linear/skeleton.json",
+    "http://localhost:3000/r/styles/linear/slider.json",
+    "http://localhost:3000/r/styles/linear/sonner.json",
+    "http://localhost:3000/r/styles/linear/switch.json",
+    "http://localhost:3000/r/styles/linear/table.json",
+    "http://localhost:3000/r/styles/linear/tabs.json",
+    "http://localhost:3000/r/styles/linear/textarea.json",
+    "http://localhost:3000/r/styles/linear/toggle-group.json",
+    "http://localhost:3000/r/styles/linear/toggle.json",
+    "http://localhost:3000/r/styles/linear/tooltip.json",
+    "http://localhost:3000/r/styles/linear/typography.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.5rem"
+    }
+  },
+  "files": []
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-small",
+  "type": "registry:example",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "files": [
+    {
+      "path": "examples/typography-small.tsx",
+      "content": "import { Typography } from \"@/registry/lucid/ui/typography\";\n\nexport default function TypographySmall() {\n  return (\n    <Typography as=\"small\" variant=\"sm/medium\" className=\"leading-none\">\n      Email address\n    </Typography>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}
