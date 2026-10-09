@@ -778,7 +778,7 @@ try {
   const isProd = env === "production";
 
   // await syncStyles();
-  // await buildRegistry(result.data);
+  await buildRegistry(result.data);
   await buildStyles(result.data);
   await buildStylesIndex(isProd ? BASE_SITE_URL : "http://localhost:3000");
   await buildThemes();

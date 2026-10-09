@@ -36,7 +36,7 @@ function DemoContainer({
 export function CardsPage() {
   return (
     <>
-      <div className="hidden items-start justify-center gap-6 rounded-material-lg p-8 lg:grid lg:grid-cols-2 2xl:grid-cols-3">
+      <div className="grid grid-cols-2 items-start justify-center gap-6 rounded-material-lg p-4 md:p-6 lg:p-8 xl:grid-cols-3">
         <div className="col-span-2 grid items-start gap-6 lg:col-span-1">
           <DemoContainer>
             <DemoCreateAccount />

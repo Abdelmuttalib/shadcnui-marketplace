@@ -18,7 +18,7 @@ export function StylesPreviewCards() {
   const { pageExampleType } = useStyleStore();
 
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-6 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-6 2xl:grid-cols-3">
       {STYLES.filter((s) => s !== "default" && s !== "material").map(
         (style, index) => {
           const s = `--${getStyleVariablesPrefix(style)}-primary`;
@@ -100,9 +100,9 @@ export function StylesPagesExamplesPreviews() {
 
           return (
             <div key={styleData.name + index}>
-              <div className="relative grid grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-6">
+              <div className="relative grid grid-cols-1 gap-4 lg:gap-6 xl:grid-cols-7">
                 <div className="relative xl:col-span-2">
-                  <div className="sticky top-20 z-10 space-y-8 p-4 pt-10 xl:ml-auto xl:max-w-md xl:p-0 xl:pt-28">
+                  <div className="sticky top-20 z-10 space-y-8 p-4 pt-10 xl:ml-auto xl:max-w-md xl:p-0 xl:px-6 xl:pt-28">
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center gap-4">
                         <Typography
@@ -169,13 +169,14 @@ export function StylesPagesExamplesPreviews() {
                             </div> */}
                   </div>
                 </div>
-                <div className="grid p-4 py-0 lg:py-4 xl:col-span-4">
+                <div className="grid overflow-scroll p-4 py-0 lg:py-4 xl:col-span-5">
                   <StylePageExamplePreview
                     id="dashboard"
                     styleProp={styleData.name}
                     pageExampleTypeProp={pageExampleType || "dashboard"}
                     hideBadge={true}
                     className="overflow-auto"
+                    screenWidth
                     // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
                   />
                 </div>

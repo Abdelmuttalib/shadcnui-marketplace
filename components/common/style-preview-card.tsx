@@ -84,11 +84,13 @@ export function StylePreviewCard({
           }}
         ></div>
         <StylePageExamplePreview
-          id="dashboard"
+          id={`${style}-${pageExampleType || ""}-example-preview`}
           styleProp={style}
           pageExampleTypeProp={pageExampleType || "dashboard"}
           hideBadge={true}
-          className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
+          // className="absolute left-1/2 top-0 z-50 w-[1440px] max-w-[1440px] -translate-x-1/2"
+          className="absolute left-0 top-0 z-20 w-[1440px] max-w-[1440px]"
+          // className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
         />
       </div>
     </div>

@@ -18,6 +18,11 @@ export function Seo() {
         content="Marketplace for shadcn ui kits and styles. Discover premium shadcn ui styles and ui designs for your web applications."
       />
 
+      <meta
+        name="keywords"
+        content="shadcn,ui, shadcn ui style, shadcn ui components, design system, design, components, ui kit, ui components, ui kits, react, react ui kit, react ui components, react components, component library, component kit, component ui kit, component ui components, components library, components kit, design system components, design system kit, design system ui kit, design system ui components, design systems, design ui kits, design ui components, ui design kits, ui design components, ui design systems, ui ui kits, ui ui components, open source, open source components, open source design systems, open source ui kits, open source ui components, shadcn ui, shadcn ui style, shadcn ui components, shadcn design system, shadcn design ui kits, shadcn design ui components, shadcn ui new york, shadcn ui design, shadcn ui styles, new york, new york style, new york components, new york design system, new york ui kits, new york ui components"
+      />
+
       <meta name="author" content="Abdelmuttalib Ahmed" />
 
       {/* Open Graph / Facebook */}
