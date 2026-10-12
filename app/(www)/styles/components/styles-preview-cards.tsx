@@ -26,9 +26,7 @@ export function StylesPreviewCards() {
           return (
             <StyleCssWrapper key={style + index} className="rounded-md">
               <StyleFontWrapper sStyle={style}>
-                {/* <StyleShowcaseCardLink style={style} /> */}
-                <div className="group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-gradient-to-r from-transparent to-accent p-6">
-                  {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-transparent to-accent"></div> */}
+                <div className="to-accent bg-linear-to-r group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border from-transparent p-6">
                   <div className="z-20 flex w-full items-center justify-between">
                     <Typography
                       variant="3xl/semibold"
@@ -72,8 +70,7 @@ export function StylesPreviewCards() {
                   </div>
                   <div className="relative -ml-2">
                     <div
-                      // bg-blue-500/30
-                      className="absolute left-0 top-0 z-10 flex size-[36rem] items-center justify-center opacity-80 blur-3xl transition-all duration-200 ease-in-out group-hover:size-[30rem] group-hover:opacity-50 group-hover:blur-2xl"
+                      className="size-144 group-hover:size-120 absolute left-0 top-0 z-10 flex items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-50 group-hover:blur-2xl dark:opacity-80 dark:blur-3xl"
                       style={{
                         backgroundColor: `oklch(var(${s}))`,
                       }}
@@ -137,7 +134,7 @@ export function StylesPagesExamplesPreviews() {
                                     >
                                       Default {styleData.title} Palette
                                     </RichBadge> */}
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-muted-foreground text-sm">
                               Default {styleData.title} Palette
                             </p>
                             <div className="flex w-fit rounded-sm border">

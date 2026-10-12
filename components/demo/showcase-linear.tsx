@@ -100,7 +100,7 @@ export function AspectRatioDemo() {
         src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
         alt="Photo by Drew Beamer"
         fill
-        className="h-full w-full rounded-linear-md object-cover"
+        className="rounded-linear-md h-full w-full object-cover"
       />
     </AspectRatio>
   );
@@ -329,14 +329,14 @@ export function CollapsibleDemo() {
           </Button>
         </CollapsibleTrigger>
       </div>
-      <div className="rounded-linear-md border border-linear-border px-4 py-2 font-mono text-sm shadow-sm">
+      <div className="rounded-linear-md border-linear-border border px-4 py-2 font-mono text-sm shadow-sm">
         @radix-ui/primitives
       </div>
       <CollapsibleContent className="space-y-2">
-        <div className="rounded-linear-md border border-linear-border px-4 py-2 font-mono text-sm shadow-sm">
+        <div className="rounded-linear-md border-linear-border border px-4 py-2 font-mono text-sm shadow-sm">
           @radix-ui/colors
         </div>
-        <div className="rounded-linear-md border border-linear-border px-4 py-2 font-mono text-sm shadow-sm">
+        <div className="rounded-linear-md border-linear-border border px-4 py-2 font-mono text-sm shadow-sm">
           @stitches/react
         </div>
       </CollapsibleContent>
@@ -511,7 +511,7 @@ import {
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-linear-md border border-dashed border-linear-border text-sm">
+      <ContextMenuTrigger className="rounded-linear-md border-linear-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
@@ -726,7 +726,7 @@ export function DrawerDemo() {
                 <div className="text-7xl font-bold tracking-tighter">
                   {goal}
                 </div>
-                <div className="text-[0.70rem] uppercase text-linear-muted-foreground">
+                <div className="text-linear-muted-foreground text-[0.70rem] uppercase">
                   Calories/day
                 </div>
               </div>
@@ -865,7 +865,7 @@ export function HoverCardDemo() {
             </p>
             <div className="flex items-center pt-2">
               <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
-              <span className="text-xs text-linear-muted-foreground">
+              <span className="text-linear-muted-foreground text-xs">
                 Joined December 2021
               </span>
             </div>
@@ -1086,14 +1086,14 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-accent/50 to-accent p-6 no-underline outline-none focus:shadow-md"
+                    className="bg-linear-to-b from-accent/50 to-accent flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <CalendarIcon className="h-6 w-6" />
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
-                    <p className="text-sm leading-tight text-linear-muted-foreground">
+                    <p className="text-linear-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
@@ -1150,13 +1150,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-linear-muted-foreground">
+          <p className="text-linear-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>
@@ -1215,7 +1215,7 @@ export function PopoverDemo() {
         <div className="grid gap-4">
           <div className="space-y-2">
             <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-sm text-linear-muted-foreground">
+            <p className="text-linear-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
           </div>
@@ -1303,7 +1303,7 @@ export function ResizableDemo() {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="max-w-md rounded-linear-lg border border-linear-border md:min-w-[450px]"
+      className="rounded-linear-lg border-linear-border max-w-md border md:min-w-[450px]"
     >
       <ResizablePanel defaultSize={50}>
         <div className="flex h-[200px] items-center justify-center p-6">
@@ -1403,7 +1403,7 @@ export function ChartLineDemo() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-linear-muted-foreground">
+            <div className="text-linear-muted-foreground flex items-center gap-2 leading-none">
               Showing total visitors for the last 6 months
             </div>
           </div>
@@ -1466,7 +1466,7 @@ export function ChartBarDemo() {
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-linear-muted-foreground">
+        <div className="text-linear-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
@@ -1539,7 +1539,7 @@ export function ChartAreaDemo() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-linear-muted-foreground">
+            <div className="text-linear-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -1763,7 +1763,7 @@ export function FormDemo() {
           control={form.control}
           name="mobile"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-linear-md border border-linear-border p-4 shadow">
+            <FormItem className="rounded-linear-md border-linear-border flex flex-row items-start space-x-3 space-y-0 border p-4 shadow">
               <FormControl>
                 <Checkbox
                   checked={field.value}
@@ -1955,7 +1955,7 @@ const tags = Array.from({ length: 50 }).map(
 
 export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-72 w-48 rounded-linear-md border border-linear-border">
+    <ScrollArea className="rounded-linear-md border-linear-border h-72 w-48 border">
       <div className="p-4">
         <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
         {tags.map((tag) => (
@@ -2068,7 +2068,7 @@ export function CardDemo() {
           </ol>
         </CardContent>
         <CardFooter>
-          <div className="flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale">
+          <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
@@ -2123,7 +2123,7 @@ export function SeparatorDemo() {
     <div>
       <div className="space-y-1">
         <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-sm text-linear-muted-foreground">
+        <p className="text-linear-muted-foreground text-sm">
           An open-source UI component library.
         </p>
       </div>
@@ -2693,7 +2693,7 @@ export function Chart4() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-linear-muted-foreground">
+            <div className="text-linear-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -2802,7 +2802,7 @@ export function Chart5() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-linear-muted-foreground">
+            <div className="text-linear-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -2868,7 +2868,7 @@ export function Chart6() {
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-linear-muted-foreground">
+        <div className="text-linear-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
@@ -2950,7 +2950,7 @@ export function Chart7() {
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-linear-muted-foreground">
+        <div className="text-linear-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>

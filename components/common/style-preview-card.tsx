@@ -29,8 +29,8 @@ export function StylePreviewCard({
   const styleCssVariableWithPrefix = `--${getStyleVariablesPrefix(style)}`;
 
   return (
-    <div className="group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-gradient-to-r from-transparent to-accent p-6">
-      {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-transparent to-accent"></div> */}
+    <div className="bg-linear-to-r to-accent group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border from-transparent p-6">
+      {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-linear-to-br from-transparent to-accent"></div> */}
 
       {link ? (
         <Link
@@ -49,7 +49,7 @@ export function StylePreviewCard({
         >
           {title}{" "}
           {link && link.href ? (
-            <ArrowRightIcon className="inline-block h-5 w-5 -rotate-45 text-muted-foreground/40 group-hover:text-foreground" />
+            <ArrowRightIcon className="text-muted-foreground/40 group-hover:text-foreground inline-block h-5 w-5 -rotate-45" />
           ) : null}
         </Typography>
         <div className="flex items-center gap-2">

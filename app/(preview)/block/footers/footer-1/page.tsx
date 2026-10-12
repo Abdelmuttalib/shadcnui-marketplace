@@ -13,14 +13,14 @@ export default function FooterMinimal() {
               <Typography
                 as="h3"
                 variant="2xl/semibold"
-                className="bg-gradient-to-r from-primary to-white bg-clip-text text-transparent"
+                className="bg-linear-to-r from-primary to-white bg-clip-text text-transparent"
               >
                 Elegant Co.
               </Typography>
               <Typography
                 as="p"
                 variant="sm/normal"
-                className="mt-2 text-wedges-muted-foreground"
+                className="text-wedges-muted-foreground mt-2"
               >
                 Crafting digital experiences
               </Typography>
@@ -31,7 +31,7 @@ export default function FooterMinimal() {
                   <Link
                     key={index}
                     href="#"
-                    className="text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                    className="text-wedges-muted-foreground hover:text-wedges-primary transition-colors duration-300"
                   >
                     <Icon className="h-6 w-6" />
                   </Link>

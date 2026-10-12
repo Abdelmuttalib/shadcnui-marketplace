@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "https://shadcn-ui-marketplace.com",
     title: "shadcn ui marketplace",
     description:
-      "shadcn ui marketplace, A marketplace for shadcn ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. Going beyond default and new york shadcn ui styles.",
+      "shadcn ui marketplace, A marketplace for shadcn ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. .",
     images: [
       {
         url: "https://shadcn-ui-marketplace.com/images/og.png",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "shadcn ui marketplace, A marketplace for shadcn-ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. Going beyond default and new york shadcn ui styles.",
+    "shadcn ui marketplace, A marketplace for shadcn-ui components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, and styles. .",
   metadataBase: new URL("https://shadcn-ui-marketplace.com"),
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
         <DevTools />
         <Navbar />
         <main className="relative grid h-full flex-1 gap-72 pb-24 md:pb-40">
-          {/* <div className="absolute bottom-0 h-32 w-full bg-gradient-to-b from-transparent to-accent/40"></div> */}
+          {/* <div className="absolute bottom-0 h-32 w-full bg-linear-to-b from-transparent to-accent/40"></div> */}
           {children}
         </main>
         <Footer />

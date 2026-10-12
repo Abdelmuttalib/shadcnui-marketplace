@@ -1,5 +1,6 @@
-import { cn } from "@/lib/utils";
 import { CheckCircle2 } from "lucide-react";
+
+import { cn } from "@/lib/utils";
 
 const featuresData = [
   {
@@ -28,11 +29,11 @@ export default function Features() {
             key={item.feature}
             className={cn(
               "flex flex-col gap-y-4 rounded-lg p-4 lg:p-9",
-              "border bg-gradient-to-b from-muted/40 to-background"
+              "bg-linear-to-b from-muted/40 to-background border"
             )}
           >
-            <div className="size-fit rounded-lg border bg-gradient-to-b from-muted/40 to-background p-2 shadow">
-              <CheckCircle2 className="size-6 fill-primary text-white lg:size-7" />
+            <div className="bg-linear-to-b from-muted/40 to-background size-fit rounded-lg border p-2 shadow">
+              <CheckCircle2 className="fill-primary size-6 text-white lg:size-7" />
             </div>
             <div className="flex flex-col gap-y-2">
               <h3 className="text-xl font-medium capitalize">{item.feature}</h3>

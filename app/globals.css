@@ -1,58 +1,37 @@
-/* @import "./themes.css"; */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./theme.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* v3 visual-parity rules (official Tailwind v4 compat snippets):
+ * v4 changed bare-border color to currentColor, placeholder color to
+ * currentColor at 50%, and button cursor to default. These preserve v3.4
+ * rendering for elements without explicit utilities.
+ */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-gray-400);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 @layer base {
   :root {
-    /* oklch(20.97% 0.005 270.41) */
-
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
-
-    /* #030101 */
-    /* #0300d6 */
-    /* hsl(100, 9%, 93%) */
-    /* #edefec */
-    /* rgb(237, 239, 236) */
-
-    --color-gray22-50: 0.985 0.002 247.839; /* oklch(.985 .002 247.839) */
-    --color-gray22-100: 96.56% 0 102.07; /* oklch(98.56% 0 102.07) */
-    --color-gray22-200: 92.24% 0 102.07; /* oklch(92.24% 0 102.07) */
-    --color-gray22-300: 85.34% 0 102.07; /* oklch(85.34% 0 102.07) */
-    --color-gray22-400: 72.69% 0.0028 145.58; /* oklch(72.69% 0.0028 145.58) */
-    --color-gray22-500: 58.34% 0.0095 258.24; /* oklch(58.34% 0.0095 258.24) */
-    --color-gray22-600: 49.48% 0.0028 145.59; /* oklch(43.48% 0.0028 145.59) */
-    --color-gray22-700: 0.27 0.0078 269.97; /* oklch(0.27 0.0078 269.97) */
-    --color-gray22-800: 20.97% 0.005 270.41; /* oklch(20.97% 0.005 270.41) */
-    --color-gray22-900: 0.17 0 0; /* oklch(0.20 0 0) */
-    --color-gray22-950: 0.14 0 0; /* oklch(0.17 0 0) */
-
-    --color-gray3-50: 0.985 0.0078 269.97; /* oklch(.985 0.0078 269.97) */
-    --color-gray3-100: 0.9856 0.0078 269.97; /* oklch(0.9856 0.0078 269.97) */
-    --color-gray3-200: 0.9224 0.0078 269.97; /* oklch(0.9224 0.0078 269.97) */
-    --color-gray3-300: 0.8534 0.0078 269.97; /* oklch(0.8534 0.0078 269.97) */
-    --color-gray3-400: 0.7269 0.0078 269.97; /* oklch(0.7269 0.0078 269.97) */
-    --color-gray3-500: 0.5834 0.0078 269.97; /* oklch(0.5834 0.0078 269.97) */
-    --color-gray3-600: 0.4348 0.0078 269.97; /* oklch(0.4348 0.0078 269.97) */
-    --color-gray3-700: 0.27 0.0078 269.97; /* oklch(0.27 0.0078 269.97) */
-    --color-gray3-800: 0.2097 0.0078 269.97; /* oklch(0.2097 0.0078 269.97) */
-    --color-gray3-900: 0.2 0.0078 269.97; /* oklch(0.20 0.0078 269.97) */
-    --color-gray3-950: 0.17 0.0078 269.97; /* oklch(0.17 0.0078 269.97) */
-
-    --color-gray0-50: 0.97 0 246.26; /* oklch(0.97 0.00 246.26) */
-    --color-gray0-100: 0.98 0 246.26; /* oklch(0.94 0.00 246.26) */
-    --color-gray0-200: 0.89 0 246.26; /* oklch(0.89 0.00 246.26) */
-    --color-gray0-300: 0.78 0 246.26; /* oklch(0.78 0.00 246.26) */
-    --color-gray0-400: 0.65 0 246.26; /* oklch(0.65 0.00 246.26) */
-    --color-gray0-500: 0.5 0 246.26; /* oklch(0.50 0.00 246.26) */
-    --color-gray0-600: 0.38 0 246.26; /* oklch(0.38 0.00 246.26) */
-    --color-gray0-700: 0.25 0 246.26; /* oklch(0.25 0.00 246.26) */
-    --color-gray0-800: 0.19 0 246.26; /* oklch(0.19 0.00 246.26) */
-    --color-gray0-900: 0.15 0 246.26; /* oklch(0.15 0.00 246.26) */
-    --color-gray0-950: 0.12 0 246.26; /* oklch(0.12 0.00 246.26) */
 
     --color-gray-50: 0.97 0 0; /* oklch(0.97 0 0) */
     --color-gray-100: 0.97 0 0; /* oklch(0.96 0 0) */
@@ -66,41 +45,6 @@
     --color-gray-900: 0.16 0 0; /* oklch(0.16 0 0) */
     --color-gray-950: 0.1 0 0; /* oklch(0.1 0 0) */
 
-    /*
-    oklch(97.91% 0 0)
-    rgb(126, 126, 126) oklch(0.5931 0 0) text muted foreground
-    rgb(21, 21, 21) oklch(0.1957 0 0) input background
-    rgb(21, 21, 21) oklch(0.1957 0 0) accent background
-    rgb(31, 31, 31) oklch(0.2393 0 0) border
-    rgb(31, 31, 31) oklch(0.2393 0 0) border on accent
-
-    */
-
-    /* --black: black;
-    --white: white;
-    --light-grey: #f4f4f4;
-    --black-2: #0b0f14;
-    --medium-spring-green: #0ce48d;
-    --midnight-blue: #222d38;
-    --black-3: #141b22; */
-
-    /* --color-blue-600: oklch(.546 .245 262.881); */
-    /* --color-blue-50: oklch(0.97 0.014 254.604);
-    --color-blue-100: oklch(0.932 0.032 255.585);
-    --color-blue-200: oklch(0.882 0.059 254.128);
-    --color-blue-300: oklch(0.809 0.105 251.813);
-    --color-blue-400: oklch(0.707 0.165 254.624);
-    --color-blue-500: oklch(0.623 0.214 259.815);
-    --color-blue-600: oklch(0.546 0.245 262.881);
-    --color-blue-700: oklch(0.488 0.243 264.376);
-    --color-blue-800: oklch(0.424 0.199 265.638);
-    --color-blue-900: oklch(0.379 0.146 265.522);
-    --color-blue-950: oklch(0.282 0.091 267.935); */
-
-    /* oklch(77.57% 0.1427 174.56) */
-    /* oklch(87.95% 0.2129 155.86) */
-    /* rgb(255, 61, 0) */
-    /* oklch(0.6535 0.234792 34.037) */
     --color-primary: 0.6535 0.234792 34.037; /* oklch(55.93% 0.158 274.41) */
 
     --color-white: 1 0 0; /* oklch(1 0 0) */
@@ -121,12 +65,9 @@
     --popover: var(--color-layer);
     --popover-foreground: var(--color-foreground);
     --primary: 10% 0 0; /* oklch(10% 0 0) */
-    --primary11: var(--color-primary);
     --primary-foreground: var(--color-white);
 
     --secondary: 90% 0.0918 295.58; /* oklch(90% 0.0918 295.58) */
-    --secondary11: 98% 0.16 150; /* oklch(98% 0.16 150) */
-    --secondary22: var(--color-gray-100);
     --secondary-foreground: var(--color-foreground);
     --muted: var(--color-gray-100);
     --muted-foreground: var(--color-gray-500);
@@ -237,7 +178,6 @@
     --libelle-primary-foreground: 0.97 0.0119 286.18; /* oklch(0.97 0.0119 286.18) */
 
     --libelle-secondary: 0.9 0.1641 281.01; /* oklch(0.90 0.1641 281.01) */
-    --libelle-secondary22: 90.67% 0.01 250; /* oklch(90.67% 0.01 250) */
     --libelle-secondary-foreground: 0.2 0 0; /* oklch(0.2 0 0) */
     --libelle-muted: 90.67% 0.01 250; /* oklch(90.67% 0.01 250) */
     --libelle-muted-foreground: 54.17% 0.01 250; /* oklch(54.17% 0.01 250) */
@@ -1161,29 +1101,6 @@
     --color-foreground: var(--color-white);
 
     --color-layer: var(--color-gray-900);
-    /* export interface ButtonLinkProps
-    extends LinkProps,
-      VariantProps<typeof buttonVariants> {
-    className?: string;
-    children?: React.ReactNode;
-  }
-
-  const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-    ({ className, variant, size, ...props }, ref) => {
-      const Comp = Link;
-      return (
-        <Comp
-          className={cn(buttonVariants({ variant, size, className }))}
-          ref={ref}
-          {...props}
-        />
-      );
-    }
-  );
-
-  ButtonLink.displayName = "ButtonLink";
-
-  export { Button, ButtonLink, buttonVariants }; */
 
     --background: 0.12 0 0; /* oklch(0.12 0 0) */
     --foreground: 0.95 0 0; /* oklch(0.95 0 0) */
@@ -1192,10 +1109,8 @@
     --popover: 0.19 0 0; /* oklch(0.19 0 0) */
     --popover-foreground: 0.97 0 0; /* oklch(0.97 0 0) */
     --primary: 0.92 0 0; /* oklch(0.92 0 0) */
-    --primary2222: 0.7535 0.234792 34.037; /* oklch(0.7535 0.234792 34.037) */
     --primary-foreground: 0.12 0 0; /* oklch(0.12 0 0) */
     --secondary: 0.26 0 0; /* oklch(0.26 0 0) */
-    --secondary22: 0.24 0 0; /* oklch(0.24 0 0) */
     --secondary-foreground: 0.97 0 0; /* oklch(0.97 0 0) */
     --muted: var(--color-gray-700);
     --muted-foreground: var(--color-gray-500);
@@ -1751,23 +1666,18 @@
 }
 
 @layer base {
+  /* Margin, padding, and box-sizing resets are provided by Tailwind v4
+     preflight; only the border-color default is applied here. */
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
   }
-  /*
-  .min-w-main {
-    @apply min-w-[calc(100vw-224px)];
-  } */
 
   pre {
-    @apply hide-scrollbar max-h-[45rem] max-w-[95vw] overflow-auto overflow-x-auto rounded-lg bg-card p-4 font-mono text-sm leading-relaxed;
+    @apply hide-scrollbar bg-card max-h-[45rem] max-w-[95vw] overflow-auto overflow-x-auto rounded-lg p-4 font-mono text-sm leading-relaxed;
     white-space: pre;
   }
 
@@ -1786,16 +1696,12 @@
   }
 }
 
-@layer utilities {
-  /* Hide scrollbar for Chrome, Safari, and Opera */
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Hide scrollbar for IE, Edge, and Firefox */
-  .hide-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+/* Hide scrollbar (custom utility: usable as a class and with variants) */
+@utility hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
   }
 }
 
@@ -1805,82 +1711,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   scroll-behavior: smooth;
-}
-
-.neon-test {
-  --neon-background: 1 0 0; /* oklch(1 0 0) */
-  --neon-foreground: 20.02% 0.01 250; /* oklch(20.02% 0.01 250) */
-  --neon-card: 1 0 0; /* oklch(1 0 0) */
-  --neon-card-foreground: 20.02% 0.01 250; /* oklch(20.02% 0.01 250) */
-  --neon-popover: 1 0 0; /* oklch(1 0 0) */
-  --neon-popover-foreground: 20.02% 0.01 250; /* oklch(20.02% 0.01 250) */
-  --neon-primary: 55.65% 0.24 261.95; /* oklch(55.65% 0.24 261.95) */
-  --neon-primary-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-secondary: 90.67% 0.01 250; /* oklch(90.67% 0.01 250) */
-  --neon-secondary-foreground: 20.02% 0.01 250; /* oklch(20.02% 0.01 250) */
-  --neon-muted: 90.67% 0.01 250; /* oklch(90.67% 0.01 250) */
-  --neon-muted-foreground: 54.17% 0.01 250; /* oklch(54.17% 0.01 250) */
-  --neon-accent: 96.72% 0.01 250; /* oklch(96.72% 0.01 250) */
-  --neon-accent-foreground: 20.02% 0.01 250; /* oklch(20.02% 0.01 250) */
-  --neon-destructive: 56.92% 0.21 25.92; /* oklch(56.92% 0.21 25.92) */
-  --neon-destructive-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-border: 90.67% 0.01 250; /* oklch(90.67% 0.01 250) */
-  --neon-input: 86.66% 0.01 250; /* oklch(86.66% 0.01 250) */
-  --neon-ring: 55.65% 0.24 261.95; /* oklch(55.65% 0.24 261.95) */
-
-  --neon-chart-1: 55.65% 0.24 261.95; /* oklch(55.65% 0.24 261.95) */
-  --neon-chart-2: 62.91% 0.1 192.36; /* oklch(62.91% 0.1 192.36) */
-  --neon-chart-3: 66.89% 0.19 357.26; /* oklch(66.89% 0.19 357.26) */
-  --neon-chart-4: 64.06% 0.16 246.5; /* oklch(64.06% 0.16 246.5) */
-  --neon-chart-5: 66.62% 0.2 22.13; /* oklch(66.62% 0.2 22.13) */
-
-  --neon-radius: 0rem;
-
-  --neon-sidebar-background: 1 0 0; /* oklch(1 0 0) */
-  --neon-sidebar-foreground: 28.46% 0.01 250; /* oklch(28.46% 0.01 250) */
-  --neon-sidebar-primary: var(--neon-primary);
-  --neon-sidebar-primary-foreground: var(--neon-primary-foreground);
-  --neon-sidebar-accent: var(--neon-accent);
-  --neon-sidebar-accent-foreground: var(--neon-accent-foreground);
-  --neon-sidebar-border: var(--neon-border);
-  --neon-sidebar-ring: var(--neon-ring);
-}
-
-.dark .neon-test {
-  --neon-background: 20.02% 0.01 250; /* oklch(20.02% 0.01 250) */
-  --neon-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-card: 22% 0.01 250; /* oklch(22% 0.01 250) */
-  --neon-card-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-popover: 23.86% 0.01 250; /* oklch(23.86% 0.01 250) */
-  --neon-popover-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-primary: 55.65% 0.24 261.95; /* oklch(55.65% 0.24 261.95) */
-  --neon-primary-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-secondary: 28.46% 0.01 250; /* oklch(28.46% 0.01 250) */
-  --neon-secondary-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-muted: 28.46% 0.01 250; /* oklch(28.46% 0.01 250) */
-  --neon-muted-foreground: 73.16% 0.01 250; /* oklch(73.16% 0.01 250) */
-  --neon-accent: 28.46% 0.01 250; /* oklch(28.46% 0.01 250) */
-  --neon-accent-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-destructive: 56.92% 0.21 25.92; /* oklch(56.92% 0.21 25.92) */
-  --neon-destructive-foreground: 1 0 0; /* oklch(1 0 0) */
-  --neon-border: 28.46% 0.01 250; /* oklch(28.46% 0.01 250) */
-  --neon-input: 40.86% 0.01 250; /* oklch(40.86% 0.01 250) */
-  --neon-ring: 96.72% 0.01 250; /* oklch(96.72% 0.01 250) */
-
-  --neon-chart-1: 62.65% 0.24 261.95; /* oklch(62.65% 0.24 261.95) */
-  --neon-chart-2: 68.91% 0.1 192.36; /* oklch(68.91% 0.1 192.36) */
-  --neon-chart-3: 69.89% 0.19 357.26; /* oklch(69.89% 0.19 357.26) */
-  --neon-chart-4: 69.06% 0.16 246.5; /* oklch(69.06% 0.16 246.5) */
-  --neon-chart-5: 69.62% 0.2 22.13; /* oklch(69.62% 0.2 22.13) */
-
-  --neon-sidebar-background: var(--neon-background);
-  --neon-sidebar-foreground: 90.67% 0.01 250; /* oklch(90.67% 0.01 250) */
-  --neon-sidebar-primary: var(--neon-primary);
-  --neon-sidebar-primary-foreground: var(--neon-primary-foreground);
-  --neon-sidebar-accent: var(--neon-accent);
-  --neon-sidebar-accent-foreground: var(--neon-accent-foreground);
-  --neon-sidebar-border: var(--neon-border);
-  --neon-sidebar-ring: var(--neon-ring);
 }
 
 /* oklch(0.14 0 0) bg */

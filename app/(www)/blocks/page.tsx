@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { PageContainer } from "@/components/common/page-container";
-import { PageTitle } from "@/components/common/page-header";
+import { PageHeader, PageTitle } from "@/components/common/page-header";
 import { Input } from "@/components/ui/input";
 import { Typography } from "@/components/ui/typography";
 import { BlockCategoryPreviewCardLink } from "@/components/views/blocks/block-category-preview-card";
@@ -42,45 +42,25 @@ export default function BlocksPage() {
 
   return (
     <section className="relative overflow-hidden py-20">
-      <div className="absolute inset-0 h-32 w-full bg-gradient-to-b from-accent/40 to-background"></div>
       <div className="space-y-8">
         <PageContainer>
-          <div className="space-y-4">
-            <div>
-              <BlocksBreadcrumb />
-            </div>
-
-            <div className="flex items-center gap-2">
-              <PageTitle as={"h1"}>Discover Our Block Collection</PageTitle>
-            </div>
-
-            <div>
-              <Typography
-                as={"p"}
-                variant="lg/normal"
-                className="max-w-4xl text-muted-foreground"
-              >
-                Elevate your projects with our meticulously crafted shadcn/ui
-                blocks
-                {/* Browse through our collection of shadcn ui components
-              blocks. Each block is a standalone component that can be used in
-              your project. Preview the blocks in different styles and see how
-              they look together. */}
-              </Typography>
-            </div>
-
-            <div className="w-full">
-              <div className="relative w-full max-w-md py-2">
-                <Search className="absolute left-2.5 top-1/2 size-4 -translate-y-1/2 transform text-muted-foreground" />
-                <Input
-                  type="search"
-                  placeholder="Search block categories..."
-                  className="w-full py-2 pl-8 pr-4"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-            </div>
+          <div className="flex flex-col gap-y-4">
+            <PageHeader
+              title="Blocks"
+              description="Discover shadcn/ui blocks."
+              actions={
+                <div className="relative w-full max-w-md py-2">
+                  <Search className="text-muted-foreground absolute left-2.5 top-1/2 size-4 -translate-y-1/2 transform" />
+                  <Input
+                    type="search"
+                    placeholder="Search block categories..."
+                    className="w-full py-2 pl-8 pr-4"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+              }
+            />
           </div>
         </PageContainer>
         <div className="space-y-20 overflow-hidden px-4 py-6 sm:px-6 lg:px-8">
@@ -171,7 +151,7 @@ function BlocksByCategories({
         ))
       ) : (
         <PageContainer>
-          <p className="w-fit rounded-md bg-accent px-3 py-1 text-sm text-muted-foreground">
+          <p className="bg-accent text-muted-foreground w-fit rounded-md px-3 py-1 text-sm">
             0 Categories found
           </p>
         </PageContainer>

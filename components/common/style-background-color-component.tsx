@@ -24,10 +24,10 @@ export function StyleGradientBackgroundColorComponent({
 
   return (
     <>
-      <div className={cn("bg-gradient-to-b", sClass, className)}></div>
+      <div className={cn("bg-linear-to-b", sClass, className)}></div>
       {/* <div
         className={cn(
-          "absolute bottom-0 left-0 right-0 z-50 h-24 w-full bg-gradient-to-b to-background",
+          "absolute bottom-0 left-0 right-0 z-50 h-24 w-full bg-linear-to-b to-background",
           sClass
         )}
       ></div> */}

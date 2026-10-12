@@ -33,8 +33,8 @@ export function SuggestedStyles({ excludedStyle }: { excludedStyle: Style }) {
             <StyleCssWrapper key={style + index}>
               <StyleFontWrapper sStyle={style}>
                 {/* <StyleShowcaseCardLink style={style} /> */}
-                <div className="group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-gradient-to-r from-transparent to-accent p-6">
-                  {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-transparent to-accent"></div> */}
+                <div className="bg-linear-to-r to-accent group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border from-transparent p-6">
+                  {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-linear-to-br from-transparent to-accent"></div> */}
                   <div className="flex w-full items-center justify-between">
                     <Link href={`/styles/${style}`} className="">
                       <Typography
@@ -43,7 +43,7 @@ export function SuggestedStyles({ excludedStyle }: { excludedStyle: Style }) {
                         className="group inline-flex items-center gap-2 capitalize tracking-tight"
                       >
                         {style}{" "}
-                        <ArrowRightIcon className="size-5 -rotate-45 text-transparent group-hover:text-primary" />
+                        <ArrowRightIcon className="group-hover:text-primary size-5 -rotate-45 text-transparent" />
                       </Typography>
                     </Link>
 

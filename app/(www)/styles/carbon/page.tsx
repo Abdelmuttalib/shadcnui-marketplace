@@ -15,8 +15,8 @@ export default function Page() {
         </PageContainer>
       </div>
       {/* gradient  */}
-      {/* <div className="absolute inset-0 -z-20 h-32 w-full bg-gradient-to-b from-cb-primary/15 to-background"></div> */}
-      <div className="absolute inset-0 -z-20 h-full w-72 bg-gradient-to-r from-cb-primary/15 to-background"></div>
+      {/* <div className="absolute inset-0 -z-20 h-32 w-full bg-linear-to-b from-cb-primary/15 to-background"></div> */}
+      <div className="bg-linear-to-r from-cb-primary/15 to-background absolute inset-0 -z-20 h-full w-72"></div>
 
       <div>
         <PageContainer size="full">

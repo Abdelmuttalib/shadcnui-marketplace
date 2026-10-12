@@ -20,7 +20,7 @@ const pricingTiers = [
     price: "$2,900",
     description:
       "Perfect for small businesses looking to establish a professional online presence.",
-    icon: <Briefcase className="h-6 w-6 text-primary" />,
+    icon: <Briefcase className="text-primary h-6 w-6" />,
     features: [
       { text: "Custom website design" },
       { text: "Basic SEO optimization" },
@@ -35,7 +35,7 @@ const pricingTiers = [
     price: "$4,900",
     description:
       "Ideal for growing businesses needing comprehensive digital solutions.",
-    icon: <Rocket className="h-6 w-6 text-primary" />,
+    icon: <Rocket className="text-primary h-6 w-6" />,
     highlighted: true,
     features: [
       { text: "Everything in Essential" },
@@ -51,7 +51,7 @@ const pricingTiers = [
     price: "$7,900",
     description:
       "For established businesses requiring a full suite of digital services.",
-    icon: <Building className="h-6 w-6 text-primary" />,
+    icon: <Building className="text-primary h-6 w-6" />,
     features: [
       { text: "Everything in Growth" },
       { text: "Custom web application" },
@@ -65,9 +65,9 @@ const pricingTiers = [
 
 export default function PricingPage() {
   return (
-    <div className="relative bg-gradient-to-b from-background via-accent/60 to-indigo-600/20">
+    <div className="bg-linear-to-b from-background via-accent/60 relative to-indigo-600/20">
       {/* Background Pattern */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-background">
+      <div className="bg-background absolute inset-0 -z-10 h-full w-full">
         <div className="absolute h-full w-full bg-[radial-gradient(oklch(var(--foreground))_1px,transparent_1px)] opacity-15 [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
 
@@ -84,7 +84,7 @@ export default function PricingPage() {
           <Typography
             as="p"
             variant="xl/normal"
-            className="mx-auto mt-6 max-w-xl text-muted-foreground"
+            className="text-muted-foreground mx-auto mt-6 max-w-xl"
           >
             Choose the perfect plan to transform your online identity and
             accelerate your business growth.
@@ -146,7 +146,7 @@ function PricingCard({
         )}
       >
         <CardHeader>
-          <div className="mb-4 flex w-fit items-center rounded-md bg-primary/10 pr-4">
+          <div className="bg-primary/10 mb-4 flex w-fit items-center rounded-md pr-4">
             <div className="flex h-12 w-12 items-center justify-center">
               {icon}
             </div>
@@ -161,7 +161,7 @@ function PricingCard({
             <Typography
               as="span"
               variant="sm/normal"
-              className="ml-1 text-muted-foreground"
+              className="text-muted-foreground ml-1"
             >
               /month
             </Typography>
@@ -178,8 +178,8 @@ function PricingCard({
           <ul className="mt-6 space-y-2">
             {features.map((feature, index) => (
               <li key={index} className="flex items-center text-sm">
-                <span className="mr-2 rounded-md bg-primary/10 p-1.5">
-                  <Check className="h-4 w-4 text-primary" />
+                <span className="bg-primary/10 mr-2 rounded-md p-1.5">
+                  <Check className="text-primary h-4 w-4" />
                 </span>
                 {feature.text}
               </li>

@@ -11,7 +11,7 @@ export function Seo() {
       {/* SEO Meta Tags */}
       <meta
         name="keywords"
-        content="shadcn ui, shadcn ui Marketplace, UI Kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, shadcn ui, shadcn ui Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
+        content="shadcn ui, shadcn ui Marketplace, ui kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, shadcn ui, shadcn ui Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
       />
       <meta
         name="description"
@@ -30,7 +30,7 @@ export function Seo() {
       <meta property="og:url" content="https://www.shadcnmarketplace.com/" />
       <meta
         property="og:title"
-        content="shadcn ui Kits Marketplace - Premium ShadCN Styles"
+        content="shadcn ui kits Marketplace - Premium ShadCN Styles"
       />
       <meta
         property="og:description"
@@ -46,7 +46,7 @@ export function Seo() {
       />
       <meta
         property="twitter:title"
-        content="shadcn ui Kits Marketplace - Premium ShadCN Styles"
+        content="shadcn ui kits Marketplace - Premium ShadCN Styles"
       />
       <meta
         property="twitter:description"
@@ -101,5 +101,5 @@ export function Seo() {
 //       {/* keywords */}
 //       <meta
 //         name="keywords"
-//         content="shadcn ui, shadcn ui Marketplace, UI Kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, shadcn ui, shadcn ui Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
+//         content="shadcn ui, shadcn ui Marketplace, ui kits, UI Styles, shadcn ui Components, Web Design, Frontend UI, shadcn ui styles, shadcn ui kits, shadcn ui, shadcn ui Marketplace, Frontend UI, Design System, TailwindCSS, CSS, HTML, JavaScript, TypeScript"
 //       />

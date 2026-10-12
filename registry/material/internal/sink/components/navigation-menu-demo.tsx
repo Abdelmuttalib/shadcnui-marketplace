@@ -63,13 +63,13 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-material-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="rounded-material-md bg-linear-to-b from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
-                    <p className="text-sm leading-tight text-material-muted-foreground">
+                    <p className="text-material-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
@@ -126,13 +126,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-material-md p-3 leading-none no-underline outline-none transition-colors hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground",
+            "rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-material-muted-foreground">
+          <p className="text-material-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>

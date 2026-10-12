@@ -100,7 +100,7 @@ export function AspectRatioDemo() {
         src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
         alt="Photo by Drew Beamer"
         fill
-        className="h-full w-full rounded-cb-md object-cover"
+        className="rounded-cb-md h-full w-full object-cover"
       />
     </AspectRatio>
   );
@@ -456,7 +456,7 @@ import {
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-cb-sm border border-cb-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-cb-sm border-cb-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
@@ -516,7 +516,7 @@ import {
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-cb-md border border-dashed border-cb-border text-sm">
+      <ContextMenuTrigger className="rounded-cb-md border-cb-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
@@ -731,7 +731,7 @@ export function DrawerDemo() {
                 <div className="text-7xl font-bold tracking-tighter">
                   {goal}
                 </div>
-                <div className="text-[0.70rem] uppercase text-cb-muted-foreground">
+                <div className="text-cb-muted-foreground text-[0.70rem] uppercase">
                   Calories/day
                 </div>
               </div>
@@ -870,7 +870,7 @@ export function HoverCardDemo() {
             </p>
             <div className="flex items-center pt-2">
               <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
-              <span className="text-xs text-cb-muted-foreground">
+              <span className="text-cb-muted-foreground text-xs">
                 Joined December 2021
               </span>
             </div>
@@ -1091,14 +1091,14 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-cb-md bg-gradient-to-b from-accent/50 to-accent p-6 no-underline outline-none focus:shadow-md"
+                    className="rounded-cb-md bg-linear-to-b from-accent/50 to-accent flex h-full w-full select-none flex-col justify-end p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <CalendarIcon className="h-6 w-6" />
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
-                    <p className="text-sm leading-tight text-cb-muted-foreground">
+                    <p className="text-cb-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
@@ -1155,13 +1155,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-cb-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "rounded-cb-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-cb-muted-foreground">
+          <p className="text-cb-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>
@@ -1220,7 +1220,7 @@ export function PopoverDemo() {
         <div className="grid gap-4">
           <div className="space-y-2">
             <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-sm text-cb-muted-foreground">
+            <p className="text-cb-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
           </div>
@@ -1344,7 +1344,7 @@ const tags = Array.from({ length: 50 }).map(
 
 export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-72 w-48 rounded-cb-md border">
+    <ScrollArea className="rounded-cb-md h-72 w-48 border">
       <div className="p-4">
         <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
         {tags.map((tag) => (
@@ -1387,7 +1387,7 @@ export function SeparatorDemo() {
     <div>
       <div className="space-y-1">
         <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-sm text-cb-muted-foreground">
+        <p className="text-cb-muted-foreground text-sm">
           An open-source UI component library.
         </p>
       </div>
@@ -1968,7 +1968,7 @@ export function Chart4() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-cb-muted-foreground">
+            <div className="text-cb-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -2077,7 +2077,7 @@ export function Chart5() {
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-cb-muted-foreground">
+            <div className="text-cb-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -2144,7 +2144,7 @@ export function Chart6() {
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-cb-muted-foreground">
+        <div className="text-cb-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
@@ -2226,7 +2226,7 @@ export function Chart7() {
         <div className="flex gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-cb-muted-foreground">
+        <div className="text-cb-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>

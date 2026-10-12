@@ -88,7 +88,7 @@ export default function ComponentPage({ params }: Props) {
 
   return (
     <div>
-      <div className="bg-gradient-to-b from-accent/30 to-background py-20">
+      <div className="bg-linear-to-b from-accent/30 to-background py-20">
         <PageContainer>
           <PageHeader
             title={blockPageTitle}
@@ -172,7 +172,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
                 <Typography
                   as="span"
                   variant="sm/medium"
-                  className="font-mono text-primary"
+                  className="text-primary font-mono"
                 >
                   404 error
                 </Typography>
@@ -180,14 +180,14 @@ function BlocksNotFound({ slug }: { slug: string }) {
               <Typography
                 as="p"
                 variant="4xl/semibold"
-                className="mt-4 tracking-tight text-foreground"
+                className="text-foreground mt-4 tracking-tight"
               >
                 Page not found
               </Typography>
               <Typography
                 as="p"
                 variant="base/normal"
-                className="mt-4 text-muted-foreground"
+                className="text-muted-foreground mt-4"
               >
                 Sorry, we couldn&apos;t find the page you&apos;re looking for.
               </Typography>
@@ -197,7 +197,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
               {suggestedNotFoundLinks.map((link) => (
                 <div
                   key={link.title}
-                  className="group relative flex flex-col gap-2 rounded-lg border bg-card p-3.5 py-1.5 hover:border-primary"
+                  className="bg-card hover:border-primary group relative flex flex-col gap-2 rounded-lg border p-3.5 py-1.5"
                 >
                   <div className="flex items-center gap-4">
                     {/* <span className="text-muted-foreground">
@@ -218,11 +218,11 @@ function BlocksNotFound({ slug }: { slug: string }) {
                     </span> */}
 
                     <div className="flex items-center gap-3">
-                      <h3 className="font-medium text-foreground">
+                      <h3 className="text-foreground font-medium">
                         {link.title}
                       </h3>
 
-                      <ArrowRightIcon className="size-4 -rotate-45 text-muted-foreground/30 group-hover:text-primary" />
+                      <ArrowRightIcon className="text-muted-foreground/30 group-hover:text-primary size-4 -rotate-45" />
                     </div>
                   </div>
 

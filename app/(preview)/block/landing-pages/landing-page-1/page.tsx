@@ -31,7 +31,7 @@ export default function Landing1() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       {/* <UICustomizer /> */}
-      <header className="flex h-full w-full justify-between bg-wedges-background">
+      <header className="bg-wedges-background flex h-full w-full justify-between">
         <Container>
           <div className="flex h-20 items-center justify-between">
             <div>
@@ -41,7 +41,7 @@ export default function Landing1() {
                 className="text-wedges-foreground"
               >
                 <span className="">ACME</span>
-                <span className="ml-1 font-medium text-wedges-primary">
+                <span className="text-wedges-primary ml-1 font-medium">
                   INC
                 </span>
               </Typography>
@@ -81,7 +81,7 @@ export default function Landing1() {
 
               <Typography
                 variant="6xl/semibold"
-                className="max-w-4xl leading-tight text-wedges-foreground"
+                className="text-wedges-foreground max-w-4xl leading-tight"
               >
                 Client Acquisition Marketing to Take Your Law Firm to the Next
                 Level
@@ -123,11 +123,11 @@ export default function Landing1() {
                     key={item.title}
                     className={cn(
                       "flex flex-col gap-y-4 rounded-lg p-4 lg:p-9",
-                      "border bg-gradient-to-b from-muted/40 to-background"
+                      "bg-linear-to-b from-muted/40 to-background border"
                     )}
                   >
                     <div className="size-fit rounded-lg p-1 shadow lg:p-2">
-                      <CheckCircle2 className="size-6 fill-primary text-white lg:size-7" />
+                      <CheckCircle2 className="fill-primary size-6 text-white lg:size-7" />
                     </div>
                     <div className="flex flex-col gap-y-2">
                       <h3 className="text-xl font-medium capitalize">
@@ -144,7 +144,7 @@ export default function Landing1() {
           </>
         </Container>
       </div>
-      <div className="w-full bg-wedges-muted/40 py-28">
+      <div className="bg-wedges-muted/40 w-full py-28">
         <Container>
           <div className="page-padding">
             <div className="padding-vertical padding-xhuge">
@@ -158,14 +158,14 @@ export default function Landing1() {
                   </Typography>
                   <Typography
                     variant="5xl/semibold"
-                    className="max-w-4xl leading-tight text-wedges-foreground"
+                    className="text-wedges-foreground max-w-4xl leading-tight"
                   >
                     How ACME makes increasing profit uncomplicated
                   </Typography>
                 </div>
                 <Typography
                   variant="xl/normal"
-                  className="max-w-5xl text-wedges-foreground"
+                  className="text-wedges-foreground max-w-5xl"
                 >
                   Looking to take your business to the next level? Look no
                   further than ACME. Our suite of powerful tools is designed to
@@ -182,12 +182,12 @@ export default function Landing1() {
           </div>
         </Container>
       </div>
-      <div className="w-full bg-wedges-background py-28">
+      <div className="bg-wedges-background w-full py-28">
         <Container>
-          <div className="flex flex-col items-center justify-center gap-4 rounded-lg bg-wedges-muted/40 p-8 pt-14 text-center">
+          <div className="bg-wedges-muted/40 flex flex-col items-center justify-center gap-4 rounded-lg p-8 pt-14 text-center">
             <Typography
               variant="lg/normal"
-              className="max-w-5xl text-wedges-muted-foreground"
+              className="text-wedges-muted-foreground max-w-5xl"
             >
               Join 250+ companies already growing with ACME
             </Typography>
@@ -244,7 +244,7 @@ export default function Landing1() {
           </div>
         </Container>
       </div>
-      <div className="w-full bg-wedges-background py-28">
+      <div className="bg-wedges-background w-full py-28">
         <Container>
           <section className="cta_2_homepage">
             <div className="page-padding">
@@ -255,7 +255,7 @@ export default function Landing1() {
                       <div className="margin-bottom margin-small">
                         <Typography
                           variant="5xl/semibold"
-                          className="max-w-4xl leading-tight text-wedges-foreground"
+                          className="text-wedges-foreground max-w-4xl leading-tight"
                         >
                           Join Hundreds of Firms Growing with ACME
                         </Typography>
@@ -269,7 +269,7 @@ export default function Landing1() {
                           <div key={t} className="flex items-center gap-3">
                             <div>
                               {/* <path fillRule="evenodd" clipRule="evenodd" d="M19.9457 8.62169L11.5923 16.6834L9.37568 14.315C8.96734 13.93 8.32568 13.9067 7.85901 14.2334C7.40401 14.5717 7.27568 15.1667 7.55568 15.645L10.1807 19.915C10.4373 20.3117 10.8807 20.5567 11.3823 20.5567C11.8607 20.5567 12.3157 20.3117 12.5723 19.915C12.9923 19.3667 21.0073 9.81169 21.0073 9.81169C22.0573 8.73836 20.7857 7.79336 19.9457 8.61002V8.62169Z" fill="#3F46FF"></path> */}
-                              <Check className="size-5 text-wedges-primary" />
+                              <Check className="text-wedges-primary size-5" />
                             </div>
                             <div className="cta02_item-text-wrapper">
                               <div className="text-size-medium">{t}</div>
@@ -305,7 +305,7 @@ export default function Landing1() {
         </Container>
       </div>
 
-      <div className="w-full bg-wedges-primary/5 py-28 dark:bg-wedges-muted/40">
+      <div className="bg-wedges-primary/5 dark:bg-wedges-muted/40 w-full py-28">
         <Container>
           <div>
             <div>
@@ -319,14 +319,14 @@ export default function Landing1() {
                   </Typography>
                   <Typography
                     variant="5xl/semibold"
-                    className="max-w-4xl leading-tight text-wedges-foreground"
+                    className="text-wedges-foreground max-w-4xl leading-tight"
                   >
                     Ready to Take your Marketing to New Heights?
                   </Typography>
                 </div>
                 <Typography
                   variant="lg/normal"
-                  className="max-w-5xl text-wedges-muted-foreground"
+                  className="text-wedges-muted-foreground max-w-5xl"
                 >
                   Learn more below or simply set up a meeting to get started.
                 </Typography>
@@ -356,11 +356,11 @@ export default function Landing1() {
                   ].map((c) => (
                     <div
                       key={c.title}
-                      className="flex flex-col gap-4 rounded-xl border bg-wedges-background p-5 md:p-8"
+                      className="bg-wedges-background flex flex-col gap-4 rounded-xl border p-5 md:p-8"
                     >
                       <div className="flex flex-col">
                         <div className="mb-8 md:mb-16">
-                          <div className="size-fit rounded bg-indigo-100 p-2 dark:border dark:bg-wedges-muted/40">
+                          <div className="dark:bg-wedges-muted/40 size-fit rounded bg-indigo-100 p-2 dark:border">
                             <img
                               src="https://cdn.prod.website-files.com/63461feeef0aab7c459f3c19/6408c23ae7c9a77ac359fc23_L.svg"
                               loading="lazy"
@@ -375,7 +375,7 @@ export default function Landing1() {
                         <Typography
                           as="p"
                           variant="lg/normal"
-                          className="mt-4 text-wedges-muted-foreground"
+                          className="text-wedges-muted-foreground mt-4"
                         >
                           {c.description}
                         </Typography>
@@ -398,7 +398,7 @@ export default function Landing1() {
           <div>
             <Container>
               <>
-                <div className="mb-16 mt-36 rounded-lg bg-wedges-muted/40 p-16">
+                <div className="bg-wedges-muted/40 mb-16 mt-36 rounded-lg p-16">
                   <div className="flex flex-col gap-5 text-center">
                     <div>
                       <Typography
@@ -427,7 +427,7 @@ export default function Landing1() {
                           className="text-wedges-foreground"
                         >
                           <span className="">ACME</span>
-                          <span className="ml-1 font-medium text-wedges-primary">
+                          <span className="text-wedges-primary ml-1 font-medium">
                             INC
                           </span>
                         </Typography>
@@ -458,7 +458,7 @@ export default function Landing1() {
                           <div>Solutions</div>
                         </a>
                       </div>
-                      <div className="flex gap-6 text-wedges-muted-foreground">
+                      <div className="text-wedges-muted-foreground flex gap-6">
                         <a
                           aria-label="Visit our Facebook page"
                           href="#"
@@ -551,7 +551,7 @@ export default function Landing1() {
                     </div>
                   </div>
                   <Separator />
-                  <div className="flex w-full justify-center pb-4 pt-10 text-center text-sm text-wedges-muted-foreground">
+                  <div className="text-wedges-muted-foreground flex w-full justify-center pb-4 pt-10 text-center text-sm">
                     <div className="flex gap-6">
                       <div>© 2024 &nbsp;All Rights Reserved</div>
                     </div>

@@ -18,7 +18,7 @@ import { Typography } from "@/registry/linear/ui/typography";
 
 function FeatureIcon({ Icon }: { Icon: React.ElementType }) {
   return (
-    <div className="rounded-md bg-primary/20 p-2 text-primary">
+    <div className="bg-primary/20 text-primary rounded-md p-2">
       <Icon size={20} />
     </div>
   );
@@ -44,7 +44,7 @@ export default function Home() {
               <Typography
                 as="h1"
                 variant="xl/normal"
-                className="mt-3 max-w-md text-muted-foreground md:mt-5 md:max-w-3xl"
+                className="text-muted-foreground mt-3 max-w-md md:mt-5 md:max-w-3xl"
               >
                 Boost productivity, streamline collaboration, and make
                 data-driven decisions with our cutting-edge SaaS platform.
@@ -81,10 +81,10 @@ export default function Home() {
             {/* 3D Element / Product Showcase */}
             <div className="relative mt-12 sm:mt-16 lg:col-span-6 lg:mt-0">
               <div className="relative mx-auto w-full max-w-none lg:max-w-none">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-md border bg-primary/20 shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-accent/20 to-accent/60" />
+                <div className="bg-primary/20 relative aspect-[4/3] overflow-hidden rounded-md border shadow-2xl">
+                  <div className="bg-linear-to-br from-primary/60 via-accent/20 to-accent/60 absolute inset-0" />
                   {/* Replace this with an actual 3D model or product screenshot */}
-                  <div className="relative flex h-full flex-col items-center justify-center p-8 text-center text-foreground">
+                  <div className="text-foreground relative flex h-full flex-col items-center justify-center p-8 text-center">
                     <h3 className="text-2xl font-bold">Your Product UI</h3>
                     <p className="mt-2">Interactive 3D Model or Screenshot</p>
                   </div>
@@ -105,7 +105,7 @@ export default function Home() {
               {[1, 2, 3, 4, 5].map((_, i) => (
                 <div
                   key={i}
-                  className="inline-flex items-center gap-2 rounded-md border bg-accent/20 p-2 px-3"
+                  className="bg-accent/20 inline-flex items-center gap-2 rounded-md border p-2 px-3"
                 >
                   <Avatar className="size-7">
                     <AvatarImage

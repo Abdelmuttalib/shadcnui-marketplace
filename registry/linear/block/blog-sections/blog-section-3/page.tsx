@@ -117,11 +117,11 @@ export default function BlogSectionPage() {
             >
               Insights for the Modern Developer
             </Typography>
-            <div className="mx-auto h-1 w-24 bg-primary" />
+            <div className="bg-primary mx-auto h-1 w-24" />
             <Typography
               as="h2"
               variant="xl/normal"
-              className="mx-auto mt-6 max-w-2xl text-muted-foreground"
+              className="text-muted-foreground mx-auto mt-6 max-w-2xl"
             >
               Explore the latest trends, techniques, and insights in web
               development and design.
@@ -179,8 +179,8 @@ function BlogCard({
             fill
             className="object-cover transition-transform duration-300 hover:scale-105"
           /> */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <span className="absolute bottom-4 left-4 rounded-full border bg-card px-3 py-1 text-sm font-medium text-foreground">
+          <div className="bg-linear-to-t absolute inset-0 from-black/60 to-transparent" />
+          <span className="bg-card text-foreground absolute bottom-4 left-4 rounded-full border px-3 py-1 text-sm font-medium">
             {category}
           </span>
         </div>
@@ -192,14 +192,14 @@ function BlogCard({
         <Typography
           as="h3"
           variant="xl/bold"
-          className="mb-2 group-hover:underline group-hover:decoration-primary"
+          className="group-hover:decoration-primary mb-2 group-hover:underline"
         >
           {title}
         </Typography>
         <Typography
           as="p"
           variant="sm/normal"
-          className="mb-4 line-clamp-2 text-muted-foreground"
+          className="text-muted-foreground mb-4 line-clamp-2"
         >
           {excerpt}
         </Typography>
@@ -216,7 +216,7 @@ function BlogCard({
               <Typography as="p" variant="md/medium">
                 {author.name}
               </Typography>
-              <div className="flex items-center text-xs text-muted-foreground">
+              <div className="text-muted-foreground flex items-center text-xs">
                 <CalendarDays className="mr-1 h-3 w-3" />
                 <time dateTime={date}>{formatDate(date)}</time>
                 <span className="mx-1">•</span>
@@ -230,7 +230,7 @@ function BlogCard({
       <CardFooter className="border-t p-6">
         <Link
           href={`#`}
-          className="group inline-flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80"
+          className="text-primary hover:text-primary/80 group inline-flex items-center text-sm font-medium transition-colors"
         >
           Read Article
           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

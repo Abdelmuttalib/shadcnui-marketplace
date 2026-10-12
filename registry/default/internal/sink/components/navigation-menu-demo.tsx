@@ -63,13 +63,13 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-dft-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="rounded-dft-md bg-linear-to-b from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
-                    <p className="text-sm leading-tight text-dft-muted-foreground">
+                    <p className="text-dft-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
@@ -126,13 +126,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-dft-md p-3 leading-none no-underline outline-none transition-colors hover:bg-dft-accent hover:text-dft-accent-foreground focus:bg-dft-accent focus:text-dft-accent-foreground",
+            "rounded-dft-md hover:bg-dft-accent hover:text-dft-accent-foreground focus:bg-dft-accent focus:text-dft-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-dft-muted-foreground">
+          <p className="text-dft-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>

@@ -51,7 +51,7 @@ export function StylePageExamplePreview({
           <Typography
             as="h2"
             variant="5xl/medium"
-            className="bg-gradient-to-br from-foreground to-foreground bg-clip-text px-3 tracking-tighter text-transparent dark:to-accent"
+            className="bg-linear-to-br from-foreground to-foreground bg-clip-text px-3 tracking-tighter text-transparent dark:to-accent"
           >
             {title}
           </Typography>
@@ -75,7 +75,7 @@ export function StylePageExamplePreview({
         )}
       >
         {/* gradient effect lightning */}
-        {/* <div className="absolute left-0 top-0 z-10 flex size-44 items-center justify-center bg-gradient-to-br from-primary to-accent blur-lg"></div> */}
+        {/* <div className="absolute left-0 top-0 z-10 flex size-44 items-center justify-center bg-linear-to-br from-primary to-accent blur-lg"></div> */}
         {!hideBadge ? (
           <div className="flex items-center gap-2 px-0.5">
             <RichBadge variant="neutral" className="capitalize">
@@ -85,7 +85,7 @@ export function StylePageExamplePreview({
           </div>
         ) : null}
         <div
-          className="relative flex flex-col justify-between gap-2 overflow-x-auto rounded-xl border bg-background p-1"
+          className="bg-background relative flex flex-col justify-between gap-2 overflow-x-auto rounded-xl border p-1"
           style={
             coloredEdge
               ? {

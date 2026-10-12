@@ -122,7 +122,7 @@ export default function BlogSectionPage() {
           <Typography
             as="p"
             variant="xl/normal"
-            className="mb-8 text-linear-muted-foreground"
+            className="text-linear-muted-foreground mb-8"
           >
             Stay updated with the newest design and development stories, case
             studies, and insights.
@@ -197,10 +197,10 @@ function BlogCard({
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
+            <div className="bg-linear-to-b absolute inset-0 from-transparent to-black/60" />
           )}
 
-          <span className="absolute bottom-4 left-4 rounded-full bg-linear-card px-3 py-1 text-sm font-medium text-linear-foreground">
+          <span className="bg-linear-card text-linear-foreground absolute bottom-4 left-4 rounded-full px-3 py-1 text-sm font-medium">
             {category}
           </span>
         </div>
@@ -209,7 +209,7 @@ function BlogCard({
             <Typography
               as="h3"
               variant={featured ? "3xl/semibold" : "xl/semibold"}
-              className="mb-2 font-semibold tracking-tight text-linear-foreground underline-offset-4 group-hover:underline group-hover:decoration-linear-primary"
+              className="text-linear-foreground group-hover:decoration-linear-primary mb-2 font-semibold tracking-tight underline-offset-4 group-hover:underline"
             >
               {title}
             </Typography>
@@ -234,7 +234,7 @@ function BlogCard({
                 <Typography as="p" variant="sm/medium">
                   {author.name}
                 </Typography>
-                <div className="flex items-center text-xs text-linear-muted-foreground/70">
+                <div className="text-linear-muted-foreground/70 flex items-center text-xs">
                   <CalendarDays className="mr-1 h-3 w-3" />
                   <time dateTime={date}>{formatDate(date)}</time>
                   <span className="mx-1">•</span>

@@ -267,7 +267,7 @@ export default function Page() {
         } as React.CSSProperties
       }
     >
-      <header className="sticky top-0 isolate z-20 flex h-[--header-height] shrink-0 items-center gap-2 border-b bg-lucid-sidebar px-4">
+      <header className="bg-lucid-sidebar sticky top-0 isolate z-20 flex h-[--header-height] shrink-0 items-center gap-2 border-b px-4">
         <div className="flex w-full items-center gap-2">
           <Button
             className="hidden md:flex"
@@ -279,7 +279,7 @@ export default function Page() {
           </Button>
 
           <div className="mx-auto flex items-center gap-2">
-            <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-lucid-sidebar-primary text-sidebar-primary-foreground">
+            <div className="bg-lucid-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
               <Command className="size-4" />
             </div>
             <Separator orientation="vertical" className="ml-4 h-4" />
@@ -294,14 +294,14 @@ export default function Page() {
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <a
-                            className="flex h-full w-full select-none flex-col justify-end rounded-lucid-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                            className="rounded-lucid-md bg-linear-to-b from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end p-6 no-underline outline-none focus:shadow-md"
                             href="/"
                           >
                             <Icons.logo className="h-6 w-6" />
                             <div className="mb-2 mt-4 text-lg font-medium">
                               shadcn/ui
                             </div>
-                            <p className="text-sm leading-tight text-lucid-muted-foreground">
+                            <p className="text-lucid-muted-foreground text-sm leading-tight">
                               Beautifully designed components built with Radix
                               UI and Tailwind CSS.
                             </p>
@@ -311,11 +311,11 @@ export default function Page() {
 
                       <li>
                         <NavigationMenuLink asChild>
-                          <a className="block select-none space-y-1 rounded-lucid-md p-3 leading-none no-underline outline-none transition-colors hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground">
+                          <a className="rounded-lucid-md hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
                             <div className="text-sm font-medium leading-none">
                               Introduction
                             </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-lucid-muted-foreground">
+                            <p className="text-lucid-muted-foreground line-clamp-2 text-sm leading-snug">
                               Re-usable components built using Radix UI and
                               Tailwind CSS.
                             </p>
@@ -325,11 +325,11 @@ export default function Page() {
 
                       <li>
                         <NavigationMenuLink asChild>
-                          <a className="block select-none space-y-1 rounded-lucid-md p-3 leading-none no-underline outline-none transition-colors hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground">
+                          <a className="rounded-lucid-md hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
                             <div className="text-sm font-medium leading-none">
                               Installation
                             </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-lucid-muted-foreground">
+                            <p className="text-lucid-muted-foreground line-clamp-2 text-sm leading-snug">
                               How to install dependencies and structure your
                               app.
                             </p>
@@ -339,11 +339,11 @@ export default function Page() {
 
                       <li>
                         <NavigationMenuLink asChild>
-                          <a className="block select-none space-y-1 rounded-lucid-md p-3 leading-none no-underline outline-none transition-colors hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground">
+                          <a className="rounded-lucid-md hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
                             <div className="text-sm font-medium leading-none">
                               Typography
                             </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-lucid-muted-foreground">
+                            <p className="text-lucid-muted-foreground line-clamp-2 text-sm leading-snug">
                               Styles for headings, paragraphs, lists...etc
                             </p>
                           </a>
@@ -361,11 +361,11 @@ export default function Page() {
                       {components.map((component) => (
                         <li>
                           <NavigationMenuLink key={component.title} asChild>
-                            <a className="block select-none space-y-1 rounded-lucid-md p-3 leading-none no-underline outline-none transition-colors hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground">
+                            <a className="rounded-lucid-md hover:bg-lucid-accent hover:text-lucid-accent-foreground focus:bg-lucid-accent focus:text-lucid-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
                               <div className="text-sm font-medium leading-none">
                                 {component.title}
                               </div>
-                              <p className="line-clamp-2 text-sm leading-snug text-lucid-muted-foreground">
+                              <p className="text-lucid-muted-foreground line-clamp-2 text-sm leading-snug">
                                 {component.description}
                               </p>
                             </a>
@@ -402,7 +402,7 @@ export default function Page() {
               <SidebarMenuItem>
                 <SidebarMenuButton size="lg" asChild>
                   <a href="#">
-                    <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-lucid-sidebar-primary text-sidebar-primary-foreground">
+                    <div className="bg-lucid-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                       <Command className="size-4" />
                     </div>
                     <div className="grid flex-1 text-left text-sm leading-tight">
@@ -638,11 +638,11 @@ export default function Page() {
           </header>
           <div className="flex flex-1 flex-col gap-4 p-4">
             <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-              <div className="aspect-video rounded-xl bg-lucid-muted/50" />
-              <div className="aspect-video rounded-xl bg-lucid-muted/50" />
-              <div className="aspect-video rounded-xl bg-lucid-muted/50" />
+              <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
+              <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
+              <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
             </div>
-            <div className="min-h-[100vh] flex-1 rounded-xl bg-lucid-muted/50 md:min-h-min" />
+            <div className="bg-lucid-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
           </div>
         </SidebarInset>
       </SidebarProvider>

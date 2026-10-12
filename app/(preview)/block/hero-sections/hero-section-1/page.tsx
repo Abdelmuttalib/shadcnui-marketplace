@@ -14,11 +14,11 @@ export default function HeroSectionPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background to-accent/80">
+    <main className="bg-linear-to-br from-background to-accent/80 min-h-screen">
       <nav className="fixed left-0 right-0 top-0 z-50">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <Link href="#" className="flex items-center space-x-2">
-            <span className="text-xl font-medium text-wedges-foreground">
+            <span className="text-wedges-foreground text-xl font-medium">
               Acme Inc
             </span>
           </Link>
@@ -44,7 +44,7 @@ export default function HeroSectionPage() {
             <Typography
               as="h1"
               variant="7xl/medium"
-              className="tracking-tight text-wedges-foreground"
+              className="text-wedges-foreground tracking-tight"
             >
               Renovate Effortlessly
             </Typography>
@@ -67,7 +67,7 @@ export default function HeroSectionPage() {
                 Live demo
               </Button>
             </div>
-            <ul className="space-y-3 text-sm text-wedges-muted-foreground">
+            <ul className="text-wedges-muted-foreground space-y-3 text-sm">
               {[
                 "Advanced Analytics",
                 "Team Collaboration",
@@ -76,7 +76,7 @@ export default function HeroSectionPage() {
               ].map((feature) => (
                 <li key={feature} className="flex items-center space-x-2">
                   <Badge className="rounded-md p-1">
-                    <Check className="h-4 w-4 text-wedges-primary" />
+                    <Check className="text-wedges-primary h-4 w-4" />
                   </Badge>
 
                   <span>{feature}</span>

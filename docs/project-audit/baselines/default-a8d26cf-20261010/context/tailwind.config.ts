@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-ibm-plex-mono)"],
+        inter: ["var(--font-inter)"],
         carbon: ["var(--font-carbon)"],
         material: ["var(--font-roboto)"],
         spectrum: ["var(--font-spectrum)"],
