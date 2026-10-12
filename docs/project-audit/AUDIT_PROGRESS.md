@@ -122,3 +122,10 @@ scope): consolidated unprefixed-token ruling, typo/selector canonical rulings,
 exception registrations (neon dots approved; Plus/Minus, halos, CheckIcon
 pending), travel-geometry rendered checks, ButtonLink parity. No application
 files modified in any batch (only `docs/project-audit/` changed).
+
+## Baseline archive
+
+`baselines/default-a8d26cf-20261010/` captured 2026-10-10 from commit
+`a8d26cfbf4758bb8964e8f2730cdec54fc5154b3` (clean tree): 48 verbatim sources
+(byte-verified + SHA-256), 48 component docs, cross-references, manifest, and 9
+context files. See `baselines/README.md`. Verified: 48/48 checksums pass.

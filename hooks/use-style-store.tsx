@@ -42,19 +42,6 @@ const DEV_STYLES_PATH: Record<StyleType, string> = {
   neon: "http://localhost:3000",
   libelle: "http://localhost:3000",
 };
-const styles = [
-  "default",
-  "carbon",
-  "linear",
-  "material",
-  "spectrum",
-  "wedges",
-  "moon",
-  "lucid",
-  "snow",
-  "neon",
-  "libelle",
-];
 const PROD_STYLES_PATH: Record<StyleType, string> = {
   default: "https://shadcn-default.vercel.app",
   carbon: "https://shadcn-carbon.vercel.app",

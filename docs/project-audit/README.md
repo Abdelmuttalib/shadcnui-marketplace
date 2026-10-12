@@ -18,6 +18,7 @@ Only files under `docs/project-audit/` may be created/updated by this audit.
 | `templates/` | Standard comparison report template |
 | `COMPONENT_COMPARISON_INDEX.md` | Per-component audit index (Button complete, rest pending) |
 | `components/button-MATRIX.md` | Consolidated Button cross-style matrix |
+| `baselines/` | Versioned immutable snapshots of audited styles (see `baselines/README.md`) |
 
 ## Later stages (not yet written)
 

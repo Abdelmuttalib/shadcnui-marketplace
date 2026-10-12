@@ -256,7 +256,6 @@ function getCode(modulePath: string) {
         .replaceAll("-wedges", "")
     );
 
-  console.log("fileContent", fileContent);
   // return "";
   return fileContent;
 }
@@ -292,9 +291,6 @@ export const blocksRegistry = Object.fromEntries(
 // write a var to a file, config/data.ts
 
 // write a function to generate the registry
-
-const ROOT_PATH = path.join(process.cwd());
-console.log("ROOT_PATH", blocksRegistry);
 
 async function readFileContent(filePath: string) {
   const fileContent = await fs.readFile(filePath, "utf-8");

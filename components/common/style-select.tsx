@@ -27,7 +27,10 @@ export function StyleSelect({
 
   return (
     <Select defaultValue={style || defaultStyle} onValueChange={onStyleChange}>
-      <SelectTrigger className={cn("", triggerClassName)}>
+      <SelectTrigger
+        aria-label="Select style"
+        className={cn("", triggerClassName)}
+      >
         <SelectValue
           placeholder="select a style"
           className="text-muted-foreground"

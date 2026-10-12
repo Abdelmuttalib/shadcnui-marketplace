@@ -24,7 +24,7 @@ export function StylesPreviewCards() {
           const s = `--${getStyleVariablesPrefix(style)}-primary`;
           const c = `--${getStyleVariablesPrefix(style)}`;
           return (
-            <StyleCssWrapper key={style + index}>
+            <StyleCssWrapper key={style + index} className="rounded-md">
               <StyleFontWrapper sStyle={style}>
                 {/* <StyleShowcaseCardLink style={style} /> */}
                 <div className="group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-gradient-to-r from-transparent to-accent p-6">
@@ -38,9 +38,18 @@ export function StylesPreviewCards() {
                     </Typography>
                     <div className="flex items-center gap-2">
                       <div className="inline-flex items-center gap-2">
-                        <RichBadge variant="neutral" className="capitalize">
-                          Palette
-                        </RichBadge>
+                        <StyleCssWrapper
+                          key={style + index}
+                          className="inline-flex rounded-full"
+                        >
+                          <RichBadge
+                            variant="neutral"
+                            className="capitalize backdrop-blur-xl"
+                          >
+                            Palette
+                          </RichBadge>
+                        </StyleCssWrapper>
+
                         <div className="flex rounded-sm border">
                           {mainPaletteColorsKeys.map((color, index) => (
                             <div
@@ -64,7 +73,7 @@ export function StylesPreviewCards() {
                   <div className="relative -ml-2">
                     <div
                       // bg-blue-500/30
-                      className="absolute left-0 top-0 z-10 flex size-[29rem] items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:size-96 group-hover:opacity-50 group-hover:blur-lg"
+                      className="absolute left-0 top-0 z-10 flex size-[36rem] items-center justify-center opacity-80 blur-3xl transition-all duration-200 ease-in-out group-hover:size-[30rem] group-hover:opacity-50 group-hover:blur-2xl"
                       style={{
                         backgroundColor: `oklch(var(${s}))`,
                       }}

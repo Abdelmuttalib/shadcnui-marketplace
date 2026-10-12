@@ -96,7 +96,7 @@ export default function Home() {
           >
             <PageContainer>
               <div className="space-y-4">
-                <PageTitle>
+                <PageTitle as="h2">
                   <span className="lowercase">shadcn, </span>
                   <span className="decoration lowercase italic text-foreground underline decoration-primary underline-offset-4">
                     your way

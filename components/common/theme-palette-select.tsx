@@ -29,7 +29,7 @@ export function ThemePaletteSelect() {
   return (
     <div>
       <Select value={activePalette} onValueChange={setActivePalette}>
-        <SelectTrigger className="flex gap-2">
+        <SelectTrigger aria-label="Select color palette" className="flex gap-2">
           <SelectValue placeholder={"Select Palette"} />
         </SelectTrigger>
         <SelectContent className="w-full">
