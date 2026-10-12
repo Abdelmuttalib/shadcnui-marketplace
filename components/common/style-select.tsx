@@ -47,22 +47,20 @@ export function StyleSelect({
             const hoverBgColor = `focus:bg-${getStyleVariablesPrefix(
               style.name
             )}-primary`;
+            const hoverTextColor = `focus:text-${getStyleVariablesPrefix(
+              style.name
+            )}-primary-foreground`;
 
             return (
               <SelectItem
                 value={style.name}
                 key={style.name}
-                className={`${hoverBgColor} capitalize focus:bg-opacity-15`}
+                className={`${hoverBgColor} ${hoverTextColor} capitalize focus:bg-opacity-15`}
               >
                 {style.title}
               </SelectItem>
             );
           })}
-          {/* {STYLES.map((style) => (
-            <SelectItem value={style} key={style} className="capitalize">
-              {style}
-            </SelectItem>
-          ))} */}
         </SelectGroup>
       </SelectContent>
     </Select>

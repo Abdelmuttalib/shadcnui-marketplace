@@ -382,6 +382,7 @@
   );
   --color-material-sidebar-border: oklch(var(--material-sidebar-border));
   --color-material-sidebar-ring: oklch(var(--material-sidebar-ring));
+
   --color-dft-background: oklch(var(--dft-background));
   --color-dft-foreground: oklch(var(--dft-foreground));
   --color-dft-card: oklch(var(--dft-card));
@@ -418,6 +419,7 @@
   );
   --color-dft-sidebar-border: oklch(var(--dft-sidebar-border));
   --color-dft-sidebar-ring: oklch(var(--dft-sidebar-ring));
+
   --color-spctm-background: oklch(var(--spctm-background));
   --color-spctm-foreground: oklch(var(--spctm-foreground));
   --color-spctm-card: oklch(var(--spctm-card));

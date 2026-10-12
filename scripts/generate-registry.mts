@@ -659,21 +659,27 @@ async function buildStyles(registry: Registry) {
               }
             }
 
+            // Legacy styles use style-prefixed tokens (e.g. bg-linear-primary)
+            // that are stripped to base tokens for consumers. The default-v4
+            // collection already uses base tokens, so stripping is skipped to
+            // avoid corrupting core utilities such as ease-linear.
+            let styleContent = sourceFile.getText();
+            if (style.name !== "default-v4") {
+              styleContent = styleContent.replaceAll(
+                /-(dft|cb|catalyst|linear|material|spctm|wedges|moon|lucid|snow|neon|libelle)\b/g,
+                ""
+              );
+            }
+
             return {
               path: file.path,
               type: file.type,
               // content: sourceFile.getText().replaceAll("-cb", ""),
               // replace all @/registry/{style}/ui with @/components/ui
-              content: sourceFile
-                .getText()
-                .replaceAll(
-                  /-(dft|cb|catalyst|linear|material|spctm|wedges|moon|lucid|snow|neon|libelle)\b/g,
-                  ""
-                )
-                .replaceAll(
-                  /@\/registry\/(default|carbon|catalyst|linear|material|spectrum|wedges|moon|lucid|snow|neon|libelle)\/ui/g,
-                  "@/components/ui"
-                ),
+              content: styleContent.replaceAll(
+                /@\/registry\/(default-v4|default|carbon|catalyst|linear|material|spectrum|wedges|moon|lucid|snow|neon|libelle)\/ui/g,
+                "@/components/ui"
+              ),
               target,
             };
           })

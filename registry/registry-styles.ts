@@ -21,6 +21,11 @@ export const styles = [
     defaultRadius: "0.5rem",
   },
   {
+    name: "default-v4",
+    label: "Default v4",
+    defaultRadius: "0.5rem",
+  },
+  {
     name: "carbon",
     label: "Carbon",
     defaultRadius: "0rem",
