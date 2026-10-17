@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/snow/ui/table";
+} from "@/registry/bases/base/snow/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-snow-md border border-snow-border">
+    <div className="rounded-snow-md border-snow-border border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

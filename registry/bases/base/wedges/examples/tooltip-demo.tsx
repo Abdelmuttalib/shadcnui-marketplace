@@ -1,10 +1,10 @@
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/wedges/ui/tooltip";
+} from "@/registry/bases/base/wedges/ui/tooltip";
 
 export default function TooltipDemo() {
   return (

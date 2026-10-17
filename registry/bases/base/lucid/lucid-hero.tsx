@@ -15,7 +15,7 @@ import {
   TabsTrigger,
 } from "@/registry/bases/base/lucid/ui/tabs";
 import { Toggle } from "@/registry/bases/base/lucid/ui/toggle";
-import { DemoDatePicker } from "@/registry/lucid/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/lucid/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -30,7 +30,7 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/lucid/showcase";
+} from "@/registry/bases/base/lucid/showcase";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function LucidUI() {

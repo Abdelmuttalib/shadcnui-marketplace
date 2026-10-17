@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Combobox,
@@ -11,7 +11,7 @@ import {
   ComboboxLabel,
   ComboboxList,
   ComboboxSeparator,
-} from "@/styles/base-nova/ui/combobox"
+} from "@/styles/base-default/ui/combobox";
 
 const timezones = [
   {
@@ -47,7 +47,7 @@ const timezones = [
       "(GMT+9) Seoul",
     ],
   },
-] as const
+] as const;
 
 export function ComboboxWithGroupsAndSeparator() {
   return (
@@ -72,5 +72,5 @@ export function ComboboxWithGroupsAndSeparator() {
         </ComboboxList>
       </ComboboxContent>
     </Combobox>
-  )
+  );
 }

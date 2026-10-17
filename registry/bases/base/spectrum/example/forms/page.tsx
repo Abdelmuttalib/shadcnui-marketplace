@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/spectrum/ui/separator";
+import { Separator } from "@/registry/bases/base/spectrum/ui/separator";
 
 import { ProfileForm } from "./profile-form";
 import { SettingsLayout } from "./layout";
@@ -9,7 +9,7 @@ export function SettingsProfilePage() {
       <div className="space-y-6">
         <div>
           <h3 className="text-lg font-medium">Profile</h3>
-          <p className="text-sm text-spctm-muted-foreground">
+          <p className="text-spctm-muted-foreground text-sm">
             This is how others will see you on the site.
           </p>
         </div>

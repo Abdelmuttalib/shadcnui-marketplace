@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Calendar } from "@/styles/base-nova/ui/calendar"
+import { Calendar } from "@/styles/base-default/ui/calendar";
 
 export default function CalendarDemo() {
-  const [date, setDate] = React.useState<Date | undefined>(new Date())
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
     <Calendar
@@ -15,5 +15,5 @@ export default function CalendarDemo() {
       className="rounded-lg border"
       captionLayout="dropdown"
     />
-  )
+  );
 }

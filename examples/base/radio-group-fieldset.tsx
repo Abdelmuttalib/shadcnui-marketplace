@@ -4,8 +4,11 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@/styles/base-nova/ui/field"
-import { RadioGroup, RadioGroupItem } from "@/styles/base-nova/ui/radio-group"
+} from "@/styles/base-default/ui/field";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/styles/base-default/ui/radio-group";
 
 export function RadioGroupFieldset() {
   return (
@@ -35,5 +38,5 @@ export function RadioGroupFieldset() {
         </Field>
       </RadioGroup>
     </FieldSet>
-  )
+  );
 }

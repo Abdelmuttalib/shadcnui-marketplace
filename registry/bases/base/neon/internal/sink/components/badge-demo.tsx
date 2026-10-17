@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/neon/ui/badge";
+import { Badge } from "@/registry/bases/base/neon/ui/badge";
 
 export function BadgeDemo() {
   return <Badge>Badge</Badge>;

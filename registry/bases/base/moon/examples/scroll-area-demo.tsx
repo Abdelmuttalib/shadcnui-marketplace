@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { ScrollArea } from "@/registry/moon/ui/scroll-area";
-import { Separator } from "@/registry/moon/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/moon/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -9,7 +9,7 @@ const tags = Array.from({ length: 50 }).map(
 
 export default function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-72 w-48 rounded-moon-md border">
+    <ScrollArea className="rounded-moon-md h-72 w-48 border">
       <div className="p-4">
         <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
         {tags.map((tag) => (

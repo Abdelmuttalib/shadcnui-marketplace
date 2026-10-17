@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-nova/ui-rtl/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 const translations: Translations = {
   en: {
@@ -48,13 +48,13 @@ const translations: Translations = {
       "inline-end": "סוף השורה",
     },
   },
-}
+};
 
-const physicalSides = ["left", "top", "bottom", "right"] as const
-const logicalSides = ["inline-start", "inline-end"] as const
+const physicalSides = ["left", "top", "bottom", "right"] as const;
+const logicalSides = ["inline-start", "inline-end"] as const;
 
 export function TooltipRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div className="grid gap-4">
@@ -83,5 +83,5 @@ export function TooltipRtl() {
         ))}
       </div>
     </div>
-  )
+  );
 }

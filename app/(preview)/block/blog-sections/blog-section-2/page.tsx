@@ -10,10 +10,10 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
-import { Button } from "@/registry/wedges/ui/button";
-import { Card, CardContent } from "@/registry/wedges/ui/card";
-import { Typography } from "@/registry/wedges/ui/typography";
+} from "@/registry/bases/base/wedges/ui/avatar";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/wedges/ui/card";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 const blogPosts = [
   {

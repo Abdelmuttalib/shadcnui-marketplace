@@ -5,8 +5,8 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function FieldFieldset() {
   return (
@@ -32,5 +32,5 @@ export function FieldFieldset() {
         </div>
       </FieldGroup>
     </FieldSet>
-  )
+  );
 }

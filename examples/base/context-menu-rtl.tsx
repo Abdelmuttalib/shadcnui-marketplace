@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ArrowLeftIcon, ArrowRightIcon, RotateCwIcon } from "lucide-react"
+import { ArrowLeftIcon, ArrowRightIcon, RotateCwIcon } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -22,7 +22,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/context-menu"
+} from "@/styles/base-default/ui/context-menu";
 
 const translations: Translations = {
   en: {
@@ -91,17 +91,17 @@ const translations: Translations = {
       colm: "Colm Tuite",
     },
   },
-}
+};
 
 export function ContextMenuRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
-  const [people, setPeople] = React.useState("pedro")
+  const { dir, t, language } = useTranslation(translations, "ar");
+  const [people, setPeople] = React.useState("pedro");
 
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
-        <span className="hidden pointer-fine:inline-block">{t.rightClick}</span>
-        <span className="hidden pointer-coarse:inline-block">
+        <span className="pointer-fine:inline-block hidden">{t.rightClick}</span>
+        <span className="pointer-coarse:inline-block hidden">
           {t.longPress}
         </span>
       </ContextMenuTrigger>
@@ -179,5 +179,5 @@ export function ContextMenuRtl() {
         </ContextMenuGroup>
       </ContextMenuContent>
     </ContextMenu>
-  )
+  );
 }

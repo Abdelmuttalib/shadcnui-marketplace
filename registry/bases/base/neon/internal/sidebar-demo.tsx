@@ -14,7 +14,7 @@ import {
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/neon/ui/sidebar";
+} from "@/registry/bases/base/neon/ui/sidebar";
 
 // Menu items.
 const items = [

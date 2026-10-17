@@ -1,6 +1,9 @@
-import { TerminalIcon } from "lucide-react"
+import { TerminalIcon } from "lucide-react";
 
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -9,14 +12,14 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const output = `$ node --version
-v24.18.0`
+v24.18.0`;
 
 const error = `$ pnpm dev
 Error: listen EADDRINUSE: address already in use :::3000
-    at Server.setupListenHandle [as _listen2] (node:net:1908:16)`
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)`;
 
 export function CodeBlockTrace() {
   return (
@@ -58,5 +61,5 @@ export function CodeBlockTrace() {
         </TraceCollapsible>
       </Trace>
     </div>
-  )
+  );
 }

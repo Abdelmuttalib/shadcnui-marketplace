@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -12,7 +12,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,8 +20,8 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/dropdown-menu";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -30,7 +30,7 @@ import {
   MessageScrollerProvider,
   MessageScrollerViewport,
   useMessageScroller,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 
 const chat = createChat()
   .user(
@@ -57,16 +57,16 @@ const chat = createChat()
   })
   .assistant(
     "The main risk is reducing team creation for accounts that already know who they want to invite.\n\nTo protect that path, keep the invite action visible in the header and only change the primary empty-state guidance. That gives confident teams a direct route without forcing uncertain users through the invite step too early."
-  )
+  );
 
-const messages = chat.get()
-const userMessages = messages.filter((message) => message.role === "user")
+const messages = chat.get();
+const userMessages = messages.filter((message) => message.role === "user");
 
 export function MessageScrollerCommands() {
   return (
     <MessageScrollerProvider defaultScrollPosition="end">
       <div className="relative flex flex-col gap-4">
-        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
+        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>Commands</CardTitle>
             <CardDescription>
@@ -81,8 +81,8 @@ export function MessageScrollerCommands() {
               <MessageScrollerViewport>
                 <MessageScrollerContent className="p-(--card-spacing)">
                   {messages.map((message) => {
-                    const isUserMessage = message.role === "user"
-                    const text = getMessageText(message)
+                    const isUserMessage = message.role === "user";
+                    const text = getMessageText(message);
 
                     return (
                       <MessageScrollerItem
@@ -111,7 +111,7 @@ export function MessageScrollerCommands() {
                           </MessageContent>
                         </Message>
                       </MessageScrollerItem>
-                    )
+                    );
                   })}
                 </MessageScrollerContent>
               </MessageScrollerViewport>
@@ -119,16 +119,16 @@ export function MessageScrollerCommands() {
             </MessageScroller>
           </CardContent>
         </Card>
-        <div className="mx-auto max-w-sm px-0.5 text-center text-xs text-balance text-muted-foreground">
+        <div className="text-balance text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
           Use the controls to jump to any message in the conversation.
         </div>
       </div>
     </MessageScrollerProvider>
-  )
+  );
 }
 
 function CommandMenu() {
-  const { scrollToMessage } = useMessageScroller()
+  const { scrollToMessage } = useMessageScroller();
 
   return (
     <DropdownMenu>
@@ -158,11 +158,11 @@ function CommandMenu() {
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
 
 function getTrimmedMessageText(message: (typeof userMessages)[number]) {
-  const text = getMessageText(message)
+  const text = getMessageText(message);
 
-  return text.length > 42 ? `${text.slice(0, 39)}...` : text
+  return text.length > 42 ? `${text.slice(0, 39)}...` : text;
 }

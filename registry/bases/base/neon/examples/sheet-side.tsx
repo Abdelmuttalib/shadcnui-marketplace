@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/registry/neon/ui/button";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/neon/ui/sheet";
+} from "@/registry/bases/base/neon/ui/sheet";
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
 

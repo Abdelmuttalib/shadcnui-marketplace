@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/spectrum/ui/avatar";
+} from "@/registry/bases/base/spectrum/ui/avatar";
 
 export function AvatarDemo() {
   return (

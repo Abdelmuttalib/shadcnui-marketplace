@@ -38,9 +38,9 @@ import {
   DefaultSettingsProfilePage,
   DefaultTaskPage,
 } from "@/registry/bases/base/default/page-examples";
-import { DefaultV4CardShowcase } from "@/registry/bases/base/default-v4/default-v4-card-showcase";
-import { DefaultV4UI } from "@/registry/bases/base/default-v4/default-v4-hero";
-import { DefaultV4ShowcaseComponents } from "@/registry/bases/base/default-v4/default-v4-showcase-components";
+import { DefaultV4CardShowcase } from "@/registry/bases/base/styles/default-v4/default-v4-card-showcase";
+import { DefaultV4UI } from "@/registry/bases/base/styles/default-v4/default-v4-hero";
+import { DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default-v4/default-v4-showcase-components";
 import {
   DefaultV4AuthenticationPage,
   DefaultV4CardsPage,
@@ -50,7 +50,7 @@ import {
   DefaultV4PlaygroundPage,
   DefaultV4SettingsProfilePage,
   DefaultV4TaskPage,
-} from "@/registry/bases/base/default-v4/page-examples";
+} from "@/registry/bases/base/styles/default-v4/page-examples";
 import { LibelleCardShowcase } from "@/registry/bases/base/libelle/libelle-card-showcase";
 import { LibelleUI } from "@/registry/bases/base/libelle/libelle-hero";
 import { LibelleShowcaseComponents } from "@/registry/bases/base/libelle/libelle-showcase-components";

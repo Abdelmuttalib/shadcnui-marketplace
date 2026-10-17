@@ -6,8 +6,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/wedges/ui/button";
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -16,9 +16,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/wedges/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/registry/wedges/ui/radio-group";
-import { Switch } from "@/registry/wedges/ui/switch";
+} from "@/registry/bases/base/wedges/ui/form";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/wedges/ui/radio-group";
+import { Switch } from "@/registry/bases/base/wedges/ui/switch";
 
 const notificationsFormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
@@ -103,7 +106,7 @@ export function NotificationsForm() {
               control={form.control}
               name="communication_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-wedges-lg border p-4">
+                <FormItem className="rounded-wedges-lg flex flex-row items-center justify-between border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
                       Communication emails
@@ -125,7 +128,7 @@ export function NotificationsForm() {
               control={form.control}
               name="marketing_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-wedges-lg border p-4">
+                <FormItem className="rounded-wedges-lg flex flex-row items-center justify-between border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
                       Marketing emails
@@ -147,7 +150,7 @@ export function NotificationsForm() {
               control={form.control}
               name="social_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-wedges-lg border p-4">
+                <FormItem className="rounded-wedges-lg flex flex-row items-center justify-between border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Social emails</FormLabel>
                     <FormDescription>
@@ -167,7 +170,7 @@ export function NotificationsForm() {
               control={form.control}
               name="security_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-wedges-lg border p-4">
+                <FormItem className="rounded-wedges-lg flex flex-row items-center justify-between border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Security emails</FormLabel>
                     <FormDescription>

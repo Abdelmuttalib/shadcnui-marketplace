@@ -4,13 +4,13 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
 
 export default function ModeToggle() {
   const { setTheme } = useTheme();

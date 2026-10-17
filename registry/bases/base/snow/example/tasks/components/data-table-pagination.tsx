@@ -6,14 +6,14 @@ import {
 } from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
 
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/snow/ui/select";
+} from "@/registry/bases/base/snow/ui/select";
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;
@@ -24,7 +24,7 @@ export function DataTablePagination<TData>({
 }: DataTablePaginationProps<TData>) {
   return (
     <div className="flex items-center justify-between px-2">
-      <div className="flex-1 text-sm text-snow-muted-foreground">
+      <div className="text-snow-muted-foreground flex-1 text-sm">
         {table.getFilteredSelectedRowModel().rows.length} of{" "}
         {table.getFilteredRowModel().rows.length} row(s) selected.
       </div>

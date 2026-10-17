@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/material/examples/cards/activity-goal";
-import { CardsCalendar } from "@/registry/material/examples/cards/calendar";
-import { CardsChat } from "@/registry/material/examples/cards/chat";
-import { CardsCookieSettings } from "@/registry/material/examples/cards/cookie-settings";
-import { CardsCreateAccount } from "@/registry/material/examples/cards/create-account";
-import { CardsDataTable } from "@/registry/material/examples/cards/data-table";
-import { CardsMetric } from "@/registry/material/examples/cards/metric";
-import { CardsPaymentMethod } from "@/registry/material/examples/cards/payment-method";
-import { CardsReportIssue } from "@/registry/material/examples/cards/report-issue";
-import { CardsShare } from "@/registry/material/examples/cards/share";
-import { CardsStats } from "@/registry/material/examples/cards/stats";
-import { CardsTeamMembers } from "@/registry/material/examples/cards/team-members";
+import { CardsActivityGoal } from "@/registry/bases/base/material/examples/cards/activity-goal";
+import { CardsCalendar } from "@/registry/bases/base/material/examples/cards/calendar";
+import { CardsChat } from "@/registry/bases/base/material/examples/cards/chat";
+import { CardsCookieSettings } from "@/registry/bases/base/material/examples/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/bases/base/material/examples/cards/create-account";
+import { CardsDataTable } from "@/registry/bases/base/material/examples/cards/data-table";
+import { CardsMetric } from "@/registry/bases/base/material/examples/cards/metric";
+import { CardsPaymentMethod } from "@/registry/bases/base/material/examples/cards/payment-method";
+import { CardsReportIssue } from "@/registry/bases/base/material/examples/cards/report-issue";
+import { CardsShare } from "@/registry/bases/base/material/examples/cards/share";
+import { CardsStats } from "@/registry/bases/base/material/examples/cards/stats";
+import { CardsTeamMembers } from "@/registry/bases/base/material/examples/cards/team-members";
 
 export default function CardsDemo() {
   return (

@@ -1,4 +1,4 @@
-import { XIcon } from "lucide-react"
+import { XIcon } from "lucide-react";
 
 import {
   Attachment,
@@ -10,7 +10,7 @@ import {
   AttachmentMedia,
   AttachmentTitle,
   AttachmentTrigger,
-} from "@/styles/base-rhea/ui/attachment"
+} from "@/styles/base-default/ui/attachment";
 
 const images = [
   {
@@ -31,7 +31,7 @@ const images = [
     src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&auto=format&fit=crop&q=80",
     alt: "Office",
   },
-]
+];
 
 export function AttachmentImage() {
   return (
@@ -65,5 +65,5 @@ export function AttachmentImage() {
         ))}
       </AttachmentGroup>
     </div>
-  )
+  );
 }

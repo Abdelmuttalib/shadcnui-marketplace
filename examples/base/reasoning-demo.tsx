@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
+import { useChat } from "@ai-sdk/react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -14,7 +14,7 @@ import {
   TraceCollapsibleTrigger,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const chat = createChat()
   .user("Why is the checkout deploy so slow?")
@@ -22,36 +22,36 @@ const chat = createChat()
     writer.reasoning(
       "The deploy log has three phases. Install takes 38s and next build takes 52s, both normal for this repo.\n\nImage optimization takes 3m 50s. It reruns on every deploy because its cache key includes the commit hash, so the cache never hits.",
       { delayMs: 40 }
-    )
-    writer.sleep(400)
+    );
+    writer.sleep(400);
     writer.text(
       "Image optimization is the bottleneck. Key its cache on the lockfile and the image directory instead of the commit hash, and the deploy should take under two minutes."
-    )
-  })
+    );
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function ReasoningRow({
   text,
   running,
   defaultOpen,
 }: {
-  text: string
-  running: boolean
-  defaultOpen?: boolean
+  text: string;
+  running: boolean;
+  defaultOpen?: boolean;
 }) {
-  const [open, setOpen] = React.useState(defaultOpen)
+  const [open, setOpen] = React.useState(defaultOpen);
 
   const line = (
     <TraceLine status={running ? "running" : undefined}>
       <TraceTitle>{running ? "Thinking" : "Thought for 5s"}</TraceTitle>
     </TraceLine>
-  )
+  );
 
   if (text.length === 0) {
-    return line
+    return line;
   }
 
   return (
@@ -61,18 +61,18 @@ function ReasoningRow({
         {text}
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function ReasoningDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -83,14 +83,14 @@ export function ReasoningDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
         const reasoning = message.parts.filter(
           (part) => part.type === "reasoning"
-        )
-        const text = getMessageText(message)
+        );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -110,7 +110,7 @@ export function ReasoningDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -118,13 +118,13 @@ export function ReasoningDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

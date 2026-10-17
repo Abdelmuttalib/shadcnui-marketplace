@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns";
 
-import { Calendar } from "@/registry/snow/ui/calendar";
-import { Card, CardContent } from "@/registry/snow/ui/card";
+import { Calendar } from "@/registry/bases/base/snow/ui/calendar";
+import { Card, CardContent } from "@/registry/bases/base/snow/ui/card";
 
 const start = new Date(2023, 5, 5);
 

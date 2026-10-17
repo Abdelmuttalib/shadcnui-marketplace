@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/snow/ui/typography";
+import { Typography } from "@/registry/bases/base/snow/ui/typography";
 
 export default function TypographySmall() {
   return (

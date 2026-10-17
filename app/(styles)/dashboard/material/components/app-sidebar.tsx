@@ -25,7 +25,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/material/ui/sidebar";
+} from "@/registry/bases/base/material/ui/sidebar";
 
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";

@@ -3,13 +3,13 @@ import {
   FilePenIcon,
   FilePlusIcon,
   GitCommitHorizontalIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockLine,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 import {
   Sheet,
   SheetContent,
@@ -17,7 +17,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-rhea/ui/sheet"
+} from "@/styles/base-default/ui/sheet";
 import {
   Trace,
   TraceCollapsible,
@@ -27,7 +27,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const files = [
   {
@@ -60,7 +60,7 @@ const files = [
 +  return next
 +}`,
   },
-]
+];
 
 function DiffLines({ diff }: { diff: string }) {
   return diff.split("\n").map((line, index) => {
@@ -69,7 +69,7 @@ function DiffLines({ diff }: { diff: string }) {
         <CodeBlockLine key={index} className="text-muted-foreground">
           {line}
         </CodeBlockLine>
-      )
+      );
     }
 
     return (
@@ -79,14 +79,14 @@ function DiffLines({ diff }: { diff: string }) {
           line.startsWith("+")
             ? "added"
             : line.startsWith("-")
-              ? "removed"
-              : "default"
+            ? "removed"
+            : "default"
         }
       >
         {line.slice(1)}
       </CodeBlockLine>
-    )
-  })
+    );
+  });
 }
 
 export function TraceCommit() {
@@ -140,5 +140,5 @@ export function TraceCommit() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

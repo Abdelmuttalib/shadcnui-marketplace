@@ -5,20 +5,20 @@ import { Calendar as CalendarIcon } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/moon/ui/button";
-import { Calendar } from "@/registry/moon/ui/calendar";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import { Calendar } from "@/registry/bases/base/moon/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/moon/ui/popover";
+} from "@/registry/bases/base/moon/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
+} from "@/registry/bases/base/moon/ui/select";
 
 export default function DatePickerWithPresets() {
   const [date, setDate] = React.useState<Date>();

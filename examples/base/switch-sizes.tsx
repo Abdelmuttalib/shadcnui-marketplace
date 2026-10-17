@@ -1,5 +1,5 @@
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-nova/ui/field"
-import { Switch } from "@/styles/base-nova/ui/switch"
+import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
+import { Switch } from "@/styles/base-default/ui/switch";
 
 export function SwitchSizes() {
   return (
@@ -13,5 +13,5 @@ export function SwitchSizes() {
         <FieldLabel htmlFor="switch-size-default">Default</FieldLabel>
       </Field>
     </FieldGroup>
-  )
+  );
 }

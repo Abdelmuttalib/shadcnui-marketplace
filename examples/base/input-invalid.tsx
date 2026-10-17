@@ -2,8 +2,8 @@ import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function InputInvalid() {
   return (
@@ -14,5 +14,5 @@ export function InputInvalid() {
         This field contains validation errors.
       </FieldDescription>
     </Field>
-  )
+  );
 }

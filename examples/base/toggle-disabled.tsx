@@ -1,4 +1,4 @@
-import { Toggle } from "@/styles/base-nova/ui/toggle"
+import { Toggle } from "@/styles/base-default/ui/toggle";
 
 export function ToggleDisabled() {
   return (
@@ -10,5 +10,5 @@ export function ToggleDisabled() {
         Disabled
       </Toggle>
     </div>
-  )
+  );
 }

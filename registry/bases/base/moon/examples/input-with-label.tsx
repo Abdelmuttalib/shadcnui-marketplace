@@ -1,5 +1,5 @@
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 
 export default function InputWithLabel() {
   return (

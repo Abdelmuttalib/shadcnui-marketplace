@@ -2,7 +2,10 @@
 
 import { Bar, BarChart, CartesianGrid } from "recharts";
 
-import { ChartConfig, ChartContainer } from "@/registry/moon/ui/chart";
+import {
+  ChartConfig,
+  ChartContainer,
+} from "@/registry/bases/base/moon/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

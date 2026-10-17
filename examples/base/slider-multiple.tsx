@@ -1,4 +1,4 @@
-import { Slider } from "@/styles/base-nova/ui/slider"
+import { Slider } from "@/styles/base-default/ui/slider";
 
 export function SliderMultiple() {
   return (
@@ -8,5 +8,5 @@ export function SliderMultiple() {
       step={10}
       className="mx-auto w-full max-w-xs"
     />
-  )
+  );
 }

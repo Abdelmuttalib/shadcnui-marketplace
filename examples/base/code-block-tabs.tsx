@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -9,13 +9,13 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/styles/base-rhea/ui/tabs"
+} from "@/styles/base-default/ui/tabs";
 
 const files = [
   {
@@ -51,10 +51,10 @@ export function Chat() {
     language: "bash",
     code: "AI_GATEWAY_API_KEY=your-api-key",
   },
-]
+];
 
 function FileCode({ code, language }: { code: string; language: string }) {
-  const lines = useHighlightedCode(code, language)
+  const lines = useHighlightedCode(code, language);
 
   return (
     <CodeBlockContent lineNumbers>
@@ -62,7 +62,7 @@ function FileCode({ code, language }: { code: string; language: string }) {
         <CodeBlockLine key={index}>{line}</CodeBlockLine>
       ))}
     </CodeBlockContent>
-  )
+  );
 }
 
 export function CodeBlockTabs() {
@@ -89,5 +89,5 @@ export function CodeBlockTabs() {
         </TabsContent>
       ))}
     </Tabs>
-  )
+  );
 }

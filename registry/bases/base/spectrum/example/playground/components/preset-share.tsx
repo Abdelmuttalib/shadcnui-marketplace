@@ -1,13 +1,13 @@
 import { CopyIcon } from "@radix-ui/react-icons";
 
-import { Button } from "@/registry/spectrum/ui/button";
-import { Input } from "@/registry/spectrum/ui/input";
-import { Label } from "@/registry/spectrum/ui/label";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/spectrum/ui/popover";
+} from "@/registry/bases/base/spectrum/ui/popover";
 
 export function PresetShare() {
   return (
@@ -18,7 +18,7 @@ export function PresetShare() {
       <PopoverContent align="end" className="w-[520px]">
         <div className="flex flex-col space-y-2 text-center sm:text-left">
           <h3 className="text-lg font-semibold">Share preset</h3>
-          <p className="text-sm text-spctm-muted-foreground">
+          <p className="text-spctm-muted-foreground text-sm">
             Anyone who has this link and an OpenAI account will be able to view
             this.
           </p>

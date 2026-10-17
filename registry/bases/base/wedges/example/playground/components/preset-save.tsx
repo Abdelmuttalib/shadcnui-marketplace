@@ -1,4 +1,4 @@
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/wedges/ui/dialog";
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+} from "@/registry/bases/base/wedges/ui/dialog";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 
 export function PresetSave() {
   return (

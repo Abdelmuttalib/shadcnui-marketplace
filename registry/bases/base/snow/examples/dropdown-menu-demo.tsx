@@ -15,7 +15,7 @@ import {
   Users,
 } from "lucide-react";
 
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,7 +29,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
 
 export default function DropdownMenuDemo() {
   return (

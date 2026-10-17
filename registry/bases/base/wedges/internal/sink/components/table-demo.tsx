@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/wedges/ui/table";
+} from "@/registry/bases/base/wedges/ui/table";
 
 const invoices = [
   {

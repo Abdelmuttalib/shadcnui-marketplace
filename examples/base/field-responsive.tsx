@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Field,
   FieldContent,
@@ -7,8 +7,8 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function FieldResponsive() {
   return (
@@ -37,5 +37,5 @@ export function FieldResponsive() {
         </FieldSet>
       </form>
     </div>
-  )
+  );
 }

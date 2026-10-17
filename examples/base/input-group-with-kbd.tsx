@@ -1,19 +1,19 @@
-import { CheckIcon, InfoIcon, SearchIcon, SparklesIcon } from "lucide-react"
+import { CheckIcon, InfoIcon, SearchIcon, SparklesIcon } from "lucide-react";
 
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
-import { Kbd, KbdGroup } from "@/styles/base-nova/ui/kbd"
-import { Spinner } from "@/styles/base-nova/ui/spinner"
+} from "@/styles/base-default/ui/input-group";
+import { Kbd, KbdGroup } from "@/styles/base-default/ui/kbd";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export function InputGroupWithKbd() {
   return (
@@ -63,7 +63,7 @@ export function InputGroupWithKbd() {
         <InputGroup>
           <InputGroupInput id="input-username-26" defaultValue="shadcn" />
           <InputGroupAddon align="inline-end">
-            <div className="flex size-4 items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
+            <div className="size-4 flex items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
               <CheckIcon className="size-3 text-white" />
             </div>
           </InputGroupAddon>
@@ -128,5 +128,5 @@ export function InputGroupWithKbd() {
         </FieldDescription>
       </Field>
     </FieldGroup>
-  )
+  );
 }

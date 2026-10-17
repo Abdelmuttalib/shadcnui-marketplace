@@ -6,7 +6,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/moon/ui/input-otp";
+} from "@/registry/bases/base/moon/ui/input-otp";
 
 export default function InputOTPControlled() {
   const [value, setValue] = React.useState("");

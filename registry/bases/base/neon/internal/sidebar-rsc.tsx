@@ -12,7 +12,7 @@ import {
   SidebarMenuItem,
   SidebarMenuSkeleton,
   SidebarProvider,
-} from "@/registry/neon/ui/sidebar";
+} from "@/registry/bases/base/neon/ui/sidebar";
 
 const projects = [
   {

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 import {
   Item,
@@ -7,7 +7,7 @@ import {
   ItemGroup,
   ItemHeader,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 const models = [
   {
@@ -31,7 +31,7 @@ const models = [
       "https://images.unsplash.com/photo-1602146057681-08560aee8cde?q=80&w=640&auto=format&fit=crop",
     credit: "Cherry Laithang on Unsplash",
   },
-]
+];
 
 export function ItemHeaderDemo() {
   return (
@@ -56,5 +56,5 @@ export function ItemHeaderDemo() {
         ))}
       </ItemGroup>
     </div>
-  )
+  );
 }

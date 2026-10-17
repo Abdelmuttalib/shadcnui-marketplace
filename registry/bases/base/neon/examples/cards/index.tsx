@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/neon/examples/cards/activity-goal";
-import { CardsCalendar } from "@/registry/neon/examples/cards/calendar";
-import { CardsChat } from "@/registry/neon/examples/cards/chat";
-import { CardsCookieSettings } from "@/registry/neon/examples/cards/cookie-settings";
-import { CardsCreateAccount } from "@/registry/neon/examples/cards/create-account";
-import { CardsDataTable } from "@/registry/neon/examples/cards/data-table";
-import { CardsMetric } from "@/registry/neon/examples/cards/metric";
-import { CardsPaymentMethod } from "@/registry/neon/examples/cards/payment-method";
-import { CardsReportIssue } from "@/registry/neon/examples/cards/report-issue";
-import { CardsShare } from "@/registry/neon/examples/cards/share";
-import { CardsStats } from "@/registry/neon/examples/cards/stats";
-import { CardsTeamMembers } from "@/registry/neon/examples/cards/team-members";
+import { CardsActivityGoal } from "@/registry/bases/base/neon/examples/cards/activity-goal";
+import { CardsCalendar } from "@/registry/bases/base/neon/examples/cards/calendar";
+import { CardsChat } from "@/registry/bases/base/neon/examples/cards/chat";
+import { CardsCookieSettings } from "@/registry/bases/base/neon/examples/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/bases/base/neon/examples/cards/create-account";
+import { CardsDataTable } from "@/registry/bases/base/neon/examples/cards/data-table";
+import { CardsMetric } from "@/registry/bases/base/neon/examples/cards/metric";
+import { CardsPaymentMethod } from "@/registry/bases/base/neon/examples/cards/payment-method";
+import { CardsReportIssue } from "@/registry/bases/base/neon/examples/cards/report-issue";
+import { CardsShare } from "@/registry/bases/base/neon/examples/cards/share";
+import { CardsStats } from "@/registry/bases/base/neon/examples/cards/stats";
+import { CardsTeamMembers } from "@/registry/bases/base/neon/examples/cards/team-members";
 
 export default function CardsDemo() {
   return (

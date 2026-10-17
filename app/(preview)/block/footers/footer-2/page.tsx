@@ -8,9 +8,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/registry/wedges/ui/button";
-import { Input } from "@/registry/wedges/ui/input";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 export default function FooterWithNewsletter() {
   return (
@@ -25,7 +25,7 @@ export default function FooterWithNewsletter() {
               <Typography
                 as="p"
                 variant="sm/normal"
-                className="mt-2 text-wedges-muted-foreground"
+                className="text-wedges-muted-foreground mt-2"
               >
                 Stay in the loop with our latest updates and insights.
               </Typography>
@@ -50,7 +50,7 @@ export default function FooterWithNewsletter() {
                   <li key={index}>
                     <Link
                       href="#"
-                      className="text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                      className="text-wedges-muted-foreground hover:text-wedges-primary transition-colors duration-300"
                     >
                       {item}
                     </Link>
@@ -67,7 +67,7 @@ export default function FooterWithNewsletter() {
                   <li key={index}>
                     <Link
                       href="#"
-                      className="text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                      className="text-wedges-muted-foreground hover:text-wedges-primary transition-colors duration-300"
                     >
                       {item}
                     </Link>
@@ -85,7 +85,7 @@ export default function FooterWithNewsletter() {
                     <Link
                       key={index}
                       href="#"
-                      className="text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                      className="text-wedges-muted-foreground hover:text-wedges-primary transition-colors duration-300"
                     >
                       <Icon className="size-5" />
                     </Link>

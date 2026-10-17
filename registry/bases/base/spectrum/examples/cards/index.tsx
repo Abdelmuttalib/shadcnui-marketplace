@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/spectrum/examples/cards/activity-goal";
-import { CardsCalendar } from "@/registry/spectrum/examples/cards/calendar";
-import { CardsChat } from "@/registry/spectrum/examples/cards/chat";
-import { CardsCookieSettings } from "@/registry/spectrum/examples/cards/cookie-settings";
-import { CardsCreateAccount } from "@/registry/spectrum/examples/cards/create-account";
-import { CardsDataTable } from "@/registry/spectrum/examples/cards/data-table";
-import { CardsMetric } from "@/registry/spectrum/examples/cards/metric";
-import { CardsPaymentMethod } from "@/registry/spectrum/examples/cards/payment-method";
-import { CardsReportIssue } from "@/registry/spectrum/examples/cards/report-issue";
-import { CardsShare } from "@/registry/spectrum/examples/cards/share";
-import { CardsStats } from "@/registry/spectrum/examples/cards/stats";
-import { CardsTeamMembers } from "@/registry/spectrum/examples/cards/team-members";
+import { CardsActivityGoal } from "@/registry/bases/base/spectrum/examples/cards/activity-goal";
+import { CardsCalendar } from "@/registry/bases/base/spectrum/examples/cards/calendar";
+import { CardsChat } from "@/registry/bases/base/spectrum/examples/cards/chat";
+import { CardsCookieSettings } from "@/registry/bases/base/spectrum/examples/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/bases/base/spectrum/examples/cards/create-account";
+import { CardsDataTable } from "@/registry/bases/base/spectrum/examples/cards/data-table";
+import { CardsMetric } from "@/registry/bases/base/spectrum/examples/cards/metric";
+import { CardsPaymentMethod } from "@/registry/bases/base/spectrum/examples/cards/payment-method";
+import { CardsReportIssue } from "@/registry/bases/base/spectrum/examples/cards/report-issue";
+import { CardsShare } from "@/registry/bases/base/spectrum/examples/cards/share";
+import { CardsStats } from "@/registry/bases/base/spectrum/examples/cards/stats";
+import { CardsTeamMembers } from "@/registry/bases/base/spectrum/examples/cards/team-members";
 
 export default function CardsDemo() {
   return (

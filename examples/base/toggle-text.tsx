@@ -1,6 +1,6 @@
-import { ItalicIcon } from "lucide-react"
+import { ItalicIcon } from "lucide-react";
 
-import { Toggle } from "@/styles/base-nova/ui/toggle"
+import { Toggle } from "@/styles/base-default/ui/toggle";
 
 export function ToggleText() {
   return (
@@ -8,5 +8,5 @@ export function ToggleText() {
       <ItalicIcon />
       Italic
     </Toggle>
-  )
+  );
 }

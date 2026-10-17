@@ -4,7 +4,7 @@ import { Minus, Plus } from "lucide-react";
 import * as React from "react";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -14,7 +14,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/snow/ui/drawer";
+} from "@/registry/bases/base/snow/ui/drawer";
 
 const data = [
   {
@@ -92,7 +92,7 @@ export function DrawerDemo() {
                 <div className="text-7xl font-bold tracking-tighter">
                   {goal}
                 </div>
-                <div className="text-[0.70rem] uppercase text-snow-muted-foreground">
+                <div className="text-snow-muted-foreground text-[0.70rem] uppercase">
                   Calories/day
                 </div>
               </div>

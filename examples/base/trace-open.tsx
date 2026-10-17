@@ -1,10 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { TerminalIcon } from "lucide-react"
+import { TerminalIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   TraceCollapsible,
   TraceCollapsibleContent,
@@ -12,10 +15,10 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceOpen() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   return (
     <div className="flex w-full max-w-sm flex-col items-start gap-4">
@@ -57,5 +60,5 @@ export function TraceOpen() {
         {open ? "Hide" : "Show"} the pnpm output
       </Button>
     </div>
-  )
+  );
 }

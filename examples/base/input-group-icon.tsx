@@ -5,13 +5,13 @@ import {
   MailIcon,
   SearchIcon,
   StarIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 export default function InputGroupIcon() {
   return (
@@ -45,5 +45,5 @@ export default function InputGroupIcon() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

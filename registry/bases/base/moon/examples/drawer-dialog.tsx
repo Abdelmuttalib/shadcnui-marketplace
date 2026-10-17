@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/moon/ui/dialog";
+} from "@/registry/bases/base/moon/ui/dialog";
 import {
   Drawer,
   DrawerClose,
@@ -20,9 +20,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/moon/ui/drawer";
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
+} from "@/registry/bases/base/moon/ui/drawer";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 
 export default function DrawerDialogDemo() {
   const [open, setOpen] = React.useState(false);

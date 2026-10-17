@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { REGEXP_ONLY_DIGITS } from "input-otp"
+import { REGEXP_ONLY_DIGITS } from "input-otp";
 
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/styles/base-nova/ui/input-otp"
+} from "@/styles/base-default/ui/input-otp";
 
 export function InputOTPPattern() {
   return (
@@ -24,5 +24,5 @@ export function InputOTPPattern() {
         </InputOTPGroup>
       </InputOTP>
     </Field>
-  )
+  );
 }

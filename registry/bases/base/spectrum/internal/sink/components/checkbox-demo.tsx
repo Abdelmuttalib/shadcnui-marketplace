@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/registry/spectrum/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/spectrum/ui/checkbox";
 
 export function CheckboxDemo() {
   return (

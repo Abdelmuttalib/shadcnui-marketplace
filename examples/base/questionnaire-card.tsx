@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Card,
@@ -11,7 +11,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-nova/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -25,7 +25,7 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   {
@@ -38,20 +38,22 @@ const items = [
     name: "output",
     required: true,
   },
-] as const
+] as const;
 
 export function QuestionnaireCard() {
-  const taskTitleId = React.useId()
-  const outputTitleId = React.useId()
+  const taskTitleId = React.useId();
+  const outputTitleId = React.useId();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
 
     toast("Agent task created", {
-      description: `Task: ${formData.get("task") ?? "None"} · Handoff: ${formData.get("output") ?? "None"}`,
-    })
+      description: `Task: ${formData.get("task") ?? "None"} · Handoff: ${
+        formData.get("output") ?? "None"
+      }`,
+    });
   }
 
   return (
@@ -132,5 +134,5 @@ export function QuestionnaireCard() {
         </CardFooter>
       </Card>
     </Questionnaire>
-  )
+  );
 }

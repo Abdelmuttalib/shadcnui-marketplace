@@ -11,7 +11,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/neon/ui/context-menu";
+} from "@/registry/bases/base/neon/ui/context-menu";
 
 import { Album } from "../data/albums";
 import { playlists } from "../data/playlists";
@@ -36,7 +36,7 @@ export function AlbumArtwork({
       <ContextMenu>
         <ContextMenuTrigger>
           <div
-            className="overflow-hidden rounded-neon-md"
+            className="rounded-neon-md overflow-hidden"
             style={{
               height: height ? height : 375,
             }}
@@ -93,7 +93,7 @@ export function AlbumArtwork({
       </ContextMenu>
       <div className="space-y-1 text-sm">
         <h3 className="font-medium leading-none">{album.name}</h3>
-        <p className="text-xs text-neon-muted-foreground">{album.artist}</p>
+        <p className="text-neon-muted-foreground text-xs">{album.artist}</p>
       </div>
     </div>
   );

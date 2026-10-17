@@ -14,17 +14,17 @@ import {
 } from "lucide-react";
 import * as React from "react";
 
-import { NavMain } from "@/registry/moon/blocks/sidebar-07/components/nav-main";
-import { NavProjects } from "@/registry/moon/blocks/sidebar-07/components/nav-projects";
-import { NavUser } from "@/registry/moon/blocks/sidebar-07/components/nav-user";
-import { TeamSwitcher } from "@/registry/moon/blocks/sidebar-07/components/team-switcher";
+import { NavMain } from "@/registry/bases/base/moon/blocks/sidebar-07/components/nav-main";
+import { NavProjects } from "@/registry/bases/base/moon/blocks/sidebar-07/components/nav-projects";
+import { NavUser } from "@/registry/bases/base/moon/blocks/sidebar-07/components/nav-user";
+import { TeamSwitcher } from "@/registry/bases/base/moon/blocks/sidebar-07/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/registry/moon/ui/sidebar";
+} from "@/registry/bases/base/moon/ui/sidebar";
 
 // This is sample data.
 const data = {

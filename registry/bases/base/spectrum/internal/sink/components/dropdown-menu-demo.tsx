@@ -1,4 +1,4 @@
-import { Button } from "@/registry/spectrum/ui/button";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/spectrum/ui/dropdown-menu";
+} from "@/registry/bases/base/spectrum/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (

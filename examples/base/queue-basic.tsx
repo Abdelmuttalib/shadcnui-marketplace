@@ -3,7 +3,7 @@ import {
   CircleIcon,
   ListChecksIcon,
   ListTodoIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Trace,
@@ -13,7 +13,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const todos = [
   { title: "Write the migration guide", done: true },
@@ -21,7 +21,7 @@ const todos = [
   { title: "Fix the focus ring on the select trigger", done: false },
   { title: "Update the registry snapshots", done: false },
   { title: "Add tests for the combobox", done: false },
-]
+];
 
 function TodoLine({ todo }: { todo: (typeof todos)[number] }) {
   return (
@@ -29,12 +29,12 @@ function TodoLine({ todo }: { todo: (typeof todos)[number] }) {
       <TraceIcon>{todo.done ? <CircleCheckIcon /> : <CircleIcon />}</TraceIcon>
       <TraceTitle>{todo.title}</TraceTitle>
     </TraceLine>
-  )
+  );
 }
 
 export function QueueBasic() {
-  const pending = todos.filter((todo) => !todo.done)
-  const completed = todos.filter((todo) => todo.done)
+  const pending = todos.filter((todo) => !todo.done);
+  const completed = todos.filter((todo) => todo.done);
 
   return (
     <Trace className="max-w-sm">
@@ -73,5 +73,5 @@ export function QueueBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

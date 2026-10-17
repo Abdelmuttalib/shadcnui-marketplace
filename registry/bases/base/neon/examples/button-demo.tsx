@@ -1,4 +1,4 @@
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 
 export default function ButtonDemo() {
   return (

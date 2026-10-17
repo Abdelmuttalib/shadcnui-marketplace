@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
+  type ChartConfig,
   ChartContainer,
   ChartLegend,
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
-} from "@/styles/base-nova/ui/chart"
+} from "@/styles/base-default/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -18,7 +18,7 @@ const chartData = [
   { month: "April", desktop: 73, mobile: 190 },
   { month: "May", desktop: 209, mobile: 130 },
   { month: "June", desktop: 214, mobile: 140 },
-]
+];
 
 const chartConfig = {
   desktop: {
@@ -29,7 +29,7 @@ const chartConfig = {
     label: "Mobile",
     color: "#60a5fa",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function ChartBarDemoLegend() {
   return (
@@ -49,5 +49,5 @@ export function ChartBarDemoLegend() {
         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
       </BarChart>
     </ChartContainer>
-  )
+  );
 }

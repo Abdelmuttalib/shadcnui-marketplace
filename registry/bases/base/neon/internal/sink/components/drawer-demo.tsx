@@ -4,7 +4,7 @@ import { Minus, Plus } from "lucide-react";
 import * as React from "react";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -14,7 +14,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/neon/ui/drawer";
+} from "@/registry/bases/base/neon/ui/drawer";
 
 const data = [
   {
@@ -92,7 +92,7 @@ export function DrawerDemo() {
                 <div className="text-7xl font-bold tracking-tighter">
                   {goal}
                 </div>
-                <div className="text-[0.70rem] uppercase text-neon-muted-foreground">
+                <div className="text-neon-muted-foreground text-[0.70rem] uppercase">
                   Calories/day
                 </div>
               </div>

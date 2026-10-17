@@ -1,4 +1,4 @@
-import { SearchIcon } from "lucide-react"
+import { SearchIcon } from "lucide-react";
 
 import {
   Empty,
@@ -6,13 +6,13 @@ import {
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@/styles/base-nova/ui/empty"
+} from "@/styles/base-default/ui/empty";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
-import { Kbd } from "@/styles/base-nova/ui/kbd"
+} from "@/styles/base-default/ui/input-group";
+import { Kbd } from "@/styles/base-default/ui/kbd";
 
 export default function EmptyInputGroup() {
   return (
@@ -39,5 +39,5 @@ export default function EmptyInputGroup() {
         </EmptyDescription>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

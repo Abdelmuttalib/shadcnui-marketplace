@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/wedges/ui/select";
+} from "@/registry/bases/base/wedges/ui/select";
 
 export function SelectDemo() {
   return (

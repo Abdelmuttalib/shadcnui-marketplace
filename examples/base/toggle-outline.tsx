@@ -1,6 +1,6 @@
-import { BoldIcon, ItalicIcon } from "lucide-react"
+import { BoldIcon, ItalicIcon } from "lucide-react";
 
-import { Toggle } from "@/styles/base-nova/ui/toggle"
+import { Toggle } from "@/styles/base-default/ui/toggle";
 
 export function ToggleOutline() {
   return (
@@ -14,5 +14,5 @@ export function ToggleOutline() {
         Bold
       </Toggle>
     </div>
-  )
+  );
 }

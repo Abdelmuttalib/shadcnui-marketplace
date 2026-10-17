@@ -1,9 +1,9 @@
-import { Markdown } from "@/components/markdown"
+import { Markdown } from "@/components/markdown";
 import {
   Bubble,
   BubbleContent,
   BubbleReactions,
-} from "@/styles/base-rhea/ui/bubble"
+} from "@/styles/base-default/ui/bubble";
 
 export function BubbleVariantsDemo() {
   return (
@@ -48,5 +48,5 @@ Ghost bubbles are full width and can take the full width of the container.
         </BubbleContent>
       </Bubble>
     </div>
-  )
+  );
 }

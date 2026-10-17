@@ -5,13 +5,15 @@ import {
   CodeBlockCopyButton,
   CodeBlockHeader,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const logs = Array.from(
   { length: 40 },
   (_, index) =>
-    `[${String(index + 1).padStart(2, "0")}] GET /api/chat 200 in ${12 + ((index * 7) % 40)}ms`
-).join("\n")
+    `[${String(index + 1).padStart(2, "0")}] GET /api/chat 200 in ${
+      12 + ((index * 7) % 40)
+    }ms`
+).join("\n");
 
 export function CodeBlockHeight() {
   return (
@@ -23,10 +25,10 @@ export function CodeBlockHeight() {
             <CodeBlockCopyButton value={logs} />
           </CodeBlockActions>
         </CodeBlockHeader>
-        <CodeBlockContent className="max-h-48 scroll-fade-y">
+        <CodeBlockContent className="scroll-fade-y max-h-48">
           {logs}
         </CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

@@ -12,8 +12,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/spectrum/ui/avatar";
-import { Button } from "@/registry/spectrum/ui/button";
+} from "@/registry/bases/base/spectrum/ui/avatar";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/spectrum/ui/command";
+} from "@/registry/bases/base/spectrum/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -31,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/spectrum/ui/dialog";
-import { Input } from "@/registry/spectrum/ui/input";
-import { Label } from "@/registry/spectrum/ui/label";
+} from "@/registry/bases/base/spectrum/ui/dialog";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/spectrum/ui/popover";
+} from "@/registry/bases/base/spectrum/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/spectrum/ui/select";
+} from "@/registry/bases/base/spectrum/ui/select";
 
 const groups = [
   {

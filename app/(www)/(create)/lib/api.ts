@@ -13,7 +13,7 @@ const defaultStyle = DEFAULT_STYLE;
 
 export async function getItemsForBase(
   base: BaseName,
-  styleName?: Style["name"] = defaultStyle.name
+  styleName: Style["name"] = defaultStyle.name
 ) {
   const style = defaultStyle;
   const { Index } = await import(`@/registry/bases/__index__`);
@@ -48,9 +48,13 @@ export async function getStyleItemsForBase(
   );
 }
 
-export async function getBaseItem(name: string, base: BaseName) {
+export async function getBaseItem(
+  name: string,
+  base: BaseName,
+  styleName: Style["name"] = defaultStyle.name
+) {
   const { Index } = await import("@/registry/bases/__index__");
-  const index = Index[base];
+  const index = Index[base][styleName];
 
   if (!index?.[name] || EXCLUDED_ITEMS.includes(name)) {
     return null;
@@ -59,9 +63,13 @@ export async function getBaseItem(name: string, base: BaseName) {
   return registryItemSchema.parse(index[name]);
 }
 
-export async function getBaseComponent(name: string, base: BaseName) {
+export async function getBaseComponent(
+  name: string,
+  base: BaseName,
+  styleName: Style["name"] = defaultStyle.name
+) {
   const { Index } = await import("@/registry/bases/__index__");
-  const index = Index[base];
+  const index = Index[base][styleName];
 
   if (!index?.[name] || EXCLUDED_ITEMS.includes(name)) {
     return null;

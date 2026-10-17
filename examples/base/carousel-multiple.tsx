@@ -1,11 +1,11 @@
-import { Card, CardContent } from "@/styles/base-nova/ui/card"
+import { Card, CardContent } from "@/styles/base-default/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/styles/base-nova/ui/carousel"
+} from "@/styles/base-default/ui/carousel";
 
 export function CarouselMultiple() {
   return (
@@ -31,5 +31,5 @@ export function CarouselMultiple() {
       <CarouselPrevious className="hidden sm:inline-flex" />
       <CarouselNext className="hidden sm:inline-flex" />
     </Carousel>
-  )
+  );
 }

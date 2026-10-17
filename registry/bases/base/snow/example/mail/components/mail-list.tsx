@@ -2,9 +2,9 @@ import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
 import { ComponentProps } from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/snow/ui/badge";
-import { ScrollArea } from "@/registry/snow/ui/scroll-area";
-import { Separator } from "@/registry/snow/ui/separator";
+import { Badge } from "@/registry/bases/base/snow/ui/badge";
+import { ScrollArea } from "@/registry/bases/base/snow/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 
 import { Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -23,7 +23,7 @@ export function MailList({ items }: MailListProps) {
           <button
             key={item.id}
             className={cn(
-              "flex flex-col items-start gap-2 rounded-snow-lg border border-snow-border p-3 text-left text-sm transition-all hover:bg-snow-accent",
+              "rounded-snow-lg border-snow-border hover:bg-snow-accent flex flex-col items-start gap-2 border p-3 text-left text-sm transition-all",
               mail.selected === item.id && "bg-snow-muted"
             )}
             onClick={() =>
@@ -56,7 +56,7 @@ export function MailList({ items }: MailListProps) {
               </div>
               <div className="text-xs font-medium">{item.subject}</div>
             </div>
-            <div className="line-clamp-2 text-xs text-snow-muted-foreground">
+            <div className="text-snow-muted-foreground line-clamp-2 text-xs">
               {item.text.substring(0, 300)}
             </div>
             {item.labels.length ? (

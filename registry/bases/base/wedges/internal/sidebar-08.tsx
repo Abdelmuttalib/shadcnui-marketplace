@@ -28,7 +28,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
+} from "@/registry/bases/base/wedges/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -36,12 +36,12 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/wedges/ui/breadcrumb";
+} from "@/registry/bases/base/wedges/ui/breadcrumb";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/wedges/ui/collapsible";
+} from "@/registry/bases/base/wedges/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -50,8 +50,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
-import { Separator } from "@/registry/wedges/ui/separator";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -70,7 +70,7 @@ import {
   SidebarMenuSubItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/wedges/ui/sidebar";
+} from "@/registry/bases/base/wedges/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -209,7 +209,7 @@ export default function Page() {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
                 <a href="#">
-                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-wedges-sidebar-primary text-sidebar-primary-foreground">
+                  <div className="size-8 bg-wedges-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                     <Command className="size-4" />
                   </div>
                   <div className="grid flex-1 text-left text-sm leading-tight">
@@ -355,11 +355,11 @@ export default function Page() {
                         {data.user.email}
                       </span>
                     </div>
-                    <ChevronsUpDown className="ml-auto size-4" />
+                    <ChevronsUpDown className="size-4 ml-auto" />
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
-                  className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                  className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
                   side="bottom"
                   align="end"
                   sideOffset={4}
@@ -440,11 +440,11 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-wedges-muted/50" />
-            <div className="aspect-video rounded-xl bg-wedges-muted/50" />
-            <div className="aspect-video rounded-xl bg-wedges-muted/50" />
+            <div className="bg-wedges-muted/50 aspect-video rounded-xl" />
+            <div className="bg-wedges-muted/50 aspect-video rounded-xl" />
+            <div className="bg-wedges-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-wedges-muted/50 md:min-h-min" />
+          <div className="bg-wedges-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

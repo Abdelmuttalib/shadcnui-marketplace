@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-rhea/ui/hover-card"
+} from "@/styles/base-default/ui/hover-card";
 
 type Source = {
-  url: string
-  title: string
-  description: string
-}
+  url: string;
+  title: string;
+  description: string;
+};
 
 const sources = {
   streaming: {
@@ -39,14 +39,14 @@ const sources = {
     title: "Transfer-Encoding",
     description: "Send a response as a series of chunks.",
   },
-} satisfies Record<string, Source>
+} satisfies Record<string, Source>;
 
 function hostname(url: string) {
-  return new URL(url).hostname.replace(/^www\./, "")
+  return new URL(url).hostname.replace(/^www\./, "");
 }
 
 function Citation({ source }: { source: Source }) {
-  const host = hostname(source.url)
+  const host = hostname(source.url);
 
   return (
     <HoverCard>
@@ -64,14 +64,14 @@ function Citation({ source }: { source: Source }) {
           href={source.url}
           target="_blank"
           rel="noreferrer"
-          className="text-xs text-muted-foreground underline-offset-4 hover:underline"
+          className="text-muted-foreground text-xs underline-offset-4 hover:underline"
         >
           {host}
           <span className="sr-only"> (opens in a new tab)</span>
         </a>
       </HoverCardContent>
     </HoverCard>
-  )
+  );
 }
 
 export function InlineCitationDemo() {
@@ -96,5 +96,5 @@ export function InlineCitationDemo() {
         <Citation source={sources.chunked} />
       </p>
     </div>
-  )
+  );
 }

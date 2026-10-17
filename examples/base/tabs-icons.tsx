@@ -1,6 +1,6 @@
-import { AppWindowIcon, CodeIcon } from "lucide-react"
+import { AppWindowIcon, CodeIcon } from "lucide-react";
 
-import { Tabs, TabsList, TabsTrigger } from "@/styles/base-nova/ui/tabs"
+import { Tabs, TabsList, TabsTrigger } from "@/styles/base-default/ui/tabs";
 
 export function TabsIcons() {
   return (
@@ -16,5 +16,5 @@ export function TabsIcons() {
         </TabsTrigger>
       </TabsList>
     </Tabs>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/moon/ui/checkbox";
-import { Label } from "@/registry/moon/ui/label";
+import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 
 export function LabelDemo() {
   return (

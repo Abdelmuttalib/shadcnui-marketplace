@@ -1,5 +1,5 @@
-import { Button } from "@/registry/wedges/ui/button";
-import { Textarea } from "@/registry/wedges/ui/textarea";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Textarea } from "@/registry/bases/base/wedges/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/spectrum/ui/input-otp";
+} from "@/registry/bases/base/spectrum/ui/input-otp";
 
 export default function InputOTPDemo() {
   return (

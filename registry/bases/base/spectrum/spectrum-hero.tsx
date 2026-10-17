@@ -1,6 +1,6 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
-import { DemoDatePicker } from "@/registry/spectrum/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/spectrum/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -15,18 +15,22 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/spectrum/showcase";
+} from "@/registry/bases/base/spectrum/showcase";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/spectrum/ui/avatar";
-import { Badge } from "@/registry/spectrum/ui/badge";
-import { Button } from "@/registry/spectrum/ui/button";
-import { Checkbox } from "@/registry/spectrum/ui/checkbox";
-import { Switch } from "@/registry/spectrum/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/spectrum/ui/tabs";
-import { Toggle } from "@/registry/spectrum/ui/toggle";
+} from "@/registry/bases/base/spectrum/ui/avatar";
+import { Badge } from "@/registry/bases/base/spectrum/ui/badge";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
+import { Checkbox } from "@/registry/bases/base/spectrum/ui/checkbox";
+import { Switch } from "@/registry/bases/base/spectrum/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/spectrum/ui/tabs";
+import { Toggle } from "@/registry/bases/base/spectrum/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function SpectrumUI() {

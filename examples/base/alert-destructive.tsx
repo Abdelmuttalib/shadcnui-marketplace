@@ -1,10 +1,10 @@
-import { AlertCircleIcon } from "lucide-react"
+import { AlertCircleIcon } from "lucide-react";
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/styles/base-nova/ui/alert"
+} from "@/styles/base-default/ui/alert";
 
 export default function AlertDestructive() {
   return (
@@ -16,5 +16,5 @@ export default function AlertDestructive() {
         and try again.
       </AlertDescription>
     </Alert>
-  )
+  );
 }

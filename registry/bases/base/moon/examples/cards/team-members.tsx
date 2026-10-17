@@ -2,15 +2,19 @@
 
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/moon/ui/avatar";
-import { Button } from "@/registry/moon/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/moon/ui/avatar";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -18,12 +22,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/moon/ui/command";
+} from "@/registry/bases/base/moon/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/moon/ui/popover";
+} from "@/registry/bases/base/moon/ui/popover";
 
 export function CardsTeamMembers() {
   return (
@@ -43,7 +47,7 @@ export function CardsTeamMembers() {
             </Avatar>
             <div>
               <p className="text-sm font-medium leading-none">Sofia Davis</p>
-              <p className="text-sm text-moon-muted-foreground">
+              <p className="text-moon-muted-foreground text-sm">
                 m@example.com
               </p>
             </div>
@@ -52,7 +56,7 @@ export function CardsTeamMembers() {
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
                 Owner{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-moon-muted-foreground" />
+                <ChevronDownIcon className="text-moon-muted-foreground ml-2 h-4 w-4" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -63,25 +67,25 @@ export function CardsTeamMembers() {
                   <CommandGroup>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Viewer</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view and comment.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Developer</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view, comment and edit.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Billing</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view, comment and manage billing.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Owner</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Admin-level access to all resources.
                       </p>
                     </CommandItem>
@@ -99,7 +103,7 @@ export function CardsTeamMembers() {
             </Avatar>
             <div>
               <p className="text-sm font-medium leading-none">Jackson Lee</p>
-              <p className="text-sm text-moon-muted-foreground">
+              <p className="text-moon-muted-foreground text-sm">
                 p@example.com
               </p>
             </div>
@@ -108,7 +112,7 @@ export function CardsTeamMembers() {
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
                 Member{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-moon-muted-foreground" />
+                <ChevronDownIcon className="text-moon-muted-foreground ml-2 h-4 w-4" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -119,25 +123,25 @@ export function CardsTeamMembers() {
                   <CommandGroup className="p-1.5">
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Viewer</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view and comment.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Developer</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view, comment and edit.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Billing</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view, comment and manage billing.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Owner</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Admin-level access to all resources.
                       </p>
                     </CommandItem>
@@ -157,7 +161,7 @@ export function CardsTeamMembers() {
               <p className="text-sm font-medium leading-none">
                 Isabella Nguyen
               </p>
-              <p className="text-sm text-moon-muted-foreground">
+              <p className="text-moon-muted-foreground text-sm">
                 i@example.com
               </p>
             </div>
@@ -166,7 +170,7 @@ export function CardsTeamMembers() {
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
                 Member{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-moon-muted-foreground" />
+                <ChevronDownIcon className="text-moon-muted-foreground ml-2 h-4 w-4" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -177,25 +181,25 @@ export function CardsTeamMembers() {
                   <CommandGroup className="p-1.5">
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Viewer</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view and comment.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Developer</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view, comment and edit.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Billing</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Can view, comment and manage billing.
                       </p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Owner</p>
-                      <p className="text-sm text-moon-muted-foreground">
+                      <p className="text-moon-muted-foreground text-sm">
                         Admin-level access to all resources.
                       </p>
                     </CommandItem>

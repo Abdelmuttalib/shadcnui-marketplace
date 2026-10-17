@@ -15,8 +15,8 @@ import {
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/wedges/ui/button";
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -25,8 +25,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
-import { Input } from "@/registry/wedges/ui/input";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
 import {
   Table,
   TableBody,
@@ -34,7 +34,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/wedges/ui/table";
+} from "@/registry/bases/base/wedges/ui/table";
 
 const data: Payment[] = [
   {
@@ -284,7 +284,7 @@ export default function DataTableDemo() {
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
+        <div className="text-muted-foreground flex-1 text-sm">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>

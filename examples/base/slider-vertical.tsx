@@ -1,4 +1,4 @@
-import { Slider } from "@/styles/base-nova/ui/slider"
+import { Slider } from "@/styles/base-default/ui/slider";
 
 export function SliderVertical() {
   return (
@@ -18,5 +18,5 @@ export function SliderVertical() {
         className="h-40"
       />
     </div>
-  )
+  );
 }

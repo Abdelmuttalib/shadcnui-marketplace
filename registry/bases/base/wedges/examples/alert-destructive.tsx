@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/wedges/ui/alert";
+} from "@/registry/bases/base/wedges/ui/alert";
 
 export default function AlertDestructive() {
   return (

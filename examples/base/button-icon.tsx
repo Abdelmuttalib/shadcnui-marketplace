@@ -1,11 +1,11 @@
-import { CircleFadingArrowUpIcon } from "lucide-react"
+import { CircleFadingArrowUpIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 
 export default function ButtonIcon() {
   return (
     <Button variant="outline" size="icon">
       <CircleFadingArrowUpIcon />
     </Button>
-  )
+  );
 }

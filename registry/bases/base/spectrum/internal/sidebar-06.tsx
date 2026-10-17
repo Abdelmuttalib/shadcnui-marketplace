@@ -9,22 +9,22 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/spectrum/ui/breadcrumb";
-import { Button } from "@/registry/spectrum/ui/button";
+} from "@/registry/bases/base/spectrum/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/spectrum/ui/card";
+} from "@/registry/bases/base/spectrum/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/spectrum/ui/dropdown-menu";
-import { Separator } from "@/registry/spectrum/ui/separator";
+} from "@/registry/bases/base/spectrum/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/spectrum/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -40,7 +40,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@/registry/spectrum/ui/sidebar";
+} from "@/registry/bases/base/spectrum/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -186,7 +186,7 @@ export default function Page() {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
                 <a href="#">
-                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-spctm-sidebar-primary text-sidebar-primary-foreground">
+                  <div className="size-8 bg-spctm-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                     <GalleryVerticalEnd className="size-4" />
                   </div>
                   <div className="flex flex-col gap-0.5 leading-none">
@@ -243,7 +243,7 @@ export default function Page() {
                 <CardContent className="grid gap-2.5 p-4">
                   <SidebarInput type="email" placeholder="Email" />
                   <Button
-                    className="w-full bg-spctm-sidebar-primary text-sidebar-primary-foreground shadow-none"
+                    className="bg-spctm-sidebar-primary text-sidebar-primary-foreground w-full shadow-none"
                     size="sm"
                   >
                     Subscribe
@@ -275,11 +275,11 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-spctm-muted/50" />
-            <div className="aspect-video rounded-xl bg-spctm-muted/50" />
-            <div className="aspect-video rounded-xl bg-spctm-muted/50" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-spctm-muted/50 md:min-h-min" />
+          <div className="bg-spctm-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

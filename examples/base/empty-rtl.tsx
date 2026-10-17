@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { IconFolderCode } from "@tabler/icons-react"
-import { ArrowUpRightIcon } from "lucide-react"
+import { IconFolderCode } from "@tabler/icons-react";
+import { ArrowUpRightIcon } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -16,7 +16,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-nova/ui-rtl/empty"
+} from "@/styles/base-default/ui/empty";
 
 const translations: Translations = {
   en: {
@@ -51,10 +51,10 @@ const translations: Translations = {
       learnMore: "למד עוד",
     },
   },
-}
+};
 
 export function EmptyRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <Empty dir={dir}>
@@ -80,5 +80,5 @@ export function EmptyRtl() {
         <ArrowUpRightIcon className="rtl:rotate-270" data-icon="inline-end" />
       </Button>
     </Empty>
-  )
+  );
 }

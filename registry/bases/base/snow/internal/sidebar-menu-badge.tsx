@@ -13,7 +13,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/snow/ui/sidebar";
+} from "@/registry/bases/base/snow/ui/sidebar";
 
 const projects = [
   {

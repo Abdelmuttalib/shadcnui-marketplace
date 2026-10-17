@@ -1,23 +1,27 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
-import { Button } from "@/registry/neon/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
-import { Input } from "@/registry/neon/ui/input";
+} from "@/registry/bases/base/neon/ui/card";
+import { Input } from "@/registry/bases/base/neon/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/neon/ui/select";
-import { Separator } from "@/registry/neon/ui/separator";
+} from "@/registry/bases/base/neon/ui/select";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 
 export function DemoShareDocument() {
   return (
@@ -49,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-neon-muted-foreground">
+                  <p className="text-neon-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -74,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-neon-muted-foreground">
+                  <p className="text-neon-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -99,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-neon-muted-foreground">
+                  <p className="text-neon-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

@@ -1,6 +1,6 @@
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/moon/ui/toggle";
+import { Toggle } from "@/registry/bases/base/moon/ui/toggle";
 
 export default function ToggleDemo() {
   return (

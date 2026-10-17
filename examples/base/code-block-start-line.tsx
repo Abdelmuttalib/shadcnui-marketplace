@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const code = `  if (!session) {
     redirect("/login")
@@ -19,10 +19,10 @@ const code = `  if (!session) {
   })
 
   return <ProjectList projects={projects} />
-}`
+}`;
 
 export function CodeBlockStartLine() {
-  const lines = useHighlightedCode(code, "tsx")
+  const lines = useHighlightedCode(code, "tsx");
 
   return (
     <div className="w-full max-w-md">
@@ -37,5 +37,5 @@ export function CodeBlockStartLine() {
         </CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

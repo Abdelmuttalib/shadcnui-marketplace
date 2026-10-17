@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/wedges/ui/navigation-menu";
+} from "@/registry/bases/base/wedges/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

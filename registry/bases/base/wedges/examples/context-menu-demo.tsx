@@ -12,7 +12,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/wedges/ui/context-menu";
+} from "@/registry/bases/base/wedges/ui/context-menu";
 
 export default function ContextMenuDemo() {
   return (

@@ -1,10 +1,10 @@
-import { AlertTriangleIcon } from "lucide-react"
+import { AlertTriangleIcon } from "lucide-react";
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/styles/base-nova/ui/alert"
+} from "@/styles/base-default/ui/alert";
 
 export default function AlertColors() {
   return (
@@ -16,5 +16,5 @@ export default function AlertColors() {
         continue using the service.
       </AlertDescription>
     </Alert>
-  )
+  );
 }

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
@@ -10,17 +10,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/card";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/neon/ui/select";
-import { Textarea } from "@/registry/neon/ui/textarea";
+} from "@/registry/bases/base/neon/ui/select";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 
 export function CardsReportIssue() {
   const id = React.useId();

@@ -8,8 +8,12 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
-import { Button } from "@/registry/neon/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -18,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -27,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/neon/ui/dialog";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/dialog";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/neon/ui/popover";
+} from "@/registry/bases/base/neon/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/neon/ui/select";
+} from "@/registry/bases/base/neon/ui/select";
 
 const groups = [
   {

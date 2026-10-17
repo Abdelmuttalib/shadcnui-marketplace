@@ -6,9 +6,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
-import { Badge } from "@/registry/wedges/ui/badge";
-import { DataTable } from "@/registry/wedges/ui/data-table";
+} from "@/registry/bases/base/wedges/ui/avatar";
+import { Badge } from "@/registry/bases/base/wedges/ui/badge";
+import { DataTable } from "@/registry/bases/base/wedges/ui/data-table";
 import {
   Select,
   SelectContent,
@@ -16,8 +16,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/wedges/ui/select";
-import { Typography } from "@/registry/wedges/ui/typography";
+} from "@/registry/bases/base/wedges/ui/select";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 const data = {
   overview: [
@@ -165,7 +165,7 @@ const columns = [
     header: "Purchase date",
     // @ts-expect-error - types
     cell: ({ cell }) => (
-      <p className="text-sm text-wedges-muted-foreground">
+      <p className="text-wedges-muted-foreground text-sm">
         {cell.getValue() as string}
       </p>
     ),
@@ -233,7 +233,7 @@ export default function DashboardPage() {
           {data.overview.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-3 border-t border-t-wedges-border py-6"
+              className="border-t-wedges-border flex flex-col gap-3 border-t py-6"
             >
               <div className="flex-1">
                 <Typography as="h2" variant="md/normal">
@@ -256,7 +256,7 @@ export default function DashboardPage() {
                 >
                   {item.percentage}
                 </Badge>
-                <p className="text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground text-sm">
                   {item.lastUpdate}
                 </p>
               </div>

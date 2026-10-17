@@ -1,11 +1,11 @@
-import { Button } from "@/registry/snow/ui/button";
-import { Input } from "@/registry/snow/ui/input";
-import { Label } from "@/registry/snow/ui/label";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Input } from "@/registry/bases/base/snow/ui/input";
+import { Label } from "@/registry/bases/base/snow/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/snow/ui/popover";
+} from "@/registry/bases/base/snow/ui/popover";
 
 export function PopoverDemo() {
   return (
@@ -17,7 +17,7 @@ export function PopoverDemo() {
         <div className="grid gap-4">
           <div className="space-y-2">
             <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-sm text-snow-muted-foreground">
+            <p className="text-snow-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
           </div>

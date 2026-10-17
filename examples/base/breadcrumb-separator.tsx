@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { DotIcon } from "lucide-react"
+import { DotIcon } from "lucide-react";
+import Link from "next/link";
 
 import {
   Breadcrumb,
@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/styles/base-nova/ui/breadcrumb"
+} from "@/styles/base-default/ui/breadcrumb";
 
 export function BreadcrumbSeparatorDemo() {
   return (
@@ -33,5 +33,5 @@ export function BreadcrumbSeparatorDemo() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

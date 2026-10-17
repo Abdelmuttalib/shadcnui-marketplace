@@ -1,30 +1,30 @@
-"use client"
+"use client";
 
-import { ChevronDownIcon, InfoIcon, StarIcon } from "lucide-react"
-import { toast } from "sonner"
+import { ChevronDownIcon, InfoIcon, StarIcon } from "lucide-react";
+import { toast } from "sonner";
 
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/styles/base-nova/ui/button-group"
+} from "@/styles/base-default/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
+} from "@/styles/base-default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   Popover,
   PopoverContent,
@@ -32,19 +32,19 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-nova/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 export function InputGroupWithTooltip({
   country,
   setCountry,
 }: {
-  country: string
-  setCountry: (value: string) => void
+  country: string;
+  setCountry: (value: string) => void;
 }) {
   return (
     <>
@@ -124,7 +124,7 @@ export function InputGroupWithTooltip({
                 </PopoverHeader>
               </PopoverContent>
             </Popover>
-            <InputGroupAddon className="pl-1 text-muted-foreground">
+            <InputGroupAddon className="text-muted-foreground pl-1">
               https://
             </InputGroupAddon>
             <InputGroupInput id="input-secure-19" />
@@ -159,5 +159,5 @@ export function InputGroupWithTooltip({
         </Field>
       </FieldGroup>
     </>
-  )
+  );
 }

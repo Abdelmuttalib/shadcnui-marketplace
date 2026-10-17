@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/spectrum/ui/button";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Card,
   CardContent,
@@ -9,9 +9,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/spectrum/ui/card";
-import { Input } from "@/registry/spectrum/ui/input";
-import { Label } from "@/registry/spectrum/ui/label";
+} from "@/registry/bases/base/spectrum/ui/card";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 
 export function DemoCreateAccount() {
   return (
@@ -35,10 +35,10 @@ export function DemoCreateAccount() {
         </div>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <span className="w-full border-t border-t-spctm-border" />
+            <span className="border-t-spctm-border w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-spctm-card px-2 text-spctm-card-foreground">
+            <span className="bg-spctm-card text-spctm-card-foreground px-2">
               Or continue with
             </span>
           </div>

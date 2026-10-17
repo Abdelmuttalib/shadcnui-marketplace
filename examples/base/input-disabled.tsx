@@ -2,8 +2,8 @@ import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function InputDisabled() {
   return (
@@ -17,5 +17,5 @@ export function InputDisabled() {
       />
       <FieldDescription>This field is currently disabled.</FieldDescription>
     </Field>
-  )
+  );
 }

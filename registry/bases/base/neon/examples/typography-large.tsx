@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/neon/ui/typography";
+import { Typography } from "@/registry/bases/base/neon/ui/typography";
 
 export default function TypographyLarge() {
   return (

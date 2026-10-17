@@ -1,5 +1,5 @@
-import { Label } from "@/registry/neon/ui/label";
-import { Textarea } from "@/registry/neon/ui/textarea";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

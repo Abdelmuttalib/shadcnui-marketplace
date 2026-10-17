@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/neon/ui/separator";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 
 import { DisplayForm } from "./display-form";
 
@@ -7,7 +7,7 @@ export function SettingsDisplayPage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Display</h3>
-        <p className="text-sm text-neon-muted-foreground">
+        <p className="text-neon-muted-foreground text-sm">
           Turn items on or off to control what&apos;s displayed in the app.
         </p>
       </div>

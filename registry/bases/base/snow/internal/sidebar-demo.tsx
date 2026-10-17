@@ -14,7 +14,7 @@ import {
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/snow/ui/sidebar";
+} from "@/registry/bases/base/snow/ui/sidebar";
 
 // Menu items.
 const items = [

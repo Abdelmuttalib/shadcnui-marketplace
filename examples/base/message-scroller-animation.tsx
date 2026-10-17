@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
+import { useChat } from "@ai-sdk/react";
 import {
   ArrowUpIcon,
   MessageCircleDashedIcon,
   RotateCwIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { createChat } from "@/lib/ai"
+import { MessageAnimated } from "@/components/message-animated";
+import { createChat } from "@/lib/ai";
 import {
   MESSAGE_ANIMATIONS,
   type MessageAnimationId,
-} from "@/lib/message-animations"
-import { MessageAnimated } from "@/components/message-animated"
-import { Button } from "@/styles/base-rhea/ui/button"
+} from "@/lib/message-animations";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -23,21 +23,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-rhea/ui/empty"
+} from "@/styles/base-default/ui/empty";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 import {
   Select,
   SelectContent,
@@ -45,7 +45,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-rhea/ui/select"
+} from "@/styles/base-default/ui/select";
 
 const chat = createChat()
   .user("Can user messages pop in like iMessage without breaking anchoring?")
@@ -62,24 +62,24 @@ const chat = createChat()
   .sleep(1000)
   .assistant(
     "Yes. Keep the conversation in place while you change the preset, then send the next message to compare the new entrance against the same context.\n\nThat makes it easier to judge the difference between a subtle fade, a snappy pop, and a more dramatic 3D tilt without rebuilding the scenario each time."
-  )
+  );
 
-const initialMessages = chat.get(0)
-const transport = chat.transport({ delayMs: 15 })
+const initialMessages = chat.get(0);
+const transport = chat.transport({ delayMs: 15 });
 
 export function MessageScrollerAnimation() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: initialMessages,
     transport,
-  })
-  const [presetId, setPresetId] = React.useState<MessageAnimationId>("fade")
-  const nextMessage = chat.next(messages)
-  const isBusy = status === "submitted" || status === "streaming"
-  const preset = MESSAGE_ANIMATIONS[presetId as MessageAnimationId]
+  });
+  const [presetId, setPresetId] = React.useState<MessageAnimationId>("fade");
+  const nextMessage = chat.next(messages);
+  const isBusy = status === "submitted" || status === "streaming";
+  const preset = MESSAGE_ANIMATIONS[presetId as MessageAnimationId];
 
   return (
     <div className="relative flex flex-col gap-4">
-      <Card className="mx-auto h-140 w-full max-w-sm gap-0">
+      <Card className="h-140 mx-auto w-full max-w-sm gap-0">
         <CardHeader className="border-b">
           <CardTitle>Animation</CardTitle>
           <CardDescription>
@@ -140,7 +140,7 @@ export function MessageScrollerAnimation() {
           <Select
             value={presetId}
             onValueChange={(value) => {
-              setPresetId(value as MessageAnimationId)
+              setPresetId(value as MessageAnimationId);
             }}
           >
             <SelectTrigger aria-label="Animation preset">
@@ -163,10 +163,10 @@ export function MessageScrollerAnimation() {
             disabled={!nextMessage || isBusy}
             onClick={() => {
               if (!nextMessage || isBusy) {
-                return
+                return;
               }
 
-              void sendMessage(nextMessage)
+              void sendMessage(nextMessage);
             }}
           >
             <ArrowUpIcon />
@@ -174,9 +174,9 @@ export function MessageScrollerAnimation() {
           </Button>
         </CardFooter>
       </Card>
-      <div className="mx-auto max-w-sm px-0.5 text-center text-xs text-balance text-muted-foreground">
+      <div className="text-balance text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
         Select an animation then click send to see it in action.
       </div>
     </div>
-  )
+  );
 }

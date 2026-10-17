@@ -3,14 +3,14 @@ import {
   CircleCheckIcon,
   CircleIcon,
   LoaderCircleIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceStatus() {
   return (
@@ -40,5 +40,5 @@ export function TraceStatus() {
         <TraceTitle>Run pnpm test</TraceTitle>
       </TraceLine>
     </Trace>
-  )
+  );
 }

@@ -2,8 +2,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/spectrum/ui/avatar";
-import { Button } from "@/registry/spectrum/ui/button";
+} from "@/registry/bases/base/spectrum/ui/avatar";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,7 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/spectrum/ui/dropdown-menu";
+} from "@/registry/bases/base/spectrum/ui/dropdown-menu";
 
 export function UserNav() {
   return (
@@ -30,7 +30,7 @@ export function UserNav() {
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
             <p className="text-sm font-medium leading-none">shadcn</p>
-            <p className="text-xs leading-none text-spctm-muted-foreground">
+            <p className="text-spctm-muted-foreground text-xs leading-none">
               m@example.com
             </p>
           </div>

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { FileCodeIcon } from "lucide-react"
+import { FileCodeIcon } from "lucide-react";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -11,7 +11,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const code = `import { streamText } from "ai"
 
@@ -20,10 +20,10 @@ export async function POST(request: Request) {
   const result = streamText({ model: "anthropic/claude-sonnet-4.5", messages })
 
   return result.toUIMessageStreamResponse()
-}`
+}`;
 
 export function CodeBlockTypeset() {
-  const lines = useHighlightedCode(code, "ts")
+  const lines = useHighlightedCode(code, "ts");
 
   return (
     <div className="typeset w-full max-w-md">
@@ -53,5 +53,5 @@ export function CodeBlockTypeset() {
         the answer while it is written.
       </p>
     </div>
-  )
+  );
 }

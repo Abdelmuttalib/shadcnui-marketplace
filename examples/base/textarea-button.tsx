@@ -1,5 +1,5 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { Textarea } from "@/styles/base-nova/ui/textarea"
+import { Button } from "@/styles/base-default/ui/button";
+import { Textarea } from "@/styles/base-default/ui/textarea";
 
 export function TextareaButton() {
   return (
@@ -7,5 +7,5 @@ export function TextareaButton() {
       <Textarea placeholder="Type your message here." />
       <Button>Send message</Button>
     </div>
-  )
+  );
 }

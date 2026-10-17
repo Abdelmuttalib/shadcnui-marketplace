@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from "@/styles/base-nova/ui/card"
-import { Skeleton } from "@/styles/base-nova/ui/skeleton"
+import { Card, CardContent, CardHeader } from "@/styles/base-default/ui/card";
+import { Skeleton } from "@/styles/base-default/ui/skeleton";
 
 export function SkeletonCard() {
   return (
@@ -12,5 +12,5 @@ export function SkeletonCard() {
         <Skeleton className="aspect-video w-full" />
       </CardContent>
     </Card>
-  )
+  );
 }

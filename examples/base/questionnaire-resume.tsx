@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -18,28 +18,30 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "change", required: true },
   { name: "verification", required: true },
   { name: "notes" },
-] as const
+] as const;
 
 export function QuestionnaireResume() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
     const answers = {
       change: formData.get("change"),
       verification: formData.getAll("verification"),
       notes: formData.get("notes"),
-    }
+    };
 
     toast("Draft updated", {
-      description: `Migration: ${answers.change ?? "None"} · Verification: ${answers.verification.join(", ") || "None"} · Notes: ${answers.notes || "None"}`,
-    })
+      description: `Migration: ${answers.change ?? "None"} · Verification: ${
+        answers.verification.join(", ") || "None"
+      } · Notes: ${answers.notes || "None"}`,
+    });
   }
 
   return (
@@ -111,5 +113,5 @@ export function QuestionnaireResume() {
         <QuestionnaireSubmit>Update draft</QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

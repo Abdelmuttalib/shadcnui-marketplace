@@ -1,5 +1,5 @@
-import { Button } from "@/registry/snow/ui/button";
-import { Input } from "@/registry/snow/ui/input";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Input } from "@/registry/bases/base/snow/ui/input";
 
 export default function InputWithButton() {
   return (

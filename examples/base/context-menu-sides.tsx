@@ -4,17 +4,17 @@ import {
   ContextMenuGroup,
   ContextMenuItem,
   ContextMenuTrigger,
-} from "@/styles/base-nova/ui/context-menu"
+} from "@/styles/base-default/ui/context-menu";
 
 export function ContextMenuSides() {
   return (
     <div className="grid w-full max-w-sm grid-cols-2 gap-4">
       <ContextMenu>
         <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
-          <span className="hidden pointer-fine:inline-block">
+          <span className="pointer-fine:inline-block hidden">
             Right click (top)
           </span>
-          <span className="hidden pointer-coarse:inline-block">
+          <span className="pointer-coarse:inline-block hidden">
             Long press (top)
           </span>
         </ContextMenuTrigger>
@@ -28,10 +28,10 @@ export function ContextMenuSides() {
       </ContextMenu>
       <ContextMenu>
         <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
-          <span className="hidden pointer-fine:inline-block">
+          <span className="pointer-fine:inline-block hidden">
             Right click (right)
           </span>
-          <span className="hidden pointer-coarse:inline-block">
+          <span className="pointer-coarse:inline-block hidden">
             Long press (right)
           </span>
         </ContextMenuTrigger>
@@ -45,10 +45,10 @@ export function ContextMenuSides() {
       </ContextMenu>
       <ContextMenu>
         <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
-          <span className="hidden pointer-fine:inline-block">
+          <span className="pointer-fine:inline-block hidden">
             Right click (bottom)
           </span>
-          <span className="hidden pointer-coarse:inline-block">
+          <span className="pointer-coarse:inline-block hidden">
             Long press (bottom)
           </span>
         </ContextMenuTrigger>
@@ -62,10 +62,10 @@ export function ContextMenuSides() {
       </ContextMenu>
       <ContextMenu>
         <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
-          <span className="hidden pointer-fine:inline-block">
+          <span className="pointer-fine:inline-block hidden">
             Right click (left)
           </span>
-          <span className="hidden pointer-coarse:inline-block">
+          <span className="pointer-coarse:inline-block hidden">
             Long press (left)
           </span>
         </ContextMenuTrigger>
@@ -78,5 +78,5 @@ export function ContextMenuSides() {
         </ContextMenuContent>
       </ContextMenu>
     </div>
-  )
+  );
 }

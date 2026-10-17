@@ -1,11 +1,11 @@
-import { AuthenticationPage } from "@/registry/snow/example/authentication/page";
-import { CardsPage } from "@/registry/snow/example/cards/page";
-import { DashboardPage } from "@/registry/snow/example/dashboard/page";
-import { SettingsProfilePage } from "@/registry/snow/example/forms/page";
-import { MailPage } from "@/registry/snow/example/mail/page";
-import { MusicPage } from "@/registry/snow/example/music/page";
-import { PlaygroundPage } from "@/registry/snow/example/playground/page";
-import { TaskPage } from "@/registry/snow/example/tasks/page";
+import { AuthenticationPage } from "@/registry/bases/base/snow/example/authentication/page";
+import { CardsPage } from "@/registry/bases/base/snow/example/cards/page";
+import { DashboardPage } from "@/registry/bases/base/snow/example/dashboard/page";
+import { SettingsProfilePage } from "@/registry/bases/base/snow/example/forms/page";
+import { MailPage } from "@/registry/bases/base/snow/example/mail/page";
+import { MusicPage } from "@/registry/bases/base/snow/example/music/page";
+import { PlaygroundPage } from "@/registry/bases/base/snow/example/playground/page";
+import { TaskPage } from "@/registry/bases/base/snow/example/tasks/page";
 
 export const SnowPageExamples = [
   <MailPage key="mail" />,

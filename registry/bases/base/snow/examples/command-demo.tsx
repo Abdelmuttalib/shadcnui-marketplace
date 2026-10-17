@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/snow/ui/command";
+} from "@/registry/bases/base/snow/ui/command";
 
 export default function CommandDemo() {
   return (

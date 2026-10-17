@@ -1,5 +1,5 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { Spinner } from "@/styles/base-nova/ui/spinner"
+import { Button } from "@/styles/base-default/ui/button";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export default function ButtonLoading() {
   return (
@@ -13,5 +13,5 @@ export default function ButtonLoading() {
         <Spinner data-icon="inline-start" />
       </Button>
     </div>
-  )
+  );
 }

@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui-rtl/field"
-import { Input } from "@/styles/base-nova/ui-rtl/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 const translations: Translations = {
   en: {
@@ -38,10 +38,10 @@ const translations: Translations = {
       description: "מפתח ה-API שלך מוצפן ונשמר בצורה מאובטחת.",
     },
   },
-}
+};
 
 export function InputRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <Field dir={dir}>
@@ -54,5 +54,5 @@ export function InputRtl() {
       />
       <FieldDescription>{t.description}</FieldDescription>
     </Field>
-  )
+  );
 }

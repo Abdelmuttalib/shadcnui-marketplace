@@ -1,54 +1,58 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/registry/neon/showcase";
-import { AlertDialogDemo } from "@/registry/neon/showcase";
-import { BreadcrumbDemo } from "@/registry/neon/showcase";
-import { CalendarDemo } from "@/registry/neon/showcase";
-import { CheckboxDemo } from "@/registry/neon/showcase";
-import { ComboboxDemo } from "@/registry/neon/showcase";
-import { CommandDemo } from "@/registry/neon/showcase";
-import { ContextMenuDemo } from "@/registry/neon/showcase";
-import { DatePickerDemo } from "@/registry/neon/showcase";
-import { DialogDemo } from "@/registry/neon/showcase";
-import { DrawerDemo } from "@/registry/neon/showcase";
-import { DropdownMenuDemo } from "@/registry/neon/showcase";
-import { HoverCardDemo } from "@/registry/neon/showcase";
-import { InputDemo } from "@/registry/neon/showcase";
-import { InputOTPDemo } from "@/registry/neon/showcase";
-import { LabelDemo } from "@/registry/neon/showcase";
-import { MenubarDemo } from "@/registry/neon/showcase";
-import { PaginationDemo } from "@/registry/neon/showcase";
-import { PopoverDemo } from "@/registry/neon/showcase";
-import { ProgressDemo } from "@/registry/neon/showcase";
-import { RadioGroupDemo } from "@/registry/neon/showcase";
-import { SelectDemo } from "@/registry/neon/showcase";
-import { SheetDemo } from "@/registry/neon/showcase";
-import { SkeletonDemo } from "@/registry/neon/showcase";
-import { SliderDemo } from "@/registry/neon/showcase";
-import { SonnerDemo } from "@/registry/neon/showcase";
-import { SwitchDemo } from "@/registry/neon/showcase";
-import { TextareaDemo } from "@/registry/neon/showcase";
-import { ToggleDemo } from "@/registry/neon/showcase";
-import { ToggleGroupDemo } from "@/registry/neon/showcase";
-import { TooltipDemo } from "@/registry/neon/showcase";
-import { Badge, BadgeProps } from "@/registry/neon/ui/badge";
-import { Button, ButtonProps } from "@/registry/neon/ui/button";
+import { AccordionDemo } from "@/registry/bases/base/neon/showcase";
+import { AlertDialogDemo } from "@/registry/bases/base/neon/showcase";
+import { BreadcrumbDemo } from "@/registry/bases/base/neon/showcase";
+import { CalendarDemo } from "@/registry/bases/base/neon/showcase";
+import { CheckboxDemo } from "@/registry/bases/base/neon/showcase";
+import { ComboboxDemo } from "@/registry/bases/base/neon/showcase";
+import { CommandDemo } from "@/registry/bases/base/neon/showcase";
+import { ContextMenuDemo } from "@/registry/bases/base/neon/showcase";
+import { DatePickerDemo } from "@/registry/bases/base/neon/showcase";
+import { DialogDemo } from "@/registry/bases/base/neon/showcase";
+import { DrawerDemo } from "@/registry/bases/base/neon/showcase";
+import { DropdownMenuDemo } from "@/registry/bases/base/neon/showcase";
+import { HoverCardDemo } from "@/registry/bases/base/neon/showcase";
+import { InputDemo } from "@/registry/bases/base/neon/showcase";
+import { InputOTPDemo } from "@/registry/bases/base/neon/showcase";
+import { LabelDemo } from "@/registry/bases/base/neon/showcase";
+import { MenubarDemo } from "@/registry/bases/base/neon/showcase";
+import { PaginationDemo } from "@/registry/bases/base/neon/showcase";
+import { PopoverDemo } from "@/registry/bases/base/neon/showcase";
+import { ProgressDemo } from "@/registry/bases/base/neon/showcase";
+import { RadioGroupDemo } from "@/registry/bases/base/neon/showcase";
+import { SelectDemo } from "@/registry/bases/base/neon/showcase";
+import { SheetDemo } from "@/registry/bases/base/neon/showcase";
+import { SkeletonDemo } from "@/registry/bases/base/neon/showcase";
+import { SliderDemo } from "@/registry/bases/base/neon/showcase";
+import { SonnerDemo } from "@/registry/bases/base/neon/showcase";
+import { SwitchDemo } from "@/registry/bases/base/neon/showcase";
+import { TextareaDemo } from "@/registry/bases/base/neon/showcase";
+import { ToggleDemo } from "@/registry/bases/base/neon/showcase";
+import { ToggleGroupDemo } from "@/registry/bases/base/neon/showcase";
+import { TooltipDemo } from "@/registry/bases/base/neon/showcase";
+import { Badge, BadgeProps } from "@/registry/bases/base/neon/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
+} from "@/registry/bases/base/neon/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/neon/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/neon/ui/tabs";
+} from "@/registry/bases/base/neon/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/neon/ui/tabs";
 
 export function NeonShowcaseComponents() {
   const style = "neon";

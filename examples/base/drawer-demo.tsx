@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
-import { useIsMobile } from "@/hooks/use-mobile"
-import { Badge } from "@/styles/base-rhea/ui/badge"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Badge } from "@/styles/base-default/ui/badge";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -15,15 +15,18 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/styles/base-rhea/ui/drawer"
+} from "@/styles/base-default/ui/drawer";
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/styles/base-rhea/ui/field"
-import { RadioGroup, RadioGroupItem } from "@/styles/base-rhea/ui/radio-group"
+} from "@/styles/base-default/ui/field";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/styles/base-default/ui/radio-group";
 
 const deliveryTimes = [
   {
@@ -57,24 +60,24 @@ const deliveryTimes = [
     label: "6:30 PM – 6:45 PM",
     description: "Last slot before kitchen closes",
   },
-]
+];
 
 export function DrawerDemo() {
-  const [open, setOpen] = React.useState(false)
-  const [deliveryTime, setDeliveryTime] = React.useState("asap")
-  const isMobile = useIsMobile()
+  const [open, setOpen] = React.useState(false);
+  const [deliveryTime, setDeliveryTime] = React.useState("asap");
+  const isMobile = useIsMobile();
 
   function handleConfirm() {
-    const selected = deliveryTimes.find((time) => time.value === deliveryTime)
+    const selected = deliveryTimes.find((time) => time.value === deliveryTime);
 
     if (!selected) {
-      return
+      return;
     }
 
-    setOpen(false)
+    setOpen(false);
     toast("Delivery time confirmed", {
       description: selected.label,
-    })
+    });
   }
 
   return (
@@ -94,7 +97,7 @@ export function DrawerDemo() {
             We&apos;ll prepare your order as soon as possible.
           </DrawerDescription>
         </DrawerHeader>
-        <div className="flex-1 scroll-fade overflow-y-auto p-4">
+        <div className="scroll-fade flex-1 overflow-y-auto p-4">
           <RadioGroup
             value={deliveryTime}
             onValueChange={setDeliveryTime}
@@ -128,5 +131,5 @@ export function DrawerDemo() {
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }

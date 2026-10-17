@@ -1,10 +1,10 @@
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/neon/ui/tooltip";
+} from "@/registry/bases/base/neon/ui/tooltip";
 
 export default function TooltipDemo() {
   return (

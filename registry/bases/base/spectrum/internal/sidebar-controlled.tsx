@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/spectrum/ui/button";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Sidebar,
   SidebarContent,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/spectrum/ui/sidebar";
+} from "@/registry/bases/base/spectrum/ui/sidebar";
 
 const projects = [
   {

@@ -3,7 +3,7 @@ import {
   PaginationContent,
   PaginationItem,
   PaginationLink,
-} from "@/styles/base-nova/ui/pagination"
+} from "@/styles/base-default/ui/pagination";
 
 export function PaginationSimple() {
   return (
@@ -28,5 +28,5 @@ export function PaginationSimple() {
         </PaginationItem>
       </PaginationContent>
     </Pagination>
-  )
+  );
 }

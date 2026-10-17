@@ -13,7 +13,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/spectrum/ui/menubar";
+} from "@/registry/bases/base/spectrum/ui/menubar";
 
 export function Menu() {
   return (

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
-import { ScrollArea } from "@/registry/wedges/ui/scroll-area";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { ScrollArea } from "@/registry/bases/base/wedges/ui/scroll-area";
 
 import { Playlist } from "../data/playlists";
 

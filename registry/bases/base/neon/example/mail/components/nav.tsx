@@ -4,12 +4,12 @@ import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/registry/neon/ui/button";
+import { buttonVariants } from "@/registry/bases/base/neon/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/neon/ui/tooltip";
+} from "@/registry/bases/base/neon/ui/tooltip";
 
 interface NavProps {
   isCollapsed: boolean;
@@ -48,7 +48,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               <TooltipContent side="right" className="flex items-center gap-4">
                 {link.title}
                 {link.label && (
-                  <span className="ml-auto text-neon-muted-foreground">
+                  <span className="text-neon-muted-foreground ml-auto">
                     {link.label}
                   </span>
                 )}
@@ -61,7 +61,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               className={cn(
                 buttonVariants({ variant: link.variant, size: "sm" }),
                 link.variant === "default" &&
-                  "dark:bg-neon-muted dark:text-white dark:hover:bg-neon-muted dark:hover:text-white",
+                  "dark:bg-neon-muted dark:hover:bg-neon-muted dark:text-white dark:hover:text-white",
                 "justify-start"
               )}
             >

@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { format } from "date-fns"
-import { ChevronDownIcon } from "lucide-react"
+import { format } from "date-fns";
+import { ChevronDownIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { Calendar } from "@/styles/base-nova/ui/calendar"
+import { Button } from "@/styles/base-default/ui/button";
+import { Calendar } from "@/styles/base-default/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function DatePickerDemo() {
-  const [date, setDate] = React.useState<Date>()
+  const [date, setDate] = React.useState<Date>();
 
   return (
     <Popover>
@@ -22,7 +22,7 @@ export function DatePickerDemo() {
           <Button
             variant={"outline"}
             data-empty={!date}
-            className="w-[212px] justify-between text-left font-normal data-[empty=true]:text-muted-foreground"
+            className="data-[empty=true]:text-muted-foreground w-[212px] justify-between text-left font-normal"
           />
         }
       >
@@ -38,5 +38,5 @@ export function DatePickerDemo() {
         />
       </PopoverContent>
     </Popover>
-  )
+  );
 }

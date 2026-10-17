@@ -15,7 +15,7 @@ import {
   TabsTrigger,
 } from "@/registry/bases/base/material/ui/tabs";
 import { Toggle } from "@/registry/bases/base/material/ui/toggle";
-import { DemoDatePicker } from "@/registry/material/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/material/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -30,7 +30,7 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/material/showcase";
+} from "@/registry/bases/base/material/showcase";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function MaterialUI() {

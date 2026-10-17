@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/neon/ui/input";
+import { Input } from "@/registry/bases/base/neon/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/neon/ui/resizable";
-import { Separator } from "@/registry/neon/ui/separator";
+} from "@/registry/bases/base/neon/ui/resizable";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/neon/ui/tabs";
-import { TooltipProvider } from "@/registry/neon/ui/tooltip";
+} from "@/registry/bases/base/neon/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/neon/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-neon-background/60 bg-neon-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-neon-muted-foreground" />
+                  <Search className="text-neon-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

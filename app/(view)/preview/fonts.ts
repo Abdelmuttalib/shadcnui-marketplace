@@ -2,9 +2,10 @@ import {
   DM_Sans,
   EB_Garamond,
   Figtree,
-  Geist,
-  Geist_Mono,
+  // Geist,
+  // Geist_Mono,
   IBM_Plex_Sans,
+  IBM_Plex_Mono,
   Instrument_Sans,
   Instrument_Serif,
   Inter,
@@ -25,139 +26,156 @@ import {
   Roboto_Slab,
   Source_Sans_3,
   Space_Grotesk,
-} from "next/font/google"
-import { cn } from "cn"
+} from "next/font/google";
+import { cn } from "cn";
 
-const geistSans = Geist({
+// const geistSans = Geist({
+//   subsets: ["latin"],
+//   variable: "--font-geist-sans",
+// })
+
+const geistSans = Inter({
   subsets: ["latin"],
   variable: "--font-geist-sans",
-})
+});
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-})
+});
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
   variable: "--font-noto-sans",
-})
+});
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
   variable: "--font-nunito-sans",
-})
+});
 
 const figtree = Figtree({
   subsets: ["latin"],
   variable: "--font-figtree",
-})
+});
 
 const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
-})
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
-})
+});
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
-})
+});
 
 const publicSans = Public_Sans({
   subsets: ["latin"],
   variable: "--font-public-sans",
-})
+});
 
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
-})
+});
 
 const oxanium = Oxanium({
   subsets: ["latin"],
   variable: "--font-oxanium",
-})
+});
 
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
-})
+});
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
-})
+});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-})
+});
 
+// `100`, `200`, `300`, `400`, `500`, `600`, `700`
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-ibm-plex-sans",
-})
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-source-sans-3",
-})
+});
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-instrument-sans",
-})
+});
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
-})
+});
 
-const geistMono = Geist_Mono({
+// const geistMono = Geist_Mono({
+//   subsets: ["latin"],
+//   variable: "--font-geist-mono",
+// })
+
+// `100`, `200`, `300`, `400`, `500`, `600`, `700`
+const geistMono = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
-})
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
   variable: "--font-noto-serif",
-})
+});
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
   variable: "--font-roboto-slab",
-})
+});
 
+// `300`, `400`, `700`, `900`
 const merriweather = Merriweather({
   subsets: ["latin"],
   variable: "--font-merriweather",
-})
+  weight: ["300", "400", "700", "900"],
+});
 
 const lora = Lora({
   subsets: ["latin"],
   variable: "--font-lora",
-})
+});
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair-display",
-})
+});
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-eb-garamond",
-})
+});
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-instrument-serif",
-})
+});
 
 export const previewFontVariables = cn(
   geistSans.variable,
@@ -186,4 +204,4 @@ export const previewFontVariables = cn(
   playfairDisplay.variable,
   ebGaramond.variable,
   instrumentSerif.variable
-)
+);

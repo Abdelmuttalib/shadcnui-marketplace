@@ -1,6 +1,10 @@
 import { Terminal } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@/registry/neon/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/registry/bases/base/neon/ui/alert";
 
 export default function AlertDemo() {
   return (

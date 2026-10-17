@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
 import {
   CreditCardIcon,
   LogOutIcon,
   SettingsIcon,
   UserIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 export function DropdownMenuIcons() {
   return (
@@ -42,5 +42,5 @@ export function DropdownMenuIcons() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

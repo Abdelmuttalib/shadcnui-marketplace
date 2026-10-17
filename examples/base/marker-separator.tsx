@@ -1,4 +1,4 @@
-import { Marker, MarkerContent } from "@/styles/base-rhea/ui/marker"
+import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
 
 export function MarkerSeparatorDemo() {
   return (
@@ -13,5 +13,5 @@ export function MarkerSeparatorDemo() {
         <MarkerContent>Conversation compacted</MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/spectrum/ui/table";
+} from "@/registry/bases/base/spectrum/ui/table";
 
 const invoices = [
   {

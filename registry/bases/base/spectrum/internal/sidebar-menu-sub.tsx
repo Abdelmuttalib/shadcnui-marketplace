@@ -12,7 +12,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarProvider,
-} from "@/registry/spectrum/ui/sidebar";
+} from "@/registry/bases/base/spectrum/ui/sidebar";
 
 const items = [
   {

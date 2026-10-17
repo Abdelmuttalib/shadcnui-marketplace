@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/snow/ui/sidebar";
+} from "@/registry/bases/base/snow/ui/sidebar";
 
 export function NavProjects({
   projects,

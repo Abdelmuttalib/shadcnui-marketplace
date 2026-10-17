@@ -1,4 +1,4 @@
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/card";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/neon/ui/tabs";
+} from "@/registry/bases/base/neon/ui/tabs";
 
 export function TabsDemo() {
   return (

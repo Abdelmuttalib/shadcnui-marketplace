@@ -1,7 +1,7 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { ButtonGroup } from "@/styles/base-nova/ui/button-group"
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function InputButtonGroup() {
   return (
@@ -12,5 +12,5 @@ export function InputButtonGroup() {
         <Button variant="outline">Search</Button>
       </ButtonGroup>
     </Field>
-  )
+  );
 }

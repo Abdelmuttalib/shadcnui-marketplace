@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { ScrollArea } from "@/registry/neon/ui/scroll-area";
-import { Separator } from "@/registry/neon/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/neon/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`

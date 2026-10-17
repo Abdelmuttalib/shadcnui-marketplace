@@ -1,6 +1,6 @@
-import { BookmarkIcon } from "lucide-react"
+import { BookmarkIcon } from "lucide-react";
 
-import { Toggle } from "@/styles/base-nova/ui/toggle"
+import { Toggle } from "@/styles/base-default/ui/toggle";
 
 export function ToggleDemo() {
   return (
@@ -8,5 +8,5 @@ export function ToggleDemo() {
       <BookmarkIcon className="group-aria-pressed/toggle:fill-foreground" />
       Bookmark
     </Toggle>
-  )
+  );
 }

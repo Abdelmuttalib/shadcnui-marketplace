@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/neon/ui/pagination";
+} from "@/registry/bases/base/neon/ui/pagination";
 
 export function PaginationDemo() {
   return (

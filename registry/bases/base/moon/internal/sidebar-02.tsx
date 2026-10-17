@@ -16,20 +16,20 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/moon/ui/breadcrumb";
+} from "@/registry/bases/base/moon/ui/breadcrumb";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/moon/ui/collapsible";
+} from "@/registry/bases/base/moon/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
-import { Label } from "@/registry/moon/ui/label";
-import { Separator } from "@/registry/moon/ui/separator";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/moon/ui/label";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -45,7 +45,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/moon/ui/sidebar";
+} from "@/registry/bases/base/moon/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -210,7 +210,7 @@ export default function Component() {
                     size="lg"
                     className="data-[state=open]:bg-moon-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                   >
-                    <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-moon-sidebar-primary text-sidebar-primary-foreground">
+                    <div className="size-8 bg-moon-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                       <GalleryVerticalEnd className="size-4" />
                     </div>
                     <div className="flex flex-col gap-0.5 leading-none">
@@ -250,7 +250,7 @@ export default function Component() {
                   placeholder="Search the docs..."
                   className="pl-8"
                 />
-                <Search className="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
+                <Search className="size-4 pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 select-none opacity-50" />
               </SidebarGroupContent>
             </SidebarGroup>
           </form>
@@ -267,7 +267,7 @@ export default function Component() {
               <SidebarGroup>
                 <SidebarGroupLabel
                   asChild
-                  className="group/label text-sm text-sidebar-foreground hover:bg-moon-sidebar-accent hover:text-sidebar-accent-foreground"
+                  className="group/label text-sidebar-foreground hover:bg-moon-sidebar-accent hover:text-sidebar-accent-foreground text-sm"
                 >
                   <CollapsibleTrigger>
                     {item.title}{" "}
@@ -294,7 +294,7 @@ export default function Component() {
         <SidebarRail />
       </Sidebar>
       <SidebarInset>
-        <header className="sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b bg-moon-background px-4">
+        <header className="bg-moon-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />
           <Separator orientation="vertical" className="mr-2 h-4" />
           <Breadcrumb>
@@ -315,7 +315,7 @@ export default function Component() {
           {Array.from({ length: 24 }).map((_, index) => (
             <div
               key={index}
-              className="aspect-video h-12 w-full rounded-lg bg-moon-muted/50"
+              className="bg-moon-muted/50 aspect-video h-12 w-full rounded-lg"
             />
           ))}
         </div>

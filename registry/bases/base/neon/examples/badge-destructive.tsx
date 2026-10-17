@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/neon/ui/badge";
+import { Badge } from "@/registry/bases/base/neon/ui/badge";
 
 export default function BadgeDestructive() {
   return <Badge variant="destructive">Destructive</Badge>;

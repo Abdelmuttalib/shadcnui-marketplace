@@ -1,6 +1,6 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { Input } from "@/styles/base-nova/ui/input"
-import { Label } from "@/styles/base-nova/ui/label"
+import { Button } from "@/styles/base-default/ui/button";
+import { Input } from "@/styles/base-default/ui/input";
+import { Label } from "@/styles/base-default/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-nova/ui/sheet"
+} from "@/styles/base-default/ui/sheet";
 
 export default function SheetDemo() {
   return (
@@ -39,5 +39,5 @@ export default function SheetDemo() {
         </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

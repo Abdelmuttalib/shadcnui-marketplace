@@ -1,4 +1,4 @@
-import { Checkbox } from "@/registry/moon/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
 
 export default function CheckboxDisabled() {
   return (

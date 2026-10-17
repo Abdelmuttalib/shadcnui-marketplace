@@ -2,7 +2,10 @@
 
 import { Bar, BarChart } from "recharts";
 
-import { ChartConfig, ChartContainer } from "@/registry/neon/ui/chart";
+import {
+  ChartConfig,
+  ChartContainer,
+} from "@/registry/bases/base/neon/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

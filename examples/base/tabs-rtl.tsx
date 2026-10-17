@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-nova/ui-rtl/card"
+} from "@/styles/base-default/ui/card";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/styles/base-nova/ui-rtl/tabs"
+} from "@/styles/base-default/ui/tabs";
 
 const translations: Translations = {
   en: {
@@ -96,10 +96,10 @@ const translations: Translations = {
       settingsContent: "הגדר התראות, אבטחה וערכות נושא.",
     },
   },
-}
+};
 
 export function TabsRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <Tabs defaultValue="overview" className="w-full max-w-sm" dir={dir}>
@@ -115,7 +115,7 @@ export function TabsRtl() {
             <CardTitle>{t.overviewTitle}</CardTitle>
             <CardDescription>{t.overviewDesc}</CardDescription>
           </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
+          <CardContent className="text-muted-foreground text-sm">
             {t.overviewContent}
           </CardContent>
         </Card>
@@ -126,7 +126,7 @@ export function TabsRtl() {
             <CardTitle>{t.analyticsTitle}</CardTitle>
             <CardDescription>{t.analyticsDesc}</CardDescription>
           </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
+          <CardContent className="text-muted-foreground text-sm">
             {t.analyticsContent}
           </CardContent>
         </Card>
@@ -137,7 +137,7 @@ export function TabsRtl() {
             <CardTitle>{t.reportsTitle}</CardTitle>
             <CardDescription>{t.reportsDesc}</CardDescription>
           </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
+          <CardContent className="text-muted-foreground text-sm">
             {t.reportsContent}
           </CardContent>
         </Card>
@@ -148,11 +148,11 @@ export function TabsRtl() {
             <CardTitle>{t.settingsTitle}</CardTitle>
             <CardDescription>{t.settingsDesc}</CardDescription>
           </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
+          <CardContent className="text-muted-foreground text-sm">
             {t.settingsContent}
           </CardContent>
         </Card>
       </TabsContent>
     </Tabs>
-  )
+  );
 }

@@ -2,21 +2,21 @@ import { CounterClockwiseClockIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/neon/ui/hover-card";
-import { Label } from "@/registry/neon/ui/label";
-import { Separator } from "@/registry/neon/ui/separator";
+} from "@/registry/bases/base/neon/ui/hover-card";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/neon/ui/tabs";
-import { Textarea } from "@/registry/neon/ui/textarea";
+} from "@/registry/bases/base/neon/ui/tabs";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 
 import { CodeViewer } from "./components/code-viewer";
 import { MaxLengthSelector } from "./components/maxlength-selector";
@@ -38,7 +38,7 @@ const metadata: Metadata = {
 export function PlaygroundPage() {
   return (
     <>
-      <div className="flex h-full flex-col bg-neon-background px-6">
+      <div className="bg-neon-background flex h-full flex-col px-6">
         <div className="container mx-auto flex flex-col items-start justify-between space-y-2 py-4 sm:flex-row sm:items-center sm:space-y-0 md:h-16">
           <h2 className="text-lg font-semibold">Playground</h2>
           <div className="ml-auto flex w-full space-x-2 sm:justify-end lg:-mr-4">
@@ -261,7 +261,7 @@ export function PlaygroundPage() {
                         placeholder="We're writing to [inset]. Congrats from OpenAI!"
                         className="h-full min-h-[300px] lg:min-h-[700px] xl:min-h-[700px]"
                       />
-                      <div className="rounded-neon-md border bg-neon-muted"></div>
+                      <div className="rounded-neon-md bg-neon-muted border"></div>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>
@@ -292,7 +292,7 @@ export function PlaygroundPage() {
                           />
                         </div>
                       </div>
-                      <div className="mt-[21px] min-h-[400px] rounded-neon-md border bg-neon-muted lg:min-h-[700px]" />
+                      <div className="rounded-neon-md bg-neon-muted mt-[21px] min-h-[400px] border lg:min-h-[700px]" />
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>

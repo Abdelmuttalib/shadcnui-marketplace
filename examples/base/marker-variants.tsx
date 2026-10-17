@@ -1,4 +1,4 @@
-import { Marker, MarkerContent } from "@/styles/base-rhea/ui/marker"
+import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
 
 export function MarkerVariantsDemo() {
   return (
@@ -13,5 +13,5 @@ export function MarkerVariantsDemo() {
         <MarkerContent>A border marker for row boundaries.</MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

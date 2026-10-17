@@ -3,7 +3,7 @@ import {
   CircleDotIcon,
   CircleIcon,
   RouteIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Trace,
@@ -14,7 +14,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const steps: { title: string; status: "done" | "running" | "pending" }[] = [
   { title: "Install @base-ui/react", status: "done" },
@@ -22,10 +22,10 @@ const steps: { title: string; status: "done" | "running" | "pending" }[] = [
   { title: "Rename asChild to render", status: "running" },
   { title: "Update the data-state selectors", status: "pending" },
   { title: "Run the type checker", status: "pending" },
-]
+];
 
 export function PlanBasic() {
-  const done = steps.filter((step) => step.status === "done").length
+  const done = steps.filter((step) => step.status === "done").length;
 
   return (
     <Trace className="max-w-sm">
@@ -64,5 +64,5 @@ export function PlanBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

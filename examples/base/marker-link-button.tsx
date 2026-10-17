@@ -1,9 +1,13 @@
-"use client"
+"use client";
 
-import { GitBranchIcon, RotateCcwIcon } from "lucide-react"
-import { toast } from "sonner"
+import { GitBranchIcon, RotateCcwIcon } from "lucide-react";
+import { toast } from "sonner";
 
-import { Marker, MarkerContent, MarkerIcon } from "@/styles/base-rhea/ui/marker"
+import {
+  Marker,
+  MarkerContent,
+  MarkerIcon,
+} from "@/styles/base-default/ui/marker";
 
 export function MarkerLinkButtonDemo() {
   return (
@@ -18,7 +22,7 @@ export function MarkerLinkButtonDemo() {
         render={
           <button
             type="button"
-            className="transition-colors hover:text-foreground"
+            className="hover:text-foreground transition-colors"
             onClick={() => toast("You clicked the revert button")}
           />
         }
@@ -29,5 +33,5 @@ export function MarkerLinkButtonDemo() {
         <MarkerContent>Revert this change</MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

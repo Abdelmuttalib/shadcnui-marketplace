@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -14,10 +14,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-nova/ui-rtl/dialog"
-import { Field, FieldGroup } from "@/styles/base-nova/ui-rtl/field"
-import { Input } from "@/styles/base-nova/ui-rtl/input"
-import { Label } from "@/styles/base-nova/ui-rtl/label"
+} from "@/styles/base-default/ui/dialog";
+import { Field, FieldGroup } from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
+import { Label } from "@/styles/base-default/ui/label";
 
 const translations: Translations = {
   en: {
@@ -58,10 +58,10 @@ const translations: Translations = {
       saveChanges: "שמור שינויים",
     },
   },
-}
+};
 
 export function DialogRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
+  const { dir, t, language } = useTranslation(translations, "ar");
 
   return (
     <Dialog>
@@ -97,5 +97,5 @@ export function DialogRtl() {
         </DialogContent>
       </form>
     </Dialog>
-  )
+  );
 }

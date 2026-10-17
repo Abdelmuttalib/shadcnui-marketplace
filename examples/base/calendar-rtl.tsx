@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { arSA, he } from "react-day-picker/locale"
+import * as React from "react";
+import { arSA, he } from "react-day-picker/locale";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Calendar } from "@/styles/base-nova/ui-rtl/calendar"
+  useTranslation,
+} from "@/components/language-selector";
+import { Calendar } from "@/styles/base-default/ui/calendar";
 
 const translations: Translations = {
   en: {
@@ -22,16 +22,16 @@ const translations: Translations = {
     dir: "rtl",
     values: {},
   },
-}
+};
 
 const locales = {
   ar: arSA,
   he: he,
-} as const
+} as const;
 
 export function CalendarRtl() {
-  const { dir, language } = useTranslation(translations, "ar")
-  const [date, setDate] = React.useState<Date | undefined>(new Date())
+  const { dir, language } = useTranslation(translations, "ar");
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
     <Calendar
@@ -45,5 +45,5 @@ export function CalendarRtl() {
         dir === "rtl" ? locales[language as keyof typeof locales] : undefined
       }
     />
-  )
+  );
 }

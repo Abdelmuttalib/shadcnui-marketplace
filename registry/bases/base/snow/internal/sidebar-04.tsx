@@ -10,8 +10,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/snow/ui/breadcrumb";
-import { Separator } from "@/registry/snow/ui/separator";
+} from "@/registry/bases/base/snow/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -26,7 +26,7 @@ import {
   SidebarMenuSubItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/snow/ui/sidebar";
+} from "@/registry/bases/base/snow/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -188,7 +188,7 @@ export default function Component() {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
                 <a href="#">
-                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-snow-sidebar-primary text-sidebar-primary-foreground">
+                  <div className="size-8 bg-snow-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                     <GalleryVerticalEnd className="size-4" />
                   </div>
                   <div className="flex flex-col gap-0.5 leading-none">
@@ -250,11 +250,11 @@ export default function Component() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-snow-muted/50" />
-            <div className="aspect-video rounded-xl bg-snow-muted/50" />
-            <div className="aspect-video rounded-xl bg-snow-muted/50" />
+            <div className="bg-snow-muted/50 aspect-video rounded-xl" />
+            <div className="bg-snow-muted/50 aspect-video rounded-xl" />
+            <div className="bg-snow-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-snow-muted/50 md:min-h-min" />
+          <div className="bg-snow-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

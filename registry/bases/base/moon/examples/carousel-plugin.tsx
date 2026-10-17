@@ -1,14 +1,14 @@
 import Autoplay from "embla-carousel-autoplay";
 import * as React from "react";
 
-import { Card, CardContent } from "@/registry/moon/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/moon/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/moon/ui/carousel";
+} from "@/registry/bases/base/moon/ui/carousel";
 
 export default function CarouselPlugin() {
   const plugin = React.useRef(

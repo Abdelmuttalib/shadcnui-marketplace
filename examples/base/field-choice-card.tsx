@@ -7,8 +7,11 @@ import {
   FieldLegend,
   FieldSet,
   FieldTitle,
-} from "@/styles/base-nova/ui/field"
-import { RadioGroup, RadioGroupItem } from "@/styles/base-nova/ui/radio-group"
+} from "@/styles/base-default/ui/field";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/styles/base-default/ui/radio-group";
 
 export default function FieldChoiceCard() {
   return (
@@ -44,5 +47,5 @@ export default function FieldChoiceCard() {
         </RadioGroup>
       </FieldSet>
     </FieldGroup>
-  )
+  );
 }

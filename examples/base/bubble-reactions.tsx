@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { toast } from "sonner"
+import { toast } from "sonner";
 
 import {
   Bubble,
   BubbleContent,
   BubbleReactions,
-} from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+} from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 
 export function BubbleReactionsDemo() {
   return (
@@ -66,5 +66,5 @@ export function BubbleReactionsDemo() {
         </BubbleReactions>
       </Bubble>
     </div>
-  )
+  );
 }

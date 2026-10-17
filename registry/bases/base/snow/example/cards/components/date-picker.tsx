@@ -1,6 +1,6 @@
-import DatePickerWithRange from "@/registry/snow/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/snow/ui/card";
-import { Label } from "@/registry/snow/ui/label";
+import DatePickerWithRange from "@/registry/bases/base/snow/components/date-picker-with-range";
+import { Card, CardContent } from "@/registry/bases/base/snow/ui/card";
+import { Label } from "@/registry/bases/base/snow/ui/label";
 
 export function DemoDatePicker() {
   return (

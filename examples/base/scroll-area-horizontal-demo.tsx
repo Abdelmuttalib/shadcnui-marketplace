@@ -1,11 +1,11 @@
-import * as React from "react"
-import Image from "next/image"
+import Image from "next/image";
+import * as React from "react";
 
-import { ScrollArea, ScrollBar } from "@/styles/base-nova/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@/styles/base-default/ui/scroll-area";
 
 export interface Artwork {
-  artist: string
-  art: string
+  artist: string;
+  art: string;
 }
 
 export const works: Artwork[] = [
@@ -21,11 +21,11 @@ export const works: Artwork[] = [
     artist: "Vladimir Malyavko",
     art: "https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80",
   },
-]
+];
 
 export function ScrollAreaHorizontalDemo() {
   return (
-    <ScrollArea className="w-96 rounded-md border whitespace-nowrap">
+    <ScrollArea className="w-96 whitespace-nowrap rounded-md border">
       <div className="flex w-max space-x-4 p-4">
         {works.map((artwork) => (
           <figure key={artwork.artist} className="shrink-0">
@@ -38,9 +38,9 @@ export function ScrollAreaHorizontalDemo() {
                 height={400}
               />
             </div>
-            <figcaption className="pt-2 text-xs text-muted-foreground">
+            <figcaption className="text-muted-foreground pt-2 text-xs">
               Photo by{" "}
-              <span className="font-semibold text-foreground">
+              <span className="text-foreground font-semibold">
                 {artwork.artist}
               </span>
             </figcaption>
@@ -49,5 +49,5 @@ export function ScrollAreaHorizontalDemo() {
       </div>
       <ScrollBar orientation="horizontal" />
     </ScrollArea>
-  )
+  );
 }

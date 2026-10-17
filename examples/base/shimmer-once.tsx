@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 
 export function ShimmerOnce() {
-  const [key, setKey] = React.useState(0)
+  const [key, setKey] = React.useState(0);
 
   return (
     <div className="flex flex-col items-center gap-4">
       <p
         key={key}
-        className="shimmer text-sm text-muted-foreground shimmer-duration-1100 shimmer-once"
+        className="shimmer text-muted-foreground shimmer-duration-1100 shimmer-once text-sm"
       >
         Generating response&hellip;
       </p>
@@ -23,5 +23,5 @@ export function ShimmerOnce() {
         Replay
       </Button>
     </div>
-  )
+  );
 }

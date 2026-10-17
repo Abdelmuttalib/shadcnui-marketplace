@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { format } from "date-fns"
-import { arSA, he } from "date-fns/locale"
-import { ChevronDownIcon } from "lucide-react"
+import { format } from "date-fns";
+import { arSA, he } from "date-fns/locale";
+import { ChevronDownIcon } from "lucide-react";
+import * as React from "react";
 import {
   arSA as arSADayPicker,
   he as heDayPicker,
-} from "react-day-picker/locale"
+} from "react-day-picker/locale";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { Calendar } from "@/styles/base-nova/ui-rtl/calendar"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
+import { Calendar } from "@/styles/base-default/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui-rtl/popover"
+} from "@/styles/base-default/ui/popover";
 
 const translations: Translations = {
   en: {
@@ -40,30 +40,30 @@ const translations: Translations = {
       placeholder: "בחר תאריך",
     },
   },
-}
+};
 
 const dayPickerLocales = {
   ar: arSADayPicker,
   he: heDayPicker,
-} as const
+} as const;
 
 const dateFnsLocales = {
   ar: arSA,
   he: he,
-} as const
+} as const;
 
 export function DatePickerRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
-  const [date, setDate] = React.useState<Date>()
+  const { dir, t, language } = useTranslation(translations, "ar");
+  const [date, setDate] = React.useState<Date>();
 
   const dateFnsLocale =
     dir === "rtl"
       ? dateFnsLocales[language as keyof typeof dateFnsLocales]
-      : undefined
+      : undefined;
   const dayPickerLocale =
     dir === "rtl"
       ? dayPickerLocales[language as keyof typeof dayPickerLocales]
-      : undefined
+      : undefined;
 
   return (
     <Popover>
@@ -72,7 +72,7 @@ export function DatePickerRtl() {
           <Button
             variant={"outline"}
             data-empty={!date}
-            className="w-[212px] justify-between text-left font-normal data-[empty=true]:text-muted-foreground"
+            className="data-[empty=true]:text-muted-foreground w-[212px] justify-between text-left font-normal"
             dir={dir}
           />
         }
@@ -95,5 +95,5 @@ export function DatePickerRtl() {
         />
       </PopoverContent>
     </Popover>
-  )
+  );
 }

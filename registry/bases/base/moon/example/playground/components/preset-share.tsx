@@ -1,13 +1,13 @@
 import { CopyIcon } from "@radix-ui/react-icons";
 
-import { Button } from "@/registry/moon/ui/button";
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/moon/ui/popover";
+} from "@/registry/bases/base/moon/ui/popover";
 
 export function PresetShare() {
   return (
@@ -18,7 +18,7 @@ export function PresetShare() {
       <PopoverContent align="end" className="w-[520px]">
         <div className="flex flex-col space-y-2 text-center sm:text-left">
           <h3 className="text-lg font-semibold">Share preset</h3>
-          <p className="text-sm text-moon-muted-foreground">
+          <p className="text-moon-muted-foreground text-sm">
             Anyone who has this link and an OpenAI account will be able to view
             this.
           </p>

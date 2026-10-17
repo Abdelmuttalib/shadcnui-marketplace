@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/neon/ui/accordion";
+} from "@/registry/bases/base/neon/ui/accordion";
 
 export function AccordionDemo() {
   return (

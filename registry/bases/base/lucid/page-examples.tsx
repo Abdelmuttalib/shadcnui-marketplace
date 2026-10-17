@@ -1,11 +1,11 @@
-import { AuthenticationPage } from "@/registry/lucid/example/authentication/page";
-import { CardsPage } from "@/registry/lucid/example/cards/page";
-import { DashboardPage } from "@/registry/lucid/example/dashboard/page";
-import { SettingsProfilePage } from "@/registry/lucid/example/forms/page";
-import { MailPage } from "@/registry/lucid/example/mail/page";
-import { MusicPage } from "@/registry/lucid/example/music/page";
-import { PlaygroundPage } from "@/registry/lucid/example/playground/page";
-import { TaskPage } from "@/registry/lucid/example/tasks/page";
+import { AuthenticationPage } from "@/registry/bases/base/lucid/example/authentication/page";
+import { CardsPage } from "@/registry/bases/base/lucid/example/cards/page";
+import { DashboardPage } from "@/registry/bases/base/lucid/example/dashboard/page";
+import { SettingsProfilePage } from "@/registry/bases/base/lucid/example/forms/page";
+import { MailPage } from "@/registry/bases/base/lucid/example/mail/page";
+import { MusicPage } from "@/registry/bases/base/lucid/example/music/page";
+import { PlaygroundPage } from "@/registry/bases/base/lucid/example/playground/page";
+import { TaskPage } from "@/registry/bases/base/lucid/example/tasks/page";
 
 export const LucidPageExamples = [
   <MailPage key="mail" />,

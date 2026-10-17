@@ -1,6 +1,6 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
-import { DemoDatePicker } from "@/registry/neon/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/neon/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -15,14 +15,22 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/neon/showcase";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
-import { Badge } from "@/registry/neon/ui/badge";
-import { Button } from "@/registry/neon/ui/button";
-import { Checkbox } from "@/registry/neon/ui/checkbox";
-import { Switch } from "@/registry/neon/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/neon/ui/tabs";
-import { Toggle } from "@/registry/neon/ui/toggle";
+} from "@/registry/bases/base/neon/showcase";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
+import { Badge } from "@/registry/bases/base/neon/ui/badge";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Checkbox } from "@/registry/bases/base/neon/ui/checkbox";
+import { Switch } from "@/registry/bases/base/neon/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/neon/ui/tabs";
+import { Toggle } from "@/registry/bases/base/neon/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function NeonUI() {

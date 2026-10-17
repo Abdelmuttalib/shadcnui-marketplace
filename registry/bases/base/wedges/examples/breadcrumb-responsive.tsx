@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/wedges/ui/breadcrumb";
-import { Button } from "@/registry/wedges/ui/button";
+} from "@/registry/bases/base/wedges/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/wedges/ui/drawer";
+} from "@/registry/bases/base/wedges/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
 
 const items = [
   { href: "#", label: "Home" },

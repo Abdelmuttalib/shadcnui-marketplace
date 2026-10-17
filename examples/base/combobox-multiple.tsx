@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
   Combobox,
@@ -13,7 +13,7 @@ import {
   ComboboxList,
   ComboboxValue,
   useComboboxAnchor,
-} from "@/styles/base-nova/ui/combobox"
+} from "@/styles/base-default/ui/combobox";
 
 const frameworks = [
   "Next.js",
@@ -21,10 +21,10 @@ const frameworks = [
   "Nuxt.js",
   "Remix",
   "Astro",
-] as const
+] as const;
 
 export function ComboboxMultiple() {
-  const anchor = useComboboxAnchor()
+  const anchor = useComboboxAnchor();
 
   return (
     <Combobox
@@ -56,5 +56,5 @@ export function ComboboxMultiple() {
         </ComboboxList>
       </ComboboxContent>
     </Combobox>
-  )
+  );
 }

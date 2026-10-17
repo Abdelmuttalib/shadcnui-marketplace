@@ -1,4 +1,4 @@
-import { InboxIcon } from "lucide-react"
+import { InboxIcon } from "lucide-react";
 
 import {
   Item,
@@ -6,7 +6,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 export function ItemSizeDemo() {
   return (
@@ -41,5 +41,5 @@ export function ItemSizeDemo() {
         </ItemContent>
       </Item>
     </div>
-  )
+  );
 }

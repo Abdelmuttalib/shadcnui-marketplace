@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
   Field,
   FieldDescription,
   FieldTitle,
-} from "@/styles/base-nova/ui/field"
-import { Slider } from "@/styles/base-nova/ui/slider"
+} from "@/styles/base-default/ui/field";
+import { Slider } from "@/styles/base-default/ui/slider";
 
 export default function FieldSlider() {
-  const [value, setValue] = React.useState([200, 800])
+  const [value, setValue] = React.useState([200, 800]);
 
   return (
     <Field className="w-full max-w-xs">
@@ -30,5 +30,5 @@ export default function FieldSlider() {
         aria-label="Price Range"
       />
     </Field>
-  )
+  );
 }

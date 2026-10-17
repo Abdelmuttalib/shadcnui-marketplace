@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { ChevronDownIcon, DotIcon } from "lucide-react"
+import { ChevronDownIcon, DotIcon } from "lucide-react";
+import Link from "next/link";
 
 import {
   Breadcrumb,
@@ -8,14 +8,14 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/styles/base-nova/ui/breadcrumb"
+} from "@/styles/base-default/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 export function BreadcrumbDropdown() {
   return (
@@ -52,5 +52,5 @@ export function BreadcrumbDropdown() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

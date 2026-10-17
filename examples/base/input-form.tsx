@@ -1,11 +1,11 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   Select,
   SelectContent,
@@ -13,14 +13,14 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-nova/ui/select"
+} from "@/styles/base-default/ui/select";
 
 export function InputForm() {
   const countries = [
     { label: "United States", value: "us" },
     { label: "United Kingdom", value: "uk" },
     { label: "Canada", value: "ca" },
-  ]
+  ];
   return (
     <form className="w-full max-w-sm">
       <FieldGroup>
@@ -75,5 +75,5 @@ export function InputForm() {
         </Field>
       </FieldGroup>
     </form>
-  )
+  );
 }

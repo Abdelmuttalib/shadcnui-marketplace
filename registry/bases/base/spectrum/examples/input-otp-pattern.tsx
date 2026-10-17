@@ -4,7 +4,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/spectrum/ui/input-otp";
+} from "@/registry/bases/base/spectrum/ui/input-otp";
 
 export default function InputOTPPattern() {
   return (

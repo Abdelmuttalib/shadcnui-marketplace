@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/spectrum/ui/breadcrumb";
-import { Button } from "@/registry/spectrum/ui/button";
+} from "@/registry/bases/base/spectrum/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/spectrum/ui/drawer";
+} from "@/registry/bases/base/spectrum/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/spectrum/ui/dropdown-menu";
+} from "@/registry/bases/base/spectrum/ui/dropdown-menu";
 
 const items = [
   { href: "#", label: "Home" },

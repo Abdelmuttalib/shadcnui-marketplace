@@ -4,9 +4,9 @@ import * as React from "react";
 
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/spectrum/ui/button";
-import { Input } from "@/registry/spectrum/ui/input";
-import { Label } from "@/registry/spectrum/ui/label";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -50,10 +50,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       </form>
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t border-t-spctm-border" />
+          <span className="border-t-spctm-border w-full border-t" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-spctm-background px-2 text-spctm-muted-foreground">
+          <span className="bg-spctm-background text-spctm-muted-foreground px-2">
             Or continue with
           </span>
         </div>

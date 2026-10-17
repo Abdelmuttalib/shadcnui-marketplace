@@ -4,9 +4,9 @@ import * as React from "react";
 
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/neon/ui/button";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -50,10 +50,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       </form>
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t border-t-neon-border" />
+          <span className="border-t-neon-border w-full border-t" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-neon-background px-2 text-neon-muted-foreground">
+          <span className="bg-neon-background text-neon-muted-foreground px-2">
             Or continue with
           </span>
         </div>

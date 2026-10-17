@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -15,7 +15,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/wedges/ui/command";
+} from "@/registry/bases/base/wedges/ui/command";
 import {
   Form,
   FormControl,
@@ -24,12 +24,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/wedges/ui/form";
+} from "@/registry/bases/base/wedges/ui/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/wedges/ui/popover";
+} from "@/registry/bases/base/wedges/ui/popover";
 
 const languages = [
   { label: "English", value: "en" },

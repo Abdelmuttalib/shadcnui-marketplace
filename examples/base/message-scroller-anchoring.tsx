@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   ArrowUpIcon,
   MessageCircleDashedIcon,
   RotateCwIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { MessageAnimated } from "@/components/message-animated"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { MessageAnimated } from "@/components/message-animated";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -17,33 +17,33 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-rhea/ui/empty"
+} from "@/styles/base-default/ui/empty";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-rhea/ui/toggle-group"
+} from "@/styles/base-default/ui/toggle-group";
 
-type AnchorRole = "user" | "assistant"
+type AnchorRole = "user" | "assistant";
 
 type ChatMessage = {
-  id: string
-  role: AnchorRole
-  text: string
-}
+  id: string;
+  role: AnchorRole;
+  text: string;
+};
 
 const scriptedMessages: ChatMessage[] = [
   {
@@ -76,17 +76,17 @@ const scriptedMessages: ChatMessage[] = [
     role: "assistant",
     text: "Yes. The next appended message with the selected role becomes the anchor, so you can compare user and assistant anchoring without resetting the demo.",
   },
-]
+];
 
 export function MessageScrollerAnchoring() {
-  const [anchorRole, setAnchorRole] = React.useState<AnchorRole>("user")
-  const [messages, setMessages] = React.useState<ChatMessage[]>([])
-  const [messageIndex, setMessageIndex] = React.useState(0)
-  const nextMessage = scriptedMessages[messageIndex]
+  const [anchorRole, setAnchorRole] = React.useState<AnchorRole>("user");
+  const [messages, setMessages] = React.useState<ChatMessage[]>([]);
+  const [messageIndex, setMessageIndex] = React.useState(0);
+  const nextMessage = scriptedMessages[messageIndex];
 
   return (
     <div className="relative flex flex-col gap-4">
-      <Card className="mx-auto h-140 w-full max-w-sm gap-0">
+      <Card className="h-140 mx-auto w-full max-w-sm gap-0">
         <CardHeader className="border-b">
           <CardTitle>Anchoring Turns</CardTitle>
           <CardDescription>
@@ -100,8 +100,8 @@ export function MessageScrollerAnchoring() {
               aria-label="Reset anchored turns"
               disabled={messages.length === 0}
               onClick={() => {
-                setMessages([])
-                setMessageIndex(0)
+                setMessages([]);
+                setMessageIndex(0);
               }}
             >
               <RotateCwIcon />
@@ -147,12 +147,12 @@ export function MessageScrollerAnchoring() {
             aria-label="Select scroll anchor role"
             value={[anchorRole]}
             onValueChange={(value) => {
-              const nextValue = value[0]
+              const nextValue = value[0];
 
               if (nextValue === "user" || nextValue === "assistant") {
-                setAnchorRole(nextValue)
-                setMessages([])
-                setMessageIndex(0)
+                setAnchorRole(nextValue);
+                setMessages([]);
+                setMessageIndex(0);
               }
             }}
           >
@@ -173,11 +173,11 @@ export function MessageScrollerAnchoring() {
             disabled={!nextMessage}
             onClick={() => {
               if (!nextMessage) {
-                return
+                return;
               }
 
-              setMessages((messages) => [...messages, nextMessage])
-              setMessageIndex((index) => index + 1)
+              setMessages((messages) => [...messages, nextMessage]);
+              setMessageIndex((index) => index + 1);
             }}
           >
             <ArrowUpIcon />
@@ -185,10 +185,10 @@ export function MessageScrollerAnchoring() {
           </Button>
         </CardFooter>
       </Card>
-      <div className="mx-auto max-w-xs px-0.5 text-center text-xs text-muted-foreground">
+      <div className="text-muted-foreground mx-auto max-w-xs px-0.5 text-center text-xs">
         Toggle the anchor role, then send messages to compare where turns
         settle.
       </div>
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import * as React from "react";
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
   Card,
@@ -9,15 +9,15 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/registry/bases/base/styles/default-v4/ui/card";
 import {
+  type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
-} from "@/registry/new-york-v4/ui/chart"
+} from "@/registry/bases/base/styles/default-v4/ui/chart";
 
-export const description = "An interactive bar chart"
+export const description = "An interactive bar chart";
 
 const chartData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
@@ -50,7 +50,7 @@ const chartData = [
   { date: "2024-04-28", desktop: 122, mobile: 180 },
   { date: "2024-04-29", desktop: 315, mobile: 240 },
   { date: "2024-04-30", desktop: 454, mobile: 380 },
-]
+];
 
 const chartConfig = {
   views: {
@@ -64,11 +64,11 @@ const chartConfig = {
     label: "Mobile",
     color: "var(--chart-1)",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function ChartDemo() {
   const [activeChart, setActiveChart] =
-    React.useState<keyof typeof chartConfig>("desktop")
+    React.useState<keyof typeof chartConfig>("desktop");
 
   const total = React.useMemo(
     () => ({
@@ -76,12 +76,12 @@ export function ChartDemo() {
       mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0),
     }),
     []
-  )
+  );
 
   return (
     <Card className="py-0 pb-4">
-      <CardHeader className="flex flex-col items-stretch border-b p-0! sm:flex-row">
-        <div className="flex flex-1 flex-col justify-center gap-1 px-6 pt-4 pb-3 sm:py-0!">
+      <CardHeader className="p-0! flex flex-col items-stretch border-b sm:flex-row">
+        <div className="sm:py-0! flex flex-1 flex-col justify-center gap-1 px-6 pb-3 pt-4">
           <CardTitle>Bar Chart - Interactive</CardTitle>
           <CardDescription>
             Showing total visitors for the last 3 months
@@ -89,22 +89,22 @@ export function ChartDemo() {
         </div>
         <div className="flex">
           {["desktop", "mobile"].map((key) => {
-            const chart = key as keyof typeof chartConfig
+            const chart = key as keyof typeof chartConfig;
             return (
               <button
                 key={chart}
                 data-active={activeChart === chart}
-                className="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-t-0 sm:border-l sm:px-8 sm:py-6"
+                className="data-[active=true]:bg-muted/50 relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
                 onClick={() => setActiveChart(chart)}
               >
-                <span className="text-xs text-muted-foreground">
+                <span className="text-muted-foreground text-xs">
                   {chartConfig[chart].label}
                 </span>
-                <span className="text-lg leading-none font-bold sm:text-3xl">
+                <span className="text-lg font-bold leading-none sm:text-3xl">
                   {total[key as keyof typeof total].toLocaleString()}
                 </span>
               </button>
-            )
+            );
           })}
         </div>
       </CardHeader>
@@ -129,11 +129,11 @@ export function ChartDemo() {
               tickMargin={8}
               minTickGap={32}
               tickFormatter={(value) => {
-                const date = new Date(value)
+                const date = new Date(value);
                 return date.toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
-                })
+                });
               }}
             />
             <ChartTooltip
@@ -146,7 +146,7 @@ export function ChartDemo() {
                       month: "short",
                       day: "numeric",
                       year: "numeric",
-                    })
+                    });
                   }}
                 />
               }
@@ -156,5 +156,5 @@ export function ChartDemo() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

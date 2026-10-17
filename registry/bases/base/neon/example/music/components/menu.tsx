@@ -13,7 +13,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/neon/ui/menubar";
+} from "@/registry/bases/base/neon/ui/menubar";
 
 export function Menu() {
   return (

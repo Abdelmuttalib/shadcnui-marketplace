@@ -1,4 +1,4 @@
-import { Trash2Icon } from "lucide-react"
+import { Trash2Icon } from "lucide-react";
 
 import {
   AlertDialog,
@@ -11,8 +11,8 @@ import {
   AlertDialogMedia,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/styles/base-nova/ui/alert-dialog"
-import { Button } from "@/styles/base-nova/ui/button"
+} from "@/styles/base-default/ui/alert-dialog";
+import { Button } from "@/styles/base-default/ui/button";
 
 export function AlertDialogDestructive() {
   return (
@@ -37,5 +37,5 @@ export function AlertDialogDestructive() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
+  );
 }

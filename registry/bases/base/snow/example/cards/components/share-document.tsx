@@ -1,23 +1,27 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/snow/ui/avatar";
-import { Button } from "@/registry/snow/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/snow/ui/avatar";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/snow/ui/card";
-import { Input } from "@/registry/snow/ui/input";
+} from "@/registry/bases/base/snow/ui/card";
+import { Input } from "@/registry/bases/base/snow/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/snow/ui/select";
-import { Separator } from "@/registry/snow/ui/separator";
+} from "@/registry/bases/base/snow/ui/select";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 
 export function DemoShareDocument() {
   return (
@@ -49,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-snow-muted-foreground">
+                  <p className="text-snow-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -74,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-snow-muted-foreground">
+                  <p className="text-snow-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -99,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-snow-muted-foreground">
+                  <p className="text-snow-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

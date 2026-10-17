@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/snow/ui/checkbox";
-import { Label } from "@/registry/snow/ui/label";
+import { Checkbox } from "@/registry/bases/base/snow/ui/checkbox";
+import { Label } from "@/registry/bases/base/snow/ui/label";
 
 export function LabelDemo() {
   return (

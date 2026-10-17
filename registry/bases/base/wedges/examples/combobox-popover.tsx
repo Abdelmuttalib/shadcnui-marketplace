@@ -11,7 +11,7 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -19,12 +19,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/wedges/ui/command";
+} from "@/registry/bases/base/wedges/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/wedges/ui/popover";
+} from "@/registry/bases/base/wedges/ui/popover";
 
 type Status = {
   value: string;
@@ -68,7 +68,7 @@ export default function ComboboxPopover() {
 
   return (
     <div className="flex items-center space-x-4">
-      <p className="text-sm text-muted-foreground">Status</p>
+      <p className="text-muted-foreground text-sm">Status</p>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button

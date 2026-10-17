@@ -1,11 +1,11 @@
-import { Separator } from "@/registry/snow/ui/separator";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 
 export function SeparatorDemo() {
   return (
     <div>
       <div className="space-y-1">
         <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-sm text-snow-muted-foreground">
+        <p className="text-snow-muted-foreground text-sm">
           An open-source UI component library.
         </p>
       </div>

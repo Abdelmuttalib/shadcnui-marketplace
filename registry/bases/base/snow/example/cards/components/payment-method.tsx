@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Card,
   CardContent,
@@ -7,17 +7,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/snow/ui/card";
-import { Input } from "@/registry/snow/ui/input";
-import { Label } from "@/registry/snow/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/snow/ui/radio-group";
+} from "@/registry/bases/base/snow/ui/card";
+import { Input } from "@/registry/bases/base/snow/ui/input";
+import { Label } from "@/registry/bases/base/snow/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/snow/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/snow/ui/select";
+} from "@/registry/bases/base/snow/ui/select";
 
 export function DemoPaymentMethod() {
   return (
@@ -34,7 +37,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="card" id="card" className="peer sr-only" />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between rounded-snow-md border-2 border-snow-muted bg-snow-popover p-4 hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary"
+              className="rounded-snow-md border-snow-muted bg-snow-popover hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +63,7 @@ export function DemoPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between rounded-snow-md border-2 border-snow-muted bg-snow-popover p-4 hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary"
+              className="rounded-snow-md border-snow-muted bg-snow-popover hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -70,7 +73,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between rounded-snow-md border-2 border-snow-muted bg-snow-popover p-4 hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary"
+              className="rounded-snow-md border-snow-muted bg-snow-popover hover:bg-snow-accent hover:text-snow-accent-foreground peer-data-[state=checked]:border-snow-primary [&:has([data-state=checked])]:border-snow-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

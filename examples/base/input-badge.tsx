@@ -1,6 +1,6 @@
-import { Badge } from "@/styles/base-nova/ui/badge"
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+import { Badge } from "@/styles/base-default/ui/badge";
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function InputBadge() {
   return (
@@ -17,5 +17,5 @@ export function InputBadge() {
         placeholder="https://api.example.com/webhook"
       />
     </Field>
-  )
+  );
 }

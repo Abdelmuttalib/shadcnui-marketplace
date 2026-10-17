@@ -1,6 +1,6 @@
-import { Button } from "@/registry/snow/ui/button";
-import { Input } from "@/registry/snow/ui/input";
-import { Label } from "@/registry/snow/ui/label";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Input } from "@/registry/bases/base/snow/ui/input";
+import { Label } from "@/registry/bases/base/snow/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/snow/ui/sheet";
+} from "@/registry/bases/base/snow/ui/sheet";
 
 export default function SheetDemo() {
   return (

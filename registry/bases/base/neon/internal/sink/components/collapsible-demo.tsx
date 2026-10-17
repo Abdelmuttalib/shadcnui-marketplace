@@ -3,12 +3,12 @@
 import { ChevronsUpDown } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/neon/ui/collapsible";
+} from "@/registry/bases/base/neon/ui/collapsible";
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -30,14 +30,14 @@ export function CollapsibleDemo() {
           </Button>
         </CollapsibleTrigger>
       </div>
-      <div className="rounded-neon-md border border-neon-border px-4 py-2 font-mono text-sm shadow-sm">
+      <div className="rounded-neon-md border-neon-border border px-4 py-2 font-mono text-sm shadow-sm">
         @radix-ui/primitives
       </div>
       <CollapsibleContent className="space-y-2">
-        <div className="rounded-neon-md border border-neon-border px-4 py-2 font-mono text-sm shadow-sm">
+        <div className="rounded-neon-md border-neon-border border px-4 py-2 font-mono text-sm shadow-sm">
           @radix-ui/colors
         </div>
-        <div className="rounded-neon-md border border-neon-border px-4 py-2 font-mono text-sm shadow-sm">
+        <div className="rounded-neon-md border-neon-border border px-4 py-2 font-mono text-sm shadow-sm">
           @stitches/react
         </div>
       </CollapsibleContent>

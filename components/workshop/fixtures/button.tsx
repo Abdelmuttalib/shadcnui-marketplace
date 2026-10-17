@@ -1,7 +1,7 @@
 "use client";
 
 import * as Default from "@/registry/bases/base/default/ui/button";
-import * as V4 from "@/registry/bases/base/default-v4/ui/button";
+import * as V4 from "@/registry/bases/base/styles/default-v4/ui/button";
 
 import type { FixtureSide } from "./types";
 

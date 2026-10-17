@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/neon/ui/button";
-import { ScrollArea } from "@/registry/neon/ui/scroll-area";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { ScrollArea } from "@/registry/bases/base/neon/ui/scroll-area";
 
 import { Playlist } from "../data/playlists";
 

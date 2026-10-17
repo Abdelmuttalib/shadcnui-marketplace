@@ -12,8 +12,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
-import { Button } from "@/registry/wedges/ui/button";
+} from "@/registry/bases/base/wedges/ui/avatar";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/wedges/ui/command";
+} from "@/registry/bases/base/wedges/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -31,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/wedges/ui/dialog";
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+} from "@/registry/bases/base/wedges/ui/dialog";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/wedges/ui/popover";
+} from "@/registry/bases/base/wedges/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/wedges/ui/select";
+} from "@/registry/bases/base/wedges/ui/select";
 
 const groups = [
   {

@@ -5,7 +5,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/moon/ui/input-otp";
+} from "@/registry/bases/base/moon/ui/input-otp";
 
 export default function InputOTPWithSeparator() {
   return (

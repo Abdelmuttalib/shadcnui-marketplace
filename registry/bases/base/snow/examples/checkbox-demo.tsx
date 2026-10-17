@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/registry/snow/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/snow/ui/checkbox";
 
 export default function CheckboxDemo() {
   return (

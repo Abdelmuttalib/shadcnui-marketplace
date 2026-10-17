@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/snow/ui/alert-dialog";
-import { Button } from "@/registry/snow/ui/button";
+} from "@/registry/bases/base/snow/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 
 export function AlertDialogDemo() {
   return (

@@ -1,7 +1,7 @@
 import { ArrowRightIcon, LockIcon } from "lucide-react";
 import Image from "next/image";
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Card,
   CardContent,
@@ -9,15 +9,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/wedges/ui/card";
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
-import { Input } from "@/registry/wedges/ui/input";
+} from "@/registry/bases/base/wedges/ui/card";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/wedges/ui/tabs";
+} from "@/registry/bases/base/wedges/ui/tabs";
 
 const LoginForm = ({ className = "", variant = "default" }) => (
   <div className={`space-y-4 ${className}`}>

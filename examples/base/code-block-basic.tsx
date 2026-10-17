@@ -1,4 +1,7 @@
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 
 const output = `$ pnpm build
 > next build
@@ -9,7 +12,7 @@ const output = `$ pnpm build
 Route (app)                Size  First Load JS
 ┌ ○ /                    1.9 kB         112 kB
 ├ ○ /_not-found           993 B         103 kB
-└ ƒ /api/chat             141 B         102 kB`
+└ ƒ /api/chat             141 B         102 kB`;
 
 export function CodeBlockBasic() {
   return (
@@ -18,5 +21,5 @@ export function CodeBlockBasic() {
         <CodeBlockContent>{output}</CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

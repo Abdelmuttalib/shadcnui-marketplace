@@ -1,4 +1,4 @@
-import { CircleCheckIcon, CircleIcon, RouteIcon } from "lucide-react"
+import { CircleCheckIcon, CircleIcon, RouteIcon } from "lucide-react";
 
 import {
   Trace,
@@ -9,14 +9,14 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const steps = [
   "Add a dark variant to the theme tokens",
   "Read the theme from a cookie on the server",
   "Add a toggle to the settings page",
   "Check contrast on the charts",
-]
+];
 
 export function PlanDescription() {
   return (
@@ -49,5 +49,5 @@ export function PlanDescription() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

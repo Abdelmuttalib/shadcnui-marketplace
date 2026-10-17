@@ -1,4 +1,4 @@
-import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react"
+import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react";
 
 import {
   Item,
@@ -6,7 +6,7 @@ import {
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 export function ItemLink() {
   return (
@@ -37,5 +37,5 @@ export function ItemLink() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }

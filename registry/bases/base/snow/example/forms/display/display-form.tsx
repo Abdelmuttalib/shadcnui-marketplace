@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/snow/ui/button";
-import { Checkbox } from "@/registry/snow/ui/checkbox";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Checkbox } from "@/registry/bases/base/snow/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -15,7 +15,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/snow/ui/form";
+} from "@/registry/bases/base/snow/ui/form";
 
 const items = [
   {

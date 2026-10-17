@@ -10,13 +10,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 
 export const description = "A pie chart with a label";
 
@@ -64,7 +64,7 @@ export function Component() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px] pb-0 [&_.recharts-pie-label-text]:fill-moon-foreground"
+          className="[&_.recharts-pie-label-text]:fill-moon-foreground mx-auto aspect-square max-h-[250px] pb-0"
         >
           <PieChart>
             <ChartTooltip content={<ChartTooltipContent hideLabel />} />
@@ -76,7 +76,7 @@ export function Component() {
         <div className="flex items-center gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-moon-muted-foreground">
+        <div className="text-moon-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>

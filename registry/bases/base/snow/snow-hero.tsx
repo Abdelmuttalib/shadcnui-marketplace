@@ -1,6 +1,6 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
-import { DemoDatePicker } from "@/registry/snow/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/snow/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -15,14 +15,22 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/snow/showcase";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/snow/ui/avatar";
-import { Badge } from "@/registry/snow/ui/badge";
-import { Button } from "@/registry/snow/ui/button";
-import { Checkbox } from "@/registry/snow/ui/checkbox";
-import { Switch } from "@/registry/snow/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/snow/ui/tabs";
-import { Toggle } from "@/registry/snow/ui/toggle";
+} from "@/registry/bases/base/snow/showcase";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/snow/ui/avatar";
+import { Badge } from "@/registry/bases/base/snow/ui/badge";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Checkbox } from "@/registry/bases/base/snow/ui/checkbox";
+import { Switch } from "@/registry/bases/base/snow/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/snow/ui/tabs";
+import { Toggle } from "@/registry/bases/base/snow/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function SnowUI() {

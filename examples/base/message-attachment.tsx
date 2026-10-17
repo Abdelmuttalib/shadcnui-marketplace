@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { DownloadIcon, FileTextIcon } from "lucide-react"
+import { DownloadIcon, FileTextIcon } from "lucide-react";
 
 import {
   Attachment,
@@ -10,9 +10,9 @@ import {
   AttachmentDescription,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-rhea/ui/attachment"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/attachment";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 
 export function MessageAttachmentDemo() {
   return (
@@ -72,5 +72,5 @@ export function MessageAttachmentDemo() {
         </MessageContent>
       </Message>
     </div>
-  )
+  );
 }

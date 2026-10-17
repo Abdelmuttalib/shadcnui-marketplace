@@ -1,4 +1,4 @@
-import { Skeleton } from "@/styles/base-nova/ui/skeleton"
+import { Skeleton } from "@/styles/base-default/ui/skeleton";
 
 export function SkeletonForm() {
   return (
@@ -13,5 +13,5 @@ export function SkeletonForm() {
       </div>
       <Skeleton className="h-8 w-24" />
     </div>
-  )
+  );
 }

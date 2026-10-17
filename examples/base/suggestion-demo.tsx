@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ArrowUpIcon, PlusIcon } from "lucide-react"
+import { ArrowUpIcon, PlusIcon } from "lucide-react";
+import * as React from "react";
 
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/base-rhea/ui/input-group"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/input-group";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 
 const suggestions = [
   "Add a dark mode toggle",
@@ -20,7 +20,7 @@ const suggestions = [
   "Upgrade to Next.js 16",
   "Add a loading state",
   "Find unused dependencies",
-]
+];
 
 const replies: Record<string, string> = {
   "Add a dark mode toggle":
@@ -35,33 +35,33 @@ const replies: Record<string, string> = {
     "Added a loading.tsx to the dashboard route. It shows skeletons while the data loads.",
   "Find unused dependencies":
     "Three packages are not imported anywhere: lodash, moment and classnames. Should I remove them?",
-}
+};
 
 export function SuggestionDemo() {
-  const [text, setText] = React.useState("")
+  const [text, setText] = React.useState("");
   const [turn, setTurn] = React.useState<{
-    prompt: string
-    reply: string
-  } | null>(null)
-  const formRef = React.useRef<HTMLFormElement>(null)
-  const canSend = text.trim().length > 0
+    prompt: string;
+    reply: string;
+  } | null>(null);
+  const formRef = React.useRef<HTMLFormElement>(null);
+  const canSend = text.trim().length > 0;
 
   function send(prompt: string) {
     setTurn({
       prompt,
       reply:
         replies[prompt] ?? "This demo only knows the suggestions. Pick one.",
-    })
-    setText("")
+    });
+    setText("");
   }
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
     if (!canSend) {
-      return
+      return;
     }
 
-    send(text.trim())
+    send(text.trim());
   }
 
   return (
@@ -83,7 +83,7 @@ export function SuggestionDemo() {
         </div>
       )}
       <div className="flex flex-col gap-2">
-        <div className="flex scroll-fade-x scrollbar-none gap-2 overflow-x-auto overscroll-x-contain">
+        <div className="scroll-fade-x scrollbar-none flex gap-2 overflow-x-auto overscroll-x-contain">
           {suggestions.map((suggestion) => (
             <Button
               key={suggestion}
@@ -104,8 +104,8 @@ export function SuggestionDemo() {
               placeholder="Ask the agent to change your code..."
               onKeyDown={(event) => {
                 if (event.key === "Enter" && !event.shiftKey) {
-                  event.preventDefault()
-                  formRef.current?.requestSubmit()
+                  event.preventDefault();
+                  formRef.current?.requestSubmit();
                 }
               }}
               className="p-3"
@@ -134,5 +134,5 @@ export function SuggestionDemo() {
         </form>
       </div>
     </div>
-  )
+  );
 }

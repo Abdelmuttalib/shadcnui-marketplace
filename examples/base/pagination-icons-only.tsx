@@ -1,11 +1,11 @@
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationNext,
   PaginationPrevious,
-} from "@/styles/base-nova/ui/pagination"
+} from "@/styles/base-default/ui/pagination";
 import {
   Select,
   SelectContent,
@@ -13,7 +13,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-nova/ui/select"
+} from "@/styles/base-default/ui/select";
 
 export function PaginationIconsOnly() {
   return (
@@ -45,5 +45,5 @@ export function PaginationIconsOnly() {
         </PaginationContent>
       </Pagination>
     </div>
-  )
+  );
 }

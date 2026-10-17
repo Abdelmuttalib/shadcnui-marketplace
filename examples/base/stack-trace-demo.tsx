@@ -1,14 +1,17 @@
-"use client"
+"use client";
 
-import { useChat } from "@ai-sdk/react"
-import type { UIDataTypes, UIMessage } from "ai"
-import { FileCodeIcon, LayersIcon, TerminalIcon } from "lucide-react"
+import { useChat } from "@ai-sdk/react";
+import type { UIDataTypes, UIMessage } from "ai";
+import { FileCodeIcon, LayersIcon, TerminalIcon } from "lucide-react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -17,23 +20,23 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     runCommand: {
-      input: { command: string }
-      output: { stdout: string }
-    }
+      input: { command: string };
+      output: { stdout: string };
+    };
   }
->
+>;
 
 type ToolPart = Extract<
   ChatMessage["parts"][number],
   { type: "tool-runCommand" }
->
+>;
 
 const STACK = `TypeError: Cannot read properties of undefined (reading 'email')
     at seedUsers (prisma/seed.ts:27:34)
@@ -41,7 +44,7 @@ const STACK = `TypeError: Cannot read properties of undefined (reading 'email')
     at Module._compile (node:internal/modules/cjs/loader:1554:14)
     at Object.transformer (node_modules/tsx/dist/register.cjs:3:1104)
     at Module.load (node:internal/modules/cjs/loader:1289:32)
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)`
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)`;
 
 const chat = createChat<ChatMessage>()
   .user("Reset the database and seed it.")
@@ -59,22 +62,22 @@ The following migrations have been applied:
 migrations/
   └─ 20260912_init/
   └─ 20260920_add_profiles/`,
-      })
+      });
     writer
       .tool("runCommand", { input: { command: "pnpm prisma db seed" } })
       .sleep(1200)
-      .error(STACK)
+      .error(STACK);
     writer.text(
       "The migrations ran, but the seed failed in seedUsers. One fixture has no profile, so profile.email is undefined."
-    )
-  })
+    );
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function parseFrame(line: string) {
-  const match = line.match(/^at (.+) \((.+):(\d+):(\d+)\)$/)
+  const match = line.match(/^at (.+) \((.+):(\d+):(\d+)\)$/);
 
   return {
     line,
@@ -82,14 +85,14 @@ function parseFrame(line: string) {
     file: match?.[2],
     lineNumber: match?.[3],
     internal: line.includes("node_modules") || line.includes("node:"),
-  }
+  };
 }
 
 function StackTrace({ stack }: { stack: string }) {
-  const [error, ...lines] = stack.split("\n").map((line) => line.trim())
-  const frames = lines.map(parseFrame)
-  const appFrames = frames.filter((frame) => !frame.internal)
-  const internalFrames = frames.filter((frame) => frame.internal)
+  const [error, ...lines] = stack.split("\n").map((line) => line.trim());
+  const frames = lines.map(parseFrame);
+  const appFrames = frames.filter((frame) => !frame.internal);
+  const internalFrames = frames.filter((frame) => frame.internal);
 
   return (
     <TraceCollapsible defaultOpen>
@@ -102,7 +105,7 @@ function StackTrace({ stack }: { stack: string }) {
         </TraceLine>
       </TraceCollapsibleTrigger>
       <TraceCollapsibleContent className="flex flex-col gap-2">
-        <p className="font-mono text-xs text-destructive">{error}</p>
+        <p className="text-destructive font-mono text-xs">{error}</p>
         <Trace>
           {appFrames.map((frame) => (
             <a key={frame.line} href={`#${frame.file}:${frame.lineNumber}`}>
@@ -128,7 +131,7 @@ function StackTrace({ stack }: { stack: string }) {
               </TraceLine>
             </TraceCollapsibleTrigger>
             <TraceCollapsibleContent>
-              <ol className="flex flex-col gap-1 overflow-x-auto rounded-md bg-muted p-3 font-mono text-xs">
+              <ol className="bg-muted flex flex-col gap-1 overflow-x-auto rounded-md p-3 font-mono text-xs">
                 {internalFrames.map((frame) => (
                   <li key={frame.line} className="whitespace-nowrap">
                     {frame.line}
@@ -140,20 +143,20 @@ function StackTrace({ stack }: { stack: string }) {
         </Trace>
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 function CommandRow({
   part,
   streaming,
 }: {
-  part: ToolPart
-  streaming: boolean
+  part: ToolPart;
+  streaming: boolean;
 }) {
-  const command = part.input?.command
+  const command = part.input?.command;
 
   if (part.state === "output-error") {
-    return <StackTrace stack={part.errorText} />
+    return <StackTrace stack={part.errorText} />;
   }
 
   if (part.state === "output-available") {
@@ -175,7 +178,7 @@ function CommandRow({
           </CodeBlock>
         </TraceCollapsibleContent>
       </TraceCollapsible>
-    )
+    );
   }
 
   return (
@@ -187,18 +190,18 @@ function CommandRow({
         {streaming ? "Running" : "Failed to run"} {command}
       </TraceTitle>
     </TraceLine>
-  )
+  );
 }
 
 export function StackTraceDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -209,14 +212,14 @@ export function StackTraceDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
         const tools = message.parts.filter(
           (part) => part.type === "tool-runCommand"
-        )
-        const text = getMessageText(message)
+        );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -235,7 +238,7 @@ export function StackTraceDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -243,13 +246,13 @@ export function StackTraceDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

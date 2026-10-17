@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/neon/ui/separator";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 
 import { NotificationsForm } from "./notifications-form";
 
@@ -7,7 +7,7 @@ export function SettingsNotificationsPage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Notifications</h3>
-        <p className="text-sm text-neon-muted-foreground">
+        <p className="text-neon-muted-foreground text-sm">
           Configure how you receive notifications.
         </p>
       </div>

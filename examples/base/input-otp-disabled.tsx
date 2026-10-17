@@ -1,10 +1,10 @@
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/styles/base-nova/ui/input-otp"
+} from "@/styles/base-default/ui/input-otp";
 
 export function InputOTPDisabled() {
   return (
@@ -21,5 +21,5 @@ export function InputOTPDisabled() {
         <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }

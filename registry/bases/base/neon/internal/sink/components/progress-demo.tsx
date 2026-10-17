@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Progress } from "@/registry/neon/ui/progress";
+import { Progress } from "@/registry/bases/base/neon/ui/progress";
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(13);

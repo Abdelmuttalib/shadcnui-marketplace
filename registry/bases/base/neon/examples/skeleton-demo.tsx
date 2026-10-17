@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/neon/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/neon/ui/skeleton";
 
 export default function SkeletonDemo() {
   return (

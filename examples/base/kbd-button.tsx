@@ -1,5 +1,5 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { Kbd } from "@/styles/base-nova/ui/kbd"
+import { Button } from "@/styles/base-default/ui/button";
+import { Kbd } from "@/styles/base-default/ui/kbd";
 
 export default function KbdButton() {
   return (
@@ -9,5 +9,5 @@ export default function KbdButton() {
         ⏎
       </Kbd>
     </Button>
-  )
+  );
 }

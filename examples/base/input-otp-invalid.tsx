@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/styles/base-nova/ui/input-otp"
+} from "@/styles/base-default/ui/input-otp";
 
 export function InputOTPInvalid() {
-  const [value, setValue] = React.useState("000000")
+  const [value, setValue] = React.useState("000000");
 
   return (
     <InputOTP maxLength={6} value={value} onChange={setValue}>
@@ -29,5 +29,5 @@ export function InputOTPInvalid() {
         <InputOTPSlot index={5} aria-invalid />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }

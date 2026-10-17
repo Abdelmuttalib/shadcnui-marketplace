@@ -1,11 +1,11 @@
-import { FileTextIcon, SearchIcon, TerminalIcon } from "lucide-react"
+import { FileTextIcon, SearchIcon, TerminalIcon } from "lucide-react";
 
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceGroupDemo() {
   return (
@@ -29,5 +29,5 @@ export function TraceGroupDemo() {
         <TraceTitle>Ran pnpm install</TraceTitle>
       </TraceLine>
     </Trace>
-  )
+  );
 }

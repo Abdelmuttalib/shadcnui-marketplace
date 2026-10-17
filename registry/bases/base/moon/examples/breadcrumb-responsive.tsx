@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/moon/ui/breadcrumb";
-import { Button } from "@/registry/moon/ui/button";
+} from "@/registry/bases/base/moon/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/moon/ui/drawer";
+} from "@/registry/bases/base/moon/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
 
 const items = [
   { href: "#", label: "Home" },

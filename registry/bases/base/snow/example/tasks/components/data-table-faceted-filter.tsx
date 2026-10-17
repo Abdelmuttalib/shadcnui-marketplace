@@ -3,8 +3,8 @@ import { Column } from "@tanstack/react-table";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/snow/ui/badge";
-import { Button } from "@/registry/snow/ui/button";
+import { Badge } from "@/registry/bases/base/snow/ui/badge";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -13,13 +13,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/snow/ui/command";
+} from "@/registry/bases/base/snow/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/snow/ui/popover";
-import { Separator } from "@/registry/snow/ui/separator";
+} from "@/registry/bases/base/snow/ui/popover";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
@@ -45,7 +45,7 @@ export function DataTableFacetedFilter<TData, TValue>({
         <Button
           variant="outline"
           size="sm"
-          className="h-8 border-dashed border-snow-border"
+          className="border-snow-border h-8 border-dashed"
         >
           <PlusCircledIcon className="mr-2 h-4 w-4" />
           {title}
@@ -109,7 +109,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-snow-sm border border-snow-ring",
+                        "rounded-snow-sm border-snow-ring mr-2 flex h-4 w-4 items-center justify-center border",
                         isSelected
                           ? "bg-snow-ring [&_svg]:text-snow-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -118,7 +118,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-snow-muted-foreground" />
+                      <option.icon className="text-snow-muted-foreground mr-2 h-4 w-4" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

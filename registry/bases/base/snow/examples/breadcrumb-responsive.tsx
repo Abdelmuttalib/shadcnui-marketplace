@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/snow/ui/breadcrumb";
-import { Button } from "@/registry/snow/ui/button";
+} from "@/registry/bases/base/snow/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/snow/ui/drawer";
+} from "@/registry/bases/base/snow/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
 
 const items = [
   { href: "#", label: "Home" },

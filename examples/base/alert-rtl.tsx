@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { CheckCircle2Icon, InfoIcon } from "lucide-react"
+import { CheckCircle2Icon, InfoIcon } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/styles/base-nova/ui-rtl/alert"
+} from "@/styles/base-default/ui/alert";
 
 const translations: Translations = {
   en: {
@@ -47,7 +47,7 @@ const translations: Translations = {
         "הוספנו תמיכה במצב כהה. אתה יכול להפעיל אותו בהגדרות החשבון שלך.",
     },
   },
-}
+};
 
 const alerts = [
   {
@@ -60,23 +60,23 @@ const alerts = [
     titleKey: "featureTitle" as const,
     descriptionKey: "featureDescription" as const,
   },
-] as const
+] as const;
 
 export function AlertRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div className="grid w-full max-w-md items-start gap-4" dir={dir}>
       {alerts.map((alert, index) => {
-        const Icon = alert.icon
+        const Icon = alert.icon;
         return (
           <Alert key={index}>
             <Icon />
             <AlertTitle>{t[alert.titleKey]}</AlertTitle>
             <AlertDescription>{t[alert.descriptionKey]}</AlertDescription>
           </Alert>
-        )
+        );
       })}
     </div>
-  )
+  );
 }

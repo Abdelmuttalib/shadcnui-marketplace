@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useChat } from "@ai-sdk/react"
-import type { UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
 import {
   CircleCheckIcon,
   CircleDotIcon,
   CircleIcon,
   RouteIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -22,26 +22,26 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   {
     plan: {
-      title: string
-      steps: { title: string; status: "done" | "running" | "pending" }[]
-    }
+      title: string;
+      steps: { title: string; status: "done" | "running" | "pending" }[];
+    };
   }
->
+>;
 
-type PlanPart = Extract<ChatMessage["parts"][number], { type: "data-plan" }>
+type PlanPart = Extract<ChatMessage["parts"][number], { type: "data-plan" }>;
 
 const STEPS = [
   "Install @base-ui/react",
   "Replace the Radix imports",
   "Rename asChild to render",
   "Run the type checker",
-]
+];
 
 function planAt(current: number) {
   return {
@@ -51,7 +51,7 @@ function planAt(current: number) {
       status:
         index < current ? "done" : index === current ? "running" : "pending",
     })),
-  } satisfies PlanPart["data"]
+  } satisfies PlanPart["data"];
 }
 
 const chat = createChat<ChatMessage>()
@@ -60,25 +60,25 @@ const chat = createChat<ChatMessage>()
     STEPS.forEach((_, index) => {
       writer
         .data({ type: "data-plan", id: "plan", data: planAt(index) })
-        .sleep(1200)
-    })
-    writer.data({ type: "data-plan", id: "plan", data: planAt(STEPS.length) })
-    writer.text("Migrated Dialog and AlertDialog. The type checker passes.")
-  })
+        .sleep(1200);
+    });
+    writer.data({ type: "data-plan", id: "plan", data: planAt(STEPS.length) });
+    writer.text("Migrated Dialog and AlertDialog. The type checker passes.");
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function PlanRow({
   plan,
   streaming,
 }: {
-  plan: PlanPart["data"]
-  streaming: boolean
+  plan: PlanPart["data"];
+  streaming: boolean;
 }) {
-  const done = plan.steps.filter((step) => step.status === "done").length
-  const running = streaming && done < plan.steps.length
+  const done = plan.steps.filter((step) => step.status === "done").length;
+  const running = streaming && done < plan.steps.length;
 
   return (
     <TraceCollapsible defaultOpen>
@@ -102,8 +102,8 @@ function PlanRow({
                 step.status === "pending"
                   ? "pending"
                   : streaming && step.status === "running"
-                    ? "running"
-                    : undefined
+                  ? "running"
+                  : undefined
               }
             >
               <TraceIcon>
@@ -121,18 +121,18 @@ function PlanRow({
         </Trace>
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function PlanDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -143,12 +143,12 @@ export function PlanDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
-        const plan = message.parts.find((part) => part.type === "data-plan")
-        const text = getMessageText(message)
+        const streaming = busy && message === messages.at(-1);
+        const plan = message.parts.find((part) => part.type === "data-plan");
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -161,7 +161,7 @@ export function PlanDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -169,13 +169,13 @@ export function PlanDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

@@ -2,20 +2,20 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-rhea/ui/avatar"
+} from "@/styles/base-default/ui/avatar";
 import {
   Bubble,
   BubbleContent,
   BubbleGroup,
   BubbleReactions,
-} from "@/styles/base-rhea/ui/bubble"
-import { Marker, MarkerContent } from "@/styles/base-rhea/ui/marker"
+} from "@/styles/base-default/ui/bubble";
+import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
 import {
   Message,
   MessageAvatar,
   MessageContent,
   MessageFooter,
-} from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/message";
 
 export function MessageDemo() {
   return (
@@ -89,5 +89,5 @@ export function MessageDemo() {
         </MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

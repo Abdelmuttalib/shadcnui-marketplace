@@ -3,7 +3,7 @@
 import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { Row } from "@tanstack/react-table";
 
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,7 +16,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
 
 import { labels } from "../data/data";
 import { taskSchema } from "../data/schema";
@@ -35,7 +35,7 @@ export function DataTableRowActions<TData>({
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="flex h-8 w-8 p-0 data-[state=open]:bg-moon-muted"
+          className="data-[state=open]:bg-moon-muted flex h-8 w-8 p-0"
         >
           <DotsHorizontalIcon className="h-4 w-4" />
           <span className="sr-only">Open menu</span>

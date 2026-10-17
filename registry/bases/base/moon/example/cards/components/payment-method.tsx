@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Card,
   CardContent,
@@ -7,17 +7,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/moon/ui/radio-group";
+} from "@/registry/bases/base/moon/ui/card";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/moon/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
+} from "@/registry/bases/base/moon/ui/select";
 
 export function DemoPaymentMethod() {
   return (
@@ -34,7 +37,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="card" id="card" className="peer sr-only" />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between rounded-moon-md border-2 border-moon-muted bg-moon-popover p-4 hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary"
+              className="rounded-moon-md border-moon-muted bg-moon-popover hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +63,7 @@ export function DemoPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between rounded-moon-md border-2 border-moon-muted bg-moon-popover p-4 hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary"
+              className="rounded-moon-md border-moon-muted bg-moon-popover hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -70,7 +73,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between rounded-moon-md border-2 border-moon-muted bg-moon-popover p-4 hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary"
+              className="rounded-moon-md border-moon-muted bg-moon-popover hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

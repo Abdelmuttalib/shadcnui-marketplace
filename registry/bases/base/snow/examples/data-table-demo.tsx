@@ -15,8 +15,8 @@ import {
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/snow/ui/button";
-import { Checkbox } from "@/registry/snow/ui/checkbox";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Checkbox } from "@/registry/bases/base/snow/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -25,8 +25,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
-import { Input } from "@/registry/snow/ui/input";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/snow/ui/input";
 import {
   Table,
   TableBody,
@@ -34,7 +34,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/snow/ui/table";
+} from "@/registry/bases/base/snow/ui/table";
 
 const data: Payment[] = [
   {
@@ -284,7 +284,7 @@ export default function DataTableDemo() {
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-spctm-muted-foreground">
+        <div className="text-spctm-muted-foreground flex-1 text-sm">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>

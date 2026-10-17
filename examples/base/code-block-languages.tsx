@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const samples = [
   {
@@ -30,10 +30,10 @@ const samples = [
     title: "notes.txt",
     code: "A language that is not in the list renders as plain text.",
   },
-]
+];
 
 function Sample({ code, language }: { code: string; language: string }) {
-  const lines = useHighlightedCode(code, language)
+  const lines = useHighlightedCode(code, language);
 
   return (
     <CodeBlockContent>
@@ -41,7 +41,7 @@ function Sample({ code, language }: { code: string; language: string }) {
         <CodeBlockLine key={index}>{line}</CodeBlockLine>
       ))}
     </CodeBlockContent>
-  )
+  );
 }
 
 export function CodeBlockLanguages() {
@@ -56,5 +56,5 @@ export function CodeBlockLanguages() {
         </CodeBlock>
       ))}
     </div>
-  )
+  );
 }

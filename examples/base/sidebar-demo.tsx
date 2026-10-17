@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   AudioWaveform,
   BadgeCheck,
@@ -24,18 +23,19 @@ import {
   Sparkles,
   SquareTerminal,
   Trash2,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-nova/ui/avatar"
+} from "@/styles/base-default/ui/avatar";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-nova/ui/collapsible"
+} from "@/styles/base-default/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -45,7 +45,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Sidebar,
   SidebarContent,
@@ -65,7 +65,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@/styles/base-nova/ui/sidebar"
+} from "@/styles/base-default/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -195,22 +195,22 @@ const data = {
       icon: Map,
     },
   ],
-}
+};
 
 function TeamSwitcher({
   teams,
 }: {
   teams: {
-    name: string
-    logo: React.ElementType
-    plan: string
-  }[]
+    name: string;
+    logo: React.ElementType;
+    plan: string;
+  }[];
 }) {
-  const { isMobile } = useSidebar()
-  const [activeTeam, setActiveTeam] = React.useState(teams[0])
+  const { isMobile } = useSidebar();
+  const [activeTeam, setActiveTeam] = React.useState(teams[0]);
 
   if (!activeTeam) {
-    return null
+    return null;
   }
 
   return (
@@ -225,7 +225,7 @@ function TeamSwitcher({
               />
             }
           >
-            <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+            <div className="size-8 bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
               <activeTeam.logo className="size-4" />
             </div>
             <div className="grid flex-1 text-left text-sm leading-tight">
@@ -241,7 +241,7 @@ function TeamSwitcher({
             sideOffset={4}
           >
             <DropdownMenuGroup>
-              <DropdownMenuLabel className="text-xs text-muted-foreground">
+              <DropdownMenuLabel className="text-muted-foreground text-xs">
                 Teams
               </DropdownMenuLabel>
               {teams.map((team, index) => (
@@ -250,7 +250,7 @@ function TeamSwitcher({
                   onClick={() => setActiveTeam(team)}
                   className="gap-2 p-2"
                 >
-                  <div className="flex size-6 items-center justify-center rounded-md border">
+                  <div className="size-6 flex items-center justify-center rounded-md border">
                     <team.logo className="size-3.5 shrink-0" />
                   </div>
                   {team.name}
@@ -261,10 +261,10 @@ function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-2 p-2">
-                <div className="flex size-6 items-center justify-center rounded-md border bg-transparent">
+                <div className="size-6 flex items-center justify-center rounded-md border bg-transparent">
                   <Plus className="size-4" />
                 </div>
-                <div className="font-medium text-muted-foreground">
+                <div className="text-muted-foreground font-medium">
                   Add team
                 </div>
               </DropdownMenuItem>
@@ -273,22 +273,22 @@ function TeamSwitcher({
         </DropdownMenu>
       </SidebarMenuItem>
     </SidebarMenu>
-  )
+  );
 }
 
 function NavMain({
   items,
 }: {
   items: {
-    title: string
-    url: string
-    icon?: React.ElementType
-    isActive?: boolean
+    title: string;
+    url: string;
+    icon?: React.ElementType;
+    isActive?: boolean;
     items?: {
-      title: string
-      url: string
-    }[]
-  }[]
+      title: string;
+      url: string;
+    }[];
+  }[];
 }) {
   return (
     <SidebarGroup>
@@ -324,19 +324,19 @@ function NavMain({
         ))}
       </SidebarMenu>
     </SidebarGroup>
-  )
+  );
 }
 
 function NavProjects({
   projects,
 }: {
   projects: {
-    name: string
-    url: string
-    icon: React.ElementType
-  }[]
+    name: string;
+    url: string;
+    icon: React.ElementType;
+  }[];
 }) {
-  const { isMobile } = useSidebar()
+  const { isMobile } = useSidebar();
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
@@ -383,19 +383,19 @@ function NavProjects({
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarGroup>
-  )
+  );
 }
 
 function NavUser({
   user,
 }: {
   user: {
-    name: string
-    email: string
-    avatar: string
-  }
+    name: string;
+    email: string;
+    avatar: string;
+  };
 }) {
-  const { isMobile } = useSidebar()
+  const { isMobile } = useSidebar();
 
   return (
     <SidebarMenu>
@@ -417,7 +417,7 @@ function NavUser({
               <span className="truncate font-medium">{user.name}</span>
               <span className="truncate text-xs">{user.email}</span>
             </div>
-            <ChevronsUpDown className="ml-auto size-4" />
+            <ChevronsUpDown className="size-4 ml-auto" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
@@ -472,7 +472,7 @@ function NavUser({
         </DropdownMenu>
       </SidebarMenuItem>
     </SidebarMenu>
-  )
+  );
 }
 
 export default function AppSidebar({
@@ -494,12 +494,12 @@ export default function AppSidebar({
         <SidebarRail />
       </Sidebar>
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+        <header className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
           </div>
         </header>
       </SidebarInset>
     </SidebarProvider>
-  )
+  );
 }

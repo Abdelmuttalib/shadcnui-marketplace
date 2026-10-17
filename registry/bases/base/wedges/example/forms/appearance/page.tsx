@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/wedges/ui/separator";
+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
 
 import { AppearanceForm } from "./appearance-form";
 
@@ -7,7 +7,7 @@ export default function SettingsAppearancePage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Appearance</h3>
-        <p className="text-sm text-wedges-muted-foreground">
+        <p className="text-wedges-muted-foreground text-sm">
           Customize the appearance of the app. Automatically switch between day
           and night themes.
         </p>

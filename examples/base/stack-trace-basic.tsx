@@ -1,4 +1,4 @@
-import { CircleXIcon } from "lucide-react"
+import { CircleXIcon } from "lucide-react";
 
 import {
   Trace,
@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const STACK = `TypeError: Cannot read properties of undefined (reading 'map')
     at UserList (app/components/user-list.tsx:15:23)
@@ -16,9 +16,9 @@ const STACK = `TypeError: Cannot read properties of undefined (reading 'map')
     at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:17811:13)
     at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19049:16)
     at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22776:12)
-    at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)`
+    at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)`;
 
-const [error, ...frames] = STACK.split("\n").map((line) => line.trim())
+const [error, ...frames] = STACK.split("\n").map((line) => line.trim());
 
 export function StackTraceBasic() {
   return (
@@ -33,8 +33,8 @@ export function StackTraceBasic() {
           </TraceLine>
         </TraceCollapsibleTrigger>
         <TraceCollapsibleContent>
-          <div className="flex flex-col gap-2 overflow-x-auto rounded-md bg-muted p-3 font-mono text-xs">
-            <p className="font-medium whitespace-pre-wrap text-destructive">
+          <div className="bg-muted flex flex-col gap-2 overflow-x-auto rounded-md p-3 font-mono text-xs">
+            <p className="text-destructive whitespace-pre-wrap font-medium">
               {error}
             </p>
             <ol className="flex flex-col gap-1">
@@ -44,7 +44,7 @@ export function StackTraceBasic() {
                   className={
                     frame.includes("node_modules")
                       ? "whitespace-nowrap"
-                      : "whitespace-nowrap text-foreground"
+                      : "text-foreground whitespace-nowrap"
                   }
                 >
                   {frame}
@@ -55,5 +55,5 @@ export function StackTraceBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 import { MailOpen } from "lucide-react";
 
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 
 export function ButtonWithIcon() {
   return (

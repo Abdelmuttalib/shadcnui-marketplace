@@ -1,4 +1,4 @@
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (

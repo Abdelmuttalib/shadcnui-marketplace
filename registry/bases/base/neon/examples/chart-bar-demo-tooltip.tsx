@@ -7,7 +7,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/neon/ui/chart";
+} from "@/registry/bases/base/neon/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

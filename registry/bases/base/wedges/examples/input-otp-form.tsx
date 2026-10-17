@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Form,
   FormControl,
@@ -14,12 +14,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/wedges/ui/form";
+} from "@/registry/bases/base/wedges/ui/form";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/wedges/ui/input-otp";
+} from "@/registry/bases/base/wedges/ui/input-otp";
 
 const FormSchema = z.object({
   pin: z.string().min(6, {

@@ -1,5 +1,5 @@
-import { Button } from "@/registry/snow/ui/button";
-import { Textarea } from "@/registry/snow/ui/textarea";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Textarea } from "@/registry/bases/base/snow/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

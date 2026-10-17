@@ -1,6 +1,6 @@
-import { Button } from "@/registry/moon/ui/button";
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/moon/ui/sheet";
+} from "@/registry/bases/base/moon/ui/sheet";
 
 export function SheetDemo() {
   return (

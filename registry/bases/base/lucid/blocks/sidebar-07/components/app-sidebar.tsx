@@ -21,10 +21,10 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/registry/bases/base/lucid/ui/sidebar";
-import { NavMain } from "@/registry/lucid/blocks/sidebar-07/components/nav-main";
-import { NavProjects } from "@/registry/lucid/blocks/sidebar-07/components/nav-projects";
-import { NavUser } from "@/registry/lucid/blocks/sidebar-07/components/nav-user";
-import { TeamSwitcher } from "@/registry/lucid/blocks/sidebar-07/components/team-switcher";
+import { NavMain } from "@/registry/bases/base/lucid/blocks/sidebar-07/components/nav-main";
+import { NavProjects } from "@/registry/bases/base/lucid/blocks/sidebar-07/components/nav-projects";
+import { NavUser } from "@/registry/bases/base/lucid/blocks/sidebar-07/components/nav-user";
+import { TeamSwitcher } from "@/registry/bases/base/lucid/blocks/sidebar-07/components/team-switcher";
 
 // This is sample data.
 const data = {

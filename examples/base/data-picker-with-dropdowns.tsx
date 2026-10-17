@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { format } from "date-fns"
-import { ChevronDownIcon } from "lucide-react"
+import { format } from "date-fns";
+import { ChevronDownIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Button } from "@/styles/base-default/ui/button";
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function DataPickerWithDropdowns() {
-  const [date, setDate] = React.useState<Date>()
-  const [open, setOpen] = React.useState(false)
+  const [date, setDate] = React.useState<Date>();
+  const [open, setOpen] = React.useState(false);
 
   return (
     <Field className="mx-auto w-72">
@@ -55,5 +55,5 @@ export function DataPickerWithDropdowns() {
         </PopoverContent>
       </Popover>
     </Field>
-  )
+  );
 }

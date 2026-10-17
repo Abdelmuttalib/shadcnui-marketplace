@@ -2,7 +2,7 @@ import { LogOut } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
-import { Typography } from "@/registry/neon/ui/typography";
+import { Typography } from "@/registry/bases/base/neon/ui/typography";
 
 // import Link from "next/link";
 // import { cn } from "@/lib/utils";
@@ -14,7 +14,7 @@ import { ExamplesNav } from "./examples-nav";
 //   PageHeaderDescription,
 //   PageHeaderHeading,
 // } from "@/components/page-header";
-// import { buttonVariants } from "@/registry/neon/ui/button";
+// import { buttonVariants } from "@/registry/bases/base/neon/ui/button";
 
 const metadata: Metadata = {
   title: "Examples",

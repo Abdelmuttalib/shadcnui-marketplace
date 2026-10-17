@@ -1,15 +1,15 @@
-import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react"
+import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { Card, CardContent, CardHeader } from "@/styles/base-nova/ui/card"
+import { Button } from "@/styles/base-default/ui/button";
+import { Card, CardContent, CardHeader } from "@/styles/base-default/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-nova/ui/collapsible"
-import { Tabs, TabsList, TabsTrigger } from "@/styles/base-nova/ui/tabs"
+} from "@/styles/base-default/ui/collapsible";
+import { Tabs, TabsList, TabsTrigger } from "@/styles/base-default/ui/tabs";
 
-type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] }
+type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] };
 
 export function CollapsibleFileTree() {
   const fileTree: FileTreeItem[] = [
@@ -62,7 +62,7 @@ export function CollapsibleFileTree() {
     { name: "tsconfig.json" },
     { name: "README.md" },
     { name: ".gitignore" },
-  ]
+  ];
 
   const renderItem = (fileItem: FileTreeItem) => {
     if ("items" in fileItem) {
@@ -73,7 +73,7 @@ export function CollapsibleFileTree() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="group w-full justify-start transition-none hover:bg-accent hover:text-accent-foreground"
+                className="hover:bg-accent hover:text-accent-foreground group w-full justify-start transition-none"
               />
             }
           >
@@ -81,26 +81,26 @@ export function CollapsibleFileTree() {
             <FolderIcon />
             {fileItem.name}
           </CollapsibleTrigger>
-          <CollapsibleContent className="mt-1 ml-5 style-lyra:ml-4">
+          <CollapsibleContent className="style-lyra:ml-4 ml-5 mt-1">
             <div className="flex flex-col gap-1">
               {fileItem.items.map((child) => renderItem(child))}
             </div>
           </CollapsibleContent>
         </Collapsible>
-      )
+      );
     }
     return (
       <Button
         key={fileItem.name}
         variant="link"
         size="sm"
-        className="w-full justify-start gap-2 text-foreground"
+        className="text-foreground w-full justify-start gap-2"
       >
         <FileIcon />
         <span>{fileItem.name}</span>
       </Button>
-    )
-  }
+    );
+  };
 
   return (
     <Card className="mx-auto w-full max-w-[16rem] gap-2" size="sm">
@@ -118,5 +118,5 @@ export function CollapsibleFileTree() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

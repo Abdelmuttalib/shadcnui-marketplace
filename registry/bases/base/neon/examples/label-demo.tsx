@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/neon/ui/checkbox";
-import { Label } from "@/registry/neon/ui/label";
+import { Checkbox } from "@/registry/bases/base/neon/ui/checkbox";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 
 export default function LabelDemo() {
   return (

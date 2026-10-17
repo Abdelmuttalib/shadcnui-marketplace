@@ -12,7 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/spectrum/ui/sidebar";
+} from "@/registry/bases/base/spectrum/ui/sidebar";
 
 export default function AppSidebar() {
   return (

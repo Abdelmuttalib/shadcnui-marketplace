@@ -13,24 +13,24 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/registry/neon/ui/alert-dialog";
-import { Button } from "@/registry/neon/ui/button";
+} from "@/registry/bases/base/neon/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/neon/ui/dialog";
+} from "@/registry/bases/base/neon/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/neon/ui/dropdown-menu";
-import { Label } from "@/registry/neon/ui/label";
-import { Switch } from "@/registry/neon/ui/switch";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import { Switch } from "@/registry/bases/base/neon/ui/switch";
 
 export function PresetActions() {
   const [open, setIsOpen] = React.useState(false);
@@ -69,7 +69,7 @@ export function PresetActions() {
             </DialogDescription>
           </DialogHeader>
           <div className="py-6">
-            <h4 className="text-sm text-neon-muted-foreground">
+            <h4 className="text-neon-muted-foreground text-sm">
               Playground Warnings
             </h4>
             <div className="flex items-start justify-between space-x-4 pt-3">
@@ -78,7 +78,7 @@ export function PresetActions() {
                 <span className="font-semibold">
                   Show a warning when content is flagged
                 </span>
-                <span className="text-sm text-neon-muted-foreground">
+                <span className="text-neon-muted-foreground text-sm">
                   A warning will be shown when sexual, hateful, violent or
                   self-harm content is detected.
                 </span>

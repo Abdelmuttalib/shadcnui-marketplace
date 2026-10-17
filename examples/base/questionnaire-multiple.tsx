@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -13,7 +13,7 @@ import {
   QuestionnaireItem,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   {
@@ -26,17 +26,17 @@ const items = [
     name: "context",
     required: true,
   },
-] as const
+] as const;
 
 export function QuestionnaireMultiple() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const context = new FormData(event.currentTarget).getAll("context")
+    const context = new FormData(event.currentTarget).getAll("context");
 
     toast("Context selected", {
       description: `Context: ${context.join(", ") || "None"}`,
-    })
+    });
   }
 
   return (
@@ -74,5 +74,5 @@ export function QuestionnaireMultiple() {
         <QuestionnaireSubmit>Share context</QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

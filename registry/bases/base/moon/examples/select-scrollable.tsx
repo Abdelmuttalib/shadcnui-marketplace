@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
+} from "@/registry/bases/base/moon/ui/select";
 
 export default function SelectScrollable() {
   return (

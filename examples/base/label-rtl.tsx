@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Checkbox } from "@/styles/base-nova/ui-rtl/checkbox"
-import { Label } from "@/styles/base-nova/ui-rtl/label"
+  useTranslation,
+} from "@/components/language-selector";
+import { Checkbox } from "@/styles/base-default/ui/checkbox";
+import { Label } from "@/styles/base-default/ui/label";
 
 const translations: Translations = {
   en: {
@@ -28,10 +28,10 @@ const translations: Translations = {
       label: "קבל תנאים והגבלות",
     },
   },
-}
+};
 
 export function LabelRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div className="flex gap-2" dir={dir}>
@@ -40,5 +40,5 @@ export function LabelRtl() {
         {t.label}
       </Label>
     </div>
-  )
+  );
 }

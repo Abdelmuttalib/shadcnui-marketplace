@@ -1,6 +1,10 @@
-import { FileTextIcon, GitBranchIcon, SearchIcon } from "lucide-react"
+import { FileTextIcon, GitBranchIcon, SearchIcon } from "lucide-react";
 
-import { Marker, MarkerContent, MarkerIcon } from "@/styles/base-rhea/ui/marker"
+import {
+  Marker,
+  MarkerContent,
+  MarkerIcon,
+} from "@/styles/base-default/ui/marker";
 
 export function MarkerBorderDemo() {
   return (
@@ -24,5 +28,5 @@ export function MarkerBorderDemo() {
         <MarkerContent>Opened implementation notes</MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

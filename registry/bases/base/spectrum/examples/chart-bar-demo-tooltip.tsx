@@ -7,7 +7,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/spectrum/ui/chart";
+} from "@/registry/bases/base/spectrum/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

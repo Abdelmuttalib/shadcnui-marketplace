@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
-import { useIsMobile } from "@/hooks/use-mobile"
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Badge } from "@/styles/base-nova/ui-rtl/badge"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
+  useTranslation,
+} from "@/components/language-selector";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Badge } from "@/styles/base-default/ui/badge";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -19,18 +19,18 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/styles/base-nova/ui-rtl/drawer"
+} from "@/styles/base-default/ui/drawer";
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/styles/base-nova/ui-rtl/field"
+} from "@/styles/base-default/ui/field";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/styles/base-nova/ui-rtl/radio-group"
+} from "@/styles/base-default/ui/radio-group";
 
 const translations = {
   en: {
@@ -102,16 +102,16 @@ const translations = {
       slot630Description: "המשבצת האחרונה לפני סגירת המטבח",
     },
   },
-} satisfies Translations
+} satisfies Translations;
 
-type TranslationKey = keyof typeof translations.en.values
+type TranslationKey = keyof typeof translations.en.values;
 
 const deliveryTimes: Array<{
-  value: string
-  id: string
-  labelKey: TranslationKey
-  descriptionKey: TranslationKey
-  badgeKey?: TranslationKey
+  value: string;
+  id: string;
+  labelKey: TranslationKey;
+  descriptionKey: TranslationKey;
+  badgeKey?: TranslationKey;
 }> = [
   {
     value: "asap",
@@ -144,25 +144,25 @@ const deliveryTimes: Array<{
     labelKey: "slot630Label",
     descriptionKey: "slot630Description",
   },
-]
+];
 
 export function DrawerRtl() {
-  const { dir, language, t } = useTranslation(translations, "ar")
-  const [open, setOpen] = React.useState(false)
-  const [deliveryTime, setDeliveryTime] = React.useState("asap")
-  const isMobile = useIsMobile()
+  const { dir, language, t } = useTranslation(translations, "ar");
+  const [open, setOpen] = React.useState(false);
+  const [deliveryTime, setDeliveryTime] = React.useState("asap");
+  const isMobile = useIsMobile();
 
   function handleConfirm() {
-    const selected = deliveryTimes.find((time) => time.value === deliveryTime)
+    const selected = deliveryTimes.find((time) => time.value === deliveryTime);
 
     if (!selected) {
-      return
+      return;
     }
 
-    setOpen(false)
+    setOpen(false);
     toast(t.toastTitle, {
       description: t[selected.labelKey],
-    })
+    });
   }
 
   return (
@@ -180,7 +180,7 @@ export function DrawerRtl() {
           <DrawerTitle>{t.title}</DrawerTitle>
           <DrawerDescription>{t.description}</DrawerDescription>
         </DrawerHeader>
-        <div className="flex-1 scroll-fade overflow-y-auto p-4">
+        <div className="scroll-fade flex-1 overflow-y-auto p-4">
           <RadioGroup
             value={deliveryTime}
             onValueChange={setDeliveryTime}
@@ -217,5 +217,5 @@ export function DrawerRtl() {
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }

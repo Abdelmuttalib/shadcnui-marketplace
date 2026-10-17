@@ -1,5 +1,5 @@
-import { Button } from "@/registry/neon/ui/button";
-import { Textarea } from "@/registry/neon/ui/textarea";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

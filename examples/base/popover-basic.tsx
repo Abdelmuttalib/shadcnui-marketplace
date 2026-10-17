@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Popover,
   PopoverContent,
@@ -6,7 +6,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function PopoverBasic() {
   return (
@@ -25,5 +25,5 @@ export function PopoverBasic() {
         </PopoverContent>
       </Popover>
     </>
-  )
+  );
 }

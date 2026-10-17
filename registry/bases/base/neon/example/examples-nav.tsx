@@ -5,7 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { ScrollArea, ScrollBar } from "@/registry/neon/ui/scroll-area";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/neon/ui/scroll-area";
 
 const DEFAULT_EXAMPLES_PATH = "/example";
 
@@ -69,10 +72,10 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
               href={example.href}
               key={example.href}
               className={cn(
-                "flex h-7 items-center justify-center rounded-neon-md px-4 text-center text-sm transition-colors hover:bg-neon-accent/80 hover:text-neon-ring",
+                "rounded-neon-md hover:bg-neon-accent/80 hover:text-neon-ring flex h-7 items-center justify-center px-4 text-center text-sm transition-colors",
                 pathname?.startsWith(example.href) ||
                   (index === 0 && pathname === "/")
-                  ? "bg-neon-accent font-medium text-ring"
+                  ? "bg-neon-accent text-ring font-medium"
                   : "text-neon-muted-foreground"
               )}
             >

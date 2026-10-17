@@ -1,11 +1,11 @@
-import { CopyIcon, FileCodeIcon } from "lucide-react"
+import { CopyIcon, FileCodeIcon } from "lucide-react";
 
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
+} from "@/styles/base-default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
@@ -13,7 +13,7 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 export function InputGroupBlockStart() {
   return (
@@ -53,5 +53,5 @@ export function InputGroupBlockStart() {
         </FieldDescription>
       </Field>
     </FieldGroup>
-  )
+  );
 }

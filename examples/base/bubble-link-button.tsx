@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { toast } from "sonner"
+import { toast } from "sonner";
 
 import {
   Bubble,
   BubbleContent,
   BubbleGroup,
-} from "@/styles/base-rhea/ui/bubble"
+} from "@/styles/base-default/ui/bubble";
 
 export function BubbleLinkButtonDemo() {
   return (
@@ -50,5 +50,5 @@ export function BubbleLinkButtonDemo() {
         </Bubble>
       </BubbleGroup>
     </div>
-  )
+  );
 }

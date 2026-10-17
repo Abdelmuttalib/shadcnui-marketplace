@@ -1,4 +1,4 @@
-import { CopyIcon, FileSearchIcon, XIcon } from "lucide-react"
+import { CopyIcon, FileSearchIcon, XIcon } from "lucide-react";
 
 import {
   Attachment,
@@ -9,7 +9,7 @@ import {
   AttachmentMedia,
   AttachmentTitle,
   AttachmentTrigger,
-} from "@/styles/base-rhea/ui/attachment"
+} from "@/styles/base-default/ui/attachment";
 import {
   Dialog,
   DialogContent,
@@ -17,7 +17,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-rhea/ui/dialog"
+} from "@/styles/base-default/ui/dialog";
 
 export function AttachmentTriggerDemo() {
   return (
@@ -56,5 +56,5 @@ export function AttachmentTriggerDemo() {
         </DialogContent>
       </Dialog>
     </div>
-  )
+  );
 }

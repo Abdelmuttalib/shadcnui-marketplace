@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -7,7 +7,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/styles/base-rhea/ui/drawer"
+} from "@/styles/base-default/ui/drawer";
 
 export function DrawerNonModal() {
   return (
@@ -20,12 +20,12 @@ export function DrawerNonModal() {
           <DrawerTitle>Non Modal Drawer</DrawerTitle>
         </DrawerHeader>
         <div className="flex-1 p-4">
-          <div className="rounded-2xl bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+          <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full rounded-2xl group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
         </div>
         <DrawerFooter>
           <DrawerClose render={<Button />}>Close</DrawerClose>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }

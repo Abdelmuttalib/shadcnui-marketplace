@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { TerminalIcon } from "lucide-react"
+import { TerminalIcon } from "lucide-react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
+  useTranslation,
+} from "@/components/language-selector";
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -15,7 +15,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-nova/ui-rtl/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const translations: Translations = {
   en: {
@@ -39,14 +39,14 @@ const translations: Translations = {
       title: "מסוף",
     },
   },
-}
+};
 
 const code = `pnpm add ai @ai-sdk/react zod
-pnpm dev`
+pnpm dev`;
 
 export function CodeBlockRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
-  const lines = useHighlightedCode(code, "bash")
+  const { dir, t } = useTranslation(translations, "ar");
+  const lines = useHighlightedCode(code, "bash");
 
   return (
     <div className="flex w-full max-w-md flex-col gap-3 text-sm" dir={dir}>
@@ -68,5 +68,5 @@ export function CodeBlockRtl() {
         </CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

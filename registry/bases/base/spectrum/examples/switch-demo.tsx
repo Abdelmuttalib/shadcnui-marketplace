@@ -1,5 +1,5 @@
-import { Label } from "@/registry/spectrum/ui/label";
-import { Switch } from "@/registry/spectrum/ui/switch";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
+import { Switch } from "@/registry/bases/base/spectrum/ui/switch";
 
 export default function SwitchDemo() {
   return (

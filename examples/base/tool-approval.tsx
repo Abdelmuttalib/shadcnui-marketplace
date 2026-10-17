@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
+import { useChat } from "@ai-sdk/react";
 import {
   lastAssistantMessageIsCompleteWithApprovalResponses,
   type UIDataTypes,
   type UIMessage,
-} from "ai"
-import { CircleCheckIcon, LoaderCircleIcon, TerminalIcon } from "lucide-react"
+} from "ai";
+import { CircleCheckIcon, LoaderCircleIcon, TerminalIcon } from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Item,
   ItemActions,
@@ -19,8 +19,8 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-rhea/ui/item"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/item";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -29,18 +29,18 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     runCommand: {
-      input: { command: string }
-      output: { stdout: string }
-    }
+      input: { command: string };
+      output: { stdout: string };
+    };
   }
->
+>;
 
 const chat = createChat<ChatMessage>()
   .user("Clean up the build folder.")
@@ -48,25 +48,25 @@ const chat = createChat<ChatMessage>()
   .assistant(({ writer }) => {
     writer.reasoning(
       "The build output lives in dist. Deleting it cannot be undone, so I should ask before I run the command."
-    )
-    writer.sleep(400)
+    );
+    writer.sleep(400);
     writer.tool("runCommand", {
       input: { command: "rm -rf dist" },
       needsApproval: true,
       output: { stdout: "" },
-    })
+    });
   })
   .assistant(({ writer, toolCall }) => {
-    writer.sleep(600)
+    writer.sleep(600);
     writer.text(
       toolCall?.approved
         ? "Removed the dist folder."
         : "Okay, I left the dist folder in place."
-    )
-  })
+    );
+  });
 
-const initialMessages = chat.get(0)
-const transport = chat.transport({ delayMs: 20 })
+const initialMessages = chat.get(0);
+const transport = chat.transport({ delayMs: 20 });
 
 export function ToolApproval() {
   const {
@@ -79,12 +79,12 @@ export function ToolApproval() {
     messages: initialMessages,
     transport,
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithApprovalResponses,
-  })
-  const nextMessage = chat.next(messages)
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -95,7 +95,7 @@ export function ToolApproval() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
         return (
@@ -103,7 +103,7 @@ export function ToolApproval() {
             <MessageContent className="gap-4">
               {message.parts.map((part, index) => {
                 if (part.type === "text") {
-                  return <p key={index}>{part.text}</p>
+                  return <p key={index}>{part.text}</p>;
                 }
 
                 if (part.type === "reasoning") {
@@ -114,11 +114,11 @@ export function ToolApproval() {
                         running={part.state === "streaming"}
                       />
                     </Trace>
-                  )
+                  );
                 }
 
                 if (part.type !== "tool-runCommand") {
-                  return null
+                  return null;
                 }
 
                 // A pending approval is a prompt, not activity, so it sits outside Trace.
@@ -160,13 +160,13 @@ export function ToolApproval() {
                         </Button>
                       </ItemActions>
                     </Item>
-                  )
+                  );
                 }
 
                 const denied =
                   part.state === "output-denied" ||
                   (part.state === "approval-responded" &&
-                    !part.approval.approved)
+                    !part.approval.approved);
 
                 return (
                   <Trace key={part.toolCallId}>
@@ -184,17 +184,17 @@ export function ToolApproval() {
                         {denied
                           ? "Denied"
                           : part.state === "output-available"
-                            ? "Ran"
-                            : "Running"}{" "}
+                          ? "Ran"
+                          : "Running"}{" "}
                         {part.input?.command}
                       </TraceTitle>
                     </TraceLine>
                   </Trace>
-                )
+                );
               })}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -211,11 +211,11 @@ export function ToolApproval() {
         </Button>
       )}
     </div>
-  )
+  );
 }
 
 function ReasoningLine({ text, running }: { text: string; running: boolean }) {
-  const [open, setOpen] = React.useState<boolean>()
+  const [open, setOpen] = React.useState<boolean>();
 
   return (
     <TraceCollapsible open={open ?? running} onOpenChange={setOpen}>
@@ -235,5 +235,5 @@ function ReasoningLine({ text, running }: { text: string; running: boolean }) {
         {text}
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }

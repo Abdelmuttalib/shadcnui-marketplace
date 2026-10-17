@@ -1,21 +1,24 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIDataTypes, UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIDataTypes, UIMessage } from "ai";
 import {
   ArrowUpRightIcon,
   CircleAlertIcon,
   CircleCheckIcon,
   GlobeIcon,
   LoaderCircleIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -24,20 +27,20 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     runCommand: {
-      input: { command: string }
-      output: { stdout: string }
-    }
+      input: { command: string };
+      output: { stdout: string };
+    };
   }
->
+>;
 
-type Part = ChatMessage["parts"][number]
+type Part = ChatMessage["parts"][number];
 
 const chat = createChat<ChatMessage>()
   .user("Why does pnpm install fail in CI?")
@@ -45,11 +48,11 @@ const chat = createChat<ChatMessage>()
     writer.reasoning(
       "CI installs with a frozen lockfile, so the install stops when package.json and pnpm-lock.yaml disagree. I should check what the last commit changed, then reproduce the install.",
       { delayMs: 40 }
-    )
+    );
     writer
       .tool("runCommand", { input: { command: "pnpm --version" } })
       .sleep(700)
-      .output({ stdout: "10.18.0" })
+      .output({ stdout: "10.18.0" });
     writer
       .tool("runCommand", {
         input: {
@@ -60,7 +63,7 @@ const chat = createChat<ChatMessage>()
       .output({
         stdout:
           " package.json | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
-      })
+      });
     writer
       .tool("runCommand", {
         input: { command: "pnpm install --frozen-lockfile" },
@@ -68,27 +71,27 @@ const chat = createChat<ChatMessage>()
       .sleep(1200)
       .error(
         'ERR_PNPM_OUTDATED_LOCKFILE  Cannot install with "frozen-lockfile" because pnpm-lock.yaml is not up to date with package.json'
-      )
+      );
     writer.sourceUrl({
       url: "https://pnpm.io/cli/install#--frozen-lockfile",
       title: "pnpm install | pnpm.io",
-    })
+    });
     writer.sourceUrl({
       url: "https://pnpm.io/continuous-integration",
       title: "Continuous Integration | pnpm.io",
-    })
-    writer.sleep(1000)
+    });
+    writer.sleep(1000);
     writer.text(
       "The last commit bumped a version in package.json without updating pnpm-lock.yaml, so the frozen install fails. Run pnpm install locally and commit the lockfile."
-    )
-  })
+    );
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function ThinkingRow({ text, running }: { text: string; running: boolean }) {
-  const [open, setOpen] = React.useState<boolean>()
+  const [open, setOpen] = React.useState<boolean>();
 
   const line = (
     <TraceLine status={running ? "running" : undefined}>
@@ -101,10 +104,10 @@ function ThinkingRow({ text, running }: { text: string; running: boolean }) {
       </TraceIcon>
       <TraceTitle>{running ? "Thinking" : "Thought for 5s"}</TraceTitle>
     </TraceLine>
-  )
+  );
 
   if (text.length === 0) {
-    return line
+    return line;
   }
 
   return (
@@ -114,7 +117,7 @@ function ThinkingRow({ text, running }: { text: string; running: boolean }) {
         {text}
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 function ToolRow({
@@ -122,14 +125,14 @@ function ToolRow({
   streaming,
   defaultOpen,
 }: {
-  part: Extract<Part, { type: "tool-runCommand" }>
-  streaming: boolean
-  defaultOpen?: boolean
+  part: Extract<Part, { type: "tool-runCommand" }>;
+  streaming: boolean;
+  defaultOpen?: boolean;
 }) {
-  const command = part.input?.command
+  const command = part.input?.command;
 
   if (part.state === "output-available" || part.state === "output-error") {
-    const failed = part.state === "output-error"
+    const failed = part.state === "output-error";
 
     return (
       <TraceCollapsible defaultOpen={defaultOpen}>
@@ -159,7 +162,7 @@ function ToolRow({
           )}
         </TraceCollapsibleContent>
       </TraceCollapsible>
-    )
+    );
   }
 
   return (
@@ -175,15 +178,15 @@ function ToolRow({
         {streaming ? "Running" : "Failed to run"} {command}
       </TraceTitle>
     </TraceLine>
-  )
+  );
 }
 
 function SourcesRow({
   sources,
   running,
 }: {
-  sources: Extract<Part, { type: "source-url" }>[]
-  running: boolean
+  sources: Extract<Part, { type: "source-url" }>[];
+  running: boolean;
 }) {
   return (
     <TraceCollapsible>
@@ -227,18 +230,18 @@ function SourcesRow({
         </Trace>
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function TraceDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -249,17 +252,17 @@ export function TraceDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
         const rows = message.parts.filter(
           (part) => part.type === "reasoning" || part.type === "tool-runCommand"
-        )
+        );
         const sources = message.parts.filter(
           (part) => part.type === "source-url"
-        )
-        const text = getMessageText(message)
+        );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -293,7 +296,7 @@ export function TraceDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -301,13 +304,13 @@ export function TraceDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

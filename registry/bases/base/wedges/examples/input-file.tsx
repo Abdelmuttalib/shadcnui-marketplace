@@ -1,5 +1,5 @@
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 
 export default function InputFile() {
   return (

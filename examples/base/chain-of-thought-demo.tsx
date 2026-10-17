@@ -1,22 +1,25 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIDataTypes, UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIDataTypes, UIMessage } from "ai";
 import {
   ArrowUpRightIcon,
   CircleAlertIcon,
   CircleCheckIcon,
   GlobeIcon,
   LoaderCircleIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Badge } from "@/styles/base-rhea/ui/badge"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Badge } from "@/styles/base-default/ui/badge";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -25,31 +28,31 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     searchWeb: {
-      input: { query: string }
-      output: { results: { title: string; url: string }[] }
-    }
+      input: { query: string };
+      output: { results: { title: string; url: string }[] };
+    };
     readBuildLog: {
-      input: { deployment: string }
-      output: { log: string }
-    }
+      input: { deployment: string };
+      output: { log: string };
+    };
     searchCode: {
-      input: { query: string }
-      output: { files: string[] }
-    }
+      input: { query: string };
+      output: { files: string[] };
+    };
   }
->
+>;
 
 type StepPart = Extract<
   ChatMessage["parts"][number],
   { type: "tool-searchWeb" | "tool-readBuildLog" | "tool-searchCode" }
->
+>;
 
 const chat = createChat<ChatMessage>()
   .user("Why is the checkout deploy so slow?")
@@ -59,7 +62,7 @@ const chat = createChat<ChatMessage>()
       .sleep(900)
       .output({
         log: "install    41s\ncompile    38s\nimages   3m 52s",
-      })
+      });
     writer
       .tool("searchWeb", { input: { query: "next.js image cache key" } })
       .sleep(900)
@@ -74,26 +77,26 @@ const chat = createChat<ChatMessage>()
             url: "https://vercel.com/docs/deployments/troubleshoot-a-build",
           },
         ],
-      })
+      });
     writer
       .tool("searchCode", { input: { query: "cacheKey" } })
       .sleep(900)
-      .output({ files: ["next.config.ts", "scripts/optimize-images.ts"] })
+      .output({ files: ["next.config.ts", "scripts/optimize-images.ts"] });
     writer.text(
       "Image optimization takes almost four minutes because its cache key includes the commit hash. Key it on the image directory instead."
-    )
-  })
+    );
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function StatusIcon({ status }: { status?: "running" | "error" }) {
   if (status === "running") {
-    return <LoaderCircleIcon className="animate-spin" />
+    return <LoaderCircleIcon className="animate-spin" />;
   }
 
-  return status === "error" ? <CircleAlertIcon /> : <CircleCheckIcon />
+  return status === "error" ? <CircleAlertIcon /> : <CircleCheckIcon />;
 }
 
 function Step({
@@ -102,10 +105,10 @@ function Step({
   defaultOpen,
   children,
 }: {
-  title: string
-  status?: "running" | "error"
-  defaultOpen?: boolean
-  children?: React.ReactNode
+  title: string;
+  status?: "running" | "error";
+  defaultOpen?: boolean;
+  children?: React.ReactNode;
 }) {
   const line = (
     <TraceLine status={status}>
@@ -114,10 +117,10 @@ function Step({
       </TraceIcon>
       <TraceTitle>{title}</TraceTitle>
     </TraceLine>
-  )
+  );
 
   if (!children) {
-    return line
+    return line;
   }
 
   return (
@@ -125,7 +128,7 @@ function Step({
       <TraceCollapsibleTrigger>{line}</TraceCollapsibleTrigger>
       <TraceCollapsibleContent>{children}</TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 function StepRow({ part, streaming }: { part: StepPart; streaming: boolean }) {
@@ -133,23 +136,27 @@ function StepRow({ part, streaming }: { part: StepPart; streaming: boolean }) {
     part.state === "output-available"
       ? undefined
       : part.state === "output-error" || !streaming
-        ? "error"
-        : "running"
+      ? "error"
+      : "running";
   const verb = (running: string, done: string, failed: string) =>
-    status === "running" ? running : status === "error" ? failed : done
+    status === "running" ? running : status === "error" ? failed : done;
   const error = part.state === "output-error" && (
     <CodeBlock size="sm" variant="destructive">
       <CodeBlockContent wrap className="max-h-64">
         {part.errorText}
       </CodeBlockContent>
     </CodeBlock>
-  )
+  );
 
   if (part.type === "tool-searchWeb") {
     return (
       <Step
         status={status}
-        title={`${verb("Searching", "Searched", "Failed to search")} the web for ${part.input?.query}`}
+        title={`${verb(
+          "Searching",
+          "Searched",
+          "Failed to search"
+        )} the web for ${part.input?.query}`}
       >
         {error ||
           (part.state === "output-available" && (
@@ -178,7 +185,7 @@ function StepRow({ part, streaming }: { part: StepPart; streaming: boolean }) {
             </Trace>
           ))}
       </Step>
-    )
+    );
   }
 
   if (part.type === "tool-readBuildLog") {
@@ -186,7 +193,11 @@ function StepRow({ part, streaming }: { part: StepPart; streaming: boolean }) {
       <Step
         status={status}
         defaultOpen
-        title={`${verb("Reading", "Read", "Failed to read")} the build log for ${part.input?.deployment}`}
+        title={`${verb(
+          "Reading",
+          "Read",
+          "Failed to read"
+        )} the build log for ${part.input?.deployment}`}
       >
         {error ||
           (part.state === "output-available" && (
@@ -197,13 +208,17 @@ function StepRow({ part, streaming }: { part: StepPart; streaming: boolean }) {
             </CodeBlock>
           ))}
       </Step>
-    )
+    );
   }
 
   return (
     <Step
       status={status}
-      title={`${verb("Searching", "Searched", "Failed to search")} the code for ${part.input?.query}`}
+      title={`${verb(
+        "Searching",
+        "Searched",
+        "Failed to search"
+      )} the code for ${part.input?.query}`}
     >
       {error ||
         (part.state === "output-available" && (
@@ -216,7 +231,7 @@ function StepRow({ part, streaming }: { part: StepPart; streaming: boolean }) {
           </div>
         ))}
     </Step>
-  )
+  );
 }
 
 function ChainOfThought({
@@ -224,14 +239,14 @@ function ChainOfThought({
   streaming,
   answering,
 }: {
-  steps: StepPart[]
-  streaming: boolean
-  answering: boolean
+  steps: StepPart[];
+  streaming: boolean;
+  answering: boolean;
 }) {
-  const [open, setOpen] = React.useState<boolean>()
-  const running = streaming && !answering
-  const failed = steps.filter((part) => part.state === "output-error").length
-  const status = running ? "running" : failed > 0 ? "error" : undefined
+  const [open, setOpen] = React.useState<boolean>();
+  const running = streaming && !answering;
+  const failed = steps.filter((part) => part.state === "output-error").length;
+  const status = running ? "running" : failed > 0 ? "error" : undefined;
 
   return (
     <Trace>
@@ -244,7 +259,9 @@ function ChainOfThought({
             <TraceTitle>
               {running
                 ? "Researching"
-                : `Researched in ${steps.length} steps${failed > 0 ? `, ${failed} failed` : ""}`}
+                : `Researched in ${steps.length} steps${
+                    failed > 0 ? `, ${failed} failed` : ""
+                  }`}
             </TraceTitle>
           </TraceLine>
         </TraceCollapsibleTrigger>
@@ -261,18 +278,18 @@ function ChainOfThought({
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }
 
 export function ChainOfThoughtDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -283,17 +300,17 @@ export function ChainOfThoughtDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
         const steps = message.parts.filter(
           (part) =>
             part.type === "tool-searchWeb" ||
             part.type === "tool-readBuildLog" ||
             part.type === "tool-searchCode"
-        )
-        const text = getMessageText(message)
+        );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -308,7 +325,7 @@ export function ChainOfThoughtDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -316,13 +333,13 @@ export function ChainOfThoughtDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

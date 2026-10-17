@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/spectrum/ui/table";
+} from "@/registry/bases/base/spectrum/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-spctm-md border border-spctm-border">
+    <div className="rounded-spctm-md border-spctm-border border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

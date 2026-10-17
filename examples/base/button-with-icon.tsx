@@ -1,6 +1,6 @@
-import { IconGitBranch, IconGitFork } from "@tabler/icons-react"
+import { IconGitBranch, IconGitFork } from "@tabler/icons-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 
 export default function ButtonWithIcon() {
   return (
@@ -13,5 +13,5 @@ export default function ButtonWithIcon() {
         <IconGitFork data-icon="inline-end" />
       </Button>
     </div>
-  )
+  );
 }

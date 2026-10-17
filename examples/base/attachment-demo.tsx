@@ -1,4 +1,4 @@
-import { FileCodeIcon, XIcon } from "lucide-react"
+import { FileCodeIcon, XIcon } from "lucide-react";
 
 import {
   Attachment,
@@ -9,8 +9,8 @@ import {
   AttachmentGroup,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-rhea/ui/attachment"
-import { Spinner } from "@/styles/base-rhea/ui/spinner"
+} from "@/styles/base-default/ui/attachment";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 const images = [
   {
@@ -31,7 +31,7 @@ const images = [
     src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&auto=format&fit=crop&q=80",
     alt: "Office",
   },
-]
+];
 
 export function AttachmentDemo() {
   return (
@@ -78,5 +78,5 @@ export function AttachmentDemo() {
         </AttachmentActions>
       </Attachment>
     </div>
-  )
+  );
 }

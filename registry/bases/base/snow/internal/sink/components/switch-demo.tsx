@@ -1,5 +1,5 @@
-import { Label } from "@/registry/snow/ui/label";
-import { Switch } from "@/registry/snow/ui/switch";
+import { Label } from "@/registry/bases/base/snow/ui/label";
+import { Switch } from "@/registry/bases/base/snow/ui/switch";
 
 export function SwitchDemo() {
   return (

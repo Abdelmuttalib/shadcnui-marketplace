@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -8,7 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-nova/ui/dialog"
+} from "@/styles/base-default/ui/dialog";
 
 export function DialogNoCloseButton() {
   return (
@@ -26,5 +26,5 @@ export function DialogNoCloseButton() {
         </DialogHeader>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

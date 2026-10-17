@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   CheckIcon,
   CopyIcon,
@@ -8,21 +7,22 @@ import {
   RefreshCcwIcon,
   ThumbsDownIcon,
   ThumbsUpIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { Markdown } from "@/components/markdown"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Markdown } from "@/components/markdown";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Message,
   MessageContent,
   MessageFooter,
-} from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/message";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-rhea/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 const reply = `Install Dialog, then open it from the gear button in \`site-header.tsx\`.
 
@@ -30,22 +30,22 @@ const reply = `Install Dialog, then open it from the gear button in \`site-heade
 npx shadcn@latest add dialog
 \`\`\`
 
-Wrap the button in a \`DialogTrigger\` and put the settings form in \`DialogContent\`. Focus moves into the dialog when it opens, and **Esc** closes it.`
+Wrap the button in a \`DialogTrigger\` and put the settings form in \`DialogContent\`. Focus moves into the dialog when it opens, and **Esc** closes it.`;
 
 export function MessagePattern() {
-  const [copied, setCopied] = React.useState(false)
+  const [copied, setCopied] = React.useState(false);
   const [feedback, setFeedback] = React.useState<"like" | "dislike" | null>(
     null
-  )
+  );
 
   React.useEffect(() => {
     if (!copied) {
-      return
+      return;
     }
 
-    const timeout = setTimeout(() => setCopied(false), 2000)
-    return () => clearTimeout(timeout)
-  }, [copied])
+    const timeout = setTimeout(() => setCopied(false), 2000);
+    return () => clearTimeout(timeout);
+  }, [copied]);
 
   return (
     <div className="mx-auto flex w-full max-w-md flex-col gap-8 py-6 text-sm">
@@ -74,8 +74,8 @@ export function MessagePattern() {
             <MessageAction
               label={copied ? "Copied" : "Copy"}
               onClick={() => {
-                navigator.clipboard.writeText(reply)
-                setCopied(true)
+                navigator.clipboard.writeText(reply);
+                setCopied(true);
               }}
             >
               {copied ? <CheckIcon /> : <CopyIcon />}
@@ -107,7 +107,7 @@ export function MessagePattern() {
         </MessageContent>
       </Message>
     </div>
-  )
+  );
 }
 
 function MessageAction({
@@ -133,5 +133,5 @@ function MessageAction({
         <p>{label}</p>
       </TooltipContent>
     </Tooltip>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Building2Icon, CreditCardIcon, WalletIcon } from "lucide-react"
+import { Building2Icon, CreditCardIcon, WalletIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,10 +12,10 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 export function DropdownMenuRadioIcons() {
-  const [paymentMethod, setPaymentMethod] = React.useState("card")
+  const [paymentMethod, setPaymentMethod] = React.useState("card");
 
   return (
     <DropdownMenu>
@@ -45,5 +45,5 @@ export function DropdownMenuRadioIcons() {
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

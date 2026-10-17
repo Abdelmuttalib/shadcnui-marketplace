@@ -1,23 +1,27 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/moon/ui/avatar";
-import { Button } from "@/registry/moon/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/moon/ui/avatar";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
-import { Input } from "@/registry/moon/ui/input";
+} from "@/registry/bases/base/moon/ui/card";
+import { Input } from "@/registry/bases/base/moon/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
-import { Separator } from "@/registry/moon/ui/separator";
+} from "@/registry/bases/base/moon/ui/select";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 export function DemoShareDocument() {
   return (
@@ -49,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-moon-muted-foreground">
+                  <p className="text-moon-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -74,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-moon-muted-foreground">
+                  <p className="text-moon-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -99,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-moon-muted-foreground">
+                  <p className="text-moon-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

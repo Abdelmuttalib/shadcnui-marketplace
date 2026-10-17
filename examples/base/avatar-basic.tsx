@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-nova/ui/avatar"
+} from "@/styles/base-default/ui/avatar";
 
 export default function AvatarDemo() {
   return (
@@ -14,5 +14,5 @@ export default function AvatarDemo() {
       />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
-  )
+  );
 }

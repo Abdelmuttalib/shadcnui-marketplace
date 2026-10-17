@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
-import { Label } from "@/registry/wedges/ui/label";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 
 export function LabelDemo() {
   return (

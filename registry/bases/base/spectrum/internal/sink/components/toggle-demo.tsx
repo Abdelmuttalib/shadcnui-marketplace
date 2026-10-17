@@ -1,6 +1,6 @@
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/spectrum/ui/toggle";
+import { Toggle } from "@/registry/bases/base/spectrum/ui/toggle";
 
 export function ToggleDemo() {
   return (

@@ -2,7 +2,7 @@ import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockLine,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const code = `export default {
   experimental: {
@@ -12,9 +12,9 @@ const code = `export default {
   images: {
     remotePatterns: [{ hostname: "avatars.githubusercontent.com" }],
   },
-}`
+}`;
 
-const highlighted = [2, 3]
+const highlighted = [2, 3];
 
 export function CodeBlockHighlightedLines() {
   return (
@@ -32,5 +32,5 @@ export function CodeBlockHighlightedLines() {
         </CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

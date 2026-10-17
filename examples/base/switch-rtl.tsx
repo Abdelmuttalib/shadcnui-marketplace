@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui-rtl/field"
-import { Switch } from "@/styles/base-nova/ui-rtl/switch"
+} from "@/styles/base-default/ui/field";
+import { Switch } from "@/styles/base-default/ui/switch";
 
 const translations: Translations = {
   en: {
@@ -38,10 +38,10 @@ const translations: Translations = {
       description: "המיקוד משותף בין מכשירים, וכבה כשאתה עוזב את האפליקציה.",
     },
   },
-}
+};
 
 export function SwitchRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <Field orientation="horizontal" className="max-w-sm" dir={dir}>
@@ -53,5 +53,5 @@ export function SwitchRtl() {
       </FieldContent>
       <Switch id="switch-focus-mode-rtl" dir={dir} />
     </Field>
-  )
+  );
 }

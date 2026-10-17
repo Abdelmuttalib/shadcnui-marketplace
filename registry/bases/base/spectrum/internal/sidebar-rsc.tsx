@@ -12,7 +12,7 @@ import {
   SidebarMenuItem,
   SidebarMenuSkeleton,
   SidebarProvider,
-} from "@/registry/spectrum/ui/sidebar";
+} from "@/registry/bases/base/spectrum/ui/sidebar";
 
 const projects = [
   {

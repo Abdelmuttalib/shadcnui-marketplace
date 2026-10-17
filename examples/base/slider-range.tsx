@@ -1,4 +1,4 @@
-import { Slider } from "@/styles/base-nova/ui/slider"
+import { Slider } from "@/styles/base-default/ui/slider";
 
 export function SliderRange() {
   return (
@@ -8,5 +8,5 @@ export function SliderRange() {
       step={5}
       className="mx-auto w-full max-w-xs"
     />
-  )
+  );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
@@ -9,17 +9,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/neon/ui/radio-group";
+} from "@/registry/bases/base/neon/ui/card";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/neon/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/neon/ui/select";
+} from "@/registry/bases/base/neon/ui/select";
 
 export function CardsPaymentMethod() {
   return (
@@ -41,7 +44,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              className="border-muted hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 bg-transparent p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +72,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              className="border-muted hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 bg-transparent p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -85,7 +88,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              className="border-muted hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 bg-transparent p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

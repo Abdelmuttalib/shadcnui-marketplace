@@ -2,15 +2,18 @@ import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Button } from "@/registry/neon/ui/button";
-import { ScrollArea, ScrollBar } from "@/registry/neon/ui/scroll-area";
-import { Separator } from "@/registry/neon/ui/separator";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/neon/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/neon/ui/tabs";
+} from "@/registry/bases/base/neon/ui/tabs";
 
 import { AlbumArtwork } from "./components/album-artwork";
 import { Menu } from "./components/menu";
@@ -27,13 +30,13 @@ const metadata: Metadata = {
 export function MusicPage() {
   return (
     <>
-      <div className="block bg-neon-background">
+      <div className="bg-neon-background block">
         <Menu />
-        <div className="border-t border-t-neon-border">
+        <div className="border-t-neon-border border-t">
           <div className="bg-neon-background">
             <div className="grid grid-cols-3 lg:grid-cols-5">
               <Sidebar playlists={playlists} className="hidden lg:block" />
-              <div className="col-span-3 lg:col-span-4 lg:border-l lg:border-l-neon-border">
+              <div className="lg:border-l-neon-border col-span-3 lg:col-span-4 lg:border-l">
                 <div className="h-full px-4 py-6 lg:px-8">
                   <Tabs defaultValue="music" className="h-full space-y-6">
                     <div className="space-between flex items-center">
@@ -62,7 +65,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             Listen Now
                           </h2>
-                          <p className="text-sm text-neon-muted-foreground">
+                          <p className="text-neon-muted-foreground text-sm">
                             Top picks for you. Updated daily.
                           </p>
                         </div>
@@ -89,7 +92,7 @@ export function MusicPage() {
                         <h2 className="text-2xl font-semibold tracking-tight">
                           Made for You
                         </h2>
-                        <p className="text-sm text-neon-muted-foreground">
+                        <p className="text-neon-muted-foreground text-sm">
                           Your personal playlists. Updated daily.
                         </p>
                       </div>
@@ -121,7 +124,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             New Episodes
                           </h2>
-                          <p className="text-sm text-neon-muted-foreground">
+                          <p className="text-neon-muted-foreground text-sm">
                             Your favorite podcasts. Updated daily.
                           </p>
                         </div>

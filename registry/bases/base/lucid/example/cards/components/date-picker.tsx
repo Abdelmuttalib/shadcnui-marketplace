@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/registry/bases/base/lucid/ui/card";
 import { Label } from "@/registry/bases/base/lucid/ui/label";
-import DatePickerWithRange from "@/registry/lucid/components/date-picker-with-range";
+import DatePickerWithRange from "@/registry/bases/base/lucid/components/date-picker-with-range";
 
 export function DemoDatePicker() {
   return (

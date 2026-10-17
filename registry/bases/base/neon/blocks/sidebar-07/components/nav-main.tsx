@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/neon/ui/collapsible";
+} from "@/registry/bases/base/neon/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/neon/ui/sidebar";
+} from "@/registry/bases/base/neon/ui/sidebar";
 
 export function NavMain({
   items,

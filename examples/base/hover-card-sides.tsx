@@ -1,11 +1,11 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-nova/ui/hover-card"
+} from "@/styles/base-default/ui/hover-card";
 
-const HOVER_CARD_SIDES = ["left", "top", "bottom", "right"] as const
+const HOVER_CARD_SIDES = ["left", "top", "bottom", "right"] as const;
 
 export function HoverCardSides() {
   return (
@@ -28,5 +28,5 @@ export function HoverCardSides() {
         </HoverCard>
       ))}
     </div>
-  )
+  );
 }

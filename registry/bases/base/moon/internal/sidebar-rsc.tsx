@@ -12,7 +12,7 @@ import {
   SidebarMenuItem,
   SidebarMenuSkeleton,
   SidebarProvider,
-} from "@/registry/moon/ui/sidebar";
+} from "@/registry/bases/base/moon/ui/sidebar";
 
 const projects = [
   {

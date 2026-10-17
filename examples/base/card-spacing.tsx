@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -11,13 +11,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-nova/ui/card"
-import { Input } from "@/styles/base-nova/ui/input"
-import { Label } from "@/styles/base-nova/ui/label"
+} from "@/styles/base-default/ui/card";
+import { Input } from "@/styles/base-default/ui/input";
+import { Label } from "@/styles/base-default/ui/label";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-nova/ui/toggle-group"
+} from "@/styles/base-default/ui/toggle-group";
 
 const spacingOptions = [
   {
@@ -40,13 +40,13 @@ const spacingOptions = [
     label: "32px",
     value: "8",
   },
-]
+];
 
 export function CardSpacing() {
-  const [spacing, setSpacing] = React.useState("4")
+  const [spacing, setSpacing] = React.useState("4");
   const selectedSpacing = spacingOptions.find(
     (option) => option.value === spacing
-  )
+  );
 
   return (
     <div className="mx-auto grid w-full max-w-sm gap-4">
@@ -54,7 +54,7 @@ export function CardSpacing() {
         value={[spacing]}
         onValueChange={(value) => {
           if (value[0]) {
-            setSpacing(value[0])
+            setSpacing(value[0]);
           }
         }}
         variant="outline"
@@ -114,5 +114,5 @@ export function CardSpacing() {
         </CardFooter>
       </Card>
     </div>
-  )
+  );
 }

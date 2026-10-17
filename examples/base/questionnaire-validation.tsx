@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
-import { z } from "zod"
+import * as React from "react";
+import { toast } from "sonner";
+import { z } from "zod";
 
 import {
   Card,
@@ -10,7 +10,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/styles/base-nova/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -24,12 +24,12 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "detail", required: true },
   { name: "audience", required: true },
-] as const
+] as const;
 
 const questionnaireSchema = z
   .object({
@@ -43,12 +43,12 @@ const questionnaireSchema = z
         message:
           "Public answers need enough context. Choose a complete answer.",
         path: ["detail"],
-      })
+      });
     }
-  })
+  });
 
-type QuestionnaireItemName = keyof z.infer<typeof questionnaireSchema>
-type QuestionnaireErrors = Partial<Record<QuestionnaireItemName, string>>
+type QuestionnaireItemName = keyof z.infer<typeof questionnaireSchema>;
+type QuestionnaireErrors = Partial<Record<QuestionnaireItemName, string>>;
 
 function ValidationProgress() {
   return (
@@ -60,56 +60,56 @@ function ValidationProgress() {
         </div>
       )}
     />
-  )
+  );
 }
 
 export function QuestionnaireValidation() {
-  const [item, setItem] = React.useState("detail")
-  const [errors, setErrors] = React.useState<QuestionnaireErrors>({})
+  const [item, setItem] = React.useState("detail");
+  const [errors, setErrors] = React.useState<QuestionnaireErrors>({});
 
   function clearError(name: QuestionnaireItemName) {
     setErrors((currentErrors) => {
       if (!currentErrors[name]) {
-        return currentErrors
+        return currentErrors;
       }
 
-      const nextErrors = { ...currentErrors }
-      delete nextErrors[name]
-      return nextErrors
-    })
+      const nextErrors = { ...currentErrors };
+      delete nextErrors[name];
+      return nextErrors;
+    });
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
     const result = questionnaireSchema.safeParse(
       Object.fromEntries(new FormData(event.currentTarget))
-    )
+    );
 
     if (result.success) {
-      setErrors({})
+      setErrors({});
       toast("Agent response configured", {
         description: `Detail: ${result.data.detail} · Audience: ${result.data.audience}`,
-      })
-      return
+      });
+      return;
     }
 
-    const nextErrors: QuestionnaireErrors = {}
+    const nextErrors: QuestionnaireErrors = {};
 
     for (const issue of result.error.issues) {
-      const name = issue.path[0]
+      const name = issue.path[0];
 
       if ((name === "detail" || name === "audience") && !nextErrors[name]) {
-        nextErrors[name] = issue.message
+        nextErrors[name] = issue.message;
       }
     }
 
-    const firstInvalidItem = result.error.issues[0]?.path[0]
+    const firstInvalidItem = result.error.issues[0]?.path[0];
 
-    setErrors(nextErrors)
+    setErrors(nextErrors);
 
     if (firstInvalidItem === "detail" || firstInvalidItem === "audience") {
-      setItem(firstInvalidItem)
+      setItem(firstInvalidItem);
     }
   }
 
@@ -199,5 +199,5 @@ export function QuestionnaireValidation() {
         </CardFooter>
       </Card>
     </Questionnaire>
-  )
+  );
 }

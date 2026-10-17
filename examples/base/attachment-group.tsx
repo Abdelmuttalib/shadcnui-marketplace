@@ -1,10 +1,10 @@
 import {
   FileCodeIcon,
   FileTextIcon,
+  type LucideIcon,
   TableIcon,
   XIcon,
-  type LucideIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Attachment,
@@ -15,14 +15,14 @@ import {
   AttachmentGroup,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-rhea/ui/attachment"
+} from "@/styles/base-default/ui/attachment";
 
 type Item = {
-  name: string
-  meta: string
-  icon?: LucideIcon
-  src?: string
-}
+  name: string;
+  meta: string;
+  icon?: LucideIcon;
+  src?: string;
+};
 
 const items: Item[] = [
   { name: "briefing-notes.pdf", meta: "PDF · 1.4 MB", icon: FileTextIcon },
@@ -33,14 +33,14 @@ const items: Item[] = [
   },
   { name: "customers.csv", meta: "CSV · 18 KB", icon: TableIcon },
   { name: "renderer.tsx", meta: "TSX · 12 KB", icon: FileCodeIcon },
-]
+];
 
 export function AttachmentGroupDemo() {
   return (
     <div className="mx-auto w-full max-w-sm py-12">
       <AttachmentGroup className="w-full">
         {items.map((item) => {
-          const Icon = item.icon
+          const Icon = item.icon;
 
           return (
             <Attachment key={item.name} className="w-64">
@@ -63,9 +63,9 @@ export function AttachmentGroupDemo() {
                 </AttachmentAction>
               </AttachmentActions>
             </Attachment>
-          )
+          );
         })}
       </AttachmentGroup>
     </div>
-  )
+  );
 }

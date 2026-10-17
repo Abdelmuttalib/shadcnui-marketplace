@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/registry/moon/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
 
 export default function CheckboxDemo() {
   return (

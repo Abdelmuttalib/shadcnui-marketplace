@@ -1,11 +1,11 @@
-import { Typography } from "@/registry/moon/ui/typography";
+import { Typography } from "@/registry/bases/base/moon/ui/typography";
 
 export default function TypographyH2() {
   return (
     <Typography
       as="h2"
       variant="3xl/semibold"
-      className="scroll-m-20 border-b border-b-moon-border pb-2 tracking-tight first:mt-0"
+      className="border-b-moon-border scroll-m-20 border-b pb-2 tracking-tight first:mt-0"
     >
       The People of the Kingdom
     </Typography>

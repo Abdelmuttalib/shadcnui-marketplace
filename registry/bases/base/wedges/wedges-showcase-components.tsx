@@ -1,54 +1,58 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/registry/wedges/showcase";
-import { AlertDialogDemo } from "@/registry/wedges/showcase";
-import { BreadcrumbDemo } from "@/registry/wedges/showcase";
-import { CalendarDemo } from "@/registry/wedges/showcase";
-import { CheckboxDemo } from "@/registry/wedges/showcase";
-import { ComboboxDemo } from "@/registry/wedges/showcase";
-import { CommandDemo } from "@/registry/wedges/showcase";
-import { ContextMenuDemo } from "@/registry/wedges/showcase";
-import { DatePickerDemo } from "@/registry/wedges/showcase";
-import { DialogDemo } from "@/registry/wedges/showcase";
-import { DrawerDemo } from "@/registry/wedges/showcase";
-import { DropdownMenuDemo } from "@/registry/wedges/showcase";
-import { HoverCardDemo } from "@/registry/wedges/showcase";
-import { InputDemo } from "@/registry/wedges/showcase";
-import { InputOTPDemo } from "@/registry/wedges/showcase";
-import { LabelDemo } from "@/registry/wedges/showcase";
-import { MenubarDemo } from "@/registry/wedges/showcase";
-import { PaginationDemo } from "@/registry/wedges/showcase";
-import { PopoverDemo } from "@/registry/wedges/showcase";
-import { ProgressDemo } from "@/registry/wedges/showcase";
-import { RadioGroupDemo } from "@/registry/wedges/showcase";
-import { SelectDemo } from "@/registry/wedges/showcase";
-import { SheetDemo } from "@/registry/wedges/showcase";
-import { SkeletonDemo } from "@/registry/wedges/showcase";
-import { SliderDemo } from "@/registry/wedges/showcase";
-import { SonnerDemo } from "@/registry/wedges/showcase";
-import { SwitchDemo } from "@/registry/wedges/showcase";
-import { TextareaDemo } from "@/registry/wedges/showcase";
-import { ToggleDemo } from "@/registry/wedges/showcase";
-import { ToggleGroupDemo } from "@/registry/wedges/showcase";
-import { TooltipDemo } from "@/registry/wedges/showcase";
-import { Badge, BadgeProps } from "@/registry/wedges/ui/badge";
-import { Button, ButtonProps } from "@/registry/wedges/ui/button";
+import { AccordionDemo } from "@/registry/bases/base/wedges/showcase";
+import { AlertDialogDemo } from "@/registry/bases/base/wedges/showcase";
+import { BreadcrumbDemo } from "@/registry/bases/base/wedges/showcase";
+import { CalendarDemo } from "@/registry/bases/base/wedges/showcase";
+import { CheckboxDemo } from "@/registry/bases/base/wedges/showcase";
+import { ComboboxDemo } from "@/registry/bases/base/wedges/showcase";
+import { CommandDemo } from "@/registry/bases/base/wedges/showcase";
+import { ContextMenuDemo } from "@/registry/bases/base/wedges/showcase";
+import { DatePickerDemo } from "@/registry/bases/base/wedges/showcase";
+import { DialogDemo } from "@/registry/bases/base/wedges/showcase";
+import { DrawerDemo } from "@/registry/bases/base/wedges/showcase";
+import { DropdownMenuDemo } from "@/registry/bases/base/wedges/showcase";
+import { HoverCardDemo } from "@/registry/bases/base/wedges/showcase";
+import { InputDemo } from "@/registry/bases/base/wedges/showcase";
+import { InputOTPDemo } from "@/registry/bases/base/wedges/showcase";
+import { LabelDemo } from "@/registry/bases/base/wedges/showcase";
+import { MenubarDemo } from "@/registry/bases/base/wedges/showcase";
+import { PaginationDemo } from "@/registry/bases/base/wedges/showcase";
+import { PopoverDemo } from "@/registry/bases/base/wedges/showcase";
+import { ProgressDemo } from "@/registry/bases/base/wedges/showcase";
+import { RadioGroupDemo } from "@/registry/bases/base/wedges/showcase";
+import { SelectDemo } from "@/registry/bases/base/wedges/showcase";
+import { SheetDemo } from "@/registry/bases/base/wedges/showcase";
+import { SkeletonDemo } from "@/registry/bases/base/wedges/showcase";
+import { SliderDemo } from "@/registry/bases/base/wedges/showcase";
+import { SonnerDemo } from "@/registry/bases/base/wedges/showcase";
+import { SwitchDemo } from "@/registry/bases/base/wedges/showcase";
+import { TextareaDemo } from "@/registry/bases/base/wedges/showcase";
+import { ToggleDemo } from "@/registry/bases/base/wedges/showcase";
+import { ToggleGroupDemo } from "@/registry/bases/base/wedges/showcase";
+import { TooltipDemo } from "@/registry/bases/base/wedges/showcase";
+import { Badge, BadgeProps } from "@/registry/bases/base/wedges/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/wedges/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/wedges/ui/card";
+} from "@/registry/bases/base/wedges/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/wedges/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/wedges/ui/tabs";
+} from "@/registry/bases/base/wedges/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/wedges/ui/tabs";
 
 export function WedgesShowcaseComponents() {
   const style = "wedges";

@@ -19,15 +19,15 @@ import {
 } from "@tanstack/react-table";
 import * as React from "react";
 
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
-import { Checkbox } from "@/registry/moon/ui/checkbox";
+} from "@/registry/bases/base/moon/ui/card";
+import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -36,8 +36,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
-import { Input } from "@/registry/moon/ui/input";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/moon/ui/input";
 import {
   Table,
   TableBody,
@@ -45,7 +45,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/moon/ui/table";
+} from "@/registry/bases/base/moon/ui/table";
 
 const data: Payment[] = [
   {
@@ -306,7 +306,7 @@ export function CardsDataTable() {
           </Table>
         </div>
         <div className="flex items-center justify-end space-x-2 pt-4">
-          <div className="flex-1 text-sm text-moon-muted-foreground">
+          <div className="text-moon-muted-foreground flex-1 text-sm">
             {table.getFilteredSelectedRowModel().rows.length} of{" "}
             {table.getFilteredRowModel().rows.length} row(s) selected.
           </div>

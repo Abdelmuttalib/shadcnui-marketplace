@@ -3,9 +3,12 @@ import {
   ChevronRightIcon,
   FileTextIcon,
   TerminalIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -15,7 +18,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceTurn() {
   return (
@@ -98,5 +101,5 @@ export function TraceTurn() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </div>
-  )
+  );
 }

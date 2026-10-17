@@ -1,5 +1,8 @@
-import { Label } from "@/registry/snow/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/snow/ui/radio-group";
+import { Label } from "@/registry/bases/base/snow/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/snow/ui/radio-group";
 
 export default function RadioGroupDemo() {
   return (

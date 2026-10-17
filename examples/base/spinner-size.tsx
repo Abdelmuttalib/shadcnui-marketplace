@@ -1,4 +1,4 @@
-import { Spinner } from "@/styles/base-nova/ui/spinner"
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export function SpinnerSize() {
   return (
@@ -8,5 +8,5 @@ export function SpinnerSize() {
       <Spinner className="size-6" />
       <Spinner className="size-8" />
     </div>
-  )
+  );
 }

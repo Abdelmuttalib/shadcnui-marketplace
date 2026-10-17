@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
-import { Label } from "@/registry/neon/ui/label";
-import { Switch } from "@/registry/neon/ui/switch";
+} from "@/registry/bases/base/neon/ui/card";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import { Switch } from "@/registry/bases/base/neon/ui/switch";
 
 export function DemoCookieSettings() {
   return (
@@ -23,7 +23,7 @@ export function DemoCookieSettings() {
         <div className="flex items-center justify-between space-x-2">
           <Label htmlFor="necessary" className="flex flex-col space-y-1">
             <span>Strictly Necessary</span>
-            <span className="font-normal leading-snug text-neon-muted-foreground">
+            <span className="text-neon-muted-foreground font-normal leading-snug">
               These cookies are essential in order to use the website and use
               its features.
             </span>
@@ -33,7 +33,7 @@ export function DemoCookieSettings() {
         <div className="flex items-center justify-between space-x-2">
           <Label htmlFor="functional" className="flex flex-col space-y-1">
             <span>Functional Cookies</span>
-            <span className="font-normal leading-snug text-neon-muted-foreground">
+            <span className="text-neon-muted-foreground font-normal leading-snug">
               These cookies allow the website to provide personalized
               functionality.
             </span>
@@ -43,7 +43,7 @@ export function DemoCookieSettings() {
         <div className="flex items-center justify-between space-x-2">
           <Label htmlFor="performance" className="flex flex-col space-y-1">
             <span>Performance Cookies</span>
-            <span className="font-normal leading-snug text-neon-muted-foreground">
+            <span className="text-neon-muted-foreground font-normal leading-snug">
               These cookies help to improve the performance of the website.
             </span>
           </Label>

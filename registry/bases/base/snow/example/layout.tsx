@@ -2,7 +2,7 @@ import { LogOut } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
-import { Typography } from "@/registry/snow/ui/typography";
+import { Typography } from "@/registry/bases/base/snow/ui/typography";
 
 // import Link from "next/link";
 // import { cn } from "@/lib/utils";
@@ -14,7 +14,7 @@ import { ExamplesNav } from "./examples-nav";
 //   PageHeaderDescription,
 //   PageHeaderHeading,
 // } from "@/components/page-header";
-// import { buttonVariants } from "@/registry/snow/ui/button";
+// import { buttonVariants } from "@/registry/bases/base/snow/ui/button";
 
 const metadata: Metadata = {
   title: "Examples",

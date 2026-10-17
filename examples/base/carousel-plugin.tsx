@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay from "embla-carousel-autoplay";
+import * as React from "react";
 
-import { Card, CardContent } from "@/styles/base-nova/ui/card"
+import { Card, CardContent } from "@/styles/base-default/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/styles/base-nova/ui/carousel"
+} from "@/styles/base-default/ui/carousel";
 
 export default function CarouselPlugin() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+  );
 
   return (
     <Carousel
@@ -40,5 +40,5 @@ export default function CarouselPlugin() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,13 +7,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/neon/ui/dialog";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/dialog";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 
 export function PodcastEmptyPlaceholder() {
   return (
-    <div className="flex h-[450px] shrink-0 items-center justify-center rounded-neon-md border border-dashed">
+    <div className="rounded-neon-md flex h-[450px] shrink-0 items-center justify-center border border-dashed">
       <div className="mx-auto flex max-w-[420px] flex-col items-center justify-center text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ export function PodcastEmptyPlaceholder() {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          className="h-10 w-10 text-neon-muted-foreground"
+          className="text-neon-muted-foreground h-10 w-10"
           viewBox="0 0 24 24"
         >
           <circle cx="12" cy="11" r="1" />
@@ -31,7 +31,7 @@ export function PodcastEmptyPlaceholder() {
         </svg>
 
         <h3 className="mt-4 text-lg font-semibold">No episodes added</h3>
-        <p className="mb-4 mt-2 text-sm text-neon-muted-foreground">
+        <p className="text-neon-muted-foreground mb-4 mt-2 text-sm">
           You have not added any podcasts. Add one below.
         </p>
         <Dialog>

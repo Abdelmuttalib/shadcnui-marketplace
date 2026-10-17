@@ -5,7 +5,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/neon/ui/input-otp";
+} from "@/registry/bases/base/neon/ui/input-otp";
 
 export default function InputOTPWithSeparator() {
   return (

@@ -1,7 +1,10 @@
 import Image from "next/image";
 import * as React from "react";
 
-import { ScrollArea, ScrollBar } from "@/registry/spectrum/ui/scroll-area";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/spectrum/ui/scroll-area";
 
 export interface Artwork {
   artist: string;
@@ -25,11 +28,11 @@ export const works: Artwork[] = [
 
 export default function ScrollAreaHorizontalDemo() {
   return (
-    <ScrollArea className="w-96 whitespace-nowrap rounded-spctm-md border">
+    <ScrollArea className="rounded-spctm-md w-96 whitespace-nowrap border">
       <div className="flex w-max space-x-4 p-4">
         {works.map((artwork) => (
           <figure key={artwork.artist} className="shrink-0">
-            <div className="overflow-hidden rounded-spctm-md">
+            <div className="rounded-spctm-md overflow-hidden">
               <Image
                 src={artwork.art}
                 alt={`Photo by ${artwork.artist}`}
@@ -38,9 +41,9 @@ export default function ScrollAreaHorizontalDemo() {
                 height={400}
               />
             </div>
-            <figcaption className="pt-2 text-xs text-spctm-muted-foreground">
+            <figcaption className="text-spctm-muted-foreground pt-2 text-xs">
               Photo by{" "}
-              <span className="font-semibold text-spctm-foreground">
+              <span className="text-spctm-foreground font-semibold">
                 {artwork.artist}
               </span>
             </figcaption>

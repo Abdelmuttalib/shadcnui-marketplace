@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/spectrum/ui/typography";
+import { Typography } from "@/registry/bases/base/spectrum/ui/typography";
 
 export default function TypographyLead() {
   return (

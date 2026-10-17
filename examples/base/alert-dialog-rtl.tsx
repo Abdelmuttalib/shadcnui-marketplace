@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { BluetoothIcon } from "lucide-react"
+import { BluetoothIcon } from "lucide-react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -17,8 +17,8 @@ import {
   AlertDialogMedia,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/styles/base-nova/ui-rtl/alert-dialog"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
+} from "@/styles/base-default/ui/alert-dialog";
+import { Button } from "@/styles/base-default/ui/button";
 
 const translations: Translations = {
   en: {
@@ -70,10 +70,10 @@ const translations: Translations = {
       allow: "אפשר",
     },
   },
-}
+};
 
 export function AlertDialogRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
+  const { dir, t, language } = useTranslation(translations, "ar");
 
   return (
     <div className="flex gap-4" dir={dir}>
@@ -120,5 +120,5 @@ export function AlertDialogRtl() {
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  )
+  );
 }

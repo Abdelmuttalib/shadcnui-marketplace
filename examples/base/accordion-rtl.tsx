@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/styles/base-nova/ui-rtl/accordion"
+} from "@/styles/base-default/ui/accordion";
 
 const translations: Translations = {
   en: {
@@ -55,7 +55,7 @@ const translations: Translations = {
       answer3: "אנו מקבלים כרטיסי אשראי, PayPal והעברות בנקאיות.",
     },
   },
-}
+};
 
 const items = [
   {
@@ -73,10 +73,10 @@ const items = [
     questionKey: "question3" as const,
     answerKey: "answer3" as const,
   },
-] as const
+] as const;
 
 export function AccordionRtl() {
-  const { t } = useTranslation(translations, "ar")
+  const { t } = useTranslation(translations, "ar");
 
   return (
     <Accordion defaultValue={["item-1"]} className="max-w-md">
@@ -87,5 +87,5 @@ export function AccordionRtl() {
         </AccordionItem>
       ))}
     </Accordion>
-  )
+  );
 }

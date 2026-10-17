@@ -1,5 +1,5 @@
-import { Badge } from "@/styles/base-nova/ui/badge"
-import { Button } from "@/styles/base-nova/ui/button"
+import { Badge } from "@/styles/base-default/ui/badge";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -7,16 +7,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-nova/ui/card"
+} from "@/styles/base-default/ui/card";
 
 export function CardImage() {
   return (
     <Card className="relative mx-auto w-full max-w-sm pt-0">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+      <div className="bg-black/35 absolute inset-0 z-30 aspect-video" />
       <img
         src="https://avatar.vercel.sh/shadcn1"
         alt="Event cover"
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+        className="brightness-60 dark:brightness-40 relative z-20 aspect-video w-full object-cover grayscale"
       />
       <CardHeader>
         <CardAction>
@@ -32,5 +32,5 @@ export function CardImage() {
         <Button className="w-full">View Event</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

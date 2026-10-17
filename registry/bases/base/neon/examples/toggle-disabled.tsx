@@ -1,6 +1,6 @@
 import { Underline } from "lucide-react";
 
-import { Toggle } from "@/registry/neon/ui/toggle";
+import { Toggle } from "@/registry/bases/base/neon/ui/toggle";
 
 export default function ToggleDisabled() {
   return (

@@ -1,4 +1,4 @@
-import { Input } from "@/registry/snow/ui/input";
+import { Input } from "@/registry/bases/base/snow/ui/input";
 
 export function Search() {
   return (

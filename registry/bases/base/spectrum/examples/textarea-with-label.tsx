@@ -1,5 +1,5 @@
-import { Label } from "@/registry/spectrum/ui/label";
-import { Textarea } from "@/registry/spectrum/ui/textarea";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
+import { Textarea } from "@/registry/bases/base/spectrum/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

@@ -13,7 +13,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
+} from "@/registry/bases/base/material/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,13 +22,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/material/ui/sidebar";
+} from "@/registry/bases/base/material/ui/sidebar";
 
 export function NavUser({
   user,
@@ -50,7 +50,7 @@ export function NavUser({
               size="lg"
               className="data-[state=open]:bg-material-sidebar-accent data-[state=open]:text-material-sidebar-accent-foreground"
             >
-              <Avatar className="h-8 w-8 rounded-material-lg">
+              <Avatar className="rounded-material-lg h-8 w-8">
                 <AvatarImage src={user.avatar} alt={user.name} />
                 <AvatarFallback className="rounded-material-lg">
                   CN
@@ -60,18 +60,18 @@ export function NavUser({
                 <span className="truncate font-semibold">{user.name}</span>
                 <span className="truncate text-xs">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4" />
+              <ChevronsUpDown className="size-4 ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-material-lg"
+            className="min-w-56 rounded-material-lg w-[--radix-dropdown-menu-trigger-width]"
             side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}
           >
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-                <Avatar className="h-8 w-8 rounded-material-lg">
+                <Avatar className="rounded-material-lg h-8 w-8">
                   <AvatarImage src={user.avatar} alt={user.name} />
                   <AvatarFallback className="rounded-material-lg">
                     CN

@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/moon/ui/collapsible";
+} from "@/registry/bases/base/moon/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/moon/ui/sidebar";
+} from "@/registry/bases/base/moon/ui/sidebar";
 
 export function NavMain({
   items,

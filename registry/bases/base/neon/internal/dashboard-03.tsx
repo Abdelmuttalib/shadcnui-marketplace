@@ -17,8 +17,8 @@ import {
   Turtle,
 } from "lucide-react";
 
-import { Badge } from "@/registry/neon/ui/badge";
-import { Button } from "@/registry/neon/ui/button";
+import { Badge } from "@/registry/bases/base/neon/ui/badge";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Drawer,
   DrawerContent,
@@ -26,22 +26,22 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/neon/ui/drawer";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/drawer";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/neon/ui/select";
-import { Textarea } from "@/registry/neon/ui/textarea";
+} from "@/registry/bases/base/neon/ui/select";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/neon/ui/tooltip";
+} from "@/registry/bases/base/neon/ui/tooltip";
 
 export const description =
   "An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages.";
@@ -65,7 +65,7 @@ export default function Dashboard() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-lg bg-neon-muted"
+                className="bg-neon-muted rounded-lg"
                 aria-label="Playground"
               >
                 <SquareTerminal className="size-5" />
@@ -170,7 +170,7 @@ export default function Dashboard() {
         </nav>
       </aside>
       <div className="flex flex-col">
-        <header className="sticky top-0 z-10 flex h-[53px] items-center gap-1 border-b bg-neon-background px-4">
+        <header className="bg-neon-background sticky top-0 z-10 flex h-[53px] items-center gap-1 border-b px-4">
           <h1 className="text-xl font-semibold">Playground</h1>
           <Drawer>
             <DrawerTrigger asChild>
@@ -202,12 +202,12 @@ export default function Dashboard() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="genesis">
-                          <div className="flex items-start gap-3 text-neon-muted-foreground">
+                          <div className="text-neon-muted-foreground flex items-start gap-3">
                             <Rabbit className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
                                 Neural{" "}
-                                <span className="font-medium text-neon-foreground">
+                                <span className="text-neon-foreground font-medium">
                                   Genesis
                                 </span>
                               </p>
@@ -218,12 +218,12 @@ export default function Dashboard() {
                           </div>
                         </SelectItem>
                         <SelectItem value="explorer">
-                          <div className="flex items-start gap-3 text-neon-muted-foreground">
+                          <div className="text-neon-muted-foreground flex items-start gap-3">
                             <Bird className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
                                 Neural{" "}
-                                <span className="font-medium text-neon-foreground">
+                                <span className="text-neon-foreground font-medium">
                                   Explorer
                                 </span>
                               </p>
@@ -234,12 +234,12 @@ export default function Dashboard() {
                           </div>
                         </SelectItem>
                         <SelectItem value="quantum">
-                          <div className="flex items-start gap-3 text-neon-muted-foreground">
+                          <div className="text-neon-muted-foreground flex items-start gap-3">
                             <Turtle className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
                                 Neural{" "}
-                                <span className="font-medium text-neon-foreground">
+                                <span className="text-neon-foreground font-medium">
                                   Quantum
                                 </span>
                               </p>
@@ -321,12 +321,12 @@ export default function Dashboard() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="genesis">
-                        <div className="flex items-start gap-3 text-neon-muted-foreground">
+                        <div className="text-neon-muted-foreground flex items-start gap-3">
                           <Rabbit className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
                               Neural{" "}
-                              <span className="font-medium text-neon-foreground">
+                              <span className="text-neon-foreground font-medium">
                                 Genesis
                               </span>
                             </p>
@@ -337,12 +337,12 @@ export default function Dashboard() {
                         </div>
                       </SelectItem>
                       <SelectItem value="explorer">
-                        <div className="flex items-start gap-3 text-neon-muted-foreground">
+                        <div className="text-neon-muted-foreground flex items-start gap-3">
                           <Bird className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
                               Neural{" "}
-                              <span className="font-medium text-neon-foreground">
+                              <span className="text-neon-foreground font-medium">
                                 Explorer
                               </span>
                             </p>
@@ -353,12 +353,12 @@ export default function Dashboard() {
                         </div>
                       </SelectItem>
                       <SelectItem value="quantum">
-                        <div className="flex items-start gap-3 text-neon-muted-foreground">
+                        <div className="text-neon-muted-foreground flex items-start gap-3">
                           <Turtle className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
                               Neural{" "}
-                              <span className="font-medium text-neon-foreground">
+                              <span className="text-neon-foreground font-medium">
                                 Quantum
                               </span>
                             </p>
@@ -414,13 +414,13 @@ export default function Dashboard() {
               </fieldset>
             </form>
           </div>
-          <div className="relative flex h-full min-h-[50vh] flex-col rounded-xl bg-neon-muted/50 p-4 lg:col-span-2">
+          <div className="bg-neon-muted/50 relative flex h-full min-h-[50vh] flex-col rounded-xl p-4 lg:col-span-2">
             <Badge variant="outline" className="absolute right-3 top-3">
               Output
             </Badge>
             <div className="flex-1" />
             <form
-              className="relative overflow-hidden rounded-lg border bg-neon-background focus-within:ring-1 focus-within:ring-ring"
+              className="bg-neon-background focus-within:ring-ring relative overflow-hidden rounded-lg border focus-within:ring-1"
               x-chunk="A form for sending a message to an AI chatbot. The form has a textarea and buttons to upload files and record audio."
             >
               <Label htmlFor="message" className="sr-only">

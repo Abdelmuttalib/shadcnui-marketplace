@@ -17,31 +17,31 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
-import { Button } from "@/registry/wedges/ui/button";
-import { Calendar } from "@/registry/wedges/ui/calendar";
+} from "@/registry/bases/base/wedges/ui/avatar";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Calendar } from "@/registry/bases/base/wedges/ui/calendar";
 import {
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@/registry/wedges/ui/dropdown-menu";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
-import { Label } from "@/registry/wedges/ui/label";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/wedges/ui/popover";
-import { Separator } from "@/registry/wedges/ui/separator";
-import { Switch } from "@/registry/wedges/ui/switch";
-import { Textarea } from "@/registry/wedges/ui/textarea";
+} from "@/registry/bases/base/wedges/ui/popover";
+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
+import { Switch } from "@/registry/bases/base/wedges/ui/switch";
+import { Textarea } from "@/registry/bases/base/wedges/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/wedges/ui/tooltip";
+} from "@/registry/bases/base/wedges/ui/tooltip";
 
 import { Mail } from "../data";
 
@@ -95,7 +95,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 </TooltipTrigger>
               </PopoverTrigger>
               <PopoverContent className="flex w-[535px] p-0">
-                <div className="flex flex-col gap-2 border-r border-r-wedges-border px-2 py-4">
+                <div className="border-r-wedges-border flex flex-col gap-2 border-r px-2 py-4">
                   <div className="px-4 text-sm font-medium">Snooze until</div>
                   <div className="grid min-w-[250px] gap-1">
                     <Button
@@ -103,7 +103,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Later today{" "}
-                      <span className="ml-auto text-wedges-muted-foreground">
+                      <span className="text-wedges-muted-foreground ml-auto">
                         {format(addHours(today, 4), "E, h:m b")}
                       </span>
                     </Button>
@@ -112,7 +112,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Tomorrow
-                      <span className="ml-auto text-wedges-muted-foreground">
+                      <span className="text-wedges-muted-foreground ml-auto">
                         {format(addDays(today, 1), "E, h:m b")}
                       </span>
                     </Button>
@@ -121,7 +121,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       This weekend
-                      <span className="ml-auto text-wedges-muted-foreground">
+                      <span className="text-wedges-muted-foreground ml-auto">
                         {format(nextSaturday(today), "E, h:m b")}
                       </span>
                     </Button>
@@ -130,7 +130,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Next week
-                      <span className="ml-auto text-wedges-muted-foreground">
+                      <span className="text-wedges-muted-foreground ml-auto">
                         {format(addDays(today, 7), "E, h:m b")}
                       </span>
                     </Button>
@@ -212,7 +212,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
               </div>
             </div>
             {mail.date && (
-              <div className="ml-auto text-xs text-wedges-muted-foreground">
+              <div className="text-wedges-muted-foreground ml-auto text-xs">
                 {format(new Date(mail.date), "PPpp")}
               </div>
             )}
@@ -250,7 +250,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </div>
         </div>
       ) : (
-        <div className="p-8 text-center text-wedges-muted-foreground">
+        <div className="text-wedges-muted-foreground p-8 text-center">
           No message selected
         </div>
       )}

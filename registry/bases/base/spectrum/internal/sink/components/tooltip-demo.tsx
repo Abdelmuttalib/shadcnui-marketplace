@@ -1,10 +1,10 @@
-import { Button } from "@/registry/spectrum/ui/button";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/spectrum/ui/tooltip";
+} from "@/registry/bases/base/spectrum/ui/tooltip";
 
 export function TooltipDemo() {
   return (

@@ -1,8 +1,11 @@
-"use client"
+"use client";
 
-import { Bar, BarChart } from "recharts"
+import { Bar, BarChart } from "recharts";
 
-import { ChartContainer, type ChartConfig } from "@/styles/base-nova/ui/chart"
+import {
+  type ChartConfig,
+  ChartContainer,
+} from "@/styles/base-default/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -11,7 +14,7 @@ const chartData = [
   { month: "April", desktop: 73, mobile: 190 },
   { month: "May", desktop: 209, mobile: 130 },
   { month: "June", desktop: 214, mobile: 140 },
-]
+];
 
 const chartConfig = {
   desktop: {
@@ -22,7 +25,7 @@ const chartConfig = {
     label: "Mobile",
     color: "#60a5fa",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function ChartExample() {
   return (
@@ -32,5 +35,5 @@ export function ChartExample() {
         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
       </BarChart>
     </ChartContainer>
-  )
+  );
 }

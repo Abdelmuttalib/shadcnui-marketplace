@@ -2,7 +2,7 @@
 
 import { toast } from "sonner";
 
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 
 export default function ToastDestructive() {
   return (

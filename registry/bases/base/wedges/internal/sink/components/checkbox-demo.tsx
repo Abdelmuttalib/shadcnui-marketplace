@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
 
 export function CheckboxDemo() {
   return (

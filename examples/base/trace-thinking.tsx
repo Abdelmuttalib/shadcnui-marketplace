@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIMessage } from "ai"
-import { BrainIcon } from "lucide-react"
+import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
+import { BrainIcon } from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -17,7 +17,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const chat = createChat()
   .user("Why is the checkout deploy so slow?")
@@ -25,18 +25,18 @@ const chat = createChat()
     writer.reasoning(
       "The build log shows install and compile finish in under a minute. Image optimization takes almost four, and it reruns on every deploy because the cache key includes the commit hash.",
       { delayMs: 60 }
-    )
-    writer.sleep(400)
+    );
+    writer.sleep(400);
     writer.text(
       "Image optimization is the bottleneck. Key its cache on the lockfile and the image directory instead of the commit hash."
-    )
-  })
+    );
+  });
 
-const initialMessages = chat.get(0)
-const transport = chat.transport({ delayMs: 20 })
+const initialMessages = chat.get(0);
+const transport = chat.transport({ delayMs: 20 });
 
 function ThinkingTrace({ text, running }: { text: string; running: boolean }) {
-  const [open, setOpen] = React.useState<boolean>()
+  const [open, setOpen] = React.useState<boolean>();
 
   const line = (
     <TraceLine status={running ? "running" : undefined}>
@@ -45,10 +45,10 @@ function ThinkingTrace({ text, running }: { text: string; running: boolean }) {
       </TraceIcon>
       <TraceTitle>{running ? "Thinking" : "Thought"}</TraceTitle>
     </TraceLine>
-  )
+  );
 
   if (text.length === 0) {
-    return line
+    return line;
   }
 
   return (
@@ -58,41 +58,41 @@ function ThinkingTrace({ text, running }: { text: string; running: boolean }) {
         {text}
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 function groupParts(parts: UIMessage["parts"]) {
-  const runs: { trace: boolean; parts: UIMessage["parts"] }[] = []
+  const runs: { trace: boolean; parts: UIMessage["parts"] }[] = [];
 
   for (const part of parts) {
-    const trace = part.type === "reasoning"
+    const trace = part.type === "reasoning";
 
     if (!trace && part.type !== "text") {
-      continue
+      continue;
     }
 
-    const last = runs.at(-1)
+    const last = runs.at(-1);
 
     if (last?.trace === trace) {
-      last.parts.push(part)
+      last.parts.push(part);
     } else {
-      runs.push({ trace, parts: [part] })
+      runs.push({ trace, parts: [part] });
     }
   }
 
-  return runs
+  return runs;
 }
 
 export function TraceThinking() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: initialMessages,
     transport,
-  })
-  const nextMessage = chat.next(messages)
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -103,10 +103,10 @@ export function TraceThinking() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const live = status === "streaming" && message === messages.at(-1)
+        const live = status === "streaming" && message === messages.at(-1);
 
         return (
           <Message key={message.id}>
@@ -134,7 +134,7 @@ export function TraceThinking() {
               )}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -151,5 +151,5 @@ export function TraceThinking() {
         </Button>
       )}
     </div>
-  )
+  );
 }

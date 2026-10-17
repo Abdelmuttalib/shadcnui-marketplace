@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/wedges/ui/menubar";
+} from "@/registry/bases/base/wedges/ui/menubar";
 
 export function MenubarDemo() {
   return (

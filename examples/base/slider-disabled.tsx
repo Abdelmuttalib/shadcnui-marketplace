@@ -1,4 +1,4 @@
-import { Slider } from "@/styles/base-nova/ui/slider"
+import { Slider } from "@/styles/base-default/ui/slider";
 
 export function SliderDisabled() {
   return (
@@ -9,5 +9,5 @@ export function SliderDisabled() {
       disabled
       className="mx-auto w-full max-w-xs"
     />
-  )
+  );
 }

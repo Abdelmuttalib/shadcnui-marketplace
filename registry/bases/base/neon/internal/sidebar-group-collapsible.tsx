@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/neon/ui/collapsible";
+} from "@/registry/bases/base/neon/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -17,7 +17,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/neon/ui/sidebar";
+} from "@/registry/bases/base/neon/ui/sidebar";
 
 export default function AppSidebar() {
   return (
@@ -28,7 +28,7 @@ export default function AppSidebar() {
             <SidebarGroup>
               <SidebarGroupLabel
                 asChild
-                className="text-sm hover:bg-neon-sidebar-accent hover:text-sidebar-accent-foreground"
+                className="hover:bg-neon-sidebar-accent hover:text-sidebar-accent-foreground text-sm"
               >
                 <CollapsibleTrigger>
                   Help

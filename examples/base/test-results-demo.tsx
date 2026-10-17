@@ -1,20 +1,23 @@
-"use client"
+"use client";
 
-import { useChat } from "@ai-sdk/react"
-import type { UIDataTypes, UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIDataTypes, UIMessage } from "ai";
 import {
   CheckIcon,
   CircleDashedIcon,
   FileCodeIcon,
   FlaskConicalIcon,
   XIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -23,26 +26,29 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type Test = {
-  name: string
-  status: "passed" | "failed" | "skipped"
-  error?: string
-}
+  name: string;
+  status: "passed" | "failed" | "skipped";
+  error?: string;
+};
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     runTests: {
-      input: { command: string }
-      output: { suites: { name: string; tests: Test[] }[] }
-    }
+      input: { command: string };
+      output: { suites: { name: string; tests: Test[] }[] };
+    };
   }
->
+>;
 
-type ToolPart = Extract<ChatMessage["parts"][number], { type: "tool-runTests" }>
+type ToolPart = Extract<
+  ChatMessage["parts"][number],
+  { type: "tool-runTests" }
+>;
 
 const chat = createChat<ChatMessage>()
   .user("Run the checkout tests.")
@@ -74,22 +80,22 @@ const chat = createChat<ChatMessage>()
             ],
           },
         ],
-      })
+      });
     writer.text(
       "One test failed. The payment client does not retry a declined card, so the second charge attempt never happens."
-    )
-  })
+    );
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function countTests(tests: Test[]) {
   return {
     total: tests.length,
     failed: tests.filter((test) => test.status === "failed").length,
     skipped: tests.filter((test) => test.status === "skipped").length,
-  }
+  };
 }
 
 function formatCounts({
@@ -103,7 +109,7 @@ function formatCounts({
     skipped > 0 && `${skipped} skipped`,
   ]
     .filter(Boolean)
-    .join(", ")
+    .join(", ");
 }
 
 function TestRow({ test }: { test: Test }) {
@@ -126,7 +132,7 @@ function TestRow({ test }: { test: Test }) {
           </CodeBlock>
         </TraceCollapsibleContent>
       </TraceCollapsible>
-    )
+    );
   }
 
   return (
@@ -138,20 +144,20 @@ function TestRow({ test }: { test: Test }) {
         {test.status === "skipped" ? `Skipped ${test.name}` : test.name}
       </TraceTitle>
     </TraceLine>
-  )
+  );
 }
 
 function TestResultsRow({
   part,
   streaming,
 }: {
-  part: ToolPart
-  streaming: boolean
+  part: ToolPart;
+  streaming: boolean;
 }) {
-  const command = part.input?.command
+  const command = part.input?.command;
 
   if (part.state !== "output-available") {
-    const running = streaming && part.state !== "output-error"
+    const running = streaming && part.state !== "output-error";
 
     return (
       <TraceLine status={running ? "running" : "error"}>
@@ -162,11 +168,11 @@ function TestResultsRow({
           {running ? "Running" : "Failed to run"} {command}
         </TraceTitle>
       </TraceLine>
-    )
+    );
   }
 
-  const { suites } = part.output
-  const summary = countTests(suites.flatMap((suite) => suite.tests))
+  const { suites } = part.output;
+  const summary = countTests(suites.flatMap((suite) => suite.tests));
 
   return (
     <TraceCollapsible defaultOpen={summary.failed > 0}>
@@ -181,7 +187,7 @@ function TestResultsRow({
       <TraceCollapsibleContent keepMounted>
         <Trace>
           {suites.map((suite) => {
-            const counts = countTests(suite.tests)
+            const counts = countTests(suite.tests);
 
             return (
               <TraceCollapsible
@@ -206,23 +212,23 @@ function TestResultsRow({
                   </Trace>
                 </TraceCollapsibleContent>
               </TraceCollapsible>
-            )
+            );
           })}
         </Trace>
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function TestResultsDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -233,14 +239,14 @@ export function TestResultsDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
         const tools = message.parts.filter(
           (part) => part.type === "tool-runTests"
-        )
-        const text = getMessageText(message)
+        );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -259,7 +265,7 @@ export function TestResultsDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -267,13 +273,13 @@ export function TestResultsDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

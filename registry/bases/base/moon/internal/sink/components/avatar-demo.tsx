@@ -1,4 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/moon/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/moon/ui/avatar";
 
 export function AvatarDemo() {
   return (

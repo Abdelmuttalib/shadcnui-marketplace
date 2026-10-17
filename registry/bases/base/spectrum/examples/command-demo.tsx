@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/spectrum/ui/command";
+} from "@/registry/bases/base/spectrum/ui/command";
 
 export default function CommandDemo() {
   return (

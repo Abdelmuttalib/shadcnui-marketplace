@@ -10,21 +10,21 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
+} from "@/registry/bases/base/moon/ui/select";
 
 export const description = "An interactive pie chart";
 

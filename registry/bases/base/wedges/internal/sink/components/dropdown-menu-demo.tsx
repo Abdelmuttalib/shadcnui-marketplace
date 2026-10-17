@@ -1,4 +1,4 @@
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (

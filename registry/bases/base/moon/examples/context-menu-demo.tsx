@@ -12,12 +12,12 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/moon/ui/context-menu";
+} from "@/registry/bases/base/moon/ui/context-menu";
 
 export default function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-moon-md border border-dashed text-sm">
+      <ContextMenuTrigger className="rounded-moon-md flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">

@@ -2,8 +2,8 @@ import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function InputFile() {
   return (
@@ -12,5 +12,5 @@ export function InputFile() {
       <Input id="picture" type="file" />
       <FieldDescription>Select a picture to upload.</FieldDescription>
     </Field>
-  )
+  );
 }

@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/snow/ui/resizable";
+} from "@/registry/bases/base/snow/ui/resizable";
 
 export default function ResizableDemo() {
   return (

@@ -1,6 +1,6 @@
-import { CircleCheckIcon } from "lucide-react"
+import { CircleCheckIcon } from "lucide-react";
 
-import { Badge } from "@/styles/base-rhea/ui/badge"
+import { Badge } from "@/styles/base-default/ui/badge";
 import {
   Trace,
   TraceCollapsible,
@@ -10,7 +10,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function SubagentDetails() {
   return (
@@ -53,5 +53,5 @@ export function SubagentDetails() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react"
+import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-rhea/ui/collapsible"
+} from "@/styles/base-default/ui/collapsible";
 
 type FileNode =
   | { type: "file"; name: string; path: string }
-  | { type: "folder"; name: string; path: string; children: FileNode[] }
+  | { type: "folder"; name: string; path: string; children: FileNode[] };
 
 const files: FileNode[] = [
   {
@@ -48,16 +48,16 @@ const files: FileNode[] = [
       },
     ],
   },
-]
+];
 
 function FileTreeNode({
   node,
   selected,
   onSelect,
 }: {
-  node: FileNode
-  selected: string
-  onSelect: (path: string) => void
+  node: FileNode;
+  selected: string;
+  onSelect: (path: string) => void;
 }) {
   switch (node.type) {
     case "folder":
@@ -68,11 +68,11 @@ function FileTreeNode({
               <Button
                 variant="ghost"
                 size="sm"
-                className="w-full justify-start font-normal aria-expanded:bg-transparent aria-expanded:hover:bg-muted dark:aria-expanded:hover:bg-muted/50"
+                className="aria-expanded:hover:bg-muted dark:aria-expanded:hover:bg-muted/50 w-full justify-start font-normal aria-expanded:bg-transparent"
               />
             }
           >
-            <ChevronRightIcon className="transition-transform group-data-panel-open/button:rotate-90" />
+            <ChevronRightIcon className="group-data-panel-open/button:rotate-90 transition-transform" />
             <FolderIcon />
             {node.name}
           </CollapsibleTrigger>
@@ -89,7 +89,7 @@ function FileTreeNode({
             </div>
           </CollapsibleContent>
         </Collapsible>
-      )
+      );
     case "file":
       return (
         <Button
@@ -104,16 +104,16 @@ function FileTreeNode({
           <FileIcon />
           {node.name}
         </Button>
-      )
+      );
     default: {
-      const unreachable: never = node
-      return unreachable
+      const unreachable: never = node;
+      return unreachable;
     }
   }
 }
 
 export function FileTreeDemo() {
-  const [selected, setSelected] = React.useState("components/ui/button.tsx")
+  const [selected, setSelected] = React.useState("components/ui/button.tsx");
 
   return (
     <div className="flex w-full max-w-xs flex-col py-6 text-sm">
@@ -126,5 +126,5 @@ export function FileTreeDemo() {
         />
       ))}
     </div>
-  )
+  );
 }

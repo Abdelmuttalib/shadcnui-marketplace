@@ -1,7 +1,7 @@
-import { IconBell } from "@tabler/icons-react"
-import { RefreshCcwIcon } from "lucide-react"
+import { IconBell } from "@tabler/icons-react";
+import { RefreshCcwIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -9,17 +9,17 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-nova/ui/empty"
+} from "@/styles/base-default/ui/empty";
 
 export function EmptyMuted() {
   return (
-    <Empty className="h-full bg-muted/30">
+    <Empty className="bg-muted/30 h-full">
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <IconBell />
         </EmptyMedia>
         <EmptyTitle>No Notifications</EmptyTitle>
-        <EmptyDescription className="max-w-xs text-pretty">
+        <EmptyDescription className="text-pretty max-w-xs">
           You&apos;re all caught up. New notifications will appear here.
         </EmptyDescription>
       </EmptyHeader>
@@ -30,5 +30,5 @@ export function EmptyMuted() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

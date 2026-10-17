@@ -1,4 +1,4 @@
-import { TerminalIcon } from "lucide-react"
+import { TerminalIcon } from "lucide-react";
 
 import {
   CodeBlock,
@@ -7,14 +7,14 @@ import {
   CodeBlockCopyButton,
   CodeBlockHeader,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
-const command = "pnpm add ai @ai-sdk/react zod"
+const command = "pnpm add ai @ai-sdk/react zod";
 
 const output = `$ ${command}
 Packages: +14
 Progress: resolved 412, reused 398, downloaded 14, added 14, done
-Done in 2.8s using pnpm v10.18.0`
+Done in 2.8s using pnpm v10.18.0`;
 
 export function CodeBlockHeaderExample() {
   return (
@@ -32,5 +32,5 @@ export function CodeBlockHeaderExample() {
         <CodeBlockContent>{output}</CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

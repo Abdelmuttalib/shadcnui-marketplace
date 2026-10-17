@@ -25,7 +25,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/neon/ui/sidebar";
+} from "@/registry/bases/base/neon/ui/sidebar";
 
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";

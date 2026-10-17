@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { ChevronRightIcon } from "lucide-react"
+import { ChevronRightIcon } from "lucide-react";
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-nova/ui/collapsible"
+} from "@/styles/base-default/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -19,7 +19,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarProvider,
-} from "@/styles/base-nova/ui/sidebar"
+} from "@/styles/base-default/ui/sidebar";
 
 const items = [
   {
@@ -147,7 +147,7 @@ const items = [
       },
     ],
   },
-]
+];
 
 export default function AppSidebar() {
   return (
@@ -190,5 +190,5 @@ export default function AppSidebar() {
         </SidebarContent>
       </Sidebar>
     </SidebarProvider>
-  )
+  );
 }

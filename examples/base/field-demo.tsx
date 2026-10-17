@@ -1,5 +1,5 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { Checkbox } from "@/styles/base-nova/ui/checkbox"
+import { Button } from "@/styles/base-default/ui/button";
+import { Checkbox } from "@/styles/base-default/ui/checkbox";
 import {
   Field,
   FieldDescription,
@@ -8,8 +8,8 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   Select,
   SelectContent,
@@ -17,8 +17,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-nova/ui/select"
-import { Textarea } from "@/styles/base-nova/ui/textarea"
+} from "@/styles/base-default/ui/select";
+import { Textarea } from "@/styles/base-default/ui/textarea";
 
 const months = [
   { label: "MM", value: null },
@@ -34,7 +34,7 @@ const months = [
   { label: "10", value: "10" },
   { label: "11", value: "11" },
   { label: "12", value: "12" },
-]
+];
 
 const years = [
   { label: "YYYY", value: null },
@@ -44,7 +44,7 @@ const years = [
   { label: "2027", value: "2027" },
   { label: "2028", value: "2028" },
   { label: "2029", value: "2029" },
-]
+];
 
 export default function FieldDemo() {
   return (
@@ -170,5 +170,5 @@ export default function FieldDemo() {
         </FieldGroup>
       </form>
     </div>
-  )
+  );
 }

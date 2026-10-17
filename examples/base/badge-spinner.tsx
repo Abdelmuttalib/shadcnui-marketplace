@@ -1,5 +1,5 @@
-import { Badge } from "@/styles/base-nova/ui/badge"
-import { Spinner } from "@/styles/base-nova/ui/spinner"
+import { Badge } from "@/styles/base-default/ui/badge";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export function BadgeWithSpinner() {
   return (
@@ -13,5 +13,5 @@ export function BadgeWithSpinner() {
         <Spinner data-icon="inline-end" />
       </Badge>
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { toast } from "@/styles/base-nova/ui/toast"
+import { Button } from "@/styles/base-default/ui/button";
+import { toast } from "@/styles/base-default/ui/toast";
 
 export function ToastDemo() {
   function showToast() {
@@ -11,15 +11,15 @@ export function ToastDemo() {
       actionProps: {
         children: "Undo",
         onClick() {
-          toast.close(id)
+          toast.close(id);
         },
       },
-    })
+    });
   }
 
   return (
     <Button variant="outline" onClick={showToast}>
       Show Toast
     </Button>
-  )
+  );
 }

@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/styles/base-nova/ui/resizable"
+} from "@/styles/base-default/ui/resizable";
 
 export default function ResizableDemo() {
   return (
@@ -32,5 +32,5 @@ export default function ResizableDemo() {
         </ResizablePanelGroup>
       </ResizablePanel>
     </ResizablePanelGroup>
-  )
+  );
 }

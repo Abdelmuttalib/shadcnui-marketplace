@@ -1,7 +1,7 @@
-import { IconFolderCode } from "@tabler/icons-react"
-import { ArrowUpRightIcon } from "lucide-react"
+import { IconFolderCode } from "@tabler/icons-react";
+import { ArrowUpRightIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -9,7 +9,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-nova/ui/empty"
+} from "@/styles/base-default/ui/empty";
 
 export default function EmptyDemo() {
   return (
@@ -38,5 +38,5 @@ export default function EmptyDemo() {
         Learn More <ArrowUpRightIcon />
       </Button>
     </Empty>
-  )
+  );
 }

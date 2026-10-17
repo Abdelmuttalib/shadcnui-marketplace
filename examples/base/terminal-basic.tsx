@@ -1,6 +1,9 @@
-import { TerminalIcon } from "lucide-react"
+import { TerminalIcon } from "lucide-react";
 
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -9,14 +12,14 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const BUILD_OUTPUT = `> acme-chat@0.1.0 build
 > next build
 
    ▲ Next.js 16.3.0
  ✓ Compiled successfully in 4.2s
- ✓ Generating static pages (12/12)`
+ ✓ Generating static pages (12/12)`;
 
 export function TerminalBasic() {
   return (
@@ -39,5 +42,5 @@ export function TerminalBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/snow/ui/input";
+import { Input } from "@/registry/bases/base/snow/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/snow/ui/resizable";
-import { Separator } from "@/registry/snow/ui/separator";
+} from "@/registry/bases/base/snow/ui/resizable";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/snow/ui/tabs";
-import { TooltipProvider } from "@/registry/snow/ui/tooltip";
+} from "@/registry/bases/base/snow/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/snow/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-snow-background/60 bg-snow-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-snow-muted-foreground" />
+                  <Search className="text-snow-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

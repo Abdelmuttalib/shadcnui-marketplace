@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/snow/ui/collapsible";
+} from "@/registry/bases/base/snow/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -17,7 +17,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/snow/ui/sidebar";
+} from "@/registry/bases/base/snow/ui/sidebar";
 
 export default function AppSidebar() {
   return (
@@ -28,7 +28,7 @@ export default function AppSidebar() {
             <SidebarGroup>
               <SidebarGroupLabel
                 asChild
-                className="text-sm hover:bg-snow-sidebar-accent hover:text-sidebar-accent-foreground"
+                className="hover:bg-snow-sidebar-accent hover:text-sidebar-accent-foreground text-sm"
               >
                 <CollapsibleTrigger>
                   Help

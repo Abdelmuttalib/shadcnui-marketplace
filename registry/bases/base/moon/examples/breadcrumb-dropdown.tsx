@@ -7,13 +7,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/moon/ui/breadcrumb";
+} from "@/registry/bases/base/moon/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
 
 export default function BreadcrumbWithDropdown() {
   return (

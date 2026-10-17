@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Slider } from "@/registry/moon/ui/slider";
+import { Slider } from "@/registry/bases/base/moon/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 

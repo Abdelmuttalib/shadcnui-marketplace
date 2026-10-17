@@ -1,5 +1,5 @@
-import { Button } from "@/registry/spectrum/ui/button";
-import { Input } from "@/registry/spectrum/ui/input";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
 
 export default function InputWithButton() {
   return (

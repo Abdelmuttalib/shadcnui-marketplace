@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, ChevronRightIcon, GlobeIcon } from "lucide-react"
+import { ArrowUpRightIcon, ChevronRightIcon, GlobeIcon } from "lucide-react";
 
 import {
   Dialog,
@@ -7,13 +7,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-rhea/ui/dialog"
+} from "@/styles/base-default/ui/dialog";
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const results = [
   {
@@ -28,7 +28,7 @@ const results = [
     title: "Deploy hooks and cache keys",
     url: "https://vercel.com/docs/deploy-hooks",
   },
-]
+];
 
 export function TraceDialog() {
   return (
@@ -78,5 +78,5 @@ export function TraceDialog() {
         </DialogContent>
       </Dialog>
     </Trace>
-  )
+  );
 }

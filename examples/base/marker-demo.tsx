@@ -1,7 +1,11 @@
-import { GitBranchIcon, SearchIcon } from "lucide-react"
+import { GitBranchIcon, SearchIcon } from "lucide-react";
 
-import { Marker, MarkerContent, MarkerIcon } from "@/styles/base-rhea/ui/marker"
-import { Spinner } from "@/styles/base-rhea/ui/spinner"
+import {
+  Marker,
+  MarkerContent,
+  MarkerIcon,
+} from "@/styles/base-default/ui/marker";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export function MarkerDemo() {
   return (
@@ -28,5 +32,5 @@ export function MarkerDemo() {
         <MarkerContent>Explored 4 files</MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

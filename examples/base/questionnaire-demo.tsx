@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -18,7 +18,7 @@ import {
   QuestionnaireSkip,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const questionnaireItems = [
   {
@@ -72,22 +72,26 @@ const questionnaireItems = [
     required: true,
     title: "When should work begin?",
   },
-] as const
+] as const;
 
 export function QuestionnaireDemo() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
     const answers = {
       direction: formData.get("direction"),
       signals: formData.getAll("signals"),
       timing: formData.get("timing"),
-    }
+    };
 
     toast("Agent plan saved", {
-      description: `Direction: ${answers.direction ?? "None"} · Progress signals: ${answers.signals.join(", ") || "None"} · Timing: ${answers.timing ?? "None"}`,
-    })
+      description: `Direction: ${
+        answers.direction ?? "None"
+      } · Progress signals: ${answers.signals.join(", ") || "None"} · Timing: ${
+        answers.timing ?? "None"
+      }`,
+    });
   }
 
   return (
@@ -138,5 +142,5 @@ export function QuestionnaireDemo() {
         <QuestionnaireSubmit>Save plan</QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Label } from "@/registry/wedges/ui/label";
-import { Textarea } from "@/registry/wedges/ui/textarea";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
+import { Textarea } from "@/registry/bases/base/wedges/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

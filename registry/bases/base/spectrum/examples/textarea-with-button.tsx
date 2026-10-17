@@ -1,5 +1,5 @@
-import { Button } from "@/registry/spectrum/ui/button";
-import { Textarea } from "@/registry/spectrum/ui/textarea";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
+import { Textarea } from "@/registry/bases/base/spectrum/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

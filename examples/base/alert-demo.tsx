@@ -1,10 +1,10 @@
-import { CheckCircle2Icon, InfoIcon } from "lucide-react"
+import { CheckCircle2Icon, InfoIcon } from "lucide-react";
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/styles/base-nova/ui/alert"
+} from "@/styles/base-default/ui/alert";
 
 export default function AlertDemo() {
   return (
@@ -26,5 +26,5 @@ export default function AlertDemo() {
         </AlertDescription>
       </Alert>
     </div>
-  )
+  );
 }

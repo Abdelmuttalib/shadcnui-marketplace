@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 
 export default function CommandDemo() {
   return (

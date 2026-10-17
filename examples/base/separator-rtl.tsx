@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Separator } from "@/styles/base-nova/ui-rtl/separator"
+  useTranslation,
+} from "@/components/language-selector";
+import { Separator } from "@/styles/base-default/ui/separator";
 
 const translations: Translations = {
   en: {
@@ -36,19 +36,19 @@ const translations: Translations = {
         "סט של רכיבים מעוצבים בצורה יפה שאתה יכול להתאים אישית, להרחיב ולבנות עליהם.",
     },
   },
-}
+};
 
 export function SeparatorRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div className="flex max-w-sm flex-col gap-4 text-sm" dir={dir}>
       <div className="flex flex-col gap-1.5">
-        <div className="leading-none font-medium">{t.title}</div>
+        <div className="font-medium leading-none">{t.title}</div>
         <div className="text-muted-foreground">{t.subtitle}</div>
       </div>
       <Separator />
       <div>{t.description}</div>
     </div>
-  )
+  );
 }

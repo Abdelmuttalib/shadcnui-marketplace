@@ -1,11 +1,11 @@
-import { GitBranchIcon } from "lucide-react"
+import { GitBranchIcon } from "lucide-react";
 
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceStatic() {
   return (
@@ -17,5 +17,5 @@ export function TraceStatic() {
         <TraceTitle>Created branch fix/frozen-lockfile</TraceTitle>
       </TraceLine>
     </Trace>
-  )
+  );
 }

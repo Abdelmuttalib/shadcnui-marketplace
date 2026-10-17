@@ -1,9 +1,9 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-nova/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 export function TooltipSides() {
   return (
@@ -21,5 +21,5 @@ export function TooltipSides() {
         </Tooltip>
       ))}
     </div>
-  )
+  );
 }

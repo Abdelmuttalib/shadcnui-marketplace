@@ -1,6 +1,9 @@
-import { TerminalIcon } from "lucide-react"
+import { TerminalIcon } from "lucide-react";
 
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -9,7 +12,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function ToolBasic() {
   return (
@@ -34,5 +37,5 @@ export function ToolBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import { Button } from "@/registry/neon/ui/button";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/neon/ui/popover";
+} from "@/registry/bases/base/neon/ui/popover";
 
 export function PopoverDemo() {
   return (
@@ -17,7 +17,7 @@ export function PopoverDemo() {
         <div className="grid gap-4">
           <div className="space-y-2">
             <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-sm text-neon-muted-foreground">
+            <p className="text-neon-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
           </div>

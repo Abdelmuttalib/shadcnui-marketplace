@@ -12,12 +12,12 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/spectrum/ui/context-menu";
+} from "@/registry/bases/base/spectrum/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-spctm-md border border-dashed border-spctm-border text-sm">
+      <ContextMenuTrigger className="rounded-spctm-md border-spctm-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">

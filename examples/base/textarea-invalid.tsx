@@ -2,8 +2,8 @@ import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Textarea } from "@/styles/base-nova/ui/textarea"
+} from "@/styles/base-default/ui/field";
+import { Textarea } from "@/styles/base-default/ui/textarea";
 
 export function TextareaInvalid() {
   return (
@@ -16,5 +16,5 @@ export function TextareaInvalid() {
       />
       <FieldDescription>Please enter a valid message.</FieldDescription>
     </Field>
-  )
+  );
 }

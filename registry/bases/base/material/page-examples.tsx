@@ -1,12 +1,12 @@
-import { AuthenticationPage } from "@/registry/material/example/authentication/page";
-import { BoardPage } from "@/registry/material/example/board/page";
-import { CardsPage } from "@/registry/material/example/cards/page";
-import { DashboardPage } from "@/registry/material/example/dashboard/page";
-import { SettingsProfilePage } from "@/registry/material/example/forms/page";
-import { MailPage } from "@/registry/material/example/mail/page";
-import { MusicPage } from "@/registry/material/example/music/page";
-import { PlaygroundPage } from "@/registry/material/example/playground/page";
-import { TaskPage } from "@/registry/material/example/tasks/page";
+import { AuthenticationPage } from "@/registry/bases/base/material/example/authentication/page";
+import { BoardPage } from "@/registry/bases/base/material/example/board/page";
+import { CardsPage } from "@/registry/bases/base/material/example/cards/page";
+import { DashboardPage } from "@/registry/bases/base/material/example/dashboard/page";
+import { SettingsProfilePage } from "@/registry/bases/base/material/example/forms/page";
+import { MailPage } from "@/registry/bases/base/material/example/mail/page";
+import { MusicPage } from "@/registry/bases/base/material/example/music/page";
+import { PlaygroundPage } from "@/registry/bases/base/material/example/playground/page";
+import { TaskPage } from "@/registry/bases/base/material/example/tasks/page";
 
 export const MaterialPageExamples = [
   <BoardPage key="board" />,

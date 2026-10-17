@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/spectrum/ui/command";
+} from "@/registry/bases/base/spectrum/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-spctm-lg border border-spctm-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-spctm-lg border-spctm-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

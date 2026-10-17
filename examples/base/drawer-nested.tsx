@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useIsMobile } from "@/hooks/use-mobile"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -11,12 +11,12 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/styles/base-rhea/ui/drawer"
+} from "@/styles/base-default/ui/drawer";
 
 export function DrawerNested() {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
 
-  const swipeDirection = isMobile ? "down" : "right"
+  const swipeDirection = isMobile ? "down" : "right";
 
   return (
     <Drawer showSwipeHandle={isMobile} swipeDirection={swipeDirection}>
@@ -107,5 +107,5 @@ export function DrawerNested() {
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }

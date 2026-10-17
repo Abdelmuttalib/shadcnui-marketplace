@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/styles/base-nova/ui/table"
+} from "@/styles/base-default/ui/table";
 
 const invoices = [
   {
@@ -52,7 +52,7 @@ const invoices = [
     totalAmount: "$300.00",
     paymentMethod: "Credit Card",
   },
-]
+];
 
 export function TableFooterExample() {
   return (
@@ -83,5 +83,5 @@ export function TableFooterExample() {
         </TableRow>
       </TableFooter>
     </Table>
-  )
+  );
 }

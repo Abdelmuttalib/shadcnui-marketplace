@@ -1,6 +1,10 @@
-import { BookOpenCheck, GitBranchIcon, SearchIcon } from "lucide-react"
+import { BookOpenCheck, GitBranchIcon, SearchIcon } from "lucide-react";
 
-import { Marker, MarkerContent, MarkerIcon } from "@/styles/base-rhea/ui/marker"
+import {
+  Marker,
+  MarkerContent,
+  MarkerIcon,
+} from "@/styles/base-default/ui/marker";
 
 export function MarkerIconDemo() {
   return (
@@ -24,5 +28,5 @@ export function MarkerIconDemo() {
         <MarkerContent>Syncing completed</MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

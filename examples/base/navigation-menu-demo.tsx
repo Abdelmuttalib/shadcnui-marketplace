@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
 import {
   CircleAlertIcon,
   CircleCheckIcon,
   CircleDashedIcon,
-} from "lucide-react"
+} from "lucide-react";
+import Link from "next/link";
+import * as React from "react";
 
 import {
   NavigationMenu,
@@ -16,7 +16,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/styles/base-nova/ui/navigation-menu"
+} from "@/styles/base-default/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -54,7 +54,7 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
 export default function NavigationMenuDemo() {
   return (
@@ -135,7 +135,7 @@ export default function NavigationMenuDemo() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 function ListItem({
@@ -148,10 +148,10 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink render={<Link href={href} />}>
         <div className="flex flex-col gap-1 text-sm">
-          <div className="leading-none font-medium">{title}</div>
-          <div className="line-clamp-2 text-muted-foreground">{children}</div>
+          <div className="font-medium leading-none">{title}</div>
+          <div className="text-muted-foreground line-clamp-2">{children}</div>
         </div>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }

@@ -1,36 +1,36 @@
-"use client"
+"use client";
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-rhea/ui/hover-card"
-import { Progress } from "@/styles/base-rhea/ui/progress"
+} from "@/styles/base-default/ui/hover-card";
+import { Progress } from "@/styles/base-default/ui/progress";
 
 const usage = {
   input: 8420,
   output: 1260,
   reasoning: 980,
   limit: 128000,
-}
+};
 
-const used = usage.input + usage.output + usage.reasoning
-const percent = Math.round((used / usage.limit) * 100)
+const used = usage.input + usage.output + usage.reasoning;
+const percent = Math.round((used / usage.limit) * 100);
 
 function formatTokens(value: number) {
   if (value < 1000) {
-    return String(value)
+    return String(value);
   }
 
-  return `${(value / 1000).toFixed(1).replace(/\.0$/, "")}k`
+  return `${(value / 1000).toFixed(1).replace(/\.0$/, "")}k`;
 }
 
 const rows = [
   { label: "Input", value: usage.input },
   { label: "Output", value: usage.output },
   { label: "Reasoning", value: usage.reasoning },
-]
+];
 
 export function ContextDemo() {
   return (
@@ -62,5 +62,5 @@ export function ContextDemo() {
         </HoverCardContent>
       </HoverCard>
     </div>
-  )
+  );
 }

@@ -1,13 +1,13 @@
-import { Markdown } from "@/components/markdown"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { Markdown } from "@/components/markdown";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 
 const response = `Here's how to render markdown in a message:
 
 1. Render assistant text through **Markdown**.
 2. Keep user messages as plain text.
 3. Use a \`ghost\` bubble so the response is unframed.
-`
+`;
 
 export function MessageMarkdownDemo() {
   return (
@@ -31,5 +31,5 @@ export function MessageMarkdownDemo() {
         </MessageContent>
       </Message>
     </div>
-  )
+  );
 }

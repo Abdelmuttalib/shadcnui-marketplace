@@ -1,5 +1,5 @@
-import { Button } from "@/registry/moon/ui/button";
-import { Textarea } from "@/registry/moon/ui/textarea";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

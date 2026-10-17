@@ -1,4 +1,4 @@
-import { CircleCheckIcon } from "lucide-react"
+import { CircleCheckIcon } from "lucide-react";
 
 import {
   Trace,
@@ -9,7 +9,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function ReasoningDuration() {
   return (
@@ -31,5 +31,5 @@ export function ReasoningDuration() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

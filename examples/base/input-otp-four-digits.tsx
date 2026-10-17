@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { REGEXP_ONLY_DIGITS } from "input-otp"
+import { REGEXP_ONLY_DIGITS } from "input-otp";
 
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/styles/base-nova/ui/input-otp"
+} from "@/styles/base-default/ui/input-otp";
 
 export function InputOTPFourDigits() {
   return (
@@ -18,5 +18,5 @@ export function InputOTPFourDigits() {
         <InputOTPSlot index={3} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }

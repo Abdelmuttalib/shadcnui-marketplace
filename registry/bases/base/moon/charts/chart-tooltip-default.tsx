@@ -8,13 +8,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 
 export const description = "A stacked bar chart with a legend";
 export const iframeHeight = "600px";

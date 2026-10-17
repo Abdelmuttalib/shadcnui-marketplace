@@ -1,13 +1,13 @@
 import * as React from "react";
 
-import { Card, CardContent } from "@/registry/snow/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/snow/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/snow/ui/carousel";
+} from "@/registry/bases/base/snow/ui/carousel";
 
 export function CarouselDemo() {
   return (

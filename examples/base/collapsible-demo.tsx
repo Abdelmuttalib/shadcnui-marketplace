@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ChevronsUpDown } from "lucide-react"
+import { ChevronsUpDown } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-nova/ui/collapsible"
+} from "@/styles/base-default/ui/collapsible";
 
 export default function CollapsibleDemo() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <Collapsible
@@ -43,5 +43,5 @@ export default function CollapsibleDemo() {
         </div>
       </CollapsibleContent>
     </Collapsible>
-  )
+  );
 }

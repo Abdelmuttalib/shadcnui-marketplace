@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
+import { useChat } from "@ai-sdk/react";
+import * as React from "react";
 import {
+  type ExtraProps,
   Streamdown,
   useIsCodeFenceIncomplete,
-  type ExtraProps,
-} from "streamdown"
+} from "streamdown";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { createChat, getMessageText } from "@/lib/ai";
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -20,8 +20,8 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 
 const response = `Wrap the value in a \`useDebounce\` hook. It returns the latest value once it stops changing for \`delay\` milliseconds.
 
@@ -38,28 +38,28 @@ export function useDebounce<T>(value: T, delay = 300) {
 }
 \`\`\`
 
-Pass the debounced value to your fetch instead of the raw input.`
+Pass the debounced value to your fetch instead of the raw input.`;
 
 const chat = createChat()
   .user("How do I debounce a search input in React?")
   .assistant(({ writer }) => {
-    writer.text(response)
-  })
+    writer.text(response);
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 30 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 30 });
 
 function MarkdownCodeBlock({
   code,
   language,
 }: {
-  code: string
-  language: string
+  code: string;
+  language: string;
 }) {
   // True while the closing fence has not arrived yet.
-  const incomplete = useIsCodeFenceIncomplete()
-  const lines = useHighlightedCode(code, language)
+  const incomplete = useIsCodeFenceIncomplete();
+  const lines = useHighlightedCode(code, language);
 
   return (
     <CodeBlock>
@@ -75,7 +75,7 @@ function MarkdownCodeBlock({
         ))}
       </CodeBlockContent>
     </CodeBlock>
-  )
+  );
 }
 
 function MarkdownCode({
@@ -88,12 +88,12 @@ function MarkdownCode({
   if (!("data-block" in props)) {
     return (
       <code
-        className="rounded-sm bg-muted px-1 py-0.5 font-mono text-[0.9em]"
+        className="bg-muted rounded-sm px-1 py-0.5 font-mono text-[0.9em]"
         {...props}
       >
         {children}
       </code>
-    )
+    );
   }
 
   return (
@@ -101,20 +101,20 @@ function MarkdownCode({
       code={typeof children === "string" ? children : ""}
       language={/language-(\S+)/.exec(className ?? "")?.[1] ?? ""}
     />
-  )
+  );
 }
 
-const components = { code: MarkdownCode }
+const components = { code: MarkdownCode };
 
 export function CodeBlockMarkdown() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-112 w-full max-w-md flex-col gap-4 py-6 text-sm">
+    <div className="min-h-112 flex w-full max-w-md flex-col gap-4 py-6 text-sm">
       {messages.map((message) =>
         message.role === "user" ? (
           <Message key={message.id} align="end">
@@ -144,13 +144,13 @@ export function CodeBlockMarkdown() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

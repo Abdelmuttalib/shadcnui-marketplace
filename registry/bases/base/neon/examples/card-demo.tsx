@@ -1,7 +1,7 @@
 import { BellRing, Check } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
@@ -9,8 +9,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
-import { Switch } from "@/registry/neon/ui/switch";
+} from "@/registry/bases/base/neon/ui/card";
+import { Switch } from "@/registry/bases/base/neon/ui/switch";
 
 const notifications = [
   {
@@ -43,7 +43,7 @@ export default function CardDemo({ className, ...props }: CardProps) {
             <p className="text-sm font-medium leading-none">
               Push Notifications
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Send notifications to device.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function CardDemo({ className, ...props }: CardProps) {
                 <p className="text-sm font-medium leading-none">
                   {notification.title}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   {notification.description}
                 </p>
               </div>

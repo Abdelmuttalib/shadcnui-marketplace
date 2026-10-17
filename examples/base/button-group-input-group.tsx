@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { AudioLinesIcon, PlusIcon } from "lucide-react"
+import { AudioLinesIcon, PlusIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { ButtonGroup } from "@/styles/base-nova/ui/button-group"
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-nova/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 export default function ButtonGroupInputGroup() {
-  const [voiceEnabled, setVoiceEnabled] = React.useState(false)
+  const [voiceEnabled, setVoiceEnabled] = React.useState(false);
 
   return (
     <ButtonGroup className="[--radius:9999rem]">
@@ -56,5 +56,5 @@ export default function ButtonGroupInputGroup() {
         </InputGroup>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

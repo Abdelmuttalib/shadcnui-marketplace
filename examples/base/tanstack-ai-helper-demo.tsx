@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { createChat } from "@shadcn/helpers/tanstack-ai"
-import type { UIMessage } from "@tanstack/ai-client"
-import { useChat } from "@tanstack/ai-react"
+import { createChat } from "@shadcn/helpers/tanstack-ai";
+import type { UIMessage } from "@tanstack/ai-client";
+import { useChat } from "@tanstack/ai-react";
 import {
   ArrowUpIcon,
   GlobeIcon,
@@ -12,10 +12,10 @@ import {
   PlusIcon,
   RotateCwIcon,
   TelescopeIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { MessageAnimated } from "@/components/message-animated"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { MessageAnimated } from "@/components/message-animated";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -24,39 +24,39 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-rhea/ui/empty"
+} from "@/styles/base-default/ui/empty";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/base-rhea/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-rhea/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 const chat = createChat()
   .user(
@@ -66,11 +66,11 @@ const chat = createChat()
   .assistant(({ writer }) => {
     writer.reasoning(
       "They are describing a streaming transcript that keeps taking control of the viewport. I should explain when auto-scroll follows and when it stops."
-    )
-    writer.sleep(1000)
+    );
+    writer.sleep(1000);
     writer.text(
       "That's the classic streaming scroll problem. Wrap your message list in `MessageScroller` and turn on `autoScroll` — the viewport pins to the bottom as tokens arrive, so users always see the latest text land in place.\n\nThe important part: it only auto-scrolls while the reader is already at the bottom. The moment they scroll up to read something earlier, auto-scroll backs off and their position is preserved. You get smooth streaming without fighting the user's intent."
-    )
+    );
   })
   .user(
     "Okay, but when someone sends a new message the view still feels jarring — like the whole conversation reloads from the top."
@@ -90,30 +90,30 @@ const chat = createChat()
   .sleep(1000)
   .assistant(
     '`MessageScrollerContent` sets `role="log"` and `aria-relevant="additions"` by default, so screen readers announce new messages as they stream in.\n\nThe scroll button is a real `<button>` with an sr-only label, and it\'s removed from the tab order when you\'re already at the bottom — no ghost focus stops.'
-  )
+  );
 
-const initialMessages = chat.get(0)
-const connection = chat.transport({ delayMs: 20 })
+const initialMessages = chat.get(0);
+const connection = chat.transport({ delayMs: 20 });
 
 function getMessageText(message: UIMessage) {
   return message.parts
     .map((part) => (part.type === "text" ? part.content : ""))
-    .join("")
+    .join("");
 }
 
 export function TanStackAiHelperDemo() {
   const { messages, append, status, setMessages } = useChat({
     initialMessages,
     connection,
-  })
-  const nextMessage = chat.next(messages)
-  const nextMessageText = nextMessage ? getMessageText(nextMessage) : null
-  const isBusy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const nextMessageText = nextMessage ? getMessageText(nextMessage) : null;
+  const isBusy = status === "submitted" || status === "streaming";
 
   return (
     <MessageScrollerProvider>
       <div className="relative flex flex-col gap-4">
-        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
+        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>New Chat</CardTitle>
             <CardDescription>How can I help you today?</CardDescription>
@@ -175,18 +175,18 @@ export function TanStackAiHelperDemo() {
           <CardFooter className="flex-col gap-2">
             <form
               onSubmit={(event) => {
-                event.preventDefault()
+                event.preventDefault();
                 if (!nextMessage || isBusy) {
-                  return
+                  return;
                 }
-                void append(nextMessage)
+                void append(nextMessage);
               }}
               className="w-full"
             >
               <InputGroup>
                 <InputGroupTextarea
                   aria-label="Next predefined message"
-                  className="h-14 min-h-14 overflow-hidden px-3 py-2.5 opacity-60 data-[status=ready]:opacity-100"
+                  className="min-h-14 h-14 overflow-hidden px-3 py-2.5 opacity-60 data-[status=ready]:opacity-100"
                   data-status={status}
                   placeholder="No messages queued. Reset the conversation."
                   value={nextMessageText ?? ""}
@@ -245,10 +245,10 @@ export function TanStackAiHelperDemo() {
             </form>
           </CardFooter>
         </Card>
-        <div className="px-0.5 text-center text-xs text-muted-foreground">
+        <div className="text-muted-foreground px-0.5 text-center text-xs">
           Demo is read only. Press send to send messages.
         </div>
       </div>
     </MessageScrollerProvider>
-  )
+  );
 }

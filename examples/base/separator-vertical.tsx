@@ -1,4 +1,4 @@
-import { Separator } from "@/styles/base-nova/ui/separator"
+import { Separator } from "@/styles/base-default/ui/separator";
 
 export function SeparatorVertical() {
   return (
@@ -9,5 +9,5 @@ export function SeparatorVertical() {
       <Separator orientation="vertical" />
       <div>Source</div>
     </div>
-  )
+  );
 }

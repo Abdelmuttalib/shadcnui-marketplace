@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/snow/ui/button";
-import { ScrollArea } from "@/registry/snow/ui/scroll-area";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { ScrollArea } from "@/registry/bases/base/snow/ui/scroll-area";
 
 import { Playlist } from "../data/playlists";
 

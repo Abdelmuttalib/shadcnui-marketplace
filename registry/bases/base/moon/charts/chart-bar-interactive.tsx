@@ -9,13 +9,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 
 export const description = "An interactive bar chart";
 
@@ -141,7 +141,7 @@ export function Component() {
 
   return (
     <Card>
-      <CardHeader className="flex flex-col items-stretch space-y-0 border-b border-moon-border p-0 sm:flex-row">
+      <CardHeader className="border-moon-border flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
           <CardTitle>Bar Chart - Interactive</CardTitle>
           <CardDescription>
@@ -155,10 +155,10 @@ export function Component() {
               <button
                 key={chart}
                 data-active={activeChart === chart}
-                className="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t border-moon-border px-6 py-4 text-left even:border-l data-[active=true]:bg-moon-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
+                className="border-moon-border data-[active=true]:bg-moon-muted/50 relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
                 onClick={() => setActiveChart(chart)}
               >
-                <span className="text-xs text-moon-muted-foreground">
+                <span className="text-moon-muted-foreground text-xs">
                   {chartConfig[chart].label}
                 </span>
                 <span className="text-lg font-bold leading-none sm:text-3xl">

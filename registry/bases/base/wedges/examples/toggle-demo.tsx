@@ -1,6 +1,6 @@
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/wedges/ui/toggle";
+import { Toggle } from "@/registry/bases/base/wedges/ui/toggle";
 
 export default function ToggleDemo() {
   return (

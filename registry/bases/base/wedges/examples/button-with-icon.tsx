@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 
 export default function ButtonWithIcon() {
   return (

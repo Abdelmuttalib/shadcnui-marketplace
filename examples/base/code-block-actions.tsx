@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { DownloadIcon, TerminalIcon, WrapTextIcon } from "lucide-react"
+import { DownloadIcon, TerminalIcon, WrapTextIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -11,26 +11,26 @@ import {
   CodeBlockCopyButton,
   CodeBlockHeader,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const output = `$ pnpm lint
 apps/web/components/message-list.tsx
   18:22  error  'messages' is possibly 'undefined'. Add a guard before calling map  @typescript-eslint/no-unsafe-call
   42:7   warning  React Hook React.useEffect has a missing dependency: 'scrollToBottom'  react-hooks/exhaustive-deps
 
-✖ 2 problems (1 error, 1 warning)`
+✖ 2 problems (1 error, 1 warning)`;
 
 function download(value: string, filename: string) {
-  const url = URL.createObjectURL(new Blob([value], { type: "text/plain" }))
-  const link = document.createElement("a")
-  link.href = url
-  link.download = filename
-  link.click()
-  URL.revokeObjectURL(url)
+  const url = URL.createObjectURL(new Blob([value], { type: "text/plain" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 export function CodeBlockActionsExample() {
-  const [wrap, setWrap] = React.useState(true)
+  const [wrap, setWrap] = React.useState(true);
 
   return (
     <div className="w-full max-w-md">
@@ -65,5 +65,5 @@ export function CodeBlockActionsExample() {
         <CodeBlockContent wrap={wrap}>{output}</CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

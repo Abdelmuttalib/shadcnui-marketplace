@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/wedges/ui/resizable";
+} from "@/registry/bases/base/wedges/ui/resizable";
 
 export default function ResizableDemo() {
   return (

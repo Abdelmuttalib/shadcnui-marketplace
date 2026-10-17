@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Avatar,
   AvatarBadge,
@@ -13,7 +13,7 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "@/styles/base-nova/ui-rtl/avatar"
+} from "@/styles/base-default/ui/avatar";
 
 const translations: Translations = {
   en: {
@@ -34,10 +34,10 @@ const translations: Translations = {
       moreUsers: "+3",
     },
   },
-}
+};
 
 export function AvatarRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div
@@ -82,5 +82,5 @@ export function AvatarRtl() {
         <AvatarGroupCount>{t.moreUsers}</AvatarGroupCount>
       </AvatarGroup>
     </div>
-  )
+  );
 }

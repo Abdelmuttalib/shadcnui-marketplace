@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { ChevronDownIcon } from "lucide-react"
+import { ChevronDownIcon } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-nova/ui/avatar"
-import { Button } from "@/styles/base-nova/ui/button"
+} from "@/styles/base-default/ui/avatar";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 const people = [
   {
@@ -39,7 +39,7 @@ const people = [
     avatar: "https://github.com/evilrabbit.png",
     email: "evilrabbit@vercel.com",
   },
-]
+];
 
 export function ItemDropdown() {
   return (
@@ -70,5 +70,5 @@ export function ItemDropdown() {
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

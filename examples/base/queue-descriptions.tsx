@@ -3,7 +3,7 @@ import {
   CircleIcon,
   ListChecksIcon,
   ListTodoIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Trace,
@@ -13,7 +13,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const todos: { title: string; description?: string; done: boolean }[] = [
   {
@@ -33,7 +33,7 @@ const todos: { title: string; description?: string; done: boolean }[] = [
     description: "Typing, clearing and keyboard selection.",
     done: false,
   },
-]
+];
 
 function TodoRow({ todo }: { todo: (typeof todos)[number] }) {
   const line = (
@@ -41,10 +41,10 @@ function TodoRow({ todo }: { todo: (typeof todos)[number] }) {
       <TraceIcon>{todo.done ? <CircleCheckIcon /> : <CircleIcon />}</TraceIcon>
       <TraceTitle>{todo.title}</TraceTitle>
     </TraceLine>
-  )
+  );
 
   if (!todo.description) {
-    return line
+    return line;
   }
 
   return (
@@ -52,12 +52,12 @@ function TodoRow({ todo }: { todo: (typeof todos)[number] }) {
       <TraceCollapsibleTrigger>{line}</TraceCollapsibleTrigger>
       <TraceCollapsibleContent>{todo.description}</TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function QueueDescriptions() {
-  const pending = todos.filter((todo) => !todo.done)
-  const completed = todos.filter((todo) => todo.done)
+  const pending = todos.filter((todo) => !todo.done);
+  const completed = todos.filter((todo) => todo.done);
 
   return (
     <Trace className="max-w-sm">
@@ -96,5 +96,5 @@ export function QueueDescriptions() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

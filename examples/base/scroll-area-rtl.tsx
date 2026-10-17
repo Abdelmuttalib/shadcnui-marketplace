@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { ScrollArea } from "@/styles/base-nova/ui-rtl/scroll-area"
-import { Separator } from "@/styles/base-nova/ui-rtl/separator"
+  useTranslation,
+} from "@/components/language-selector";
+import { ScrollArea } from "@/styles/base-default/ui/scroll-area";
+import { Separator } from "@/styles/base-default/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
-)
+);
 
 const translations: Translations = {
   en: {
@@ -32,15 +32,15 @@ const translations: Translations = {
       tags: "תגיות",
     },
   },
-}
+};
 
 export function ScrollAreaRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <ScrollArea className="h-72 w-48 rounded-md border" dir={dir}>
       <div className="p-4">
-        <h4 className="mb-4 text-sm leading-none font-medium">{t.tags}</h4>
+        <h4 className="mb-4 text-sm font-medium leading-none">{t.tags}</h4>
         {tags.map((tag) => (
           <React.Fragment key={tag}>
             <div className="text-sm">{tag}</div>
@@ -49,5 +49,5 @@ export function ScrollAreaRtl() {
         ))}
       </div>
     </ScrollArea>
-  )
+  );
 }

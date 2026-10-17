@@ -1,4 +1,4 @@
-import { CircleXIcon, FileCodeIcon, LayersIcon } from "lucide-react"
+import { CircleXIcon, FileCodeIcon, LayersIcon } from "lucide-react";
 
 import {
   Trace,
@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const STACK = `TypeError: Cannot read properties of undefined (reading 'total')
     at formatInvoice (app/lib/billing.ts:42:31)
@@ -16,10 +16,10 @@ const STACK = `TypeError: Cannot read properties of undefined (reading 'total')
     at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:14985:18)
     at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19049:16)
     at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22776:12)
-    at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)`
+    at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)`;
 
 function parseFrame(line: string) {
-  const match = line.match(/^at (.+) \((.+):(\d+):(\d+)\)$/)
+  const match = line.match(/^at (.+) \((.+):(\d+):(\d+)\)$/);
 
   return {
     line,
@@ -27,13 +27,13 @@ function parseFrame(line: string) {
     file: match?.[2],
     lineNumber: match?.[3],
     internal: line.includes("node_modules"),
-  }
+  };
 }
 
-const [error, ...lines] = STACK.split("\n").map((line) => line.trim())
-const frames = lines.map(parseFrame)
-const appFrames = frames.filter((frame) => !frame.internal)
-const internalFrames = frames.filter((frame) => frame.internal)
+const [error, ...lines] = STACK.split("\n").map((line) => line.trim());
+const frames = lines.map(parseFrame);
+const appFrames = frames.filter((frame) => !frame.internal);
+const internalFrames = frames.filter((frame) => frame.internal);
 
 export function StackTraceFrames() {
   return (
@@ -48,7 +48,7 @@ export function StackTraceFrames() {
           </TraceLine>
         </TraceCollapsibleTrigger>
         <TraceCollapsibleContent keepMounted className="flex flex-col gap-2">
-          <p className="font-mono text-xs text-destructive">{error}</p>
+          <p className="text-destructive font-mono text-xs">{error}</p>
           <Trace>
             {appFrames.map((frame) => (
               <a key={frame.line} href={`#${frame.file}:${frame.lineNumber}`}>
@@ -74,7 +74,7 @@ export function StackTraceFrames() {
                 </TraceLine>
               </TraceCollapsibleTrigger>
               <TraceCollapsibleContent>
-                <ol className="flex flex-col gap-1 overflow-x-auto rounded-md bg-muted p-3 font-mono text-xs">
+                <ol className="bg-muted flex flex-col gap-1 overflow-x-auto rounded-md p-3 font-mono text-xs">
                   {internalFrames.map((frame) => (
                     <li key={frame.line} className="whitespace-nowrap">
                       {frame.line}
@@ -87,5 +87,5 @@ export function StackTraceFrames() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   ArchiveIcon,
   ArrowLeftIcon,
@@ -11,10 +10,11 @@ import {
   MoreHorizontalIcon,
   TagIcon,
   Trash2Icon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { ButtonGroup } from "@/styles/base-nova/ui/button-group"
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,10 +27,10 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 export default function ButtonGroupDemo() {
-  const [label, setLabel] = React.useState("personal")
+  const [label, setLabel] = React.useState("personal");
 
   return (
     <ButtonGroup>
@@ -112,5 +112,5 @@ export default function ButtonGroupDemo() {
         </DropdownMenu>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

@@ -2,7 +2,10 @@
 
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
-import { ChartConfig, ChartContainer } from "@/registry/snow/ui/chart";
+import {
+  ChartConfig,
+  ChartContainer,
+} from "@/registry/bases/base/snow/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

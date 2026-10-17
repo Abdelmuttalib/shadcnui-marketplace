@@ -1,5 +1,8 @@
-import { Label } from "@/styles/base-nova/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/styles/base-nova/ui/radio-group"
+import { Label } from "@/styles/base-default/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/styles/base-default/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (
@@ -17,5 +20,5 @@ export function RadioGroupDemo() {
         <Label htmlFor="r3">Compact</Label>
       </div>
     </RadioGroup>
-  )
+  );
 }

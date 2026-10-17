@@ -1,6 +1,9 @@
-import { CheckIcon, FlaskConicalIcon, XIcon } from "lucide-react"
+import { CheckIcon, FlaskConicalIcon, XIcon } from "lucide-react";
 
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -9,7 +12,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const tests: { name: string; error?: string }[] = [
   { name: "formats a price in USD" },
@@ -22,9 +25,9 @@ const tests: { name: string; error?: string }[] = [
   },
   { name: "formats zero as free" },
   { name: "rejects a negative price" },
-]
+];
 
-const failed = tests.filter((test) => test.error).length
+const failed = tests.filter((test) => test.error).length;
 
 export function TestResultsBasic() {
   return (
@@ -74,5 +77,5 @@ export function TestResultsBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

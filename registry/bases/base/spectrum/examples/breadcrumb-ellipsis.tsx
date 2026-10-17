@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/spectrum/ui/breadcrumb";
+} from "@/registry/bases/base/spectrum/ui/breadcrumb";
 
 export default function BreadcrumbCollapsed() {
   return (

@@ -2,15 +2,18 @@ import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Button } from "@/registry/moon/ui/button";
-import { ScrollArea, ScrollBar } from "@/registry/moon/ui/scroll-area";
-import { Separator } from "@/registry/moon/ui/separator";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/moon/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/moon/ui/tabs";
+} from "@/registry/bases/base/moon/ui/tabs";
 
 import { AlbumArtwork } from "./components/album-artwork";
 import { Menu } from "./components/menu";
@@ -29,7 +32,7 @@ export default function MusicPage() {
     <>
       <div className="block">
         <Menu />
-        <div className="border-t border-t-moon-border">
+        <div className="border-t-moon-border border-t">
           <div className="bg-moon-background">
             <div className="grid grid-cols-3 lg:grid-cols-5">
               <Sidebar playlists={playlists} className="hidden lg:block" />
@@ -62,7 +65,7 @@ export default function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             Listen Now
                           </h2>
-                          <p className="text-sm text-moon-muted-foreground">
+                          <p className="text-moon-muted-foreground text-sm">
                             Top picks for you. Updated daily.
                           </p>
                         </div>
@@ -89,7 +92,7 @@ export default function MusicPage() {
                         <h2 className="text-2xl font-semibold tracking-tight">
                           Made for You
                         </h2>
-                        <p className="text-sm text-moon-muted-foreground">
+                        <p className="text-moon-muted-foreground text-sm">
                           Your personal playlists. Updated daily.
                         </p>
                       </div>
@@ -121,7 +124,7 @@ export default function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             New Episodes
                           </h2>
-                          <p className="text-sm text-moon-muted-foreground">
+                          <p className="text-moon-muted-foreground text-sm">
                             Your favorite podcasts. Updated daily.
                           </p>
                         </div>

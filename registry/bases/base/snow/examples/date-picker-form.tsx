@@ -8,8 +8,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/snow/ui/button";
-import { Calendar } from "@/registry/snow/ui/calendar";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Calendar } from "@/registry/bases/base/snow/ui/calendar";
 import {
   Form,
   FormControl,
@@ -18,12 +18,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/snow/ui/form";
+} from "@/registry/bases/base/snow/ui/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/snow/ui/popover";
+} from "@/registry/bases/base/snow/ui/popover";
 
 const FormSchema = z.object({
   dob: z.date({

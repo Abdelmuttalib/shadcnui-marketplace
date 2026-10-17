@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/spectrum/ui/checkbox";
-import { Label } from "@/registry/spectrum/ui/label";
+import { Checkbox } from "@/registry/bases/base/spectrum/ui/checkbox";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 
 export default function LabelDemo() {
   return (

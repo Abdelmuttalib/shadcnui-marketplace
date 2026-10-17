@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/neon/ui/hover-card";
-import { Label } from "@/registry/neon/ui/label";
-import { Slider } from "@/registry/neon/ui/slider";
+} from "@/registry/bases/base/neon/ui/hover-card";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import { Slider } from "@/registry/bases/base/neon/ui/slider";
 
 interface TopPSelectorProps {
   defaultValue: SliderProps["defaultValue"];
@@ -25,7 +25,7 @@ export function TopPSelector({ defaultValue }: TopPSelectorProps) {
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <Label htmlFor="top-p">Top P</Label>
-              <span className="w-12 rounded-neon-md border border-transparent px-2 py-0.5 text-right text-sm text-neon-muted-foreground hover:border-border">
+              <span className="rounded-neon-md text-neon-muted-foreground hover:border-border w-12 border border-transparent px-2 py-0.5 text-right text-sm">
                 {value}
               </span>
             </div>

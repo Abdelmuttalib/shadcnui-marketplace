@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/styles/base-nova/ui/button"
+import { buttonVariants } from "@/styles/base-default/ui/button";
 
 export default function ButtonRender() {
   return (
@@ -8,5 +8,5 @@ export default function ButtonRender() {
     >
       Login
     </a>
-  )
+  );
 }

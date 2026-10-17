@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Clock2Icon } from "lucide-react"
+import { Clock2Icon } from "lucide-react";
+import * as React from "react";
 
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Card, CardContent, CardFooter } from "@/styles/base-nova/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Card, CardContent, CardFooter } from "@/styles/base-default/ui/card";
+import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 export function CalendarWithTime() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(new Date().getFullYear(), new Date().getMonth(), 12)
-  )
+  );
 
   return (
     <Card size="sm" className="mx-auto w-fit">
@@ -27,7 +27,7 @@ export function CalendarWithTime() {
           className="p-0"
         />
       </CardContent>
-      <CardFooter className="border-t bg-card">
+      <CardFooter className="bg-card border-t">
         <FieldGroup>
           <Field>
             <FieldLabel htmlFor="time-from">Start Time</FieldLabel>
@@ -62,5 +62,5 @@ export function CalendarWithTime() {
         </FieldGroup>
       </CardFooter>
     </Card>
-  )
+  );
 }

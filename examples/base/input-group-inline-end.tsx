@@ -1,15 +1,15 @@
-import { EyeOffIcon } from "lucide-react"
+import { EyeOffIcon } from "lucide-react";
 
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
+} from "@/styles/base-default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 export function InputGroupInlineEnd() {
   return (
@@ -27,5 +27,5 @@ export function InputGroupInlineEnd() {
       </InputGroup>
       <FieldDescription>Icon positioned at the end.</FieldDescription>
     </Field>
-  )
+  );
 }

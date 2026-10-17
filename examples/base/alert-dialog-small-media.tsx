@@ -1,4 +1,4 @@
-import { BluetoothIcon } from "lucide-react"
+import { BluetoothIcon } from "lucide-react";
 
 import {
   AlertDialog,
@@ -11,8 +11,8 @@ import {
   AlertDialogMedia,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/styles/base-nova/ui/alert-dialog"
-import { Button } from "@/styles/base-nova/ui/button"
+} from "@/styles/base-default/ui/alert-dialog";
+import { Button } from "@/styles/base-default/ui/button";
 
 export function AlertDialogSmallWithMedia() {
   return (
@@ -37,5 +37,5 @@ export function AlertDialogSmallWithMedia() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
+  );
 }

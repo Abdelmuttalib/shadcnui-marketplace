@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/moon/ui/table";
+} from "@/registry/bases/base/moon/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-moon-md border border-moon-border">
+    <div className="rounded-moon-md border-moon-border border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

@@ -1,18 +1,18 @@
-import { AudioLinesIcon, PlusIcon } from "lucide-react"
+import { AudioLinesIcon, PlusIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { ButtonGroup } from "@/styles/base-nova/ui/button-group"
-import { Input } from "@/styles/base-nova/ui/input"
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-nova/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 export function ButtonGroupNested() {
   return (
@@ -34,5 +34,5 @@ export function ButtonGroupNested() {
         </InputGroup>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

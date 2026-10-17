@@ -1,4 +1,4 @@
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Card,
   CardContent,
@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/snow/ui/card";
-import { Input } from "@/registry/snow/ui/input";
-import { Label } from "@/registry/snow/ui/label";
+} from "@/registry/bases/base/snow/ui/card";
+import { Input } from "@/registry/bases/base/snow/ui/input";
+import { Label } from "@/registry/bases/base/snow/ui/label";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/snow/ui/tabs";
+} from "@/registry/bases/base/snow/ui/tabs";
 
 export default function TabsDemo() {
   return (

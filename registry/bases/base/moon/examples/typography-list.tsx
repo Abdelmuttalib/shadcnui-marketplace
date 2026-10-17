@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/moon/ui/typography";
+import { Typography } from "@/registry/bases/base/moon/ui/typography";
 
 export default function TypographyList() {
   return (

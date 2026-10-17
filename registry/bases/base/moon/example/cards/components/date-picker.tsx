@@ -1,6 +1,6 @@
-import DatePickerWithRange from "@/registry/moon/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/moon/ui/card";
-import { Label } from "@/registry/moon/ui/label";
+import DatePickerWithRange from "@/registry/bases/base/moon/components/date-picker-with-range";
+import { Card, CardContent } from "@/registry/bases/base/moon/ui/card";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 
 export function DemoDatePicker() {
   return (

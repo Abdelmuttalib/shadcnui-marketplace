@@ -2,9 +2,9 @@ import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
 import { ComponentProps } from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/moon/ui/badge";
-import { ScrollArea } from "@/registry/moon/ui/scroll-area";
-import { Separator } from "@/registry/moon/ui/separator";
+import { Badge } from "@/registry/bases/base/moon/ui/badge";
+import { ScrollArea } from "@/registry/bases/base/moon/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 import { Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -23,7 +23,7 @@ export function MailList({ items }: MailListProps) {
           <button
             key={item.id}
             className={cn(
-              "flex flex-col items-start gap-2 rounded-moon-lg border border-moon-border p-3 text-left text-sm transition-all hover:bg-moon-accent",
+              "rounded-moon-lg border-moon-border hover:bg-moon-accent flex flex-col items-start gap-2 border p-3 text-left text-sm transition-all",
               mail.selected === item.id && "bg-moon-muted"
             )}
             onClick={() =>
@@ -56,7 +56,7 @@ export function MailList({ items }: MailListProps) {
               </div>
               <div className="text-xs font-medium">{item.subject}</div>
             </div>
-            <div className="line-clamp-2 text-xs text-moon-muted-foreground">
+            <div className="text-moon-muted-foreground line-clamp-2 text-xs">
               {item.text.substring(0, 300)}
             </div>
             {item.labels.length ? (

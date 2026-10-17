@@ -1,4 +1,4 @@
-import { Separator } from "@/styles/base-nova/ui/separator"
+import { Separator } from "@/styles/base-default/ui/separator";
 
 export function SeparatorList() {
   return (
@@ -18,5 +18,5 @@ export function SeparatorList() {
         <dd className="text-muted-foreground">Value 3</dd>
       </dl>
     </div>
-  )
+  );
 }

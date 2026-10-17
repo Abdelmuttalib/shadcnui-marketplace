@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/neon/ui/resizable";
+} from "@/registry/bases/base/neon/ui/resizable";
 
 export default function ResizableDemo() {
   return (

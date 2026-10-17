@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
 import {
   CircleAlertIcon,
   CircleCheckIcon,
   CircleDashedIcon,
-} from "lucide-react"
+} from "lucide-react";
+import Link from "next/link";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -20,7 +20,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/styles/base-nova/ui-rtl/navigation-menu"
+} from "@/styles/base-default/ui/navigation-menu";
 
 const translations: Translations = {
   en: {
@@ -126,7 +126,7 @@ const translations: Translations = {
       docs: "תיעוד",
     },
   },
-}
+};
 
 const components = [
   {
@@ -159,10 +159,10 @@ const components = [
     descriptionKey: "tooltipDesc" as const,
     href: "/docs/primitives/tooltip",
   },
-] as const
+] as const;
 
 export function NavigationMenuRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
+  const { dir, t, language } = useTranslation(translations, "ar");
 
   return (
     <NavigationMenu dir={dir} align={dir === "rtl" ? "end" : "start"}>
@@ -252,7 +252,7 @@ export function NavigationMenuRtl() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 function ListItem({
@@ -265,10 +265,10 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink render={<Link href={href} />}>
         <div className="flex flex-col gap-1 text-sm">
-          <div className="leading-none font-medium">{title}</div>
-          <div className="line-clamp-2 text-muted-foreground">{children}</div>
+          <div className="font-medium leading-none">{title}</div>
+          <div className="text-muted-foreground line-clamp-2">{children}</div>
         </div>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }

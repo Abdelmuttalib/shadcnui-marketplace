@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/styles/base-nova/ui/breadcrumb"
+} from "@/styles/base-default/ui/breadcrumb";
 
 export function BreadcrumbBasic() {
   return (
@@ -24,5 +24,5 @@ export function BreadcrumbBasic() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

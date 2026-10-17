@@ -6,7 +6,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-nova/ui/select"
+} from "@/styles/base-default/ui/select";
 
 const items = [
   { label: "Select a fruit", value: null },
@@ -15,12 +15,12 @@ const items = [
   { label: "Blueberry", value: "blueberry" },
   { label: "Grapes", value: "grapes" },
   { label: "Pineapple", value: "pineapple" },
-]
+];
 
 export function SelectDemo() {
   return (
     <Select items={items}>
-      <SelectTrigger className="w-full max-w-48">
+      <SelectTrigger className="max-w-48 w-full">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
@@ -34,5 +34,5 @@ export function SelectDemo() {
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 }

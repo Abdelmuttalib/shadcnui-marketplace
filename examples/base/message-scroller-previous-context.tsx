@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
+import { useChat } from "@ai-sdk/react";
 import {
   ArrowUpIcon,
   GlobeIcon,
@@ -10,11 +9,12 @@ import {
   PlusIcon,
   RotateCwIcon,
   TelescopeIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { MessageAnimated } from "@/components/message-animated"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { MessageAnimated } from "@/components/message-animated";
+import { createChat, getMessageText } from "@/lib/ai";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -23,34 +23,34 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
-} from "@/styles/base-rhea/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-rhea/ui/message-scroller"
-import { Slider } from "@/styles/base-rhea/ui/slider"
+} from "@/styles/base-default/ui/message-scroller";
+import { Slider } from "@/styles/base-default/ui/slider";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-rhea/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
-const DEFAULT_PEEK = 64
+const DEFAULT_PEEK = 64;
 
 const chat = createChat()
   .user(
@@ -78,19 +78,19 @@ const chat = createChat()
   .sleep(1000)
   .assistant(
     '`MessageScrollerContent` sets `role="log"` and `aria-relevant="additions"` by default, so screen readers announce new messages as they stream in.\n\nThe scroll button is a real `<button>` with an sr-only label, and it\'s removed from the tab order when you\'re already at the bottom — no ghost focus stops.'
-  )
-const initialMessages = chat.get(2)
-const transport = chat.transport({ delayMs: 35 })
+  );
+const initialMessages = chat.get(2);
+const transport = chat.transport({ delayMs: 35 });
 
 export function MessageScrollerPreviousContext() {
-  const [demoKey, setDemoKey] = React.useState(0)
-  const [peek, setPeek] = React.useState(DEFAULT_PEEK)
+  const [demoKey, setDemoKey] = React.useState(0);
+  const [peek, setPeek] = React.useState(DEFAULT_PEEK);
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: initialMessages,
     transport,
-  })
-  const nextMessage = chat.next(messages)
-  const isBusy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const isBusy = status === "submitted" || status === "streaming";
 
   return (
     <MessageScrollerProvider
@@ -99,7 +99,7 @@ export function MessageScrollerPreviousContext() {
       scrollPreviousItemPeek={peek}
     >
       <div className="relative flex flex-col gap-4">
-        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
+        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>Keeping Context Visible</CardTitle>
             <CardDescription>
@@ -115,9 +115,9 @@ export function MessageScrollerPreviousContext() {
                       aria-label="Reset context example"
                       disabled={isBusy}
                       onClick={() => {
-                        setMessages(initialMessages)
-                        setPeek(DEFAULT_PEEK)
-                        setDemoKey((key) => key + 1)
+                        setMessages(initialMessages);
+                        setPeek(DEFAULT_PEEK);
+                        setDemoKey((key) => key + 1);
                       }}
                     />
                   }
@@ -152,11 +152,11 @@ export function MessageScrollerPreviousContext() {
           <CardFooter className="flex-col gap-2">
             <form
               onSubmit={(e) => {
-                e.preventDefault()
+                e.preventDefault();
                 if (!nextMessage || isBusy) {
-                  return
+                  return;
                 }
-                void sendMessage(nextMessage)
+                void sendMessage(nextMessage);
               }}
               className="w-full"
             >
@@ -214,7 +214,7 @@ export function MessageScrollerPreviousContext() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                   <div className="flex w-28 items-center gap-2">
-                    <span className="text-xs text-muted-foreground tabular-nums">
+                    <span className="text-muted-foreground text-xs tabular-nums">
                       {peek}px
                     </span>
                     <Slider
@@ -227,9 +227,9 @@ export function MessageScrollerPreviousContext() {
                       onValueChange={(value) => {
                         const nextValue = Array.isArray(value)
                           ? value[0]
-                          : value
+                          : value;
 
-                        setPeek(nextValue ?? DEFAULT_PEEK)
+                        setPeek(nextValue ?? DEFAULT_PEEK);
                       }}
                     />
                   </div>
@@ -248,10 +248,10 @@ export function MessageScrollerPreviousContext() {
             </form>
           </CardFooter>
         </Card>
-        <div className="px-0.5 text-center text-xs text-muted-foreground">
+        <div className="text-muted-foreground px-0.5 text-center text-xs">
           Adjust the slider and send. Observe the previous message peak
         </div>
       </div>
     </MessageScrollerProvider>
-  )
+  );
 }

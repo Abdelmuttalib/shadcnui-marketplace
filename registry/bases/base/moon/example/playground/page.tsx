@@ -2,21 +2,21 @@ import { CounterClockwiseClockIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/moon/ui/hover-card";
-import { Label } from "@/registry/moon/ui/label";
-import { Separator } from "@/registry/moon/ui/separator";
+} from "@/registry/bases/base/moon/ui/hover-card";
+import { Label } from "@/registry/bases/base/moon/ui/label";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/moon/ui/tabs";
-import { Textarea } from "@/registry/moon/ui/textarea";
+} from "@/registry/bases/base/moon/ui/tabs";
+import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
 
 import { CodeViewer } from "./components/code-viewer";
 import { MaxLengthSelector } from "./components/maxlength-selector";
@@ -38,7 +38,7 @@ const metadata: Metadata = {
 export default function PlaygroundPage() {
   return (
     <>
-      <div className="flex h-full flex-col bg-moon-background px-6">
+      <div className="bg-moon-background flex h-full flex-col px-6">
         <div className="container mx-auto flex flex-col items-start justify-between space-y-2 py-4 sm:flex-row sm:items-center sm:space-y-0 md:h-16">
           <h2 className="text-lg font-semibold">Playground</h2>
           <div className="ml-auto flex w-full space-x-2 sm:justify-end lg:-mr-4">
@@ -261,7 +261,7 @@ export default function PlaygroundPage() {
                         placeholder="We're writing to [inset]. Congrats from OpenAI!"
                         className="h-full min-h-[300px] lg:min-h-[700px] xl:min-h-[700px]"
                       />
-                      <div className="rounded-moon-md border bg-moon-muted"></div>
+                      <div className="rounded-moon-md bg-moon-muted border"></div>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>
@@ -292,7 +292,7 @@ export default function PlaygroundPage() {
                           />
                         </div>
                       </div>
-                      <div className="mt-[21px] min-h-[400px] rounded-moon-md border bg-moon-muted lg:min-h-[700px]" />
+                      <div className="rounded-moon-md bg-moon-muted mt-[21px] min-h-[400px] border lg:min-h-[700px]" />
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>

@@ -2,13 +2,13 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/wedges/ui/resizable";
+} from "@/registry/bases/base/wedges/ui/resizable";
 
 export function ResizableHandleDemo() {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="min-h-[200px] max-w-md rounded-wedges-lg border border-wedges-border md:min-w-[450px]"
+      className="rounded-wedges-lg border-wedges-border min-h-[200px] max-w-md border md:min-w-[450px]"
     >
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">

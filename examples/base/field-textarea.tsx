@@ -4,8 +4,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} from "@/styles/base-nova/ui/field"
-import { Textarea } from "@/styles/base-nova/ui/textarea"
+} from "@/styles/base-default/ui/field";
+import { Textarea } from "@/styles/base-default/ui/textarea";
 
 export default function FieldTextarea() {
   return (
@@ -24,5 +24,5 @@ export default function FieldTextarea() {
         </Field>
       </FieldGroup>
     </FieldSet>
-  )
+  );
 }

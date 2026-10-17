@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIDataTypes, UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIDataTypes, UIMessage } from "ai";
 import {
   ArrowUpIcon,
   CircleCheckIcon,
@@ -14,36 +13,40 @@ import {
   RotateCwIcon,
   TelescopeIcon,
   TerminalIcon,
-} from "lucide-react"
-import { motion, useReducedMotion } from "motion/react"
+} from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { MESSAGE_ANIMATIONS } from "@/lib/message-animations"
-import { Markdown } from "@/components/markdown"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import { Markdown } from "@/components/markdown";
+import { createChat, getMessageText } from "@/lib/ai";
+import { MESSAGE_ANIMATIONS } from "@/lib/message-animations";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-rhea/ui/empty"
+} from "@/styles/base-default/ui/empty";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/base-rhea/ui/input-group"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/input-group";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -51,12 +54,12 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-rhea/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 import {
   Trace,
   TraceCollapsible,
@@ -65,22 +68,22 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     runCommand: {
-      input: { command: string }
-      output: { stdout: string }
-    }
+      input: { command: string };
+      output: { stdout: string };
+    };
   }
->
+>;
 
-type ChatPart = ChatMessage["parts"][number]
+type ChatPart = ChatMessage["parts"][number];
 
-type ToolPart = Extract<ChatPart, { type: "tool-runCommand" }>
+type ToolPart = Extract<ChatPart, { type: "tool-runCommand" }>;
 
 const chat = createChat<ChatMessage>()
   .user("Add a dark mode toggle to the settings page.")
@@ -88,13 +91,13 @@ const chat = createChat<ChatMessage>()
   .assistant(({ writer }) => {
     writer.reasoning(
       "I need to know how themes are set up before I add a toggle. If next-themes is already in the layout, the toggle only has to call setTheme."
-    )
-    writer.sleep(400)
+    );
+    writer.sleep(400);
     writer
       .tool("runCommand", { input: { command: "rg -l ThemeProvider app" } })
       .sleep(800)
-      .output({ stdout: "app/layout.tsx" })
-    writer.sleep(500)
+      .output({ stdout: "app/layout.tsx" });
+    writer.sleep(500);
     writer.text(`next-themes is already set up in \`app/layout.tsx\`, so the toggle only has to call \`setTheme\`.
 
 **Changes**
@@ -105,15 +108,15 @@ const chat = createChat<ChatMessage>()
 \`\`\`tsx
 const { setTheme } = useTheme()
 \`\`\`
-`)
+`);
   })
   .user("Make it follow the system setting by default.")
   .sleep(600)
   .assistant(({ writer }) => {
     writer.reasoning(
       "The default theme lives on the ThemeProvider. I should check what it is set to now."
-    )
-    writer.sleep(400)
+    );
+    writer.sleep(400);
     writer
       .tool("runCommand", {
         input: { command: "rg -n defaultTheme app/layout.tsx" },
@@ -121,8 +124,8 @@ const { setTheme } = useTheme()
       .sleep(800)
       .output({
         stdout: '12:  <ThemeProvider attribute="class" defaultTheme="light">',
-      })
-    writer.sleep(500)
+      });
+    writer.sleep(500);
     writer.text(`It was set to \`light\`. I updated the \`ThemeProvider\` in \`app/layout.tsx\`:
 
 \`\`\`tsx
@@ -130,7 +133,7 @@ const { setTheme } = useTheme()
 \`\`\`
 
 New visitors now get the theme from their OS. The toggle also has a **System** option, so anyone who picked Light or Dark can switch back.
-`)
+`);
   })
   .user("Run the build before I ship it.")
   .sleep(600)
@@ -141,60 +144,60 @@ New visitors now get the theme from their OS. The toggle also has a **System** o
       .output({
         stdout:
           "▲ Next.js 16.0.0\n\n✓ Compiled successfully in 4.2s\n✓ Linting and checking validity of types\n✓ Generating static pages (12/12)",
-      })
-    writer.sleep(500)
+      });
+    writer.sleep(500);
     writer.text(`The build passes, so it is ready to ship.
 
 - Compiled in **4.2s**.
 - No lint or type errors.
 - Generated all **12** static pages.
-`)
-  })
+`);
+  });
 
-const initialMessages = chat.get(0)
+const initialMessages = chat.get(0);
 const transport = chat.transport({
   delayMs: 16,
   fallback:
     "This demo only knows the scripted turns. Press reset to start over.",
-})
+});
 
-const MotionMessageScrollerItem = motion.create(MessageScrollerItem)
+const MotionMessageScrollerItem = motion.create(MessageScrollerItem);
 
 export function ChatDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: initialMessages,
     transport,
-  })
-  const [draft, setDraft] = React.useState<string | null>(null)
-  const formRef = React.useRef<HTMLFormElement>(null)
-  const shouldReduceMotion = useReducedMotion()
-  const nextMessage = chat.next(messages)
-  const busy = status === "submitted" || status === "streaming"
-  const text = draft ?? (nextMessage ? getMessageText(nextMessage) : "")
-  const canSend = text.trim().length > 0 && !busy
+  });
+  const [draft, setDraft] = React.useState<string | null>(null);
+  const formRef = React.useRef<HTMLFormElement>(null);
+  const shouldReduceMotion = useReducedMotion();
+  const nextMessage = chat.next(messages);
+  const busy = status === "submitted" || status === "streaming";
+  const text = draft ?? (nextMessage ? getMessageText(nextMessage) : "");
+  const canSend = text.trim().length > 0 && !busy;
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
     if (!canSend) {
-      return
+      return;
     }
 
     if (draft === null && nextMessage) {
-      void sendMessage(nextMessage)
+      void sendMessage(nextMessage);
     } else {
-      void sendMessage({ text: text.trim() })
+      void sendMessage({ text: text.trim() });
     }
-    setDraft(null)
+    setDraft(null);
   }
 
   return (
     <MessageScrollerProvider>
-      <div className="relative flex w-full flex-col gap-4 [[data-slot=preview]:has(&)]:bg-background [[data-slot=preview]:has(&)>div]:p-0!">
-        <div className="flex h-200 w-full flex-col gap-4">
+      <div className="[[data-slot=preview]:has(&)]:bg-background [[data-slot=preview]:has(&)>div]:p-0! relative flex w-full flex-col gap-4">
+        <div className="h-200 flex w-full flex-col gap-4">
           <div className="flex items-start justify-between gap-4 p-8 pb-4">
             <div className="flex flex-col gap-1">
               <div className="font-medium">New Thread</div>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-muted-foreground text-sm">
                 Ask the agent to change your code.
               </div>
             </div>
@@ -206,8 +209,8 @@ export function ChatDemo() {
                     size="icon"
                     aria-label="Reset conversation"
                     onClick={() => {
-                      setMessages(initialMessages)
-                      setDraft(null)
+                      setMessages(initialMessages);
+                      setDraft(null);
                     }}
                     disabled={busy}
                   />
@@ -262,16 +265,16 @@ export function ChatDemo() {
                               </MessageContent>
                             </Message>
                           </MotionMessageScrollerItem>
-                        )
+                        );
                       }
 
-                      const streaming = busy && message === messages.at(-1)
+                      const streaming = busy && message === messages.at(-1);
                       const steps = message.parts.filter(
                         (part) =>
                           part.type === "reasoning" ||
                           part.type === "tool-runCommand"
-                      )
-                      const reply = getMessageText(message)
+                      );
+                      const reply = getMessageText(message);
 
                       return (
                         <MessageScrollerItem
@@ -295,7 +298,7 @@ export function ChatDemo() {
                             </MessageContent>
                           </Message>
                         </MessageScrollerItem>
-                      )
+                      );
                     })}
                   </MessageScrollerContent>
                 </MessageScrollerViewport>
@@ -314,8 +317,8 @@ export function ChatDemo() {
                   className="min-h-14"
                   onKeyDown={(event) => {
                     if (event.key === "Enter" && !event.shiftKey) {
-                      event.preventDefault()
-                      formRef.current?.requestSubmit()
+                      event.preventDefault();
+                      formRef.current?.requestSubmit();
                     }
                   }}
                 />
@@ -370,25 +373,25 @@ export function ChatDemo() {
         </div>
       </div>
     </MessageScrollerProvider>
-  )
+  );
 }
 
 function StepRow({ part, streaming }: { part: ChatPart; streaming: boolean }) {
   if (part.type === "reasoning") {
     return (
       <ReasoningRow text={part.text} running={part.state === "streaming"} />
-    )
+    );
   }
 
   if (part.type === "tool-runCommand") {
-    return <ToolRow part={part} streaming={streaming} />
+    return <ToolRow part={part} streaming={streaming} />;
   }
 
-  return null
+  return null;
 }
 
 function ReasoningRow({ text, running }: { text: string; running: boolean }) {
-  const [open, setOpen] = React.useState<boolean>()
+  const [open, setOpen] = React.useState<boolean>();
 
   return (
     <TraceCollapsible open={open ?? running} onOpenChange={setOpen}>
@@ -408,14 +411,14 @@ function ReasoningRow({ text, running }: { text: string; running: boolean }) {
         {text}
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 function ToolRow({ part, streaming }: { part: ToolPart; streaming: boolean }) {
-  const command = part.input?.command
+  const command = part.input?.command;
 
   if (part.state === "output-available" || part.state === "output-error") {
-    const failed = part.state === "output-error"
+    const failed = part.state === "output-error";
 
     return (
       <TraceCollapsible>
@@ -437,7 +440,7 @@ function ToolRow({ part, streaming }: { part: ToolPart; streaming: boolean }) {
           </CodeBlock>
         </TraceCollapsibleContent>
       </TraceCollapsible>
-    )
+    );
   }
 
   return (
@@ -449,5 +452,5 @@ function ToolRow({ part, streaming }: { part: ToolPart; streaming: boolean }) {
         {streaming ? "Running" : "Failed to run"} {command}
       </TraceTitle>
     </TraceLine>
-  )
+  );
 }

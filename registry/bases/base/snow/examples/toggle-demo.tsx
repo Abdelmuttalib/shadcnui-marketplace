@@ -1,6 +1,6 @@
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/snow/ui/toggle";
+import { Toggle } from "@/registry/bases/base/snow/ui/toggle";
 
 export default function ToggleDemo() {
   return (

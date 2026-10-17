@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/wedges/ui/input";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/wedges/ui/resizable";
-import { Separator } from "@/registry/wedges/ui/separator";
+} from "@/registry/bases/base/wedges/ui/resizable";
+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/wedges/ui/tabs";
-import { TooltipProvider } from "@/registry/wedges/ui/tooltip";
+} from "@/registry/bases/base/wedges/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/wedges/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-wedges-background/60 bg-wedges-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-wedges-muted-foreground" />
+                  <Search className="text-wedges-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

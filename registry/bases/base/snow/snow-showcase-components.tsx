@@ -1,54 +1,58 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/registry/snow/showcase";
-import { AlertDialogDemo } from "@/registry/snow/showcase";
-import { BreadcrumbDemo } from "@/registry/snow/showcase";
-import { CalendarDemo } from "@/registry/snow/showcase";
-import { CheckboxDemo } from "@/registry/snow/showcase";
-import { ComboboxDemo } from "@/registry/snow/showcase";
-import { CommandDemo } from "@/registry/snow/showcase";
-import { ContextMenuDemo } from "@/registry/snow/showcase";
-import { DatePickerDemo } from "@/registry/snow/showcase";
-import { DialogDemo } from "@/registry/snow/showcase";
-import { DrawerDemo } from "@/registry/snow/showcase";
-import { DropdownMenuDemo } from "@/registry/snow/showcase";
-import { HoverCardDemo } from "@/registry/snow/showcase";
-import { InputDemo } from "@/registry/snow/showcase";
-import { InputOTPDemo } from "@/registry/snow/showcase";
-import { LabelDemo } from "@/registry/snow/showcase";
-import { MenubarDemo } from "@/registry/snow/showcase";
-import { PaginationDemo } from "@/registry/snow/showcase";
-import { PopoverDemo } from "@/registry/snow/showcase";
-import { ProgressDemo } from "@/registry/snow/showcase";
-import { RadioGroupDemo } from "@/registry/snow/showcase";
-import { SelectDemo } from "@/registry/snow/showcase";
-import { SheetDemo } from "@/registry/snow/showcase";
-import { SkeletonDemo } from "@/registry/snow/showcase";
-import { SliderDemo } from "@/registry/snow/showcase";
-import { SonnerDemo } from "@/registry/snow/showcase";
-import { SwitchDemo } from "@/registry/snow/showcase";
-import { TextareaDemo } from "@/registry/snow/showcase";
-import { ToggleDemo } from "@/registry/snow/showcase";
-import { ToggleGroupDemo } from "@/registry/snow/showcase";
-import { TooltipDemo } from "@/registry/snow/showcase";
-import { Badge, BadgeProps } from "@/registry/snow/ui/badge";
-import { Button, ButtonProps } from "@/registry/snow/ui/button";
+import { AccordionDemo } from "@/registry/bases/base/snow/showcase";
+import { AlertDialogDemo } from "@/registry/bases/base/snow/showcase";
+import { BreadcrumbDemo } from "@/registry/bases/base/snow/showcase";
+import { CalendarDemo } from "@/registry/bases/base/snow/showcase";
+import { CheckboxDemo } from "@/registry/bases/base/snow/showcase";
+import { ComboboxDemo } from "@/registry/bases/base/snow/showcase";
+import { CommandDemo } from "@/registry/bases/base/snow/showcase";
+import { ContextMenuDemo } from "@/registry/bases/base/snow/showcase";
+import { DatePickerDemo } from "@/registry/bases/base/snow/showcase";
+import { DialogDemo } from "@/registry/bases/base/snow/showcase";
+import { DrawerDemo } from "@/registry/bases/base/snow/showcase";
+import { DropdownMenuDemo } from "@/registry/bases/base/snow/showcase";
+import { HoverCardDemo } from "@/registry/bases/base/snow/showcase";
+import { InputDemo } from "@/registry/bases/base/snow/showcase";
+import { InputOTPDemo } from "@/registry/bases/base/snow/showcase";
+import { LabelDemo } from "@/registry/bases/base/snow/showcase";
+import { MenubarDemo } from "@/registry/bases/base/snow/showcase";
+import { PaginationDemo } from "@/registry/bases/base/snow/showcase";
+import { PopoverDemo } from "@/registry/bases/base/snow/showcase";
+import { ProgressDemo } from "@/registry/bases/base/snow/showcase";
+import { RadioGroupDemo } from "@/registry/bases/base/snow/showcase";
+import { SelectDemo } from "@/registry/bases/base/snow/showcase";
+import { SheetDemo } from "@/registry/bases/base/snow/showcase";
+import { SkeletonDemo } from "@/registry/bases/base/snow/showcase";
+import { SliderDemo } from "@/registry/bases/base/snow/showcase";
+import { SonnerDemo } from "@/registry/bases/base/snow/showcase";
+import { SwitchDemo } from "@/registry/bases/base/snow/showcase";
+import { TextareaDemo } from "@/registry/bases/base/snow/showcase";
+import { ToggleDemo } from "@/registry/bases/base/snow/showcase";
+import { ToggleGroupDemo } from "@/registry/bases/base/snow/showcase";
+import { TooltipDemo } from "@/registry/bases/base/snow/showcase";
+import { Badge, BadgeProps } from "@/registry/bases/base/snow/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/snow/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/snow/ui/card";
+} from "@/registry/bases/base/snow/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/snow/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/snow/ui/tabs";
+} from "@/registry/bases/base/snow/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/snow/ui/tabs";
 
 export function SnowShowcaseComponents() {
   const style = "snow";

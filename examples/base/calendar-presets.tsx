@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { addDays } from "date-fns"
+import { addDays } from "date-fns";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Card, CardContent, CardFooter } from "@/styles/base-nova/ui/card"
+import { Button } from "@/styles/base-default/ui/button";
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Card, CardContent, CardFooter } from "@/styles/base-default/ui/card";
 
 export function CalendarWithPresets() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(new Date().getFullYear(), 1, 12)
-  )
+  );
   const [currentMonth, setCurrentMonth] = React.useState<Date>(
     new Date(new Date().getFullYear(), new Date().getMonth(), 1)
-  )
+  );
 
   return (
     <Card className="mx-auto w-fit max-w-[300px]" size="sm">
@@ -42,11 +42,11 @@ export function CalendarWithPresets() {
             size="sm"
             className="flex-1"
             onClick={() => {
-              const newDate = addDays(new Date(), preset.value)
-              setDate(newDate)
+              const newDate = addDays(new Date(), preset.value);
+              setDate(newDate);
               setCurrentMonth(
                 new Date(newDate.getFullYear(), newDate.getMonth(), 1)
-              )
+              );
             }}
           >
             {preset.label}
@@ -54,5 +54,5 @@ export function CalendarWithPresets() {
         ))}
       </CardFooter>
     </Card>
-  )
+  );
 }

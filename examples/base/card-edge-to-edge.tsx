@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardContent,
@@ -6,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-nova/ui/card"
+} from "@/styles/base-default/ui/card";
 
 export function CardEdgeToEdge() {
   return (
@@ -18,7 +18,7 @@ export function CardEdgeToEdge() {
         </CardDescription>
       </CardHeader>
       <CardContent className="-mb-(--card-spacing)">
-        <div className="-mx-(--card-spacing) max-h-48 space-y-4 overflow-y-scroll border-t bg-muted/50 px-(--card-spacing) py-4 text-sm leading-relaxed">
+        <div className="-mx-(--card-spacing) bg-muted/50 px-(--card-spacing) max-h-48 space-y-4 overflow-y-scroll border-t py-4 text-sm leading-relaxed">
           <p>
             These terms govern your use of the workspace, including access to
             shared documents, project files, and collaboration tools.
@@ -43,5 +43,5 @@ export function CardEdgeToEdge() {
         <Button>Accept</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

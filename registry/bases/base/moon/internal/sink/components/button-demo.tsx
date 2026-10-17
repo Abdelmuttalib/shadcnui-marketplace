@@ -1,4 +1,4 @@
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 
 export function ButtonDemo() {
   return <Button>Button</Button>;

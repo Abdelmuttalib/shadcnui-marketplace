@@ -8,8 +8,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/moon/ui/button";
-import { Calendar } from "@/registry/moon/ui/calendar";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import { Calendar } from "@/registry/bases/base/moon/ui/calendar";
 import {
   Command,
   CommandEmpty,
@@ -17,7 +17,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/moon/ui/command";
+} from "@/registry/bases/base/moon/ui/command";
 import {
   Form,
   FormControl,
@@ -26,13 +26,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/moon/ui/form";
-import { Input } from "@/registry/moon/ui/input";
+} from "@/registry/bases/base/moon/ui/form";
+import { Input } from "@/registry/bases/base/moon/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/moon/ui/popover";
+} from "@/registry/bases/base/moon/ui/popover";
 
 const languages = [
   { label: "English", value: "en" },

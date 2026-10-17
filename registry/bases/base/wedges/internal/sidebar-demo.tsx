@@ -14,7 +14,7 @@ import {
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/wedges/ui/sidebar";
+} from "@/registry/bases/base/wedges/ui/sidebar";
 
 // Menu items.
 const items = [

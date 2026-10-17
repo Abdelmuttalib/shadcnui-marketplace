@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/neon/ui/alert-dialog";
-import { Button } from "@/registry/neon/ui/button";
+} from "@/registry/bases/base/neon/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 
 export function AlertDialogDemo() {
   return (

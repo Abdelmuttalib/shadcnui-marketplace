@@ -14,7 +14,7 @@ import {
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/moon/ui/sidebar";
+} from "@/registry/bases/base/moon/ui/sidebar";
 
 // Menu items.
 const items = [

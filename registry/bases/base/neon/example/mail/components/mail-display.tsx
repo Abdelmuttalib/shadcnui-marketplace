@@ -13,31 +13,35 @@ import {
   Trash2,
 } from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
-import { Button } from "@/registry/neon/ui/button";
-import { Calendar } from "@/registry/neon/ui/calendar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Calendar } from "@/registry/bases/base/neon/ui/calendar";
 import {
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@/registry/neon/ui/dropdown-menu";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
-} from "@/registry/neon/ui/dropdown-menu";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/neon/ui/popover";
-import { Separator } from "@/registry/neon/ui/separator";
-import { Switch } from "@/registry/neon/ui/switch";
-import { Textarea } from "@/registry/neon/ui/textarea";
+} from "@/registry/bases/base/neon/ui/popover";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
+import { Switch } from "@/registry/bases/base/neon/ui/switch";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/neon/ui/tooltip";
+} from "@/registry/bases/base/neon/ui/tooltip";
 
 import { Mail } from "../data";
 
@@ -91,7 +95,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 </TooltipTrigger>
               </PopoverTrigger>
               <PopoverContent className="flex w-[535px] p-0">
-                <div className="flex flex-col gap-2 border-r border-r-neon-border px-2 py-4">
+                <div className="border-r-neon-border flex flex-col gap-2 border-r px-2 py-4">
                   <div className="px-4 text-sm font-medium">Snooze until</div>
                   <div className="grid min-w-[250px] gap-1">
                     <Button
@@ -99,7 +103,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Later today{" "}
-                      <span className="ml-auto text-neon-muted-foreground">
+                      <span className="text-neon-muted-foreground ml-auto">
                         {format(addHours(today, 4), "E, h:m b")}
                       </span>
                     </Button>
@@ -108,7 +112,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Tomorrow
-                      <span className="ml-auto text-neon-muted-foreground">
+                      <span className="text-neon-muted-foreground ml-auto">
                         {format(addDays(today, 1), "E, h:m b")}
                       </span>
                     </Button>
@@ -117,7 +121,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       This weekend
-                      <span className="ml-auto text-neon-muted-foreground">
+                      <span className="text-neon-muted-foreground ml-auto">
                         {format(nextSaturday(today), "E, h:m b")}
                       </span>
                     </Button>
@@ -126,7 +130,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Next week
-                      <span className="ml-auto text-neon-muted-foreground">
+                      <span className="text-neon-muted-foreground ml-auto">
                         {format(addDays(today, 7), "E, h:m b")}
                       </span>
                     </Button>
@@ -208,7 +212,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
               </div>
             </div>
             {mail.date && (
-              <div className="ml-auto text-xs text-neon-muted-foreground">
+              <div className="text-neon-muted-foreground ml-auto text-xs">
                 {format(new Date(mail.date), "PPpp")}
               </div>
             )}
@@ -246,7 +250,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </div>
         </div>
       ) : (
-        <div className="p-8 text-center text-neon-muted-foreground">
+        <div className="text-neon-muted-foreground p-8 text-center">
           No message selected
         </div>
       )}

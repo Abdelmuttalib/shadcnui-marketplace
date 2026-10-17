@@ -2,13 +2,13 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/neon/ui/resizable";
+} from "@/registry/bases/base/neon/ui/resizable";
 
 export function ResizableHandleDemo() {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="min-h-[200px] max-w-md rounded-neon-lg border border-neon-border md:min-w-[450px]"
+      className="rounded-neon-lg border-neon-border min-h-[200px] max-w-md border md:min-w-[450px]"
     >
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">

@@ -1,5 +1,5 @@
-import { Label } from "@/registry/moon/ui/label";
-import { Textarea } from "@/registry/moon/ui/textarea";
+import { Label } from "@/registry/bases/base/moon/ui/label";
+import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

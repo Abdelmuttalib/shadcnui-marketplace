@@ -6,8 +6,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/neon/ui/button";
-import { Checkbox } from "@/registry/neon/ui/checkbox";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Checkbox } from "@/registry/bases/base/neon/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -15,7 +15,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/neon/ui/form";
+} from "@/registry/bases/base/neon/ui/form";
 
 const FormSchema = z.object({
   mobile: z.boolean().default(false).optional(),

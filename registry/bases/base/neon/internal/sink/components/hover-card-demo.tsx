@@ -1,12 +1,16 @@
 import { CalendarIcon } from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
-import { Button } from "@/registry/neon/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/neon/ui/hover-card";
+} from "@/registry/bases/base/neon/ui/hover-card";
 
 export function HoverCardDemo() {
   return (
@@ -27,7 +31,7 @@ export function HoverCardDemo() {
             </p>
             <div className="flex items-center pt-2">
               <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
-              <span className="text-xs text-neon-muted-foreground">
+              <span className="text-neon-muted-foreground text-xs">
                 Joined December 2021
               </span>
             </div>

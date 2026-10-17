@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
   ContextMenu,
@@ -11,19 +11,19 @@ import {
   ContextMenuRadioItem,
   ContextMenuSeparator,
   ContextMenuTrigger,
-} from "@/styles/base-nova/ui/context-menu"
+} from "@/styles/base-default/ui/context-menu";
 
 export function ContextMenuRadio() {
-  const [user, setUser] = React.useState("pedro")
-  const [theme, setTheme] = React.useState("light")
+  const [user, setUser] = React.useState("pedro");
+  const [theme, setTheme] = React.useState("light");
 
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
-        <span className="hidden pointer-fine:inline-block">
+        <span className="pointer-fine:inline-block hidden">
           Right click here
         </span>
-        <span className="hidden pointer-coarse:inline-block">
+        <span className="pointer-coarse:inline-block hidden">
           Long press here
         </span>
       </ContextMenuTrigger>
@@ -48,5 +48,5 @@ export function ContextMenuRadio() {
         </ContextMenuGroup>
       </ContextMenuContent>
     </ContextMenu>
-  )
+  );
 }

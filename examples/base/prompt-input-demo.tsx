@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   ArrowUpIcon,
   ChevronDownIcon,
   FileTextIcon,
   PlusIcon,
   XIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
 import {
   Attachment,
@@ -16,7 +16,7 @@ import {
   AttachmentContent,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-rhea/ui/attachment"
+} from "@/styles/base-default/ui/attachment";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,18 +26,18 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/base-rhea/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 type AttachmentFile = {
-  id: string
-  name: string
-}
+  id: string;
+  name: string;
+};
 
 const providers = [
   {
@@ -54,41 +54,42 @@ const providers = [
       { id: "claude-haiku-4-5", name: "Claude Haiku 4.5" },
     ],
   },
-]
+];
 
-const models = providers.flatMap((provider) => provider.models)
+const models = providers.flatMap((provider) => provider.models);
 
 const efforts = [
   { id: "low", name: "Low" },
   { id: "medium", name: "Medium" },
   { id: "high", name: "High" },
-]
+];
 
 export function PromptInputDemo() {
-  const [text, setText] = React.useState("")
-  const [files, setFiles] = React.useState<AttachmentFile[]>([])
-  const [model, setModel] = React.useState(models[0].id)
-  const [effort, setEffort] = React.useState(efforts[1].id)
-  const formRef = React.useRef<HTMLFormElement>(null)
-  const inputRef = React.useRef<HTMLInputElement>(null)
-  const currentModel = models.find((item) => item.id === model) ?? models[0]
-  const currentEffort = efforts.find((item) => item.id === effort) ?? efforts[1]
-  const canSend = text.trim().length > 0
+  const [text, setText] = React.useState("");
+  const [files, setFiles] = React.useState<AttachmentFile[]>([]);
+  const [model, setModel] = React.useState(models[0].id);
+  const [effort, setEffort] = React.useState(efforts[1].id);
+  const formRef = React.useRef<HTMLFormElement>(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const currentModel = models.find((item) => item.id === model) ?? models[0];
+  const currentEffort =
+    efforts.find((item) => item.id === effort) ?? efforts[1];
+  const canSend = text.trim().length > 0;
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
     if (!canSend) {
-      return
+      return;
     }
 
-    setText("")
-    setFiles([])
+    setText("");
+    setFiles([]);
   }
 
   function onAttach(event: React.ChangeEvent<HTMLInputElement>) {
-    const selected = event.target.files
+    const selected = event.target.files;
     if (!selected) {
-      return
+      return;
     }
 
     setFiles((current) => [
@@ -97,8 +98,8 @@ export function PromptInputDemo() {
         id: crypto.randomUUID(),
         name: file.name,
       })),
-    ])
-    event.target.value = ""
+    ]);
+    event.target.value = "";
   }
 
   return (
@@ -145,8 +146,8 @@ export function PromptInputDemo() {
             placeholder="Ask the agent to change your code..."
             onKeyDown={(event) => {
               if (event.key === "Enter" && !event.shiftKey) {
-                event.preventDefault()
-                formRef.current?.requestSubmit()
+                event.preventDefault();
+                formRef.current?.requestSubmit();
               }
             }}
             className="p-3"
@@ -245,5 +246,5 @@ export function PromptInputDemo() {
         </InputGroup>
       </form>
     </div>
-  )
+  );
 }

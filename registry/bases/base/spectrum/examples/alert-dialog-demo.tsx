@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/spectrum/ui/alert-dialog";
-import { Button } from "@/registry/spectrum/ui/button";
+} from "@/registry/bases/base/spectrum/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 
 export default function AlertDialogDemo() {
   return (

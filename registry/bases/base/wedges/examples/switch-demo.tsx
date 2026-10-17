@@ -1,5 +1,5 @@
-import { Label } from "@/registry/wedges/ui/label";
-import { Switch } from "@/registry/wedges/ui/switch";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
+import { Switch } from "@/registry/bases/base/wedges/ui/switch";
 
 export default function SwitchDemo() {
   return (

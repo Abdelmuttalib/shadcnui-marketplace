@@ -4,9 +4,12 @@ import {
   FileCodeIcon,
   FlaskConicalIcon,
   XIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -15,13 +18,13 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type Test = {
-  name: string
-  status: "passed" | "failed" | "skipped"
-  error?: string
-}
+  name: string;
+  status: "passed" | "failed" | "skipped";
+  error?: string;
+};
 
 const suites: { name: string; tests: Test[] }[] = [
   {
@@ -59,14 +62,14 @@ const suites: { name: string; tests: Test[] }[] = [
       },
     ],
   },
-]
+];
 
 function countTests(tests: Test[]) {
   return {
     total: tests.length,
     failed: tests.filter((test) => test.status === "failed").length,
     skipped: tests.filter((test) => test.status === "skipped").length,
-  }
+  };
 }
 
 function formatCounts({
@@ -80,7 +83,7 @@ function formatCounts({
     skipped > 0 && `${skipped} skipped`,
   ]
     .filter(Boolean)
-    .join(", ")
+    .join(", ");
 }
 
 function TestRow({ test }: { test: Test }) {
@@ -103,7 +106,7 @@ function TestRow({ test }: { test: Test }) {
           </CodeBlock>
         </TraceCollapsibleContent>
       </TraceCollapsible>
-    )
+    );
   }
 
   return (
@@ -115,11 +118,11 @@ function TestRow({ test }: { test: Test }) {
         {test.status === "skipped" ? `Skipped ${test.name}` : test.name}
       </TraceTitle>
     </TraceLine>
-  )
+  );
 }
 
 export function TestResultsSuites() {
-  const summary = countTests(suites.flatMap((suite) => suite.tests))
+  const summary = countTests(suites.flatMap((suite) => suite.tests));
 
   return (
     <Trace className="max-w-sm">
@@ -135,7 +138,7 @@ export function TestResultsSuites() {
         <TraceCollapsibleContent keepMounted>
           <Trace>
             {suites.map((suite) => {
-              const counts = countTests(suite.tests)
+              const counts = countTests(suite.tests);
 
               return (
                 <TraceCollapsible
@@ -160,11 +163,11 @@ export function TestResultsSuites() {
                     </Trace>
                   </TraceCollapsibleContent>
                 </TraceCollapsible>
-              )
+              );
             })}
           </Trace>
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

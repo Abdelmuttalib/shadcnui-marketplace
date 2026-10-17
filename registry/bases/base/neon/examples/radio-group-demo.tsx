@@ -1,5 +1,8 @@
-import { Label } from "@/registry/neon/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/neon/ui/radio-group";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/neon/ui/radio-group";
 
 export default function RadioGroupDemo() {
   return (

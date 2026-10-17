@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Progress } from "@/styles/base-nova/ui/progress"
-import { Slider } from "@/styles/base-nova/ui/slider"
+import { Progress } from "@/styles/base-default/ui/progress";
+import { Slider } from "@/styles/base-default/ui/slider";
 
 export function ProgressControlled() {
-  const [value, setValue] = React.useState(50)
+  const [value, setValue] = React.useState(50);
 
   return (
     <div className="flex w-full max-w-sm flex-col gap-4">
@@ -19,5 +19,5 @@ export function ProgressControlled() {
         step={1}
       />
     </div>
-  )
+  );
 }

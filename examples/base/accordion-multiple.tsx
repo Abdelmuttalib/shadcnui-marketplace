@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/styles/base-nova/ui/accordion"
+} from "@/styles/base-default/ui/accordion";
 
 const items = [
   {
@@ -24,7 +24,7 @@ const items = [
     content:
       "View your current plan, payment history, and upcoming invoices. Update your payment method, change your subscription tier, or cancel your subscription.",
   },
-]
+];
 
 export function AccordionMultiple() {
   return (
@@ -36,5 +36,5 @@ export function AccordionMultiple() {
         </AccordionItem>
       ))}
     </Accordion>
-  )
+  );
 }

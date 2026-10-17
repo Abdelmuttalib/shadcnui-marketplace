@@ -1,4 +1,4 @@
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/neon/ui/dialog";
+} from "@/registry/bases/base/neon/ui/dialog";
 
 export function CodeViewer() {
   return (
@@ -25,7 +25,7 @@ export function CodeViewer() {
         <div className="grid gap-4">
           <div className="rounded-neon-md bg-gray-950 p-6">
             <pre>
-              <code className="grid gap-1 text-sm text-neon-muted-foreground [&_span]:h-4">
+              <code className="text-neon-muted-foreground grid gap-1 text-sm [&_span]:h-4">
                 <span>
                   <span className="text-blue-400">import</span> os
                 </span>
@@ -76,7 +76,7 @@ export function CodeViewer() {
             </pre>
           </div>
           <div>
-            <p className="text-sm text-neon-muted-foreground">
+            <p className="text-neon-muted-foreground text-sm">
               Your API Key can be found here. You should use environment
               variables or a secret management tool to expose your key to your
               applications.

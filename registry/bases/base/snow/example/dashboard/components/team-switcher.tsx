@@ -8,8 +8,12 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/snow/ui/avatar";
-import { Button } from "@/registry/snow/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/snow/ui/avatar";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -18,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/snow/ui/command";
+} from "@/registry/bases/base/snow/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -27,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/snow/ui/dialog";
-import { Input } from "@/registry/snow/ui/input";
-import { Label } from "@/registry/snow/ui/label";
+} from "@/registry/bases/base/snow/ui/dialog";
+import { Input } from "@/registry/bases/base/snow/ui/input";
+import { Label } from "@/registry/bases/base/snow/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/snow/ui/popover";
+} from "@/registry/bases/base/snow/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/snow/ui/select";
+} from "@/registry/bases/base/snow/ui/select";
 
 const groups = [
   {

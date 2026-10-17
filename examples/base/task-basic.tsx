@@ -1,4 +1,4 @@
-import { FileSearchIcon, FileTextIcon, SearchIcon } from "lucide-react"
+import { FileSearchIcon, FileTextIcon, SearchIcon } from "lucide-react";
 
 import {
   Trace,
@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TaskBasic() {
   return (
@@ -53,5 +53,5 @@ export function TaskBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

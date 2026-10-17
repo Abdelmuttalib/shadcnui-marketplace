@@ -1,6 +1,6 @@
-import { ArrowUpRightIcon } from "lucide-react"
+import { ArrowUpRightIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 
 export default function ButtonSize() {
   return (
@@ -36,5 +36,5 @@ export default function ButtonSize() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

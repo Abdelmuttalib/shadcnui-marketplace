@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/moon/ui/input";
+import { Input } from "@/registry/bases/base/moon/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/moon/ui/resizable";
-import { Separator } from "@/registry/moon/ui/separator";
+} from "@/registry/bases/base/moon/ui/resizable";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/moon/ui/tabs";
-import { TooltipProvider } from "@/registry/moon/ui/tooltip";
+} from "@/registry/bases/base/moon/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/moon/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-moon-background/60 bg-moon-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-moon-muted-foreground" />
+                  <Search className="text-moon-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

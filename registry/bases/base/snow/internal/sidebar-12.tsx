@@ -13,19 +13,23 @@ import {
 } from "lucide-react";
 import * as React from "react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/snow/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/snow/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/registry/snow/ui/breadcrumb";
-import { Calendar } from "@/registry/snow/ui/calendar";
+} from "@/registry/bases/base/snow/ui/breadcrumb";
+import { Calendar } from "@/registry/bases/base/snow/ui/calendar";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/snow/ui/collapsible";
+} from "@/registry/bases/base/snow/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,8 +38,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
-import { Separator } from "@/registry/snow/ui/separator";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -53,7 +57,7 @@ import {
   SidebarSeparator,
   SidebarTrigger,
   useSidebar,
-} from "@/registry/snow/ui/sidebar";
+} from "@/registry/bases/base/snow/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -87,7 +91,7 @@ export default function Page() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b bg-snow-background px-4">
+        <header className="bg-snow-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />
           <Separator orientation="vertical" className="mr-2 h-4" />
           <Breadcrumb>
@@ -103,7 +107,7 @@ export default function Page() {
             {Array.from({ length: 20 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-square rounded-xl bg-snow-muted/50"
+                className="bg-snow-muted/50 aspect-square rounded-xl"
               />
             ))}
           </div>
@@ -116,7 +120,7 @@ export default function Page() {
 function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
-      <SidebarHeader className="h-16 border-b border-sidebar-border">
+      <SidebarHeader className="border-sidebar-border h-16 border-b">
         <NavUser user={data.user} />
       </SidebarHeader>
       <SidebarContent>
@@ -158,7 +162,7 @@ function Calendars({
             >
               <SidebarGroupLabel
                 asChild
-                className="group/label w-full text-sm text-sidebar-foreground hover:bg-snow-sidebar-accent hover:text-sidebar-accent-foreground"
+                className="group/label text-sidebar-foreground hover:bg-snow-sidebar-accent hover:text-sidebar-accent-foreground w-full text-sm"
               >
                 <CollapsibleTrigger>
                   {calendar.name}{" "}
@@ -173,9 +177,9 @@ function Calendars({
                         <SidebarMenuButton>
                           <div
                             data-active={index < 2}
-                            className="group/calendar-item flex aspect-square size-4 shrink-0 items-center justify-center rounded-snow-sm border border-sidebar-border text-sidebar-primary-foreground data-[active=true]:border-sidebar-primary data-[active=true]:bg-snow-sidebar-primary"
+                            className="group/calendar-item size-4 rounded-snow-sm border-sidebar-border text-sidebar-primary-foreground data-[active=true]:border-sidebar-primary data-[active=true]:bg-snow-sidebar-primary flex aspect-square shrink-0 items-center justify-center border"
                           >
-                            <Check className="hidden size-3 group-data-[active=true]/calendar-item:block" />
+                            <Check className="size-3 hidden group-data-[active=true]/calendar-item:block" />
                           </div>
                           {item}
                         </SidebarMenuButton>
@@ -231,11 +235,11 @@ function NavUser({
                 <span className="truncate font-semibold">{user.name}</span>
                 <span className="truncate text-xs">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4" />
+              <ChevronsUpDown className="size-4 ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+            className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
             side={isMobile ? "bottom" : "right"}
             align="start"
             sideOffset={4}

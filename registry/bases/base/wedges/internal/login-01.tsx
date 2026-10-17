@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/wedges/ui/card";
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+} from "@/registry/bases/base/wedges/ui/card";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 
 export const description = "A simple login form.";
 

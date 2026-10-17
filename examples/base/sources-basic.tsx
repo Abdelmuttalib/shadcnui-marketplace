@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, GlobeIcon } from "lucide-react"
+import { ArrowUpRightIcon, GlobeIcon } from "lucide-react";
 
 import {
   Trace,
@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const sources = [
   {
@@ -23,7 +23,7 @@ const sources = [
     title: "pnpm create | pnpm.io",
     url: "https://pnpm.io/cli/create",
   },
-]
+];
 
 export function SourcesBasic() {
   return (
@@ -64,5 +64,5 @@ export function SourcesBasic() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { FileTextIcon } from "lucide-react"
+import { FileTextIcon } from "lucide-react";
 
 import {
   Attachment,
@@ -6,7 +6,7 @@ import {
   AttachmentDescription,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-rhea/ui/attachment"
+} from "@/styles/base-default/ui/attachment";
 
 export function AttachmentSizes() {
   return (
@@ -38,5 +38,5 @@ export function AttachmentSizes() {
         </AttachmentContent>
       </Attachment>
     </div>
-  )
+  );
 }

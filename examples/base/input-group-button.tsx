@@ -1,29 +1,29 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   IconCheck,
   IconCopy,
   IconInfoCircle,
   IconStar,
-} from "@tabler/icons-react"
+} from "@tabler/icons-react";
+import * as React from "react";
 
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export default function InputGroupButtonExample() {
-  const { copyToClipboard, isCopied } = useCopyToClipboard()
-  const [isFavorite, setIsFavorite] = React.useState(false)
+  const { copyToClipboard, isCopied } = useCopyToClipboard();
+  const [isFavorite, setIsFavorite] = React.useState(false);
 
   return (
     <div className="grid w-full max-w-sm gap-6">
@@ -35,7 +35,7 @@ export default function InputGroupButtonExample() {
             title="Copy"
             size="icon-xs"
             onClick={() => {
-              copyToClipboard("https://x.com/shadcn")
+              copyToClipboard("https://x.com/shadcn");
             }}
           >
             {isCopied ? <IconCheck /> : <IconCopy />}
@@ -57,7 +57,7 @@ export default function InputGroupButtonExample() {
             <p>You should not enter any sensitive information on this site.</p>
           </PopoverContent>
         </Popover>
-        <InputGroupAddon className="pl-1.5 text-muted-foreground">
+        <InputGroupAddon className="text-muted-foreground pl-1.5">
           https://
         </InputGroupAddon>
         <InputGroupInput id="input-secure-19" />
@@ -80,5 +80,5 @@ export default function InputGroupButtonExample() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

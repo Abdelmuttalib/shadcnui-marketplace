@@ -2,15 +2,18 @@ import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Button } from "@/registry/wedges/ui/button";
-import { ScrollArea, ScrollBar } from "@/registry/wedges/ui/scroll-area";
-import { Separator } from "@/registry/wedges/ui/separator";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/wedges/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/wedges/ui/tabs";
+} from "@/registry/bases/base/wedges/ui/tabs";
 
 import { AlbumArtwork } from "./components/album-artwork";
 import { Menu } from "./components/menu";
@@ -62,7 +65,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             Listen Now
                           </h2>
-                          <p className="text-sm text-wedges-muted-foreground">
+                          <p className="text-wedges-muted-foreground text-sm">
                             Top picks for you. Updated daily.
                           </p>
                         </div>
@@ -89,7 +92,7 @@ export function MusicPage() {
                         <h2 className="text-2xl font-semibold tracking-tight">
                           Made for You
                         </h2>
-                        <p className="text-sm text-wedges-muted-foreground">
+                        <p className="text-wedges-muted-foreground text-sm">
                           Your personal playlists. Updated daily.
                         </p>
                       </div>
@@ -121,7 +124,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             New Episodes
                           </h2>
-                          <p className="text-sm text-wedges-muted-foreground">
+                          <p className="text-wedges-muted-foreground text-sm">
                             Your favorite podcasts. Updated daily.
                           </p>
                         </div>

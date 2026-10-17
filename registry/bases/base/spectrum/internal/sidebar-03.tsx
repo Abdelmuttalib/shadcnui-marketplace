@@ -15,15 +15,15 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/spectrum/ui/breadcrumb";
+} from "@/registry/bases/base/spectrum/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/spectrum/ui/dropdown-menu";
-import { Label } from "@/registry/spectrum/ui/label";
-import { Separator } from "@/registry/spectrum/ui/separator";
+} from "@/registry/bases/base/spectrum/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
+import { Separator } from "@/registry/bases/base/spectrum/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -42,7 +42,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/spectrum/ui/sidebar";
+} from "@/registry/bases/base/spectrum/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -198,7 +198,7 @@ export default function Component() {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
                 <a href="#">
-                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-spctm-sidebar-primary text-sidebar-primary-foreground">
+                  <div className="size-8 bg-spctm-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                     <GalleryVerticalEnd className="size-4" />
                   </div>
                   <div className="flex flex-col gap-0.5 leading-none">
@@ -263,11 +263,11 @@ export default function Component() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-spctm-muted/50" />
-            <div className="aspect-video rounded-xl bg-spctm-muted/50" />
-            <div className="aspect-video rounded-xl bg-spctm-muted/50" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-spctm-muted/50 md:min-h-min" />
+          <div className="bg-spctm-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

@@ -1,9 +1,9 @@
 import { Check } from "lucide-react";
 import Link from "next/link";
 
-import { Badge } from "@/registry/wedges/ui/badge";
-import { Button } from "@/registry/wedges/ui/button";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Badge } from "@/registry/bases/base/wedges/ui/badge";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 export default function HeroSectionPage() {
   const navItems = [

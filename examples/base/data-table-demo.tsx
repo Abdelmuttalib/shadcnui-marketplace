@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   columnFilteringFeature,
+  type ColumnFiltersState,
   columnVisibilityFeature,
+  type ColumnVisibilityState,
   createColumnHelper,
   createFilteredRowModel,
   createPaginatedRowModel,
@@ -14,16 +15,15 @@ import {
   rowSortingFeature,
   sortFn_alphanumeric,
   sortFn_text,
+  type SortingState,
   tableFeatures,
   useTable,
-  type ColumnFiltersState,
-  type ColumnVisibilityState,
-  type SortingState,
-} from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+} from "@tanstack/react-table";
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { Checkbox } from "@/styles/base-nova/ui/checkbox"
+import { Button } from "@/styles/base-default/ui/button";
+import { Checkbox } from "@/styles/base-default/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -33,8 +33,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/dropdown-menu";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   Table,
   TableBody,
@@ -42,7 +42,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/styles/base-nova/ui/table"
+} from "@/styles/base-default/ui/table";
 
 // New in v9: declare the features this table uses — anything you don't
 // register is tree-shaken out of the bundle.
@@ -57,9 +57,9 @@ const features = tableFeatures({
   sortedRowModel: createSortedRowModel(),
   filterFns: { includesString: filterFn_includesString },
   sortFns: { alphanumeric: sortFn_alphanumeric, text: sortFn_text },
-})
+});
 
-const columnHelper = createColumnHelper<typeof features, Payment>()
+const columnHelper = createColumnHelper<typeof features, Payment>();
 
 const data: Payment[] = [
   {
@@ -92,14 +92,14 @@ const data: Payment[] = [
     status: "failed",
     email: "carmella@example.com",
   },
-]
+];
 
 export type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 export const columns = columnHelper.columns([
   columnHelper.display({
@@ -140,29 +140,29 @@ export const columns = columnHelper.columns([
           Email
           <ArrowUpDown />
         </Button>
-      )
+      );
     },
     cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
   }),
   columnHelper.accessor("amount", {
     header: () => <div className="text-right">Amount</div>,
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
+      const amount = parseFloat(row.getValue("amount"));
 
       // Format the amount as a dollar amount.
       const formatted = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
-      }).format(amount)
+      }).format(amount);
 
-      return <div className="text-right font-medium">{formatted}</div>
+      return <div className="text-right font-medium">{formatted}</div>;
     },
   }),
   columnHelper.display({
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const payment = row.original
+      const payment = row.original;
 
       return (
         <DropdownMenu>
@@ -188,19 +188,19 @@ export const columns = columnHelper.columns([
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
-      )
+      );
     },
   }),
-])
+]);
 
 export function DataTableDemo() {
-  const [sorting, setSorting] = React.useState<SortingState>([])
+  const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
-  )
+  );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<ColumnVisibilityState>({})
-  const [rowSelection, setRowSelection] = React.useState({})
+    React.useState<ColumnVisibilityState>({});
+  const [rowSelection, setRowSelection] = React.useState({});
 
   const table = useTable({
     features,
@@ -216,7 +216,7 @@ export function DataTableDemo() {
       columnVisibility,
       rowSelection,
     },
-  })
+  });
 
   return (
     <div className="w-full">
@@ -252,7 +252,7 @@ export function DataTableDemo() {
                     >
                       {column.id}
                     </DropdownMenuCheckboxItem>
-                  )
+                  );
                 })}
             </DropdownMenuGroup>
           </DropdownMenuContent>
@@ -270,7 +270,7 @@ export function DataTableDemo() {
                         <table.FlexRender header={header} />
                       )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -303,7 +303,7 @@ export function DataTableDemo() {
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
+        <div className="text-muted-foreground flex-1 text-sm">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
@@ -327,5 +327,5 @@ export function DataTableDemo() {
         </div>
       </div>
     </div>
-  )
+  );
 }

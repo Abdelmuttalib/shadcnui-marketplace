@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/moon/ui/table";
+} from "@/registry/bases/base/moon/ui/table";
 
 const invoices = [
   {

@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { ScrollArea } from "@/registry/spectrum/ui/scroll-area";
-import { Separator } from "@/registry/spectrum/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/spectrum/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/spectrum/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -9,7 +9,7 @@ const tags = Array.from({ length: 50 }).map(
 
 export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-72 w-48 rounded-spctm-md border border-spctm-border">
+    <ScrollArea className="rounded-spctm-md border-spctm-border h-72 w-48 border">
       <div className="p-4">
         <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
         {tags.map((tag) => (

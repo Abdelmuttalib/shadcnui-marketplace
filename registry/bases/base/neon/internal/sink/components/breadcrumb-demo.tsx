@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/neon/ui/breadcrumb";
+} from "@/registry/bases/base/neon/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/neon/ui/dropdown-menu";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (

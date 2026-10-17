@@ -1,6 +1,6 @@
 import { Underline } from "lucide-react";
 
-import { Toggle } from "@/registry/wedges/ui/toggle";
+import { Toggle } from "@/registry/bases/base/wedges/ui/toggle";
 
 export function ToggleDisabled() {
   return (

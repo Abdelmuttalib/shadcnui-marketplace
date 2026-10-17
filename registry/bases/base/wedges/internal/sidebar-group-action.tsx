@@ -22,7 +22,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/wedges/ui/sidebar";
+} from "@/registry/bases/base/wedges/ui/sidebar";
 
 export default function AppSidebar() {
   return (

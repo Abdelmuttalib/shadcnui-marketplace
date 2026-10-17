@@ -11,13 +11,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/neon/ui/dropdown-menu";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/neon/ui/sidebar";
+} from "@/registry/bases/base/neon/ui/sidebar";
 
 export function TeamSwitcher({
   teams,
@@ -40,7 +40,7 @@ export function TeamSwitcher({
               size="lg"
               className="data-[state=open]:bg-neon-sidebar-accent data-[state=open]:text-neon-sidebar-accent-foreground"
             >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-neon-lg bg-neon-sidebar-primary text-neon-sidebar-primary-foreground">
+              <div className="size-8 rounded-neon-lg bg-neon-sidebar-primary text-neon-sidebar-primary-foreground flex aspect-square items-center justify-center">
                 <activeTeam.logo className="size-4" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
@@ -53,12 +53,12 @@ export function TeamSwitcher({
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-neon-lg"
+            className="min-w-56 rounded-neon-lg w-[--radix-dropdown-menu-trigger-width]"
             align="start"
             side={isMobile ? "bottom" : "right"}
             sideOffset={4}
           >
-            <DropdownMenuLabel className="text-xs text-neon-muted-foreground">
+            <DropdownMenuLabel className="text-neon-muted-foreground text-xs">
               Teams
             </DropdownMenuLabel>
             {teams.map((team, index) => (
@@ -67,7 +67,7 @@ export function TeamSwitcher({
                 onClick={() => setActiveTeam(team)}
                 className="gap-2 p-2"
               >
-                <div className="flex size-6 items-center justify-center rounded-neon-sm border border-neon-input">
+                <div className="size-6 rounded-neon-sm border-neon-input flex items-center justify-center border">
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}
@@ -76,10 +76,10 @@ export function TeamSwitcher({
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-neon-md border border-neon-input bg-neon-background">
+              <div className="size-6 rounded-neon-md border-neon-input bg-neon-background flex items-center justify-center border">
                 <Plus className="size-4" />
               </div>
-              <div className="font-medium text-neon-muted-foreground">
+              <div className="text-neon-muted-foreground font-medium">
                 Add team
               </div>
             </DropdownMenuItem>

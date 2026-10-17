@@ -1,4 +1,4 @@
-import { FilePenIcon, SearchIcon, TerminalIcon } from "lucide-react"
+import { FilePenIcon, SearchIcon, TerminalIcon } from "lucide-react";
 
 import {
   Trace,
@@ -6,7 +6,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceDescriptionDemo() {
   return (
@@ -35,5 +35,5 @@ export function TraceDescriptionDemo() {
         <TraceDescription>8 results</TraceDescription>
       </TraceLine>
     </Trace>
-  )
+  );
 }

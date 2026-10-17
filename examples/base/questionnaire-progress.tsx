@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -15,24 +15,28 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "scope", required: true },
   { name: "strategy", required: true },
   { name: "tests", required: true },
   { name: "delivery", required: true },
-] as const
+] as const;
 
 export function QuestionnaireProgressExample() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
 
     toast("Pull request plan ready", {
-      description: `Scope: ${formData.get("scope") ?? "None"} · Commits: ${formData.get("strategy") ?? "None"} · Tests: ${formData.get("tests") ?? "None"} · Delivery: ${formData.get("delivery") ?? "None"}`,
-    })
+      description: `Scope: ${formData.get("scope") ?? "None"} · Commits: ${
+        formData.get("strategy") ?? "None"
+      } · Tests: ${formData.get("tests") ?? "None"} · Delivery: ${
+        formData.get("delivery") ?? "None"
+      }`,
+    });
   }
 
   return (
@@ -52,8 +56,8 @@ export function QuestionnaireProgressExample() {
                   key={index}
                   className={
                     index < state.current
-                      ? "h-1.5 flex-1 rounded-full bg-primary"
-                      : "h-1.5 flex-1 rounded-full bg-muted"
+                      ? "bg-primary h-1.5 flex-1 rounded-full"
+                      : "bg-muted h-1.5 flex-1 rounded-full"
                   }
                 />
               ))}
@@ -135,5 +139,5 @@ export function QuestionnaireProgressExample() {
         <QuestionnaireSubmit>Finish plan</QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

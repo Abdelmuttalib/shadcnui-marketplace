@@ -8,10 +8,10 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/spectrum/ui/avatar";
-import { Badge } from "@/registry/spectrum/ui/badge";
-import { Button } from "@/registry/spectrum/ui/button";
-import { DataTable } from "@/registry/spectrum/ui/data-table";
+} from "@/registry/bases/base/spectrum/ui/avatar";
+import { Badge } from "@/registry/bases/base/spectrum/ui/badge";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
+import { DataTable } from "@/registry/bases/base/spectrum/ui/data-table";
 import {
   Select,
   SelectContent,
@@ -20,8 +20,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/spectrum/ui/select";
-import { Typography } from "@/registry/spectrum/ui/typography";
+} from "@/registry/bases/base/spectrum/ui/select";
+import { Typography } from "@/registry/bases/base/spectrum/ui/typography";
 
 const data = {
   overview: [

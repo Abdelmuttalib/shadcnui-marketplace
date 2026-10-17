@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/styles/base-nova/ui/accordion"
+} from "@/styles/base-default/ui/accordion";
 
 export default function AccordionDemo() {
   return (
@@ -30,5 +30,5 @@ export default function AccordionDemo() {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }

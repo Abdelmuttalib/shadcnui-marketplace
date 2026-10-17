@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/spectrum/ui/button";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -14,12 +14,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/spectrum/ui/command";
+} from "@/registry/bases/base/spectrum/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/spectrum/ui/popover";
+} from "@/registry/bases/base/spectrum/ui/popover";
 
 import { Preset } from "../data/presets";
 

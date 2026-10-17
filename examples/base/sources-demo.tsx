@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useChat } from "@ai-sdk/react"
-import type { UIMessage } from "ai"
-import { ArrowUpRightIcon, GlobeIcon } from "lucide-react"
+import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
+import { ArrowUpRightIcon, GlobeIcon } from "lucide-react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -16,37 +16,37 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const chat = createChat()
   .user("How do I start an Astro project with pnpm?")
   .assistant(({ writer }) => {
     writer.text(
       "Run pnpm create astro@latest and follow the prompts. It scaffolds the project and installs the dependencies."
-    )
+    );
     writer.sourceUrl({
       url: "https://docs.astro.build/en/install-and-setup/",
       title: "Install Astro | docs.astro.build",
-    })
+    });
     writer.sourceUrl({
       url: "https://www.npmjs.com/package/create-astro",
       title: "create-astro | npmjs.com",
-    })
+    });
     writer.sourceUrl({
       url: "https://docs.astro.build/en/install-and-setup/",
       title: "Install Astro | docs.astro.build",
-    })
+    });
     writer.sourceUrl({
       url: "https://pnpm.io/cli/create",
       title: "pnpm create | pnpm.io",
-    })
-  })
+    });
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
-type SourcePart = Extract<UIMessage["parts"][number], { type: "source-url" }>
+type SourcePart = Extract<UIMessage["parts"][number], { type: "source-url" }>;
 
 function Sources({ sources }: { sources: SourcePart[] }) {
   return (
@@ -84,18 +84,18 @@ function Sources({ sources }: { sources: SourcePart[] }) {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }
 
 export function SourcesDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -106,7 +106,7 @@ export function SourcesDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
         const sources = message.parts
@@ -114,8 +114,8 @@ export function SourcesDemo() {
           .filter(
             (part, index, all) =>
               all.findIndex((other) => other.url === part.url) === index
-          )
-        const text = getMessageText(message)
+          );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -124,7 +124,7 @@ export function SourcesDemo() {
               {sources.length > 0 && <Sources sources={sources} />}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -132,13 +132,13 @@ export function SourcesDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

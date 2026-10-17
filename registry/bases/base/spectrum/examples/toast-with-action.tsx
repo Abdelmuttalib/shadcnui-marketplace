@@ -2,7 +2,7 @@
 
 import { toast } from "sonner";
 
-import { Button } from "@/registry/spectrum/ui/button";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 
 export default function ToastWithAction() {
   return (

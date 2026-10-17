@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/neon/ui/breadcrumb";
+} from "@/registry/bases/base/neon/ui/breadcrumb";
 
 export default function BreadcrumbCollapsed() {
   return (

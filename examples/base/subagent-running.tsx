@@ -1,4 +1,4 @@
-import { CircleCheckIcon, LoaderCircleIcon } from "lucide-react"
+import { CircleCheckIcon, LoaderCircleIcon } from "lucide-react";
 
 import {
   Trace,
@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function SubagentRunning() {
   return (
@@ -42,5 +42,5 @@ export function SubagentRunning() {
         </TraceCollapsibleContent>
       </TraceCollapsible>
     </Trace>
-  )
+  );
 }

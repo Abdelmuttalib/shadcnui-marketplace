@@ -1,15 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { DynamicToolUIPart, UIMessage } from "ai"
-import { TerminalIcon } from "lucide-react"
+import { useChat } from "@ai-sdk/react";
+import type { DynamicToolUIPart, UIMessage } from "ai";
+import { TerminalIcon } from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -18,7 +21,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 const chat = createChat()
   .user("Which package managers are installed?")
@@ -29,32 +32,32 @@ const chat = createChat()
         input: { command: "node --version" },
       })
       .sleep(900)
-      .output({ stdout: "v24.18.0" })
+      .output({ stdout: "v24.18.0" });
     writer
       .tool("runCommand", {
         dynamic: true,
         input: { command: "npm --version" },
       })
       .sleep(900)
-      .output({ stdout: "11.6.2" })
+      .output({ stdout: "11.6.2" });
     writer
       .tool("runCommand", {
         dynamic: true,
         input: { command: "pnpm --version" },
       })
       .sleep(900)
-      .error("command not found: pnpm")
-    writer.text("Node 24 and npm 11 are installed. pnpm is not.")
-  })
+      .error("command not found: pnpm");
+    writer.text("Node 24 and npm 11 are installed. pnpm is not.");
+  });
 
-const initialMessages = chat.get(0)
-const transport = chat.transport({ delayMs: 20 })
+const initialMessages = chat.get(0);
+const transport = chat.transport({ delayMs: 20 });
 
 function ToolTrace({ part, live }: { part: DynamicToolUIPart; live: boolean }) {
-  const command = (part.input as { command?: string } | undefined)?.command
+  const command = (part.input as { command?: string } | undefined)?.command;
 
   if (part.state === "output-available" || part.state === "output-error") {
-    const failed = part.state === "output-error"
+    const failed = part.state === "output-error";
 
     return (
       <TraceCollapsible>
@@ -78,7 +81,7 @@ function ToolTrace({ part, live }: { part: DynamicToolUIPart; live: boolean }) {
           </CodeBlock>
         </TraceCollapsibleContent>
       </TraceCollapsible>
-    )
+    );
   }
 
   if (part.state === "output-denied") {
@@ -89,7 +92,7 @@ function ToolTrace({ part, live }: { part: DynamicToolUIPart; live: boolean }) {
         </TraceIcon>
         <TraceTitle>Denied {command}</TraceTitle>
       </TraceLine>
-    )
+    );
   }
 
   return (
@@ -101,41 +104,41 @@ function ToolTrace({ part, live }: { part: DynamicToolUIPart; live: boolean }) {
         {live ? "Running" : "Failed to run"} {command}
       </TraceTitle>
     </TraceLine>
-  )
+  );
 }
 
 function groupParts(parts: UIMessage["parts"]) {
-  const runs: { trace: boolean; parts: UIMessage["parts"] }[] = []
+  const runs: { trace: boolean; parts: UIMessage["parts"] }[] = [];
 
   for (const part of parts) {
-    const trace = part.type === "dynamic-tool"
+    const trace = part.type === "dynamic-tool";
 
     if (!trace && part.type !== "text") {
-      continue
+      continue;
     }
 
-    const last = runs.at(-1)
+    const last = runs.at(-1);
 
     if (last?.trace === trace) {
-      last.parts.push(part)
+      last.parts.push(part);
     } else {
-      runs.push({ trace, parts: [part] })
+      runs.push({ trace, parts: [part] });
     }
   }
 
-  return runs
+  return runs;
 }
 
 export function TraceToolCalls() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: initialMessages,
     transport,
-  })
-  const nextMessage = chat.next(messages)
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -146,10 +149,10 @@ export function TraceToolCalls() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const live = status === "streaming" && message === messages.at(-1)
+        const live = status === "streaming" && message === messages.at(-1);
 
         return (
           <Message key={message.id}>
@@ -177,7 +180,7 @@ export function TraceToolCalls() {
               )}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -194,5 +197,5 @@ export function TraceToolCalls() {
         </Button>
       )}
     </div>
-  )
+  );
 }

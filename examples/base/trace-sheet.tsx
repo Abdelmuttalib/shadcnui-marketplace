@@ -1,4 +1,4 @@
-import { ChevronRightIcon, FolderSearchIcon } from "lucide-react"
+import { ChevronRightIcon, FolderSearchIcon } from "lucide-react";
 
 import {
   Sheet,
@@ -7,13 +7,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-rhea/ui/sheet"
+} from "@/styles/base-default/ui/sheet";
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceSheet() {
   return (
@@ -46,5 +46,5 @@ export function TraceSheet() {
         </SheetContent>
       </Sheet>
     </Trace>
-  )
+  );
 }

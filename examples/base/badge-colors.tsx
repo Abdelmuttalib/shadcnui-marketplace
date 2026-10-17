@@ -1,4 +1,4 @@
-import { Badge } from "@/styles/base-nova/ui/badge"
+import { Badge } from "@/styles/base-default/ui/badge";
 
 export function BadgeCustomColors() {
   return (
@@ -19,5 +19,5 @@ export function BadgeCustomColors() {
         Red
       </Badge>
     </div>
-  )
+  );
 }

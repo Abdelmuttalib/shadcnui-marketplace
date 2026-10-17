@@ -3,7 +3,7 @@ import {
   AvatarFallback,
   AvatarGroup,
   AvatarImage,
-} from "@/styles/base-nova/ui/avatar"
+} from "@/styles/base-default/ui/avatar";
 
 export function AvatarGroupExample() {
   return (
@@ -24,5 +24,5 @@ export function AvatarGroupExample() {
         <AvatarFallback>ER</AvatarFallback>
       </Avatar>
     </AvatarGroup>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Card,
   CardContent,
@@ -9,9 +9,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/wedges/ui/card";
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+} from "@/registry/bases/base/wedges/ui/card";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 
 export function DemoCreateAccount() {
   return (
@@ -35,10 +35,10 @@ export function DemoCreateAccount() {
         </div>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <span className="w-full border-t border-t-wedges-border" />
+            <span className="border-t-wedges-border w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-wedges-background px-2 text-wedges-muted-foreground">
+            <span className="bg-wedges-background text-wedges-muted-foreground px-2">
               Or continue with
             </span>
           </div>

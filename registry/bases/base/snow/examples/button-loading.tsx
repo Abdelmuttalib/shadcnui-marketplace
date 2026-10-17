@@ -1,6 +1,6 @@
 import { Loader2 } from "lucide-react";
 
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 
 export default function ButtonLoading() {
   return (

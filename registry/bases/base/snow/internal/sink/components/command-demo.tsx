@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/snow/ui/command";
+} from "@/registry/bases/base/snow/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-snow-lg border border-snow-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-snow-lg border-snow-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

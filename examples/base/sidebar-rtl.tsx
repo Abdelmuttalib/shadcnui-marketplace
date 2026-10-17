@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   BadgeCheck,
   Bell,
@@ -21,25 +20,26 @@ import {
   Sparkles,
   SquareTerminal,
   Trash2,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
 import {
   LanguageProvider,
   LanguageSelector,
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-nova/ui-rtl/avatar"
+} from "@/styles/base-default/ui/avatar";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-nova/ui-rtl/collapsible"
-import { DirectionProvider } from "@/styles/base-nova/ui-rtl/direction"
+} from "@/styles/base-default/ui/collapsible";
+import { DirectionProvider } from "@/styles/base-default/ui/direction";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -48,7 +48,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Sidebar,
   SidebarContent,
@@ -68,7 +68,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@/styles/base-nova/ui-rtl/sidebar"
+} from "@/styles/base-default/ui/sidebar";
 
 const translations: Translations = {
   en: {
@@ -182,18 +182,18 @@ const translations: Translations = {
       travel: "נסיעות",
     },
   },
-}
+};
 
 export function SidebarRtl() {
   return (
     <LanguageProvider defaultLanguage="ar">
       <AppSidebarWithProvider />
     </LanguageProvider>
-  )
+  );
 }
 
 function AppSidebarWithProvider() {
-  const { language, setLanguage, dir } = useTranslation(translations, "ar")
+  const { language, setLanguage, dir } = useTranslation(translations, "ar");
 
   return (
     <DirectionProvider direction={dir}>
@@ -201,16 +201,16 @@ function AppSidebarWithProvider() {
         <LanguageSelector
           value={language}
           onValueChange={setLanguage}
-          className="absolute top-4 right-4 z-10 rtl:right-auto rtl:left-4"
+          className="absolute right-4 top-4 z-10 rtl:left-4 rtl:right-auto"
         />
         <AppSidebar />
       </div>
     </DirectionProvider>
-  )
+  );
 }
 
 function AppSidebar() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   const navMain = [
     {
@@ -256,19 +256,19 @@ function AppSidebar() {
         { title: t.limits, url: "#" },
       ],
     },
-  ]
+  ];
 
   const projects = [
     { name: t.designEngineering, url: "#", icon: Frame },
     { name: t.salesMarketing, url: "#", icon: PieChart },
     { name: t.travel, url: "#", icon: Map },
-  ]
+  ];
 
   const user = {
     name: "shadcn",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
-  }
+  };
 
   return (
     <SidebarProvider>
@@ -280,7 +280,7 @@ function AppSidebar() {
         user={user}
       />
     </SidebarProvider>
-  )
+  );
 }
 
 function SidebarContentInner({
@@ -290,27 +290,27 @@ function SidebarContentInner({
   projects,
   user,
 }: {
-  dir: "ltr" | "rtl"
-  t: typeof translations.ar.values
+  dir: "ltr" | "rtl";
+  t: typeof translations.ar.values;
   navMain: Array<{
-    title: string
-    url: string
-    icon?: React.ElementType
-    isActive?: boolean
-    items?: Array<{ title: string; url: string }>
-  }>
+    title: string;
+    url: string;
+    icon?: React.ElementType;
+    isActive?: boolean;
+    items?: Array<{ title: string; url: string }>;
+  }>;
   projects: Array<{
-    name: string
-    url: string
-    icon: React.ElementType
-  }>
+    name: string;
+    url: string;
+    icon: React.ElementType;
+  }>;
   user: {
-    name: string
-    email: string
-    avatar: string
-  }
+    name: string;
+    email: string;
+    avatar: string;
+  };
 }) {
-  const { isMobile } = useSidebar()
+  const { isMobile } = useSidebar();
 
   return (
     <>
@@ -324,7 +324,7 @@ function SidebarContentInner({
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" render={<a href="#" />}>
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                <div className="size-8 bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                   <GalleryVerticalEnd className="size-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
@@ -351,7 +351,7 @@ function SidebarContentInner({
                     >
                       {item.icon && <item.icon />}
                       <span>{item.title}</span>
-                      <ChevronRight className="ms-auto transition-transform duration-200 group-data-open/collapsible:rotate-90 rtl:rotate-180 rtl:group-data-open/collapsible:rotate-90" />
+                      <ChevronRight className="group-data-open/collapsible:rotate-90 rtl:group-data-open/collapsible:rotate-90 ms-auto transition-transform duration-200 rtl:rotate-180" />
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <SidebarMenuSub>
@@ -443,7 +443,7 @@ function SidebarContentInner({
                     <span className="truncate font-medium">{user.name}</span>
                     <span className="truncate text-xs">{user.email}</span>
                   </div>
-                  <ChevronsUpDown className="ms-auto size-4" />
+                  <ChevronsUpDown className="size-4 ms-auto" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
@@ -508,7 +508,7 @@ function SidebarContentInner({
       </Sidebar>
       <SidebarInset>
         <header
-          className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12"
+          className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear"
           dir={dir}
         >
           <div className="flex items-center gap-2 px-4">
@@ -517,5 +517,5 @@ function SidebarContentInner({
         </header>
       </SidebarInset>
     </>
-  )
+  );
 }

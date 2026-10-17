@@ -1,4 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/snow/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/snow/ui/avatar";
 
 export function AvatarDemo() {
   return (

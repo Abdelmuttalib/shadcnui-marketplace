@@ -1,6 +1,10 @@
 import { AlertCircle } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@/registry/moon/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/registry/bases/base/moon/ui/alert";
 
 export default function AlertDestructive() {
   return (

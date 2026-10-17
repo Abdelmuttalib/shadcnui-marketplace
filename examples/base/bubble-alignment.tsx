@@ -1,4 +1,4 @@
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
 
 export function BubbleAlignmentDemo() {
   return (
@@ -14,5 +14,5 @@ export function BubbleAlignmentDemo() {
         </BubbleContent>
       </Bubble>
     </div>
-  )
+  );
 }

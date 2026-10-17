@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -10,8 +10,8 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 
 const code = `import { streamText } from "ai"
 
@@ -24,10 +24,10 @@ export async function POST(request: Request) {
   })
 
   return result.toUIMessageStreamResponse()
-}`
+}`;
 
 export function CodeBlockChat() {
-  const lines = useHighlightedCode(code, "ts")
+  const lines = useHighlightedCode(code, "ts");
 
   return (
     <div className="flex w-full max-w-md flex-col gap-4 text-sm">
@@ -58,5 +58,5 @@ export function CodeBlockChat() {
         </MessageContent>
       </Message>
     </div>
-  )
+  );
 }

@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Card, CardContent } from "@/styles/base-nova/ui/card"
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Card, CardContent } from "@/styles/base-default/ui/card";
 
 export function CalendarBookedDates() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(new Date().getFullYear(), 0, 6)
-  )
+  );
   const bookedDates = Array.from(
     { length: 15 },
     (_, i) => new Date(new Date().getFullYear(), 0, 12 + i)
-  )
+  );
 
   return (
     <Card className="mx-auto w-fit p-0">
@@ -32,5 +32,5 @@ export function CalendarBookedDates() {
         />
       </CardContent>
     </Card>
-  )
+  );
 }

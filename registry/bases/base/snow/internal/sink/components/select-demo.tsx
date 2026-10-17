@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/snow/ui/select";
+} from "@/registry/bases/base/snow/ui/select";
 
 export function SelectDemo() {
   return (

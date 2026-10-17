@@ -3,12 +3,12 @@
 import { ChevronsUpDown, Plus, X } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/moon/ui/collapsible";
+} from "@/registry/bases/base/moon/ui/collapsible";
 
 export default function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);

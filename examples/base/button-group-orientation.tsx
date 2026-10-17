@@ -1,7 +1,7 @@
-import { MinusIcon, PlusIcon } from "lucide-react"
+import { MinusIcon, PlusIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { ButtonGroup } from "@/styles/base-nova/ui/button-group"
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
 
 export default function ButtonGroupOrientation() {
   return (
@@ -17,5 +17,5 @@ export default function ButtonGroupOrientation() {
         <MinusIcon />
       </Button>
     </ButtonGroup>
-  )
+  );
 }

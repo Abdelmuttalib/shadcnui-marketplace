@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { TerminalIcon } from "lucide-react"
+import { TerminalIcon } from "lucide-react";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -11,7 +11,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const output = `$ pnpm test
 \x1b[32m✓\x1b[39m src/format.test.ts \x1b[2m(4 tests)\x1b[22m
@@ -20,10 +20,10 @@ const output = `$ pnpm test
 
 \x1b[31mAssertionError: expected 'hello' to be 'hello world'\x1b[39m
 
-Tests  \x1b[31m1 failed\x1b[39m | \x1b[32m13 passed\x1b[39m (14)`
+Tests  \x1b[31m1 failed\x1b[39m | \x1b[32m13 passed\x1b[39m (14)`;
 
 export function CodeBlockAnsi() {
-  const lines = useHighlightedCode(output, "ansi")
+  const lines = useHighlightedCode(output, "ansi");
 
   return (
     <div className="w-full max-w-md">
@@ -44,5 +44,5 @@ export function CodeBlockAnsi() {
         </CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

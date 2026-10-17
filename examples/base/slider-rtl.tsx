@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Slider } from "@/styles/base-nova/ui-rtl/slider"
+  useTranslation,
+} from "@/components/language-selector";
+import { Slider } from "@/styles/base-default/ui/slider";
 
 const translations: Translations = {
   en: {
@@ -21,10 +21,10 @@ const translations: Translations = {
     dir: "rtl",
     values: {},
   },
-}
+};
 
 export function SliderRtl() {
-  const { dir } = useTranslation(translations, "ar")
+  const { dir } = useTranslation(translations, "ar");
 
   return (
     <Slider
@@ -34,5 +34,5 @@ export function SliderRtl() {
       className="mx-auto w-full max-w-xs"
       dir={dir}
     />
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/moon/ui/typography";
+import { Typography } from "@/registry/bases/base/moon/ui/typography";
 
 export default function TypographyDemo() {
   return (
@@ -35,7 +35,7 @@ export default function TypographyDemo() {
         The king thought long and hard, and finally came up with{" "}
         <a
           href="#"
-          className="font-medium text-primary underline underline-offset-4"
+          className="text-primary font-medium underline underline-offset-4"
         >
           a brilliant plan
         </a>
@@ -100,7 +100,7 @@ export default function TypographyDemo() {
       <div className="my-6 w-full overflow-y-auto">
         <table className="w-full">
           <thead>
-            <tr className="m-0 border-t p-0 even:bg-muted">
+            <tr className="even:bg-muted m-0 border-t p-0">
               <th className="border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right">
                 King's Treasury
               </th>
@@ -110,7 +110,7 @@ export default function TypographyDemo() {
             </tr>
           </thead>
           <tbody>
-            <tr className="m-0 border-t p-0 even:bg-muted">
+            <tr className="even:bg-muted m-0 border-t p-0">
               <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
                 Empty
               </td>
@@ -118,7 +118,7 @@ export default function TypographyDemo() {
                 Overflowing
               </td>
             </tr>
-            <tr className="m-0 border-t p-0 even:bg-muted">
+            <tr className="even:bg-muted m-0 border-t p-0">
               <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
                 Modest
               </td>
@@ -126,7 +126,7 @@ export default function TypographyDemo() {
                 Satisfied
               </td>
             </tr>
-            <tr className="m-0 border-t p-0 even:bg-muted">
+            <tr className="even:bg-muted m-0 border-t p-0">
               <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
                 Full
               </td>

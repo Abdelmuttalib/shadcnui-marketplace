@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/spectrum/ui/badge";
+import { Badge } from "@/registry/bases/base/spectrum/ui/badge";
 
 export default function BadgeDemo() {
   return (

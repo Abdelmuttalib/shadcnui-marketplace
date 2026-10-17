@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   ArchiveIcon,
   ArrowLeftIcon,
@@ -11,14 +10,15 @@ import {
   MoreHorizontalIcon,
   TagIcon,
   Trash2Icon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { ButtonGroup } from "@/styles/base-nova/ui-rtl/button-group"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -31,7 +31,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 const translations: Translations = {
   en: {
@@ -82,11 +82,11 @@ const translations: Translations = {
       trash: "פח",
     },
   },
-}
+};
 
 export function ButtonGroupRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
-  const [label, setLabel] = React.useState("personal")
+  const { dir, t, language } = useTranslation(translations, "ar");
+  const [label, setLabel] = React.useState("personal");
 
   return (
     <div dir={dir}>
@@ -182,5 +182,5 @@ export function ButtonGroupRtl() {
         </ButtonGroup>
       </ButtonGroup>
     </div>
-  )
+  );
 }

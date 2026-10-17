@@ -1,15 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIMessage } from "ai"
-import { TerminalIcon } from "lucide-react"
+import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
+import { TerminalIcon } from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -18,25 +21,25 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   {
-    terminal: { output: string }
+    terminal: { output: string };
   },
   {
     runCommand: {
-      input: { command: string }
-      output: { exitCode: number }
-    }
+      input: { command: string };
+      output: { exitCode: number };
+    };
   }
->
+>;
 
 type ToolPart = Extract<
   ChatMessage["parts"][number],
   { type: "tool-runCommand" }
->
+>;
 
 const COMMANDS = [
   {
@@ -75,7 +78,7 @@ const COMMANDS = [
       "└ ƒ /api/chat              141 B       102 kB",
     ],
   },
-]
+];
 
 const chat = createChat<ChatMessage>()
   .user("Run the checks, then build the app.")
@@ -84,7 +87,7 @@ const chat = createChat<ChatMessage>()
       const tool = writer.tool("runCommand", {
         toolCallId: id,
         input: { command },
-      })
+      });
 
       // The tool streams its output as a data part with the tool call's id.
       output.forEach((_, index) => {
@@ -94,39 +97,39 @@ const chat = createChat<ChatMessage>()
             id,
             data: { output: output.slice(0, index + 1).join("\n") },
           })
-          .sleep(200)
-      })
+          .sleep(200);
+      });
 
-      tool.output({ exitCode: 0 })
+      tool.output({ exitCode: 0 });
     }
 
-    writer.text("Lint and tests pass, and the build compiled both routes.")
-  })
+    writer.text("Lint and tests pass, and the build compiled both routes.");
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function getTitle(part: ToolPart, running: boolean) {
-  const command = part.input?.command
+  const command = part.input?.command;
 
   if (part.state === "output-available") {
     return part.output.exitCode === 0
       ? `Ran ${command}`
-      : `${command} exited with code ${part.output.exitCode}`
+      : `${command} exited with code ${part.output.exitCode}`;
   }
 
-  return running ? `Running ${command}` : `Failed to run ${command}`
+  return running ? `Running ${command}` : `Failed to run ${command}`;
 }
 
 function getOutput(message: ChatMessage, toolCallId: string) {
   for (const part of message.parts) {
     if (part.type === "data-terminal" && part.id === toolCallId) {
-      return part.data.output
+      return part.data.output;
     }
   }
 
-  return ""
+  return "";
 }
 
 function CommandRow({
@@ -135,18 +138,18 @@ function CommandRow({
   streaming,
   defaultOpen,
 }: {
-  part: ToolPart
-  output: string
-  streaming: boolean
-  defaultOpen?: boolean
+  part: ToolPart;
+  output: string;
+  streaming: boolean;
+  defaultOpen?: boolean;
 }) {
-  const [open, setOpen] = React.useState(defaultOpen)
+  const [open, setOpen] = React.useState(defaultOpen);
   const running =
     streaming &&
-    (part.state === "input-streaming" || part.state === "input-available")
+    (part.state === "input-streaming" || part.state === "input-available");
   const failed =
     !running &&
-    (part.state !== "output-available" || part.output.exitCode !== 0)
+    (part.state !== "output-available" || part.output.exitCode !== 0);
 
   return (
     <TraceCollapsible
@@ -169,18 +172,18 @@ function CommandRow({
         </CodeBlock>
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function TerminalDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -191,14 +194,14 @@ export function TerminalDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
         const tools = message.parts.filter(
           (part) => part.type === "tool-runCommand"
-        )
-        const text = getMessageText(message)
+        );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -219,7 +222,7 @@ export function TerminalDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -227,13 +230,13 @@ export function TerminalDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

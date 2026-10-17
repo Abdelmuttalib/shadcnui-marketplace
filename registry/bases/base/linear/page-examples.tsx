@@ -1,11 +1,11 @@
-import { AuthenticationPage } from "@/registry/linear/example/authentication/page";
-import { CardsPage } from "@/registry/linear/example/cards/page";
-import { DashboardPage } from "@/registry/linear/example/dashboard/page";
-import { SettingsProfilePage } from "@/registry/linear/example/forms/page";
-import { MailPage } from "@/registry/linear/example/mail/page";
-import { MusicPage } from "@/registry/linear/example/music/page";
-import { PlaygroundPage } from "@/registry/linear/example/playground/page";
-import { TaskPage } from "@/registry/linear/example/tasks/page";
+import { AuthenticationPage } from "@/registry/bases/base/linear/example/authentication/page";
+import { CardsPage } from "@/registry/bases/base/linear/example/cards/page";
+import { DashboardPage } from "@/registry/bases/base/linear/example/dashboard/page";
+import { SettingsProfilePage } from "@/registry/bases/base/linear/example/forms/page";
+import { MailPage } from "@/registry/bases/base/linear/example/mail/page";
+import { MusicPage } from "@/registry/bases/base/linear/example/music/page";
+import { PlaygroundPage } from "@/registry/bases/base/linear/example/playground/page";
+import { TaskPage } from "@/registry/bases/base/linear/example/tasks/page";
 
 export const LinearPageExamples = [
   <MailPage key="mail" />,

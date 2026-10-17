@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 export default function TypographyH3() {
   return (

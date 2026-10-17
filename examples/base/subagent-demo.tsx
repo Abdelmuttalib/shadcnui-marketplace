@@ -1,19 +1,22 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIDataTypes, UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIDataTypes, UIMessage } from "ai";
 import {
   CircleAlertIcon,
   CircleCheckIcon,
   LoaderCircleIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -22,33 +25,33 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type SubagentMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     runCommand: {
-      input: { command: string }
-      output: { stdout: string }
-    }
+      input: { command: string };
+      output: { stdout: string };
+    };
   }
->
+>;
 
-type SubagentPart = SubagentMessage["parts"][number]
+type SubagentPart = SubagentMessage["parts"][number];
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     researchAgent: {
-      input: { task: string }
-      output: SubagentMessage
-    }
+      input: { task: string };
+      output: SubagentMessage;
+    };
   }
->
+>;
 
-type Part = ChatMessage["parts"][number]
+type Part = ChatMessage["parts"][number];
 
 const steps = [
   {
@@ -65,7 +68,7 @@ const steps = [
     command: "ls public/images | wc -l",
     stdout: "1240",
   },
-]
+];
 
 function getSubagentMessage(done: number, report?: string): SubagentMessage {
   const parts = steps.slice(0, done).map(
@@ -76,7 +79,7 @@ function getSubagentMessage(done: number, report?: string): SubagentMessage {
       input: { command: step.command },
       output: { stdout: step.stdout },
     })
-  )
+  );
 
   if (done < steps.length) {
     parts.push({
@@ -84,14 +87,14 @@ function getSubagentMessage(done: number, report?: string): SubagentMessage {
       toolCallId: `step-${done}`,
       state: "input-available",
       input: { command: steps[done].command },
-    })
+    });
   }
 
   if (report) {
-    parts.push({ type: "text", text: report })
+    parts.push({ type: "text", text: report });
   }
 
-  return { id: "research-agent", role: "assistant", parts }
+  return { id: "research-agent", role: "assistant", parts };
 }
 
 const chat = createChat<ChatMessage>()
@@ -103,12 +106,12 @@ const chat = createChat<ChatMessage>()
           task: "Find out why image optimization reruns on every deploy.",
         },
       })
-      .sleep(600)
+      .sleep(600);
     steps.forEach((_, index) => {
       subagent
         .output(getSubagentMessage(index), { preliminary: true })
-        .sleep(1000)
-    })
+        .sleep(1000);
+    });
     subagent
       .output(
         getSubagentMessage(
@@ -116,24 +119,24 @@ const chat = createChat<ChatMessage>()
           "The cache is keyed on the commit SHA, so every deploy misses it and optimizes all 1,240 images again."
         )
       )
-      .sleep(400)
+      .sleep(400);
     writer.text(
       "Image optimization reruns because its cache is keyed on the commit SHA, which changes on every deploy. Key the cache on a hash of public/images instead, and unchanged images will be skipped."
-    )
-  })
+    );
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function StepRow({
   part,
   running,
 }: {
-  part: Extract<SubagentPart, { type: "tool-runCommand" }>
-  running: boolean
+  part: Extract<SubagentPart, { type: "tool-runCommand" }>;
+  running: boolean;
 }) {
-  const command = part.input?.command
+  const command = part.input?.command;
 
   if (part.state === "output-available") {
     return (
@@ -154,7 +157,7 @@ function StepRow({
           </CodeBlock>
         </TraceCollapsibleContent>
       </TraceCollapsible>
-    )
+    );
   }
 
   return (
@@ -170,22 +173,22 @@ function StepRow({
         {running ? "Running" : "Failed to run"} {command}
       </TraceTitle>
     </TraceLine>
-  )
+  );
 }
 
 function SubagentRow({
   part,
   streaming,
 }: {
-  part: Extract<Part, { type: "tool-researchAgent" }>
-  streaming: boolean
+  part: Extract<Part, { type: "tool-researchAgent" }>;
+  streaming: boolean;
 }) {
-  const done = part.state === "output-available" && !part.preliminary
-  const running = !done && part.state !== "output-error" && streaming
-  const parts = part.state === "output-available" ? part.output.parts : []
+  const done = part.state === "output-available" && !part.preliminary;
+  const running = !done && part.state !== "output-error" && streaming;
+  const parts = part.state === "output-available" ? part.output.parts : [];
   const report = parts
     .map((agentPart) => (agentPart.type === "text" ? agentPart.text : ""))
-    .join("")
+    .join("");
 
   const line = (
     <TraceLine status={done ? undefined : running ? "running" : "error"}>
@@ -203,10 +206,10 @@ function SubagentRow({
         subagent
       </TraceTitle>
     </TraceLine>
-  )
+  );
 
   if (parts.length === 0) {
-    return line
+    return line;
   }
 
   return (
@@ -227,18 +230,18 @@ function SubagentRow({
         {report && <p>{report}</p>}
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function SubagentDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -249,14 +252,14 @@ export function SubagentDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
         const agents = message.parts.filter(
           (part) => part.type === "tool-researchAgent"
-        )
-        const text = getMessageText(message)
+        );
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -275,7 +278,7 @@ export function SubagentDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -283,13 +286,13 @@ export function SubagentDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

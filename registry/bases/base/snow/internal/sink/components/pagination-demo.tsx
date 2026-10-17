@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/snow/ui/pagination";
+} from "@/registry/bases/base/snow/ui/pagination";
 
 export function PaginationDemo() {
   return (

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/registry/snow/ui/button";
+import { buttonVariants } from "@/registry/bases/base/snow/ui/button";
 
 import { UserAuthForm } from "./components/user-auth-form";
 
@@ -14,7 +14,7 @@ const metadata: Metadata = {
 export function AuthenticationPage() {
   return (
     <>
-      <div className="container relative mx-auto grid h-full min-h-full grid-cols-1 flex-col items-center justify-center bg-snow-background lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="bg-snow-background container relative mx-auto grid h-full min-h-full grid-cols-1 flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
         <Link
           href="#"
           className={cn(
@@ -24,7 +24,7 @@ export function AuthenticationPage() {
         >
           Login
         </Link>
-        <div className="relative hidden h-full flex-col bg-snow-muted p-10 text-white dark:border-r dark:border-r-snow-border lg:flex">
+        <div className="bg-snow-muted dark:border-r-snow-border relative hidden h-full flex-col p-10 text-white dark:border-r lg:flex">
           <div className="absolute inset-0 bg-gray-900" />
           <div className="relative z-20 flex items-center text-lg font-medium">
             <svg
@@ -58,23 +58,23 @@ export function AuthenticationPage() {
               <h1 className="text-2xl font-semibold tracking-tight">
                 Create an account
               </h1>
-              <p className="text-sm text-snow-muted-foreground">
+              <p className="text-snow-muted-foreground text-sm">
                 Enter your email below to create your account
               </p>
             </div>
             <UserAuthForm />
-            <p className="px-8 text-center text-sm text-snow-muted-foreground">
+            <p className="text-snow-muted-foreground px-8 text-center text-sm">
               By clicking continue, you agree to our{" "}
               <Link
                 href="#"
-                className="underline underline-offset-4 hover:text-snow-primary"
+                className="hover:text-snow-primary underline underline-offset-4"
               >
                 Terms of Service
               </Link>{" "}
               and{" "}
               <Link
                 href="#"
-                className="underline underline-offset-4 hover:text-snow-primary"
+                className="hover:text-snow-primary underline underline-offset-4"
               >
                 Privacy Policy
               </Link>

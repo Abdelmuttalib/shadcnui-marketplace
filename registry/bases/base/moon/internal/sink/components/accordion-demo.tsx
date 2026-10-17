@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/moon/ui/accordion";
+} from "@/registry/bases/base/moon/ui/accordion";
 
 export function AccordionDemo() {
   return (

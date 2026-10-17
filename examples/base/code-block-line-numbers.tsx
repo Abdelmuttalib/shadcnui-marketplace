@@ -1,4 +1,7 @@
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
 
 const code = `{
   "name": "chat",
@@ -7,7 +10,7 @@ const code = `{
     "dev": "next dev",
     "build": "next build"
   }
-}`
+}`;
 
 export function CodeBlockLineNumbers() {
   return (
@@ -16,5 +19,5 @@ export function CodeBlockLineNumbers() {
         <CodeBlockContent lineNumbers>{code}</CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/wedges/ui/form";
-import { Textarea } from "@/registry/wedges/ui/textarea";
+} from "@/registry/bases/base/wedges/ui/form";
+import { Textarea } from "@/registry/bases/base/wedges/ui/textarea";
 
 const FormSchema = z.object({
   bio: z

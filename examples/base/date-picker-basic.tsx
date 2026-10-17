@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { format } from "date-fns"
+import { format } from "date-fns";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Button } from "@/styles/base-default/ui/button";
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function DatePickerSimple() {
-  const [date, setDate] = React.useState<Date>()
+  const [date, setDate] = React.useState<Date>();
 
   return (
     <Field className="mx-auto w-44">
@@ -40,5 +40,5 @@ export function DatePickerSimple() {
         </PopoverContent>
       </Popover>
     </Field>
-  )
+  );
 }

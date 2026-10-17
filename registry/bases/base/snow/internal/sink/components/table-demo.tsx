@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/snow/ui/table";
+} from "@/registry/bases/base/snow/ui/table";
 
 const invoices = [
   {

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/moon/ui/button";
-import { ScrollArea } from "@/registry/moon/ui/scroll-area";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import { ScrollArea } from "@/registry/bases/base/moon/ui/scroll-area";
 
 import { Playlist } from "../data/playlists";
 

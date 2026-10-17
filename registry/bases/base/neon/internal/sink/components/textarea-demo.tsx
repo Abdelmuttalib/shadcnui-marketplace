@@ -1,4 +1,4 @@
-import { Textarea } from "@/registry/neon/ui/textarea";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 
 export function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;

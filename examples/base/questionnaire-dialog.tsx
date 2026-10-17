@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -13,7 +13,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-nova/ui/dialog"
+} from "@/styles/base-default/ui/dialog";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -27,25 +27,27 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "scope", required: true },
   { name: "tests", required: true },
-] as const
+] as const;
 
 export function QuestionnaireDialog() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
 
-    setOpen(false)
+    setOpen(false);
     toast("Clarification sent", {
-      description: `Scope: ${formData.get("scope") ?? "None"} · Verification: ${formData.get("tests") ?? "None"}`,
-    })
+      description: `Scope: ${formData.get("scope") ?? "None"} · Verification: ${
+        formData.get("tests") ?? "None"
+      }`,
+    });
   }
 
   return (
@@ -120,5 +122,5 @@ export function QuestionnaireDialog() {
         </Questionnaire>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

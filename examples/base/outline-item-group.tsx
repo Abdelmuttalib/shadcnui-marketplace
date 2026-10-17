@@ -1,4 +1,4 @@
-import { InboxIcon } from "lucide-react"
+import { InboxIcon } from "lucide-react";
 
 import {
   Item,
@@ -7,7 +7,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 export function OutlineItemGroup() {
   return (
@@ -40,5 +40,5 @@ export function OutlineItemGroup() {
         </ItemContent>
       </Item>
     </ItemGroup>
-  )
+  );
 }

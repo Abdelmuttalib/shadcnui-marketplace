@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Field, FieldLabel } from "@/styles/base-nova/ui-rtl/field"
+  useTranslation,
+} from "@/components/language-selector";
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/styles/base-nova/ui-rtl/input-otp"
+} from "@/styles/base-default/ui/input-otp";
 
 const translations: Translations = {
   en: {
@@ -32,10 +32,10 @@ const translations: Translations = {
       verificationCode: "קוד אימות",
     },
   },
-}
+};
 
 export function InputOTPRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <Field className="mx-auto max-w-xs">
@@ -56,5 +56,5 @@ export function InputOTPRtl() {
         </InputOTPGroup>
       </InputOTP>
     </Field>
-  )
+  );
 }

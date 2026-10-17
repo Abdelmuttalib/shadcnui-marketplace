@@ -1,14 +1,17 @@
-"use client"
+"use client";
 
-import { useChat } from "@ai-sdk/react"
-import type { UIDataTypes, UIMessage } from "ai"
-import { ChevronRightIcon, FileTextIcon } from "lucide-react"
+import { useChat } from "@ai-sdk/react";
+import type { UIDataTypes, UIMessage } from "ai";
+import { ChevronRightIcon, FileTextIcon } from "lucide-react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/base-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/base-default/ui/code-block";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Sheet,
   SheetContent,
@@ -16,24 +19,24 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-rhea/ui/sheet"
+} from "@/styles/base-default/ui/sheet";
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   UIDataTypes,
   {
     readFile: {
-      input: { path: string }
-      output: { path: string; content: string }
-    }
+      input: { path: string };
+      output: { path: string; content: string };
+    };
   }
->
+>;
 
 const PACKAGE_JSON = `{
   "name": "acme-chat",
@@ -43,7 +46,7 @@ const PACKAGE_JSON = `{
     "ai": "^7.0.0",
     "next": "^16.3.0"
   }
-}`
+}`;
 
 const chat = createChat<ChatMessage>()
   .user("Which AI SDK version does this app use?")
@@ -51,23 +54,23 @@ const chat = createChat<ChatMessage>()
     writer
       .tool("readFile", { input: { path: "package.json" } })
       .sleep(900)
-      .output({ path: "package.json", content: PACKAGE_JSON })
-    writer.text("It uses ai 7 with @ai-sdk/react 4.")
-  })
+      .output({ path: "package.json", content: PACKAGE_JSON });
+    writer.text("It uses ai 7 with @ai-sdk/react 4.");
+  });
 
-const initialMessages = chat.get(0)
-const transport = chat.transport({ delayMs: 20 })
+const initialMessages = chat.get(0);
+const transport = chat.transport({ delayMs: 20 });
 
 export function ToolSheet() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: initialMessages,
     transport,
-  })
-  const nextMessage = chat.next(messages)
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -78,28 +81,28 @@ export function ToolSheet() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
+        const streaming = busy && message === messages.at(-1);
 
         return (
           <Message key={message.id}>
             <MessageContent className="gap-4">
               {message.parts.map((part, index) => {
                 if (part.type === "text") {
-                  return <p key={index}>{part.text}</p>
+                  return <p key={index}>{part.text}</p>;
                 }
 
                 if (part.type !== "tool-readFile") {
-                  return null
+                  return null;
                 }
 
                 if (part.state !== "output-available") {
                   const running =
                     streaming &&
                     (part.state === "input-streaming" ||
-                      part.state === "input-available")
+                      part.state === "input-available");
 
                   return (
                     <Trace key={part.toolCallId}>
@@ -113,7 +116,7 @@ export function ToolSheet() {
                         </TraceTitle>
                       </TraceLine>
                     </Trace>
-                  )
+                  );
                 }
 
                 return (
@@ -147,11 +150,11 @@ export function ToolSheet() {
                       </SheetContent>
                     </Sheet>
                   </Trace>
-                )
+                );
               })}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -168,5 +171,5 @@ export function ToolSheet() {
         </Button>
       )}
     </div>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-nova/ui/select"
+} from "@/styles/base-default/ui/select";
 
 export function SelectDisabled() {
   const items = [
@@ -15,10 +15,10 @@ export function SelectDisabled() {
     { label: "Blueberry", value: "blueberry" },
     { label: "Grapes", value: "grapes", disabled: true },
     { label: "Pineapple", value: "pineapple" },
-  ]
+  ];
   return (
     <Select items={items} disabled>
-      <SelectTrigger className="w-full max-w-48">
+      <SelectTrigger className="max-w-48 w-full">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
@@ -35,5 +35,5 @@ export function SelectDisabled() {
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 }

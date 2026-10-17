@@ -4,8 +4,11 @@ import {
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/styles/base-nova/ui/field"
-import { RadioGroup, RadioGroupItem } from "@/styles/base-nova/ui/radio-group"
+} from "@/styles/base-default/ui/field";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/styles/base-default/ui/radio-group";
 
 export function RadioGroupChoiceCard() {
   return (
@@ -42,5 +45,5 @@ export function RadioGroupChoiceCard() {
         </Field>
       </FieldLabel>
     </RadioGroup>
-  )
+  );
 }

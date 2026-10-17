@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns";
 
-import { Calendar } from "@/registry/neon/ui/calendar";
-import { Card, CardContent } from "@/registry/neon/ui/card";
+import { Calendar } from "@/registry/bases/base/neon/ui/calendar";
+import { Card, CardContent } from "@/registry/bases/base/neon/ui/card";
 
 const start = new Date(2023, 5, 5);
 

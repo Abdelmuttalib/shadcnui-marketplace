@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/wedges/ui/alert-dialog";
-import { Button } from "@/registry/wedges/ui/button";
+} from "@/registry/bases/base/wedges/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 
 export function AlertDialogDemo() {
   return (

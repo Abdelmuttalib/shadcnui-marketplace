@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-nova/ui-rtl/field"
-import { Input } from "@/styles/base-nova/ui-rtl/input"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
+import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   Sheet,
   SheetClose,
@@ -16,7 +16,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-nova/ui-rtl/sheet"
+} from "@/styles/base-default/ui/sheet";
 
 const translations: Translations = {
   en: {
@@ -57,10 +57,10 @@ const translations: Translations = {
       close: "סגור",
     },
   },
-}
+};
 
 export function SheetRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
+  const { dir, t, language } = useTranslation(translations, "ar");
 
   return (
     <Sheet>
@@ -94,5 +94,5 @@ export function SheetRtl() {
         </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

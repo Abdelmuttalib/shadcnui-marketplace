@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/neon/ui/table";
+} from "@/registry/bases/base/neon/ui/table";
 
 const invoices = [
   {

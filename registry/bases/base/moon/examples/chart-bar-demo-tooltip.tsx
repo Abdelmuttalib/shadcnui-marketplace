@@ -7,7 +7,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -14,7 +14,7 @@ import {
   QuestionnaireItem,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   {
@@ -26,17 +26,17 @@ const items = [
     name: "approach",
     required: true,
   },
-] as const
+] as const;
 
 export function QuestionnaireFreeform() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const approach = new FormData(event.currentTarget).get("approach")
+    const approach = new FormData(event.currentTarget).get("approach");
 
     toast("Approach selected", {
       description: `Approach: ${approach ?? "None"}`,
-    })
+    });
   }
 
   return (
@@ -75,5 +75,5 @@ export function QuestionnaireFreeform() {
         <QuestionnaireSubmit>Use this approach</QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 import {
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/spectrum/ui/sidebar";
+} from "@/registry/bases/base/spectrum/ui/sidebar";
 
 import { AppSidebar } from "./components/app-sidebar";
 
@@ -10,8 +10,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="font-spectrum">
       <SidebarProvider>
         <AppSidebar />
-        <main className="w-full flex-1 overflow-hidden bg-spctm-sidebar">
-          <div className="h-full w-full bg-spctm-background p-2">
+        <main className="bg-spctm-sidebar w-full flex-1 overflow-hidden">
+          <div className="bg-spctm-background h-full w-full p-2">
             <SidebarTrigger />
             <div className="px-2 py-8 sm:px-4 md:px-10 lg:px-14">
               {children}

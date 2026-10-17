@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/wedges/ui/accordion";
+} from "@/registry/bases/base/wedges/ui/accordion";
 
 export function AccordionDemo() {
   return (
@@ -59,7 +59,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/wedges/ui/alert";
+} from "@/registry/bases/base/wedges/ui/alert";
 
 export function AlertDemo() {
   return (
@@ -83,7 +83,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/wedges/ui/alert-dialog";
+} from "@/registry/bases/base/wedges/ui/alert-dialog";
 
 export function AlertDialogDemo() {
   return (
@@ -110,7 +110,7 @@ export function AlertDialogDemo() {
 
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/wedges/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/wedges/ui/aspect-ratio";
 
 export function AspectRatioDemo() {
   return (
@@ -129,7 +129,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
+} from "@/registry/bases/base/wedges/ui/avatar";
 
 export function AvatarDemo() {
   return (
@@ -145,7 +145,7 @@ export function AvatarDemo() {
   );
 }
 
-import { Badge } from "@/registry/wedges/ui/badge";
+import { Badge } from "@/registry/bases/base/wedges/ui/badge";
 
 export function BadgeDemo() {
   return <Badge>Badge</Badge>;
@@ -159,13 +159,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/wedges/ui/breadcrumb";
+} from "@/registry/bases/base/wedges/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (
@@ -207,7 +207,7 @@ export function ButtonDemo() {
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/wedges/ui/calendar";
+import { Calendar } from "@/registry/bases/base/wedges/ui/calendar";
 
 export function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -229,16 +229,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/wedges/ui/card";
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+} from "@/registry/bases/base/wedges/ui/card";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/wedges/ui/select";
+} from "@/registry/bases/base/wedges/ui/select";
 
 export function CardWithForm() {
   return (
@@ -285,7 +285,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/wedges/ui/carousel";
+} from "@/registry/bases/base/wedges/ui/carousel";
 
 export function CarouselDemo() {
   return (
@@ -309,7 +309,7 @@ export function CarouselDemo() {
   );
 }
 
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
 
 export function CheckboxDemo() {
   return (
@@ -331,7 +331,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/wedges/ui/collapsible";
+} from "@/registry/bases/base/wedges/ui/collapsible";
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -377,12 +377,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/wedges/ui/command";
+} from "@/registry/bases/base/wedges/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/wedges/ui/popover";
+} from "@/registry/bases/base/wedges/ui/popover";
 import { cn } from "@/utils/cn";
 
 const frameworks = [
@@ -471,7 +471,7 @@ import {
 import {
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/wedges/ui/command";
+} from "@/registry/bases/base/wedges/ui/command";
 
 export function CommandDemo() {
   return (
@@ -530,7 +530,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/wedges/ui/context-menu";
+} from "@/registry/bases/base/wedges/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
@@ -623,7 +623,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/wedges/ui/dialog";
+} from "@/registry/bases/base/wedges/ui/dialog";
 
 export function DialogDemo() {
   return (
@@ -672,7 +672,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/wedges/ui/drawer";
+} from "@/registry/bases/base/wedges/ui/drawer";
 
 const data = [
   {
@@ -802,7 +802,7 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from "@/registry/wedges/ui/dropdown-menu";
+} from "@/registry/bases/base/wedges/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (
@@ -868,7 +868,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/wedges/ui/hover-card";
+} from "@/registry/bases/base/wedges/ui/hover-card";
 
 export function HoverCardDemo() {
   return (
@@ -909,7 +909,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/wedges/ui/input-otp";
+} from "@/registry/bases/base/wedges/ui/input-otp";
 
 export function InputOTPDemo() {
   return (
@@ -954,7 +954,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/wedges/ui/menubar";
+} from "@/registry/bases/base/wedges/ui/menubar";
 
 export function MenubarDemo() {
   return (
@@ -1059,7 +1059,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/wedges/ui/navigation-menu";
+} from "@/registry/bases/base/wedges/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -1198,7 +1198,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/wedges/ui/pagination";
+} from "@/registry/bases/base/wedges/ui/pagination";
 
 export function PaginationDemo() {
   return (
@@ -1283,7 +1283,7 @@ export function PopoverDemo() {
   );
 }
 
-import { Progress } from "@/registry/wedges/ui/progress";
+import { Progress } from "@/registry/bases/base/wedges/ui/progress";
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(13);
@@ -1296,7 +1296,10 @@ export function ProgressDemo() {
   return <Progress value={progress} className="w-[60%]" />;
 }
 
-import { RadioGroup, RadioGroupItem } from "@/registry/wedges/ui/radio-group";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/wedges/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (
@@ -1321,7 +1324,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/wedges/ui/resizable";
+} from "@/registry/bases/base/wedges/ui/resizable";
 
 export function ResizableDemo() {
   return (
@@ -1354,8 +1357,8 @@ export function ResizableDemo() {
   );
 }
 
-import { ScrollArea } from "@/registry/wedges/ui/scroll-area";
-import { Separator } from "@/registry/wedges/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/wedges/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -1377,7 +1380,10 @@ export function ScrollAreaDemo() {
   );
 }
 
-import { SelectGroup, SelectLabel } from "@/registry/wedges/ui/select";
+import {
+  SelectGroup,
+  SelectLabel,
+} from "@/registry/bases/base/wedges/ui/select";
 
 export function SelectDemo() {
   return (
@@ -1431,7 +1437,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/wedges/ui/sheet";
+} from "@/registry/bases/base/wedges/ui/sheet";
 
 export function SheetDemo() {
   return (
@@ -1470,7 +1476,7 @@ export function SheetDemo() {
   );
 }
 
-import { Skeleton } from "@/registry/wedges/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/wedges/ui/skeleton";
 
 export function SkeletonDemo() {
   return (
@@ -1484,7 +1490,7 @@ export function SkeletonDemo() {
   );
 }
 
-import { Slider } from "@/registry/wedges/ui/slider";
+import { Slider } from "@/registry/bases/base/wedges/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 
@@ -1500,7 +1506,7 @@ export function SliderDemo({ className, ...props }: SliderProps) {
   );
 }
 
-import { Switch } from "@/registry/wedges/ui/switch";
+import { Switch } from "@/registry/bases/base/wedges/ui/switch";
 
 export function SwitchDemo() {
   return (
@@ -1520,7 +1526,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/wedges/ui/table";
+} from "@/registry/bases/base/wedges/ui/table";
 
 const invoices = [
   {
@@ -1743,13 +1749,13 @@ export function DataTableDemo() {
   );
 }
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/wedges/ui/tabs";
+} from "@/registry/bases/base/wedges/ui/tabs";
 
 export function TabsDemo() {
   return (
@@ -1831,7 +1837,7 @@ export function TabsDemo() {
   );
 }
 
-import { Textarea } from "@/registry/wedges/ui/textarea";
+import { Textarea } from "@/registry/bases/base/wedges/ui/textarea";
 
 export function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;
@@ -1839,7 +1845,7 @@ export function TextareaDemo() {
 
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/wedges/ui/toggle";
+import { Toggle } from "@/registry/bases/base/wedges/ui/toggle";
 
 export function ToggleDemo() {
   return (
@@ -1854,7 +1860,7 @@ import { Italic, Underline } from "lucide-react";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/wedges/ui/toggle-group";
+} from "@/registry/bases/base/wedges/ui/toggle-group";
 
 export function ToggleGroupDemo() {
   return (
@@ -1877,7 +1883,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/wedges/ui/tooltip";
+} from "@/registry/bases/base/wedges/ui/tooltip";
 
 export function TooltipDemo() {
   return (
@@ -1902,7 +1908,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/wedges/ui/chart";
+} from "@/registry/bases/base/wedges/ui/chart";
 const chartData4 = [
   { month: "January", desktop: 186 },
   { month: "February", desktop: 305 },

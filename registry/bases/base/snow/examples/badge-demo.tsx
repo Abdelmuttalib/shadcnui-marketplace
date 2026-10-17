@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/snow/ui/badge";
+import { Badge } from "@/registry/bases/base/snow/ui/badge";
 
 export default function BadgeDemo() {
   return (

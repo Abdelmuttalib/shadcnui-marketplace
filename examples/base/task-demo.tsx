@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
 import {
   CircleAlertIcon,
   CircleCheckIcon,
   LoaderCircleIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -21,21 +21,21 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
   {
     task: {
-      title: string
-      steps: { title: string; status: "done" | "running" | "error" }[]
-    }
+      title: string;
+      steps: { title: string; status: "done" | "running" | "error" }[];
+    };
   }
->
+>;
 
-type TaskPart = Extract<ChatMessage["parts"][number], { type: "data-task" }>
+type TaskPart = Extract<ChatMessage["parts"][number], { type: "data-task" }>;
 
-type Status = "running" | "error" | undefined
+type Status = "running" | "error" | undefined;
 
 const TASKS = [
   {
@@ -55,7 +55,7 @@ const TASKS = [
       ["Editing app/page.tsx", "Edited app/page.tsx"],
     ],
   },
-]
+];
 
 function taskAt(task: (typeof TASKS)[number], done: number) {
   return {
@@ -64,7 +64,7 @@ function taskAt(task: (typeof TASKS)[number], done: number) {
       title: index < done ? finished : running,
       status: index < done ? "done" : "running",
     })),
-  } satisfies TaskPart["data"]
+  } satisfies TaskPart["data"];
 }
 
 const chat = createChat<ChatMessage>()
@@ -74,54 +74,54 @@ const chat = createChat<ChatMessage>()
       for (let done = 0; done <= task.steps.length; done++) {
         writer
           .data({ type: "data-task", id: task.id, data: taskAt(task, done) })
-          .sleep(900)
+          .sleep(900);
       }
-    })
+    });
     writer.text(
       "Added Open Graph defaults to app/layout.tsx and a title, description and image for the home page in app/page.tsx."
-    )
-  })
+    );
+  });
 
-const transcript = chat.get()
-const [question] = chat.get(1)
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const [question] = chat.get(1);
+const transport = chat.transport({ delayMs: 20 });
 
 function getStepStatus(
   status: TaskPart["data"]["steps"][number]["status"],
   streaming: boolean
 ): Status {
   if (status === "done") {
-    return undefined
+    return undefined;
   }
 
-  return status === "running" && streaming ? "running" : "error"
+  return status === "running" && streaming ? "running" : "error";
 }
 
 function StatusIcon({ status }: { status: Status }) {
   if (status === "running") {
-    return <LoaderCircleIcon className="animate-spin" />
+    return <LoaderCircleIcon className="animate-spin" />;
   }
 
-  return status === "error" ? <CircleAlertIcon /> : <CircleCheckIcon />
+  return status === "error" ? <CircleAlertIcon /> : <CircleCheckIcon />;
 }
 
 function TaskRow({
   task,
   streaming,
 }: {
-  task: TaskPart["data"]
-  streaming: boolean
+  task: TaskPart["data"];
+  streaming: boolean;
 }) {
-  const [open, setOpen] = React.useState<boolean>()
+  const [open, setOpen] = React.useState<boolean>();
   const steps = task.steps.map((step) => ({
     title: step.title,
     status: getStepStatus(step.status, streaming),
-  }))
+  }));
   const status = steps.some((step) => step.status === "error")
     ? "error"
     : steps.some((step) => step.status === "running")
-      ? "running"
-      : undefined
+    ? "running"
+    : undefined;
 
   return (
     <TraceCollapsible
@@ -146,18 +146,18 @@ function TaskRow({
         </Trace>
       </TraceCollapsibleContent>
     </TraceCollapsible>
-  )
+  );
 }
 
 export function TaskDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (
@@ -168,12 +168,12 @@ export function TaskDemo() {
                 </Bubble>
               </MessageContent>
             </Message>
-          )
+          );
         }
 
-        const streaming = busy && message === messages.at(-1)
-        const tasks = message.parts.filter((part) => part.type === "data-task")
-        const text = getMessageText(message)
+        const streaming = busy && message === messages.at(-1);
+        const tasks = message.parts.filter((part) => part.type === "data-task");
+        const text = getMessageText(message);
 
         return (
           <Message key={message.id}>
@@ -192,7 +192,7 @@ export function TaskDemo() {
               {text && <p>{text}</p>}
             </MessageContent>
           </Message>
-        )
+        );
       })}
       {!busy && (
         <Button
@@ -200,13 +200,13 @@ export function TaskDemo() {
           size="sm"
           className="mt-auto self-start"
           onClick={() => {
-            setMessages([])
-            sendMessage(question)
+            setMessages([]);
+            sendMessage(question);
           }}
         >
           Replay
         </Button>
       )}
     </div>
-  )
+  );
 }

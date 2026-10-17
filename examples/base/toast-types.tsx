@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { toast } from "@/styles/base-nova/ui/toast"
+import { Button } from "@/styles/base-default/ui/button";
+import { toast } from "@/styles/base-default/ui/toast";
 
 export function ToastTypes() {
   return (
@@ -58,5 +58,5 @@ export function ToastTypes() {
         Error
       </Button>
     </div>
-  )
+  );
 }

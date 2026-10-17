@@ -1,6 +1,6 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+import { Button } from "@/styles/base-default/ui/button";
+import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   Popover,
   PopoverContent,
@@ -8,7 +8,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function PopoverForm() {
   return (
@@ -41,5 +41,5 @@ export function PopoverForm() {
         </PopoverContent>
       </Popover>
     </>
-  )
+  );
 }

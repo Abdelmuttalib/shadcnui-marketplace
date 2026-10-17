@@ -1,7 +1,7 @@
 import { CircleUser, Menu, Package2, Search } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Card,
   CardContent,
@@ -9,8 +9,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
-import { Checkbox } from "@/registry/moon/ui/checkbox";
+} from "@/registry/bases/base/moon/ui/card";
+import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,9 +18,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
-import { Input } from "@/registry/moon/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/moon/ui/sheet";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/registry/bases/base/moon/ui/sheet";
 
 export const description =
   "A settings page. The settings page has a sidebar navigation and a main content area. The main content area has a form to update the store name and a form to update the plugins directory. The sidebar navigation has links to general, security, integrations, support, organizations, and advanced settings.";
@@ -32,7 +36,7 @@ export const containerClassName = "w-full h-full";
 export default function Dashboard() {
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-moon-background px-4 md:px-6">
+      <header className="bg-moon-background sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6">
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <Link
             href="#"
@@ -43,31 +47,31 @@ export default function Dashboard() {
           </Link>
           <Link
             href="#"
-            className="text-moon-muted-foreground transition-colors hover:text-moon-foreground"
+            className="text-moon-muted-foreground hover:text-moon-foreground transition-colors"
           >
             Dashboard
           </Link>
           <Link
             href="#"
-            className="text-moon-muted-foreground transition-colors hover:text-moon-foreground"
+            className="text-moon-muted-foreground hover:text-moon-foreground transition-colors"
           >
             Orders
           </Link>
           <Link
             href="#"
-            className="text-moon-muted-foreground transition-colors hover:text-moon-foreground"
+            className="text-moon-muted-foreground hover:text-moon-foreground transition-colors"
           >
             Products
           </Link>
           <Link
             href="#"
-            className="text-moon-muted-foreground transition-colors hover:text-moon-foreground"
+            className="text-moon-muted-foreground hover:text-moon-foreground transition-colors"
           >
             Customers
           </Link>
           <Link
             href="#"
-            className="text-moon-foreground transition-colors hover:text-moon-foreground"
+            className="text-moon-foreground hover:text-moon-foreground transition-colors"
           >
             Settings
           </Link>
@@ -125,7 +129,7 @@ export default function Dashboard() {
         <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="ml-auto flex-1 sm:flex-initial">
             <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-moon-muted-foreground" />
+              <Search className="text-moon-muted-foreground absolute left-2.5 top-2.5 h-4 w-4" />
               <Input
                 type="search"
                 placeholder="Search products..."
@@ -151,17 +155,17 @@ export default function Dashboard() {
           </DropdownMenu>
         </div>
       </header>
-      <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 bg-moon-muted/40 p-4 md:gap-8 md:p-10">
+      <main className="bg-moon-muted/40 flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
         <div className="mx-auto grid w-full max-w-6xl gap-2">
           <h1 className="text-3xl font-semibold">Settings</h1>
         </div>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
           <nav
-            className="grid gap-4 text-sm text-moon-muted-foreground"
+            className="text-moon-muted-foreground grid gap-4 text-sm"
             x-chunk="A sidebar navigation with links to general, security, integrations, support, organizations, and advanced settings."
             x-chunk-container="chunk-container after:right-0"
           >
-            <Link href="#" className="font-semibold text-moon-primary">
+            <Link href="#" className="text-moon-primary font-semibold">
               General
             </Link>
             <Link href="#">Security</Link>

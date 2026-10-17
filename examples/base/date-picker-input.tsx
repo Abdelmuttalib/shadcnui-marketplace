@@ -1,48 +1,48 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { CalendarIcon } from "lucide-react"
+import { CalendarIcon } from "lucide-react";
+import * as React from "react";
 
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 function formatDate(date: Date | undefined) {
   if (!date) {
-    return ""
+    return "";
   }
 
   return date.toLocaleDateString("en-US", {
     day: "2-digit",
     month: "long",
     year: "numeric",
-  })
+  });
 }
 
 function isValidDate(date: Date | undefined) {
   if (!date) {
-    return false
+    return false;
   }
-  return !isNaN(date.getTime())
+  return !isNaN(date.getTime());
 }
 
 export function DatePickerInput() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
   const [date, setDate] = React.useState<Date | undefined>(
     new Date("2025-06-01")
-  )
-  const [month, setMonth] = React.useState<Date | undefined>(date)
-  const [value, setValue] = React.useState(formatDate(date))
+  );
+  const [month, setMonth] = React.useState<Date | undefined>(date);
+  const [value, setValue] = React.useState(formatDate(date));
 
   return (
     <Field className="mx-auto w-48">
@@ -53,17 +53,17 @@ export function DatePickerInput() {
           value={value}
           placeholder="June 01, 2025"
           onChange={(e) => {
-            const date = new Date(e.target.value)
-            setValue(e.target.value)
+            const date = new Date(e.target.value);
+            setValue(e.target.value);
             if (isValidDate(date)) {
-              setDate(date)
-              setMonth(date)
+              setDate(date);
+              setMonth(date);
             }
           }}
           onKeyDown={(e) => {
             if (e.key === "ArrowDown") {
-              e.preventDefault()
-              setOpen(true)
+              e.preventDefault();
+              setOpen(true);
             }
           }}
         />
@@ -94,9 +94,9 @@ export function DatePickerInput() {
                 month={month}
                 onMonthChange={setMonth}
                 onSelect={(date) => {
-                  setDate(date)
-                  setValue(formatDate(date))
-                  setOpen(false)
+                  setDate(date);
+                  setValue(formatDate(date));
+                  setOpen(false);
                 }}
               />
             </PopoverContent>
@@ -104,5 +104,5 @@ export function DatePickerInput() {
         </InputGroupAddon>
       </InputGroup>
     </Field>
-  )
+  );
 }

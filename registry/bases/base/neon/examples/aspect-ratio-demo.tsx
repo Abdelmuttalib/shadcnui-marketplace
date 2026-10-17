@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/neon/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/neon/ui/aspect-ratio";
 
 export default function AspectRatioDemo() {
   return (

@@ -1,5 +1,5 @@
-import { Button } from "@/registry/wedges/ui/button";
-import { Input } from "@/registry/wedges/ui/input";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
 
 export default function InputWithButton() {
   return (

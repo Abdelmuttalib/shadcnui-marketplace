@@ -12,7 +12,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/registry/bases/base/lucid/ui/sidebar";
-import { AppSidebar } from "@/registry/lucid/blocks/sidebar-07/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/lucid/blocks/sidebar-07/components/app-sidebar";
 
 export default function Page() {
   return (

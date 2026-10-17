@@ -1,5 +1,8 @@
-import { Label } from "@/registry/wedges/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/wedges/ui/radio-group";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/wedges/ui/radio-group";
 
 export default function RadioGroupDemo() {
   return (

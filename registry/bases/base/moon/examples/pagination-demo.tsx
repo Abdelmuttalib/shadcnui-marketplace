@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/moon/ui/pagination";
+} from "@/registry/bases/base/moon/ui/pagination";
 
 export default function PaginationDemo() {
   return (

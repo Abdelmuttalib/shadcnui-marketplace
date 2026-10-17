@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Card, CardContent } from "@/registry/snow/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/snow/ui/card";
 import {
   Carousel,
   type CarouselApi,
@@ -8,7 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/snow/ui/carousel";
+} from "@/registry/bases/base/snow/ui/carousel";
 
 export default function CarouselDApiDemo() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -45,7 +45,7 @@ export default function CarouselDApiDemo() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-      <div className="py-2 text-center text-sm text-spctm-muted-foreground">
+      <div className="text-spctm-muted-foreground py-2 text-center text-sm">
         Slide {current} of {count}
       </div>
     </div>

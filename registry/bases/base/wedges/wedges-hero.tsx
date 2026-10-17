@@ -1,7 +1,7 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
 import { renderStyleCardShowcase } from "@/registry/styles-components";
-import { DemoDatePicker } from "@/registry/wedges/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/wedges/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -16,18 +16,22 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/wedges/showcase";
+} from "@/registry/bases/base/wedges/showcase";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
-import { Badge } from "@/registry/wedges/ui/badge";
-import { Button } from "@/registry/wedges/ui/button";
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
-import { Switch } from "@/registry/wedges/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/wedges/ui/tabs";
-import { Toggle } from "@/registry/wedges/ui/toggle";
+} from "@/registry/bases/base/wedges/ui/avatar";
+import { Badge } from "@/registry/bases/base/wedges/ui/badge";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
+import { Switch } from "@/registry/bases/base/wedges/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/wedges/ui/tabs";
+import { Toggle } from "@/registry/bases/base/wedges/ui/toggle";
 
 export function WedgesUI() {
   return (

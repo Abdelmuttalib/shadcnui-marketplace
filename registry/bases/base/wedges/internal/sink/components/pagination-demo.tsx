@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/wedges/ui/pagination";
+} from "@/registry/bases/base/wedges/ui/pagination";
 
 export function PaginationDemo() {
   return (

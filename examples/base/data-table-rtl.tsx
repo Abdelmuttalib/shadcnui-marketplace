@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   columnFilteringFeature,
+  type ColumnFiltersState,
   columnVisibilityFeature,
+  type ColumnVisibilityState,
   createColumnHelper,
   createFilteredRowModel,
   createPaginatedRowModel,
@@ -14,20 +15,19 @@ import {
   rowSortingFeature,
   sortFn_alphanumeric,
   sortFn_text,
+  type SortingState,
   tableFeatures,
   useTable,
-  type ColumnFiltersState,
-  type ColumnVisibilityState,
-  type SortingState,
-} from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+} from "@tanstack/react-table";
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { Checkbox } from "@/styles/base-nova/ui-rtl/checkbox"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
+import { Checkbox } from "@/styles/base-default/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -37,8 +37,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/dropdown-menu"
-import { Input } from "@/styles/base-nova/ui-rtl/input"
+} from "@/styles/base-default/ui/dropdown-menu";
+import { Input } from "@/styles/base-default/ui/input";
 import {
   Table,
   TableBody,
@@ -46,7 +46,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/styles/base-nova/ui-rtl/table"
+} from "@/styles/base-default/ui/table";
 
 const translations: Translations = {
   en: {
@@ -127,7 +127,7 @@ const translations: Translations = {
       pending: "ממתין",
     },
   },
-}
+};
 
 // New in v9: declare the features this table uses — anything you don't
 // register is tree-shaken out of the bundle.
@@ -142,16 +142,16 @@ const features = tableFeatures({
   sortedRowModel: createSortedRowModel(),
   filterFns: { includesString: filterFn_includesString },
   sortFns: { alphanumeric: sortFn_alphanumeric, text: sortFn_text },
-})
+});
 
-const columnHelper = createColumnHelper<typeof features, Payment>()
+const columnHelper = createColumnHelper<typeof features, Payment>();
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -184,17 +184,17 @@ const data: Payment[] = [
     status: "failed",
     email: "carmella@example.com",
   },
-]
+];
 
 export function DataTableRtl() {
-  const { t, dir, language } = useTranslation(translations, "ar")
-  const [sorting, setSorting] = React.useState<SortingState>([])
+  const { t, dir, language } = useTranslation(translations, "ar");
+  const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
-  )
+  );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<ColumnVisibilityState>({})
-  const [rowSelection, setRowSelection] = React.useState({})
+    React.useState<ColumnVisibilityState>({});
+  const [rowSelection, setRowSelection] = React.useState({});
 
   const columns = React.useMemo(
     () =>
@@ -227,14 +227,14 @@ export function DataTableRtl() {
         columnHelper.accessor("status", {
           header: t.status,
           cell: ({ row }) => {
-            const status = row.getValue("status") as string
+            const status = row.getValue("status") as string;
             const statusMap: Record<string, string> = {
               success: t.success,
               processing: t.processing,
               failed: t.failed,
               pending: t.pending,
-            }
-            return <div className="capitalize">{statusMap[status]}</div>
+            };
+            return <div className="capitalize">{statusMap[status]}</div>;
           },
         }),
         columnHelper.accessor("email", {
@@ -249,7 +249,7 @@ export function DataTableRtl() {
                 {t.email}
                 <ArrowUpDown />
               </Button>
-            )
+            );
           },
           cell: ({ row }) => (
             <div className="lowercase">{row.getValue("email")}</div>
@@ -258,23 +258,23 @@ export function DataTableRtl() {
         columnHelper.accessor("amount", {
           header: () => <div className="text-start">{t.amount}</div>,
           cell: ({ row }) => {
-            const amount = parseFloat(row.getValue("amount"))
+            const amount = parseFloat(row.getValue("amount"));
             const formatted = new Intl.NumberFormat(
               dir === "rtl" ? "ar-SA" : "en-US",
               {
                 style: "currency",
                 currency: "USD",
               }
-            ).format(amount)
+            ).format(amount);
 
-            return <div className="text-start font-medium">{formatted}</div>
+            return <div className="text-start font-medium">{formatted}</div>;
           },
         }),
         columnHelper.display({
           id: "actions",
           enableHiding: false,
           cell: ({ row }) => {
-            const payment = row.original
+            const payment = row.original;
 
             return (
               <DropdownMenu>
@@ -304,12 +304,12 @@ export function DataTableRtl() {
                   </DropdownMenuGroup>
                 </DropdownMenuContent>
               </DropdownMenu>
-            )
+            );
           },
         }),
       ]),
     [t, dir, language]
-  )
+  );
 
   const table = useTable({
     features,
@@ -325,7 +325,7 @@ export function DataTableRtl() {
       columnVisibility,
       rowSelection,
     },
-  })
+  });
 
   return (
     <div className="w-full">
@@ -364,7 +364,7 @@ export function DataTableRtl() {
                     >
                       {column.id}
                     </DropdownMenuCheckboxItem>
-                  )
+                  );
                 })}
             </DropdownMenuGroup>
           </DropdownMenuContent>
@@ -382,7 +382,7 @@ export function DataTableRtl() {
                         <table.FlexRender header={header} />
                       )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -415,7 +415,7 @@ export function DataTableRtl() {
         </Table>
       </div>
       <div className="flex items-center justify-end gap-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
+        <div className="text-muted-foreground flex-1 text-sm">
           {table.getFilteredSelectedRowModel().rows.length} {t.rowsSelected}{" "}
           {table.getFilteredRowModel().rows.length} {t.rowsSelectedSuffix}
         </div>
@@ -439,5 +439,5 @@ export function DataTableRtl() {
         </div>
       </div>
     </div>
-  )
+  );
 }

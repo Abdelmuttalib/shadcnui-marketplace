@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/registry/spectrum/ui/button";
-import { Input } from "@/registry/spectrum/ui/input";
-import { Label } from "@/registry/spectrum/ui/label";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/spectrum/ui/sheet";
+} from "@/registry/bases/base/spectrum/ui/sheet";
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
 

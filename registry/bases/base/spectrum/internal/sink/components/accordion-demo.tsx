@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/spectrum/ui/accordion";
+} from "@/registry/bases/base/spectrum/ui/accordion";
 
 export function AccordionDemo() {
   return (

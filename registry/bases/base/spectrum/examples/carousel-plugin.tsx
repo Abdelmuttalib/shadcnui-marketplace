@@ -1,14 +1,14 @@
 import Autoplay from "embla-carousel-autoplay";
 import * as React from "react";
 
-import { Card, CardContent } from "@/registry/spectrum/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/spectrum/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/spectrum/ui/carousel";
+} from "@/registry/bases/base/spectrum/ui/carousel";
 
 export default function CarouselPlugin() {
   const plugin = React.useRef(

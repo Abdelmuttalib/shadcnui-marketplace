@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Combobox,
@@ -7,13 +7,13 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@/styles/base-nova/ui/combobox"
+} from "@/styles/base-default/ui/combobox";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 const countries = [
   { code: "", value: "", continent: "", label: "Select country" },
@@ -66,7 +66,7 @@ const countries = [
     label: "United States",
     continent: "North America",
   },
-]
+];
 
 export function ComboboxWithCustomItems() {
   return (
@@ -95,5 +95,5 @@ export function ComboboxWithCustomItems() {
         </ComboboxList>
       </ComboboxContent>
     </Combobox>
-  )
+  );
 }

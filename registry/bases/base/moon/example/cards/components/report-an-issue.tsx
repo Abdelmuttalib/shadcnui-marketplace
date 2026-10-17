@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Card,
   CardContent,
@@ -8,17 +8,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
+} from "@/registry/bases/base/moon/ui/card";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
-import { Textarea } from "@/registry/moon/ui/textarea";
+} from "@/registry/bases/base/moon/ui/select";
+import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
 
 export function DemoReportAnIssue() {
   return (

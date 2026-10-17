@@ -1,6 +1,6 @@
 import { Italic } from "lucide-react";
 
-import { Toggle } from "@/registry/spectrum/ui/toggle";
+import { Toggle } from "@/registry/bases/base/spectrum/ui/toggle";
 
 export default function ToggleWithText() {
   return (

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   FrameIcon,
@@ -6,7 +6,7 @@ import {
   MapIcon,
   PieChartIcon,
   SendIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -19,7 +19,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/styles/base-nova/ui/sidebar"
+} from "@/styles/base-default/ui/sidebar";
 
 const projects = [
   {
@@ -52,7 +52,7 @@ const projects = [
     icon: SendIcon,
     badge: "8",
   },
-]
+];
 
 export default function AppSidebar() {
   return (
@@ -81,5 +81,5 @@ export default function AppSidebar() {
         </SidebarContent>
       </Sidebar>
     </SidebarProvider>
-  )
+  );
 }

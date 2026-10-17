@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/spectrum/ui/button";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/spectrum/ui/dialog";
+} from "@/registry/bases/base/spectrum/ui/dialog";
 import {
   Drawer,
   DrawerClose,
@@ -20,9 +20,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/spectrum/ui/drawer";
-import { Input } from "@/registry/spectrum/ui/input";
-import { Label } from "@/registry/spectrum/ui/label";
+} from "@/registry/bases/base/spectrum/ui/drawer";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 
 export default function DrawerDialogDemo() {
   const [open, setOpen] = React.useState(false);

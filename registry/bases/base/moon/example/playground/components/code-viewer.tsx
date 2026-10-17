@@ -1,4 +1,4 @@
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/moon/ui/dialog";
+} from "@/registry/bases/base/moon/ui/dialog";
 
 export function CodeViewer() {
   return (
@@ -23,9 +23,9 @@ export function CodeViewer() {
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4">
-          <div className="rounded-moon-md border border-moon-border">
+          <div className="rounded-moon-md border-moon-border border">
             <pre>
-              <code className="grid gap-1 text-sm text-moon-muted-foreground [&_span]:h-4">
+              <code className="text-moon-muted-foreground grid gap-1 text-sm [&_span]:h-4">
                 <span>
                   <span className="text-blue-400">import</span> os
                 </span>
@@ -76,7 +76,7 @@ export function CodeViewer() {
             </pre>
           </div>
           <div>
-            <p className="text-sm text-moon-muted-foreground">
+            <p className="text-moon-muted-foreground text-sm">
               Your API Key can be found here. You should use environment
               variables or a secret management tool to expose your key to your
               applications.

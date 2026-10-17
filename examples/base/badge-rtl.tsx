@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { BadgeCheck, BookmarkIcon } from "lucide-react"
+import { BadgeCheck, BookmarkIcon } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Badge } from "@/styles/base-nova/ui-rtl/badge"
+  useTranslation,
+} from "@/components/language-selector";
+import { Badge } from "@/styles/base-default/ui/badge";
 
 const translations: Translations = {
   en: {
@@ -43,10 +43,10 @@ const translations: Translations = {
       bookmark: "סימנייה",
     },
   },
-}
+};
 
 export function BadgeRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div className="flex w-full flex-wrap justify-center gap-2" dir={dir}>
@@ -63,5 +63,5 @@ export function BadgeRtl() {
         <BookmarkIcon data-icon="inline-end" />
       </Badge>
     </div>
-  )
+  );
 }

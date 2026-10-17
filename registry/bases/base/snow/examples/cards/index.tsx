@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/snow/examples/cards/activity-goal";
-import { CardsCalendar } from "@/registry/snow/examples/cards/calendar";
-import { CardsChat } from "@/registry/snow/examples/cards/chat";
-import { CardsCookieSettings } from "@/registry/snow/examples/cards/cookie-settings";
-import { CardsCreateAccount } from "@/registry/snow/examples/cards/create-account";
-import { CardsDataTable } from "@/registry/snow/examples/cards/data-table";
-import { CardsMetric } from "@/registry/snow/examples/cards/metric";
-import { CardsPaymentMethod } from "@/registry/snow/examples/cards/payment-method";
-import { CardsReportIssue } from "@/registry/snow/examples/cards/report-issue";
-import { CardsShare } from "@/registry/snow/examples/cards/share";
-import { CardsStats } from "@/registry/snow/examples/cards/stats";
-import { CardsTeamMembers } from "@/registry/snow/examples/cards/team-members";
+import { CardsActivityGoal } from "@/registry/bases/base/snow/examples/cards/activity-goal";
+import { CardsCalendar } from "@/registry/bases/base/snow/examples/cards/calendar";
+import { CardsChat } from "@/registry/bases/base/snow/examples/cards/chat";
+import { CardsCookieSettings } from "@/registry/bases/base/snow/examples/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/bases/base/snow/examples/cards/create-account";
+import { CardsDataTable } from "@/registry/bases/base/snow/examples/cards/data-table";
+import { CardsMetric } from "@/registry/bases/base/snow/examples/cards/metric";
+import { CardsPaymentMethod } from "@/registry/bases/base/snow/examples/cards/payment-method";
+import { CardsReportIssue } from "@/registry/bases/base/snow/examples/cards/report-issue";
+import { CardsShare } from "@/registry/bases/base/snow/examples/cards/share";
+import { CardsStats } from "@/registry/bases/base/snow/examples/cards/stats";
+import { CardsTeamMembers } from "@/registry/bases/base/snow/examples/cards/team-members";
 
 export default function CardsDemo() {
   return (

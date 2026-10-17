@@ -1,10 +1,10 @@
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/moon/ui/tooltip";
+} from "@/registry/bases/base/moon/ui/tooltip";
 
 export default function TooltipDemo() {
   return (

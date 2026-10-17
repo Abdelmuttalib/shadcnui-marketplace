@@ -3,8 +3,8 @@ import {
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Switch } from "@/styles/base-nova/ui/switch"
+} from "@/styles/base-default/ui/field";
+import { Switch } from "@/styles/base-default/ui/switch";
 
 export function SwitchDescription() {
   return (
@@ -19,5 +19,5 @@ export function SwitchDescription() {
       </FieldContent>
       <Switch id="switch-focus-mode" />
     </Field>
-  )
+  );
 }

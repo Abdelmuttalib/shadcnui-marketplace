@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/neon/ui/table";
+} from "@/registry/bases/base/neon/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-neon-md border border-neon-border">
+    <div className="rounded-neon-md border-neon-border border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

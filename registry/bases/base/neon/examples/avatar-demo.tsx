@@ -1,4 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
 
 export default function AvatarDemo() {
   return (

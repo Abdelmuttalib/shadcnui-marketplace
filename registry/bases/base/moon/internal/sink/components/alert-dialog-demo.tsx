@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/moon/ui/alert-dialog";
-import { Button } from "@/registry/moon/ui/button";
+} from "@/registry/bases/base/moon/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 
 export function AlertDialogDemo() {
   return (

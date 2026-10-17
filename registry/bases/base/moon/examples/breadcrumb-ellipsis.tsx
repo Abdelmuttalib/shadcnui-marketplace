@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/moon/ui/breadcrumb";
+} from "@/registry/bases/base/moon/ui/breadcrumb";
 
 export default function BreadcrumbCollapsed() {
   return (

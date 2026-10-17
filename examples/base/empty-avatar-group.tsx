@@ -1,11 +1,11 @@
-import { PlusIcon } from "lucide-react"
+import { PlusIcon } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-nova/ui/avatar"
-import { Button } from "@/styles/base-nova/ui/button"
+} from "@/styles/base-default/ui/avatar";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -13,14 +13,14 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-nova/ui/empty"
+} from "@/styles/base-default/ui/empty";
 
 export default function EmptyAvatarGroup() {
   return (
     <Empty>
       <EmptyHeader>
         <EmptyMedia>
-          <div className="flex -space-x-2 *:data-[slot=avatar]:size-12 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale">
+          <div className="*:data-[slot=avatar]:size-12 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale flex -space-x-2">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
@@ -53,5 +53,5 @@ export default function EmptyAvatarGroup() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

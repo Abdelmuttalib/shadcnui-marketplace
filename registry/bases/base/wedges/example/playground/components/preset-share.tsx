@@ -1,13 +1,13 @@
 import { CopyIcon } from "@radix-ui/react-icons";
 
-import { Button } from "@/registry/wedges/ui/button";
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/wedges/ui/popover";
+} from "@/registry/bases/base/wedges/ui/popover";
 
 export function PresetShare() {
   return (
@@ -18,7 +18,7 @@ export function PresetShare() {
       <PopoverContent align="end" className="w-[520px]">
         <div className="flex flex-col space-y-2 text-center sm:text-left">
           <h3 className="text-lg font-semibold">Share preset</h3>
-          <p className="text-sm text-wedges-muted-foreground">
+          <p className="text-wedges-muted-foreground text-sm">
             Anyone who has this link and an OpenAI account will be able to view
             this.
           </p>

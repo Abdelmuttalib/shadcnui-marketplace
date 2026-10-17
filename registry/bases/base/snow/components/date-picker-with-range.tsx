@@ -6,13 +6,13 @@ import * as React from "react";
 import { DateRange } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/snow/ui/button";
-import { Calendar } from "@/registry/snow/ui/calendar";
+import { Button } from "@/registry/bases/base/snow/ui/button";
+import { Calendar } from "@/registry/bases/base/snow/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/snow/ui/popover";
+} from "@/registry/bases/base/snow/ui/popover";
 
 export default function DatePickerWithRange({
   className,

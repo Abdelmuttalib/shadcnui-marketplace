@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/wedges/ui/command";
+} from "@/registry/bases/base/wedges/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-wedges-lg border border-wedges-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-wedges-lg border-wedges-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

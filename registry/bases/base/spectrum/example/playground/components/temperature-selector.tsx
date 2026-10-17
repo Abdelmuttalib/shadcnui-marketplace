@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/spectrum/ui/hover-card";
-import { Label } from "@/registry/spectrum/ui/label";
-import { Slider } from "@/registry/spectrum/ui/slider";
+} from "@/registry/bases/base/spectrum/ui/hover-card";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
+import { Slider } from "@/registry/bases/base/spectrum/ui/slider";
 
 interface TemperatureSelectorProps {
   defaultValue: SliderProps["defaultValue"];
@@ -27,7 +27,7 @@ export function TemperatureSelector({
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <Label htmlFor="temperature">Temperature</Label>
-              <span className="w-12 rounded-spctm-md border border-transparent px-2 py-0.5 text-right text-sm text-spctm-muted-foreground hover:border-border">
+              <span className="rounded-spctm-md text-spctm-muted-foreground hover:border-border w-12 border border-transparent px-2 py-0.5 text-right text-sm">
                 {value}
               </span>
             </div>

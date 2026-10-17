@@ -1,73 +1,73 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useChat } from "@ai-sdk/react"
-import type { UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
+import * as React from "react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { Marker, MarkerContent } from "@/styles/base-rhea/ui/marker"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
+import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 
 type ChatMessage = UIMessage<
   unknown,
   {
     checkpoint: {
-      label: string
-    }
+      label: string;
+    };
   }
->
+>;
 
 type CheckpointPart = Extract<
   ChatMessage["parts"][number],
   { type: "data-checkpoint" }
->
+>;
 
 const chat = createChat<ChatMessage>()
   .user("Rename the button component to action.")
   .assistant(({ writer }) => {
-    writer.text("Renamed Button to Action in components/ui/button.tsx.")
+    writer.text("Renamed Button to Action in components/ui/button.tsx.");
     writer.data({
       type: "data-checkpoint",
       id: "rename",
       data: { label: "Button renamed" },
-    })
+    });
   })
   .user("Update the docs to match.")
   .assistant(({ writer }) => {
-    writer.text("Updated the Button page to say Action.")
-  })
+    writer.text("Updated the Button page to say Action.");
+  });
 
-const transcript = chat.get()
-const transport = chat.transport({ delayMs: 20 })
+const transcript = chat.get();
+const transport = chat.transport({ delayMs: 20 });
 
 export function CheckpointDemo() {
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: transcript,
     transport,
-  })
-  const nextMessage = chat.next(messages)
-  const busy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const busy = status === "submitted" || status === "streaming";
 
   function restore(messageId: string) {
-    const index = messages.findIndex((message) => message.id === messageId)
+    const index = messages.findIndex((message) => message.id === messageId);
 
     if (index === -1) {
-      return
+      return;
     }
 
-    setMessages(messages.slice(0, index + 1))
+    setMessages(messages.slice(0, index + 1));
   }
 
   return (
-    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         const checkpoint = message.parts.find(
           (part): part is CheckpointPart => part.type === "data-checkpoint"
-        )
-        const index = messages.findIndex((item) => item.id === message.id)
-        const canRestore = index < messages.length - 1
+        );
+        const index = messages.findIndex((item) => item.id === message.id);
+        const canRestore = index < messages.length - 1;
 
         return (
           <React.Fragment key={message.id}>
@@ -104,7 +104,7 @@ export function CheckpointDemo() {
               </Marker>
             )}
           </React.Fragment>
-        )
+        );
       })}
       {!busy && nextMessage && (
         <Button
@@ -117,5 +117,5 @@ export function CheckpointDemo() {
         </Button>
       )}
     </div>
-  )
+  );
 }

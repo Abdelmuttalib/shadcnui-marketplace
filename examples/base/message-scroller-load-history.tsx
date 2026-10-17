@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { RotateCwIcon } from "lucide-react"
-import { toast } from "sonner"
+import { RotateCwIcon } from "lucide-react";
+import * as React from "react";
+import { toast } from "sonner";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -15,9 +15,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
-import { Marker, MarkerContent } from "@/styles/base-rhea/ui/marker"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/card";
+import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -25,12 +25,12 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-rhea/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 const chat = createChat()
   .user("Can you summarize the incident channel?")
@@ -52,21 +52,21 @@ const chat = createChat()
   .user("Keep watching for customer-visible issues.")
   .assistant(
     "I will watch the queue and support tags for another 15 minutes. I am tracking export failures, delayed download requests, and any support thread that mentions missing reports.\n\nIf those stay quiet through the next batch window, we can close this as an internal degradation."
-  )
+  );
 
-const history = chat.get()
-const INITIAL_VISIBLE_COUNT = 5
+const history = chat.get();
+const INITIAL_VISIBLE_COUNT = 5;
 
 export function MessageScrollerLoadHistory() {
-  const [demoKey, setDemoKey] = React.useState(0)
-  const [visibleCount, setVisibleCount] = React.useState(INITIAL_VISIBLE_COUNT)
-  const visibleMessages = history.slice(-visibleCount)
-  const canLoadHistory = visibleCount < history.length
+  const [demoKey, setDemoKey] = React.useState(0);
+  const [visibleCount, setVisibleCount] = React.useState(INITIAL_VISIBLE_COUNT);
+  const visibleMessages = history.slice(-visibleCount);
+  const canLoadHistory = visibleCount < history.length;
 
   return (
     <MessageScrollerProvider>
       <div className="relative flex flex-col gap-4">
-        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
+        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>Load History</CardTitle>
             <CardDescription>
@@ -83,8 +83,8 @@ export function MessageScrollerLoadHistory() {
                       aria-label="Reset loaded messages"
                       disabled={visibleCount === INITIAL_VISIBLE_COUNT}
                       onClick={() => {
-                        setVisibleCount(INITIAL_VISIBLE_COUNT)
-                        setDemoKey((key) => key + 1)
+                        setVisibleCount(INITIAL_VISIBLE_COUNT);
+                        setDemoKey((key) => key + 1);
                       }}
                     />
                   }
@@ -102,7 +102,7 @@ export function MessageScrollerLoadHistory() {
               <MessageScrollerViewport>
                 <MessageScrollerContent className="p-(--card-spacing)">
                   {visibleMessages.map((message) => {
-                    const isUserMessage = message.role === "user"
+                    const isUserMessage = message.role === "user";
 
                     return (
                       <MessageScrollerItem
@@ -130,7 +130,7 @@ export function MessageScrollerLoadHistory() {
                           </MessageContent>
                         </Message>
                       </MessageScrollerItem>
-                    )
+                    );
                   })}
                   <MessageScrollerItem scrollAnchor={false}>
                     <Marker variant="separator">
@@ -147,25 +147,25 @@ export function MessageScrollerLoadHistory() {
               type="button"
               disabled={!canLoadHistory}
               onClick={() => {
-                setVisibleCount(history.length)
+                setVisibleCount(history.length);
                 toast("History loaded", {
                   description: "Scroll up to see earlier messages.",
-                })
+                });
               }}
               className="w-full"
               variant="secondary"
             >
               {canLoadHistory ? "Load History" : "History Loaded"}
             </Button>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-muted-foreground text-xs">
               Restore earlier messages while keeping your place.
             </p>
           </CardFooter>
         </Card>
-        <div className="mx-auto max-w-sm px-0.5 text-center text-xs text-balance text-muted-foreground">
+        <div className="text-balance text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
           Click Load History to load the entire conversation
         </div>
       </div>
     </MessageScrollerProvider>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
-import { Switch } from "@/styles/base-nova/ui/switch"
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import { Switch } from "@/styles/base-default/ui/switch";
 
 export function SwitchDisabled() {
   return (
@@ -7,5 +7,5 @@ export function SwitchDisabled() {
       <Switch id="switch-disabled-unchecked" disabled />
       <FieldLabel htmlFor="switch-disabled-unchecked">Disabled</FieldLabel>
     </Field>
-  )
+  );
 }

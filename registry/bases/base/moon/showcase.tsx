@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/moon/ui/accordion";
+} from "@/registry/bases/base/moon/ui/accordion";
 
 export function AccordionDemo() {
   return (
@@ -36,7 +36,11 @@ export function AccordionDemo() {
 
 import { Terminal } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@/registry/moon/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/registry/bases/base/moon/ui/alert";
 
 export function AlertDemo() {
   return (
@@ -60,7 +64,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/moon/ui/alert-dialog";
+} from "@/registry/bases/base/moon/ui/alert-dialog";
 
 export function AlertDialogDemo() {
   return (
@@ -87,7 +91,7 @@ export function AlertDialogDemo() {
 
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/moon/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/moon/ui/aspect-ratio";
 
 export function AspectRatioDemo() {
   return (
@@ -102,7 +106,11 @@ export function AspectRatioDemo() {
   );
 }
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/moon/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/moon/ui/avatar";
 
 export function AvatarDemo() {
   return (
@@ -118,7 +126,7 @@ export function AvatarDemo() {
   );
 }
 
-import { Badge } from "@/registry/moon/ui/badge";
+import { Badge } from "@/registry/bases/base/moon/ui/badge";
 
 export function BadgeDemo() {
   return <Badge>Badge</Badge>;
@@ -132,13 +140,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/moon/ui/breadcrumb";
+} from "@/registry/bases/base/moon/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (
@@ -180,7 +188,7 @@ export function ButtonDemo() {
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/moon/ui/calendar";
+import { Calendar } from "@/registry/bases/base/moon/ui/calendar";
 
 export function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -202,16 +210,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
+} from "@/registry/bases/base/moon/ui/card";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
+} from "@/registry/bases/base/moon/ui/select";
 
 export function CardWithForm() {
   return (
@@ -258,7 +266,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/moon/ui/carousel";
+} from "@/registry/bases/base/moon/ui/carousel";
 
 export function CarouselDemo() {
   return (
@@ -282,7 +290,7 @@ export function CarouselDemo() {
   );
 }
 
-import { Checkbox } from "@/registry/moon/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
 
 export function CheckboxDemo() {
   return (
@@ -304,7 +312,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/moon/ui/collapsible";
+} from "@/registry/bases/base/moon/ui/collapsible";
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -350,12 +358,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/moon/ui/command";
+} from "@/registry/bases/base/moon/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/moon/ui/popover";
+} from "@/registry/bases/base/moon/ui/popover";
 import { cn } from "@/utils/cn";
 
 const frameworks = [
@@ -441,7 +449,10 @@ import {
   User,
 } from "lucide-react";
 
-import { CommandSeparator, CommandShortcut } from "@/registry/moon/ui/command";
+import {
+  CommandSeparator,
+  CommandShortcut,
+} from "@/registry/bases/base/moon/ui/command";
 
 export function CommandDemo() {
   return (
@@ -500,7 +511,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/moon/ui/context-menu";
+} from "@/registry/bases/base/moon/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
@@ -593,7 +604,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/moon/ui/dialog";
+} from "@/registry/bases/base/moon/ui/dialog";
 
 export function DialogDemo() {
   return (
@@ -642,7 +653,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/moon/ui/drawer";
+} from "@/registry/bases/base/moon/ui/drawer";
 
 const data = [
   {
@@ -772,7 +783,7 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from "@/registry/moon/ui/dropdown-menu";
+} from "@/registry/bases/base/moon/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (
@@ -838,7 +849,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/moon/ui/hover-card";
+} from "@/registry/bases/base/moon/ui/hover-card";
 
 export function HoverCardDemo() {
   return (
@@ -879,7 +890,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/moon/ui/input-otp";
+} from "@/registry/bases/base/moon/ui/input-otp";
 
 export function InputOTPDemo() {
   return (
@@ -924,7 +935,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/moon/ui/menubar";
+} from "@/registry/bases/base/moon/ui/menubar";
 
 export function MenubarDemo() {
   return (
@@ -1029,7 +1040,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/moon/ui/navigation-menu";
+} from "@/registry/bases/base/moon/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -1168,7 +1179,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/moon/ui/pagination";
+} from "@/registry/bases/base/moon/ui/pagination";
 
 export function PaginationDemo() {
   return (
@@ -1253,7 +1264,7 @@ export function PopoverDemo() {
   );
 }
 
-import { Progress } from "@/registry/moon/ui/progress";
+import { Progress } from "@/registry/bases/base/moon/ui/progress";
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(13);
@@ -1266,7 +1277,10 @@ export function ProgressDemo() {
   return <Progress value={progress} className="w-[60%]" />;
 }
 
-import { RadioGroup, RadioGroupItem } from "@/registry/moon/ui/radio-group";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/moon/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (
@@ -1291,7 +1305,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/moon/ui/resizable";
+} from "@/registry/bases/base/moon/ui/resizable";
 
 export function ResizableDemo() {
   return (
@@ -1324,8 +1338,8 @@ export function ResizableDemo() {
   );
 }
 
-import { ScrollArea } from "@/registry/moon/ui/scroll-area";
-import { Separator } from "@/registry/moon/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/moon/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -1347,7 +1361,7 @@ export function ScrollAreaDemo() {
   );
 }
 
-import { SelectGroup, SelectLabel } from "@/registry/moon/ui/select";
+import { SelectGroup, SelectLabel } from "@/registry/bases/base/moon/ui/select";
 
 export function SelectDemo() {
   return (
@@ -1401,7 +1415,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/moon/ui/sheet";
+} from "@/registry/bases/base/moon/ui/sheet";
 
 export function SheetDemo() {
   return (
@@ -1440,7 +1454,7 @@ export function SheetDemo() {
   );
 }
 
-import { Skeleton } from "@/registry/moon/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/moon/ui/skeleton";
 
 export function SkeletonDemo() {
   return (
@@ -1454,7 +1468,7 @@ export function SkeletonDemo() {
   );
 }
 
-import { Slider } from "@/registry/moon/ui/slider";
+import { Slider } from "@/registry/bases/base/moon/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 
@@ -1489,7 +1503,7 @@ export function SonnerDemo() {
   );
 }
 
-import { Switch } from "@/registry/moon/ui/switch";
+import { Switch } from "@/registry/bases/base/moon/ui/switch";
 
 export function SwitchDemo() {
   return (
@@ -1509,7 +1523,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/moon/ui/table";
+} from "@/registry/bases/base/moon/ui/table";
 
 const invoices = [
   {
@@ -1732,13 +1746,13 @@ export function DataTableDemo() {
   );
 }
 
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/moon/ui/tabs";
+} from "@/registry/bases/base/moon/ui/tabs";
 
 export function TabsDemo() {
   return (
@@ -1820,7 +1834,7 @@ export function TabsDemo() {
   );
 }
 
-import { Textarea } from "@/registry/moon/ui/textarea";
+import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
 
 export function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;
@@ -1828,7 +1842,7 @@ export function TextareaDemo() {
 
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/moon/ui/toggle";
+import { Toggle } from "@/registry/bases/base/moon/ui/toggle";
 
 export function ToggleDemo() {
   return (
@@ -1840,7 +1854,10 @@ export function ToggleDemo() {
 
 import { Italic, Underline } from "lucide-react";
 
-import { ToggleGroup, ToggleGroupItem } from "@/registry/moon/ui/toggle-group";
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/registry/bases/base/moon/ui/toggle-group";
 
 export function ToggleGroupDemo() {
   return (
@@ -1863,7 +1880,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/moon/ui/tooltip";
+} from "@/registry/bases/base/moon/ui/tooltip";
 
 export function TooltipDemo() {
   return (
@@ -1888,7 +1905,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 const chartData4 = [
   { month: "January", desktop: 186 },
   { month: "February", desktop: 305 },

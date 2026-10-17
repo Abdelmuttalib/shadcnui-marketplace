@@ -9,7 +9,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/wedges/ui/chart";
+} from "@/registry/bases/base/wedges/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

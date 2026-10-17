@@ -1,6 +1,6 @@
-import { Button } from "@/registry/wedges/ui/button";
-import { Input } from "@/registry/wedges/ui/input";
-import { Label } from "@/registry/wedges/ui/label";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/wedges/ui/sheet";
+} from "@/registry/bases/base/wedges/ui/sheet";
 
 export default function SheetDemo() {
   return (

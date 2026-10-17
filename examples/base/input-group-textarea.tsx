@@ -3,7 +3,7 @@ import {
   IconCopy,
   IconCornerDownLeft,
   IconRefresh,
-} from "@tabler/icons-react"
+} from "@tabler/icons-react";
 
 import {
   InputGroup,
@@ -11,7 +11,7 @@ import {
   InputGroupButton,
   InputGroupText,
   InputGroupTextarea,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 export default function InputGroupTextareaExample() {
   return (
@@ -42,5 +42,5 @@ export default function InputGroupTextareaExample() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

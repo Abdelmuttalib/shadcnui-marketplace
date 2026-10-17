@@ -1,5 +1,5 @@
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Card, CardContent } from "@/styles/base-nova/ui/card"
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Card, CardContent } from "@/styles/base-default/ui/card";
 
 export function CalendarMultiple() {
   return (
@@ -8,5 +8,5 @@ export function CalendarMultiple() {
         <Calendar mode="multiple" />
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -12,15 +12,15 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-import { Badge } from "@/registry/neon/ui/badge";
-import { Button } from "@/registry/neon/ui/button";
+import { Badge } from "@/registry/bases/base/neon/ui/badge";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/neon/ui/card";
+} from "@/registry/bases/base/neon/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,9 +28,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/neon/ui/dropdown-menu";
-import { Input } from "@/registry/neon/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/neon/ui/sheet";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/registry/bases/base/neon/ui/sheet";
 
 export const description =
   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.";
@@ -42,7 +46,7 @@ export const containerClassName = "w-full h-full";
 export default function Dashboard() {
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-neon-muted/40 md:block">
+      <div className="bg-neon-muted/40 hidden border-r md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
@@ -58,14 +62,14 @@ export default function Dashboard() {
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-neon-muted-foreground transition-all hover:text-neon-primary"
+                className="text-neon-muted-foreground hover:text-neon-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <Home className="h-4 w-4" />
                 Dashboard
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-neon-muted-foreground transition-all hover:text-neon-primary"
+                className="text-neon-muted-foreground hover:text-neon-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <ShoppingCart className="h-4 w-4" />
                 Orders
@@ -75,21 +79,21 @@ export default function Dashboard() {
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg bg-neon-muted px-3 py-2 text-neon-primary transition-all hover:text-neon-primary"
+                className="bg-neon-muted text-neon-primary hover:text-neon-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <Package className="h-4 w-4" />
                 Products{" "}
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-neon-muted-foreground transition-all hover:text-neon-primary"
+                className="text-neon-muted-foreground hover:text-neon-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <Users className="h-4 w-4" />
                 Customers
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-neon-muted-foreground transition-all hover:text-neon-primary"
+                className="text-neon-muted-foreground hover:text-neon-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <LineChart className="h-4 w-4" />
                 Analytics
@@ -115,7 +119,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="flex flex-col">
-        <header className="flex h-14 items-center gap-4 border-b bg-neon-muted/40 px-4 lg:h-[60px] lg:px-6">
+        <header className="bg-neon-muted/40 flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -138,14 +142,14 @@ export default function Dashboard() {
                 </Link>
                 <Link
                   href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-neon-muted-foreground hover:text-neon-foreground"
+                  className="text-neon-muted-foreground hover:text-neon-foreground mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <Home className="h-5 w-5" />
                   Dashboard
                 </Link>
                 <Link
                   href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-neon-muted px-3 py-2 text-neon-foreground hover:text-neon-foreground"
+                  className="bg-neon-muted text-neon-foreground hover:text-neon-foreground mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <ShoppingCart className="h-5 w-5" />
                   Orders
@@ -155,21 +159,21 @@ export default function Dashboard() {
                 </Link>
                 <Link
                   href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-neon-muted-foreground hover:text-neon-foreground"
+                  className="text-neon-muted-foreground hover:text-neon-foreground mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <Package className="h-5 w-5" />
                   Products
                 </Link>
                 <Link
                   href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-neon-muted-foreground hover:text-neon-foreground"
+                  className="text-neon-muted-foreground hover:text-neon-foreground mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <Users className="h-5 w-5" />
                   Customers
                 </Link>
                 <Link
                   href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-neon-muted-foreground hover:text-neon-foreground"
+                  className="text-neon-muted-foreground hover:text-neon-foreground mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <LineChart className="h-5 w-5" />
                   Analytics
@@ -196,11 +200,11 @@ export default function Dashboard() {
           <div className="w-full flex-1">
             <form>
               <div className="relative">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-neon-muted-foreground" />
+                <Search className="text-neon-muted-foreground absolute left-2.5 top-2.5 h-4 w-4" />
                 <Input
                   type="search"
                   placeholder="Search products..."
-                  className="w-full appearance-none bg-neon-background pl-8 shadow-none md:w-2/3 lg:w-1/3"
+                  className="bg-neon-background w-full appearance-none pl-8 shadow-none md:w-2/3 lg:w-1/3"
                 />
               </div>
             </form>
@@ -234,7 +238,7 @@ export default function Dashboard() {
               <h3 className="text-2xl font-bold tracking-tight">
                 You have no products
               </h3>
-              <p className="text-sm text-neon-muted-foreground">
+              <p className="text-neon-muted-foreground text-sm">
                 You can start selling as soon as you add a product.
               </p>
               <Button className="mt-4">Add Product</Button>

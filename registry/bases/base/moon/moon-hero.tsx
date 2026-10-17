@@ -1,6 +1,6 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
-import { DemoDatePicker } from "@/registry/moon/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/moon/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -15,14 +15,22 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/moon/showcase";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/moon/ui/avatar";
-import { Badge } from "@/registry/moon/ui/badge";
-import { Button } from "@/registry/moon/ui/button";
-import { Checkbox } from "@/registry/moon/ui/checkbox";
-import { Switch } from "@/registry/moon/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/moon/ui/tabs";
-import { Toggle } from "@/registry/moon/ui/toggle";
+} from "@/registry/bases/base/moon/showcase";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/moon/ui/avatar";
+import { Badge } from "@/registry/bases/base/moon/ui/badge";
+import { Button } from "@/registry/bases/base/moon/ui/button";
+import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
+import { Switch } from "@/registry/bases/base/moon/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/moon/ui/tabs";
+import { Toggle } from "@/registry/bases/base/moon/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function MoonUI() {

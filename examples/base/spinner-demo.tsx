@@ -3,8 +3,8 @@ import {
   ItemContent,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
-import { Spinner } from "@/styles/base-nova/ui/spinner"
+} from "@/styles/base-default/ui/item";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export function SpinnerDemo() {
   return (
@@ -21,5 +21,5 @@ export function SpinnerDemo() {
         </ItemContent>
       </Item>
     </div>
-  )
+  );
 }

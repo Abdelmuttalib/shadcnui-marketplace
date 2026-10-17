@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/wedges/ui/table";
+} from "@/registry/bases/base/wedges/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-wedges-md border border-wedges-border">
+    <div className="rounded-wedges-md border-wedges-border border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

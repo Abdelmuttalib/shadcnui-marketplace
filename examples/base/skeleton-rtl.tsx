@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Skeleton } from "@/styles/base-nova/ui-rtl/skeleton"
+  useTranslation,
+} from "@/components/language-selector";
+import { Skeleton } from "@/styles/base-default/ui/skeleton";
 
 const translations: Translations = {
   en: {
@@ -21,10 +21,10 @@ const translations: Translations = {
     dir: "rtl",
     values: {},
   },
-}
+};
 
 export function SkeletonRtl() {
-  const { dir } = useTranslation(translations, "ar")
+  const { dir } = useTranslation(translations, "ar");
 
   return (
     <div className="flex items-center gap-4" dir={dir}>
@@ -34,5 +34,5 @@ export function SkeletonRtl() {
         <Skeleton className="h-4 w-[200px]" />
       </div>
     </div>
-  )
+  );
 }

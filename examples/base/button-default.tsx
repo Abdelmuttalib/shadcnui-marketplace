@@ -1,5 +1,5 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 
 export default function ButtonDefault() {
-  return <Button>Button</Button>
+  return <Button>Button</Button>;
 }

@@ -9,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -17,14 +17,14 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/moon/ui/select";
+} from "@/registry/bases/base/moon/ui/select";
 
 export const description = "An interactive area chart";
 
@@ -155,7 +155,7 @@ export function Component() {
 
   return (
     <Card>
-      <CardHeader className="flex items-center gap-2 space-y-0 border-b border-moon-border py-5 sm:flex-row">
+      <CardHeader className="border-moon-border flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
         <div className="grid flex-1 gap-1 text-center sm:text-left">
           <CardTitle>Area Chart - Interactive</CardTitle>
           <CardDescription>
@@ -164,7 +164,7 @@ export function Component() {
         </div>
         <Select value={timeRange} onValueChange={setTimeRange}>
           <SelectTrigger
-            className="w-[160px] rounded-moon-lg sm:ml-auto"
+            className="rounded-moon-lg w-[160px] sm:ml-auto"
             aria-label="Select a value"
           >
             <SelectValue placeholder="Last 3 months" />

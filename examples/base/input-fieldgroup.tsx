@@ -1,11 +1,11 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function InputFieldgroup() {
   return (
@@ -32,5 +32,5 @@ export function InputFieldgroup() {
         <Button type="submit">Submit</Button>
       </Field>
     </FieldGroup>
-  )
+  );
 }

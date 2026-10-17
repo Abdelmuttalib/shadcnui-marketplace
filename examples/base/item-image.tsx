@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 import {
   Item,
@@ -7,7 +7,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 const music = [
   {
@@ -28,7 +28,7 @@ const music = [
     album: "Binary Beats",
     duration: "3:30",
   },
-]
+];
 
 export function ItemImage() {
   return (
@@ -64,5 +64,5 @@ export function ItemImage() {
         ))}
       </ItemGroup>
     </div>
-  )
+  );
 }

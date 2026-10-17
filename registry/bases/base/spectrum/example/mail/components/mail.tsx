@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/spectrum/ui/input";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/spectrum/ui/resizable";
-import { Separator } from "@/registry/spectrum/ui/separator";
+} from "@/registry/bases/base/spectrum/ui/resizable";
+import { Separator } from "@/registry/bases/base/spectrum/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/spectrum/ui/tabs";
-import { TooltipProvider } from "@/registry/spectrum/ui/tooltip";
+} from "@/registry/bases/base/spectrum/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/spectrum/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-spctm-background/60 bg-spctm-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-spctm-muted-foreground" />
+                  <Search className="text-spctm-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

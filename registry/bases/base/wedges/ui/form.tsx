@@ -13,7 +13,7 @@ import {
 } from "react-hook-form";
 
 import { cn } from "@/lib/utils";
-import { Label } from "@/registry/wedges/ui/label";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
 
 const Form = FormProvider;
 
@@ -136,7 +136,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-sm text-wedges-muted-foreground", className)}
+      className={cn("text-wedges-muted-foreground text-sm", className)}
       {...props}
     />
   );
@@ -158,7 +158,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-sm font-medium text-wedges-destructive", className)}
+      className={cn("text-wedges-destructive text-sm font-medium", className)}
       {...props}
     >
       {body}

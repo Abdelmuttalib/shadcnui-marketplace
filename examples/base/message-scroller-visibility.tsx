@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
+import { createChat, getMessageText } from "@/lib/ai";
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-rhea/ui/hover-card"
-import { Message, MessageContent } from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/hover-card";
+import { Message, MessageContent } from "@/styles/base-default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -24,7 +24,7 @@ import {
   MessageScrollerViewport,
   useMessageScroller,
   useMessageScrollerVisibility,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 
 const chat = createChat()
   .user("Review the incident handoff and tell me what to read first.", {
@@ -50,10 +50,10 @@ const chat = createChat()
   })
   .assistant(
     "After that, compare the queue recovery graph with the deploy timeline so the handoff shows exactly when processing returned to baseline. That makes it easier for support and engineering to answer the same customer questions without re-reading the whole incident thread.\n\nI would also add a short owner note beside each follow-up item. The checklist is small, but ownership keeps the retry-window decision, alert tuning, and support macro from drifting into separate follow-up conversations.\n\nKeep the retry window enabled until the next deploy, then add a queue-depth alert as the long-term fix.\n\nThe alert should fire on sustained queue growth, not a single short spike."
-  )
+  );
 
-const messages = chat.get()
-const userMessages = messages.filter((message) => message.role === "user")
+const messages = chat.get();
+const userMessages = messages.filter((message) => message.role === "user");
 
 export function MessageScrollerVisibility() {
   return (
@@ -72,8 +72,8 @@ export function MessageScrollerVisibility() {
                 <MessageScrollerViewport>
                   <MessageScrollerContent className="p-(--card-spacing)">
                     {messages.map((message) => {
-                      const isUserMessage = message.role === "user"
-                      const text = getMessageText(message)
+                      const isUserMessage = message.role === "user";
+                      const text = getMessageText(message);
 
                       return (
                         <MessageScrollerItem
@@ -104,7 +104,7 @@ export function MessageScrollerVisibility() {
                             </MessageContent>
                           </Message>
                         </MessageScrollerItem>
-                      )
+                      );
                     })}
                   </MessageScrollerContent>
                 </MessageScrollerViewport>
@@ -112,21 +112,21 @@ export function MessageScrollerVisibility() {
               </MessageScroller>
             </CardContent>
           </Card>
-          <div className="absolute top-1/2 -right-12 -translate-y-1/2">
+          <div className="absolute -right-12 top-1/2 -translate-y-1/2">
             <TranscriptOutline />
           </div>
         </div>
-        <div className="mx-auto max-w-sm px-0.5 text-center text-xs text-muted-foreground">
+        <div className="text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
           Open the outline to jump between anchored turns as you read.
         </div>
       </div>
     </MessageScrollerProvider>
-  )
+  );
 }
 
 function TranscriptOutline() {
-  const { scrollToMessage } = useMessageScroller()
-  const { currentAnchorId } = useMessageScrollerVisibility()
+  const { scrollToMessage } = useMessageScroller();
+  const { currentAnchorId } = useMessageScrollerVisibility();
 
   return (
     <HoverCard>
@@ -135,7 +135,7 @@ function TranscriptOutline() {
           <button
             type="button"
             aria-label="Open transcript outline"
-            className="flex h-9 w-9 flex-col items-center justify-center gap-1 rounded-md transition-colors outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+            className="focus-visible:ring-3 focus-visible:ring-ring/50 flex h-9 w-9 flex-col items-center justify-center gap-1 rounded-md outline-none transition-colors"
           />
         }
       >
@@ -143,7 +143,7 @@ function TranscriptOutline() {
           <span
             key={message.id}
             data-current={message.id === currentAnchorId}
-            className="h-0.5 w-4 rounded-full bg-muted-foreground/40 data-[current=true]:bg-foreground"
+            className="bg-muted-foreground/40 data-[current=true]:bg-foreground h-0.5 w-4 rounded-full"
           />
         ))}
       </HoverCardTrigger>
@@ -160,7 +160,7 @@ function TranscriptOutline() {
             aria-current={
               currentAnchorId === message.id ? "location" : undefined
             }
-            className="flex min-h-7 items-center rounded-xl px-2 py-1.5 text-left text-sm transition-colors outline-none hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground aria-current:bg-accent aria-current:text-accent-foreground"
+            className="min-h-7 hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground aria-current:bg-accent aria-current:text-accent-foreground flex items-center rounded-xl px-2 py-1.5 text-left text-sm outline-none transition-colors"
             onClick={() =>
               scrollToMessage(message.id, {
                 align: "start",
@@ -175,11 +175,11 @@ function TranscriptOutline() {
         ))}
       </HoverCardContent>
     </HoverCard>
-  )
+  );
 }
 
 function getTrimmedMessageText(message: (typeof userMessages)[number]) {
-  const text = getMessageText(message)
+  const text = getMessageText(message);
 
-  return text.length > 42 ? `${text.slice(0, 39)}...` : text
+  return text.length > 42 ? `${text.slice(0, 39)}...` : text;
 }

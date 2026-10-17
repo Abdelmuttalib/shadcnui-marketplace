@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/wedges/examples/cards/activity-goal";
-import { CardsCalendar } from "@/registry/wedges/examples/cards/calendar";
-import { CardsChat } from "@/registry/wedges/examples/cards/chat";
-import { CardsCookieSettings } from "@/registry/wedges/examples/cards/cookie-settings";
-import { CardsCreateAccount } from "@/registry/wedges/examples/cards/create-account";
-import { CardsDataTable } from "@/registry/wedges/examples/cards/data-table";
-import { CardsMetric } from "@/registry/wedges/examples/cards/metric";
-import { CardsPaymentMethod } from "@/registry/wedges/examples/cards/payment-method";
-import { CardsReportIssue } from "@/registry/wedges/examples/cards/report-issue";
-import { CardsShare } from "@/registry/wedges/examples/cards/share";
-import { CardsStats } from "@/registry/wedges/examples/cards/stats";
-import { CardsTeamMembers } from "@/registry/wedges/examples/cards/team-members";
+import { CardsActivityGoal } from "@/registry/bases/base/wedges/examples/cards/activity-goal";
+import { CardsCalendar } from "@/registry/bases/base/wedges/examples/cards/calendar";
+import { CardsChat } from "@/registry/bases/base/wedges/examples/cards/chat";
+import { CardsCookieSettings } from "@/registry/bases/base/wedges/examples/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/bases/base/wedges/examples/cards/create-account";
+import { CardsDataTable } from "@/registry/bases/base/wedges/examples/cards/data-table";
+import { CardsMetric } from "@/registry/bases/base/wedges/examples/cards/metric";
+import { CardsPaymentMethod } from "@/registry/bases/base/wedges/examples/cards/payment-method";
+import { CardsReportIssue } from "@/registry/bases/base/wedges/examples/cards/report-issue";
+import { CardsShare } from "@/registry/bases/base/wedges/examples/cards/share";
+import { CardsStats } from "@/registry/bases/base/wedges/examples/cards/stats";
+import { CardsTeamMembers } from "@/registry/bases/base/wedges/examples/cards/team-members";
 
 export default function CardsDemo() {
   return (

@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/snow/ui/input-otp";
+} from "@/registry/bases/base/snow/ui/input-otp";
 
 export function InputOTPDemo() {
   return (

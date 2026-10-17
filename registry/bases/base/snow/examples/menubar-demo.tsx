@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/snow/ui/menubar";
+} from "@/registry/bases/base/snow/ui/menubar";
 
 export default function MenubarDemo() {
   return (

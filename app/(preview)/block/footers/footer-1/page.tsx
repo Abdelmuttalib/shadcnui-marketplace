@@ -1,7 +1,7 @@
 import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 export default function FooterMinimal() {
   return (

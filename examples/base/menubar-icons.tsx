@@ -5,7 +5,7 @@ import {
   SaveIcon,
   SettingsIcon,
   TrashIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Menubar,
@@ -16,7 +16,7 @@ import {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-} from "@/styles/base-nova/ui/menubar"
+} from "@/styles/base-default/ui/menubar";
 
 export function MenubarIcons() {
   return (
@@ -60,5 +60,5 @@ export function MenubarIcons() {
         </MenubarContent>
       </MenubarMenu>
     </Menubar>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { Spinner } from "@/styles/base-nova/ui/spinner"
+import { Button } from "@/styles/base-default/ui/button";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export function SpinnerButton() {
   return (
@@ -17,5 +17,5 @@ export function SpinnerButton() {
         Processing
       </Button>
     </div>
-  )
+  );
 }

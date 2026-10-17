@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { DownloadIcon, FileCodeIcon, WrapTextIcon } from "lucide-react"
+import { DownloadIcon, FileCodeIcon, WrapTextIcon } from "lucide-react";
+import * as React from "react";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -13,7 +13,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const code = `import { streamText } from "ai"
 
@@ -27,20 +27,20 @@ export async function POST(request: Request) {
   })
 
   return result.toUIMessageStreamResponse()
-}`
+}`;
 
 function download(value: string, filename: string) {
-  const url = URL.createObjectURL(new Blob([value], { type: "text/plain" }))
-  const link = document.createElement("a")
-  link.href = url
-  link.download = filename
-  link.click()
-  URL.revokeObjectURL(url)
+  const url = URL.createObjectURL(new Blob([value], { type: "text/plain" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 export function CodeBlockDemo() {
-  const [wrap, setWrap] = React.useState(false)
-  const lines = useHighlightedCode(code, "ts")
+  const [wrap, setWrap] = React.useState(false);
+  const lines = useHighlightedCode(code, "ts");
 
   return (
     <div className="w-full max-w-lg">
@@ -84,5 +84,5 @@ export function CodeBlockDemo() {
         </CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

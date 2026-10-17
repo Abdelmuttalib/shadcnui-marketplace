@@ -4,16 +4,16 @@ import {
   ContextMenuGroup,
   ContextMenuItem,
   ContextMenuTrigger,
-} from "@/styles/base-nova/ui/context-menu"
+} from "@/styles/base-default/ui/context-menu";
 
 export function ContextMenuBasic() {
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
-        <span className="hidden pointer-fine:inline-block">
+        <span className="pointer-fine:inline-block hidden">
           Right click here
         </span>
-        <span className="hidden pointer-coarse:inline-block">
+        <span className="pointer-coarse:inline-block hidden">
           Long press here
         </span>
       </ContextMenuTrigger>
@@ -25,5 +25,5 @@ export function ContextMenuBasic() {
         </ContextMenuGroup>
       </ContextMenuContent>
     </ContextMenu>
-  )
+  );
 }

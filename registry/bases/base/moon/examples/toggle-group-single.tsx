@@ -1,6 +1,9 @@
 import { Bold, Italic, Underline } from "lucide-react";
 
-import { ToggleGroup, ToggleGroupItem } from "@/registry/moon/ui/toggle-group";
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/registry/bases/base/moon/ui/toggle-group";
 
 export default function ToggleGroupDemo() {
   return (

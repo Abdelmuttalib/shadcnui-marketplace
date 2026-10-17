@@ -1,6 +1,6 @@
-import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react"
+import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Item,
   ItemActions,
@@ -8,7 +8,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 export function ItemDemo() {
   return (
@@ -38,5 +38,5 @@ export function ItemDemo() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }

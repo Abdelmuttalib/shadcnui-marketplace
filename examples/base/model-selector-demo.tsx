@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ArrowUpIcon, ChevronDownIcon, PlusIcon } from "lucide-react"
+import { ArrowUpIcon, ChevronDownIcon, PlusIcon } from "lucide-react";
+import * as React from "react";
 
 import {
   DropdownMenu,
@@ -12,13 +12,13 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/base-rhea/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 const providers = [
   {
@@ -35,32 +35,33 @@ const providers = [
       { id: "claude-haiku-4-5", name: "Claude Haiku 4.5" },
     ],
   },
-]
+];
 
-const models = providers.flatMap((provider) => provider.models)
+const models = providers.flatMap((provider) => provider.models);
 
 const efforts = [
   { id: "low", name: "Low" },
   { id: "medium", name: "Medium" },
   { id: "high", name: "High" },
-]
+];
 
 export function ModelSelectorDemo() {
-  const [text, setText] = React.useState("")
-  const [model, setModel] = React.useState(models[0].id)
-  const [effort, setEffort] = React.useState(efforts[1].id)
-  const formRef = React.useRef<HTMLFormElement>(null)
-  const currentModel = models.find((item) => item.id === model) ?? models[0]
-  const currentEffort = efforts.find((item) => item.id === effort) ?? efforts[1]
-  const canSend = text.trim().length > 0
+  const [text, setText] = React.useState("");
+  const [model, setModel] = React.useState(models[0].id);
+  const [effort, setEffort] = React.useState(efforts[1].id);
+  const formRef = React.useRef<HTMLFormElement>(null);
+  const currentModel = models.find((item) => item.id === model) ?? models[0];
+  const currentEffort =
+    efforts.find((item) => item.id === effort) ?? efforts[1];
+  const canSend = text.trim().length > 0;
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
     if (!canSend) {
-      return
+      return;
     }
 
-    setText("")
+    setText("");
   }
 
   return (
@@ -73,8 +74,8 @@ export function ModelSelectorDemo() {
             placeholder="Ask the agent to change your code..."
             onKeyDown={(event) => {
               if (event.key === "Enter" && !event.shiftKey) {
-                event.preventDefault()
-                formRef.current?.requestSubmit()
+                event.preventDefault();
+                formRef.current?.requestSubmit();
               }
             }}
             className="p-3"
@@ -174,5 +175,5 @@ export function ModelSelectorDemo() {
         </InputGroup>
       </form>
     </div>
-  )
+  );
 }

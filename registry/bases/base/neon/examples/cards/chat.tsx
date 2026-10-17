@@ -2,14 +2,18 @@ import { Check, Plus, Send } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
-import { Button } from "@/registry/neon/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/neon/ui/card";
+} from "@/registry/bases/base/neon/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -17,7 +21,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -25,14 +29,14 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/neon/ui/dialog";
-import { Input } from "@/registry/neon/ui/input";
+} from "@/registry/bases/base/neon/ui/dialog";
+import { Input } from "@/registry/bases/base/neon/ui/input";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/neon/ui/tooltip";
+} from "@/registry/bases/base/neon/ui/tooltip";
 
 const users = [
   {
@@ -100,7 +104,7 @@ export function CardsChat() {
             </Avatar>
             <div>
               <p className="text-sm font-medium leading-none">Sofia Davis</p>
-              <p className="text-sm text-muted-foreground">m@example.com</p>
+              <p className="text-muted-foreground text-sm">m@example.com</p>
             </div>
           </div>
           <TooltipProvider delayDuration={0}>
@@ -128,7 +132,7 @@ export function CardsChat() {
                 className={cn(
                   "flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm",
                   message.role === "user"
-                    ? "ml-auto bg-primary text-primary-foreground"
+                    ? "bg-primary text-primary-foreground ml-auto"
                     : "bg-muted"
                 )}
               >
@@ -210,12 +214,12 @@ export function CardsChat() {
                       <p className="text-sm font-medium leading-none">
                         {user.name}
                       </p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         {user.email}
                       </p>
                     </div>
                     {selectedUsers.includes(user) ? (
-                      <Check className="ml-auto flex h-5 w-5 text-primary" />
+                      <Check className="text-primary ml-auto flex h-5 w-5" />
                     ) : null}
                   </CommandItem>
                 ))}
@@ -228,7 +232,7 @@ export function CardsChat() {
                 {selectedUsers.map((user) => (
                   <Avatar
                     key={user.email}
-                    className="inline-block border-2 border-background"
+                    className="border-background inline-block border-2"
                   >
                     <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name[0]}</AvatarFallback>
@@ -236,7 +240,7 @@ export function CardsChat() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Select users to add to this thread.
               </p>
             )}

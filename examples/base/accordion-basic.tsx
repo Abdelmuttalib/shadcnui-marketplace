@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/styles/base-nova/ui/accordion"
+} from "@/styles/base-default/ui/accordion";
 
 const items = [
   {
@@ -24,7 +24,7 @@ const items = [
     content:
       "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.",
   },
-]
+];
 
 export function AccordionBasic() {
   return (
@@ -36,5 +36,5 @@ export function AccordionBasic() {
         </AccordionItem>
       ))}
     </Accordion>
-  )
+  );
 }

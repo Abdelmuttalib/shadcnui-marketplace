@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Checkbox } from "@/styles/base-nova/ui-rtl/checkbox"
+  useTranslation,
+} from "@/components/language-selector";
+import { Checkbox } from "@/styles/base-default/ui/checkbox";
 import {
   Field,
   FieldContent,
@@ -14,8 +14,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldTitle,
-} from "@/styles/base-nova/ui-rtl/field"
-import { Label } from "@/styles/base-nova/ui-rtl/label"
+} from "@/styles/base-default/ui/field";
+import { Label } from "@/styles/base-default/ui/label";
 
 const translations: Translations = {
   en: {
@@ -50,10 +50,10 @@ const translations: Translations = {
         "אתה יכול להפעיל או להשבית התראות בכל עת.",
     },
   },
-}
+};
 
 export function CheckboxRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <FieldGroup className="max-w-sm" dir={dir}>
@@ -92,5 +92,5 @@ export function CheckboxRtl() {
         </Field>
       </FieldLabel>
     </FieldGroup>
-  )
+  );
 }

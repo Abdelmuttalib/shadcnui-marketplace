@@ -1,5 +1,5 @@
-import { Label } from "@/styles/base-nova/ui/label"
-import { Switch } from "@/styles/base-nova/ui/switch"
+import { Label } from "@/styles/base-default/ui/label";
+import { Switch } from "@/styles/base-default/ui/switch";
 
 export function SwitchDemo() {
   return (
@@ -7,5 +7,5 @@ export function SwitchDemo() {
       <Switch id="airplane-mode" />
       <Label htmlFor="airplane-mode">Airplane Mode</Label>
     </div>
-  )
+  );
 }

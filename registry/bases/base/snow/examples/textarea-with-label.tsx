@@ -1,5 +1,5 @@
-import { Label } from "@/registry/snow/ui/label";
-import { Textarea } from "@/registry/snow/ui/textarea";
+import { Label } from "@/registry/bases/base/snow/ui/label";
+import { Textarea } from "@/registry/bases/base/snow/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

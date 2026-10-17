@@ -16,9 +16,13 @@ import {
   Star,
 } from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/snow/ui/avatar";
-import { Badge } from "@/registry/snow/ui/badge";
-import { Button } from "@/registry/snow/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/snow/ui/avatar";
+import { Badge } from "@/registry/bases/base/snow/ui/badge";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Card,
   CardContent,
@@ -26,21 +30,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/snow/ui/card";
+} from "@/registry/bases/base/snow/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
-import { Separator } from "@/registry/snow/ui/separator";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/snow/ui/tooltip";
+} from "@/registry/bases/base/snow/ui/tooltip";
 
 export function SnowCardShowcase() {
   return (
@@ -62,7 +66,7 @@ export function SnowCardShowcase() {
                 CSS.
               </CardDescription>
             </div>
-            <div className="flex items-center gap-1 rounded-snow-md bg-snow-secondary text-snow-secondary-foreground">
+            <div className="rounded-snow-md bg-snow-secondary text-snow-secondary-foreground flex items-center gap-1">
               <Button variant="secondary" size={"sm"}>
                 <Star className="h-4 w-4" />
                 Star
@@ -102,32 +106,32 @@ export function SnowCardShowcase() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="flex flex-wrap gap-2 text-sm text-snow-muted-foreground">
-            <div className="flex items-center gap-1.5 rounded-snow-md border border-snow-input/60 bg-snow-muted p-1 px-2 text-sm">
+          <div className="text-snow-muted-foreground flex flex-wrap gap-2 text-sm">
+            <div className="rounded-snow-md border-snow-input/60 bg-snow-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <CircleDot className="h-4 w-4 text-blue-500" />
               </span>
               <span>TypeScript</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-snow-md border border-snow-input/60 bg-snow-muted p-1 px-2 text-sm">
+            <div className="rounded-snow-md border-snow-input/60 bg-snow-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Star className="h-4 w-4" />
               </span>{" "}
               <span>20.1k stars</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-snow-md border border-snow-input/60 bg-snow-muted p-1 px-2 text-sm">
+            <div className="rounded-snow-md border-snow-input/60 bg-snow-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <GitFork className="h-4 w-4" />
               </span>{" "}
               <span>1.2k forks</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-snow-md border border-snow-input/60 bg-snow-muted p-1 px-2 text-sm">
+            <div className="rounded-snow-md border-snow-input/60 bg-snow-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Eye className="h-4 w-4" />
               </span>{" "}
               <span>342 watching</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-snow-md border border-snow-input/60 bg-snow-muted p-1 px-2 text-sm">
+            <div className="rounded-snow-md border-snow-input/60 bg-snow-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <AlertCircle className="h-4 w-4" />
               </span>{" "}
@@ -182,31 +186,31 @@ export function SnowCardShowcase() {
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium">Contributors</span>
               <div className="flex -space-x-2">
-                <Avatar className="h-6 w-6 border-2 border-snow-background">
+                <Avatar className="border-snow-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/SC" />
                   <AvatarFallback className="text-xs">SC</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-snow-background">
+                <Avatar className="border-snow-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/JD" />
                   <AvatarFallback className="text-xs">JD</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-snow-background">
+                <Avatar className="border-snow-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/WK" />
                   <AvatarFallback className="text-xs">WK</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-snow-background">
+                <Avatar className="border-snow-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/BR" />
                   <AvatarFallback className="text-xs">BR</AvatarFallback>
                 </Avatar>
               </div>
             </div>
-            <div className="flex items-center gap-1 text-sm text-snow-muted-foreground">
+            <div className="text-snow-muted-foreground flex items-center gap-1 text-sm">
               <Calendar className="h-3.5 w-3.5" />
               <span>Updated April 2023</span>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="flex items-center justify-between border-t border-t-snow-border pt-4">
+        <CardFooter className="border-t-snow-border flex items-center justify-between border-t pt-4">
           <div className="flex items-center gap-2">
             <TooltipProvider>
               <Tooltip>

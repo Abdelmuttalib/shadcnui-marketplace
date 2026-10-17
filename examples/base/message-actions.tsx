@@ -3,15 +3,15 @@ import {
   RefreshCcwIcon,
   ThumbsDownIcon,
   ThumbsUpIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Message,
   MessageContent,
   MessageFooter,
-} from "@/styles/base-rhea/ui/message"
+} from "@/styles/base-default/ui/message";
 
 export function MessageActionsDemo() {
   return (
@@ -47,7 +47,7 @@ export function MessageActionsDemo() {
             <BubbleContent>Okay drop me a link. Taking a look...</BubbleContent>
           </Bubble>
           <MessageFooter className="gap-2">
-            <span className="font-normal text-destructive">Failed to send</span>
+            <span className="text-destructive font-normal">Failed to send</span>
             <Button
               variant="ghost"
               size="icon-xs"
@@ -60,5 +60,5 @@ export function MessageActionsDemo() {
         </MessageContent>
       </Message>
     </div>
-  )
+  );
 }

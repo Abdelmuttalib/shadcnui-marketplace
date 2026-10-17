@@ -3,8 +3,8 @@ import { Column } from "@tanstack/react-table";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/moon/ui/badge";
-import { Button } from "@/registry/moon/ui/button";
+import { Badge } from "@/registry/bases/base/moon/ui/badge";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -13,13 +13,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/moon/ui/command";
+} from "@/registry/bases/base/moon/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/moon/ui/popover";
-import { Separator } from "@/registry/moon/ui/separator";
+} from "@/registry/bases/base/moon/ui/popover";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
@@ -45,7 +45,7 @@ export function DataTableFacetedFilter<TData, TValue>({
         <Button
           variant="outline"
           size="sm"
-          className="border- h-8 border-moon-border"
+          className="border- border-moon-border h-8"
         >
           <PlusCircledIcon className="mr-2 h-4 w-4" />
           {title}
@@ -109,7 +109,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-moon-sm border border-moon-ring",
+                        "rounded-moon-sm border-moon-ring mr-2 flex h-4 w-4 items-center justify-center border",
                         isSelected
                           ? "bg-moon-ring [&_svg]:text-moon-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -118,7 +118,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-moon-muted-foreground" />
+                      <option.icon className="text-moon-muted-foreground mr-2 h-4 w-4" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

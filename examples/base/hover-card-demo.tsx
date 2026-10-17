@@ -2,13 +2,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-nova/ui/avatar"
-import { Button } from "@/styles/base-nova/ui/button"
+} from "@/styles/base-default/ui/avatar";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-nova/ui/hover-card"
+} from "@/styles/base-default/ui/hover-card";
 
 export default function HoverCardDemo() {
   return (
@@ -23,10 +23,10 @@ export default function HoverCardDemo() {
       <HoverCardContent className="flex w-64 flex-col gap-0.5">
         <div className="font-semibold">@nextjs</div>
         <div>The React Framework – created and maintained by @vercel.</div>
-        <div className="mt-1 text-xs text-muted-foreground">
+        <div className="text-muted-foreground mt-1 text-xs">
           Joined December 2021
         </div>
       </HoverCardContent>
     </HoverCard>
-  )
+  );
 }

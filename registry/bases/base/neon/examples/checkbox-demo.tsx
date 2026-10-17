@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/registry/neon/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/neon/ui/checkbox";
 
 export default function CheckboxDemo() {
   return (

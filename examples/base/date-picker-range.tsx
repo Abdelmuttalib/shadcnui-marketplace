@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { addDays, format } from "date-fns"
-import { CalendarIcon } from "lucide-react"
-import { type DateRange } from "react-day-picker"
+import { addDays, format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import * as React from "react";
+import { type DateRange } from "react-day-picker";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { Calendar } from "@/styles/base-nova/ui/calendar"
-import { Field, FieldLabel } from "@/styles/base-nova/ui/field"
+import { Button } from "@/styles/base-default/ui/button";
+import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Field, FieldLabel } from "@/styles/base-default/ui/field";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function DatePickerWithRange() {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(new Date().getFullYear(), 0, 20),
     to: addDays(new Date(new Date().getFullYear(), 0, 20), 20),
-  })
+  });
 
   return (
     <Field className="mx-auto w-60">
@@ -58,5 +58,5 @@ export function DatePickerWithRange() {
         </PopoverContent>
       </Popover>
     </Field>
-  )
+  );
 }

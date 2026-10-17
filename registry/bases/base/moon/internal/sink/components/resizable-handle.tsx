@@ -2,13 +2,13 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/moon/ui/resizable";
+} from "@/registry/bases/base/moon/ui/resizable";
 
 export function ResizableHandleDemo() {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="min-h-[200px] max-w-md rounded-moon-lg border border-moon-border md:min-w-[450px]"
+      className="rounded-moon-lg border-moon-border min-h-[200px] max-w-md border md:min-w-[450px]"
     >
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">

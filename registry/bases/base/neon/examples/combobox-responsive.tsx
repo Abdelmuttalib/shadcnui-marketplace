@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -11,17 +11,17 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/neon/ui/drawer";
+} from "@/registry/bases/base/neon/ui/drawer";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/neon/ui/popover";
+} from "@/registry/bases/base/neon/ui/popover";
 
 type Status = {
   value: string;

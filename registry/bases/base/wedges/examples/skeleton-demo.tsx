@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/wedges/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/wedges/ui/skeleton";
 
 export default function SkeletonDemo() {
   return (

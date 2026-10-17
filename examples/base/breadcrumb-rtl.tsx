@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ChevronDownIcon, DotIcon } from "lucide-react"
+import { ChevronDownIcon, DotIcon } from "lucide-react";
+import Link from "next/link";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,14 +14,14 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/styles/base-nova/ui-rtl/breadcrumb"
+} from "@/styles/base-default/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 const translations: Translations = {
   en: {
@@ -57,10 +57,10 @@ const translations: Translations = {
       breadcrumb: "פירורי לחם",
     },
   },
-}
+};
 
 export function BreadcrumbRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
+  const { dir, t, language } = useTranslation(translations, "ar");
 
   return (
     <Breadcrumb dir={dir}>
@@ -100,5 +100,5 @@ export function BreadcrumbRtl() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

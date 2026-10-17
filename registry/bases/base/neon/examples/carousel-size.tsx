@@ -1,13 +1,13 @@
 import * as React from "react";
 
-import { Card, CardContent } from "@/registry/neon/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/neon/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/neon/ui/carousel";
+} from "@/registry/bases/base/neon/ui/carousel";
 
 export default function CarouselSize() {
   return (

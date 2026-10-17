@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ChevronDownIcon } from "lucide-react"
+import { ChevronDownIcon } from "lucide-react";
+import * as React from "react";
 
-import { Bubble, BubbleContent } from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Collapsible,
   CollapsibleTrigger,
-} from "@/styles/base-rhea/ui/collapsible"
+} from "@/styles/base-default/ui/collapsible";
 
 const text = `The accessibility review found two focus states that were visually too subtle in dark mode.
 
@@ -16,14 +16,14 @@ I checked the dialog, menu, and drawer paths because each one renders focusable 
 
 The dialog and drawer are fine. The menu needs the hover and focus tokens split so keyboard focus stays visible when the pointer is not involved.
 
-I also recommend keeping the change in the style file instead of the primitive so the other themes can choose their own focus treatment later.`
+I also recommend keeping the change in the style file instead of the primitive so the other themes can choose their own focus treatment later.`;
 
-const previewLength = 180
+const previewLength = 180;
 
 export function BubbleCollapsible() {
-  const [open, setOpen] = React.useState(false)
-  const isLong = text.length > previewLength
-  const preview = `${text.slice(0, previewLength)}...`
+  const [open, setOpen] = React.useState(false);
+  const isLong = text.length > previewLength;
+  const preview = `${text.slice(0, previewLength)}...`;
 
   return (
     <div className="flex w-full max-w-sm flex-col gap-8 py-12">
@@ -40,7 +40,7 @@ export function BubbleCollapsible() {
                 render={
                   <Button
                     variant="link"
-                    className="gap-1 p-0 text-muted-foreground"
+                    className="text-muted-foreground gap-1 p-0"
                   />
                 }
               >
@@ -55,5 +55,5 @@ export function BubbleCollapsible() {
         </BubbleContent>
       </Bubble>
     </div>
-  )
+  );
 }

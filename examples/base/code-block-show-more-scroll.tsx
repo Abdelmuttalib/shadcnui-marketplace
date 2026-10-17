@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ChevronDownIcon } from "lucide-react"
+import { ChevronDownIcon } from "lucide-react";
+import * as React from "react";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -14,7 +14,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const code = `"use client"
 
@@ -49,12 +49,12 @@ export function Chat() {
       </form>
     </div>
   )
-}`
+}`;
 
 export function CodeBlockShowMoreScroll() {
-  const [expanded, setExpanded] = React.useState(false)
-  const lines = useHighlightedCode(code, "tsx")
-  const id = React.useId()
+  const [expanded, setExpanded] = React.useState(false);
+  const lines = useHighlightedCode(code, "tsx");
+  const id = React.useId();
 
   return (
     <div className="w-full max-w-md">
@@ -70,8 +70,8 @@ export function CodeBlockShowMoreScroll() {
           lineNumbers
           className={
             expanded
-              ? "max-h-96 scroll-fade-y"
-              : "max-h-64 scroll-fade-y overflow-y-hidden"
+              ? "scroll-fade-y max-h-96"
+              : "scroll-fade-y max-h-64 overflow-y-hidden"
           }
         >
           {lines.map((line, index) => (
@@ -86,11 +86,11 @@ export function CodeBlockShowMoreScroll() {
             aria-controls={id}
             onClick={() => setExpanded(!expanded)}
           >
-            <ChevronDownIcon className="transition-transform in-aria-expanded:rotate-180" />
+            <ChevronDownIcon className="in-aria-expanded:rotate-180 transition-transform" />
             {expanded ? "Show less" : "Show more"}
           </Button>
         </CodeBlockFooter>
       </CodeBlock>
     </div>
-  )
+  );
 }

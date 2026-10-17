@@ -12,7 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/snow/ui/navigation-menu";
+} from "@/registry/bases/base/snow/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

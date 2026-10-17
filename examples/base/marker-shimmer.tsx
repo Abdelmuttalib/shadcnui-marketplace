@@ -1,4 +1,4 @@
-import { Marker, MarkerContent } from "@/styles/base-rhea/ui/marker"
+import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
 
 export function MarkerShimmerDemo() {
   return (
@@ -10,5 +10,5 @@ export function MarkerShimmerDemo() {
         <MarkerContent className="shimmer">Reading 4 files</MarkerContent>
       </Marker>
     </div>
-  )
+  );
 }

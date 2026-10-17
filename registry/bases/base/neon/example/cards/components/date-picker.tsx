@@ -1,6 +1,6 @@
-import DatePickerWithRange from "@/registry/neon/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/neon/ui/card";
-import { Label } from "@/registry/neon/ui/label";
+import DatePickerWithRange from "@/registry/bases/base/neon/components/date-picker-with-range";
+import { Card, CardContent } from "@/registry/bases/base/neon/ui/card";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 
 export function DemoDatePicker() {
   return (

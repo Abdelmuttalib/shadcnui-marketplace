@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Calendar } from "@/styles/base-nova/ui/calendar"
+import { Calendar } from "@/styles/base-default/ui/calendar";
 
 export function CalendarCaption() {
   return (
@@ -9,5 +9,5 @@ export function CalendarCaption() {
       captionLayout="dropdown"
       className="rounded-lg border"
     />
-  )
+  );
 }

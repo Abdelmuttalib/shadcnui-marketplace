@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { RotateCcwIcon } from "lucide-react"
+import { RotateCcwIcon } from "lucide-react";
+import * as React from "react";
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -13,15 +13,15 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const blocks: {
-  title?: string
-  language: string
-  code: string
-  lineNumbers?: boolean
-  highlight?: number[]
-  diff?: boolean
+  title?: string;
+  language: string;
+  code: string;
+  lineNumbers?: boolean;
+  highlight?: number[];
+  diff?: boolean;
 }[] = [
   {
     title: "hooks/use-debounce.ts",
@@ -79,25 +79,25 @@ export async function POST(request: Request) {
     language: "bash",
     code: "AI_GATEWAY_API_KEY=your-api-key",
   },
-]
+];
 
 // Where each block starts in the stream.
 const offsets = blocks.map((_, index) =>
   blocks.slice(0, index).reduce((total, block) => total + block.code.length, 0)
-)
-const total = blocks.reduce((sum, block) => sum + block.code.length, 0)
+);
+const total = blocks.reduce((sum, block) => sum + block.code.length, 0);
 
 function StreamingBlock({
   block,
   code,
 }: {
-  block: (typeof blocks)[number]
-  code: string
+  block: (typeof blocks)[number];
+  code: string;
 }) {
-  const rows = code.split("\n")
+  const rows = code.split("\n");
   // A diff row starts with +, - or a space. The marker is not part of the code.
-  const source = block.diff ? rows.map((row) => row.slice(1)).join("\n") : code
-  const lines = useHighlightedCode(source, block.language)
+  const source = block.diff ? rows.map((row) => row.slice(1)).join("\n") : code;
+  const lines = useHighlightedCode(source, block.language);
 
   return (
     <CodeBlock>
@@ -121,11 +121,11 @@ function StreamingBlock({
                 ? rows[index]?.startsWith("+")
                   ? "added"
                   : rows[index]?.startsWith("-")
-                    ? "removed"
-                    : "default"
-                : block.highlight?.includes(index)
-                  ? "highlighted"
+                  ? "removed"
                   : "default"
+                : block.highlight?.includes(index)
+                ? "highlighted"
+                : "default"
             }
           >
             {line}
@@ -133,20 +133,20 @@ function StreamingBlock({
         ))}
       </CodeBlockContent>
     </CodeBlock>
-  )
+  );
 }
 
 export function CodeBlockStreaming() {
-  const [length, setLength] = React.useState(total)
+  const [length, setLength] = React.useState(total);
 
   React.useEffect(() => {
     if (length >= total) {
-      return
+      return;
     }
 
-    const timeout = setTimeout(() => setLength(length + 3), 16)
-    return () => clearTimeout(timeout)
-  }, [length])
+    const timeout = setTimeout(() => setLength(length + 3), 16);
+    return () => clearTimeout(timeout);
+  }, [length]);
 
   return (
     <div className="flex w-full max-w-md flex-col gap-4">
@@ -171,5 +171,5 @@ export function CodeBlockStreaming() {
         Replay
       </Button>
     </div>
-  )
+  );
 }

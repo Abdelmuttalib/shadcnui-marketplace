@@ -4,7 +4,7 @@ import { Check, ChevronsUpDown } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -12,12 +12,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/neon/ui/popover";
+} from "@/registry/bases/base/neon/ui/popover";
 
 const frameworks = [
   {

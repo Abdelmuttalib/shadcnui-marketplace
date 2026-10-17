@@ -1,54 +1,58 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/registry/moon/showcase";
-import { AlertDialogDemo } from "@/registry/moon/showcase";
-import { BreadcrumbDemo } from "@/registry/moon/showcase";
-import { CalendarDemo } from "@/registry/moon/showcase";
-import { CheckboxDemo } from "@/registry/moon/showcase";
-import { ComboboxDemo } from "@/registry/moon/showcase";
-import { CommandDemo } from "@/registry/moon/showcase";
-import { ContextMenuDemo } from "@/registry/moon/showcase";
-import { DatePickerDemo } from "@/registry/moon/showcase";
-import { DialogDemo } from "@/registry/moon/showcase";
-import { DrawerDemo } from "@/registry/moon/showcase";
-import { DropdownMenuDemo } from "@/registry/moon/showcase";
-import { HoverCardDemo } from "@/registry/moon/showcase";
-import { InputDemo } from "@/registry/moon/showcase";
-import { InputOTPDemo } from "@/registry/moon/showcase";
-import { LabelDemo } from "@/registry/moon/showcase";
-import { MenubarDemo } from "@/registry/moon/showcase";
-import { PaginationDemo } from "@/registry/moon/showcase";
-import { PopoverDemo } from "@/registry/moon/showcase";
-import { ProgressDemo } from "@/registry/moon/showcase";
-import { RadioGroupDemo } from "@/registry/moon/showcase";
-import { SelectDemo } from "@/registry/moon/showcase";
-import { SheetDemo } from "@/registry/moon/showcase";
-import { SkeletonDemo } from "@/registry/moon/showcase";
-import { SliderDemo } from "@/registry/moon/showcase";
-import { SonnerDemo } from "@/registry/moon/showcase";
-import { SwitchDemo } from "@/registry/moon/showcase";
-import { TextareaDemo } from "@/registry/moon/showcase";
-import { ToggleDemo } from "@/registry/moon/showcase";
-import { ToggleGroupDemo } from "@/registry/moon/showcase";
-import { TooltipDemo } from "@/registry/moon/showcase";
-import { Badge, BadgeProps } from "@/registry/moon/ui/badge";
-import { Button, ButtonProps } from "@/registry/moon/ui/button";
+import { AccordionDemo } from "@/registry/bases/base/moon/showcase";
+import { AlertDialogDemo } from "@/registry/bases/base/moon/showcase";
+import { BreadcrumbDemo } from "@/registry/bases/base/moon/showcase";
+import { CalendarDemo } from "@/registry/bases/base/moon/showcase";
+import { CheckboxDemo } from "@/registry/bases/base/moon/showcase";
+import { ComboboxDemo } from "@/registry/bases/base/moon/showcase";
+import { CommandDemo } from "@/registry/bases/base/moon/showcase";
+import { ContextMenuDemo } from "@/registry/bases/base/moon/showcase";
+import { DatePickerDemo } from "@/registry/bases/base/moon/showcase";
+import { DialogDemo } from "@/registry/bases/base/moon/showcase";
+import { DrawerDemo } from "@/registry/bases/base/moon/showcase";
+import { DropdownMenuDemo } from "@/registry/bases/base/moon/showcase";
+import { HoverCardDemo } from "@/registry/bases/base/moon/showcase";
+import { InputDemo } from "@/registry/bases/base/moon/showcase";
+import { InputOTPDemo } from "@/registry/bases/base/moon/showcase";
+import { LabelDemo } from "@/registry/bases/base/moon/showcase";
+import { MenubarDemo } from "@/registry/bases/base/moon/showcase";
+import { PaginationDemo } from "@/registry/bases/base/moon/showcase";
+import { PopoverDemo } from "@/registry/bases/base/moon/showcase";
+import { ProgressDemo } from "@/registry/bases/base/moon/showcase";
+import { RadioGroupDemo } from "@/registry/bases/base/moon/showcase";
+import { SelectDemo } from "@/registry/bases/base/moon/showcase";
+import { SheetDemo } from "@/registry/bases/base/moon/showcase";
+import { SkeletonDemo } from "@/registry/bases/base/moon/showcase";
+import { SliderDemo } from "@/registry/bases/base/moon/showcase";
+import { SonnerDemo } from "@/registry/bases/base/moon/showcase";
+import { SwitchDemo } from "@/registry/bases/base/moon/showcase";
+import { TextareaDemo } from "@/registry/bases/base/moon/showcase";
+import { ToggleDemo } from "@/registry/bases/base/moon/showcase";
+import { ToggleGroupDemo } from "@/registry/bases/base/moon/showcase";
+import { TooltipDemo } from "@/registry/bases/base/moon/showcase";
+import { Badge, BadgeProps } from "@/registry/bases/base/moon/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/moon/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/moon/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/moon/ui/tabs";
+} from "@/registry/bases/base/moon/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/moon/ui/tabs";
 
 export function MoonShowcaseComponents() {
   const style = "moon";

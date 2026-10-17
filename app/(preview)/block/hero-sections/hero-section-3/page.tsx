@@ -1,8 +1,8 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import type React from "react";
 
-import { Button } from "@/registry/wedges/ui/button";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 export default function HeroSection() {
   return (
@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="relative min-h-screen overflow-hidden">
         {/* Background Pattern */}
         <div className="bg-wedges-background absolute inset-0 -z-10 h-full w-full">
-          <div className="absolute h-full w-full bg-[radial-gradient(oklch(var(--foreground))_1px,transparent_1px)] opacity-15 [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+          <div className="opacity-15 absolute h-full w-full bg-[radial-gradient(oklch(var(--foreground))_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
         </div>
         <div className="container relative mx-auto px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
           <div className="lg:grid lg:gap-x-16 xl:gap-x-24">
@@ -63,7 +63,7 @@ export default function HeroSection() {
                     key={feature}
                     className="bg-card flex items-center rounded-md border p-2"
                   >
-                    <CheckCircle className="text-wedges-primary mr-3 size-5" />
+                    <CheckCircle className="text-wedges-primary size-5 mr-3" />
                     <Typography as="span" variant="md/normal">
                       {feature}
                     </Typography>

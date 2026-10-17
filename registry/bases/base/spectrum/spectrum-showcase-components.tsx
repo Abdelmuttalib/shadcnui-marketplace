@@ -1,54 +1,58 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/registry/spectrum/showcase";
-import { AlertDialogDemo } from "@/registry/spectrum/showcase";
-import { BreadcrumbDemo } from "@/registry/spectrum/showcase";
-import { CalendarDemo } from "@/registry/spectrum/showcase";
-import { CheckboxDemo } from "@/registry/spectrum/showcase";
-import { ComboboxDemo } from "@/registry/spectrum/showcase";
-import { CommandDemo } from "@/registry/spectrum/showcase";
-import { ContextMenuDemo } from "@/registry/spectrum/showcase";
-import { DatePickerDemo } from "@/registry/spectrum/showcase";
-import { DialogDemo } from "@/registry/spectrum/showcase";
-import { DrawerDemo } from "@/registry/spectrum/showcase";
-import { DropdownMenuDemo } from "@/registry/spectrum/showcase";
-import { HoverCardDemo } from "@/registry/spectrum/showcase";
-import { InputDemo } from "@/registry/spectrum/showcase";
-import { InputOTPDemo } from "@/registry/spectrum/showcase";
-import { LabelDemo } from "@/registry/spectrum/showcase";
-import { MenubarDemo } from "@/registry/spectrum/showcase";
-import { PaginationDemo } from "@/registry/spectrum/showcase";
-import { PopoverDemo } from "@/registry/spectrum/showcase";
-import { ProgressDemo } from "@/registry/spectrum/showcase";
-import { RadioGroupDemo } from "@/registry/spectrum/showcase";
-import { SelectDemo } from "@/registry/spectrum/showcase";
-import { SheetDemo } from "@/registry/spectrum/showcase";
-import { SkeletonDemo } from "@/registry/spectrum/showcase";
-import { SliderDemo } from "@/registry/spectrum/showcase";
-import { SonnerDemo } from "@/registry/spectrum/showcase";
-import { SwitchDemo } from "@/registry/spectrum/showcase";
-import { TextareaDemo } from "@/registry/spectrum/showcase";
-import { ToggleDemo } from "@/registry/spectrum/showcase";
-import { ToggleGroupDemo } from "@/registry/spectrum/showcase";
-import { TooltipDemo } from "@/registry/spectrum/showcase";
-import { Badge, BadgeProps } from "@/registry/spectrum/ui/badge";
-import { Button, ButtonProps } from "@/registry/spectrum/ui/button";
+import { AccordionDemo } from "@/registry/bases/base/spectrum/showcase";
+import { AlertDialogDemo } from "@/registry/bases/base/spectrum/showcase";
+import { BreadcrumbDemo } from "@/registry/bases/base/spectrum/showcase";
+import { CalendarDemo } from "@/registry/bases/base/spectrum/showcase";
+import { CheckboxDemo } from "@/registry/bases/base/spectrum/showcase";
+import { ComboboxDemo } from "@/registry/bases/base/spectrum/showcase";
+import { CommandDemo } from "@/registry/bases/base/spectrum/showcase";
+import { ContextMenuDemo } from "@/registry/bases/base/spectrum/showcase";
+import { DatePickerDemo } from "@/registry/bases/base/spectrum/showcase";
+import { DialogDemo } from "@/registry/bases/base/spectrum/showcase";
+import { DrawerDemo } from "@/registry/bases/base/spectrum/showcase";
+import { DropdownMenuDemo } from "@/registry/bases/base/spectrum/showcase";
+import { HoverCardDemo } from "@/registry/bases/base/spectrum/showcase";
+import { InputDemo } from "@/registry/bases/base/spectrum/showcase";
+import { InputOTPDemo } from "@/registry/bases/base/spectrum/showcase";
+import { LabelDemo } from "@/registry/bases/base/spectrum/showcase";
+import { MenubarDemo } from "@/registry/bases/base/spectrum/showcase";
+import { PaginationDemo } from "@/registry/bases/base/spectrum/showcase";
+import { PopoverDemo } from "@/registry/bases/base/spectrum/showcase";
+import { ProgressDemo } from "@/registry/bases/base/spectrum/showcase";
+import { RadioGroupDemo } from "@/registry/bases/base/spectrum/showcase";
+import { SelectDemo } from "@/registry/bases/base/spectrum/showcase";
+import { SheetDemo } from "@/registry/bases/base/spectrum/showcase";
+import { SkeletonDemo } from "@/registry/bases/base/spectrum/showcase";
+import { SliderDemo } from "@/registry/bases/base/spectrum/showcase";
+import { SonnerDemo } from "@/registry/bases/base/spectrum/showcase";
+import { SwitchDemo } from "@/registry/bases/base/spectrum/showcase";
+import { TextareaDemo } from "@/registry/bases/base/spectrum/showcase";
+import { ToggleDemo } from "@/registry/bases/base/spectrum/showcase";
+import { ToggleGroupDemo } from "@/registry/bases/base/spectrum/showcase";
+import { TooltipDemo } from "@/registry/bases/base/spectrum/showcase";
+import { Badge, BadgeProps } from "@/registry/bases/base/spectrum/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/spectrum/ui/card";
+} from "@/registry/bases/base/spectrum/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/spectrum/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/spectrum/ui/tabs";
+} from "@/registry/bases/base/spectrum/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/spectrum/ui/tabs";
 
 export function SpectrumShowcaseComponents() {
   const style = "spectrum";

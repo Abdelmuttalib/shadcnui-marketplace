@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import type { QuestionnaireItemStatus } from "@shadcn/react/questionnaire"
-import { toast } from "sonner"
+import type { QuestionnaireItemStatus } from "@shadcn/react/questionnaire";
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -17,37 +17,39 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "permission", required: true },
   { name: "verification", required: true },
-] as const
+] as const;
 
-type ItemName = "permission" | "verification"
+type ItemName = "permission" | "verification";
 
 export function QuestionnaireNavigationState() {
-  const [item, setItem] = React.useState<ItemName>("permission")
+  const [item, setItem] = React.useState<ItemName>("permission");
   const [statuses, setStatuses] = React.useState<
     Record<ItemName, QuestionnaireItemStatus>
   >({
     permission: "unanswered",
     verification: "unanswered",
-  })
-  const unanswered = statuses[item] === "unanswered"
+  });
+  const unanswered = statuses[item] === "unanswered";
 
   function setStatus(name: ItemName, status: QuestionnaireItemStatus) {
-    setStatuses((current) => ({ ...current, [name]: status }))
+    setStatuses((current) => ({ ...current, [name]: status }));
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
 
     toast("Permissions saved", {
-      description: `Permission: ${formData.get("permission") ?? "None"} · Verification: ${formData.get("verification") ?? "None"}`,
-    })
+      description: `Permission: ${
+        formData.get("permission") ?? "None"
+      } · Verification: ${formData.get("verification") ?? "None"}`,
+    });
   }
 
   return (
@@ -115,5 +117,5 @@ export function QuestionnaireNavigationState() {
         </QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

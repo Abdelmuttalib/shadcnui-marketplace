@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { BellIcon, MailIcon, MessageSquareIcon } from "lucide-react"
+import { BellIcon, MailIcon, MessageSquareIcon } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -11,14 +11,14 @@ import {
   DropdownMenuGroup,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 export function DropdownMenuCheckboxesIcons() {
   const [notifications, setNotifications] = React.useState({
     email: true,
     sms: false,
     push: true,
-  })
+  });
 
   return (
     <DropdownMenu>
@@ -58,5 +58,5 @@ export function DropdownMenuCheckboxesIcons() {
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

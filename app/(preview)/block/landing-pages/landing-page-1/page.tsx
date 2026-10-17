@@ -4,9 +4,9 @@ import { Check, CheckCircle2 } from "lucide-react";
 import { ReactElement } from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
-import { Separator } from "@/registry/wedges/ui/separator";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 function Container({
   children,
@@ -127,7 +127,7 @@ export default function Landing1() {
                     )}
                   >
                     <div className="size-fit rounded-lg p-1 shadow lg:p-2">
-                      <CheckCircle2 className="fill-primary size-6 text-white lg:size-7" />
+                      <CheckCircle2 className="fill-primary size-6 lg:size-7 text-white" />
                     </div>
                     <div className="flex flex-col gap-y-2">
                       <h3 className="text-xl font-medium capitalize">

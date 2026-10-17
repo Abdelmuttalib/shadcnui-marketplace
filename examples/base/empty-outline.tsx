@@ -1,6 +1,6 @@
-import { IconCloud } from "@tabler/icons-react"
+import { IconCloud } from "@tabler/icons-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -8,7 +8,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-nova/ui/empty"
+} from "@/styles/base-default/ui/empty";
 
 export default function EmptyOutline() {
   return (
@@ -28,5 +28,5 @@ export default function EmptyOutline() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Form,
   FormControl,
@@ -13,8 +13,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/neon/ui/form";
-import { Switch } from "@/registry/neon/ui/switch";
+} from "@/registry/bases/base/neon/ui/form";
+import { Switch } from "@/registry/bases/base/neon/ui/switch";
 
 const FormSchema = z.object({
   marketing_emails: z.boolean().default(false).optional(),

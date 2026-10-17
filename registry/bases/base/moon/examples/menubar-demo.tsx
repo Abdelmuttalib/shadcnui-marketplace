@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/moon/ui/menubar";
+} from "@/registry/bases/base/moon/ui/menubar";
 
 export default function MenubarDemo() {
   return (

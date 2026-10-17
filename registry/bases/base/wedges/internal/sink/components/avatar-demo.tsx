@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
+} from "@/registry/bases/base/wedges/ui/avatar";
 
 export function AvatarDemo() {
   return (

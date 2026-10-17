@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Form,
   FormControl,
@@ -16,16 +16,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/wedges/ui/form";
-import { Input } from "@/registry/wedges/ui/input";
+} from "@/registry/bases/base/wedges/ui/form";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/wedges/ui/select";
-import { Textarea } from "@/registry/wedges/ui/textarea";
+} from "@/registry/bases/base/wedges/ui/select";
+import { Textarea } from "@/registry/bases/base/wedges/ui/textarea";
 
 const profileFormSchema = z.object({
   username: z

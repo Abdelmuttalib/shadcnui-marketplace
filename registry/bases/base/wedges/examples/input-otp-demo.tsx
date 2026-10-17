@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/wedges/ui/input-otp";
+} from "@/registry/bases/base/wedges/ui/input-otp";
 
 export default function InputOTPDemo() {
   return (

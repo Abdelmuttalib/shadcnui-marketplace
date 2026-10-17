@@ -3,14 +3,14 @@ import {
   ChevronRightIcon,
   FileTextIcon,
   GlobeIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-rhea/ui/trace"
+} from "@/styles/base-default/ui/trace";
 
 export function TraceLink() {
   return (
@@ -45,5 +45,5 @@ export function TraceLink() {
         </TraceLine>
       </a>
     </Trace>
-  )
+  );
 }

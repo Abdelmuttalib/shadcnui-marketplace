@@ -1,5 +1,5 @@
-import { Button } from "@/registry/neon/ui/button";
-import { Input } from "@/registry/neon/ui/input";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Input } from "@/registry/bases/base/neon/ui/input";
 
 export default function InputWithButton() {
   return (

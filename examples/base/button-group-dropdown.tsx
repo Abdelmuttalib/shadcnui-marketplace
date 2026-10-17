@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   AlertTriangleIcon,
@@ -9,10 +9,10 @@ import {
   TrashIcon,
   UserRoundXIcon,
   VolumeOffIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
-import { ButtonGroup } from "@/styles/base-nova/ui/button-group"
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,7 +20,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 export default function ButtonGroupDropdown() {
   return (
@@ -69,5 +69,5 @@ export default function ButtonGroupDropdown() {
         </DropdownMenuContent>
       </DropdownMenu>
     </ButtonGroup>
-  )
+  );
 }

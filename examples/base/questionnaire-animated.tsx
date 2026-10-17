@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -16,26 +16,28 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "task", required: true },
   { name: "review", required: true },
   { name: "delivery", required: true },
-] as const
+] as const;
 
 const itemClassName =
-  "data-active:animate-in data-active:fade-in-0 data-active:slide-in-from-bottom-2 data-active:duration-300 motion-reduce:animate-none"
+  "data-active:animate-in data-active:fade-in-0 data-active:slide-in-from-bottom-2 data-active:duration-300 motion-reduce:animate-none";
 
 export function QuestionnaireAnimated() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
 
     toast("Agent workflow saved", {
-      description: `Task: ${formData.get("task") ?? "None"} · Review: ${formData.get("review") ?? "None"} · Delivery: ${formData.get("delivery") ?? "None"}`,
-    })
+      description: `Task: ${formData.get("task") ?? "None"} · Review: ${
+        formData.get("review") ?? "None"
+      } · Delivery: ${formData.get("delivery") ?? "None"}`,
+    });
   }
 
   return (
@@ -114,5 +116,5 @@ export function QuestionnaireAnimated() {
         <QuestionnaireSubmit>Save workflow</QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import type { QuestionnaireItemStatus } from "@shadcn/react/questionnaire"
-import { toast } from "sonner"
+import type { QuestionnaireItemStatus } from "@shadcn/react/questionnaire";
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -19,36 +19,36 @@ import {
   QuestionnaireSkip,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "task", required: true },
   { name: "constraints" },
   { name: "review", required: true },
-] as const
+] as const;
 
 export function QuestionnaireSkipExample() {
   const [constraintStatus, setConstraintStatus] =
-    React.useState<QuestionnaireItemStatus>("unanswered")
+    React.useState<QuestionnaireItemStatus>("unanswered");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
     const answers = {
       task: formData.get("task"),
       constraints: formData.get("constraints"),
       constraintStatus,
       review: formData.get("review"),
-    }
+    };
 
     toast("Agent brief submitted", {
       description: `Task: ${answers.task ?? "None"} · Constraints: ${
         answers.constraintStatus === "skipped"
           ? "Skipped"
-          : (answers.constraints ?? "None")
+          : answers.constraints ?? "None"
       } · Review: ${answers.review ?? "None"}`,
-    })
+    });
   }
 
   return (
@@ -128,5 +128,5 @@ export function QuestionnaireSkipExample() {
         <QuestionnaireSubmit>Submit brief</QuestionnaireSubmit>
       </QuestionnaireActions>
     </Questionnaire>
-  )
+  );
 }

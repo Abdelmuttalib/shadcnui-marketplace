@@ -1,13 +1,13 @@
-import { MoreHorizontalIcon } from "lucide-react"
+import { MoreHorizontalIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Table,
   TableBody,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/styles/base-nova/ui/table"
+} from "@/styles/base-default/ui/table";
 
 export function TableActions() {
   return (
@@ -102,5 +102,5 @@ export function TableActions() {
         </TableRow>
       </TableBody>
     </Table>
-  )
+  );
 }

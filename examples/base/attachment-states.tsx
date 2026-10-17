@@ -5,7 +5,7 @@ import {
   FileWarningIcon,
   RefreshCwIcon,
   XIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Attachment,
@@ -15,8 +15,8 @@ import {
   AttachmentDescription,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-rhea/ui/attachment"
-import { Spinner } from "@/styles/base-rhea/ui/spinner"
+} from "@/styles/base-default/ui/attachment";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 export function AttachmentStates() {
   return (
@@ -97,5 +97,5 @@ export function AttachmentStates() {
         </AttachmentActions>
       </Attachment>
     </div>
-  )
+  );
 }

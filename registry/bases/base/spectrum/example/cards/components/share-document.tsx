@@ -4,24 +4,24 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/spectrum/ui/avatar";
-import { Button } from "@/registry/spectrum/ui/button";
+} from "@/registry/bases/base/spectrum/ui/avatar";
+import { Button } from "@/registry/bases/base/spectrum/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/spectrum/ui/card";
-import { Input } from "@/registry/spectrum/ui/input";
+} from "@/registry/bases/base/spectrum/ui/card";
+import { Input } from "@/registry/bases/base/spectrum/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/spectrum/ui/select";
-import { Separator } from "@/registry/spectrum/ui/separator";
+} from "@/registry/bases/base/spectrum/ui/select";
+import { Separator } from "@/registry/bases/base/spectrum/ui/separator";
 
 export function DemoShareDocument() {
   return (
@@ -53,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-spctm-muted-foreground">
+                  <p className="text-spctm-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-spctm-muted-foreground">
+                  <p className="text-spctm-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-spctm-muted-foreground">
+                  <p className="text-spctm-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

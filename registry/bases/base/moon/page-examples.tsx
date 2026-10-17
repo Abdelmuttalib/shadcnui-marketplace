@@ -1,32 +1,40 @@
 import { lazy, Suspense } from "react";
 
-// import { ChartsPage } from "@/registry/moon/charts-demo";
-// import { AuthenticationPage } from "@/registry/moon/example/authentication/page";
-// import { CardsPage } from "@/registry/moon/example/cards/page";
-// import { DashboardPage } from "@/registry/moon/example/dashboard/page";
-// import { SettingsProfilePage } from "@/registry/moon/example/forms/page";
-// import { MailPage } from "@/registry/moon/example/mail/page";
-// import { MusicPage } from "@/registry/moon/example/music/page";
-// import { PlaygroundPage } from "@/registry/moon/example/playground/page";
-// import { TaskPage } from "@/registry/moon/example/tasks/page";
+// import { ChartsPage } from "@/registry/bases/base/moon/charts-demo";
+// import { AuthenticationPage } from "@/registry/bases/base/moon/example/authentication/page";
+// import { CardsPage } from "@/registry/bases/base/moon/example/cards/page";
+// import { DashboardPage } from "@/registry/bases/base/moon/example/dashboard/page";
+// import { SettingsProfilePage } from "@/registry/bases/base/moon/example/forms/page";
+// import { MailPage } from "@/registry/bases/base/moon/example/mail/page";
+// import { MusicPage } from "@/registry/bases/base/moon/example/music/page";
+// import { PlaygroundPage } from "@/registry/bases/base/moon/example/playground/page";
+// import { TaskPage } from "@/registry/bases/base/moon/example/tasks/page";
 
-const ChartsPage = lazy(() => import("@/registry/moon/charts-demo"));
+const ChartsPage = lazy(() => import("@/registry/bases/base/moon/charts-demo"));
 const AuthenticationPage = lazy(
-  () => import("@/registry/moon/example/authentication/page")
+  () => import("@/registry/bases/base/moon/example/authentication/page")
 );
-const CardsPage = lazy(() => import("@/registry/moon/example/cards/page"));
+const CardsPage = lazy(
+  () => import("@/registry/bases/base/moon/example/cards/page")
+);
 const DashboardPage = lazy(
-  () => import("@/registry/moon/example/dashboard/page")
+  () => import("@/registry/bases/base/moon/example/dashboard/page")
 );
 const SettingsProfilePage = lazy(
-  () => import("@/registry/moon/example/forms/page")
+  () => import("@/registry/bases/base/moon/example/forms/page")
 );
-const MailPage = lazy(() => import("@/registry/moon/example/mail/page"));
-const MusicPage = lazy(() => import("@/registry/moon/example/music/page"));
+const MailPage = lazy(
+  () => import("@/registry/bases/base/moon/example/mail/page")
+);
+const MusicPage = lazy(
+  () => import("@/registry/bases/base/moon/example/music/page")
+);
 const PlaygroundPage = lazy(
-  () => import("@/registry/moon/example/playground/page")
+  () => import("@/registry/bases/base/moon/example/playground/page")
 );
-const TaskPage = lazy(() => import("@/registry/moon/example/tasks/page"));
+const TaskPage = lazy(
+  () => import("@/registry/bases/base/moon/example/tasks/page")
+);
 
 export const MoonPageExamples = [
   <Suspense fallback={<div>Loading...</div>} key="charts">

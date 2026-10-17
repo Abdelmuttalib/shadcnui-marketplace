@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/registry/moon/ui/button";
+import { buttonVariants } from "@/registry/bases/base/moon/ui/button";
 
 import { UserAuthForm } from "./components/user-auth-form";
 
@@ -24,7 +24,7 @@ export default function AuthenticationPage() {
         >
           Login
         </Link>
-        <div className="relative hidden h-full flex-col bg-moon-muted p-10 text-white dark:border-r dark:border-r-moon-border lg:flex">
+        <div className="bg-moon-muted dark:border-r-moon-border relative hidden h-full flex-col p-10 text-white dark:border-r lg:flex">
           <div className="absolute inset-0 bg-gray-900" />
           <div className="relative z-20 flex items-center text-lg font-medium">
             <svg
@@ -58,23 +58,23 @@ export default function AuthenticationPage() {
               <h1 className="text-2xl font-semibold tracking-tight">
                 Create an account
               </h1>
-              <p className="text-sm text-moon-muted-foreground">
+              <p className="text-moon-muted-foreground text-sm">
                 Enter your email below to create your account
               </p>
             </div>
             <UserAuthForm />
-            <p className="px-8 text-center text-sm text-moon-muted-foreground">
+            <p className="text-moon-muted-foreground px-8 text-center text-sm">
               By clicking continue, you agree to our{" "}
               <Link
                 href="/terms"
-                className="underline underline-offset-4 hover:text-moon-primary"
+                className="hover:text-moon-primary underline underline-offset-4"
               >
                 Terms of Service
               </Link>{" "}
               and{" "}
               <Link
                 href="/privacy"
-                className="underline underline-offset-4 hover:text-moon-primary"
+                className="hover:text-moon-primary underline underline-offset-4"
               >
                 Privacy Policy
               </Link>

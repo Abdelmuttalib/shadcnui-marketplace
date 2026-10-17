@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Search } from "lucide-react"
+import { Search } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-nova/ui-rtl/field"
+} from "@/styles/base-default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
@@ -20,8 +20,8 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/styles/base-nova/ui-rtl/input-group"
-import { Spinner } from "@/styles/base-nova/ui-rtl/spinner"
+} from "@/styles/base-default/ui/input-group";
+import { Spinner } from "@/styles/base-default/ui/spinner";
 
 const translations: Translations = {
   en: {
@@ -69,10 +69,10 @@ const translations: Translations = {
       textareaDescription: "כותרת תחתונה ממוקמת מתחת לאזור הטקסט.",
     },
   },
-}
+};
 
 export function InputGroupRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div className="grid w-full max-w-sm gap-6">
@@ -115,5 +115,5 @@ export function InputGroupRtl() {
         </Field>
       </FieldGroup>
     </div>
-  )
+  );
 }

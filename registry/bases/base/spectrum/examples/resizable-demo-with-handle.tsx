@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/spectrum/ui/resizable";
+} from "@/registry/bases/base/spectrum/ui/resizable";
 
 export default function ResizableDemo() {
   return (

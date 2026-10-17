@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/moon/ui/command";
+} from "@/registry/bases/base/moon/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-moon-lg border border-moon-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-moon-lg border-moon-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

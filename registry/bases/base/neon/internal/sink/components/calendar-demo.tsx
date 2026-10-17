@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/neon/ui/calendar";
+import { Calendar } from "@/registry/bases/base/neon/ui/calendar";
 
 export function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -12,7 +12,7 @@ export function CalendarDemo() {
       mode="single"
       selected={date}
       onSelect={setDate}
-      className="rounded-neon-md border border-neon-border shadow"
+      className="rounded-neon-md border-neon-border border shadow"
     />
   );
 }

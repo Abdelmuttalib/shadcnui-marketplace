@@ -1,7 +1,7 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/styles/base-nova/ui/native-select"
+} from "@/styles/base-default/ui/native-select";
 
 export function NativeSelectDisabled() {
   return (
@@ -11,5 +11,5 @@ export function NativeSelectDisabled() {
       <NativeSelectOption value="banana">Banana</NativeSelectOption>
       <NativeSelectOption value="blueberry">Blueberry</NativeSelectOption>
     </NativeSelect>
-  )
+  );
 }

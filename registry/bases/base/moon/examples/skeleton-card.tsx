@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/moon/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/moon/ui/skeleton";
 
 export default function SkeletonCard() {
   return (

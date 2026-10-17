@@ -6,7 +6,7 @@ import * as React from "react";
 
 import { useMutationObserver } from "@/hooks/use-mutation-observer";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -14,18 +14,18 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/neon/ui/hover-card";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/hover-card";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/neon/ui/popover";
+} from "@/registry/bases/base/neon/ui/popover";
 
 import { Model, ModelType } from "../data/models";
 
@@ -77,7 +77,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
             >
               <div className="grid gap-2">
                 <h4 className="font-medium leading-none">{peekedModel.name}</h4>
-                <div className="text-sm text-neon-muted-foreground">
+                <div className="text-neon-muted-foreground text-sm">
                   {peekedModel.description}
                 </div>
                 {peekedModel.strengths ? (
@@ -85,7 +85,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                     <h5 className="text-sm font-medium leading-none">
                       Strengths
                     </h5>
-                    <ul className="text-sm text-neon-muted-foreground">
+                    <ul className="text-neon-muted-foreground text-sm">
                       {peekedModel.strengths}
                     </ul>
                   </div>

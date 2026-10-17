@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/snow/ui/breadcrumb";
+} from "@/registry/bases/base/snow/ui/breadcrumb";
 
 export default function BreadcrumbWithCustomSeparator() {
   return (

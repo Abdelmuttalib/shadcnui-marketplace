@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
+  type ChartConfig,
   ChartContainer,
   ChartLegend,
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
-} from "@/styles/base-nova/ui-rtl/chart"
+} from "@/styles/base-default/ui/chart";
 
 const translations: Translations = {
   en: {
@@ -55,7 +55,7 @@ const translations: Translations = {
       mobile: "נייד",
     },
   },
-}
+};
 
 const chartData = [
   { month: "january", desktop: 186, mobile: 80 },
@@ -64,10 +64,10 @@ const chartData = [
   { month: "april", desktop: 73, mobile: 190 },
   { month: "may", desktop: 209, mobile: 130 },
   { month: "june", desktop: 214, mobile: 140 },
-]
+];
 
 export function ChartRtl() {
-  const { t, dir } = useTranslation(translations, "ar")
+  const { t, dir } = useTranslation(translations, "ar");
 
   const chartConfig = {
     desktop: {
@@ -78,7 +78,7 @@ export function ChartRtl() {
       label: t.mobile,
       color: "var(--chart-1)",
     },
-  } satisfies ChartConfig
+  } satisfies ChartConfig;
 
   return (
     <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
@@ -110,5 +110,5 @@ export function ChartRtl() {
         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
       </BarChart>
     </ChartContainer>
-  )
+  );
 }

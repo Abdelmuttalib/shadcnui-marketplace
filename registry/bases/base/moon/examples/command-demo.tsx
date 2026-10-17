@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/moon/ui/command";
+} from "@/registry/bases/base/moon/ui/command";
 
 export default function CommandDemo() {
   return (

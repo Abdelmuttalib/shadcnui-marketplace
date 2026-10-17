@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import * as React from "react"
 import {
   BellIcon,
   CalculatorIcon,
@@ -25,9 +24,10 @@ import {
   UserIcon,
   ZoomInIcon,
   ZoomOutIcon,
-} from "lucide-react"
+} from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Command,
   CommandDialog,
@@ -38,10 +38,10 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/styles/base-nova/ui/command"
+} from "@/styles/base-default/ui/command";
 
 export function CommandManyItems() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   return (
     <div className="flex flex-col gap-4">
@@ -178,5 +178,5 @@ export function CommandManyItems() {
         </Command>
       </CommandDialog>
     </div>
-  )
+  );
 }

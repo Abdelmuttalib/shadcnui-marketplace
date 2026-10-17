@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/neon/ui/breadcrumb";
-import { Button } from "@/registry/neon/ui/button";
+} from "@/registry/bases/base/neon/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/neon/ui/drawer";
+} from "@/registry/bases/base/neon/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/neon/ui/dropdown-menu";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
 
 const items = [
   { href: "#", label: "Home" },

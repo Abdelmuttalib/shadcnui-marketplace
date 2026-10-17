@@ -1,4 +1,4 @@
-import { Skeleton } from "@/styles/base-nova/ui/skeleton"
+import { Skeleton } from "@/styles/base-default/ui/skeleton";
 
 export function SkeletonAvatar() {
   return (
@@ -9,5 +9,5 @@ export function SkeletonAvatar() {
         <Skeleton className="h-4 w-[100px]" />
       </div>
     </div>
-  )
+  );
 }

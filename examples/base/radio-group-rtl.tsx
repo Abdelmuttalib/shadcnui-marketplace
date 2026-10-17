@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui-rtl/field"
+} from "@/styles/base-default/ui/field";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/styles/base-nova/ui-rtl/radio-group"
+} from "@/styles/base-default/ui/radio-group";
 
 const translations: Translations = {
   en: {
@@ -51,10 +51,10 @@ const translations: Translations = {
       compactDescription: "ריווח מינימלי לפריסות צפופות.",
     },
   },
-}
+};
 
 export function RadioGroupRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <RadioGroup defaultValue="comfortable" className="w-fit" dir={dir}>
@@ -88,5 +88,5 @@ export function RadioGroupRtl() {
         </FieldContent>
       </Field>
     </RadioGroup>
-  )
+  );
 }

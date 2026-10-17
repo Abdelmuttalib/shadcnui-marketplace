@@ -51,7 +51,7 @@ Unchanged. PARITY_EXPECTED.
 
 ## 10. Imports and Dependencies
 
-`import { toggleVariants } from "@/registry/material/ui/toggle"` (`material:8`) vs
+`import { toggleVariants } from "@/registry/bases/base/material/ui/toggle"` (`material:8`) vs
 `@/registry/default/ui/toggle` (`default:8`) — own-style import, correct wiring
 (no cross-style import). Remaining imports identical. PARITY_EXPECTED
 (classification: correct namespacing, not a finding).

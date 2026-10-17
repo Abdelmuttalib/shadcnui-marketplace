@@ -1,4 +1,4 @@
-import { Badge } from "@/styles/base-nova/ui/badge"
+import { Badge } from "@/styles/base-default/ui/badge";
 
 export default function BadgeDemo() {
   return (
@@ -8,5 +8,5 @@ export default function BadgeDemo() {
       <Badge variant="destructive">Destructive</Badge>
       <Badge variant="outline">Outline</Badge>
     </div>
-  )
+  );
 }

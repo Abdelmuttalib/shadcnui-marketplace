@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/wedges/ui/breadcrumb";
+} from "@/registry/bases/base/wedges/ui/breadcrumb";
 
 export default function BreadcrumbWithCustomSeparator() {
   return (

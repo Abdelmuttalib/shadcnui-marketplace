@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/moon/ui/resizable";
+} from "@/registry/bases/base/moon/ui/resizable";
 
 export default function ResizableDemo() {
   return (

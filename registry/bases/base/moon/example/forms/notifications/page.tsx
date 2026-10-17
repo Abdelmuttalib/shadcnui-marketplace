@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/moon/ui/separator";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 import { NotificationsForm } from "./notifications-form";
 
@@ -7,7 +7,7 @@ export default function SettingsNotificationsPage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Notifications</h3>
-        <p className="text-sm text-moon-muted-foreground">
+        <p className="text-moon-muted-foreground text-sm">
           Configure how you receive notifications.
         </p>
       </div>

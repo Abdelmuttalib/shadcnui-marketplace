@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/spectrum/ui/pagination";
+} from "@/registry/bases/base/spectrum/ui/pagination";
 
 export function PaginationDemo() {
   return (

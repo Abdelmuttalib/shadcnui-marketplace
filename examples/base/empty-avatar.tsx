@@ -2,8 +2,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-nova/ui/avatar"
-import { Button } from "@/styles/base-nova/ui/button"
+} from "@/styles/base-default/ui/avatar";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -11,7 +11,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-nova/ui/empty"
+} from "@/styles/base-default/ui/empty";
 
 export default function EmptyAvatar() {
   return (
@@ -36,5 +36,5 @@ export default function EmptyAvatar() {
         <Button size="sm">Leave Message</Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

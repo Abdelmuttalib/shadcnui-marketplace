@@ -1,16 +1,16 @@
-import { CheckIcon } from "lucide-react"
+import { CheckIcon } from "lucide-react";
 
 import {
   Bubble,
   BubbleContent,
   BubbleReactions,
-} from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+} from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-rhea/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 export function BubbleTooltipDemo() {
   return (
@@ -30,5 +30,5 @@ export function BubbleTooltipDemo() {
         </BubbleReactions>
       </Bubble>
     </div>
-  )
+  );
 }

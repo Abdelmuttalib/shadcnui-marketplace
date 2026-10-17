@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/wedges/ui/hover-card";
-import { Label } from "@/registry/wedges/ui/label";
-import { Slider } from "@/registry/wedges/ui/slider";
+} from "@/registry/bases/base/wedges/ui/hover-card";
+import { Label } from "@/registry/bases/base/wedges/ui/label";
+import { Slider } from "@/registry/bases/base/wedges/ui/slider";
 
 interface TopPSelectorProps {
   defaultValue: SliderProps["defaultValue"];
@@ -25,7 +25,7 @@ export function TopPSelector({ defaultValue }: TopPSelectorProps) {
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <Label htmlFor="top-p">Top P</Label>
-              <span className="w-12 rounded-wedges-md border border-transparent px-2 py-0.5 text-right text-sm text-wedges-muted-foreground hover:border-border">
+              <span className="rounded-wedges-md text-wedges-muted-foreground hover:border-border w-12 border border-transparent px-2 py-0.5 text-right text-sm">
                 {value}
               </span>
             </div>

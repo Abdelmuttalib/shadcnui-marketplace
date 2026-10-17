@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useChat } from "@ai-sdk/react"
+import { useChat } from "@ai-sdk/react";
 import {
   ArrowUpIcon,
   GlobeIcon,
@@ -10,11 +10,11 @@ import {
   PlusIcon,
   RotateCwIcon,
   TelescopeIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { createChat, getMessageText } from "@/lib/ai"
-import { MessageAnimated } from "@/components/message-animated"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { MessageAnimated } from "@/components/message-animated";
+import { createChat, getMessageText } from "@/lib/ai";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Card,
   CardAction,
@@ -23,38 +23,38 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/base-default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-rhea/ui/empty"
+} from "@/styles/base-default/ui/empty";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
-} from "@/styles/base-rhea/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-rhea/ui/message-scroller"
+} from "@/styles/base-default/ui/message-scroller";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-rhea/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 const chat = createChat()
   .user(
@@ -82,22 +82,22 @@ const chat = createChat()
   .sleep(1000)
   .assistant(
     '`MessageScrollerContent` sets `role="log"` and `aria-relevant="additions"` by default, so screen readers announce new messages as they stream in.\n\nThe scroll button is a real `<button>` with an sr-only label, and it\'s removed from the tab order when you\'re already at the bottom — no ghost focus stops.'
-  )
-const initialMessages = chat.get(0)
-const transport = chat.transport({ delayMs: 20 })
+  );
+const initialMessages = chat.get(0);
+const transport = chat.transport({ delayMs: 20 });
 
 export function MessageScrollerDemo() {
   const { messages, sendMessage, status, setMessages } = useChat({
     messages: initialMessages,
     transport,
-  })
-  const nextMessage = chat.next(messages)
-  const isBusy = status === "submitted" || status === "streaming"
+  });
+  const nextMessage = chat.next(messages);
+  const isBusy = status === "submitted" || status === "streaming";
 
   return (
     <MessageScrollerProvider>
       <div className="relative flex flex-col gap-4">
-        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
+        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>New Chat</CardTitle>
             <CardDescription>How can I help you today?</CardDescription>
@@ -159,11 +159,11 @@ export function MessageScrollerDemo() {
           <CardFooter className="flex-col gap-2">
             <form
               onSubmit={(e) => {
-                e.preventDefault()
+                e.preventDefault();
                 if (!nextMessage || isBusy) {
-                  return
+                  return;
                 }
-                void sendMessage(nextMessage)
+                void sendMessage(nextMessage);
               }}
               className="w-full"
             >
@@ -235,10 +235,10 @@ export function MessageScrollerDemo() {
             </form>
           </CardFooter>
         </Card>
-        <div className="px-0.5 text-center text-xs text-muted-foreground">
+        <div className="text-muted-foreground px-0.5 text-center text-xs">
           Demo is read only. Press send to send messages.
         </div>
       </div>
     </MessageScrollerProvider>
-  )
+  );
 }

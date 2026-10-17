@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Popover,
   PopoverContent,
@@ -12,7 +12,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-nova/ui-rtl/popover"
+} from "@/styles/base-default/ui/popover";
 
 const translations: Translations = {
   en: {
@@ -54,13 +54,13 @@ const translations: Translations = {
       "inline-end": "סוף השורה",
     },
   },
-}
+};
 
-const physicalSides = ["left", "top", "bottom", "right"] as const
-const logicalSides = ["inline-start", "inline-end"] as const
+const physicalSides = ["left", "top", "bottom", "right"] as const;
+const logicalSides = ["inline-start", "inline-end"] as const;
 
 export function PopoverRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <div className="grid gap-4">
@@ -95,5 +95,5 @@ export function PopoverRtl() {
         ))}
       </div>
     </div>
-  )
+  );
 }

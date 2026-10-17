@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/snow/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/snow/ui/skeleton";
 
 export function SkeletonDemo() {
   return (

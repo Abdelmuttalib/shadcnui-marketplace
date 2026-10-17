@@ -1,4 +1,4 @@
-import { Button } from "@/registry/moon/ui/button";
+import { Button } from "@/registry/bases/base/moon/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,13 +7,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/moon/ui/dialog";
-import { Input } from "@/registry/moon/ui/input";
-import { Label } from "@/registry/moon/ui/label";
+} from "@/registry/bases/base/moon/ui/dialog";
+import { Input } from "@/registry/bases/base/moon/ui/input";
+import { Label } from "@/registry/bases/base/moon/ui/label";
 
 export function PodcastEmptyPlaceholder() {
   return (
-    <div className="flex h-[450px] shrink-0 items-center justify-center rounded-moon-md border border-dashed">
+    <div className="rounded-moon-md flex h-[450px] shrink-0 items-center justify-center border border-dashed">
       <div className="mx-auto flex max-w-[420px] flex-col items-center justify-center text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ export function PodcastEmptyPlaceholder() {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          className="h-10 w-10 text-moon-muted-foreground"
+          className="text-moon-muted-foreground h-10 w-10"
           viewBox="0 0 24 24"
         >
           <circle cx="12" cy="11" r="1" />
@@ -31,7 +31,7 @@ export function PodcastEmptyPlaceholder() {
         </svg>
 
         <h3 className="mt-4 text-lg font-semibold">No episodes added</h3>
-        <p className="mb-4 mt-2 text-sm text-moon-muted-foreground">
+        <p className="text-moon-muted-foreground mb-4 mt-2 text-sm">
           You have not added any podcasts. Add one below.
         </p>
         <Dialog>

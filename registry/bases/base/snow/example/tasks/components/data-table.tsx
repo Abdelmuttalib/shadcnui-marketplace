@@ -23,7 +23,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/snow/ui/table";
+} from "@/registry/bases/base/snow/ui/table";
 
 import { DataTablePagination } from "./data-table-pagination";
 import { DataTableToolbar } from "./data-table-toolbar";
@@ -70,7 +70,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className="space-y-4">
       <DataTableToolbar table={table} />
-      <div className="rounded-snow-md border border-snow-border">
+      <div className="rounded-snow-md border-snow-border border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

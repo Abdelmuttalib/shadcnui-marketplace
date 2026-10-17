@@ -4,12 +4,12 @@ import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/registry/snow/ui/button";
+import { buttonVariants } from "@/registry/bases/base/snow/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/snow/ui/tooltip";
+} from "@/registry/bases/base/snow/ui/tooltip";
 
 interface NavProps {
   isCollapsed: boolean;
@@ -48,7 +48,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               <TooltipContent side="right" className="flex items-center gap-4">
                 {link.title}
                 {link.label && (
-                  <span className="ml-auto text-snow-muted-foreground">
+                  <span className="text-snow-muted-foreground ml-auto">
                     {link.label}
                   </span>
                 )}
@@ -61,7 +61,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               className={cn(
                 buttonVariants({ variant: link.variant, size: "sm" }),
                 link.variant === "default" &&
-                  "dark:bg-snow-muted dark:text-white dark:hover:bg-snow-muted dark:hover:text-white",
+                  "dark:bg-snow-muted dark:hover:bg-snow-muted dark:text-white dark:hover:text-white",
                 "justify-start"
               )}
             >

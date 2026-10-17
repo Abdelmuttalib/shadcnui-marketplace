@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { CreditCardIcon, SettingsIcon, UserIcon } from "lucide-react"
+import { CreditCardIcon, SettingsIcon, UserIcon } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
+  useTranslation,
+} from "@/components/language-selector";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -24,7 +24,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/dropdown-menu"
+} from "@/styles/base-default/ui/dropdown-menu";
 
 const translations: Translations = {
   en: {
@@ -117,14 +117,14 @@ const translations: Translations = {
       left: "שמאל",
     },
   },
-}
+};
 
 export function DropdownMenuRtl() {
-  const { dir, language, t } = useTranslation(translations, "ar")
-  const [showStatusBar, setShowStatusBar] = React.useState(true)
-  const [showActivityBar, setShowActivityBar] = React.useState(false)
-  const [showPanel, setShowPanel] = React.useState(false)
-  const [position, setPosition] = React.useState("bottom")
+  const { dir, language, t } = useTranslation(translations, "ar");
+  const [showStatusBar, setShowStatusBar] = React.useState(true);
+  const [showActivityBar, setShowActivityBar] = React.useState(false);
+  const [showPanel, setShowPanel] = React.useState(false);
+  const [position, setPosition] = React.useState("bottom");
 
   return (
     <DropdownMenu>
@@ -242,5 +242,5 @@ export function DropdownMenuRtl() {
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

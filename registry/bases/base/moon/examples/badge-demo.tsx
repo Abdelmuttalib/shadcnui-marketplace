@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/moon/ui/badge";
+import { Badge } from "@/registry/bases/base/moon/ui/badge";
 
 export default function BadgeDemo() {
   return (

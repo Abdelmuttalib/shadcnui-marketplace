@@ -3,8 +3,8 @@ import {
   AlertAction,
   AlertDescription,
   AlertTitle,
-} from "@/styles/base-nova/ui/alert"
-import { Button } from "@/styles/base-nova/ui/button"
+} from "@/styles/base-default/ui/alert";
+import { Button } from "@/styles/base-default/ui/button";
 
 export default function AlertActionExample() {
   return (
@@ -19,5 +19,5 @@ export default function AlertActionExample() {
         </Button>
       </AlertAction>
     </Alert>
-  )
+  );
 }

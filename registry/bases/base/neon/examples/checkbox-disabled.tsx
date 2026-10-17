@@ -1,4 +1,4 @@
-import { Checkbox } from "@/registry/neon/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/neon/ui/checkbox";
 
 export default function CheckboxDisabled() {
   return (

@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/spectrum/ui/select";
+} from "@/registry/bases/base/spectrum/ui/select";
 
 export default function SelectDemo() {
   return (

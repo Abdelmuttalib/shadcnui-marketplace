@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/neon/ui/navigation-menu";
+} from "@/registry/bases/base/neon/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

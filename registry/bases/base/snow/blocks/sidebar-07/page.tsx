@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/registry/snow/blocks/sidebar-07/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/snow/blocks/sidebar-07/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,20 +6,20 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/snow/ui/breadcrumb";
-import { Separator } from "@/registry/snow/ui/separator";
+} from "@/registry/bases/base/snow/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/snow/ui/sidebar";
+} from "@/registry/bases/base/snow/ui/sidebar";
 
 export default function Page() {
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
@@ -40,11 +40,11 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="rounded-cb-xl aspect-video bg-cb-muted/50" />
-            <div className="rounded-cb-xl aspect-video bg-cb-muted/50" />
-            <div className="rounded-cb-xl aspect-video bg-cb-muted/50" />
+            <div className="rounded-cb-xl bg-cb-muted/50 aspect-video" />
+            <div className="rounded-cb-xl bg-cb-muted/50 aspect-video" />
+            <div className="rounded-cb-xl bg-cb-muted/50 aspect-video" />
           </div>
-          <div className="rounded-cb-xl min-h-[100vh] flex-1 bg-cb-muted/50 md:min-h-min" />
+          <div className="rounded-cb-xl bg-cb-muted/50 min-h-[100vh] flex-1 md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

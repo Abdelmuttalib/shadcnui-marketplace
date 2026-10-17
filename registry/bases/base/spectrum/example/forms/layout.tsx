@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Separator } from "@/registry/spectrum/ui/separator";
+import { Separator } from "@/registry/bases/base/spectrum/ui/separator";
 
 import { SidebarNav } from "./components/sidebar-nav";
 

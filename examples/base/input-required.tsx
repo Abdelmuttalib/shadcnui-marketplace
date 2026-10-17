@@ -2,8 +2,8 @@ import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/base-default/ui/field";
+import { Input } from "@/styles/base-default/ui/input";
 
 export function InputRequired() {
   return (
@@ -18,5 +18,5 @@ export function InputRequired() {
       />
       <FieldDescription>This field must be filled out.</FieldDescription>
     </Field>
-  )
+  );
 }

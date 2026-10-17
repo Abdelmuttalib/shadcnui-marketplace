@@ -1,6 +1,6 @@
-import DatePickerWithRange from "@/registry/spectrum/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/spectrum/ui/card";
-import { Label } from "@/registry/spectrum/ui/label";
+import DatePickerWithRange from "@/registry/bases/base/spectrum/components/date-picker-with-range";
+import { Card, CardContent } from "@/registry/bases/base/spectrum/ui/card";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
 
 export function DemoDatePicker() {
   return (

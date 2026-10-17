@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   Questionnaire,
@@ -16,37 +16,39 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   { name: "scope", required: true },
   { name: "checks", required: true },
   { name: "output", required: true },
-] as const
+] as const;
 
 const itemLabels: Record<string, string> = {
   scope: "Change scope",
   checks: "Verification",
   output: "Final output",
-}
+};
 
 export function QuestionnaireControlled() {
-  const [item, setItem] = React.useState("scope")
+  const [item, setItem] = React.useState("scope");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
 
     toast("Agent workflow configured", {
-      description: `Scope: ${formData.get("scope") ?? "None"} · Verification: ${formData.get("checks") ?? "None"} · Output: ${formData.get("output") ?? "None"}`,
-    })
+      description: `Scope: ${formData.get("scope") ?? "None"} · Verification: ${
+        formData.get("checks") ?? "None"
+      } · Output: ${formData.get("output") ?? "None"}`,
+    });
   }
 
   return (
     <div className="relative mx-auto flex h-full w-full max-w-md flex-col">
       <p
-        className="absolute end-0 top-0 text-sm text-muted-foreground"
+        className="text-muted-foreground absolute end-0 top-0 text-sm"
         role="status"
       >
         Current checkpoint: {itemLabels[item]}
@@ -123,5 +125,5 @@ export function QuestionnaireControlled() {
         </QuestionnaireActions>
       </Questionnaire>
     </div>
-  )
+  );
 }

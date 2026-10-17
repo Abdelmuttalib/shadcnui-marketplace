@@ -1,9 +1,9 @@
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function PopoverAlignments() {
   return (
@@ -35,5 +35,5 @@ export function PopoverAlignments() {
         </Popover>
       </div>
     </>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -8,7 +8,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/styles/base-rhea/ui/drawer"
+} from "@/styles/base-default/ui/drawer";
 
 export function DrawerWithSides() {
   return (
@@ -22,12 +22,12 @@ export function DrawerWithSides() {
           <DrawerDescription>Set your daily activity goal.</DrawerDescription>
         </DrawerHeader>
         <div className="flex-1 p-4">
-          <div className="size-full rounded-2xl bg-muted" />
+          <div className="size-full bg-muted rounded-2xl" />
         </div>
         <DrawerFooter>
           <DrawerClose render={<Button />}>Close</DrawerClose>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }

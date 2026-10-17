@@ -12,7 +12,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/neon/ui/context-menu";
+} from "@/registry/bases/base/neon/ui/context-menu";
 
 export default function ContextMenuDemo() {
   return (

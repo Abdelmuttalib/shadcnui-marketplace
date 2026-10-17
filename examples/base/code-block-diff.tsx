@@ -6,25 +6,25 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/base-default/ui/code-block";
 
 const patch = ` export function Greeting({ name }: { name: string }) {
 -  return <p>Hello, {name}</p>
 +  return <p className="text-sm text-muted-foreground">
 +    Hello, {name}!
 +  </p>
- }`
+ }`;
 
 function getVariant(line: string) {
   if (line.startsWith("+")) {
-    return "added"
+    return "added";
   }
 
   if (line.startsWith("-")) {
-    return "removed"
+    return "removed";
   }
 
-  return "default"
+  return "default";
 }
 
 export function CodeBlockDiff() {
@@ -46,5 +46,5 @@ export function CodeBlockDiff() {
         </CodeBlockContent>
       </CodeBlock>
     </div>
-  )
+  );
 }

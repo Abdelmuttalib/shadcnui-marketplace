@@ -1,6 +1,6 @@
-import { ShieldAlertIcon } from "lucide-react"
+import { ShieldAlertIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Item,
   ItemActions,
@@ -8,7 +8,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/base-default/ui/item";
 
 export function ItemIcon() {
   return (
@@ -30,5 +30,5 @@ export function ItemIcon() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }

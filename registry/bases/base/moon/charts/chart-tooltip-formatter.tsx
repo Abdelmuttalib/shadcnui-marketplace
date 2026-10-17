@@ -8,13 +8,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/moon/ui/card";
+} from "@/registry/bases/base/moon/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/moon/ui/chart";
+} from "@/registry/bases/base/moon/ui/chart";
 
 export const description = "A stacked bar chart with a legend";
 
@@ -76,12 +76,12 @@ export function Component() {
                 <ChartTooltipContent
                   hideLabel
                   formatter={(value, name) => (
-                    <div className="flex min-w-[130px] items-center text-xs text-moon-muted-foreground">
+                    <div className="text-moon-muted-foreground flex min-w-[130px] items-center text-xs">
                       {chartConfig[name as keyof typeof chartConfig]?.label ||
                         name}
-                      <div className="ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums text-moon-foreground">
+                      <div className="text-moon-foreground ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums">
                         {value}
-                        <span className="font-normal text-moon-muted-foreground">
+                        <span className="text-moon-muted-foreground font-normal">
                           kcal
                         </span>
                       </div>

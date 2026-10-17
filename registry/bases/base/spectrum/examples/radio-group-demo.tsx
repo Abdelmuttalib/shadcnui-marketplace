@@ -1,5 +1,8 @@
-import { Label } from "@/registry/spectrum/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/spectrum/ui/radio-group";
+import { Label } from "@/registry/bases/base/spectrum/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/spectrum/ui/radio-group";
 
 export default function RadioGroupDemo() {
   return (

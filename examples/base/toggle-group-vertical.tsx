@@ -1,9 +1,9 @@
-import { BoldIcon, ItalicIcon, UnderlineIcon } from "lucide-react"
+import { BoldIcon, ItalicIcon, UnderlineIcon } from "lucide-react";
 
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-nova/ui/toggle-group"
+} from "@/styles/base-default/ui/toggle-group";
 
 export function ToggleGroupVertical() {
   return (
@@ -23,5 +23,5 @@ export function ToggleGroupVertical() {
         <UnderlineIcon />
       </ToggleGroupItem>
     </ToggleGroup>
-  )
+  );
 }

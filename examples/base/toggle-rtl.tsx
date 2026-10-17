@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { BookmarkIcon } from "lucide-react"
+import { BookmarkIcon } from "lucide-react";
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Toggle } from "@/styles/base-nova/ui-rtl/toggle"
+  useTranslation,
+} from "@/components/language-selector";
+import { Toggle } from "@/styles/base-default/ui/toggle";
 
 const translations: Translations = {
   en: {
@@ -28,15 +28,15 @@ const translations: Translations = {
       label: "סימנייה",
     },
   },
-}
+};
 
 export function ToggleRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <Toggle aria-label="Toggle bookmark" size="sm" variant="outline" dir={dir}>
       <BookmarkIcon className="group-aria-pressed/toggle:fill-foreground" />
       {t.label}
     </Toggle>
-  )
+  );
 }

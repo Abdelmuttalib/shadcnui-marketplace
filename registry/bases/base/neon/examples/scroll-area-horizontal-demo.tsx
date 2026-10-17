@@ -1,7 +1,10 @@
 import Image from "next/image";
 import * as React from "react";
 
-import { ScrollArea, ScrollBar } from "@/registry/neon/ui/scroll-area";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/neon/ui/scroll-area";
 
 export interface Artwork {
   artist: string;
@@ -38,9 +41,9 @@ export default function ScrollAreaHorizontalDemo() {
                 height={400}
               />
             </div>
-            <figcaption className="pt-2 text-xs text-muted-foreground">
+            <figcaption className="text-muted-foreground pt-2 text-xs">
               Photo by{" "}
-              <span className="font-semibold text-foreground">
+              <span className="text-foreground font-semibold">
                 {artwork.artist}
               </span>
             </figcaption>

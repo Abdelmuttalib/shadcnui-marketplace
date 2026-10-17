@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/lucid/examples/cards/activity-goal";
-import { CardsCalendar } from "@/registry/lucid/examples/cards/calendar";
-import { CardsChat } from "@/registry/lucid/examples/cards/chat";
-import { CardsCookieSettings } from "@/registry/lucid/examples/cards/cookie-settings";
-import { CardsCreateAccount } from "@/registry/lucid/examples/cards/create-account";
-import { CardsDataTable } from "@/registry/lucid/examples/cards/data-table";
-import { CardsMetric } from "@/registry/lucid/examples/cards/metric";
-import { CardsPaymentMethod } from "@/registry/lucid/examples/cards/payment-method";
-import { CardsReportIssue } from "@/registry/lucid/examples/cards/report-issue";
-import { CardsShare } from "@/registry/lucid/examples/cards/share";
-import { CardsStats } from "@/registry/lucid/examples/cards/stats";
-import { CardsTeamMembers } from "@/registry/lucid/examples/cards/team-members";
+import { CardsActivityGoal } from "@/registry/bases/base/lucid/examples/cards/activity-goal";
+import { CardsCalendar } from "@/registry/bases/base/lucid/examples/cards/calendar";
+import { CardsChat } from "@/registry/bases/base/lucid/examples/cards/chat";
+import { CardsCookieSettings } from "@/registry/bases/base/lucid/examples/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/bases/base/lucid/examples/cards/create-account";
+import { CardsDataTable } from "@/registry/bases/base/lucid/examples/cards/data-table";
+import { CardsMetric } from "@/registry/bases/base/lucid/examples/cards/metric";
+import { CardsPaymentMethod } from "@/registry/bases/base/lucid/examples/cards/payment-method";
+import { CardsReportIssue } from "@/registry/bases/base/lucid/examples/cards/report-issue";
+import { CardsShare } from "@/registry/bases/base/lucid/examples/cards/share";
+import { CardsStats } from "@/registry/bases/base/lucid/examples/cards/stats";
+import { CardsTeamMembers } from "@/registry/bases/base/lucid/examples/cards/team-members";
 
 export default function CardsDemo() {
   return (

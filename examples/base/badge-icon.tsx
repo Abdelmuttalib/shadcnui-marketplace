@@ -1,6 +1,6 @@
-import { BadgeCheck, BookmarkIcon } from "lucide-react"
+import { BadgeCheck, BookmarkIcon } from "lucide-react";
 
-import { Badge } from "@/styles/base-nova/ui/badge"
+import { Badge } from "@/styles/base-default/ui/badge";
 
 export function BadgeWithIconLeft() {
   return (
@@ -14,5 +14,5 @@ export function BadgeWithIconLeft() {
         <BookmarkIcon data-icon="inline-end" />
       </Badge>
     </div>
-  )
+  );
 }

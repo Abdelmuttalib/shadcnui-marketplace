@@ -1,4 +1,4 @@
-import { Tabs, TabsList, TabsTrigger } from "@/styles/base-nova/ui/tabs"
+import { Tabs, TabsList, TabsTrigger } from "@/styles/base-default/ui/tabs";
 
 export function TabsLine() {
   return (
@@ -9,5 +9,5 @@ export function TabsLine() {
         <TabsTrigger value="reports">Reports</TabsTrigger>
       </TabsList>
     </Tabs>
-  )
+  );
 }

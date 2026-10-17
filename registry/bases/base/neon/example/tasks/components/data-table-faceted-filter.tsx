@@ -3,8 +3,8 @@ import { Column } from "@tanstack/react-table";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/neon/ui/badge";
-import { Button } from "@/registry/neon/ui/button";
+import { Badge } from "@/registry/bases/base/neon/ui/badge";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -13,13 +13,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/neon/ui/popover";
-import { Separator } from "@/registry/neon/ui/separator";
+} from "@/registry/bases/base/neon/ui/popover";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
@@ -45,7 +45,7 @@ export function DataTableFacetedFilter<TData, TValue>({
         <Button
           variant="outline"
           size="sm"
-          className="h-8 border-dashed border-neon-border"
+          className="border-neon-border h-8 border-dashed"
         >
           <PlusCircledIcon className="mr-2 h-4 w-4" />
           {title}
@@ -109,7 +109,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-neon-sm border border-neon-ring",
+                        "rounded-neon-sm border-neon-ring mr-2 flex h-4 w-4 items-center justify-center border",
                         isSelected
                           ? "bg-neon-ring [&_svg]:text-neon-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -118,7 +118,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-neon-muted-foreground" />
+                      <option.icon className="text-neon-muted-foreground mr-2 h-4 w-4" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

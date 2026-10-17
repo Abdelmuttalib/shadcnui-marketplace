@@ -4,7 +4,7 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/styles/base-nova/ui/input-group"
+} from "@/styles/base-default/ui/input-group";
 
 export default function InputGroupTextExample() {
   return (
@@ -36,11 +36,11 @@ export default function InputGroupTextExample() {
       <InputGroup>
         <InputGroupTextarea placeholder="Enter your message" />
         <InputGroupAddon align="block-end">
-          <InputGroupText className="text-xs text-muted-foreground">
+          <InputGroupText className="text-muted-foreground text-xs">
             120 characters left
           </InputGroupText>
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

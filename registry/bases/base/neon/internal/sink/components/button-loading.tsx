@@ -1,6 +1,6 @@
 import { Loader2 } from "lucide-react";
 
-import { Button } from "@/registry/neon/ui/button";
+import { Button } from "@/registry/bases/base/neon/ui/button";
 
 export function ButtonLoading() {
   return (

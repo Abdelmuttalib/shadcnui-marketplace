@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/neon/ui/command";
+} from "@/registry/bases/base/neon/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-neon-lg border border-neon-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-neon-lg border-neon-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

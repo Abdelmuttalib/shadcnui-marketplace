@@ -1,7 +1,7 @@
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-nova/ui/toggle-group"
+} from "@/styles/base-default/ui/toggle-group";
 
 export function ToggleGroupOutline() {
   return (
@@ -13,5 +13,5 @@ export function ToggleGroupOutline() {
         Missed
       </ToggleGroupItem>
     </ToggleGroup>
-  )
+  );
 }

@@ -6,13 +6,13 @@ import * as React from "react";
 import { DateRange } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
-import { Calendar } from "@/registry/wedges/ui/calendar";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Calendar } from "@/registry/bases/base/wedges/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/wedges/ui/popover";
+} from "@/registry/bases/base/wedges/ui/popover";
 
 export default function DatePickerWithRange({
   className,

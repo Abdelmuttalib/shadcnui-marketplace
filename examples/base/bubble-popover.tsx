@@ -1,11 +1,11 @@
-import { InfoIcon } from "lucide-react"
+import { InfoIcon } from "lucide-react";
 
 import {
   Bubble,
   BubbleContent,
   BubbleReactions,
-} from "@/styles/base-rhea/ui/bubble"
-import { Button } from "@/styles/base-rhea/ui/button"
+} from "@/styles/base-default/ui/bubble";
+import { Button } from "@/styles/base-default/ui/button";
 import {
   Popover,
   PopoverContent,
@@ -13,7 +13,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-rhea/ui/popover"
+} from "@/styles/base-default/ui/popover";
 
 export function BubblePopoverDemo() {
   return (
@@ -51,5 +51,5 @@ export function BubblePopoverDemo() {
         </BubbleReactions>
       </Bubble>
     </div>
-  )
+  );
 }

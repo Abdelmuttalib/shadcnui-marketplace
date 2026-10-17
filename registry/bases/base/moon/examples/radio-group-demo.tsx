@@ -1,5 +1,8 @@
-import { Label } from "@/registry/moon/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/moon/ui/radio-group";
+import { Label } from "@/registry/bases/base/moon/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/moon/ui/radio-group";
 
 export default function RadioGroupDemo() {
   return (

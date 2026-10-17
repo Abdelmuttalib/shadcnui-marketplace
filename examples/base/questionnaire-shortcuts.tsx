@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { toast } from "sonner"
+import * as React from "react";
+import { toast } from "sonner";
 
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/styles/base-nova/ui/native-select"
+} from "@/styles/base-default/ui/native-select";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -17,7 +17,7 @@ import {
   QuestionnaireItem,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-nova/ui/questionnaire"
+} from "@/styles/base-default/ui/questionnaire";
 
 const items = [
   {
@@ -25,21 +25,23 @@ const items = [
     name: "action",
     required: true,
   },
-] as const
+] as const;
 
-type ShortcutMode = React.ComponentProps<typeof Questionnaire>["shortcuts"]
+type ShortcutMode = React.ComponentProps<typeof Questionnaire>["shortcuts"];
 
 export function QuestionnaireShortcuts() {
-  const [shortcuts, setShortcuts] = React.useState<ShortcutMode>("letters")
+  const [shortcuts, setShortcuts] = React.useState<ShortcutMode>("letters");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const action = new FormData(event.currentTarget).get("action")
+    const action = new FormData(event.currentTarget).get("action");
 
     toast("Next action selected", {
-      description: `Action: ${action ?? "None"} · Shortcuts: ${shortcuts ?? "none"}`,
-    })
+      description: `Action: ${action ?? "None"} · Shortcuts: ${
+        shortcuts ?? "none"
+      }`,
+    });
   }
 
   return (
@@ -49,10 +51,10 @@ export function QuestionnaireShortcuts() {
         className="absolute end-0 top-0"
         value={shortcuts ?? "none"}
         onChange={(event) => {
-          const value = event.target.value
+          const value = event.target.value;
           setShortcuts(
             value === "letters" || value === "numbers" ? value : undefined
-          )
+          );
         }}
       >
         <NativeSelectOption value="none">No shortcuts</NativeSelectOption>
@@ -92,5 +94,5 @@ export function QuestionnaireShortcuts() {
         </QuestionnaireActions>
       </Questionnaire>
     </div>
-  )
+  );
 }

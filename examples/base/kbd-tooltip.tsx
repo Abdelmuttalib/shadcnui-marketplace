@@ -1,11 +1,11 @@
-import { Button } from "@/styles/base-nova/ui/button"
-import { ButtonGroup } from "@/styles/base-nova/ui/button-group"
-import { Kbd, KbdGroup } from "@/styles/base-nova/ui/kbd"
+import { Button } from "@/styles/base-default/ui/button";
+import { ButtonGroup } from "@/styles/base-default/ui/button-group";
+import { Kbd, KbdGroup } from "@/styles/base-default/ui/kbd";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-nova/ui/tooltip"
+} from "@/styles/base-default/ui/tooltip";
 
 export default function KbdTooltip() {
   return (
@@ -33,5 +33,5 @@ export default function KbdTooltip() {
         </Tooltip>
       </ButtonGroup>
     </div>
-  )
+  );
 }

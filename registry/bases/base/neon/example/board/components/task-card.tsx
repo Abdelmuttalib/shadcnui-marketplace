@@ -4,9 +4,13 @@ import React from "react";
 
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/neon/ui/avatar";
-import { Button } from "@/registry/neon/ui/button";
-import { Card, CardContent } from "@/registry/neon/ui/card";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/neon/ui/avatar";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/neon/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -15,9 +19,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/neon/ui/dialog";
-import { Input } from "@/registry/neon/ui/input";
-import { Label } from "@/registry/neon/ui/label";
+} from "@/registry/bases/base/neon/ui/dialog";
+import { Input } from "@/registry/bases/base/neon/ui/input";
+import { Label } from "@/registry/bases/base/neon/ui/label";
 import {
   Select,
   SelectContent,
@@ -25,9 +29,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/neon/ui/select";
-import { Separator } from "@/registry/neon/ui/separator";
-import { Textarea } from "@/registry/neon/ui/textarea";
+} from "@/registry/bases/base/neon/ui/select";
+import { Separator } from "@/registry/bases/base/neon/ui/separator";
+import { Textarea } from "@/registry/bases/base/neon/ui/textarea";
 
 import {
   Task,
@@ -60,19 +64,19 @@ function TaskLabelIcon({ label }: { label: Task["label"] }) {
   switch (label) {
     case "bug":
       return (
-        <span className="block size-1.5 rounded-neon-sm bg-red-400"></span>
+        <span className="size-1.5 rounded-neon-sm block bg-red-400"></span>
       );
     case "improvement":
       return (
-        <span className="block size-1.5 rounded-neon-sm bg-green-400"></span>
+        <span className="size-1.5 rounded-neon-sm block bg-green-400"></span>
       );
     case "feature":
       return (
-        <span className="block size-1.5 rounded-neon-sm bg-blue-400"></span>
+        <span className="size-1.5 rounded-neon-sm block bg-blue-400"></span>
       );
     case "design":
       return (
-        <span className="block size-1.5 rounded-neon-sm bg-purple-400"></span>
+        <span className="size-1.5 rounded-neon-sm block bg-purple-400"></span>
       );
   }
 }
@@ -85,10 +89,10 @@ export function TaskCard({ task }: { task: Task }) {
       <CardContent className="p-4">
         <div className="flex items-center justify-between">
           {/* Task ID */}
-          <span className="text-xs text-neon-muted-foreground">INI-{id}</span>
+          <span className="text-neon-muted-foreground text-xs">INI-{id}</span>
 
           {/* Progress Circle */}
-          <div className="relative size-5 text-neon-muted-foreground">
+          <div className="size-5 text-neon-muted-foreground relative">
             {assignee ? (
               <>
                 <Avatar className="size-5">
@@ -108,7 +112,7 @@ export function TaskCard({ task }: { task: Task }) {
 
                 <span
                   aria-hidden="true"
-                  className="absolute bottom-0 right-0 inline-block size-2 rounded-full border bg-green-500"
+                  className="size-2 absolute bottom-0 right-0 inline-block rounded-full border bg-green-500"
                 ></span>
               </>
             ) : (
@@ -118,7 +122,7 @@ export function TaskCard({ task }: { task: Task }) {
         </div>
 
         {/* Task Title */}
-        <h3 className="mt-2 text-sm text-neon-foreground">{title}</h3>
+        <h3 className="text-neon-foreground mt-2 text-sm">{title}</h3>
 
         {/* Assignee Avatar */}
         {/* <div className="mt-2 flex items-center space-x-2">
@@ -134,7 +138,7 @@ export function TaskCard({ task }: { task: Task }) {
         <div className="mt-2 flex items-center space-x-1.5">
           <div
             className={cn(
-              "flex w-fit items-center rounded-neon-sm border border-neon-border p-0.5 text-neon-muted-foreground",
+              "rounded-neon-sm border-neon-border text-neon-muted-foreground flex w-fit items-center border p-0.5",
               {
                 "text-orange-600": priority === "urgent",
                 "text-amber-500": priority === "high",
@@ -147,7 +151,7 @@ export function TaskCard({ task }: { task: Task }) {
           </div>
           <div
             className={cn(
-              "flex w-fit items-center gap-1.5 rounded-neon-sm border border-neon-border p-0.5 px-1.5 text-neon-muted-foreground",
+              "rounded-neon-sm border-neon-border text-neon-muted-foreground flex w-fit items-center gap-1.5 border p-0.5 px-1.5",
               {
                 "border-red-400/10 bg-red-400/5": label === "bug",
                 "border-green-400/10 bg-green-400/5": label === "improvement",
@@ -157,7 +161,7 @@ export function TaskCard({ task }: { task: Task }) {
             )}
           >
             <TaskLabelIcon label={label} />
-            <span className="text-xs font-medium text-neon-muted-foreground">
+            <span className="text-neon-muted-foreground text-xs font-medium">
               {label}
             </span>
           </div>
@@ -223,7 +227,7 @@ export function TaskCardDialog({ task }: { task: Task }) {
               <div className="flex flex-col gap-4">
                 <div className="flex gap-4">
                   <div className="flex w-full items-center justify-between gap-4">
-                    <h5 className="text-sm text-neon-foreground">Comments</h5>
+                    <h5 className="text-neon-foreground text-sm">Comments</h5>
                     <Button variant="ghost" size={"icon-sm"}>
                       <Icons.ellipsis />
                     </Button>
@@ -233,7 +237,7 @@ export function TaskCardDialog({ task }: { task: Task }) {
                   {[...comments, ...comments].map((comment) => (
                     <div
                       key={comment.id}
-                      className="grid gap-4 rounded-neon-md border border-b border-neon-border bg-neon-muted p-4"
+                      className="rounded-neon-md border-neon-border bg-neon-muted grid gap-4 border border-b p-4"
                     >
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
@@ -244,17 +248,17 @@ export function TaskCardDialog({ task }: { task: Task }) {
                             />
                             <AvatarFallback>CN</AvatarFallback>
                           </Avatar>
-                          <h6 className="text-xs font-medium text-neon-foreground">
+                          <h6 className="text-neon-foreground text-xs font-medium">
                             {comment.user}
                           </h6>
                         </div>
 
-                        <span className="text-xs font-medium text-neon-muted-foreground">
+                        <span className="text-neon-muted-foreground text-xs font-medium">
                           {formatDistanceToNow(comment.date)}
                         </span>
                       </div>
 
-                      <div className="px-0.5 text-sm text-neon-foreground">
+                      <div className="text-neon-foreground px-0.5 text-sm">
                         {comment.text}
                       </div>
                     </div>

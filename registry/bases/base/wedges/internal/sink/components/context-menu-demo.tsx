@@ -12,12 +12,12 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/wedges/ui/context-menu";
+} from "@/registry/bases/base/wedges/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-wedges-md border border-dashed border-wedges-border text-sm">
+      <ContextMenuTrigger className="rounded-wedges-md border-wedges-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">

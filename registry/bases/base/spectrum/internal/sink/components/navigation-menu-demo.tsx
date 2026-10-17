@@ -12,7 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/spectrum/ui/navigation-menu";
+} from "@/registry/bases/base/spectrum/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

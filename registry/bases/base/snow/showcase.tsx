@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/snow/ui/accordion";
+} from "@/registry/bases/base/snow/ui/accordion";
 
 export function AccordionDemo() {
   return (
@@ -55,7 +55,11 @@ export function SonnerDemo() {
 
 import { Terminal } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@/registry/snow/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/registry/bases/base/snow/ui/alert";
 
 export function AlertDemo() {
   return (
@@ -79,7 +83,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/snow/ui/alert-dialog";
+} from "@/registry/bases/base/snow/ui/alert-dialog";
 
 export function AlertDialogDemo() {
   return (
@@ -106,7 +110,7 @@ export function AlertDialogDemo() {
 
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/snow/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/snow/ui/aspect-ratio";
 
 export function AspectRatioDemo() {
   return (
@@ -121,7 +125,11 @@ export function AspectRatioDemo() {
   );
 }
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/snow/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/snow/ui/avatar";
 
 export function AvatarDemo() {
   return (
@@ -137,7 +145,7 @@ export function AvatarDemo() {
   );
 }
 
-import { Badge } from "@/registry/snow/ui/badge";
+import { Badge } from "@/registry/bases/base/snow/ui/badge";
 
 export function BadgeDemo() {
   return <Badge>Badge</Badge>;
@@ -151,13 +159,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/snow/ui/breadcrumb";
+} from "@/registry/bases/base/snow/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (
@@ -199,7 +207,7 @@ export function ButtonDemo() {
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/snow/ui/calendar";
+import { Calendar } from "@/registry/bases/base/snow/ui/calendar";
 
 export function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -221,16 +229,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/snow/ui/card";
-import { Input } from "@/registry/snow/ui/input";
-import { Label } from "@/registry/snow/ui/label";
+} from "@/registry/bases/base/snow/ui/card";
+import { Input } from "@/registry/bases/base/snow/ui/input";
+import { Label } from "@/registry/bases/base/snow/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/snow/ui/select";
+} from "@/registry/bases/base/snow/ui/select";
 
 export function CardWithForm() {
   return (
@@ -277,7 +285,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/snow/ui/carousel";
+} from "@/registry/bases/base/snow/ui/carousel";
 
 export function CarouselDemo() {
   return (
@@ -301,7 +309,7 @@ export function CarouselDemo() {
   );
 }
 
-import { Checkbox } from "@/registry/snow/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/snow/ui/checkbox";
 
 export function CheckboxDemo() {
   return (
@@ -323,7 +331,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/snow/ui/collapsible";
+} from "@/registry/bases/base/snow/ui/collapsible";
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -369,12 +377,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/snow/ui/command";
+} from "@/registry/bases/base/snow/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/snow/ui/popover";
+} from "@/registry/bases/base/snow/ui/popover";
 import { cn } from "@/utils/cn";
 
 const frameworks = [
@@ -460,7 +468,10 @@ import {
   User,
 } from "lucide-react";
 
-import { CommandSeparator, CommandShortcut } from "@/registry/snow/ui/command";
+import {
+  CommandSeparator,
+  CommandShortcut,
+} from "@/registry/bases/base/snow/ui/command";
 
 export function CommandDemo() {
   return (
@@ -519,7 +530,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/snow/ui/context-menu";
+} from "@/registry/bases/base/snow/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
@@ -612,7 +623,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/snow/ui/dialog";
+} from "@/registry/bases/base/snow/ui/dialog";
 
 export function DialogDemo() {
   return (
@@ -661,7 +672,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/snow/ui/drawer";
+} from "@/registry/bases/base/snow/ui/drawer";
 
 const data = [
   {
@@ -791,7 +802,7 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from "@/registry/snow/ui/dropdown-menu";
+} from "@/registry/bases/base/snow/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (
@@ -857,7 +868,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/snow/ui/hover-card";
+} from "@/registry/bases/base/snow/ui/hover-card";
 
 export function HoverCardDemo() {
   return (
@@ -898,7 +909,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/snow/ui/input-otp";
+} from "@/registry/bases/base/snow/ui/input-otp";
 
 export function InputOTPDemo() {
   return (
@@ -943,7 +954,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/snow/ui/menubar";
+} from "@/registry/bases/base/snow/ui/menubar";
 
 export function MenubarDemo() {
   return (
@@ -1048,7 +1059,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/snow/ui/navigation-menu";
+} from "@/registry/bases/base/snow/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -1187,7 +1198,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/snow/ui/pagination";
+} from "@/registry/bases/base/snow/ui/pagination";
 
 export function PaginationDemo() {
   return (
@@ -1272,7 +1283,7 @@ export function PopoverDemo() {
   );
 }
 
-import { Progress } from "@/registry/snow/ui/progress";
+import { Progress } from "@/registry/bases/base/snow/ui/progress";
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(13);
@@ -1285,7 +1296,10 @@ export function ProgressDemo() {
   return <Progress value={progress} className="w-[60%]" />;
 }
 
-import { RadioGroup, RadioGroupItem } from "@/registry/snow/ui/radio-group";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/snow/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (
@@ -1310,7 +1324,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/snow/ui/resizable";
+} from "@/registry/bases/base/snow/ui/resizable";
 
 export function ResizableDemo() {
   return (
@@ -1343,8 +1357,8 @@ export function ResizableDemo() {
   );
 }
 
-import { ScrollArea } from "@/registry/snow/ui/scroll-area";
-import { Separator } from "@/registry/snow/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/snow/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/snow/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -1366,7 +1380,7 @@ export function ScrollAreaDemo() {
   );
 }
 
-import { SelectGroup, SelectLabel } from "@/registry/snow/ui/select";
+import { SelectGroup, SelectLabel } from "@/registry/bases/base/snow/ui/select";
 
 export function SelectDemo() {
   return (
@@ -1420,7 +1434,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/snow/ui/sheet";
+} from "@/registry/bases/base/snow/ui/sheet";
 
 export function SheetDemo() {
   return (
@@ -1459,7 +1473,7 @@ export function SheetDemo() {
   );
 }
 
-import { Skeleton } from "@/registry/snow/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/snow/ui/skeleton";
 
 export function SkeletonDemo() {
   return (
@@ -1473,7 +1487,7 @@ export function SkeletonDemo() {
   );
 }
 
-import { Slider } from "@/registry/snow/ui/slider";
+import { Slider } from "@/registry/bases/base/snow/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 
@@ -1489,7 +1503,7 @@ export function SliderDemo({ className, ...props }: SliderProps) {
   );
 }
 
-import { Switch } from "@/registry/snow/ui/switch";
+import { Switch } from "@/registry/bases/base/snow/ui/switch";
 
 export function SwitchDemo() {
   return (
@@ -1509,7 +1523,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/snow/ui/table";
+} from "@/registry/bases/base/snow/ui/table";
 
 const invoices = [
   {
@@ -1732,13 +1746,13 @@ export function DataTableDemo() {
   );
 }
 
-import { Button } from "@/registry/snow/ui/button";
+import { Button } from "@/registry/bases/base/snow/ui/button";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/snow/ui/tabs";
+} from "@/registry/bases/base/snow/ui/tabs";
 
 export function TabsDemo() {
   return (
@@ -1820,7 +1834,7 @@ export function TabsDemo() {
   );
 }
 
-import { Textarea } from "@/registry/snow/ui/textarea";
+import { Textarea } from "@/registry/bases/base/snow/ui/textarea";
 
 export function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;
@@ -1828,7 +1842,7 @@ export function TextareaDemo() {
 
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/snow/ui/toggle";
+import { Toggle } from "@/registry/bases/base/snow/ui/toggle";
 
 export function ToggleDemo() {
   return (
@@ -1840,7 +1854,10 @@ export function ToggleDemo() {
 
 import { Italic, Underline } from "lucide-react";
 
-import { ToggleGroup, ToggleGroupItem } from "@/registry/snow/ui/toggle-group";
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/registry/bases/base/snow/ui/toggle-group";
 
 export function ToggleGroupDemo() {
   return (
@@ -1863,7 +1880,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/snow/ui/tooltip";
+} from "@/registry/bases/base/snow/ui/tooltip";
 
 export function TooltipDemo() {
   return (
@@ -1888,7 +1905,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/snow/ui/chart";
+} from "@/registry/bases/base/snow/ui/chart";
 const chartData4 = [
   { month: "January", desktop: 186 },
   { month: "February", desktop: 305 },

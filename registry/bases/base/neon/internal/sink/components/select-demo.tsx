@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/neon/ui/select";
+} from "@/registry/bases/base/neon/ui/select";
 
 export function SelectDemo() {
   return (

@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/moon/ui/hover-card";
-import { Label } from "@/registry/moon/ui/label";
-import { Slider } from "@/registry/moon/ui/slider";
+} from "@/registry/bases/base/moon/ui/hover-card";
+import { Label } from "@/registry/bases/base/moon/ui/label";
+import { Slider } from "@/registry/bases/base/moon/ui/slider";
 
 interface TemperatureSelectorProps {
   defaultValue: SliderProps["defaultValue"];
@@ -27,7 +27,7 @@ export function TemperatureSelector({
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <Label htmlFor="temperature">Temperature</Label>
-              <span className="w-12 rounded-moon-md border border-transparent px-2 py-0.5 text-right text-sm text-moon-muted-foreground hover:border-border">
+              <span className="rounded-moon-md text-moon-muted-foreground hover:border-border w-12 border border-transparent px-2 py-0.5 text-right text-sm">
                 {value}
               </span>
             </div>

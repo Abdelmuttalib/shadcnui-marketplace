@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Pagination,
   PaginationContent,
@@ -14,7 +14,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/styles/base-nova/ui-rtl/pagination"
+} from "@/styles/base-default/ui/pagination";
 
 const translations: Translations = {
   en: {
@@ -38,26 +38,26 @@ const translations: Translations = {
       next: "הבא",
     },
   },
-}
+};
 
 function toArabicNumerals(num: number): string {
-  const arabicNumerals = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"]
+  const arabicNumerals = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
   return num
     .toString()
     .split("")
     .map((digit) => arabicNumerals[parseInt(digit, 10)])
-    .join("")
+    .join("");
 }
 
 export function PaginationRtl() {
-  const { dir, t, language } = useTranslation(translations, "ar")
+  const { dir, t, language } = useTranslation(translations, "ar");
 
   const formatNumber = (num: number): string => {
     if (language === "ar") {
-      return toArabicNumerals(num)
+      return toArabicNumerals(num);
     }
-    return num.toString()
-  }
+    return num.toString();
+  };
 
   return (
     <Pagination dir={dir}>
@@ -84,5 +84,5 @@ export function PaginationRtl() {
         </PaginationItem>
       </PaginationContent>
     </Pagination>
-  )
+  );
 }

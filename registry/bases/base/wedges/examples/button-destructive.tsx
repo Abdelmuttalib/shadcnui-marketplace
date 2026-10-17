@@ -1,4 +1,4 @@
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 
 export default function ButtonDestructive() {
   return <Button variant="destructive">Destructive</Button>;

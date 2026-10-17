@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/moon/ui/separator";
+import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 import { SettingsLayout } from "./layout";
 import { ProfileForm } from "./profile-form";
@@ -9,7 +9,7 @@ export default function SettingsProfilePage() {
       <div className="space-y-6">
         <div>
           <h3 className="text-lg font-medium">Profile</h3>
-          <p className="text-sm text-moon-muted-foreground">
+          <p className="text-moon-muted-foreground text-sm">
             This is how others will see you on the site.
           </p>
         </div>

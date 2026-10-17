@@ -15,8 +15,8 @@ import {
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/neon/ui/button";
-import { Checkbox } from "@/registry/neon/ui/checkbox";
+import { Button } from "@/registry/bases/base/neon/ui/button";
+import { Checkbox } from "@/registry/bases/base/neon/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -25,8 +25,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/neon/ui/dropdown-menu";
-import { Input } from "@/registry/neon/ui/input";
+} from "@/registry/bases/base/neon/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/neon/ui/input";
 import {
   Table,
   TableBody,
@@ -34,7 +34,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/neon/ui/table";
+} from "@/registry/bases/base/neon/ui/table";
 
 const data: Payment[] = [
   {
@@ -284,7 +284,7 @@ export default function DataTableDemo() {
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
+        <div className="text-muted-foreground flex-1 text-sm">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>

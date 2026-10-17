@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-nova/ui-rtl/field"
-import { Textarea } from "@/styles/base-nova/ui-rtl/textarea"
+} from "@/styles/base-default/ui/field";
+import { Textarea } from "@/styles/base-default/ui/textarea";
 
 const translations: Translations = {
   en: {
@@ -38,10 +38,10 @@ const translations: Translations = {
       description: "שתף את מחשבותיך על השירות שלנו.",
     },
   },
-}
+};
 
 export default function TextareaRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <Field className="w-full max-w-xs" dir={dir}>
@@ -51,5 +51,5 @@ export default function TextareaRtl() {
       <Textarea id="feedback" placeholder={t.placeholder} dir={dir} rows={4} />
       <FieldDescription dir={dir}>{t.description}</FieldDescription>
     </Field>
-  )
+  );
 }

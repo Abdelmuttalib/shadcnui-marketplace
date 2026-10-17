@@ -1,5 +1,5 @@
-import { Label } from "@/registry/neon/ui/label";
-import { Switch } from "@/registry/neon/ui/switch";
+import { Label } from "@/registry/bases/base/neon/ui/label";
+import { Switch } from "@/registry/bases/base/neon/ui/switch";
 
 export function SwitchDemo() {
   return (

@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns";
 
-import { Calendar } from "@/registry/wedges/ui/calendar";
-import { Card, CardContent } from "@/registry/wedges/ui/card";
+import { Calendar } from "@/registry/bases/base/wedges/ui/calendar";
+import { Card, CardContent } from "@/registry/bases/base/wedges/ui/card";
 
 const start = new Date(2023, 5, 5);
 

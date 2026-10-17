@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
+  useTranslation,
+} from "@/components/language-selector";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/styles/base-nova/ui-rtl/resizable"
+} from "@/styles/base-default/ui/resizable";
 
 const translations: Translations = {
   en: {
@@ -37,10 +37,10 @@ const translations: Translations = {
       three: "שלושה",
     },
   },
-}
+};
 
 export function ResizableRtl() {
-  const { dir, t } = useTranslation(translations, "ar")
+  const { dir, t } = useTranslation(translations, "ar");
 
   return (
     <ResizablePanelGroup
@@ -70,5 +70,5 @@ export function ResizableRtl() {
         </ResizablePanelGroup>
       </ResizablePanel>
     </ResizablePanelGroup>
-  )
+  );
 }

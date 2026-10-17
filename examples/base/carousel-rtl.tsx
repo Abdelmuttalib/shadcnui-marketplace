@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
-  useTranslation,
   type Translations,
-} from "@/components/language-selector"
-import { Card, CardContent } from "@/styles/base-nova/ui-rtl/card"
+  useTranslation,
+} from "@/components/language-selector";
+import { Card, CardContent } from "@/styles/base-default/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/styles/base-nova/ui-rtl/carousel"
+} from "@/styles/base-default/ui/carousel";
 
 const translations: Translations = {
   en: {
@@ -28,26 +28,26 @@ const translations: Translations = {
     dir: "rtl",
     values: {},
   },
-}
+};
 
 function toArabicNumerals(num: number): string {
-  const arabicNumerals = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"]
+  const arabicNumerals = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
   return num
     .toString()
     .split("")
     .map((digit) => arabicNumerals[parseInt(digit, 10)])
-    .join("")
+    .join("");
 }
 
 export function CarouselRtl() {
-  const { dir, language } = useTranslation(translations, "ar")
+  const { dir, language } = useTranslation(translations, "ar");
 
   const formatNumber = (num: number): string => {
     if (language === "ar") {
-      return toArabicNumerals(num)
+      return toArabicNumerals(num);
     }
-    return num.toString()
-  }
+    return num.toString();
+  };
 
   return (
     <Carousel
@@ -75,5 +75,5 @@ export function CarouselRtl() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }
