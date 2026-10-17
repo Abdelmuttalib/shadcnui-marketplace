@@ -7,7 +7,7 @@ import { StylePageExamplePreview } from "@/components/views/styles/style-page-ex
 import { Style, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function StylePreviewCard({
   title,
@@ -78,7 +78,7 @@ export function StylePreviewCard({
       </div>
       <div className="relative -ml-1">
         <div
-          className="absolute left-0 top-0 z-10 flex size-[29rem] items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-70 group-hover:blur-2xl"
+          className="size-[29rem] absolute left-0 top-0 z-10 flex items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-70 group-hover:blur-2xl"
           style={{
             backgroundColor: `oklch(var(${stylePrimaryColorCssVariableName}))`,
           }}

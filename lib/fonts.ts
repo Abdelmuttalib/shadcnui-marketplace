@@ -1,12 +1,41 @@
+import { cn } from "cn";
 import {
   IBM_Plex_Mono,
   IBM_Plex_Sans,
   Inter,
+  Noto_Sans_Arabic as FontNotoSansArabic,
+  Noto_Sans_Hebrew as FontNotoSansHebrew,
   Outfit,
   Poppins,
   Roboto,
   Ubuntu,
 } from "next/font/google";
+
+const fontSans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const fontHeading = Inter({
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
+
+const fontMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400"],
+});
+
+const fontNotoSansArabic = FontNotoSansArabic({
+  subsets: ["arabic"],
+  variable: "--font-ar",
+});
+
+const fontNotoSansHebrew = FontNotoSansHebrew({
+  subsets: ["hebrew"],
+  variable: "--font-he",
+});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -51,4 +80,18 @@ const outfit = Outfit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const fontVariables = `${inter.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable} ${roboto.variable} ${ubuntu.variable} ${poppins.variable} ${outfit.variable}`;
+export const fontVariables = cn(
+  fontSans.variable,
+  fontHeading.variable,
+  fontMono.variable,
+  fontNotoSansArabic.variable,
+  fontNotoSansHebrew.variable,
+
+  inter.variable,
+  ibmPlexMono.variable,
+  ibmPlexSans.variable,
+  roboto.variable,
+  ubuntu.variable,
+  poppins.variable,
+  outfit.variable
+);

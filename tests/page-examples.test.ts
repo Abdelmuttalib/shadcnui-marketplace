@@ -2,9 +2,13 @@ import { describe, expect, it } from "vitest";
 
 import type { Style } from "@/hooks/use-style-store";
 import { PAGE_EXAMPLE_TYPES } from "@/hooks/use-style-store";
-import { CarbonMailPage } from "@/registry/carbon/page-examples";
-import { CatalystPlaygroundPage } from "@/registry/catalyst/page-examples";
-import { DefaultCardsPage, DefaultMailPage } from "@/registry/default/page-examples";
+import { CarbonMailPage } from "@/registry/bases/base/carbon/page-examples";
+import { CatalystPlaygroundPage } from "@/registry/bases/base/catalyst/page-examples";
+import {
+  DefaultCardsPage,
+  DefaultMailPage,
+} from "@/registry/bases/base/default/page-examples";
+import { DefaultV4CardsPage } from "@/registry/bases/base/default-v4/page-examples";
 import { LibelleBoardPage } from "@/registry/libelle/page-examples";
 import { LucidMusicPage } from "@/registry/lucid/page-examples";
 import {
@@ -14,13 +18,14 @@ import {
 import { MoonChartsPage } from "@/registry/moon/page-examples";
 import { NeonBoardPage, NeonTaskPage } from "@/registry/neon/page-examples";
 import { SnowSettingsProfilePage } from "@/registry/snow/page-examples";
-import { renderStylePageExample } from "@/registry/styles";
+import { renderStylePageExample } from "@/registry/styles-components";
 import { WedgesDashboardPage } from "@/registry/wedges/page-examples";
 
 describe("renderStylePageExample", () => {
   it.each([
     ["carbon", "mail", CarbonMailPage],
     ["default", "cards", DefaultCardsPage],
+    ["default-v4", "cards", DefaultV4CardsPage],
     ["wedges", "dashboard", WedgesDashboardPage],
     ["neon", "tasks", NeonTaskPage],
     ["material", "authentication", MaterialAuthenticationPage],
@@ -80,6 +85,7 @@ describe("renderStylePageExample", () => {
   it("never returns null for any supported style and page type", () => {
     const styles: Array<Style> = [
       "default",
+      "default-v4",
       "carbon",
       "catalyst",
       "material",

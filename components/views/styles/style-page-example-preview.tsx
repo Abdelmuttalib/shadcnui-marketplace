@@ -10,7 +10,7 @@ import {
   getStyleFontClassname,
   getStyleVariablesPrefix,
   renderStylePageExample,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 import { cn } from "@/utils/cn";
 
 export function StylePageExamplePreview({

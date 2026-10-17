@@ -76,7 +76,7 @@ export function Navbar() {
   return (
     <>
       {/* {showBanner ? <Banner setShowBanner={setShowBanner} /> : null} */}
-      <header className="bg-background/[0.7] sticky top-0 z-30 flex h-14 items-center border-b backdrop-blur-sm">
+      <header className="bg-background/80 sticky top-0 z-30 flex h-14 items-center border-b backdrop-blur-xl">
         <PageContainer>
           <nav className="flex w-full items-center justify-between gap-2">
             <div className="flex items-center gap-2">

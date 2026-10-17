@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/carbon/ui/dropdown-menu";
+} from "@/registry/bases/base/carbon/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/carbon/ui/sidebar";
+} from "@/registry/bases/base/carbon/ui/sidebar";
 
 export function NavProjects({
   projects,

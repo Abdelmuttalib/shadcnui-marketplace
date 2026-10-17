@@ -11,7 +11,7 @@ import { StylePageExamplePreview } from "@/components/views/styles/style-page-ex
 import { Style, STYLES } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function SuggestedStyles({ excludedStyle }: { excludedStyle: Style }) {
   const suggestedStyles = STYLES.filter(
@@ -78,7 +78,7 @@ export function SuggestedStyles({ excludedStyle }: { excludedStyle: Style }) {
                   <div className="relative -ml-2">
                     <div
                       // bg-blue-500/30
-                      className="absolute left-0 top-0 z-10 flex size-[29rem] items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:size-96 group-hover:opacity-50 group-hover:blur-lg"
+                      className="size-[29rem] group-hover:size-96 absolute left-0 top-0 z-10 flex items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-50 group-hover:blur-lg"
                       style={{
                         backgroundColor: `oklch(var(${s}))`,
                       }}

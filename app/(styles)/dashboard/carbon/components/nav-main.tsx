@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/carbon/ui/collapsible";
+} from "@/registry/bases/base/carbon/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/carbon/ui/sidebar";
+} from "@/registry/bases/base/carbon/ui/sidebar";
 
 export function NavMain({
   items,

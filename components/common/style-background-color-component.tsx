@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { Style, useStyleStore } from "@/hooks/use-style-store";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 import { cn } from "@/utils/cn";
 
 export function StyleGradientBackgroundColorComponent({

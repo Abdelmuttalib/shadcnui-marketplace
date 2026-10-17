@@ -11,6 +11,7 @@ import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 // tailwind/globals namespaces. Deliberate additions belong here first.
 const EXPECTED_STYLES = [
   "default",
+  "default-v4",
   "carbon",
   "catalyst",
   "material",
@@ -42,7 +43,7 @@ afterEach(() => {
 });
 
 describe("useStyleStore", () => {
-  it("exposes the 12 supported styles", () => {
+  it("exposes the 13 supported styles", () => {
     expect([...STYLES].sort()).toEqual([...EXPECTED_STYLES].sort());
   });
 

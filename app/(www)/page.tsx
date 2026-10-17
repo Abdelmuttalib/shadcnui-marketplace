@@ -2,7 +2,6 @@ import { PageContainer } from "@/components/common/page-container";
 import { PageExampleSelect } from "@/components/common/page-example-select";
 import { PageSubTitle, PageTitle } from "@/components/common/page-header";
 import { ShowcaseStylePageExamplePreview } from "@/components/common/showcase-style-page-example-preview";
-import { StringCode } from "@/components/common/string-code";
 import { StyleGradientBackgroundColorComponent } from "@/components/common/style-background-color-component";
 import { StyleHeroUI } from "@/components/common/style-hero-ui";
 import { StyleSelect } from "@/components/common/style-select";
@@ -25,6 +24,37 @@ export default function Home() {
             className={cn(
               "relative min-h-screen w-full overflow-x-hidden pb-56"
             )}
+            style={{
+              ["--moon-background"]: "var(--cb-background)",
+              ["--moon-foreground"]: "var(--cb-foreground)",
+              ["--moon-primary"]: "var(--cb-primary)",
+              ["--moon-primary-foreground"]: "var(--cb-primary-foreground)",
+              ["--moon-secondary"]: "var(--cb-secondary)",
+              ["--moon-secondary-foreground"]: "var(--cb-secondary-foreground)",
+              ["--moon-accent"]: "var(--cb-accent)",
+              ["--moon-accent-foreground"]: "var(--cb-accent-foreground)",
+              ["--moon-destructive"]: "var(--cb-destructive)",
+              ["--moon-destructive-foreground"]:
+                "var(--cb-destructive-foreground)",
+              ["--moon-border"]: "var(--cb-border)",
+              ["--moon-input"]: "var(--cb-input)",
+              ["--moon-ring"]: "var(--cb-ring)",
+              ["--moon-chart-1"]: "var(--cb-chart-1)",
+              ["--moon-chart-2"]: "var(--cb-chart-2)",
+              ["--moon-chart-3"]: "var(--cb-chart-3)",
+              ["--moon-chart-4"]: "var(--cb-chart-4)",
+              ["--moon-chart-5"]: "var(--cb-chart-5)",
+              ["--moon-sidebar-background"]: "var(--cb-sidebar-background)",
+              ["--moon-sidebar-foreground"]: "var(--cb-sidebar-foreground)",
+              ["--moon-sidebar-primary"]: "var(--cb-sidebar-primary)",
+              ["--moon-sidebar-primary-foreground"]:
+                "var(--cb-sidebar-primary-foreground)",
+              ["--moon-sidebar-accent"]: "var(--cb-sidebar-accent)",
+              ["--moon-sidebar-accent-foreground"]:
+                "var(--cb-sidebar-accent-foreground)",
+              ["--moon-sidebar-border"]: "var(--cb-sidebar-border)",
+              ["--moon-sidebar-ring"]: "var(--cb-sidebar-ring)",
+            }}
           >
             <StyleGradientBackgroundColorComponent className="absolute inset-0 w-full" />
 
@@ -60,35 +90,6 @@ export default function Home() {
               </div>
             </PageContainer>
           </div>
-
-          {/* <LandingPageSection sectionId="features">
-            <FeaturesSection />
-          </LandingPageSection> */}
-
-          {/* <LandingPageSection
-            sectionId="shadcn-ui-styles"
-            className="flex flex-col gap-8"
-          >
-            <PageContainer>
-              <div className="space-y-4">
-                <PageTitle>
-                  <span className="lowercase">A Marketplace for shadcn ui</span>
-                  <br />
-                  <span className="flex w-fit gap-4 divide-x-2 rounded-lg border bg-accent/10">
-                    <span className="decoration p-4 capitalize italic text-foreground underline decoration-blue-500 underline-offset-4">
-                      Styles
-                    </span>{" "}
-                    <span className="decoration p-4 capitalize italic text-foreground underline decoration-orange-500 underline-offset-4">
-                      Palletes
-                    </span>{" "}
-                    <span className="decoration p-4 capitalize italic text-foreground underline decoration-emerald-500 underline-offset-4">
-                      Blocks
-                    </span>
-                  </span>
-                </PageTitle>
-              </div>
-            </PageContainer>
-          </LandingPageSection> */}
 
           <LandingPageSection
             sectionId="shadcn-ui-styles"

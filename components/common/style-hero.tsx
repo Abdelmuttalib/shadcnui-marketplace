@@ -2,7 +2,10 @@
 
 import { useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
-import { getStyleFontClassname, renderStyleHero } from "@/registry/styles";
+import {
+  getStyleFontClassname,
+  renderStyleHero,
+} from "@/registry/styles-components";
 
 export function StyleHero() {
   const { style } = useStyleStore();

@@ -1,0 +1,284 @@
+"use client";
+
+import { Menu as MenuPrimitive } from "@base-ui/react/menu";
+import { Menubar as MenubarPrimitive } from "@base-ui/react/menubar";
+import { cn } from "cn";
+import { CheckIcon } from "lucide-react";
+import * as React from "react";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+function Menubar({ className, ...props }: MenubarPrimitive.Props) {
+  return (
+    <MenubarPrimitive
+      data-slot="menubar"
+      className={cn(
+        "rounded-cb-md shadow-xs flex h-9 items-center gap-1 border p-1",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+function MenubarMenu({ ...props }: React.ComponentProps<typeof DropdownMenu>) {
+  return <DropdownMenu data-slot="menubar-menu" {...props} />;
+}
+
+function MenubarGroup({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuGroup>) {
+  return <DropdownMenuGroup data-slot="menubar-group" {...props} />;
+}
+
+function MenubarPortal({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPortal>) {
+  return <DropdownMenuPortal data-slot="menubar-portal" {...props} />;
+}
+
+function MenubarTrigger({
+  className,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuTrigger>) {
+  return (
+    <DropdownMenuTrigger
+      data-slot="menubar-trigger"
+      className={cn(
+        "rounded-cb-sm outline-hidden hover:bg-cb-muted aria-expanded:bg-cb-muted flex select-none items-center px-2 py-1 text-sm font-medium",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+function MenubarContent({
+  className,
+  align = "start",
+  alignOffset = -4,
+  sideOffset = 8,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuContent>) {
+  return (
+    <DropdownMenuContent
+      data-slot="menubar-content"
+      align={align}
+      alignOffset={alignOffset}
+      sideOffset={sideOffset}
+      className={cn(
+        "rounded-cb-md bg-cb-popover bg-cb-popover-foreground bg-cb-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 min-w-36 p-1 shadow-md ring-1 duration-100",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+function MenubarItem({
+  className,
+  inset,
+  variant = "default",
+  ...props
+}: React.ComponentProps<typeof DropdownMenuItem>) {
+  return (
+    <DropdownMenuItem
+      data-slot="menubar-item"
+      data-inset={inset}
+      data-variant={variant}
+      className={cn(
+        "group/menubar-item rounded-cb-sm focus:bg-cb-accent focus:bg-cb-bg-cb-foreground not-data-[variant=destructive]:focus:**:bg-cb-bg-cb-foreground data-inset:pl-8 data-[variant=destructive]:bg-cb-destructive data-[variant=destructive]:focus:bg-cb-destructive/10 data-[variant=destructive]:focus:bg-cb-destructive dark:data-[variant=destructive]:focus:bg-cb-destructive/20 data-disabled:opacity-50 data-[variant=destructive]:*:[svg]:bg-cb-destructive! gap-2 px-2 py-1.5 text-sm [&_svg:not([class*='size-'])]:size-4",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+function MenubarCheckboxItem({
+  className,
+  children,
+  checked,
+  inset,
+  ...props
+}: MenuPrimitive.CheckboxItem.Props & {
+  inset?: boolean;
+}) {
+  return (
+    <MenuPrimitive.CheckboxItem
+      data-slot="menubar-checkbox-item"
+      data-inset={inset}
+      className={cn(
+        "rounded-cb-md outline-hidden focus:bg-cb-accent focus:bg-cb-bg-cb-foreground focus:**:bg-cb-bg-cb-foreground data-inset:pl-8 data-disabled:pointer-events-none data-disabled:opacity-50 relative flex cursor-default select-none items-center gap-2 py-1.5 pl-8 pr-2 text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        className
+      )}
+      checked={checked}
+      {...props}
+    >
+      <span className="pointer-events-none absolute left-2 flex size-4 items-center justify-center [&_svg:not([class*='size-'])]:size-4">
+        <MenuPrimitive.CheckboxItemIndicator>
+          <CheckIcon />
+        </MenuPrimitive.CheckboxItemIndicator>
+      </span>
+      {children}
+    </MenuPrimitive.CheckboxItem>
+  );
+}
+
+function MenubarRadioGroup({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuRadioGroup>) {
+  return <DropdownMenuRadioGroup data-slot="menubar-radio-group" {...props} />;
+}
+
+function MenubarRadioItem({
+  className,
+  children,
+  inset,
+  ...props
+}: MenuPrimitive.RadioItem.Props & {
+  inset?: boolean;
+}) {
+  return (
+    <MenuPrimitive.RadioItem
+      data-slot="menubar-radio-item"
+      data-inset={inset}
+      className={cn(
+        "rounded-cb-md outline-hidden focus:bg-cb-accent focus:bg-cb-bg-cb-foreground focus:**:bg-cb-bg-cb-foreground data-inset:pl-8 data-disabled:pointer-events-none data-disabled:opacity-50 relative flex cursor-default select-none items-center gap-2 py-1.5 pl-8 pr-2 text-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        className
+      )}
+      {...props}
+    >
+      <span className="pointer-events-none absolute left-2 flex size-4 items-center justify-center [&_svg:not([class*='size-'])]:size-4">
+        <MenuPrimitive.RadioItemIndicator>
+          <CheckIcon />
+        </MenuPrimitive.RadioItemIndicator>
+      </span>
+      {children}
+    </MenuPrimitive.RadioItem>
+  );
+}
+
+function MenubarLabel({
+  className,
+  inset,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuLabel> & {
+  inset?: boolean;
+}) {
+  return (
+    <DropdownMenuLabel
+      data-slot="menubar-label"
+      data-inset={inset}
+      className={cn(
+        "data-inset:pl-8 px-2 py-1.5 text-sm font-medium",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+function MenubarSeparator({
+  className,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuSeparator>) {
+  return (
+    <DropdownMenuSeparator
+      data-slot="menubar-separator"
+      className={cn("bg-cb-border -mx-1 my-1 h-px", className)}
+      {...props}
+    />
+  );
+}
+
+function MenubarShortcut({
+  className,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuShortcut>) {
+  return (
+    <DropdownMenuShortcut
+      data-slot="menubar-shortcut"
+      className={cn(
+        "text-cb-muted-foreground group-focus/menubar-item:text-cb-text-cb-foreground ml-auto text-xs tracking-widest",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+function MenubarSub({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuSub>) {
+  return <DropdownMenuSub data-slot="menubar-sub" {...props} />;
+}
+
+function MenubarSubTrigger({
+  className,
+  inset,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuSubTrigger> & {
+  inset?: boolean;
+}) {
+  return (
+    <DropdownMenuSubTrigger
+      data-slot="menubar-sub-trigger"
+      data-inset={inset}
+      className={cn(
+        "rounded-cb-sm focus:bg-cb-accent focus:bg-cb-bg-cb-foreground data-inset:pl-8 data-open:bg-cb-accent data-open:bg-cb-bg-cb-foreground gap-2 px-2 py-1.5 text-sm [&_svg:not([class*='size-'])]:size-4",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+function MenubarSubContent({
+  className,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuSubContent>) {
+  return (
+    <DropdownMenuSubContent
+      data-slot="menubar-sub-content"
+      className={cn(
+        "rounded-cb-md bg-cb-popover bg-cb-popover-foreground bg-cb-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 min-w-32 p-1 shadow-lg ring-1 duration-100",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+export {
+  Menubar,
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarGroup,
+  MenubarItem,
+  MenubarLabel,
+  MenubarMenu,
+  MenubarPortal,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+};

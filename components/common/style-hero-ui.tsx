@@ -1,7 +1,7 @@
 "use client";
 
 import { useStyleStore } from "@/hooks/use-style-store";
-import { renderStyleHero } from "@/registry/styles";
+import { renderStyleHero } from "@/registry/styles-components";
 
 export function StyleHeroUI() {
   const { style } = useStyleStore();

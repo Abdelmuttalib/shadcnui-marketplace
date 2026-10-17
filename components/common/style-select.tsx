@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/select";
 import { stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function StyleSelect({
   defaultStyle,
@@ -44,10 +44,10 @@ export function StyleSelect({
       <SelectContent>
         <SelectGroup>
           {stylesDataList.map((style) => {
-            const hoverBgColor = `focus:bg-${getStyleVariablesPrefix(
+            const hoverBgColor = `hover:bg-${getStyleVariablesPrefix(
               style.name
             )}-primary`;
-            const hoverTextColor = `focus:text-${getStyleVariablesPrefix(
+            const hoverTextColor = `hover:text-${getStyleVariablesPrefix(
               style.name
             )}-primary-foreground`;
 
@@ -55,7 +55,7 @@ export function StyleSelect({
               <SelectItem
                 value={style.name}
                 key={style.name}
-                className={`${hoverBgColor} ${hoverTextColor} capitalize focus:bg-opacity-15`}
+                className={`${hoverBgColor} ${hoverTextColor} capitalize`}
               >
                 {style.title}
               </SelectItem>

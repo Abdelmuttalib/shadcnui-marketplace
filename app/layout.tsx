@@ -2,12 +2,15 @@ import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
 import { DevTools } from "@/components/dev-tools";
-import { NextThemesProvider } from "@/components/next-themes-provider";
-import { ThemeCustomizerWrapper } from "@/components/theme-customizer";
-import { Toaster } from "@/components/ui/sonner";
 import { fontVariables } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+
+import { AppProviders } from "./app-providers";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
@@ -41,16 +44,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <NextThemesProvider>
-        <ThemeCustomizerWrapper />
-        <body className={`${fontVariables} font-sans antialiased`}>
+    <html
+      lang="en"
+      className={cn("font-sans antialiased", inter.variable, fontVariables)}
+    >
+      <AppProviders>
+        <body>
           <DevTools />
-          <Toaster />
           <Analytics />
           {children}
         </body>
-      </NextThemesProvider>
+      </AppProviders>
     </html>
   );
 }

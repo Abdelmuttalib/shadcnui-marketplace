@@ -2,7 +2,7 @@
 
 import { useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
-import { CarbonPageExamples } from "@/registry/carbon/page-examples";
+import { CarbonPageExamples } from "@/registry/bases/base/carbon/page-examples";
 import { CatalystPageExamples } from "@/registry/catalyst/page-examples";
 import { DefaultPageExamples } from "@/registry/default/page-examples";
 import { LibellePageExamples } from "@/registry/libelle/page-examples";
@@ -17,7 +17,7 @@ import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
   getStyleForegroundClassname,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 import { WedgesPageExamples } from "@/registry/wedges/page-examples";
 
 export const pageExamples = {
@@ -45,7 +45,7 @@ export function PageExamples() {
       {sPagesExample.map((s) => {
         return (
           <>
-            <div className="rounded-xl border bg-background p-2">
+            <div className="bg-background rounded-xl border p-2">
               <div
                 className={cn(
                   "h-[85svh] overflow-y-auto rounded-lg border",

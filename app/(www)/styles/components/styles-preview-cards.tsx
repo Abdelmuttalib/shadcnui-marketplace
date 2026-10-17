@@ -12,7 +12,7 @@ import { StylePageExamplePreview } from "@/components/views/styles/style-page-ex
 import { STYLES, stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function StylesPreviewCards() {
   const { pageExampleType } = useStyleStore();

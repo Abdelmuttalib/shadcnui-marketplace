@@ -6,7 +6,10 @@ import { Project, ScriptKind, SourceFile, SyntaxKind } from "ts-morph";
 import { z } from "zod";
 
 import { Index } from "@/__registry__";
+import { ExamplesIndex } from "@/examples/__index__";
 import { StyleRegistry } from "@/registry/registry-styles";
+
+import { readFileFromRoot } from "./read-file";
 
 export const DEFAULT_REGISTRY_STYLE =
   "new-york" satisfies StyleRegistry["name"];
@@ -20,6 +23,41 @@ export function getRegistryComponent(
   style: StyleRegistry["name"] = DEFAULT_REGISTRY_STYLE
 ) {
   return memoizedIndex[style][name]?.component;
+}
+
+function getDemoIndexKey(styleName: string) {
+  if (ExamplesIndex[styleName]) {
+    return styleName;
+  }
+
+  const base = getBaseForStyle(styleName);
+  if (base && ExamplesIndex[base]) {
+    return base;
+  }
+
+  return styleName;
+}
+
+export async function getDemoItem(name: string, styleName: string) {
+  const key = getDemoIndexKey(styleName);
+  const demo = ExamplesIndex[key]?.[name];
+  if (!demo) {
+    return null;
+  }
+
+  const content = await readFileFromRoot(demo.filePath);
+
+  return {
+    name: demo.name,
+    type: "registry:internal" as const,
+    files: [
+      {
+        path: demo.filePath,
+        content,
+        type: "registry:internal" as const,
+      },
+    ],
+  };
 }
 
 export async function getRegistryItem(

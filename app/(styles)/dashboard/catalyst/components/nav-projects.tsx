@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/catalyst/ui/dropdown-menu";
+} from "@/registry/bases/base/catalyst/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/catalyst/ui/sidebar";
+} from "@/registry/bases/base/catalyst/ui/sidebar";
 
 export function NavProjects({
   projects,

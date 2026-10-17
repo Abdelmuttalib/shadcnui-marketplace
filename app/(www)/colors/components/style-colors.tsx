@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
+
 import { Typography } from "@/components/ui/typography";
 import { Style, STYLES } from "@/hooks/use-style-store";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function StylesColors() {
   return (
@@ -56,35 +58,81 @@ function StyleColors({ style }: { style: Style }) {
   );
 
   const styleSpecificVariablesColors = styleSpecificVariables.map(
-    (key) => `oklch(var(${key}))`
+    (key) => `var(${key})`
   );
+
+  const [copiedVariable, setCopiedVariable] = useState<string | null>(null);
+
+  const copyColor = async (variable: string) => {
+    const color = getComputedStyle(document.documentElement)
+      .getPropertyValue(variable)
+      .trim();
+
+    if (!color) return;
+
+    try {
+      await navigator.clipboard.writeText(color);
+
+      setCopiedVariable(variable);
+
+      setTimeout(() => {
+        setCopiedVariable(null);
+      }, 1500);
+    } catch (error) {
+      console.error("Failed to copy color:", error);
+    }
+  };
+
+  //  const copyColor = async (variable: string) => {
+  //   const color = getComputedStyle(document.documentElement)
+  //     .getPropertyValue(variable.replace("var(", "").replace(")", ""))
+  //     .trim();
+
+  //   if (!color) return;
+
+  //   await navigator.clipboard.writeText(color);
+  // };
 
   return (
     <div className="grid scroll-mt-16 gap-6" id={`${style}-colors`}>
       <div>
         <Typography
           as={"h2"}
-          variant="4xl/semibold"
-          className="font-[490] tracking-tighter"
+          variant="3xl/medium"
+          className="font-[490] tracking-tight"
         >
           <span className="capitalize">{style}</span> colors
         </Typography>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-        {styleSpecificVariables.map((variable, index) => (
-          <div key={variable} className="grid gap-2">
-            <div
-              className="h-20 w-full rounded-md border"
-              style={{
-                backgroundColor: styleSpecificVariablesColors[index],
-              }}
-            ></div>
-            <p className="font-mono text-sm font-medium">{variable}</p>
-            <p className="text-sm text-muted-foreground">
-              {styleSpecificVariablesColors[index]}
-            </p>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 gap-2 gap-y-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        {styleSpecificVariables.map((variable) => {
+          const isCopied = copiedVariable === variable;
+
+          return (
+            <button
+              key={variable}
+              type="button"
+              onClick={() => copyColor(variable)}
+              className="group grid gap-2 text-left"
+              title="Click to copy color"
+            >
+              <div
+                className="h-20 w-full rounded-md border transition-opacity group-hover:opacity-80"
+                style={{
+                  backgroundColor: `var(${variable})`,
+                }}
+              />
+
+              <div className="flex flex-col gap-1">
+                <p className="font-mono text-sm font-medium">{variable}</p>
+
+                <p className="text-muted-foreground text-xs">
+                  {isCopied ? "Copied!" : `var(${variable})`}
+                </p>
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

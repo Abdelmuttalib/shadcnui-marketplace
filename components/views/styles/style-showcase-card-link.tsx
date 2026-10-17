@@ -11,7 +11,7 @@ import { Typography } from "@/components/ui/typography";
 import { Style } from "@/hooks/use-style-store";
 import { loadComponentDemo } from "@/lib/component-loader";
 import { cn } from "@/lib/utils";
-import { getStyleBackgroundClassname } from "@/registry/styles";
+import { getStyleBackgroundClassname } from "@/registry/styles-components";
 
 type Components = {
   Badge: React.ComponentType;

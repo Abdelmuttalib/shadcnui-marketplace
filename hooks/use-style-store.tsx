@@ -3,12 +3,14 @@
 import * as React from "react";
 import { create } from "zustand";
 
-import { CarbonUI } from "@/registry/carbon/carbon-hero";
-import { CarbonShowcaseComponents } from "@/registry/carbon/carbon-showcase-components";
-import { CatalystUI } from "@/registry/catalyst/catalyst-hero";
-import { CatalystShowcaseComponents } from "@/registry/catalyst/catalyst-showcase-components";
-import { DefaultUI } from "@/registry/default/default-hero";
-import { DefaultShowcaseComponents } from "@/registry/default/default-showcase-components";
+import { CarbonUI } from "@/registry/bases/base/carbon/carbon-hero";
+import { CarbonShowcaseComponents } from "@/registry/bases/base/carbon/carbon-showcase-components";
+import { CatalystUI } from "@/registry/bases/base/catalyst/catalyst-hero";
+import { CatalystShowcaseComponents } from "@/registry/bases/base/catalyst/catalyst-showcase-components";
+import { DefaultUI } from "@/registry/bases/base/default/default-hero";
+import { DefaultShowcaseComponents } from "@/registry/bases/base/default/default-showcase-components";
+import { DefaultV4UI } from "@/registry/bases/base/default-v4/default-v4-hero";
+import { DefaultV4ShowcaseComponents } from "@/registry/bases/base/default-v4/default-v4-showcase-components";
 import { LibelleUI } from "@/registry/libelle/libelle-hero";
 import { LibelleShowcaseComponents } from "@/registry/libelle/libelle-showcase-components";
 import { LinearUI } from "@/registry/linear/linear-hero";
@@ -41,6 +43,7 @@ const DEV_STYLES_PATH: Record<StyleType, string> = {
   snow: "http://localhost:3000",
   neon: "http://localhost:3000",
   libelle: "http://localhost:3000",
+  "default-v4": "http://localhost:3000",
 };
 const PROD_STYLES_PATH: Record<StyleType, string> = {
   default: "https://shadcn-default.vercel.app",
@@ -55,6 +58,7 @@ const PROD_STYLES_PATH: Record<StyleType, string> = {
   snow: "https://shadcn-snow.vercel.app",
   neon: "https://shadcn-neon.vercel.app",
   libelle: "https://shadcn-libelle.vercel.app",
+  "default-v4": "https://shadcn-default-v4.vercel.app",
 };
 
 // NEXT_PUBLIC_NODE_ENV
@@ -74,10 +78,11 @@ export function getStylesPath(env: string) {
   return PROD_STYLES_PATH;
 }
 
-// "default" | "carbon" | "catalyst" | "material" | "linear" | "spectrum" | "wedges" | "moon" | "lucid" | "snow" | "neon" | "libelle"
+// "default" | "default-v4" | "carbon" | "catalyst" | "material" | "linear" | "spectrum" | "wedges" | "moon" | "lucid" | "snow" | "neon" | "libelle"
 
 type StyleType =
   | "default"
+  | "default-v4"
   | "carbon"
   | "catalyst"
   | "material"
@@ -138,6 +143,18 @@ export const STYLES_DATA: Record<Style, StyleData> = {
     defaultRadius: "0.5rem",
     showcaseComponents: <DefaultShowcaseComponents />,
     hero: <DefaultUI />,
+  },
+  "default-v4": {
+    name: "default-v4",
+    title: "Default v4",
+    description: "Isolated upstream shadcn ui collection in the dft namespace",
+    styleVariablePrefix: "dft",
+    styleSitePath: getStyleSitePath("default-v4"),
+    directoryName: "default-v4",
+    defaultPalette: "",
+    defaultRadius: "0.5rem",
+    showcaseComponents: <DefaultV4ShowcaseComponents />,
+    hero: <DefaultV4UI />,
   },
   carbon: {
     name: "carbon",

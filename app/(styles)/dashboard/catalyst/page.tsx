@@ -8,9 +8,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/catalyst/ui/avatar";
-import { Badge } from "@/registry/catalyst/ui/badge";
-import { DataTable } from "@/registry/catalyst/ui/data-table";
+} from "@/registry/bases/base/catalyst/ui/avatar";
+import { Badge } from "@/registry/bases/base/catalyst/ui/badge";
+import { DataTable } from "@/registry/bases/base/catalyst/ui/data-table";
 import {
   Select,
   SelectContent,
@@ -19,8 +19,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/catalyst/ui/select";
-import { Typography } from "@/registry/catalyst/ui/typography";
+} from "@/registry/bases/base/catalyst/ui/select";
+import { Typography } from "@/registry/bases/base/catalyst/ui/typography";
 
 const data = {
   overview: [
@@ -168,7 +168,7 @@ const columns = [
     header: "Purchase date",
     // @ts-expect-error - types
     cell: ({ cell }) => (
-      <p className="text-sm text-catalyst-muted-foreground">
+      <p className="text-catalyst-muted-foreground text-sm">
         {cell.getValue() as string}
       </p>
     ),
@@ -236,7 +236,7 @@ export default function DashboardPage() {
           {data.overview.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-3 border-t border-t-catalyst-input py-6"
+              className="border-t-catalyst-input flex flex-col gap-3 border-t py-6"
             >
               <div className="flex-1">
                 <Typography as="h2" variant="md/normal">
@@ -259,7 +259,7 @@ export default function DashboardPage() {
                 >
                   {item.percentage}
                 </Badge>
-                <p className="text-sm text-catalyst-muted-foreground">
+                <p className="text-catalyst-muted-foreground text-sm">
                   {item.lastUpdate}
                 </p>
               </div>

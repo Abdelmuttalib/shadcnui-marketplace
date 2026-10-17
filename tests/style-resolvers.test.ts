@@ -6,13 +6,14 @@ import {
   getStyleFontClassname,
   getStyleForegroundClassname,
   getStyleVariablesPrefix,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 
 // Contract tables derived from the product's namespaced design system
 // (globals.css tokens + tailwind.config.ts mappings). Values below are the
 // contract — they must be updated deliberately, never to match a regression.
 const PREFIX_BY_STYLE: Array<[Style, string]> = [
   ["default", "dft"],
+  ["default-v4", "dft"],
   ["carbon", "cb"],
   ["catalyst", "catalyst"],
   ["linear", "linear"],
@@ -28,6 +29,7 @@ const PREFIX_BY_STYLE: Array<[Style, string]> = [
 
 const BACKGROUND_BY_STYLE: Array<[Style, string]> = [
   ["default", "bg-dft-background"],
+  ["default-v4", "bg-dft-background"],
   ["carbon", "bg-cb-background"],
   ["catalyst", "bg-catalyst-background"],
   ["linear", "bg-linear-background"],
@@ -43,6 +45,7 @@ const BACKGROUND_BY_STYLE: Array<[Style, string]> = [
 
 const FOREGROUND_BY_STYLE: Array<[Style, string]> = [
   ["default", "text-dft-foreground"],
+  ["default-v4", "text-dft-foreground"],
   ["carbon", "text-cb-foreground"],
   ["catalyst", "text-catalyst-foreground"],
   ["linear", "text-linear-foreground"],
@@ -58,6 +61,7 @@ const FOREGROUND_BY_STYLE: Array<[Style, string]> = [
 
 const FONT_BY_STYLE: Array<[Style, string]> = [
   ["default", "font-sans"],
+  ["default-v4", "font-sans"],
   ["carbon", "font-carbon"],
   ["catalyst", "font-sans"],
   ["linear", "font-sans"],

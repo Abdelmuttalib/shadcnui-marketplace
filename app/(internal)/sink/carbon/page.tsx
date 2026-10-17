@@ -1,3 +1,3 @@
-import SinkPage from "@/registry/carbon/internal/sink/page";
+import SinkPage from "@/registry/bases/base/carbon/internal/sink/page";
 
 export default SinkPage;
