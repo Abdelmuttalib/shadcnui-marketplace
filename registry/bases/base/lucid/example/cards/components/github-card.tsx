@@ -5,14 +5,14 @@ import {
   StarIcon,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
+} from "@/registry/bases/base/lucid/ui/card";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -21,8 +21,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
-import { Separator } from "@/registry/lucid/ui/separator";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 
 export function DemoGithub() {
   return (
@@ -35,7 +35,7 @@ export function DemoGithub() {
             your apps. Accessible. Customizable. Open Source.
           </CardDescription>
         </div>
-        <div className="flex items-center space-x-1 rounded-lucid-md bg-lucid-secondary text-lucid-secondary-foreground">
+        <div className="rounded-lucid-md bg-lucid-secondary text-lucid-secondary-foreground flex items-center space-x-1">
           <Button variant="secondary" className="px-2 shadow-none">
             <StarIcon className="mr-2 h-4 w-4" />
             Star
@@ -44,7 +44,7 @@ export function DemoGithub() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" className="px-2 shadow-none">
-                <ChevronDownIcon className="h-4 w-4 text-lucid-secondary-foreground" />
+                <ChevronDownIcon className="text-lucid-secondary-foreground h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -69,7 +69,7 @@ export function DemoGithub() {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="flex space-x-4 text-sm text-lucid-muted-foreground">
+        <div className="text-lucid-muted-foreground flex space-x-4 text-sm">
           <div className="flex items-center">
             <CircleIcon className="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
             TypeScript

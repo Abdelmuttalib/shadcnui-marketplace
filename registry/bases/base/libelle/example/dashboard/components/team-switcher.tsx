@@ -12,8 +12,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
-import { Button } from "@/registry/libelle/ui/button";
+} from "@/registry/bases/base/libelle/ui/avatar";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/libelle/ui/command";
+} from "@/registry/bases/base/libelle/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -31,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/libelle/ui/dialog";
-import { Input } from "@/registry/libelle/ui/input";
-import { Label } from "@/registry/libelle/ui/label";
+} from "@/registry/bases/base/libelle/ui/dialog";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/libelle/ui/popover";
+} from "@/registry/bases/base/libelle/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/libelle/ui/select";
+} from "@/registry/bases/base/libelle/ui/select";
 
 const groups = [
   {

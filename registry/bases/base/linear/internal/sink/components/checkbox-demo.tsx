@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/registry/linear/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/linear/ui/checkbox";
 
 export function CheckboxDemo() {
   return (

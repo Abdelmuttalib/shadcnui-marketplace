@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Slider } from "@/registry/libelle/ui/slider";
+import { Slider } from "@/registry/bases/base/libelle/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 

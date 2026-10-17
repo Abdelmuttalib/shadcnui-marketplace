@@ -2,13 +2,13 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/material/ui/resizable";
+} from "@/registry/bases/base/material/ui/resizable";
 
 export function ResizableHandleDemo() {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="min-h-[200px] max-w-md rounded-material-lg border border-material-border md:min-w-[450px]"
+      className="rounded-material-lg border-material-border min-h-[200px] max-w-md border md:min-w-[450px]"
     >
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">

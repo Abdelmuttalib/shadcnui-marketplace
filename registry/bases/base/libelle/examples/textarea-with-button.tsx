@@ -1,5 +1,5 @@
-import { Button } from "@/registry/libelle/ui/button";
-import { Textarea } from "@/registry/libelle/ui/textarea";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { Textarea } from "@/registry/bases/base/libelle/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

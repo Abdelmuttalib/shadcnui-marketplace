@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/libelle/ui/button";
-import { Checkbox } from "@/registry/libelle/ui/checkbox";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { Checkbox } from "@/registry/bases/base/libelle/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -15,7 +15,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/libelle/ui/form";
+} from "@/registry/bases/base/libelle/ui/form";
 
 const items = [
   {

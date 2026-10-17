@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/lucid/ui/checkbox";
-import { Label } from "@/registry/lucid/ui/label";
+import { Checkbox } from "@/registry/bases/base/lucid/ui/checkbox";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 
 export function LabelDemo() {
   return (

@@ -1,5 +1,5 @@
-import { Button } from "@/registry/material/ui/button";
-import { Textarea } from "@/registry/material/ui/textarea";
+import { Button } from "@/registry/bases/base/material/ui/button";
+import { Textarea } from "@/registry/bases/base/material/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

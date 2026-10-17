@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/lucid/ui/accordion";
+} from "@/registry/bases/base/lucid/ui/accordion";
 
 export default function AccordionDemo() {
   return (

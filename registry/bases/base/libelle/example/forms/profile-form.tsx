@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Form,
   FormControl,
@@ -16,16 +16,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/libelle/ui/form";
-import { Input } from "@/registry/libelle/ui/input";
+} from "@/registry/bases/base/libelle/ui/form";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/libelle/ui/select";
-import { Textarea } from "@/registry/libelle/ui/textarea";
+} from "@/registry/bases/base/libelle/ui/select";
+import { Textarea } from "@/registry/bases/base/libelle/ui/textarea";
 
 const profileFormSchema = z.object({
   username: z

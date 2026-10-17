@@ -12,7 +12,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/libelle/ui/context-menu";
+} from "@/registry/bases/base/libelle/ui/context-menu";
 
 export default function ContextMenuDemo() {
   return (

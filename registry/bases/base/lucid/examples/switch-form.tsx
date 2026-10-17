@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Form,
   FormControl,
@@ -13,8 +13,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/lucid/ui/form";
-import { Switch } from "@/registry/lucid/ui/switch";
+} from "@/registry/bases/base/lucid/ui/form";
+import { Switch } from "@/registry/bases/base/lucid/ui/switch";
 
 const FormSchema = z.object({
   marketing_emails: z.boolean().default(false).optional(),

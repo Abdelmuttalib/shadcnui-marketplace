@@ -13,24 +13,24 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/registry/lucid/ui/alert-dialog";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/lucid/ui/dialog";
+} from "@/registry/bases/base/lucid/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
-import { Label } from "@/registry/lucid/ui/label";
-import { Switch } from "@/registry/lucid/ui/switch";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
+import { Switch } from "@/registry/bases/base/lucid/ui/switch";
 
 export function PresetActions() {
   const [open, setIsOpen] = React.useState(false);
@@ -69,7 +69,7 @@ export function PresetActions() {
             </DialogDescription>
           </DialogHeader>
           <div className="py-6">
-            <h4 className="text-sm text-lucid-muted-foreground">
+            <h4 className="text-lucid-muted-foreground text-sm">
               Playground Warnings
             </h4>
             <div className="flex items-start justify-between space-x-4 pt-3">
@@ -78,7 +78,7 @@ export function PresetActions() {
                 <span className="font-semibold">
                   Show a warning when content is flagged
                 </span>
-                <span className="text-sm text-lucid-muted-foreground">
+                <span className="text-lucid-muted-foreground text-sm">
                   A warning will be shown when sexual, hateful, violent or
                   self-harm content is detected.
                 </span>

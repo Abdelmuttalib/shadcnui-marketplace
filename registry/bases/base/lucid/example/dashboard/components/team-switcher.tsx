@@ -12,8 +12,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/avatar";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/lucid/ui/command";
+} from "@/registry/bases/base/lucid/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -31,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/lucid/ui/dialog";
-import { Input } from "@/registry/lucid/ui/input";
-import { Label } from "@/registry/lucid/ui/label";
+} from "@/registry/bases/base/lucid/ui/dialog";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
+} from "@/registry/bases/base/lucid/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
+} from "@/registry/bases/base/lucid/ui/select";
 
 const groups = [
   {

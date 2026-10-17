@@ -20,9 +20,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
-import { Badge } from "@/registry/linear/ui/badge";
-import { Button } from "@/registry/linear/ui/button";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Badge } from "@/registry/bases/base/linear/ui/badge";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
@@ -30,21 +30,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
+} from "@/registry/bases/base/linear/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
-import { Separator } from "@/registry/linear/ui/separator";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/linear/ui/tooltip";
+} from "@/registry/bases/base/linear/ui/tooltip";
 
 export function LinearCardShowcase() {
   return (
@@ -66,7 +66,7 @@ export function LinearCardShowcase() {
                 CSS.
               </CardDescription>
             </div>
-            <div className="flex items-center gap-1 rounded-linear-md bg-linear-secondary text-linear-secondary-foreground">
+            <div className="rounded-linear-md bg-linear-secondary text-linear-secondary-foreground flex items-center gap-1">
               <Button variant="secondary" size={"sm"}>
                 <Star className="h-4 w-4" />
                 Star
@@ -106,32 +106,32 @@ export function LinearCardShowcase() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="flex flex-wrap gap-2 text-sm text-linear-muted-foreground">
-            <div className="flex items-center gap-1.5 rounded-linear-md border border-linear-input/60 bg-linear-muted p-1 px-2 text-sm">
+          <div className="text-linear-muted-foreground flex flex-wrap gap-2 text-sm">
+            <div className="rounded-linear-md border-linear-input/60 bg-linear-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <CircleDot className="h-4 w-4 text-blue-500" />
               </span>
               <span>TypeScript</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-linear-md border border-linear-input/60 bg-linear-muted p-1 px-2 text-sm">
+            <div className="rounded-linear-md border-linear-input/60 bg-linear-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Star className="h-4 w-4" />
               </span>{" "}
               <span>20.1k stars</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-linear-md border border-linear-input/60 bg-linear-muted p-1 px-2 text-sm">
+            <div className="rounded-linear-md border-linear-input/60 bg-linear-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <GitFork className="h-4 w-4" />
               </span>{" "}
               <span>1.2k forks</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-linear-md border border-linear-input/60 bg-linear-muted p-1 px-2 text-sm">
+            <div className="rounded-linear-md border-linear-input/60 bg-linear-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Eye className="h-4 w-4" />
               </span>{" "}
               <span>342 watching</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-linear-md border border-linear-input/60 bg-linear-muted p-1 px-2 text-sm">
+            <div className="rounded-linear-md border-linear-input/60 bg-linear-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <AlertCircle className="h-4 w-4" />
               </span>{" "}
@@ -186,31 +186,31 @@ export function LinearCardShowcase() {
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium">Contributors</span>
               <div className="flex -space-x-2">
-                <Avatar className="h-6 w-6 border-2 border-linear-background">
+                <Avatar className="border-linear-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/SC" />
                   <AvatarFallback className="text-xs">SC</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-linear-background">
+                <Avatar className="border-linear-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/JD" />
                   <AvatarFallback className="text-xs">JD</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-linear-background">
+                <Avatar className="border-linear-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/WK" />
                   <AvatarFallback className="text-xs">WK</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-linear-background">
+                <Avatar className="border-linear-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/BR" />
                   <AvatarFallback className="text-xs">BR</AvatarFallback>
                 </Avatar>
               </div>
             </div>
-            <div className="flex items-center gap-1 text-sm text-linear-muted-foreground">
+            <div className="text-linear-muted-foreground flex items-center gap-1 text-sm">
               <Calendar className="h-3.5 w-3.5" />
               <span>Updated April 2023</span>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="flex items-center justify-between border-t border-t-linear-border pt-4">
+        <CardFooter className="border-t-linear-border flex items-center justify-between border-t pt-4">
           <div className="flex items-center gap-2">
             <TooltipProvider>
               <Tooltip>

@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Sidebar,
   SidebarContent,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/linear/ui/sidebar";
+} from "@/registry/bases/base/linear/ui/sidebar";
 
 const projects = [
   {

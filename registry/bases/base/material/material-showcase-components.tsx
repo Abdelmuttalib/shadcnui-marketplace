@@ -1,6 +1,27 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
+import { Badge, BadgeProps } from "@/registry/bases/base/material/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/material/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/registry/bases/base/material/ui/card";
+import {
+  Table,
+  TableBody,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/bases/base/material/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/material/ui/tabs";
 import { AccordionDemo } from "@/registry/material/showcase";
 import { AlertDialogDemo } from "@/registry/material/showcase";
 import { BreadcrumbDemo } from "@/registry/material/showcase";
@@ -32,23 +53,6 @@ import { TextareaDemo } from "@/registry/material/showcase";
 import { ToggleDemo } from "@/registry/material/showcase";
 import { ToggleGroupDemo } from "@/registry/material/showcase";
 import { TooltipDemo } from "@/registry/material/showcase";
-import { Badge, BadgeProps } from "@/registry/material/ui/badge";
-import { Button, ButtonProps } from "@/registry/material/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/material/ui/card";
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/material/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/material/ui/tabs";
 
 export function MaterialShowcaseComponents() {
   const style = "material";

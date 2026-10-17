@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/linear/ui/menubar";
+} from "@/registry/bases/base/linear/ui/menubar";
 
 export default function MenubarDemo() {
   return (

@@ -1,5 +1,5 @@
-import { Input } from "@/registry/lucid/ui/input";
-import { Label } from "@/registry/lucid/ui/label";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 
 export default function InputWithLabel() {
   return (

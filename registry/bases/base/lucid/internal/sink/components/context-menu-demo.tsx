@@ -12,12 +12,12 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/lucid/ui/context-menu";
+} from "@/registry/bases/base/lucid/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-lucid-md border border-dashed border-lucid-border text-sm">
+      <ContextMenuTrigger className="rounded-lucid-md border-lucid-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">

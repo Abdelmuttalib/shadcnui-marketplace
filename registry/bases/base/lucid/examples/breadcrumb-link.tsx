@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/lucid/ui/breadcrumb";
+} from "@/registry/bases/base/lucid/ui/breadcrumb";
 
 export default function BreadcrumbWithCustomSeparator() {
   return (

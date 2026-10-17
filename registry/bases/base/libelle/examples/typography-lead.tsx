@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/libelle/ui/typography";
+import { Typography } from "@/registry/bases/base/libelle/ui/typography";
 
 export default function TypographyLead() {
   return (

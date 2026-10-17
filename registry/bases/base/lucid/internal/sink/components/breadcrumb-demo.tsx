@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/lucid/ui/breadcrumb";
+} from "@/registry/bases/base/lucid/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (

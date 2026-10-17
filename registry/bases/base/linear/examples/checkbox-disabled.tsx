@@ -1,4 +1,4 @@
-import { Checkbox } from "@/registry/linear/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/linear/ui/checkbox";
 
 export default function CheckboxDisabled() {
   return (

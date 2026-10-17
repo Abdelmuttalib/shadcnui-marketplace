@@ -14,7 +14,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/libelle/ui/dropdown-menu";
+} from "@/registry/bases/base/libelle/ui/dropdown-menu";
 import {
   Sidebar,
   SidebarContent,
@@ -26,7 +26,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/libelle/ui/sidebar";
+} from "@/registry/bases/base/libelle/ui/sidebar";
 
 const projects = [
   {

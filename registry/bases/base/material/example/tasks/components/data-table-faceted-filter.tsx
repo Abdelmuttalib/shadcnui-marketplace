@@ -3,8 +3,8 @@ import { Column } from "@tanstack/react-table";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/material/ui/badge";
-import { Button } from "@/registry/material/ui/button";
+import { Badge } from "@/registry/bases/base/material/ui/badge";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -13,13 +13,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/material/ui/popover";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/popover";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
@@ -105,7 +105,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-ring",
+                        "border-ring mr-2 flex h-4 w-4 items-center justify-center rounded-sm border",
                         isSelected
                           ? "bg-ring [&_svg]:text-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -114,7 +114,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-material-muted-foreground" />
+                      <option.icon className="text-material-muted-foreground mr-2 h-4 w-4" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

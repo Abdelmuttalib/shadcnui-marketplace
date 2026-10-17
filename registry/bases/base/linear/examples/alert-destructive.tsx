@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/linear/ui/alert";
+} from "@/registry/bases/base/linear/ui/alert";
 
 export default function AlertDestructive() {
   return (

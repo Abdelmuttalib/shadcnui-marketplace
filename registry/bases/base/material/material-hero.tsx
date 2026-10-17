@@ -1,5 +1,20 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/material/ui/avatar";
+import { Badge } from "@/registry/bases/base/material/ui/badge";
+import { Button } from "@/registry/bases/base/material/ui/button";
+import { Checkbox } from "@/registry/bases/base/material/ui/checkbox";
+import { Switch } from "@/registry/bases/base/material/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/material/ui/tabs";
+import { Toggle } from "@/registry/bases/base/material/ui/toggle";
 import { DemoDatePicker } from "@/registry/material/example/cards/components/date-picker";
 import {
   ComboboxDemo,
@@ -16,17 +31,6 @@ import {
   TextareaDemo,
   ToggleGroupDemo,
 } from "@/registry/material/showcase";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/material/ui/avatar";
-import { Badge } from "@/registry/material/ui/badge";
-import { Button } from "@/registry/material/ui/button";
-import { Checkbox } from "@/registry/material/ui/checkbox";
-import { Switch } from "@/registry/material/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/material/ui/tabs";
-import { Toggle } from "@/registry/material/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function MaterialUI() {

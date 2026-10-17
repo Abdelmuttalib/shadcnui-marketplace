@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
@@ -9,17 +9,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
-import { Input } from "@/registry/linear/ui/input";
-import { Label } from "@/registry/linear/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/linear/ui/radio-group";
+} from "@/registry/bases/base/linear/ui/card";
+import { Input } from "@/registry/bases/base/linear/ui/input";
+import { Label } from "@/registry/bases/base/linear/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/linear/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/linear/ui/select";
+} from "@/registry/bases/base/linear/ui/select";
 
 export function CardsPaymentMethod() {
   return (
@@ -41,7 +44,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between rounded-linear-md border-2 border-muted bg-transparent p-4 hover:bg-linear-accent hover:text-linear-accent-foreground peer-data-[state=checked]:border-linear-primary [&:has([data-state=checked])]:border-linear-primary"
+              className="rounded-linear-md border-muted hover:bg-linear-accent hover:text-linear-accent-foreground peer-data-[state=checked]:border-linear-primary [&:has([data-state=checked])]:border-linear-primary flex flex-col items-center justify-between border-2 bg-transparent p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +72,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between rounded-linear-md border-2 border-muted bg-transparent p-4 hover:bg-linear-accent hover:text-linear-accent-foreground peer-data-[state=checked]:border-linear-primary [&:has([data-state=checked])]:border-linear-primary"
+              className="rounded-linear-md border-muted hover:bg-linear-accent hover:text-linear-accent-foreground peer-data-[state=checked]:border-linear-primary [&:has([data-state=checked])]:border-linear-primary flex flex-col items-center justify-between border-2 bg-transparent p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -85,7 +88,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between rounded-linear-md border-2 border-muted bg-transparent p-4 hover:bg-linear-accent hover:text-linear-accent-foreground peer-data-[state=checked]:border-linear-primary [&:has([data-state=checked])]:border-linear-primary"
+              className="rounded-linear-md border-muted hover:bg-linear-accent hover:text-linear-accent-foreground peer-data-[state=checked]:border-linear-primary [&:has([data-state=checked])]:border-linear-primary flex flex-col items-center justify-between border-2 bg-transparent p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

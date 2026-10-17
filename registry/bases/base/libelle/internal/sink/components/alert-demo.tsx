@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/libelle/ui/alert";
+} from "@/registry/bases/base/libelle/ui/alert";
 
 export function AlertDemo() {
   return (

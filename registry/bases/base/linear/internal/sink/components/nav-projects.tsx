@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/linear/ui/sidebar";
+} from "@/registry/bases/base/linear/ui/sidebar";
 
 export function NavProjects({
   projects,

@@ -1,12 +1,12 @@
-import { AuthenticationPage } from "@/registry/libelle/example/authentication/page";
-import { BoardPage } from "@/registry/libelle/example/board/page";
-import { CardsPage } from "@/registry/libelle/example/cards/page";
-import { DashboardPage } from "@/registry/libelle/example/dashboard/page";
-import { SettingsProfilePage } from "@/registry/libelle/example/forms/page";
-import { MailPage } from "@/registry/libelle/example/mail/page";
-import { MusicPage } from "@/registry/libelle/example/music/page";
-import { PlaygroundPage } from "@/registry/libelle/example/playground/page";
-import { TaskPage } from "@/registry/libelle/example/tasks/page";
+import { AuthenticationPage } from "@/registry/bases/base/libelle/example/authentication/page";
+import { BoardPage } from "@/registry/bases/base/libelle/example/board/page";
+import { CardsPage } from "@/registry/bases/base/libelle/example/cards/page";
+import { DashboardPage } from "@/registry/bases/base/libelle/example/dashboard/page";
+import { SettingsProfilePage } from "@/registry/bases/base/libelle/example/forms/page";
+import { MailPage } from "@/registry/bases/base/libelle/example/mail/page";
+import { MusicPage } from "@/registry/bases/base/libelle/example/music/page";
+import { PlaygroundPage } from "@/registry/bases/base/libelle/example/playground/page";
+import { TaskPage } from "@/registry/bases/base/libelle/example/tasks/page";
 
 export const LibellePageExamples = [
   <BoardPage key="board" />,

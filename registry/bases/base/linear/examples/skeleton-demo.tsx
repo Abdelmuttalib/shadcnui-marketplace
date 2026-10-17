@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/linear/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/linear/ui/skeleton";
 
 export default function SkeletonDemo() {
   return (

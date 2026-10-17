@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 
 export default function ButtonWithIcon() {
   return (

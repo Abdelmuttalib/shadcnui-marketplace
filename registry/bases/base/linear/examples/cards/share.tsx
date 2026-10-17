@@ -4,25 +4,25 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
-import { Button } from "@/registry/linear/ui/button";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
-import { Input } from "@/registry/linear/ui/input";
-import { Label } from "@/registry/linear/ui/label";
+} from "@/registry/bases/base/linear/ui/card";
+import { Input } from "@/registry/bases/base/linear/ui/input";
+import { Label } from "@/registry/bases/base/linear/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/linear/ui/select";
-import { Separator } from "@/registry/linear/ui/separator";
+} from "@/registry/bases/base/linear/ui/select";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 
 export function CardsShare() {
   return (
@@ -61,7 +61,7 @@ export function CardsShare() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-linear-muted-foreground">
+                  <p className="text-linear-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -86,7 +86,7 @@ export function CardsShare() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-linear-muted-foreground">
+                  <p className="text-linear-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -111,7 +111,7 @@ export function CardsShare() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-linear-muted-foreground">
+                  <p className="text-linear-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

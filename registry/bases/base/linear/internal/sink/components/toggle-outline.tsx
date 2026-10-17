@@ -1,6 +1,6 @@
 import { Italic } from "lucide-react";
 
-import { Toggle } from "@/registry/linear/ui/toggle";
+import { Toggle } from "@/registry/bases/base/linear/ui/toggle";
 
 export function ToggleOutline() {
   return (

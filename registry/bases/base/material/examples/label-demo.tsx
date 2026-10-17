@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/material/ui/checkbox";
-import { Label } from "@/registry/material/ui/label";
+import { Checkbox } from "@/registry/bases/base/material/ui/checkbox";
+import { Label } from "@/registry/bases/base/material/ui/label";
 
 export default function LabelDemo() {
   return (

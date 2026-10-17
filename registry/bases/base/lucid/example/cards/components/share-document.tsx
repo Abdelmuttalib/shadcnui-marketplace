@@ -4,24 +4,24 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/avatar";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
-import { Input } from "@/registry/lucid/ui/input";
+} from "@/registry/bases/base/lucid/ui/card";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
-import { Separator } from "@/registry/lucid/ui/separator";
+} from "@/registry/bases/base/lucid/ui/select";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 
 export function DemoShareDocument() {
   return (
@@ -53,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

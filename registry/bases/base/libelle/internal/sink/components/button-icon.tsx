@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 
 export function ButtonIcon() {
   return (

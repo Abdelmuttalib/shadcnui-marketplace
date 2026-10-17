@@ -3,8 +3,8 @@
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
 
-import { Button } from "@/registry/lucid/ui/button";
-import { Input } from "@/registry/lucid/ui/input";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 
 import { priorities, statuses } from "../data/data";
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";

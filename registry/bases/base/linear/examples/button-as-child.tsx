@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 
 export default function ButtonAsChild() {
   return (

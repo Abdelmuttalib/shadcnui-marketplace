@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/libelle/ui/breadcrumb";
+} from "@/registry/bases/base/libelle/ui/breadcrumb";
 
 export default function BreadcrumbWithCustomSeparator() {
   return (

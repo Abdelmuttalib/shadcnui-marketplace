@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Separator } from "@/registry/linear/ui/separator";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 
 import { SidebarNav } from "./components/sidebar-nav";
 
@@ -40,7 +40,7 @@ interface SettingsLayoutProps {
 export function SettingsLayout({ children }: SettingsLayoutProps) {
   return (
     <>
-      <div className="block space-y-6 bg-linear-background p-8 pb-16">
+      <div className="bg-linear-background block space-y-6 p-8 pb-16">
         <div className="space-y-0.5">
           <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
           <p className="text-linear-muted-foreground">

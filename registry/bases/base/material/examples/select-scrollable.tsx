@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/material/ui/select";
+} from "@/registry/bases/base/material/ui/select";
 
 export default function SelectScrollable() {
   return (

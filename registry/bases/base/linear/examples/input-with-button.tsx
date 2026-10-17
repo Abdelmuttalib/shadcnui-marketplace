@@ -1,5 +1,5 @@
-import { Button } from "@/registry/linear/ui/button";
-import { Input } from "@/registry/linear/ui/input";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Input } from "@/registry/bases/base/linear/ui/input";
 
 export default function InputWithButton() {
   return (

@@ -32,7 +32,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
+} from "@/registry/bases/base/material/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -40,13 +40,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/material/ui/breadcrumb";
-import { Button } from "@/registry/material/ui/button";
+} from "@/registry/bases/base/material/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/material/ui/collapsible";
+} from "@/registry/bases/base/material/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -55,7 +55,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -64,8 +64,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/material/ui/navigation-menu";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/navigation-menu";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -85,7 +85,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
   useSidebar,
-} from "@/registry/material/ui/sidebar";
+} from "@/registry/bases/base/material/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -279,7 +279,7 @@ export default function Page() {
           </Button>
 
           <div className="mx-auto flex items-center gap-2">
-            <div className="bg-material-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+            <div className="bg-material-sidebar-primary text-sidebar-primary-foreground size-8 flex aspect-square items-center justify-center rounded-lg">
               <Command className="size-4" />
             </div>
             <Separator orientation="vertical" className="ml-4 h-4" />
@@ -402,7 +402,7 @@ export default function Page() {
               <SidebarMenuItem>
                 <SidebarMenuButton size="lg" asChild>
                   <a href="#">
-                    <div className="bg-material-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+                    <div className="bg-material-sidebar-primary text-sidebar-primary-foreground size-8 flex aspect-square items-center justify-center rounded-lg">
                       <Command className="size-4" />
                     </div>
                     <div className="grid flex-1 text-left text-sm leading-tight">
@@ -550,11 +550,11 @@ export default function Page() {
                           {data.user.email}
                         </span>
                       </div>
-                      <ChevronsUpDown className="ml-auto size-4" />
+                      <ChevronsUpDown className="size-4 ml-auto" />
                     </SidebarMenuButton>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
-                    className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                    className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
                     side={isMobile ? "bottom" : "right"}
                     align="end"
                     sideOffset={4}

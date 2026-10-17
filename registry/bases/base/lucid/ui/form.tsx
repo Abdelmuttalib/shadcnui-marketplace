@@ -13,7 +13,7 @@ import {
 } from "react-hook-form";
 
 import { cn } from "@/lib/utils";
-import { Label } from "@/registry/lucid/ui/label";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 
 const Form = FormProvider;
 
@@ -136,7 +136,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-sm text-lucid-muted-foreground", className)}
+      className={cn("text-lucid-muted-foreground text-sm", className)}
       {...props}
     />
   );
@@ -158,7 +158,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-sm font-medium text-lucid-destructive", className)}
+      className={cn("text-lucid-destructive text-sm font-medium", className)}
       {...props}
     >
       {body}

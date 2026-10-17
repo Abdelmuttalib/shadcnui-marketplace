@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/libelle/ui/dropdown-menu";
+} from "@/registry/bases/base/libelle/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/libelle/ui/sidebar";
+} from "@/registry/bases/base/libelle/ui/sidebar";
 
 export function NavProjects({
   projects,

@@ -1,54 +1,58 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/registry/linear/showcase";
-import { AlertDialogDemo } from "@/registry/linear/showcase";
-import { BreadcrumbDemo } from "@/registry/linear/showcase";
-import { CalendarDemo } from "@/registry/linear/showcase";
-import { CheckboxDemo } from "@/registry/linear/showcase";
-import { ComboboxDemo } from "@/registry/linear/showcase";
-import { CommandDemo } from "@/registry/linear/showcase";
-import { ContextMenuDemo } from "@/registry/linear/showcase";
-import { DatePickerDemo } from "@/registry/linear/showcase";
-import { DialogDemo } from "@/registry/linear/showcase";
-import { DrawerDemo } from "@/registry/linear/showcase";
-import { DropdownMenuDemo } from "@/registry/linear/showcase";
-import { HoverCardDemo } from "@/registry/linear/showcase";
-import { InputDemo } from "@/registry/linear/showcase";
-import { InputOTPDemo } from "@/registry/linear/showcase";
-import { LabelDemo } from "@/registry/linear/showcase";
-import { MenubarDemo } from "@/registry/linear/showcase";
-import { PaginationDemo } from "@/registry/linear/showcase";
-import { PopoverDemo } from "@/registry/linear/showcase";
-import { ProgressDemo } from "@/registry/linear/showcase";
-import { RadioGroupDemo } from "@/registry/linear/showcase";
-import { SelectDemo } from "@/registry/linear/showcase";
-import { SheetDemo } from "@/registry/linear/showcase";
-import { SkeletonDemo } from "@/registry/linear/showcase";
-import { SliderDemo } from "@/registry/linear/showcase";
-import { SonnerDemo } from "@/registry/linear/showcase";
-import { SwitchDemo } from "@/registry/linear/showcase";
-import { TextareaDemo } from "@/registry/linear/showcase";
-import { ToggleDemo } from "@/registry/linear/showcase";
-import { ToggleGroupDemo } from "@/registry/linear/showcase";
-import { TooltipDemo } from "@/registry/linear/showcase";
-import { Badge, BadgeProps } from "@/registry/linear/ui/badge";
-import { Button, ButtonProps } from "@/registry/linear/ui/button";
+import { AccordionDemo } from "@/registry/bases/base/linear/showcase";
+import { AlertDialogDemo } from "@/registry/bases/base/linear/showcase";
+import { BreadcrumbDemo } from "@/registry/bases/base/linear/showcase";
+import { CalendarDemo } from "@/registry/bases/base/linear/showcase";
+import { CheckboxDemo } from "@/registry/bases/base/linear/showcase";
+import { ComboboxDemo } from "@/registry/bases/base/linear/showcase";
+import { CommandDemo } from "@/registry/bases/base/linear/showcase";
+import { ContextMenuDemo } from "@/registry/bases/base/linear/showcase";
+import { DatePickerDemo } from "@/registry/bases/base/linear/showcase";
+import { DialogDemo } from "@/registry/bases/base/linear/showcase";
+import { DrawerDemo } from "@/registry/bases/base/linear/showcase";
+import { DropdownMenuDemo } from "@/registry/bases/base/linear/showcase";
+import { HoverCardDemo } from "@/registry/bases/base/linear/showcase";
+import { InputDemo } from "@/registry/bases/base/linear/showcase";
+import { InputOTPDemo } from "@/registry/bases/base/linear/showcase";
+import { LabelDemo } from "@/registry/bases/base/linear/showcase";
+import { MenubarDemo } from "@/registry/bases/base/linear/showcase";
+import { PaginationDemo } from "@/registry/bases/base/linear/showcase";
+import { PopoverDemo } from "@/registry/bases/base/linear/showcase";
+import { ProgressDemo } from "@/registry/bases/base/linear/showcase";
+import { RadioGroupDemo } from "@/registry/bases/base/linear/showcase";
+import { SelectDemo } from "@/registry/bases/base/linear/showcase";
+import { SheetDemo } from "@/registry/bases/base/linear/showcase";
+import { SkeletonDemo } from "@/registry/bases/base/linear/showcase";
+import { SliderDemo } from "@/registry/bases/base/linear/showcase";
+import { SonnerDemo } from "@/registry/bases/base/linear/showcase";
+import { SwitchDemo } from "@/registry/bases/base/linear/showcase";
+import { TextareaDemo } from "@/registry/bases/base/linear/showcase";
+import { ToggleDemo } from "@/registry/bases/base/linear/showcase";
+import { ToggleGroupDemo } from "@/registry/bases/base/linear/showcase";
+import { TooltipDemo } from "@/registry/bases/base/linear/showcase";
+import { Badge, BadgeProps } from "@/registry/bases/base/linear/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
+} from "@/registry/bases/base/linear/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/linear/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/linear/ui/tabs";
+} from "@/registry/bases/base/linear/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/linear/ui/tabs";
 
 export function LinearShowcaseComponents() {
   const style = "linear";

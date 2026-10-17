@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -11,17 +11,17 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/material/ui/drawer";
+} from "@/registry/bases/base/material/ui/drawer";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/material/ui/popover";
+} from "@/registry/bases/base/material/ui/popover";
 
 type Status = {
   value: string;

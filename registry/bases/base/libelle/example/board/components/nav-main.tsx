@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/libelle/ui/collapsible";
+} from "@/registry/bases/base/libelle/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/libelle/ui/sidebar";
+} from "@/registry/bases/base/libelle/ui/sidebar";
 
 export function NavMain({
   items,

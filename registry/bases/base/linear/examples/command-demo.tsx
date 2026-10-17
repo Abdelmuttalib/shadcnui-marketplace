@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/linear/ui/command";
+} from "@/registry/bases/base/linear/ui/command";
 
 export default function CommandDemo() {
   return (

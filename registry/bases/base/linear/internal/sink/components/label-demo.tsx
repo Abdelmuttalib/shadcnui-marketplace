@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/linear/ui/checkbox";
-import { Label } from "@/registry/linear/ui/label";
+import { Checkbox } from "@/registry/bases/base/linear/ui/checkbox";
+import { Label } from "@/registry/bases/base/linear/ui/label";
 
 export function LabelDemo() {
   return (

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Form,
   FormControl,
@@ -14,12 +14,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/libelle/ui/form";
+} from "@/registry/bases/base/libelle/ui/form";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/libelle/ui/input-otp";
+} from "@/registry/bases/base/libelle/ui/input-otp";
 
 const FormSchema = z.object({
   pin: z.string().min(6, {

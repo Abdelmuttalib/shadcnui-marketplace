@@ -22,7 +22,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/libelle/ui/sidebar";
+} from "@/registry/bases/base/libelle/ui/sidebar";
 
 export default function AppSidebar() {
   return (

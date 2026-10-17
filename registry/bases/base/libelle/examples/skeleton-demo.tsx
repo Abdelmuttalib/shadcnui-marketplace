@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/libelle/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/libelle/ui/skeleton";
 
 export default function SkeletonDemo() {
   return (

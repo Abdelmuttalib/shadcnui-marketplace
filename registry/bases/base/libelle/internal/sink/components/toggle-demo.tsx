@@ -1,6 +1,6 @@
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/libelle/ui/toggle";
+import { Toggle } from "@/registry/bases/base/libelle/ui/toggle";
 
 export function ToggleDemo() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
-import * as Default from "@/registry/default/ui/accordion";
-import * as V4 from "@/registry/default-v4/ui/accordion";
+import * as Default from "@/registry/bases/base/default/ui/accordion";
+import * as V4 from "@/registry/bases/base/default-v4/ui/accordion";
 
 import type { FixtureSide } from "./types";
 

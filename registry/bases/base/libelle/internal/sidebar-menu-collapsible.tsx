@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/libelle/ui/collapsible";
+} from "@/registry/bases/base/libelle/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -20,7 +20,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarProvider,
-} from "@/registry/libelle/ui/sidebar";
+} from "@/registry/bases/base/libelle/ui/sidebar";
 
 const items = [
   {

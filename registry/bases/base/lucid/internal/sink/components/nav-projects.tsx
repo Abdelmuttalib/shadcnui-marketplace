@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/lucid/ui/sidebar";
+} from "@/registry/bases/base/lucid/ui/sidebar";
 
 export function NavProjects({
   projects,

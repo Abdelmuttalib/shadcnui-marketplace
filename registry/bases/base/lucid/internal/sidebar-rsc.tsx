@@ -12,7 +12,7 @@ import {
   SidebarMenuItem,
   SidebarMenuSkeleton,
   SidebarProvider,
-} from "@/registry/lucid/ui/sidebar";
+} from "@/registry/bases/base/lucid/ui/sidebar";
 
 const projects = [
   {

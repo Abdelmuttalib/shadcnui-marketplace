@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/libelle/ui/table";
+} from "@/registry/bases/base/libelle/ui/table";
 
 const invoices = [
   {

@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Card,
   CardContent,
@@ -9,9 +9,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/libelle/ui/card";
-import { Input } from "@/registry/libelle/ui/input";
-import { Label } from "@/registry/libelle/ui/label";
+} from "@/registry/bases/base/libelle/ui/card";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
 
 export function CardsCreateAccount() {
   return (
@@ -35,10 +35,10 @@ export function CardsCreateAccount() {
         </div>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <span className="w-full border-t border-t-libelle-border" />
+            <span className="border-t-libelle-border w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background px-2 text-muted-foreground">
+            <span className="bg-background text-muted-foreground px-2">
               Or continue with
             </span>
           </div>

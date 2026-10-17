@@ -1,10 +1,10 @@
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/linear/ui/tooltip";
+} from "@/registry/bases/base/linear/ui/tooltip";
 
 export function TooltipDemo() {
   return (

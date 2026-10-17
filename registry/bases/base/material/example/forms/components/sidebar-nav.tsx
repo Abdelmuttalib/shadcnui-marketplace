@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 
 import { SettingsTab } from "../page";
 

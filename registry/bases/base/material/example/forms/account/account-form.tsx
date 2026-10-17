@@ -8,8 +8,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/material/ui/button";
-import { Calendar } from "@/registry/material/ui/calendar";
+import { Button } from "@/registry/bases/base/material/ui/button";
+import { Calendar } from "@/registry/bases/base/material/ui/calendar";
 import {
   Command,
   CommandEmpty,
@@ -17,7 +17,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 import {
   Form,
   FormControl,
@@ -26,13 +26,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/material/ui/form";
-import { Input } from "@/registry/material/ui/input";
+} from "@/registry/bases/base/material/ui/form";
+import { Input } from "@/registry/bases/base/material/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/material/ui/popover";
+} from "@/registry/bases/base/material/ui/popover";
 
 const languages = [
   { label: "English", value: "en" },

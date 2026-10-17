@@ -4,13 +4,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
-import { Button } from "@/registry/libelle/ui/button";
+} from "@/registry/bases/base/libelle/ui/avatar";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/libelle/ui/hover-card";
+} from "@/registry/bases/base/libelle/ui/hover-card";
 
 export function HoverCardDemo() {
   return (
@@ -31,7 +31,7 @@ export function HoverCardDemo() {
             </p>
             <div className="flex items-center pt-2">
               <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
-              <span className="text-xs text-libelle-muted-foreground">
+              <span className="text-libelle-muted-foreground text-xs">
                 Joined December 2021
               </span>
             </div>

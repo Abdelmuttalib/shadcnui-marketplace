@@ -1,7 +1,7 @@
 "use client";
 
-import * as Default from "@/registry/default/ui/skeleton";
-import * as V4 from "@/registry/default-v4/ui/skeleton";
+import * as Default from "@/registry/bases/base/default/ui/skeleton";
+import * as V4 from "@/registry/bases/base/default-v4/ui/skeleton";
 
 import type { FixtureSide } from "./types";
 

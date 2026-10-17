@@ -12,9 +12,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
-import { Button } from "@/registry/linear/ui/button";
-import { Typography } from "@/registry/linear/ui/typography";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 function FeatureIcon({ Icon }: { Icon: React.ElementType }) {
   return (

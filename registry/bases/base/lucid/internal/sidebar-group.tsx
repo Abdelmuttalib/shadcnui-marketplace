@@ -12,7 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/lucid/ui/sidebar";
+} from "@/registry/bases/base/lucid/ui/sidebar";
 
 export default function AppSidebar() {
   return (

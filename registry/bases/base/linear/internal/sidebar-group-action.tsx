@@ -22,7 +22,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/linear/ui/sidebar";
+} from "@/registry/bases/base/linear/ui/sidebar";
 
 export default function AppSidebar() {
   return (

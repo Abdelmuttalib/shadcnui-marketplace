@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 
 export default function CommandDemo() {
   return (

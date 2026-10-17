@@ -4,15 +4,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/avatar";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
+} from "@/registry/bases/base/lucid/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -20,12 +20,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/lucid/ui/command";
+} from "@/registry/bases/base/lucid/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
+} from "@/registry/bases/base/lucid/ui/popover";
 
 export function DemoTeamMembers() {
   return (
@@ -45,7 +45,7 @@ export function DemoTeamMembers() {
             </Avatar>
             <div>
               <p className="text-sm font-medium leading-none">Sofia Davis</p>
-              <p className="text-sm text-lucid-muted-foreground">
+              <p className="text-lucid-muted-foreground text-sm">
                 m@example.com
               </p>
             </div>
@@ -60,7 +60,7 @@ export function DemoTeamMembers() {
             </Avatar>
             <div>
               <p className="text-sm font-medium leading-none">Jackson Lee</p>
-              <p className="text-sm text-lucid-muted-foreground">
+              <p className="text-lucid-muted-foreground text-sm">
                 p@example.com
               </p>
             </div>
@@ -78,7 +78,7 @@ function TeamMemberRuleSelect() {
       <PopoverTrigger asChild>
         <Button variant="outline" className="ml-auto">
           Owner{" "}
-          <ChevronDownIcon className="ml-2 h-4 w-4 text-lucid-muted-foreground" />
+          <ChevronDownIcon className="text-lucid-muted-foreground ml-2 h-4 w-4" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="p-0" align="end">
@@ -89,25 +89,25 @@ function TeamMemberRuleSelect() {
             <CommandGroup>
               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                 <p>Viewer</p>
-                <p className="text-sm text-lucid-muted-foreground">
+                <p className="text-lucid-muted-foreground text-sm">
                   Can view and comment.
                 </p>
               </CommandItem>
               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                 <p>Developer</p>
-                <p className="text-sm text-lucid-muted-foreground">
+                <p className="text-lucid-muted-foreground text-sm">
                   Can view, comment and edit.
                 </p>
               </CommandItem>
               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                 <p>Billing</p>
-                <p className="text-sm text-lucid-muted-foreground">
+                <p className="text-lucid-muted-foreground text-sm">
                   Can view, comment and manage billing.
                 </p>
               </CommandItem>
               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                 <p>Owner</p>
-                <p className="text-sm text-lucid-muted-foreground">
+                <p className="text-lucid-muted-foreground text-sm">
                   Admin-level access to all resources.
                 </p>
               </CommandItem>

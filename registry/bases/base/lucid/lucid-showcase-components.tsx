@@ -1,6 +1,27 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
+import { Badge, BadgeProps } from "@/registry/bases/base/lucid/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/lucid/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/registry/bases/base/lucid/ui/card";
+import {
+  Table,
+  TableBody,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/registry/bases/base/lucid/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/lucid/ui/tabs";
 import { AccordionDemo } from "@/registry/lucid/showcase";
 import { AlertDialogDemo } from "@/registry/lucid/showcase";
 import { BreadcrumbDemo } from "@/registry/lucid/showcase";
@@ -32,23 +53,6 @@ import { TextareaDemo } from "@/registry/lucid/showcase";
 import { ToggleDemo } from "@/registry/lucid/showcase";
 import { ToggleGroupDemo } from "@/registry/lucid/showcase";
 import { TooltipDemo } from "@/registry/lucid/showcase";
-import { Badge, BadgeProps } from "@/registry/lucid/ui/badge";
-import { Button, ButtonProps } from "@/registry/lucid/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/lucid/ui/card";
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/lucid/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/lucid/ui/tabs";
 
 export function LucidShowcaseComponents() {
   const style = "lucid";

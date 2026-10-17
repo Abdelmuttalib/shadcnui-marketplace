@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/material/ui/separator";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 
 import { AccountForm } from "./account-form";
 
@@ -7,7 +7,7 @@ export function SettingsAccountPage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Account</h3>
-        <p className="text-sm text-material-muted-foreground">
+        <p className="text-material-muted-foreground text-sm">
           Update your account settings. Set your preferred language and
           timezone.
         </p>

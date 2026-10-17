@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/lucid/ui/separator";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 
 import { AccountForm } from "./account-form";
 
@@ -7,7 +7,7 @@ export default function SettingsAccountPage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Account</h3>
-        <p className="text-sm text-lucid-muted-foreground">
+        <p className="text-lucid-muted-foreground text-sm">
           Update your account settings. Set your preferred language and
           timezone.
         </p>

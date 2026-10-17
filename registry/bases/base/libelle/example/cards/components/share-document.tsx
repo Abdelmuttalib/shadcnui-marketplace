@@ -4,24 +4,24 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
-import { Button } from "@/registry/libelle/ui/button";
+} from "@/registry/bases/base/libelle/ui/avatar";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/libelle/ui/card";
-import { Input } from "@/registry/libelle/ui/input";
+} from "@/registry/bases/base/libelle/ui/card";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/libelle/ui/select";
-import { Separator } from "@/registry/libelle/ui/separator";
+} from "@/registry/bases/base/libelle/ui/select";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 
 export function DemoShareDocument() {
   return (
@@ -53,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-libelle-muted-foreground">
+                  <p className="text-libelle-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-libelle-muted-foreground">
+                  <p className="text-libelle-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-libelle-muted-foreground">
+                  <p className="text-libelle-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

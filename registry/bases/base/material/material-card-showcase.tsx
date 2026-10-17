@@ -20,9 +20,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
-import { Badge } from "@/registry/material/ui/badge";
-import { Button } from "@/registry/material/ui/button";
+} from "@/registry/bases/base/material/ui/avatar";
+import { Badge } from "@/registry/bases/base/material/ui/badge";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Card,
   CardContent,
@@ -30,21 +30,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/material/ui/card";
+} from "@/registry/bases/base/material/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/material/ui/tooltip";
+} from "@/registry/bases/base/material/ui/tooltip";
 
 export function MaterialCardShowcase() {
   return (
@@ -66,7 +66,7 @@ export function MaterialCardShowcase() {
                 CSS.
               </CardDescription>
             </div>
-            <div className="flex items-center gap-1 rounded-material-md bg-material-secondary text-material-secondary-foreground">
+            <div className="rounded-material-md bg-material-secondary text-material-secondary-foreground flex items-center gap-1">
               <Button variant="secondary" size={"sm"}>
                 <Star className="h-4 w-4" />
                 Star
@@ -106,32 +106,32 @@ export function MaterialCardShowcase() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="flex flex-wrap gap-2 text-sm text-material-muted-foreground">
-            <div className="flex items-center gap-1.5 rounded-material-md border border-material-input/60 bg-material-muted p-1 px-2 text-sm">
+          <div className="text-material-muted-foreground flex flex-wrap gap-2 text-sm">
+            <div className="rounded-material-md border-material-input/60 bg-material-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <CircleDot className="h-4 w-4 text-blue-500" />
               </span>
               <span>TypeScript</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-material-md border border-material-input/60 bg-material-muted p-1 px-2 text-sm">
+            <div className="rounded-material-md border-material-input/60 bg-material-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Star className="h-4 w-4" />
               </span>{" "}
               <span>20.1k stars</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-material-md border border-material-input/60 bg-material-muted p-1 px-2 text-sm">
+            <div className="rounded-material-md border-material-input/60 bg-material-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <GitFork className="h-4 w-4" />
               </span>{" "}
               <span>1.2k forks</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-material-md border border-material-input/60 bg-material-muted p-1 px-2 text-sm">
+            <div className="rounded-material-md border-material-input/60 bg-material-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Eye className="h-4 w-4" />
               </span>{" "}
               <span>342 watching</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-material-md border border-material-input/60 bg-material-muted p-1 px-2 text-sm">
+            <div className="rounded-material-md border-material-input/60 bg-material-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <AlertCircle className="h-4 w-4" />
               </span>{" "}
@@ -186,31 +186,31 @@ export function MaterialCardShowcase() {
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium">Contributors</span>
               <div className="flex -space-x-2">
-                <Avatar className="h-6 w-6 border-2 border-material-background">
+                <Avatar className="border-material-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/SC" />
                   <AvatarFallback className="text-xs">SC</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-material-background">
+                <Avatar className="border-material-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/JD" />
                   <AvatarFallback className="text-xs">JD</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-material-background">
+                <Avatar className="border-material-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/WK" />
                   <AvatarFallback className="text-xs">WK</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-material-background">
+                <Avatar className="border-material-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/BR" />
                   <AvatarFallback className="text-xs">BR</AvatarFallback>
                 </Avatar>
               </div>
             </div>
-            <div className="flex items-center gap-1 text-sm text-material-muted-foreground">
+            <div className="text-material-muted-foreground flex items-center gap-1 text-sm">
               <Calendar className="h-3.5 w-3.5" />
               <span>Updated April 2023</span>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="flex items-center justify-between border-t border-t-material-border pt-4">
+        <CardFooter className="border-t-material-border flex items-center justify-between border-t pt-4">
           <div className="flex items-center gap-2">
             <TooltipProvider>
               <Tooltip>

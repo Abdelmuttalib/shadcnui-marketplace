@@ -8,7 +8,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
+} from "@/registry/bases/base/linear/ui/card";
 // import { themes } from "@/lib/themes";
 
 const data = [
@@ -72,18 +72,18 @@ export function CardsMetric() {
                 content={({ active, payload }) => {
                   if (active && payload && payload.length) {
                     return (
-                      <div className="rounded-linear-lg border bg-linear-background p-2 shadow-sm">
+                      <div className="rounded-linear-lg bg-linear-background border p-2 shadow-sm">
                         <div className="grid grid-cols-2 gap-2">
                           <div className="flex flex-col">
-                            <span className="text-[0.70rem] uppercase text-linear-muted-foreground">
+                            <span className="text-linear-muted-foreground text-[0.70rem] uppercase">
                               Average
                             </span>
-                            <span className="font-bold text-linear-muted-foreground">
+                            <span className="text-linear-muted-foreground font-bold">
                               {payload[0].value}
                             </span>
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[0.70rem] uppercase text-linear-muted-foreground">
+                            <span className="text-linear-muted-foreground text-[0.70rem] uppercase">
                               Today
                             </span>
                             <span className="font-bold">

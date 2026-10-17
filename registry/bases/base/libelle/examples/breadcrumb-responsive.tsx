@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/libelle/ui/breadcrumb";
-import { Button } from "@/registry/libelle/ui/button";
+} from "@/registry/bases/base/libelle/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/libelle/ui/drawer";
+} from "@/registry/bases/base/libelle/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/libelle/ui/dropdown-menu";
+} from "@/registry/bases/base/libelle/ui/dropdown-menu";
 
 const items = [
   { href: "#", label: "Home" },

@@ -7,7 +7,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/linear/ui/chart";
+} from "@/registry/bases/base/linear/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

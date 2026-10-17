@@ -1,13 +1,13 @@
 import * as React from "react";
 
-import { Card, CardContent } from "@/registry/lucid/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/lucid/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/lucid/ui/carousel";
+} from "@/registry/bases/base/lucid/ui/carousel";
 
 export default function CarouselSize() {
   return (

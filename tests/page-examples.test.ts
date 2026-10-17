@@ -9,17 +9,20 @@ import {
   DefaultMailPage,
 } from "@/registry/bases/base/default/page-examples";
 import { DefaultV4CardsPage } from "@/registry/bases/base/default-v4/page-examples";
-import { LibelleBoardPage } from "@/registry/libelle/page-examples";
-import { LucidMusicPage } from "@/registry/lucid/page-examples";
+import { LibelleBoardPage } from "@/registry/bases/base/libelle/page-examples";
+import { LucidMusicPage } from "@/registry/bases/base/lucid/page-examples";
 import {
   MaterialAuthenticationPage,
   MaterialBoardPage,
-} from "@/registry/material/page-examples";
-import { MoonChartsPage } from "@/registry/moon/page-examples";
-import { NeonBoardPage, NeonTaskPage } from "@/registry/neon/page-examples";
-import { SnowSettingsProfilePage } from "@/registry/snow/page-examples";
+} from "@/registry/bases/base/material/page-examples";
+import { MoonChartsPage } from "@/registry/bases/base/moon/page-examples";
+import {
+  NeonBoardPage,
+  NeonTaskPage,
+} from "@/registry/bases/base/neon/page-examples";
+import { SnowSettingsProfilePage } from "@/registry/bases/base/snow/page-examples";
+import { WedgesDashboardPage } from "@/registry/bases/base/wedges/page-examples";
 import { renderStylePageExample } from "@/registry/styles-components";
-import { WedgesDashboardPage } from "@/registry/wedges/page-examples";
 
 describe("renderStylePageExample", () => {
   it.each([

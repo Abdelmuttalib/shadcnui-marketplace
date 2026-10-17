@@ -4,25 +4,25 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
-import { Button } from "@/registry/libelle/ui/button";
+} from "@/registry/bases/base/libelle/ui/avatar";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/libelle/ui/card";
-import { Input } from "@/registry/libelle/ui/input";
-import { Label } from "@/registry/libelle/ui/label";
+} from "@/registry/bases/base/libelle/ui/card";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/libelle/ui/select";
-import { Separator } from "@/registry/libelle/ui/separator";
+} from "@/registry/bases/base/libelle/ui/select";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 
 export function CardsShare() {
   return (
@@ -61,7 +61,7 @@ export function CardsShare() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-muted-foreground">m@example.com</p>
+                  <p className="text-muted-foreground text-sm">m@example.com</p>
                 </div>
               </div>
               <Select defaultValue="edit">
@@ -84,7 +84,7 @@ export function CardsShare() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-muted-foreground">b@example.com</p>
+                  <p className="text-muted-foreground text-sm">b@example.com</p>
                 </div>
               </div>
               <Select defaultValue="view">
@@ -107,7 +107,7 @@ export function CardsShare() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-muted-foreground">p@example.com</p>
+                  <p className="text-muted-foreground text-sm">p@example.com</p>
                 </div>
               </div>
               <Select defaultValue="view">

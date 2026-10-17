@@ -2,13 +2,13 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/lucid/ui/resizable";
+} from "@/registry/bases/base/lucid/ui/resizable";
 
 export function ResizableHandleDemo() {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="min-h-[200px] max-w-md rounded-lucid-lg border border-lucid-border md:min-w-[450px]"
+      className="rounded-lucid-lg border-lucid-border min-h-[200px] max-w-md border md:min-w-[450px]"
     >
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">

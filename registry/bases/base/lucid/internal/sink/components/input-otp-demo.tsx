@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/lucid/ui/input-otp";
+} from "@/registry/bases/base/lucid/ui/input-otp";
 
 export function InputOTPDemo() {
   return (

@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
+} from "@/registry/bases/base/lucid/ui/avatar";
 
 export function AvatarDemo() {
   return (

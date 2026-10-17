@@ -1,6 +1,6 @@
-import DatePickerWithRange from "@/registry/linear/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/linear/ui/card";
-import { Label } from "@/registry/linear/ui/label";
+import DatePickerWithRange from "@/registry/bases/base/linear/components/date-picker-with-range";
+import { Card, CardContent } from "@/registry/bases/base/linear/ui/card";
+import { Label } from "@/registry/bases/base/linear/ui/label";
 
 export function DemoDatePicker() {
   return (

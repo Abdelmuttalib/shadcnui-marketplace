@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns";
 
-import { Calendar } from "@/registry/libelle/ui/calendar";
-import { Card, CardContent } from "@/registry/libelle/ui/card";
+import { Calendar } from "@/registry/bases/base/libelle/ui/calendar";
+import { Card, CardContent } from "@/registry/bases/base/libelle/ui/card";
 
 const start = new Date(2023, 5, 5);
 

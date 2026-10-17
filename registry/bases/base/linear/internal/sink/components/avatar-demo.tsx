@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
+} from "@/registry/bases/base/linear/ui/avatar";
 
 export function AvatarDemo() {
   return (

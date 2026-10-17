@@ -1,6 +1,6 @@
 import { Italic } from "lucide-react";
 
-import { Toggle } from "@/registry/material/ui/toggle";
+import { Toggle } from "@/registry/bases/base/material/ui/toggle";
 
 export default function ToggleSm() {
   return (

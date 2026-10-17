@@ -3,8 +3,8 @@ import { Column } from "@tanstack/react-table";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/libelle/ui/badge";
-import { Button } from "@/registry/libelle/ui/button";
+import { Badge } from "@/registry/bases/base/libelle/ui/badge";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -13,13 +13,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/libelle/ui/command";
+} from "@/registry/bases/base/libelle/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/libelle/ui/popover";
-import { Separator } from "@/registry/libelle/ui/separator";
+} from "@/registry/bases/base/libelle/ui/popover";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
@@ -45,7 +45,7 @@ export function DataTableFacetedFilter<TData, TValue>({
         <Button
           variant="outline"
           size="sm"
-          className="h-8 border-dashed border-libelle-border"
+          className="border-libelle-border h-8 border-dashed"
         >
           <PlusCircledIcon className="mr-2 h-4 w-4" />
           {title}
@@ -109,7 +109,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-libelle-sm border border-libelle-ring",
+                        "rounded-libelle-sm border-libelle-ring mr-2 flex h-4 w-4 items-center justify-center border",
                         isSelected
                           ? "bg-libelle-ring [&_svg]:text-libelle-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -118,7 +118,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-libelle-muted-foreground" />
+                      <option.icon className="text-libelle-muted-foreground mr-2 h-4 w-4" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

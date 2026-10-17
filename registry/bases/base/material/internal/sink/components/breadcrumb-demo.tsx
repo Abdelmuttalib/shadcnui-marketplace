@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/material/ui/breadcrumb";
+} from "@/registry/bases/base/material/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (

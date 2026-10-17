@@ -19,7 +19,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/linear/ui/command";
+} from "@/registry/bases/base/linear/ui/command";
 
 export default function CommandDialogDemo() {
   const [open, setOpen] = React.useState(false);
@@ -38,9 +38,9 @@ export default function CommandDialogDemo() {
 
   return (
     <>
-      <p className="text-sm text-linear-muted-foreground">
+      <p className="text-linear-muted-foreground text-sm">
         Press{" "}
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-linear-muted px-1.5 font-mono text-[10px] font-medium text-linear-muted-foreground opacity-100">
+        <kbd className="bg-linear-muted text-linear-muted-foreground pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100">
           <span className="text-xs">⌘</span>J
         </kbd>
       </p>

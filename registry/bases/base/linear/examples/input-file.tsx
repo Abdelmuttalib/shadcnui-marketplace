@@ -1,5 +1,5 @@
-import { Input } from "@/registry/linear/ui/input";
-import { Label } from "@/registry/linear/ui/label";
+import { Input } from "@/registry/bases/base/linear/ui/input";
+import { Label } from "@/registry/bases/base/linear/ui/label";
 
 export default function InputFile() {
   return (

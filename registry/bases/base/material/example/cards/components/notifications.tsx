@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/material/ui/card";
+} from "@/registry/bases/base/material/ui/card";
 
 export function DemoNotifications() {
   return (
@@ -18,29 +18,29 @@ export function DemoNotifications() {
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-1">
-        <div className="-mx-2 flex items-start space-x-4 rounded-material-md p-2 transition-all hover:bg-material-accent hover:text-material-accent-foreground">
+        <div className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground -mx-2 flex items-start space-x-4 p-2 transition-all">
           <BellIcon className="mt-px h-5 w-5" />
           <div className="space-y-1">
             <p className="text-sm font-medium leading-none">Everything</p>
-            <p className="text-sm text-material-muted-foreground">
+            <p className="text-material-muted-foreground text-sm">
               Email digest, mentions & all activity.
             </p>
           </div>
         </div>
-        <div className="-mx-2 flex items-start space-x-4 rounded-material-md bg-material-accent p-2 text-material-accent-foreground transition-all">
+        <div className="rounded-material-md bg-material-accent text-material-accent-foreground -mx-2 flex items-start space-x-4 p-2 transition-all">
           <PersonIcon className="mt-px h-5 w-5" />
           <div className="space-y-1">
             <p className="text-sm font-medium leading-none">Available</p>
-            <p className="text-sm text-material-muted-foreground">
+            <p className="text-material-muted-foreground text-sm">
               Only mentions and comments.
             </p>
           </div>
         </div>
-        <div className="-mx-2 flex items-start space-x-4 rounded-material-md p-2 transition-all hover:bg-material-accent hover:text-material-accent-foreground">
+        <div className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground -mx-2 flex items-start space-x-4 p-2 transition-all">
           <EyeNoneIcon className="mt-px h-5 w-5" />
           <div className="space-y-1">
             <p className="text-sm font-medium leading-none">Ignoring</p>
-            <p className="text-sm text-material-muted-foreground">
+            <p className="text-material-muted-foreground text-sm">
               Turn off all notifications.
             </p>
           </div>

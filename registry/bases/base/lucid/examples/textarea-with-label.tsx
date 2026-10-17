@@ -1,5 +1,5 @@
-import { Label } from "@/registry/lucid/ui/label";
-import { Textarea } from "@/registry/lucid/ui/textarea";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
+import { Textarea } from "@/registry/bases/base/lucid/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

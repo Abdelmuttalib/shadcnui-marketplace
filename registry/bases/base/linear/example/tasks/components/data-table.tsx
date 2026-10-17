@@ -23,7 +23,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/linear/ui/table";
+} from "@/registry/bases/base/linear/ui/table";
 
 import { DataTablePagination } from "./data-table-pagination";
 import { DataTableToolbar } from "./data-table-toolbar";
@@ -70,7 +70,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className="space-y-4">
       <DataTableToolbar table={table} />
-      <div className="rounded-linear-md border border-linear-border">
+      <div className="rounded-linear-md border-linear-border border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

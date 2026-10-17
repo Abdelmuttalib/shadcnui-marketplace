@@ -23,15 +23,15 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/linear/ui/breadcrumb";
-import { Button } from "@/registry/linear/ui/button";
+} from "@/registry/bases/base/linear/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/linear/ui/dialog";
+} from "@/registry/bases/base/linear/ui/dialog";
 import {
   Sidebar,
   SidebarContent,
@@ -41,7 +41,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/linear/ui/sidebar";
+} from "@/registry/bases/base/linear/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -66,7 +66,7 @@ const data = {
 
 export default function Page() {
   return (
-    <div className="flex h-svh items-center justify-center">
+    <div className="h-svh flex items-center justify-center">
       <SettingsDialog />
     </div>
   );
@@ -110,7 +110,7 @@ function SettingsDialog() {
             </SidebarContent>
           </Sidebar>
           <main className="flex h-[480px] flex-1 flex-col overflow-hidden">
-            <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+            <header className="group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear">
               <div className="flex items-center gap-2 px-4">
                 <Breadcrumb>
                   <BreadcrumbList>
@@ -129,7 +129,7 @@ function SettingsDialog() {
               {Array.from({ length: 10 }).map((_, i) => (
                 <div
                   key={i}
-                  className="aspect-video max-w-3xl rounded-xl bg-linear-muted/50"
+                  className="bg-linear-muted/50 aspect-video max-w-3xl rounded-xl"
                 />
               ))}
             </div>

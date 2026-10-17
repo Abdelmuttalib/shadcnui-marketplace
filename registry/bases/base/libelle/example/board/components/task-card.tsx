@@ -8,9 +8,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
-import { Button } from "@/registry/libelle/ui/button";
-import { Card, CardContent } from "@/registry/libelle/ui/card";
+} from "@/registry/bases/base/libelle/ui/avatar";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/libelle/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -19,9 +19,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/libelle/ui/dialog";
-import { Input } from "@/registry/libelle/ui/input";
-import { Label } from "@/registry/libelle/ui/label";
+} from "@/registry/bases/base/libelle/ui/dialog";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
 import {
   Select,
   SelectContent,
@@ -29,9 +29,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/libelle/ui/select";
-import { Separator } from "@/registry/libelle/ui/separator";
-import { Textarea } from "@/registry/libelle/ui/textarea";
+} from "@/registry/bases/base/libelle/ui/select";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
+import { Textarea } from "@/registry/bases/base/libelle/ui/textarea";
 
 import {
   Task,
@@ -64,19 +64,19 @@ function TaskLabelIcon({ label }: { label: Task["label"] }) {
   switch (label) {
     case "bug":
       return (
-        <span className="block size-1.5 rounded-libelle-sm bg-red-400"></span>
+        <span className="size-1.5 rounded-libelle-sm block bg-red-400"></span>
       );
     case "improvement":
       return (
-        <span className="block size-1.5 rounded-libelle-sm bg-green-400"></span>
+        <span className="size-1.5 rounded-libelle-sm block bg-green-400"></span>
       );
     case "feature":
       return (
-        <span className="block size-1.5 rounded-libelle-sm bg-blue-400"></span>
+        <span className="size-1.5 rounded-libelle-sm block bg-blue-400"></span>
       );
     case "design":
       return (
-        <span className="block size-1.5 rounded-libelle-sm bg-purple-400"></span>
+        <span className="size-1.5 rounded-libelle-sm block bg-purple-400"></span>
       );
   }
 }
@@ -89,12 +89,12 @@ export function TaskCard({ task }: { task: Task }) {
       <CardContent className="p-4">
         <div className="flex items-center justify-between">
           {/* Task ID */}
-          <span className="text-xs text-libelle-muted-foreground">
+          <span className="text-libelle-muted-foreground text-xs">
             INI-{id}
           </span>
 
           {/* Progress Circle */}
-          <div className="relative size-5 text-libelle-muted-foreground">
+          <div className="size-5 text-libelle-muted-foreground relative">
             {assignee ? (
               <>
                 <Avatar className="size-5">
@@ -114,7 +114,7 @@ export function TaskCard({ task }: { task: Task }) {
 
                 <span
                   aria-hidden="true"
-                  className="absolute bottom-0 right-0 inline-block size-2 rounded-full border bg-green-500"
+                  className="size-2 absolute bottom-0 right-0 inline-block rounded-full border bg-green-500"
                 ></span>
               </>
             ) : (
@@ -124,7 +124,7 @@ export function TaskCard({ task }: { task: Task }) {
         </div>
 
         {/* Task Title */}
-        <h3 className="mt-2 text-sm text-libelle-foreground">{title}</h3>
+        <h3 className="text-libelle-foreground mt-2 text-sm">{title}</h3>
 
         {/* Assignee Avatar */}
         {/* <div className="mt-2 flex items-center space-x-2">
@@ -140,7 +140,7 @@ export function TaskCard({ task }: { task: Task }) {
         <div className="mt-2 flex items-center space-x-1.5">
           <div
             className={cn(
-              "flex w-fit items-center rounded-libelle-sm border border-libelle-border p-0.5 text-libelle-muted-foreground",
+              "rounded-libelle-sm border-libelle-border text-libelle-muted-foreground flex w-fit items-center border p-0.5",
               {
                 "text-orange-600": priority === "urgent",
                 "text-amber-500": priority === "high",
@@ -153,7 +153,7 @@ export function TaskCard({ task }: { task: Task }) {
           </div>
           <div
             className={cn(
-              "flex w-fit items-center gap-1.5 rounded-libelle-sm border border-libelle-border p-0.5 px-1.5 text-libelle-muted-foreground",
+              "rounded-libelle-sm border-libelle-border text-libelle-muted-foreground flex w-fit items-center gap-1.5 border p-0.5 px-1.5",
               {
                 "border-red-400/10 bg-red-400/5": label === "bug",
                 "border-green-400/10 bg-green-400/5": label === "improvement",
@@ -163,7 +163,7 @@ export function TaskCard({ task }: { task: Task }) {
             )}
           >
             <TaskLabelIcon label={label} />
-            <span className="text-xs font-medium text-libelle-muted-foreground">
+            <span className="text-libelle-muted-foreground text-xs font-medium">
               {label}
             </span>
           </div>
@@ -229,7 +229,7 @@ export function TaskCardDialog({ task }: { task: Task }) {
               <div className="flex flex-col gap-4">
                 <div className="flex gap-4">
                   <div className="flex w-full items-center justify-between gap-4">
-                    <h5 className="text-sm text-libelle-foreground">
+                    <h5 className="text-libelle-foreground text-sm">
                       Comments
                     </h5>
                     <Button variant="ghost" size={"icon-sm"}>
@@ -241,7 +241,7 @@ export function TaskCardDialog({ task }: { task: Task }) {
                   {[...comments, ...comments].map((comment) => (
                     <div
                       key={comment.id}
-                      className="grid gap-4 rounded-libelle-md border border-b border-libelle-border bg-libelle-muted p-4"
+                      className="rounded-libelle-md border-libelle-border bg-libelle-muted grid gap-4 border border-b p-4"
                     >
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
@@ -252,17 +252,17 @@ export function TaskCardDialog({ task }: { task: Task }) {
                             />
                             <AvatarFallback>CN</AvatarFallback>
                           </Avatar>
-                          <h6 className="text-xs font-medium text-libelle-foreground">
+                          <h6 className="text-libelle-foreground text-xs font-medium">
                             {comment.user}
                           </h6>
                         </div>
 
-                        <span className="text-xs font-medium text-libelle-muted-foreground">
+                        <span className="text-libelle-muted-foreground text-xs font-medium">
                           {formatDistanceToNow(comment.date)}
                         </span>
                       </div>
 
-                      <div className="px-0.5 text-sm text-libelle-foreground">
+                      <div className="text-libelle-foreground px-0.5 text-sm">
                         {comment.text}
                       </div>
                     </div>

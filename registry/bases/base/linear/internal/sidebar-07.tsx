@@ -30,7 +30,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
+} from "@/registry/bases/base/linear/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -38,12 +38,12 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/linear/ui/breadcrumb";
+} from "@/registry/bases/base/linear/ui/breadcrumb";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/linear/ui/collapsible";
+} from "@/registry/bases/base/linear/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -53,8 +53,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
-import { Separator } from "@/registry/linear/ui/separator";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -73,7 +73,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/linear/ui/sidebar";
+} from "@/registry/bases/base/linear/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -228,7 +228,7 @@ export default function Page() {
                     size="lg"
                     className="data-[state=open]:bg-linear-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                   >
-                    <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-linear-sidebar-primary text-sidebar-primary-foreground">
+                    <div className="size-8 bg-linear-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                       <activeTeam.logo className="size-4" />
                     </div>
                     <div className="grid flex-1 text-left text-sm leading-tight">
@@ -243,12 +243,12 @@ export default function Page() {
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
-                  className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                  className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
                   align="start"
                   side="bottom"
                   sideOffset={4}
                 >
-                  <DropdownMenuLabel className="text-xs text-linear-muted-foreground">
+                  <DropdownMenuLabel className="text-linear-muted-foreground text-xs">
                     Teams
                   </DropdownMenuLabel>
                   {data.teams.map((team, index) => (
@@ -257,7 +257,7 @@ export default function Page() {
                       onClick={() => setActiveTeam(team)}
                       className="gap-2 p-2"
                     >
-                      <div className="flex size-6 items-center justify-center rounded-linear-sm border">
+                      <div className="size-6 rounded-linear-sm flex items-center justify-center border">
                         <team.logo className="size-4 shrink-0" />
                       </div>
                       {team.name}
@@ -266,10 +266,10 @@ export default function Page() {
                   ))}
                   <DropdownMenuSeparator />
                   <DropdownMenuItem className="gap-2 p-2">
-                    <div className="flex size-6 items-center justify-center rounded-linear-md border bg-linear-background">
+                    <div className="size-6 rounded-linear-md bg-linear-background flex items-center justify-center border">
                       <Plus className="size-4" />
                     </div>
-                    <div className="font-medium text-linear-muted-foreground">
+                    <div className="text-linear-muted-foreground font-medium">
                       Add team
                     </div>
                   </DropdownMenuItem>
@@ -388,11 +388,11 @@ export default function Page() {
                         {data.user.email}
                       </span>
                     </div>
-                    <ChevronsUpDown className="ml-auto size-4" />
+                    <ChevronsUpDown className="size-4 ml-auto" />
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
-                  className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                  className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
                   side="bottom"
                   align="end"
                   sideOffset={4}
@@ -453,7 +453,7 @@ export default function Page() {
         <SidebarRail />
       </Sidebar>
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
@@ -474,11 +474,11 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-linear-muted/50" />
-            <div className="aspect-video rounded-xl bg-linear-muted/50" />
-            <div className="aspect-video rounded-xl bg-linear-muted/50" />
+            <div className="bg-linear-muted/50 aspect-video rounded-xl" />
+            <div className="bg-linear-muted/50 aspect-video rounded-xl" />
+            <div className="bg-linear-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-linear-muted/50 md:min-h-min" />
+          <div className="bg-linear-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

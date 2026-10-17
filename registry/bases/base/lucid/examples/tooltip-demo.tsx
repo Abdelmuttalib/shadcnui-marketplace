@@ -1,10 +1,10 @@
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/lucid/ui/tooltip";
+} from "@/registry/bases/base/lucid/ui/tooltip";
 
 export default function TooltipDemo() {
   return (

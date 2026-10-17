@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/material/ui/calendar";
+import { Calendar } from "@/registry/bases/base/material/ui/calendar";
 
 export function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -12,7 +12,7 @@ export function CalendarDemo() {
       mode="single"
       selected={date}
       onSelect={setDate}
-      className="rounded-material-md border border-material-border shadow"
+      className="rounded-material-md border-material-border border shadow"
     />
   );
 }

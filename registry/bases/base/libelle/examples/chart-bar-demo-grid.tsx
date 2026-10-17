@@ -2,7 +2,10 @@
 
 import { Bar, BarChart, CartesianGrid } from "recharts";
 
-import { ChartConfig, ChartContainer } from "@/registry/libelle/ui/chart";
+import {
+  ChartConfig,
+  ChartContainer,
+} from "@/registry/bases/base/libelle/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

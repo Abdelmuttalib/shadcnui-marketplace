@@ -17,31 +17,31 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
-import { Button } from "@/registry/lucid/ui/button";
-import { Calendar } from "@/registry/lucid/ui/calendar";
+} from "@/registry/bases/base/lucid/ui/avatar";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { Calendar } from "@/registry/bases/base/lucid/ui/calendar";
 import {
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@/registry/lucid/ui/dropdown-menu";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
-import { Label } from "@/registry/lucid/ui/label";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
-import { Separator } from "@/registry/lucid/ui/separator";
-import { Switch } from "@/registry/lucid/ui/switch";
-import { Textarea } from "@/registry/lucid/ui/textarea";
+} from "@/registry/bases/base/lucid/ui/popover";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
+import { Switch } from "@/registry/bases/base/lucid/ui/switch";
+import { Textarea } from "@/registry/bases/base/lucid/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/lucid/ui/tooltip";
+} from "@/registry/bases/base/lucid/ui/tooltip";
 
 import { Mail } from "../data";
 
@@ -95,7 +95,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 </TooltipTrigger>
               </PopoverTrigger>
               <PopoverContent className="flex w-[535px] p-0">
-                <div className="flex flex-col gap-2 border-r border-r-lucid-border px-2 py-4">
+                <div className="border-r-lucid-border flex flex-col gap-2 border-r px-2 py-4">
                   <div className="px-4 text-sm font-medium">Snooze until</div>
                   <div className="grid min-w-[250px] gap-1">
                     <Button
@@ -103,7 +103,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Later today{" "}
-                      <span className="ml-auto text-lucid-muted-foreground">
+                      <span className="text-lucid-muted-foreground ml-auto">
                         {format(addHours(today, 4), "E, h:m b")}
                       </span>
                     </Button>
@@ -112,7 +112,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Tomorrow
-                      <span className="ml-auto text-lucid-muted-foreground">
+                      <span className="text-lucid-muted-foreground ml-auto">
                         {format(addDays(today, 1), "E, h:m b")}
                       </span>
                     </Button>
@@ -121,7 +121,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       This weekend
-                      <span className="ml-auto text-lucid-muted-foreground">
+                      <span className="text-lucid-muted-foreground ml-auto">
                         {format(nextSaturday(today), "E, h:m b")}
                       </span>
                     </Button>
@@ -130,7 +130,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Next week
-                      <span className="ml-auto text-lucid-muted-foreground">
+                      <span className="text-lucid-muted-foreground ml-auto">
                         {format(addDays(today, 7), "E, h:m b")}
                       </span>
                     </Button>
@@ -212,7 +212,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
               </div>
             </div>
             {mail.date && (
-              <div className="ml-auto text-xs text-lucid-muted-foreground">
+              <div className="text-lucid-muted-foreground ml-auto text-xs">
                 {format(new Date(mail.date), "PPpp")}
               </div>
             )}
@@ -250,7 +250,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </div>
         </div>
       ) : (
-        <div className="p-8 text-center text-lucid-muted-foreground">
+        <div className="text-lucid-muted-foreground p-8 text-center">
           No message selected
         </div>
       )}

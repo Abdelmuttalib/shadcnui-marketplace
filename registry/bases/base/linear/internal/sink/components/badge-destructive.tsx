@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/linear/ui/badge";
+import { Badge } from "@/registry/bases/base/linear/ui/badge";
 
 export function BadgeDestructive() {
   return <Badge variant="destructive">Destructive</Badge>;

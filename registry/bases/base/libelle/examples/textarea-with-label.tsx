@@ -1,5 +1,5 @@
-import { Label } from "@/registry/libelle/ui/label";
-import { Textarea } from "@/registry/libelle/ui/textarea";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
+import { Textarea } from "@/registry/bases/base/libelle/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/material/ui/input";
+import { Input } from "@/registry/bases/base/material/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/material/ui/resizable";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/resizable";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/material/ui/tabs";
-import { TooltipProvider } from "@/registry/material/ui/tooltip";
+} from "@/registry/bases/base/material/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/material/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-material-background/60 bg-material-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-3 h-4 w-4 text-material-muted-foreground" />
+                  <Search className="text-material-muted-foreground absolute left-2 top-3 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

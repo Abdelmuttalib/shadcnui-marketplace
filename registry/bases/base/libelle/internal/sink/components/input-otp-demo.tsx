@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/libelle/ui/input-otp";
+} from "@/registry/bases/base/libelle/ui/input-otp";
 
 export function InputOTPDemo() {
   return (

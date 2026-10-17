@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/lucid/ui/typography";
+import { Typography } from "@/registry/bases/base/lucid/ui/typography";
 
 export default function TypographyMuted() {
   return (

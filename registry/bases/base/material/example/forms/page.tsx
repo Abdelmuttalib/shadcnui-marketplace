@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Separator } from "@/registry/material/ui/separator";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 
 import { AccountForm } from "./account/account-form";
 import { AppearanceForm } from "./appearance/appearance-form";
@@ -83,7 +83,7 @@ function SettingsInternalLayout({
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">{title}</h3>
-        <p className="text-sm text-material-muted-foreground">{description}</p>
+        <p className="text-material-muted-foreground text-sm">{description}</p>
       </div>
       <Separator />
       {children}

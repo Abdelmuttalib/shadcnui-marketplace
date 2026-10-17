@@ -6,7 +6,7 @@ import * as React from "react";
 
 import { useMutationObserver } from "@/hooks/use-mutation-observer";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -14,18 +14,18 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/lucid/ui/command";
+} from "@/registry/bases/base/lucid/ui/command";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/lucid/ui/hover-card";
-import { Label } from "@/registry/lucid/ui/label";
+} from "@/registry/bases/base/lucid/ui/hover-card";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
+} from "@/registry/bases/base/lucid/ui/popover";
 
 import { Model, ModelType } from "../data/models";
 
@@ -77,7 +77,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
             >
               <div className="grid gap-2">
                 <h4 className="font-medium leading-none">{peekedModel.name}</h4>
-                <div className="text-sm text-lucid-muted-foreground">
+                <div className="text-lucid-muted-foreground text-sm">
                   {peekedModel.description}
                 </div>
                 {peekedModel.strengths ? (
@@ -85,7 +85,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                     <h5 className="text-sm font-medium leading-none">
                       Strengths
                     </h5>
-                    <ul className="text-sm text-lucid-muted-foreground">
+                    <ul className="text-lucid-muted-foreground text-sm">
                       {peekedModel.strengths}
                     </ul>
                   </div>

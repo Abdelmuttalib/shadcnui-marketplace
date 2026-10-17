@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/material/ui/badge";
+import { Badge } from "@/registry/bases/base/material/ui/badge";
 
 export default function BadgeDemo() {
   return (

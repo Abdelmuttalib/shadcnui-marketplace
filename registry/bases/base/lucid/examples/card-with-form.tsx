@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -8,16 +8,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
-import { Input } from "@/registry/lucid/ui/input";
-import { Label } from "@/registry/lucid/ui/label";
+} from "@/registry/bases/base/lucid/ui/card";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
+} from "@/registry/bases/base/lucid/ui/select";
 
 export default function CardWithForm() {
   return (

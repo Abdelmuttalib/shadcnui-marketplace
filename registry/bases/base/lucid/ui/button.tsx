@@ -1,6 +1,5 @@
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import Link, { LinkProps } from "next/link";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -59,49 +58,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = "Button";
 
-export interface ButtonLinkProps
-  extends LinkProps,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-  iconLeft?: React.ReactNode;
-  iconRight?: React.ReactNode;
-  className?: string;
-  children: React.ReactNode;
-}
-
-const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  (
-    {
-      className,
-      variant,
-      size,
-      asChild = false,
-      iconLeft,
-      iconRight,
-      ...props
-    },
-    ref
-  ) => {
-    const Comp = asChild ? Slot : Link;
-
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }), {
-          "inline-flex items-center justify-center gap-x-1.5":
-            iconLeft || iconRight,
-        })}
-        ref={ref}
-        {...props}
-      >
-        <>
-          {iconLeft ? <>{iconLeft}</> : null}
-          <>{props.children}</>
-          {iconRight ? <>{iconRight}</> : null}
-        </>
-      </Comp>
-    );
-  }
-);
-ButtonLink.displayName = "ButtonLink";
-
-export { Button, ButtonLink, buttonVariants };
+export { Button, buttonVariants };

@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/lucid/ui/resizable";
+} from "@/registry/bases/base/lucid/ui/resizable";
 
 export default function ResizableDemo() {
   return (

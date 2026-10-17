@@ -39,13 +39,13 @@ import {
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/registry/material/ui/breadcrumb";
-import { Button } from "@/registry/material/ui/button";
+} from "@/registry/bases/base/material/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/material/ui/collapsible";
+} from "@/registry/bases/base/material/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -54,13 +54,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/material/ui/popover";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/popover";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -81,7 +81,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@/registry/material/ui/sidebar";
+} from "@/registry/bases/base/material/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -404,8 +404,8 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 px-4 py-10">
-          <div className="mx-auto h-24 w-full max-w-3xl rounded-xl bg-material-muted/50" />
-          <div className="mx-auto h-full w-full max-w-3xl rounded-xl bg-material-muted/50" />
+          <div className="bg-material-muted/50 mx-auto h-24 w-full max-w-3xl rounded-xl" />
+          <div className="bg-material-muted/50 mx-auto h-full w-full max-w-3xl rounded-xl" />
         </div>
       </SidebarInset>
     </SidebarProvider>
@@ -445,7 +445,7 @@ function NavActions({
 
   return (
     <div className="flex items-center gap-2 text-sm">
-      <div className="hidden font-medium text-material-muted-foreground md:inline-block">
+      <div className="text-material-muted-foreground hidden font-medium md:inline-block">
         Edit Oct 08
       </div>
       <Button variant="ghost" size="icon" className="h-7 w-7">
@@ -456,7 +456,7 @@ function NavActions({
           <Button
             variant="ghost"
             size="icon"
-            className="h-7 w-7 data-[state=open]:bg-material-accent"
+            className="data-[state=open]:bg-material-accent h-7 w-7"
           >
             <MoreHorizontal />
           </Button>
@@ -644,7 +644,7 @@ function NavWorkspaces({
                 </SidebarMenuButton>
                 <CollapsibleTrigger asChild>
                   <SidebarMenuAction
-                    className="left-2 bg-material-sidebar-accent text-sidebar-accent-foreground data-[state=open]:rotate-90"
+                    className="bg-material-sidebar-accent text-sidebar-accent-foreground left-2 data-[state=open]:rotate-90"
                     showOnHover
                   >
                     <ChevronRight />
@@ -703,7 +703,7 @@ function TeamSwitcher({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton className="w-fit px-1.5">
-              <div className="flex aspect-square size-5 items-center justify-center rounded-material-md bg-material-sidebar-primary text-sidebar-primary-foreground">
+              <div className="size-5 rounded-material-md bg-material-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center">
                 <activeTeam.logo className="size-3" />
               </div>
               <span className="truncate font-semibold">{activeTeam.name}</span>
@@ -716,7 +716,7 @@ function TeamSwitcher({
             side="bottom"
             sideOffset={4}
           >
-            <DropdownMenuLabel className="text-xs text-material-muted-foreground">
+            <DropdownMenuLabel className="text-material-muted-foreground text-xs">
               Teams
             </DropdownMenuLabel>
             {teams.map((team, index) => (
@@ -725,7 +725,7 @@ function TeamSwitcher({
                 onClick={() => setActiveTeam(team)}
                 className="gap-2 p-2"
               >
-                <div className="flex size-6 items-center justify-center rounded-material-sm border">
+                <div className="size-6 rounded-material-sm flex items-center justify-center border">
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}
@@ -734,10 +734,10 @@ function TeamSwitcher({
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-material-md border bg-material-background">
+              <div className="size-6 rounded-material-md bg-material-background flex items-center justify-center border">
                 <Plus className="size-4" />
               </div>
-              <div className="font-medium text-material-muted-foreground">
+              <div className="text-material-muted-foreground font-medium">
                 Add team
               </div>
             </DropdownMenuItem>

@@ -12,8 +12,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
-import { Button } from "@/registry/material/ui/button";
+} from "@/registry/bases/base/material/ui/avatar";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -31,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/material/ui/dialog";
-import { Input } from "@/registry/material/ui/input";
-import { Label } from "@/registry/material/ui/label";
+} from "@/registry/bases/base/material/ui/dialog";
+import { Input } from "@/registry/bases/base/material/ui/input";
+import { Label } from "@/registry/bases/base/material/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/material/ui/popover";
+} from "@/registry/bases/base/material/ui/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/material/ui/select";
+} from "@/registry/bases/base/material/ui/select";
 
 const groups = [
   {

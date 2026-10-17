@@ -1,5 +1,5 @@
-import { Input } from "@/registry/libelle/ui/input";
-import { Label } from "@/registry/libelle/ui/label";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
 
 export default function InputFile() {
   return (

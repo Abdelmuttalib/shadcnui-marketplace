@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
-import { Input } from "@/registry/linear/ui/input";
-import { Label } from "@/registry/linear/ui/label";
+} from "@/registry/bases/base/linear/ui/card";
+import { Input } from "@/registry/bases/base/linear/ui/input";
+import { Label } from "@/registry/bases/base/linear/ui/label";
 
 export const description = "A simple login form.";
 

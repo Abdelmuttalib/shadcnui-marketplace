@@ -1,4 +1,4 @@
-import { Typography } from "@/registry/material/ui/typography";
+import { Typography } from "@/registry/bases/base/material/ui/typography";
 
 export default function TypographyList() {
   return (

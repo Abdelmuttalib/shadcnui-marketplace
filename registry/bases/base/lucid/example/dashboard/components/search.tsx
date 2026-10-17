@@ -1,4 +1,4 @@
-import { Input } from "@/registry/lucid/ui/input";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 
 export function Search() {
   return (

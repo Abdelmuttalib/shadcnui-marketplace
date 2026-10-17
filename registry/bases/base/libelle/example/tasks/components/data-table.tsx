@@ -23,7 +23,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/libelle/ui/table";
+} from "@/registry/bases/base/libelle/ui/table";
 
 import { DataTablePagination } from "./data-table-pagination";
 import { DataTableToolbar } from "./data-table-toolbar";
@@ -70,7 +70,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className="space-y-4">
       <DataTableToolbar table={table} />
-      <div className="rounded-libelle-md border border-libelle-border">
+      <div className="rounded-libelle-md border-libelle-border border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

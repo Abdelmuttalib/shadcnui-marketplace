@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/material/ui/pagination";
+} from "@/registry/bases/base/material/ui/pagination";
 
 export function PaginationDemo() {
   return (

@@ -1,6 +1,6 @@
 import { Italic } from "lucide-react";
 
-import { Toggle } from "@/registry/libelle/ui/toggle";
+import { Toggle } from "@/registry/bases/base/libelle/ui/toggle";
 
 export default function ToggleLg() {
   return (

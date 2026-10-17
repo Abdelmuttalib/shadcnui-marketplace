@@ -1,5 +1,5 @@
-import { Label } from "@/registry/linear/ui/label";
-import { Switch } from "@/registry/linear/ui/switch";
+import { Label } from "@/registry/bases/base/linear/ui/label";
+import { Switch } from "@/registry/bases/base/linear/ui/switch";
 
 export default function SwitchDemo() {
   return (

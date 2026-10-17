@@ -12,12 +12,12 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/libelle/ui/context-menu";
+} from "@/registry/bases/base/libelle/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-libelle-md border border-dashed border-libelle-border text-sm">
+      <ContextMenuTrigger className="rounded-libelle-md border-libelle-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">

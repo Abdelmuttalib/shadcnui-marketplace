@@ -1,4 +1,4 @@
-import { Input } from "@/registry/lucid/ui/input";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 
 export default function InputDemo() {
   return <Input type="email" placeholder="Email" />;

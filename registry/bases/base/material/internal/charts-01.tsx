@@ -26,13 +26,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/material/ui/card";
+} from "@/registry/bases/base/material/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/material/ui/chart";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/chart";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 
 export const description = "A collection of health charts.";
 
@@ -52,7 +52,7 @@ export default function Charts() {
             <CardDescription>Today</CardDescription>
             <CardTitle className="text-4xl tabular-nums">
               12,584{" "}
-              <span className="font-sans text-sm font-normal tracking-normal text-material-muted-foreground">
+              <span className="text-material-muted-foreground font-sans text-sm font-normal tracking-normal">
                 steps
               </span>
             </CardTitle>
@@ -164,14 +164,14 @@ export default function Charts() {
           <CardFooter className="flex-col items-start gap-1">
             <CardDescription>
               Over the past 7 days, you have walked{" "}
-              <span className="font-medium text-material-foreground">
+              <span className="text-material-foreground font-medium">
                 53,305
               </span>{" "}
               steps.
             </CardDescription>
             <CardDescription>
               You need{" "}
-              <span className="font-medium text-material-foreground">
+              <span className="text-material-foreground font-medium">
                 12,584
               </span>{" "}
               more steps to reach your goal.
@@ -187,7 +187,7 @@ export default function Charts() {
               <CardDescription>Resting HR</CardDescription>
               <CardTitle className="flex items-baseline gap-1 text-4xl tabular-nums">
                 62
-                <span className="text-sm font-normal tracking-normal text-material-muted-foreground">
+                <span className="text-material-muted-foreground text-sm font-normal tracking-normal">
                   bpm
                 </span>
               </CardTitle>
@@ -196,7 +196,7 @@ export default function Charts() {
               <CardDescription>Variability</CardDescription>
               <CardTitle className="flex items-baseline gap-1 text-4xl tabular-nums">
                 35
-                <span className="text-sm font-normal tracking-normal text-material-muted-foreground">
+                <span className="text-material-muted-foreground text-sm font-normal tracking-normal">
                   ms
                 </span>
               </CardTitle>
@@ -316,7 +316,7 @@ export default function Charts() {
             <div className="grid auto-rows-min gap-2">
               <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
                 12,453
-                <span className="text-sm font-normal text-material-muted-foreground">
+                <span className="text-material-muted-foreground text-sm font-normal">
                   steps/day
                 </span>
               </div>
@@ -367,7 +367,7 @@ export default function Charts() {
             <div className="grid auto-rows-min gap-2">
               <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
                 10,103
-                <span className="text-sm font-normal text-material-muted-foreground">
+                <span className="text-material-muted-foreground text-sm font-normal">
                   steps/day
                 </span>
               </div>
@@ -431,7 +431,7 @@ export default function Charts() {
           <CardContent className="flex flex-row items-baseline gap-4 p-4 pt-0">
             <div className="flex items-baseline gap-1 text-3xl font-bold tabular-nums leading-none">
               12.5
-              <span className="text-sm font-normal text-material-muted-foreground">
+              <span className="text-material-muted-foreground text-sm font-normal">
                 miles/day
               </span>
             </div>
@@ -579,36 +579,36 @@ export default function Charts() {
           <CardFooter className="flex flex-row border-t p-4">
             <div className="flex w-full items-center gap-2">
               <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="text-xs text-material-muted-foreground">
+                <div className="text-material-muted-foreground text-xs">
                   Move
                 </div>
                 <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
                   562
-                  <span className="text-sm font-normal text-material-muted-foreground">
+                  <span className="text-material-muted-foreground text-sm font-normal">
                     kcal
                   </span>
                 </div>
               </div>
               <Separator orientation="vertical" className="mx-2 h-10 w-px" />
               <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="text-xs text-material-muted-foreground">
+                <div className="text-material-muted-foreground text-xs">
                   Exercise
                 </div>
                 <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
                   73
-                  <span className="text-sm font-normal text-material-muted-foreground">
+                  <span className="text-material-muted-foreground text-sm font-normal">
                     min
                   </span>
                 </div>
               </div>
               <Separator orientation="vertical" className="mx-2 h-10 w-px" />
               <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="text-xs text-material-muted-foreground">
+                <div className="text-material-muted-foreground text-xs">
                   Stand
                 </div>
                 <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
                   14
-                  <span className="text-sm font-normal text-material-muted-foreground">
+                  <span className="text-material-muted-foreground text-sm font-normal">
                     hr
                   </span>
                 </div>
@@ -625,34 +625,34 @@ export default function Charts() {
           <CardContent className="flex gap-4 p-4">
             <div className="grid items-center gap-2">
               <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="text-sm text-material-muted-foreground">
+                <div className="text-material-muted-foreground text-sm">
                   Move
                 </div>
                 <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
                   562/600
-                  <span className="text-sm font-normal text-material-muted-foreground">
+                  <span className="text-material-muted-foreground text-sm font-normal">
                     kcal
                   </span>
                 </div>
               </div>
               <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="text-sm text-material-muted-foreground">
+                <div className="text-material-muted-foreground text-sm">
                   Exercise
                 </div>
                 <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
                   73/120
-                  <span className="text-sm font-normal text-material-muted-foreground">
+                  <span className="text-material-muted-foreground text-sm font-normal">
                     min
                   </span>
                 </div>
               </div>
               <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="text-sm text-material-muted-foreground">
+                <div className="text-material-muted-foreground text-sm">
                   Stand
                 </div>
                 <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
                   8/12
-                  <span className="text-sm font-normal text-material-muted-foreground">
+                  <span className="text-material-muted-foreground text-sm font-normal">
                     hr
                   </span>
                 </div>
@@ -728,7 +728,7 @@ export default function Charts() {
           <CardContent className="flex flex-row items-baseline gap-4 p-4 pt-2">
             <div className="flex items-baseline gap-2 text-3xl font-bold tabular-nums leading-none">
               1,254
-              <span className="text-sm font-normal text-material-muted-foreground">
+              <span className="text-material-muted-foreground text-sm font-normal">
                 kcal/day
               </span>
             </div>
@@ -807,11 +807,11 @@ export default function Charts() {
             <CardDescription>Time in Bed</CardDescription>
             <CardTitle className="flex items-baseline gap-1 text-4xl tabular-nums">
               8
-              <span className="font-sans text-sm font-normal tracking-normal text-material-muted-foreground">
+              <span className="text-material-muted-foreground font-sans text-sm font-normal tracking-normal">
                 hr
               </span>
               35
-              <span className="font-sans text-sm font-normal tracking-normal text-material-muted-foreground">
+              <span className="text-material-muted-foreground font-sans text-sm font-normal tracking-normal">
                 min
               </span>
             </CardTitle>
@@ -891,11 +891,11 @@ export default function Charts() {
                   cursor={false}
                   content={<ChartTooltipContent hideLabel />}
                   formatter={(value) => (
-                    <div className="flex min-w-[120px] items-center text-xs text-material-muted-foreground">
+                    <div className="text-material-muted-foreground flex min-w-[120px] items-center text-xs">
                       Time in bed
-                      <div className="ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums text-material-foreground">
+                      <div className="text-material-foreground ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums">
                         {value}
-                        <span className="font-normal text-material-muted-foreground">
+                        <span className="text-material-muted-foreground font-normal">
                           hr
                         </span>
                       </div>

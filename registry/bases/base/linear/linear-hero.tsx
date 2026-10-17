@@ -1,6 +1,6 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
-import { DemoDatePicker } from "@/registry/linear/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/linear/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -15,18 +15,22 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/linear/showcase";
+} from "@/registry/bases/base/linear/showcase";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
-import { Badge } from "@/registry/linear/ui/badge";
-import { Button } from "@/registry/linear/ui/button";
-import { Checkbox } from "@/registry/linear/ui/checkbox";
-import { Switch } from "@/registry/linear/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/linear/ui/tabs";
-import { Toggle } from "@/registry/linear/ui/toggle";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Badge } from "@/registry/bases/base/linear/ui/badge";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Checkbox } from "@/registry/bases/base/linear/ui/checkbox";
+import { Switch } from "@/registry/bases/base/linear/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/linear/ui/tabs";
+import { Toggle } from "@/registry/bases/base/linear/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function LinearUI() {

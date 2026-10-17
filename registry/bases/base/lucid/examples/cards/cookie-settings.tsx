@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
-import { Label } from "@/registry/lucid/ui/label";
-import { Switch } from "@/registry/lucid/ui/switch";
+} from "@/registry/bases/base/lucid/ui/card";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
+import { Switch } from "@/registry/bases/base/lucid/ui/switch";
 
 export function CardsCookieSettings() {
   return (
@@ -23,7 +23,7 @@ export function CardsCookieSettings() {
         <div className="flex items-center justify-between space-x-4">
           <Label htmlFor="necessary" className="flex flex-col space-y-1">
             <span>Strictly Necessary</span>
-            <span className="text-xs font-normal leading-snug text-lucid-muted-foreground">
+            <span className="text-lucid-muted-foreground text-xs font-normal leading-snug">
               These cookies are essential in order to use the website and use
               its features.
             </span>
@@ -33,7 +33,7 @@ export function CardsCookieSettings() {
         <div className="flex items-center justify-between space-x-4">
           <Label htmlFor="functional" className="flex flex-col space-y-1">
             <span>Functional Cookies</span>
-            <span className="text-xs font-normal leading-snug text-lucid-muted-foreground">
+            <span className="text-lucid-muted-foreground text-xs font-normal leading-snug">
               These cookies allow the website to provide personalized
               functionality.
             </span>
@@ -43,7 +43,7 @@ export function CardsCookieSettings() {
         <div className="flex items-center justify-between space-x-4">
           <Label htmlFor="performance" className="flex flex-col space-y-1">
             <span>Performance Cookies</span>
-            <span className="text-xs font-normal leading-snug text-lucid-muted-foreground">
+            <span className="text-lucid-muted-foreground text-xs font-normal leading-snug">
               These cookies help to improve the performance of the website.
             </span>
           </Label>

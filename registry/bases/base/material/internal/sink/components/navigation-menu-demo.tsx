@@ -12,7 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/material/ui/navigation-menu";
+} from "@/registry/bases/base/material/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

@@ -11,13 +11,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/lucid/ui/sidebar";
+} from "@/registry/bases/base/lucid/ui/sidebar";
 
 export function TeamSwitcher({
   teams,
@@ -44,7 +44,7 @@ export function TeamSwitcher({
               size="lg"
               className="data-[state=open]:bg-lucid-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-lucid-sidebar-primary text-sidebar-primary-foreground">
+              <div className="size-8 bg-lucid-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                 <activeTeam.logo className="size-4" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
@@ -57,12 +57,12 @@ export function TeamSwitcher({
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+            className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
             align="start"
             side={isMobile ? "bottom" : "right"}
             sideOffset={4}
           >
-            <DropdownMenuLabel className="text-xs text-lucid-muted-foreground">
+            <DropdownMenuLabel className="text-lucid-muted-foreground text-xs">
               Teams
             </DropdownMenuLabel>
             {teams.map((team, index) => (
@@ -71,7 +71,7 @@ export function TeamSwitcher({
                 onClick={() => setActiveTeam(team)}
                 className="gap-2 p-2"
               >
-                <div className="flex size-6 items-center justify-center rounded-lucid-sm border">
+                <div className="size-6 rounded-lucid-sm flex items-center justify-center border">
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}
@@ -80,10 +80,10 @@ export function TeamSwitcher({
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-lucid-md border bg-lucid-background">
+              <div className="size-6 rounded-lucid-md bg-lucid-background flex items-center justify-center border">
                 <Plus className="size-4" />
               </div>
-              <div className="font-medium text-lucid-muted-foreground">
+              <div className="text-lucid-muted-foreground font-medium">
                 Add team
               </div>
             </DropdownMenuItem>

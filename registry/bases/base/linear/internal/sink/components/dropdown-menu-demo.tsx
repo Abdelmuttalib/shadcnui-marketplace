@@ -1,4 +1,4 @@
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (

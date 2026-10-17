@@ -15,15 +15,15 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/material/ui/breadcrumb";
+} from "@/registry/bases/base/material/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
-import { Label } from "@/registry/material/ui/label";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/material/ui/label";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -39,7 +39,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/material/ui/sidebar";
+} from "@/registry/bases/base/material/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -194,7 +194,7 @@ export default function Component() {
                     size="lg"
                     className="data-[state=open]:bg-material-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                   >
-                    <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-material-sidebar-primary text-sidebar-primary-foreground">
+                    <div className="size-8 bg-material-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                       <GalleryVerticalEnd className="size-4" />
                     </div>
                     <div className="flex flex-col gap-0.5 leading-none">
@@ -234,7 +234,7 @@ export default function Component() {
                   placeholder="Search the docs..."
                   className="pl-8"
                 />
-                <Search className="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
+                <Search className="size-4 pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 select-none opacity-50" />
               </SidebarGroupContent>
             </SidebarGroup>
           </form>
@@ -280,11 +280,11 @@ export default function Component() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-material-muted/50" />
-            <div className="aspect-video rounded-xl bg-material-muted/50" />
-            <div className="aspect-video rounded-xl bg-material-muted/50" />
+            <div className="bg-material-muted/50 aspect-video rounded-xl" />
+            <div className="bg-material-muted/50 aspect-video rounded-xl" />
+            <div className="bg-material-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-material-muted/50 md:min-h-min" />
+          <div className="bg-material-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

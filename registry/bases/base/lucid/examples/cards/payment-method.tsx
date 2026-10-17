@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -9,17 +9,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
-import { Input } from "@/registry/lucid/ui/input";
-import { Label } from "@/registry/lucid/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/lucid/ui/radio-group";
+} from "@/registry/bases/base/lucid/ui/card";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/lucid/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
+} from "@/registry/bases/base/lucid/ui/select";
 
 export function CardsPaymentMethod() {
   return (
@@ -41,7 +44,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between rounded-lucid-md border-2 border-lucid-muted bg-transparent p-4 hover:bg-accent hover:text-lucid-destructive-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              className="rounded-lucid-md border-lucid-muted hover:bg-accent hover:text-lucid-destructive-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between border-2 bg-transparent p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +72,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between rounded-lucid-md border-2 border-lucid-muted bg-transparent p-4 hover:bg-accent hover:text-lucid-destructive-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              className="rounded-lucid-md border-lucid-muted hover:bg-accent hover:text-lucid-destructive-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between border-2 bg-transparent p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -85,7 +88,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between rounded-lucid-md border-2 border-lucid-muted bg-transparent p-4 hover:bg-accent hover:text-lucid-destructive-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              className="rounded-lucid-md border-lucid-muted hover:bg-accent hover:text-lucid-destructive-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between border-2 bg-transparent p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

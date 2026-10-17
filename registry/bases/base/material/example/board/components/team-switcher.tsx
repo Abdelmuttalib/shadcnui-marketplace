@@ -11,13 +11,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/material/ui/sidebar";
+} from "@/registry/bases/base/material/ui/sidebar";
 
 export function TeamSwitcher({
   teams,
@@ -40,7 +40,7 @@ export function TeamSwitcher({
               size="lg"
               className="data-[state=open]:bg-material-sidebar-accent data-[state=open]:text-material-sidebar-accent-foreground"
             >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-material-lg bg-material-sidebar-primary text-material-sidebar-primary-foreground">
+              <div className="size-8 rounded-material-lg bg-material-sidebar-primary text-material-sidebar-primary-foreground flex aspect-square items-center justify-center">
                 <activeTeam.logo className="size-4" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
@@ -53,12 +53,12 @@ export function TeamSwitcher({
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-material-lg"
+            className="min-w-56 rounded-material-lg w-[--radix-dropdown-menu-trigger-width]"
             align="start"
             side={isMobile ? "bottom" : "right"}
             sideOffset={4}
           >
-            <DropdownMenuLabel className="text-xs text-material-muted-foreground">
+            <DropdownMenuLabel className="text-material-muted-foreground text-xs">
               Teams
             </DropdownMenuLabel>
             {teams.map((team, index) => (
@@ -67,7 +67,7 @@ export function TeamSwitcher({
                 onClick={() => setActiveTeam(team)}
                 className="gap-2 p-2"
               >
-                <div className="flex size-6 items-center justify-center rounded-material-sm border border-material-input">
+                <div className="size-6 rounded-material-sm border-material-input flex items-center justify-center border">
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}
@@ -76,10 +76,10 @@ export function TeamSwitcher({
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-material-md border border-material-input bg-material-background">
+              <div className="size-6 rounded-material-md border-material-input bg-material-background flex items-center justify-center border">
                 <Plus className="size-4" />
               </div>
-              <div className="font-medium text-material-muted-foreground">
+              <div className="text-material-muted-foreground font-medium">
                 Add team
               </div>
             </DropdownMenuItem>

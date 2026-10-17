@@ -2,15 +2,18 @@ import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Button } from "@/registry/libelle/ui/button";
-import { ScrollArea, ScrollBar } from "@/registry/libelle/ui/scroll-area";
-import { Separator } from "@/registry/libelle/ui/separator";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/libelle/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/libelle/ui/tabs";
+} from "@/registry/bases/base/libelle/ui/tabs";
 
 import { AlbumArtwork } from "./components/album-artwork";
 import { Menu } from "./components/menu";
@@ -27,9 +30,9 @@ const metadata: Metadata = {
 export function MusicPage() {
   return (
     <>
-      <div className="block bg-libelle-background">
+      <div className="bg-libelle-background block">
         <Menu />
-        <div className="border-t border-t-libelle-border">
+        <div className="border-t-libelle-border border-t">
           <div className="bg-libelle-background">
             <div className="grid grid-cols-3 lg:grid-cols-5">
               <Sidebar playlists={playlists} className="hidden lg:block" />
@@ -62,7 +65,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             Listen Now
                           </h2>
-                          <p className="text-sm text-libelle-muted-foreground">
+                          <p className="text-libelle-muted-foreground text-sm">
                             Top picks for you. Updated daily.
                           </p>
                         </div>
@@ -89,7 +92,7 @@ export function MusicPage() {
                         <h2 className="text-2xl font-semibold tracking-tight">
                           Made for You
                         </h2>
-                        <p className="text-sm text-libelle-muted-foreground">
+                        <p className="text-libelle-muted-foreground text-sm">
                           Your personal playlists. Updated daily.
                         </p>
                       </div>
@@ -121,7 +124,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             New Episodes
                           </h2>
-                          <p className="text-sm text-libelle-muted-foreground">
+                          <p className="text-libelle-muted-foreground text-sm">
                             Your favorite podcasts. Updated daily.
                           </p>
                         </div>

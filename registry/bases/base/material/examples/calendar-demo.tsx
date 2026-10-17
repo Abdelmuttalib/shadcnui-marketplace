@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/material/ui/calendar";
+import { Calendar } from "@/registry/bases/base/material/ui/calendar";
 
 export default function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());

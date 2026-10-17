@@ -4,7 +4,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/material/ui/input-otp";
+} from "@/registry/bases/base/material/ui/input-otp";
 
 export default function InputOTPPattern() {
   return (

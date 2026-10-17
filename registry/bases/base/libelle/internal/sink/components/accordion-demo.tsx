@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/libelle/ui/accordion";
+} from "@/registry/bases/base/libelle/ui/accordion";
 
 export function AccordionDemo() {
   return (

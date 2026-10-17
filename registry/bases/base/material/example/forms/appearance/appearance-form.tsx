@@ -7,7 +7,10 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "@/registry/material/ui/button";
+import {
+  Button,
+  buttonVariants,
+} from "@/registry/bases/base/material/ui/button";
 import {
   Form,
   FormControl,
@@ -16,8 +19,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/material/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/registry/material/ui/radio-group";
+} from "@/registry/bases/base/material/ui/form";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/material/ui/radio-group";
 
 const appearanceFormSchema = z.object({
   theme: z.enum(["light", "dark"], {
@@ -62,7 +68,7 @@ export function AppearanceForm() {
                   <select
                     className={cn(
                       buttonVariants({ variant: "outline" }),
-                      "w-[200px] appearance-none bg-material-input font-normal hover:bg-material-input hover:text-material-foreground"
+                      "bg-material-input hover:bg-material-input hover:text-material-foreground w-[200px] appearance-none font-normal"
                     )}
                     {...field}
                   >
@@ -115,19 +121,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="light" className="sr-only" />
                     </FormControl>
-                    <div className="items-center rounded-material-md border-2 border-material-muted p-1 hover:border-material-accent">
-                      <div className="space-y-2 rounded-material-sm bg-[#ecedef] p-2">
-                        <div className="shadow-xs space-y-2 rounded-material-md bg-white p-2">
-                          <div className="h-2 w-[80px] rounded-material-lg bg-[#ecedef]" />
-                          <div className="h-2 w-[100px] rounded-material-lg bg-[#ecedef]" />
+                    <div className="rounded-material-md border-material-muted hover:border-material-accent items-center border-2 p-1">
+                      <div className="rounded-material-sm space-y-2 bg-[#ecedef] p-2">
+                        <div className="shadow-xs rounded-material-md space-y-2 bg-white p-2">
+                          <div className="rounded-material-lg h-2 w-[80px] bg-[#ecedef]" />
+                          <div className="rounded-material-lg h-2 w-[100px] bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-material-md bg-white p-2">
+                        <div className="shadow-xs rounded-material-md flex items-center space-x-2 bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="h-2 w-[100px] rounded-material-lg bg-[#ecedef]" />
+                          <div className="rounded-material-lg h-2 w-[100px] bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-material-md bg-white p-2">
+                        <div className="shadow-xs rounded-material-md flex items-center space-x-2 bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="h-2 w-[100px] rounded-material-lg bg-[#ecedef]" />
+                          <div className="rounded-material-lg h-2 w-[100px] bg-[#ecedef]" />
                         </div>
                       </div>
                     </div>
@@ -141,19 +147,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="dark" className="sr-only" />
                     </FormControl>
-                    <div className="items-center rounded-material-md border-2 border-material-muted bg-material-popover p-1 hover:bg-material-accent hover:text-material-accent-foreground">
-                      <div className="space-y-2 rounded-material-sm bg-slate-950 p-2">
-                        <div className="shadow-xs space-y-2 rounded-material-md bg-slate-800 p-2">
-                          <div className="h-2 w-[80px] rounded-material-lg bg-slate-400" />
-                          <div className="h-2 w-[100px] rounded-material-lg bg-slate-400" />
+                    <div className="rounded-material-md border-material-muted bg-material-popover hover:bg-material-accent hover:text-material-accent-foreground items-center border-2 p-1">
+                      <div className="rounded-material-sm space-y-2 bg-slate-950 p-2">
+                        <div className="shadow-xs rounded-material-md space-y-2 bg-slate-800 p-2">
+                          <div className="rounded-material-lg h-2 w-[80px] bg-slate-400" />
+                          <div className="rounded-material-lg h-2 w-[100px] bg-slate-400" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-material-md bg-slate-800 p-2">
+                        <div className="shadow-xs rounded-material-md flex items-center space-x-2 bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="h-2 w-[100px] rounded-material-lg bg-slate-400" />
+                          <div className="rounded-material-lg h-2 w-[100px] bg-slate-400" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-material-md bg-slate-800 p-2">
+                        <div className="shadow-xs rounded-material-md flex items-center space-x-2 bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="h-2 w-[100px] rounded-material-lg bg-slate-400" />
+                          <div className="rounded-material-lg h-2 w-[100px] bg-slate-400" />
                         </div>
                       </div>
                     </div>

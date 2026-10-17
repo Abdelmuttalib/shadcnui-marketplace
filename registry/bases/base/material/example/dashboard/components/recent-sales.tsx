@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
+} from "@/registry/bases/base/material/ui/avatar";
 
 export function RecentSales() {
   return (
@@ -14,7 +14,7 @@ export function RecentSales() {
         </Avatar>
         <div className="ml-4 space-y-1">
           <p className="text-sm font-medium leading-none">Olivia Martin</p>
-          <p className="text-sm text-material-muted-foreground">
+          <p className="text-material-muted-foreground text-sm">
             olivia.martin@email.com
           </p>
         </div>
@@ -27,7 +27,7 @@ export function RecentSales() {
         </Avatar>
         <div className="ml-4 space-y-1">
           <p className="text-sm font-medium leading-none">Jackson Lee</p>
-          <p className="text-sm text-material-muted-foreground">
+          <p className="text-material-muted-foreground text-sm">
             jackson.lee@email.com
           </p>
         </div>
@@ -40,7 +40,7 @@ export function RecentSales() {
         </Avatar>
         <div className="ml-4 space-y-1">
           <p className="text-sm font-medium leading-none">Isabella Nguyen</p>
-          <p className="text-sm text-material-muted-foreground">
+          <p className="text-material-muted-foreground text-sm">
             isabella.nguyen@email.com
           </p>
         </div>
@@ -53,7 +53,7 @@ export function RecentSales() {
         </Avatar>
         <div className="ml-4 space-y-1">
           <p className="text-sm font-medium leading-none">William Kim</p>
-          <p className="text-sm text-material-muted-foreground">
+          <p className="text-material-muted-foreground text-sm">
             will@email.com
           </p>
         </div>
@@ -66,7 +66,7 @@ export function RecentSales() {
         </Avatar>
         <div className="ml-4 space-y-1">
           <p className="text-sm font-medium leading-none">Sofia Davis</p>
-          <p className="text-sm text-material-muted-foreground">
+          <p className="text-material-muted-foreground text-sm">
             sofia.davis@email.com
           </p>
         </div>

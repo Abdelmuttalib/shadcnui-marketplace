@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/lucid/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/lucid/ui/skeleton";
 
 export default function SkeletonDemo() {
   return (

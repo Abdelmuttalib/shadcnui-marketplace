@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/registry/linear/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/linear/ui/checkbox";
 
 export default function CheckboxWithText() {
   return (
@@ -13,7 +13,7 @@ export default function CheckboxWithText() {
         >
           Accept terms and conditions
         </label>
-        <p className="text-sm text-linear-muted-foreground">
+        <p className="text-linear-muted-foreground text-sm">
           You agree to our Terms of Service and Privacy Policy.
         </p>
       </div>

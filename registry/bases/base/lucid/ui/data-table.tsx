@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/lucid/ui/table";
+} from "@/registry/bases/base/lucid/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-lucid-md border border-lucid-border">
+    <div className="rounded-lucid-md border-lucid-border border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

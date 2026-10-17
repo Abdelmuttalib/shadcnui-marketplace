@@ -1,6 +1,6 @@
 import { Italic } from "lucide-react";
 
-import { Toggle } from "@/registry/lucid/ui/toggle";
+import { Toggle } from "@/registry/bases/base/lucid/ui/toggle";
 
 export default function ToggleLg() {
   return (

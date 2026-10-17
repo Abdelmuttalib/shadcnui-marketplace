@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/lucid/ui/command";
+} from "@/registry/bases/base/lucid/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-lucid-lg border border-lucid-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-lucid-lg border-lucid-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

@@ -8,8 +8,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/libelle/ui/button";
-import { Calendar } from "@/registry/libelle/ui/calendar";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { Calendar } from "@/registry/bases/base/libelle/ui/calendar";
 import {
   Form,
   FormControl,
@@ -18,12 +18,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/libelle/ui/form";
+} from "@/registry/bases/base/libelle/ui/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/libelle/ui/popover";
+} from "@/registry/bases/base/libelle/ui/popover";
 
 const FormSchema = z.object({
   dob: z.date({

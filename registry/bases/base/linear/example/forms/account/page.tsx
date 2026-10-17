@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/linear/ui/separator";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 
 import { AccountForm } from "./account-form";
 
@@ -7,7 +7,7 @@ export default function SettingsAccountPage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Account</h3>
-        <p className="text-sm text-linear-muted-foreground">
+        <p className="text-linear-muted-foreground text-sm">
           Update your account settings. Set your preferred language and
           timezone.
         </p>

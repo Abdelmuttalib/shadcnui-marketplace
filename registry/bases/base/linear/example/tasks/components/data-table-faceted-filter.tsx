@@ -3,8 +3,8 @@ import { Column } from "@tanstack/react-table";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/linear/ui/badge";
-import { Button } from "@/registry/linear/ui/button";
+import { Badge } from "@/registry/bases/base/linear/ui/badge";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -13,13 +13,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/linear/ui/command";
+} from "@/registry/bases/base/linear/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/linear/ui/popover";
-import { Separator } from "@/registry/linear/ui/separator";
+} from "@/registry/bases/base/linear/ui/popover";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
@@ -45,7 +45,7 @@ export function DataTableFacetedFilter<TData, TValue>({
         <Button
           variant="outline"
           size="sm"
-          className="h-8 border-dashed border-linear-border"
+          className="border-linear-border h-8 border-dashed"
         >
           <PlusCircledIcon className="mr-2 h-4 w-4" />
           {title}
@@ -109,7 +109,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-linear-sm border border-linear-ring",
+                        "rounded-linear-sm border-linear-ring mr-2 flex h-4 w-4 items-center justify-center border",
                         isSelected
                           ? "bg-linear-ring [&_svg]:text-linear-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -118,7 +118,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-linear-muted-foreground" />
+                      <option.icon className="text-linear-muted-foreground mr-2 h-4 w-4" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

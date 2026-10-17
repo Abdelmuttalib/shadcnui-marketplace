@@ -1,5 +1,5 @@
-import { Button } from "@/registry/lucid/ui/button";
-import { Input } from "@/registry/lucid/ui/input";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 
 export default function InputWithButton() {
   return (

@@ -15,16 +15,16 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
-import { Badge } from "@/registry/lucid/ui/badge";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/avatar";
+import { Badge } from "@/registry/bases/base/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
+} from "@/registry/bases/base/lucid/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,9 +32,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
-import { Input } from "@/registry/lucid/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/lucid/ui/sheet";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/registry/bases/base/lucid/ui/sheet";
 import {
   Table,
   TableBody,
@@ -42,7 +46,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/lucid/ui/table";
+} from "@/registry/bases/base/lucid/ui/table";
 
 export const description =
   "An application shell with a header and main content area. The header has a navbar, a search input and and a user nav dropdown. The user nav is toggled by a button with an avatar image. The main content area is divided into two rows. The first row has a grid of cards with statistics. The second row has a grid of cards with a table of recent transactions and a list of recent sales.";
@@ -54,7 +58,7 @@ export const containerClassName = "w-full h-full";
 export default function Dashboard() {
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-lucid-background px-4 md:px-6">
+      <header className="bg-lucid-background sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6">
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <Link
             href="#"
@@ -65,31 +69,31 @@ export default function Dashboard() {
           </Link>
           <Link
             href="#"
-            className="text-lucid-foreground transition-colors hover:text-lucid-foreground"
+            className="text-lucid-foreground hover:text-lucid-foreground transition-colors"
           >
             Dashboard
           </Link>
           <Link
             href="#"
-            className="text-lucid-muted-foreground transition-colors hover:text-lucid-foreground"
+            className="text-lucid-muted-foreground hover:text-lucid-foreground transition-colors"
           >
             Orders
           </Link>
           <Link
             href="#"
-            className="text-lucid-muted-foreground transition-colors hover:text-lucid-foreground"
+            className="text-lucid-muted-foreground hover:text-lucid-foreground transition-colors"
           >
             Products
           </Link>
           <Link
             href="#"
-            className="text-lucid-muted-foreground transition-colors hover:text-lucid-foreground"
+            className="text-lucid-muted-foreground hover:text-lucid-foreground transition-colors"
           >
             Customers
           </Link>
           <Link
             href="#"
-            className="text-lucid-muted-foreground transition-colors hover:text-lucid-foreground"
+            className="text-lucid-muted-foreground hover:text-lucid-foreground transition-colors"
           >
             Analytics
           </Link>
@@ -147,7 +151,7 @@ export default function Dashboard() {
         <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="ml-auto flex-1 sm:flex-initial">
             <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-lucid-muted-foreground" />
+              <Search className="text-lucid-muted-foreground absolute left-2.5 top-2.5 h-4 w-4" />
               <Input
                 type="search"
                 placeholder="Search products..."
@@ -180,11 +184,11 @@ export default function Dashboard() {
               <CardTitle className="text-sm font-medium">
                 Total Revenue
               </CardTitle>
-              <DollarSign className="h-4 w-4 text-lucid-muted-foreground" />
+              <DollarSign className="text-lucid-muted-foreground h-4 w-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">$45,231.89</div>
-              <p className="text-xs text-lucid-muted-foreground">
+              <p className="text-lucid-muted-foreground text-xs">
                 +20.1% from last month
               </p>
             </CardContent>
@@ -194,11 +198,11 @@ export default function Dashboard() {
               <CardTitle className="text-sm font-medium">
                 Subscriptions
               </CardTitle>
-              <Users className="h-4 w-4 text-lucid-muted-foreground" />
+              <Users className="text-lucid-muted-foreground h-4 w-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+2350</div>
-              <p className="text-xs text-lucid-muted-foreground">
+              <p className="text-lucid-muted-foreground text-xs">
                 +180.1% from last month
               </p>
             </CardContent>
@@ -206,11 +210,11 @@ export default function Dashboard() {
           <Card x-chunk="A card showing the total sales and the percentage difference from last month.">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Sales</CardTitle>
-              <CreditCard className="h-4 w-4 text-lucid-muted-foreground" />
+              <CreditCard className="text-lucid-muted-foreground h-4 w-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+12,234</div>
-              <p className="text-xs text-lucid-muted-foreground">
+              <p className="text-lucid-muted-foreground text-xs">
                 +19% from last month
               </p>
             </CardContent>
@@ -218,11 +222,11 @@ export default function Dashboard() {
           <Card x-chunk="A card showing the total active users and the percentage difference from last hour.">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Active Now</CardTitle>
-              <Activity className="h-4 w-4 text-lucid-muted-foreground" />
+              <Activity className="text-lucid-muted-foreground h-4 w-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+573</div>
-              <p className="text-xs text-lucid-muted-foreground">
+              <p className="text-lucid-muted-foreground text-xs">
                 +201 since last hour
               </p>
             </CardContent>
@@ -268,7 +272,7 @@ export default function Dashboard() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
-                      <div className="hidden text-sm text-lucid-muted-foreground md:inline">
+                      <div className="text-lucid-muted-foreground hidden text-sm md:inline">
                         liam@example.com
                       </div>
                     </TableCell>
@@ -288,7 +292,7 @@ export default function Dashboard() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Olivia Smith</div>
-                      <div className="hidden text-sm text-lucid-muted-foreground md:inline">
+                      <div className="text-lucid-muted-foreground hidden text-sm md:inline">
                         olivia@example.com
                       </div>
                     </TableCell>
@@ -308,7 +312,7 @@ export default function Dashboard() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Noah Williams</div>
-                      <div className="hidden text-sm text-lucid-muted-foreground md:inline">
+                      <div className="text-lucid-muted-foreground hidden text-sm md:inline">
                         noah@example.com
                       </div>
                     </TableCell>
@@ -328,7 +332,7 @@ export default function Dashboard() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Emma Brown</div>
-                      <div className="hidden text-sm text-lucid-muted-foreground md:inline">
+                      <div className="text-lucid-muted-foreground hidden text-sm md:inline">
                         emma@example.com
                       </div>
                     </TableCell>
@@ -348,7 +352,7 @@ export default function Dashboard() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
-                      <div className="hidden text-sm text-lucid-muted-foreground md:inline">
+                      <div className="text-lucid-muted-foreground hidden text-sm md:inline">
                         liam@example.com
                       </div>
                     </TableCell>
@@ -383,7 +387,7 @@ export default function Dashboard() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     olivia.martin@email.com
                   </p>
                 </div>
@@ -398,7 +402,7 @@ export default function Dashboard() {
                   <p className="text-sm font-medium leading-none">
                     Jackson Lee
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     jackson.lee@email.com
                   </p>
                 </div>
@@ -413,7 +417,7 @@ export default function Dashboard() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     isabella.nguyen@email.com
                   </p>
                 </div>
@@ -428,7 +432,7 @@ export default function Dashboard() {
                   <p className="text-sm font-medium leading-none">
                     William Kim
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     will@email.com
                   </p>
                 </div>
@@ -443,7 +447,7 @@ export default function Dashboard() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-lucid-muted-foreground">
+                  <p className="text-lucid-muted-foreground text-sm">
                     sofia.davis@email.com
                   </p>
                 </div>

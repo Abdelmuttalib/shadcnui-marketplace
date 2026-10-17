@@ -3,8 +3,8 @@ import { Column } from "@tanstack/react-table";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/lucid/ui/badge";
-import { Button } from "@/registry/lucid/ui/button";
+import { Badge } from "@/registry/bases/base/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -13,13 +13,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/lucid/ui/command";
+} from "@/registry/bases/base/lucid/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
-import { Separator } from "@/registry/lucid/ui/separator";
+} from "@/registry/bases/base/lucid/ui/popover";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
@@ -105,7 +105,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-lucid-sm border border-lucid-input",
+                        "rounded-lucid-sm border-lucid-input mr-2 flex h-4 w-4 items-center justify-center border",
                         isSelected
                           ? "bg-lucid-ring [&_svg]:text-lucid-background"
                           : "opacity-50 [&_svg]:invisible"
@@ -114,7 +114,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <CheckIcon className="h-4 w-4" />
                     </div>
                     {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-lucid-muted-foreground" />
+                      <option.icon className="text-lucid-muted-foreground mr-2 h-4 w-4" />
                     )}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (

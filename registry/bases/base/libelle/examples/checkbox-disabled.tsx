@@ -1,4 +1,4 @@
-import { Checkbox } from "@/registry/libelle/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/libelle/ui/checkbox";
 
 export default function CheckboxDisabled() {
   return (

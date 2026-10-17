@@ -15,15 +15,15 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/libelle/ui/breadcrumb";
+} from "@/registry/bases/base/libelle/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/libelle/ui/dropdown-menu";
-import { Label } from "@/registry/libelle/ui/label";
-import { Separator } from "@/registry/libelle/ui/separator";
+} from "@/registry/bases/base/libelle/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -39,7 +39,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/libelle/ui/sidebar";
+} from "@/registry/bases/base/libelle/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -194,7 +194,7 @@ export default function Component() {
                     size="lg"
                     className="data-[state=open]:bg-libelle-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                   >
-                    <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-libelle-sidebar-primary text-sidebar-primary-foreground">
+                    <div className="size-8 bg-libelle-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                       <GalleryVerticalEnd className="size-4" />
                     </div>
                     <div className="flex flex-col gap-0.5 leading-none">
@@ -234,7 +234,7 @@ export default function Component() {
                   placeholder="Search the docs..."
                   className="pl-8"
                 />
-                <Search className="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
+                <Search className="size-4 pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 select-none opacity-50" />
               </SidebarGroupContent>
             </SidebarGroup>
           </form>
@@ -280,11 +280,11 @@ export default function Component() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-libelle-muted/50" />
-            <div className="aspect-video rounded-xl bg-libelle-muted/50" />
-            <div className="aspect-video rounded-xl bg-libelle-muted/50" />
+            <div className="bg-libelle-muted/50 aspect-video rounded-xl" />
+            <div className="bg-libelle-muted/50 aspect-video rounded-xl" />
+            <div className="bg-libelle-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-libelle-muted/50 md:min-h-min" />
+          <div className="bg-libelle-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

@@ -1,6 +1,6 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
-import { DemoDatePicker } from "@/registry/libelle/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/libelle/example/cards/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -15,18 +15,22 @@ import {
   SliderDemo,
   TextareaDemo,
   ToggleGroupDemo,
-} from "@/registry/libelle/showcase";
+} from "@/registry/bases/base/libelle/showcase";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
-import { Badge } from "@/registry/libelle/ui/badge";
-import { Button } from "@/registry/libelle/ui/button";
-import { Checkbox } from "@/registry/libelle/ui/checkbox";
-import { Switch } from "@/registry/libelle/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/libelle/ui/tabs";
-import { Toggle } from "@/registry/libelle/ui/toggle";
+} from "@/registry/bases/base/libelle/ui/avatar";
+import { Badge } from "@/registry/bases/base/libelle/ui/badge";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { Checkbox } from "@/registry/bases/base/libelle/ui/checkbox";
+import { Switch } from "@/registry/bases/base/libelle/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/libelle/ui/tabs";
+import { Toggle } from "@/registry/bases/base/libelle/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function LibelleUI() {

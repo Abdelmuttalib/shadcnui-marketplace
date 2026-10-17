@@ -1,5 +1,20 @@
 import { Bookmark, HeartIcon } from "lucide-react";
 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/bases/base/lucid/ui/avatar";
+import { Badge } from "@/registry/bases/base/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { Checkbox } from "@/registry/bases/base/lucid/ui/checkbox";
+import { Switch } from "@/registry/bases/base/lucid/ui/switch";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/lucid/ui/tabs";
+import { Toggle } from "@/registry/bases/base/lucid/ui/toggle";
 import { DemoDatePicker } from "@/registry/lucid/example/cards/components/date-picker";
 import {
   ComboboxDemo,
@@ -16,17 +31,6 @@ import {
   TextareaDemo,
   ToggleGroupDemo,
 } from "@/registry/lucid/showcase";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/lucid/ui/avatar";
-import { Badge } from "@/registry/lucid/ui/badge";
-import { Button } from "@/registry/lucid/ui/button";
-import { Checkbox } from "@/registry/lucid/ui/checkbox";
-import { Switch } from "@/registry/lucid/ui/switch";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/lucid/ui/tabs";
-import { Toggle } from "@/registry/lucid/ui/toggle";
 import { renderStyleCardShowcase } from "@/registry/styles-components";
 
 export function LucidUI() {

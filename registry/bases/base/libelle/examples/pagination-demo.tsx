@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/libelle/ui/pagination";
+} from "@/registry/bases/base/libelle/ui/pagination";
 
 export default function PaginationDemo() {
   return (

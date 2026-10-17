@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/linear/ui/select";
+} from "@/registry/bases/base/linear/ui/select";
 
 export default function SelectScrollable() {
   return (

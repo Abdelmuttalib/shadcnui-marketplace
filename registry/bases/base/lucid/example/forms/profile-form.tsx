@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Form,
   FormControl,
@@ -16,16 +16,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/lucid/ui/form";
-import { Input } from "@/registry/lucid/ui/input";
+} from "@/registry/bases/base/lucid/ui/form";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
-import { Textarea } from "@/registry/lucid/ui/textarea";
+} from "@/registry/bases/base/lucid/ui/select";
+import { Textarea } from "@/registry/bases/base/lucid/ui/textarea";
 
 const profileFormSchema = z.object({
   username: z

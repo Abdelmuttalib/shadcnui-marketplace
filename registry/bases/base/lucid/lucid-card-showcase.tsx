@@ -20,9 +20,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
-import { Badge } from "@/registry/lucid/ui/badge";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/avatar";
+import { Badge } from "@/registry/bases/base/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -30,21 +30,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
+} from "@/registry/bases/base/lucid/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
-import { Separator } from "@/registry/lucid/ui/separator";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/lucid/ui/tooltip";
+} from "@/registry/bases/base/lucid/ui/tooltip";
 
 export function LucidCardShowcase() {
   return (
@@ -66,7 +66,7 @@ export function LucidCardShowcase() {
                 CSS.
               </CardDescription>
             </div>
-            <div className="flex items-center gap-1 rounded-lucid-md bg-lucid-secondary text-lucid-secondary-foreground">
+            <div className="rounded-lucid-md bg-lucid-secondary text-lucid-secondary-foreground flex items-center gap-1">
               <Button variant="secondary" size={"sm"}>
                 <Star className="h-4 w-4" />
                 Star
@@ -110,32 +110,32 @@ export function LucidCardShowcase() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="flex flex-wrap gap-2 text-sm text-lucid-muted-foreground">
-            <div className="flex items-center gap-1.5 rounded-lucid-md border border-lucid-input/60 bg-lucid-muted p-1 px-2 text-sm">
+          <div className="text-lucid-muted-foreground flex flex-wrap gap-2 text-sm">
+            <div className="rounded-lucid-md border-lucid-input/60 bg-lucid-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <CircleDot className="h-4 w-4 text-blue-500" />
               </span>
               <span>TypeScript</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-lucid-md border border-lucid-input/60 bg-lucid-muted p-1 px-2 text-sm">
+            <div className="rounded-lucid-md border-lucid-input/60 bg-lucid-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Star className="h-4 w-4" />
               </span>{" "}
               <span>20.1k stars</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-lucid-md border border-lucid-input/60 bg-lucid-muted p-1 px-2 text-sm">
+            <div className="rounded-lucid-md border-lucid-input/60 bg-lucid-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <GitFork className="h-4 w-4" />
               </span>{" "}
               <span>1.2k forks</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-lucid-md border border-lucid-input/60 bg-lucid-muted p-1 px-2 text-sm">
+            <div className="rounded-lucid-md border-lucid-input/60 bg-lucid-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <Eye className="h-4 w-4" />
               </span>{" "}
               <span>342 watching</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-lucid-md border border-lucid-input/60 bg-lucid-muted p-1 px-2 text-sm">
+            <div className="rounded-lucid-md border-lucid-input/60 bg-lucid-muted flex items-center gap-1.5 border p-1 px-2 text-sm">
               <span>
                 <AlertCircle className="h-4 w-4" />
               </span>{" "}
@@ -190,31 +190,31 @@ export function LucidCardShowcase() {
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium">Contributors</span>
               <div className="flex -space-x-2">
-                <Avatar className="h-6 w-6 border-2 border-lucid-background">
+                <Avatar className="border-lucid-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/SC" />
                   <AvatarFallback className="text-xs">SC</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-lucid-background">
+                <Avatar className="border-lucid-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/JD" />
                   <AvatarFallback className="text-xs">JD</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-lucid-background">
+                <Avatar className="border-lucid-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/WK" />
                   <AvatarFallback className="text-xs">WK</AvatarFallback>
                 </Avatar>
-                <Avatar className="h-6 w-6 border-2 border-lucid-background">
+                <Avatar className="border-lucid-background h-6 w-6 border-2">
                   <AvatarImage src="https://avatar.vercel.sh/BR" />
                   <AvatarFallback className="text-xs">BR</AvatarFallback>
                 </Avatar>
               </div>
             </div>
-            <div className="flex items-center gap-1 text-sm text-lucid-muted-foreground">
+            <div className="text-lucid-muted-foreground flex items-center gap-1 text-sm">
               <Calendar className="h-3.5 w-3.5" />
               <span>Updated April 2023</span>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="flex items-center justify-between border-t border-t-lucid-border pt-4">
+        <CardFooter className="border-t-lucid-border flex items-center justify-between border-t pt-4">
           <div className="flex items-center gap-2">
             <TooltipProvider>
               <Tooltip>

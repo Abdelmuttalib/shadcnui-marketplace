@@ -1,7 +1,10 @@
 import Image from "next/image";
 import * as React from "react";
 
-import { ScrollArea, ScrollBar } from "@/registry/lucid/ui/scroll-area";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/lucid/ui/scroll-area";
 
 export interface Artwork {
   artist: string;
@@ -25,11 +28,11 @@ export const works: Artwork[] = [
 
 export default function ScrollAreaHorizontalDemo() {
   return (
-    <ScrollArea className="w-96 whitespace-nowrap rounded-lucid-md border">
+    <ScrollArea className="rounded-lucid-md w-96 whitespace-nowrap border">
       <div className="flex w-max space-x-4 p-4">
         {works.map((artwork) => (
           <figure key={artwork.artist} className="shrink-0">
-            <div className="overflow-hidden rounded-lucid-md">
+            <div className="rounded-lucid-md overflow-hidden">
               <Image
                 src={artwork.art}
                 alt={`Photo by ${artwork.artist}`}
@@ -38,9 +41,9 @@ export default function ScrollAreaHorizontalDemo() {
                 height={400}
               />
             </div>
-            <figcaption className="pt-2 text-xs text-lucid-muted-foreground">
+            <figcaption className="text-lucid-muted-foreground pt-2 text-xs">
               Photo by{" "}
-              <span className="font-semibold text-foreground">
+              <span className="text-foreground font-semibold">
                 {artwork.artist}
               </span>
             </figcaption>

@@ -1,5 +1,5 @@
-import { Label } from "@/registry/libelle/ui/label";
-import { Switch } from "@/registry/libelle/ui/switch";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
+import { Switch } from "@/registry/bases/base/libelle/ui/switch";
 
 export function SwitchDemo() {
   return (

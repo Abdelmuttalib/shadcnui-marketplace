@@ -7,7 +7,10 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "@/registry/libelle/ui/button";
+import {
+  Button,
+  buttonVariants,
+} from "@/registry/bases/base/libelle/ui/button";
 import {
   Form,
   FormControl,
@@ -16,8 +19,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/libelle/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/registry/libelle/ui/radio-group";
+} from "@/registry/bases/base/libelle/ui/form";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/libelle/ui/radio-group";
 
 const appearanceFormSchema = z.object({
   theme: z.enum(["light", "dark"], {
@@ -62,7 +68,7 @@ export function AppearanceForm() {
                   <select
                     className={cn(
                       buttonVariants({ variant: "outline" }),
-                      "w-[200px] appearance-none border-b border-b-gray-500 bg-input font-normal hover:bg-input hover:text-libelle-foreground"
+                      "bg-input hover:bg-input hover:text-libelle-foreground w-[200px] appearance-none border-b border-b-gray-500 font-normal"
                     )}
                     {...field}
                   >
@@ -115,19 +121,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="light" className="sr-only" />
                     </FormControl>
-                    <div className="items-center rounded-libelle-md border-2 border-muted p-1 hover:border-accent">
+                    <div className="rounded-libelle-md border-muted hover:border-accent items-center border-2 p-1">
                       <div className="space-y-2 rounded-sm bg-[#ecedef] p-2">
-                        <div className="shadow-xs space-y-2 rounded-libelle-md bg-white p-2">
-                          <div className="h-2 w-[80px] rounded-libelle-lg bg-[#ecedef]" />
-                          <div className="h-2 w-[100px] rounded-libelle-lg bg-[#ecedef]" />
+                        <div className="shadow-xs rounded-libelle-md space-y-2 bg-white p-2">
+                          <div className="rounded-libelle-lg h-2 w-[80px] bg-[#ecedef]" />
+                          <div className="rounded-libelle-lg h-2 w-[100px] bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-libelle-md bg-white p-2">
+                        <div className="shadow-xs rounded-libelle-md flex items-center space-x-2 bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="h-2 w-[100px] rounded-libelle-lg bg-[#ecedef]" />
+                          <div className="rounded-libelle-lg h-2 w-[100px] bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-libelle-md bg-white p-2">
+                        <div className="shadow-xs rounded-libelle-md flex items-center space-x-2 bg-white p-2">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="h-2 w-[100px] rounded-libelle-lg bg-[#ecedef]" />
+                          <div className="rounded-libelle-lg h-2 w-[100px] bg-[#ecedef]" />
                         </div>
                       </div>
                     </div>
@@ -141,19 +147,19 @@ export function AppearanceForm() {
                     <FormControl>
                       <RadioGroupItem value="dark" className="sr-only" />
                     </FormControl>
-                    <div className="items-center rounded-libelle-md border-2 border-muted bg-popover p-1 hover:bg-libelle-accent hover:text-accent-foreground">
+                    <div className="rounded-libelle-md border-muted bg-popover hover:bg-libelle-accent hover:text-accent-foreground items-center border-2 p-1">
                       <div className="space-y-2 rounded-sm bg-slate-950 p-2">
-                        <div className="shadow-xs space-y-2 rounded-libelle-md bg-slate-800 p-2">
-                          <div className="h-2 w-[80px] rounded-libelle-lg bg-slate-400" />
-                          <div className="h-2 w-[100px] rounded-libelle-lg bg-slate-400" />
+                        <div className="shadow-xs rounded-libelle-md space-y-2 bg-slate-800 p-2">
+                          <div className="rounded-libelle-lg h-2 w-[80px] bg-slate-400" />
+                          <div className="rounded-libelle-lg h-2 w-[100px] bg-slate-400" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-libelle-md bg-slate-800 p-2">
+                        <div className="shadow-xs rounded-libelle-md flex items-center space-x-2 bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="h-2 w-[100px] rounded-libelle-lg bg-slate-400" />
+                          <div className="rounded-libelle-lg h-2 w-[100px] bg-slate-400" />
                         </div>
-                        <div className="shadow-xs flex items-center space-x-2 rounded-libelle-md bg-slate-800 p-2">
+                        <div className="shadow-xs rounded-libelle-md flex items-center space-x-2 bg-slate-800 p-2">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="h-2 w-[100px] rounded-libelle-lg bg-slate-400" />
+                          <div className="rounded-libelle-lg h-2 w-[100px] bg-slate-400" />
                         </div>
                       </div>
                     </div>

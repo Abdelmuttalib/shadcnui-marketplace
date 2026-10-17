@@ -1,6 +1,20 @@
 "use client";
 
 import { ComponentPreview } from "@/components/component-preview";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/registry/bases/base/material/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/registry/bases/base/material/ui/sidebar";
 import { AccordionDemo } from "@/registry/material/internal/sink/components/accordion-demo";
 import { AlertDemo } from "@/registry/material/internal/sink/components/alert-demo";
 import { AlertDialogDemo } from "@/registry/material/internal/sink/components/alert-dialog-demo";
@@ -62,27 +76,13 @@ import { ToggleGroupDemo } from "@/registry/material/internal/sink/components/to
 import { ToggleOutline } from "@/registry/material/internal/sink/components/toggle-outline";
 import { ToggleWithText } from "@/registry/material/internal/sink/components/toggle-with-text";
 import { TooltipDemo } from "@/registry/material/internal/sink/components/tooltip-demo";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/material/ui/breadcrumb";
-import { Separator } from "@/registry/material/ui/separator";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/registry/material/ui/sidebar";
 
 export default function SinkPage() {
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b border-b-material-border transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="border-b-material-border group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />

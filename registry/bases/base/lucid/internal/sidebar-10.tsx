@@ -39,13 +39,13 @@ import {
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/registry/lucid/ui/breadcrumb";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/lucid/ui/collapsible";
+} from "@/registry/bases/base/lucid/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -54,13 +54,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
-import { Separator } from "@/registry/lucid/ui/separator";
+} from "@/registry/bases/base/lucid/ui/popover";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -81,7 +81,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@/registry/lucid/ui/sidebar";
+} from "@/registry/bases/base/lucid/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -404,8 +404,8 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 px-4 py-10">
-          <div className="mx-auto h-24 w-full max-w-3xl rounded-xl bg-lucid-muted/50" />
-          <div className="mx-auto h-full w-full max-w-3xl rounded-xl bg-lucid-muted/50" />
+          <div className="bg-lucid-muted/50 mx-auto h-24 w-full max-w-3xl rounded-xl" />
+          <div className="bg-lucid-muted/50 mx-auto h-full w-full max-w-3xl rounded-xl" />
         </div>
       </SidebarInset>
     </SidebarProvider>
@@ -445,7 +445,7 @@ function NavActions({
 
   return (
     <div className="flex items-center gap-2 text-sm">
-      <div className="hidden font-medium text-lucid-muted-foreground md:inline-block">
+      <div className="text-lucid-muted-foreground hidden font-medium md:inline-block">
         Edit Oct 08
       </div>
       <Button variant="ghost" size="icon" className="h-7 w-7">
@@ -456,7 +456,7 @@ function NavActions({
           <Button
             variant="ghost"
             size="icon"
-            className="h-7 w-7 data-[state=open]:bg-lucid-accent"
+            className="data-[state=open]:bg-lucid-accent h-7 w-7"
           >
             <MoreHorizontal />
           </Button>
@@ -644,7 +644,7 @@ function NavWorkspaces({
                 </SidebarMenuButton>
                 <CollapsibleTrigger asChild>
                   <SidebarMenuAction
-                    className="left-2 bg-lucid-sidebar-accent text-sidebar-accent-foreground data-[state=open]:rotate-90"
+                    className="bg-lucid-sidebar-accent text-sidebar-accent-foreground left-2 data-[state=open]:rotate-90"
                     showOnHover
                   >
                     <ChevronRight />
@@ -703,7 +703,7 @@ function TeamSwitcher({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton className="w-fit px-1.5">
-              <div className="flex aspect-square size-5 items-center justify-center rounded-lucid-md bg-lucid-sidebar-primary text-sidebar-primary-foreground">
+              <div className="size-5 rounded-lucid-md bg-lucid-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center">
                 <activeTeam.logo className="size-3" />
               </div>
               <span className="truncate font-semibold">{activeTeam.name}</span>
@@ -716,7 +716,7 @@ function TeamSwitcher({
             side="bottom"
             sideOffset={4}
           >
-            <DropdownMenuLabel className="text-xs text-lucid-muted-foreground">
+            <DropdownMenuLabel className="text-lucid-muted-foreground text-xs">
               Teams
             </DropdownMenuLabel>
             {teams.map((team, index) => (
@@ -725,7 +725,7 @@ function TeamSwitcher({
                 onClick={() => setActiveTeam(team)}
                 className="gap-2 p-2"
               >
-                <div className="flex size-6 items-center justify-center rounded-lucid-sm border">
+                <div className="size-6 rounded-lucid-sm flex items-center justify-center border">
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}
@@ -734,10 +734,10 @@ function TeamSwitcher({
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-lucid-md border bg-lucid-background">
+              <div className="size-6 rounded-lucid-md bg-lucid-background flex items-center justify-center border">
                 <Plus className="size-4" />
               </div>
-              <div className="font-medium text-lucid-muted-foreground">
+              <div className="text-lucid-muted-foreground font-medium">
                 Add team
               </div>
             </DropdownMenuItem>

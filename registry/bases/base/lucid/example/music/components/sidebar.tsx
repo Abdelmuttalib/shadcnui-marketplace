@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/lucid/ui/button";
-import { ScrollArea } from "@/registry/lucid/ui/scroll-area";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { ScrollArea } from "@/registry/bases/base/lucid/ui/scroll-area";
 
 import { Playlist } from "../data/playlists";
 

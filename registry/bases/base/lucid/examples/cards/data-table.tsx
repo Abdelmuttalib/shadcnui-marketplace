@@ -19,15 +19,15 @@ import {
 } from "@tanstack/react-table";
 import * as React from "react";
 
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
-import { Checkbox } from "@/registry/lucid/ui/checkbox";
+} from "@/registry/bases/base/lucid/ui/card";
+import { Checkbox } from "@/registry/bases/base/lucid/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -36,8 +36,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
-import { Input } from "@/registry/lucid/ui/input";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 import {
   Table,
   TableBody,
@@ -45,7 +45,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/lucid/ui/table";
+} from "@/registry/bases/base/lucid/ui/table";
 
 const data: Payment[] = [
   {
@@ -306,7 +306,7 @@ export function CardsDataTable() {
           </Table>
         </div>
         <div className="flex items-center justify-end space-x-2 pt-4">
-          <div className="flex-1 text-sm text-lucid-muted-foreground">
+          <div className="text-lucid-muted-foreground flex-1 text-sm">
             {table.getFilteredSelectedRowModel().rows.length} of{" "}
             {table.getFilteredRowModel().rows.length} row(s) selected.
           </div>

@@ -1,5 +1,8 @@
-import { Label } from "@/registry/lucid/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/lucid/ui/radio-group";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/lucid/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (

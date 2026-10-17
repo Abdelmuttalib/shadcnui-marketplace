@@ -1,54 +1,58 @@
 import { Bookmark } from "lucide-react";
 
 import { ComponentShowcaseWrapper } from "@/components/component-wrapper";
-import { AccordionDemo } from "@/registry/libelle/showcase";
-import { AlertDialogDemo } from "@/registry/libelle/showcase";
-import { BreadcrumbDemo } from "@/registry/libelle/showcase";
-import { CalendarDemo } from "@/registry/libelle/showcase";
-import { CheckboxDemo } from "@/registry/libelle/showcase";
-import { ComboboxDemo } from "@/registry/libelle/showcase";
-import { CommandDemo } from "@/registry/libelle/showcase";
-import { ContextMenuDemo } from "@/registry/libelle/showcase";
-import { DatePickerDemo } from "@/registry/libelle/showcase";
-import { DialogDemo } from "@/registry/libelle/showcase";
-import { DrawerDemo } from "@/registry/libelle/showcase";
-import { DropdownMenuDemo } from "@/registry/libelle/showcase";
-import { HoverCardDemo } from "@/registry/libelle/showcase";
-import { InputDemo } from "@/registry/libelle/showcase";
-import { InputOTPDemo } from "@/registry/libelle/showcase";
-import { LabelDemo } from "@/registry/libelle/showcase";
-import { MenubarDemo } from "@/registry/libelle/showcase";
-import { PaginationDemo } from "@/registry/libelle/showcase";
-import { PopoverDemo } from "@/registry/libelle/showcase";
-import { ProgressDemo } from "@/registry/libelle/showcase";
-import { RadioGroupDemo } from "@/registry/libelle/showcase";
-import { SelectDemo } from "@/registry/libelle/showcase";
-import { SheetDemo } from "@/registry/libelle/showcase";
-import { SkeletonDemo } from "@/registry/libelle/showcase";
-import { SliderDemo } from "@/registry/libelle/showcase";
-import { SonnerDemo } from "@/registry/libelle/showcase";
-import { SwitchDemo } from "@/registry/libelle/showcase";
-import { TextareaDemo } from "@/registry/libelle/showcase";
-import { ToggleDemo } from "@/registry/libelle/showcase";
-import { ToggleGroupDemo } from "@/registry/libelle/showcase";
-import { TooltipDemo } from "@/registry/libelle/showcase";
-import { Badge, BadgeProps } from "@/registry/libelle/ui/badge";
-import { Button, ButtonProps } from "@/registry/libelle/ui/button";
+import { AccordionDemo } from "@/registry/bases/base/libelle/showcase";
+import { AlertDialogDemo } from "@/registry/bases/base/libelle/showcase";
+import { BreadcrumbDemo } from "@/registry/bases/base/libelle/showcase";
+import { CalendarDemo } from "@/registry/bases/base/libelle/showcase";
+import { CheckboxDemo } from "@/registry/bases/base/libelle/showcase";
+import { ComboboxDemo } from "@/registry/bases/base/libelle/showcase";
+import { CommandDemo } from "@/registry/bases/base/libelle/showcase";
+import { ContextMenuDemo } from "@/registry/bases/base/libelle/showcase";
+import { DatePickerDemo } from "@/registry/bases/base/libelle/showcase";
+import { DialogDemo } from "@/registry/bases/base/libelle/showcase";
+import { DrawerDemo } from "@/registry/bases/base/libelle/showcase";
+import { DropdownMenuDemo } from "@/registry/bases/base/libelle/showcase";
+import { HoverCardDemo } from "@/registry/bases/base/libelle/showcase";
+import { InputDemo } from "@/registry/bases/base/libelle/showcase";
+import { InputOTPDemo } from "@/registry/bases/base/libelle/showcase";
+import { LabelDemo } from "@/registry/bases/base/libelle/showcase";
+import { MenubarDemo } from "@/registry/bases/base/libelle/showcase";
+import { PaginationDemo } from "@/registry/bases/base/libelle/showcase";
+import { PopoverDemo } from "@/registry/bases/base/libelle/showcase";
+import { ProgressDemo } from "@/registry/bases/base/libelle/showcase";
+import { RadioGroupDemo } from "@/registry/bases/base/libelle/showcase";
+import { SelectDemo } from "@/registry/bases/base/libelle/showcase";
+import { SheetDemo } from "@/registry/bases/base/libelle/showcase";
+import { SkeletonDemo } from "@/registry/bases/base/libelle/showcase";
+import { SliderDemo } from "@/registry/bases/base/libelle/showcase";
+import { SonnerDemo } from "@/registry/bases/base/libelle/showcase";
+import { SwitchDemo } from "@/registry/bases/base/libelle/showcase";
+import { TextareaDemo } from "@/registry/bases/base/libelle/showcase";
+import { ToggleDemo } from "@/registry/bases/base/libelle/showcase";
+import { ToggleGroupDemo } from "@/registry/bases/base/libelle/showcase";
+import { TooltipDemo } from "@/registry/bases/base/libelle/showcase";
+import { Badge, BadgeProps } from "@/registry/bases/base/libelle/ui/badge";
+import { Button, ButtonProps } from "@/registry/bases/base/libelle/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/libelle/ui/card";
+} from "@/registry/bases/base/libelle/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/libelle/ui/table";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/libelle/ui/tabs";
+} from "@/registry/bases/base/libelle/ui/table";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/libelle/ui/tabs";
 
 export function LibelleShowcaseComponents() {
   const style = "libelle";

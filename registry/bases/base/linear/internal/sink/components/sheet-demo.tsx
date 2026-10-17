@@ -1,6 +1,6 @@
-import { Button } from "@/registry/linear/ui/button";
-import { Input } from "@/registry/linear/ui/input";
-import { Label } from "@/registry/linear/ui/label";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Input } from "@/registry/bases/base/linear/ui/input";
+import { Label } from "@/registry/bases/base/linear/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/linear/ui/sheet";
+} from "@/registry/bases/base/linear/ui/sheet";
 
 export function SheetDemo() {
   return (

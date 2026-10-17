@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
+} from "@/registry/bases/base/linear/ui/card";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/linear/ui/tabs";
+} from "@/registry/bases/base/linear/ui/tabs";
 
 import { CalendarDateRangePicker } from "./components/date-range-picker";
 import { MainNav } from "./components/main-nav";
@@ -31,8 +31,8 @@ const metadata: Metadata = {
 export function DashboardPage() {
   return (
     <>
-      <div className="flex h-full min-h-full flex-col bg-linear-background">
-        <div className="border-b border-b-linear-border">
+      <div className="bg-linear-background flex h-full min-h-full flex-col">
+        <div className="border-b-linear-border border-b">
           <div className="flex h-16 items-center px-4">
             <TeamSwitcher />
             <MainNav className="mx-6" />
@@ -78,14 +78,14 @@ export function DashboardPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      className="h-4 w-4 text-linear-muted-foreground"
+                      className="text-linear-muted-foreground h-4 w-4"
                     >
                       <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                     </svg>
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">$45,231.89</div>
-                    <p className="text-xs text-linear-muted-foreground">
+                    <p className="text-linear-muted-foreground text-xs">
                       +20.1% from last month
                     </p>
                   </CardContent>
@@ -103,7 +103,7 @@ export function DashboardPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      className="h-4 w-4 text-linear-muted-foreground"
+                      className="text-linear-muted-foreground h-4 w-4"
                     >
                       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                       <circle cx="9" cy="7" r="4" />
@@ -112,7 +112,7 @@ export function DashboardPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">+2350</div>
-                    <p className="text-xs text-linear-muted-foreground">
+                    <p className="text-linear-muted-foreground text-xs">
                       +180.1% from last month
                     </p>
                   </CardContent>
@@ -128,7 +128,7 @@ export function DashboardPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      className="h-4 w-4 text-linear-muted-foreground"
+                      className="text-linear-muted-foreground h-4 w-4"
                     >
                       <rect width="20" height="14" x="2" y="5" rx="2" />
                       <path d="M2 10h20" />
@@ -136,7 +136,7 @@ export function DashboardPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">+12,234</div>
-                    <p className="text-xs text-linear-muted-foreground">
+                    <p className="text-linear-muted-foreground text-xs">
                       +19% from last month
                     </p>
                   </CardContent>
@@ -154,14 +154,14 @@ export function DashboardPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      className="h-4 w-4 text-linear-muted-foreground"
+                      className="text-linear-muted-foreground h-4 w-4"
                     >
                       <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg>
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">+573</div>
-                    <p className="text-xs text-linear-muted-foreground">
+                    <p className="text-linear-muted-foreground text-xs">
                       +201 since last hour
                     </p>
                   </CardContent>

@@ -1,6 +1,20 @@
 "use client";
 
 import { ComponentPreview } from "@/components/component-preview";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/registry/bases/base/lucid/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/registry/bases/base/lucid/ui/sidebar";
 import { AccordionDemo } from "@/registry/lucid/internal/sink/components/accordion-demo";
 import { AlertDemo } from "@/registry/lucid/internal/sink/components/alert-demo";
 import { AlertDialogDemo } from "@/registry/lucid/internal/sink/components/alert-dialog-demo";
@@ -62,27 +76,13 @@ import { ToggleGroupDemo } from "@/registry/lucid/internal/sink/components/toggl
 import { ToggleOutline } from "@/registry/lucid/internal/sink/components/toggle-outline";
 import { ToggleWithText } from "@/registry/lucid/internal/sink/components/toggle-with-text";
 import { TooltipDemo } from "@/registry/lucid/internal/sink/components/tooltip-demo";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/lucid/ui/breadcrumb";
-import { Separator } from "@/registry/lucid/ui/separator";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/registry/lucid/ui/sidebar";
 
 export default function SinkPage() {
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b border-b-lucid-border transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="border-b-lucid-border group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />

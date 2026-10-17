@@ -33,19 +33,19 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
+} from "@/registry/bases/base/libelle/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/registry/libelle/ui/breadcrumb";
-import { Calendar } from "@/registry/libelle/ui/calendar";
+} from "@/registry/bases/base/libelle/ui/breadcrumb";
+import { Calendar } from "@/registry/bases/base/libelle/ui/calendar";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/libelle/ui/collapsible";
+} from "@/registry/bases/base/libelle/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -55,8 +55,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/libelle/ui/dropdown-menu";
-import { Separator } from "@/registry/libelle/ui/separator";
+} from "@/registry/bases/base/libelle/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -79,7 +79,7 @@ import {
   SidebarSeparator,
   SidebarTrigger,
   useSidebar,
-} from "@/registry/libelle/ui/sidebar";
+} from "@/registry/bases/base/libelle/ui/sidebar";
 
 export const iframeHeight = "800px";
 
@@ -344,7 +344,7 @@ export default function Page() {
     <SidebarProvider>
       <SidebarLeft />
       <SidebarInset>
-        <header className="sticky top-0 flex h-14 shrink-0 items-center gap-2 bg-libelle-background">
+        <header className="bg-libelle-background sticky top-0 flex h-14 shrink-0 items-center gap-2">
           <div className="flex flex-1 items-center gap-2 px-3">
             <SidebarTrigger />
             <Separator orientation="vertical" className="mr-2 h-4" />
@@ -360,8 +360,8 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          <div className="mx-auto h-24 w-full max-w-3xl rounded-xl bg-libelle-muted/50" />
-          <div className="mx-auto h-[100vh] w-full max-w-3xl rounded-xl bg-libelle-muted/50" />
+          <div className="bg-libelle-muted/50 mx-auto h-24 w-full max-w-3xl rounded-xl" />
+          <div className="bg-libelle-muted/50 mx-auto h-[100vh] w-full max-w-3xl rounded-xl" />
         </div>
       </SidebarInset>
       <SidebarRight />
@@ -393,10 +393,10 @@ function SidebarRight({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar
       collapsible="none"
-      className="sticky top-0 hidden h-svh border-l lg:flex"
+      className="h-svh sticky top-0 hidden border-l lg:flex"
       {...props}
     >
-      <SidebarHeader className="h-16 border-b border-sidebar-border">
+      <SidebarHeader className="border-sidebar-border h-16 border-b">
         <NavUser user={sidebarRightData.user} />
       </SidebarHeader>
       <SidebarContent>
@@ -437,7 +437,7 @@ function Calendars({
             >
               <SidebarGroupLabel
                 asChild
-                className="group/label w-full text-sm text-sidebar-foreground hover:bg-libelle-sidebar-accent hover:text-sidebar-accent-foreground"
+                className="group/label text-sidebar-foreground hover:bg-libelle-sidebar-accent hover:text-sidebar-accent-foreground w-full text-sm"
               >
                 <CollapsibleTrigger>
                   {calendar.name}{" "}
@@ -452,9 +452,9 @@ function Calendars({
                         <SidebarMenuButton>
                           <div
                             data-active={index < 2}
-                            className="group/calendar-item flex aspect-square size-4 shrink-0 items-center justify-center rounded-libelle-sm border border-sidebar-border text-sidebar-primary-foreground data-[active=true]:border-sidebar-primary data-[active=true]:bg-libelle-sidebar-primary"
+                            className="group/calendar-item size-4 rounded-libelle-sm border-sidebar-border text-sidebar-primary-foreground data-[active=true]:border-sidebar-primary data-[active=true]:bg-libelle-sidebar-primary flex aspect-square shrink-0 items-center justify-center border"
                           >
-                            <Check className="hidden size-3 group-data-[active=true]/calendar-item:block" />
+                            <Check className="size-3 hidden group-data-[active=true]/calendar-item:block" />
                           </div>
                           {item}
                         </SidebarMenuButton>
@@ -636,11 +636,11 @@ function NavUser({
                 <span className="truncate font-semibold">{user.name}</span>
                 <span className="truncate text-xs">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4" />
+              <ChevronsUpDown className="size-4 ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+            className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
             side={isMobile ? "bottom" : "right"}
             align="start"
             sideOffset={4}
@@ -719,7 +719,7 @@ function NavWorkspaces({
                 </SidebarMenuButton>
                 <CollapsibleTrigger asChild>
                   <SidebarMenuAction
-                    className="left-2 bg-libelle-sidebar-accent text-sidebar-accent-foreground data-[state=open]:rotate-90"
+                    className="bg-libelle-sidebar-accent text-sidebar-accent-foreground left-2 data-[state=open]:rotate-90"
                     showOnHover
                   >
                     <ChevronRight />
@@ -778,7 +778,7 @@ function TeamSwitcher({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton className="w-fit px-1.5">
-              <div className="flex aspect-square size-5 items-center justify-center rounded-libelle-md bg-libelle-sidebar-primary text-sidebar-primary-foreground">
+              <div className="size-5 rounded-libelle-md bg-libelle-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center">
                 <activeTeam.logo className="size-3" />
               </div>
               <span className="truncate font-semibold">{activeTeam.name}</span>
@@ -791,7 +791,7 @@ function TeamSwitcher({
             side="bottom"
             sideOffset={4}
           >
-            <DropdownMenuLabel className="text-xs text-libelle-muted-foreground">
+            <DropdownMenuLabel className="text-libelle-muted-foreground text-xs">
               Teams
             </DropdownMenuLabel>
             {teams.map((team, index) => (
@@ -800,7 +800,7 @@ function TeamSwitcher({
                 onClick={() => setActiveTeam(team)}
                 className="gap-2 p-2"
               >
-                <div className="flex size-6 items-center justify-center rounded-libelle-sm border">
+                <div className="size-6 rounded-libelle-sm flex items-center justify-center border">
                   <team.logo className="size-4 shrink-0" />
                 </div>
                 {team.name}
@@ -809,10 +809,10 @@ function TeamSwitcher({
             ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-libelle-md border bg-libelle-background">
+              <div className="size-6 rounded-libelle-md bg-libelle-background flex items-center justify-center border">
                 <Plus className="size-4" />
               </div>
-              <div className="font-medium text-libelle-muted-foreground">
+              <div className="text-libelle-muted-foreground font-medium">
                 Add team
               </div>
             </DropdownMenuItem>

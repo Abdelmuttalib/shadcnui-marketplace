@@ -5,14 +5,14 @@ import {
   StarIcon,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/libelle/ui/card";
+} from "@/registry/bases/base/libelle/ui/card";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -21,8 +21,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/libelle/ui/dropdown-menu";
-import { Separator } from "@/registry/libelle/ui/separator";
+} from "@/registry/bases/base/libelle/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 
 export function DemoGithub() {
   return (
@@ -35,7 +35,7 @@ export function DemoGithub() {
             your apps. Accessible. Customizable. Open Source.
           </CardDescription>
         </div>
-        <div className="flex items-center space-x-1 rounded-libelle-md bg-libelle-secondary text-libelle-secondary-foreground">
+        <div className="rounded-libelle-md bg-libelle-secondary text-libelle-secondary-foreground flex items-center space-x-1">
           <Button variant="secondary" className="px-2 shadow-none">
             <StarIcon className="mr-2 h-4 w-4" />
             Star
@@ -44,7 +44,7 @@ export function DemoGithub() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" className="px-2 shadow-none">
-                <ChevronDownIcon className="h-4 w-4 text-libelle-secondary-foreground" />
+                <ChevronDownIcon className="text-libelle-secondary-foreground h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -69,7 +69,7 @@ export function DemoGithub() {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="flex space-x-4 text-sm text-libelle-muted-foreground">
+        <div className="text-libelle-muted-foreground flex space-x-4 text-sm">
           <div className="flex items-center">
             <CircleIcon className="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
             TypeScript

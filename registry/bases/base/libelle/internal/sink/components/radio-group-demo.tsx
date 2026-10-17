@@ -1,5 +1,8 @@
-import { Label } from "@/registry/libelle/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/libelle/ui/radio-group";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/libelle/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (

@@ -1,7 +1,7 @@
 import { ArrowRightIcon, LockIcon } from "lucide-react";
 import Image from "next/image";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
@@ -9,15 +9,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
-import { Checkbox } from "@/registry/linear/ui/checkbox";
-import { Input } from "@/registry/linear/ui/input";
+} from "@/registry/bases/base/linear/ui/card";
+import { Checkbox } from "@/registry/bases/base/linear/ui/checkbox";
+import { Input } from "@/registry/bases/base/linear/ui/input";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/linear/ui/tabs";
+} from "@/registry/bases/base/linear/ui/tabs";
 
 const LoginForm = ({ className = "", variant = "default" }) => (
   <div className={`space-y-4 ${className}`}>

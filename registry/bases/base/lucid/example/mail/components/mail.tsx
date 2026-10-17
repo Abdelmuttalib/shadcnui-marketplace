@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/lucid/ui/input";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/lucid/ui/resizable";
-import { Separator } from "@/registry/lucid/ui/separator";
+} from "@/registry/bases/base/lucid/ui/resizable";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/lucid/ui/tabs";
-import { TooltipProvider } from "@/registry/lucid/ui/tooltip";
+} from "@/registry/bases/base/lucid/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/lucid/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-lucid-background/60 bg-lucid-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-lucid-muted-foreground" />
+                  <Search className="text-lucid-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

@@ -5,14 +5,14 @@ import { Check } from "lucide-react";
 import type React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/linear/ui/card";
-import { Typography } from "@/registry/linear/ui/typography";
+} from "@/registry/bases/base/linear/ui/card";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 const pricingTiers = [
   {
@@ -68,7 +68,7 @@ export default function PricingPage() {
     <div className="bg-linear-to-b from-background via-accent/60 relative to-indigo-600/20">
       {/* Background Pattern */}
       <div className="bg-background absolute inset-0 -z-10 h-full w-full">
-        <div className="absolute h-full w-full bg-[radial-gradient(oklch(var(--foreground))_1px,transparent_1px)] opacity-15 [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+        <div className="opacity-15 absolute h-full w-full bg-[radial-gradient(oklch(var(--foreground))_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">

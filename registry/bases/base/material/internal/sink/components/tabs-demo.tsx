@@ -1,4 +1,4 @@
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Card,
   CardContent,
@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/material/ui/card";
-import { Input } from "@/registry/material/ui/input";
-import { Label } from "@/registry/material/ui/label";
+} from "@/registry/bases/base/material/ui/card";
+import { Input } from "@/registry/bases/base/material/ui/input";
+import { Label } from "@/registry/bases/base/material/ui/label";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/material/ui/tabs";
+} from "@/registry/bases/base/material/ui/tabs";
 
 export function TabsDemo() {
   return (

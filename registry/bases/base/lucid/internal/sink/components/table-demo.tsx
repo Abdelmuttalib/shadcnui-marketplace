@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/lucid/ui/table";
+} from "@/registry/bases/base/lucid/ui/table";
 
 const invoices = [
   {

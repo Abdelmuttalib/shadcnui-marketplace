@@ -8,10 +8,14 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
-import { Button } from "@/registry/linear/ui/button";
-import { Card, CardContent, CardFooter } from "@/registry/linear/ui/card";
-import { Typography } from "@/registry/linear/ui/typography";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+} from "@/registry/bases/base/linear/ui/card";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 function formatDate(dateString: string): string {
   const options: Intl.DateTimeFormatOptions = {

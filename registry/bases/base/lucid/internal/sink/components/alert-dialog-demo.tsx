@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/lucid/ui/alert-dialog";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 
 export function AlertDialogDemo() {
   return (

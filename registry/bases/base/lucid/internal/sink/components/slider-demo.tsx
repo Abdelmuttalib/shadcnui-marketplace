@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Slider } from "@/registry/lucid/ui/slider";
+import { Slider } from "@/registry/bases/base/lucid/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 

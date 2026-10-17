@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/libelle/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/libelle/ui/aspect-ratio";
 
 export default function AspectRatioDemo() {
   return (

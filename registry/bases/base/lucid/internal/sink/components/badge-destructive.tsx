@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/lucid/ui/badge";
+import { Badge } from "@/registry/bases/base/lucid/ui/badge";
 
 export function BadgeDestructive() {
   return <Badge variant="destructive">Destructive</Badge>;

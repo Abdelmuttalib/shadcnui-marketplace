@@ -17,7 +17,7 @@ export async function getItemsForBase(
 ) {
   const style = defaultStyle;
   const { Index } = await import(`@/registry/bases/__index__`);
-  const index = Index[base];
+  const index = Index[base][styleName];
 
   if (!index) {
     return [];
@@ -34,8 +34,8 @@ export async function getStyleItemsForBase(
   base: BaseName,
   styleName: Style["name"]
 ) {
-  const { Index } = await import("@/registry/bases/__index__");
-  const index = Index[base];
+  const { Index } = await import(`@/registry/bases/__index__`);
+  const index = Index[base][styleName];
 
   if (!index) {
     return [];

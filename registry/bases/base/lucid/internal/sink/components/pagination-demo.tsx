@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/lucid/ui/pagination";
+} from "@/registry/bases/base/lucid/ui/pagination";
 
 export function PaginationDemo() {
   return (

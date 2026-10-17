@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/libelle/ui/avatar";
+} from "@/registry/bases/base/libelle/ui/avatar";
 
 export default function AvatarDemo() {
   return (

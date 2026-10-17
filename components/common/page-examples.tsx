@@ -3,22 +3,22 @@
 import { useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { CarbonPageExamples } from "@/registry/bases/base/carbon/page-examples";
-import { CatalystPageExamples } from "@/registry/catalyst/page-examples";
-import { DefaultPageExamples } from "@/registry/default/page-examples";
-import { LibellePageExamples } from "@/registry/libelle/page-examples";
-import { LinearPageExamples } from "@/registry/linear/page-examples";
-import { LucidPageExamples } from "@/registry/lucid/page-examples";
-import { MaterialPageExamples } from "@/registry/material/page-examples";
-import { MoonPageExamples } from "@/registry/moon/page-examples";
-import { NeonPageExamples } from "@/registry/neon/page-examples";
-import { SnowPageExamples } from "@/registry/snow/page-examples";
-import { SpectrumPageExamples } from "@/registry/spectrum/page-examples";
+import { CatalystPageExamples } from "@/registry/bases/base/catalyst/page-examples";
+import { DefaultPageExamples } from "@/registry/bases/base/default/page-examples";
+import { LibellePageExamples } from "@/registry/bases/base/libelle/page-examples";
+import { LinearPageExamples } from "@/registry/bases/base/linear/page-examples";
+import { LucidPageExamples } from "@/registry/bases/base/lucid/page-examples";
+import { MaterialPageExamples } from "@/registry/bases/base/material/page-examples";
+import { MoonPageExamples } from "@/registry/bases/base/moon/page-examples";
+import { NeonPageExamples } from "@/registry/bases/base/neon/page-examples";
+import { SnowPageExamples } from "@/registry/bases/base/snow/page-examples";
+import { SpectrumPageExamples } from "@/registry/bases/base/spectrum/page-examples";
+import { WedgesPageExamples } from "@/registry/bases/base/wedges/page-examples";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
   getStyleForegroundClassname,
 } from "@/registry/styles-components";
-import { WedgesPageExamples } from "@/registry/wedges/page-examples";
 
 export const pageExamples = {
   default: DefaultPageExamples,

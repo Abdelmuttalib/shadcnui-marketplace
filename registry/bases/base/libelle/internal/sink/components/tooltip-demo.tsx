@@ -1,10 +1,10 @@
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/libelle/ui/tooltip";
+} from "@/registry/bases/base/libelle/ui/tooltip";
 
 export function TooltipDemo() {
   return (

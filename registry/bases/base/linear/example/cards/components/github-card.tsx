@@ -5,14 +5,14 @@ import {
   StarIcon,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/linear/ui/card";
+} from "@/registry/bases/base/linear/ui/card";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -21,8 +21,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
-import { Separator } from "@/registry/linear/ui/separator";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 
 export function DemoGithub() {
   return (
@@ -35,7 +35,7 @@ export function DemoGithub() {
             your apps. Accessible. Customizable. Open Source.
           </CardDescription>
         </div>
-        <div className="flex items-center space-x-1 rounded-linear-md bg-linear-secondary text-linear-secondary-foreground">
+        <div className="rounded-linear-md bg-linear-secondary text-linear-secondary-foreground flex items-center space-x-1">
           <Button variant="secondary" className="px-2 shadow-none">
             <StarIcon className="mr-2 h-4 w-4" />
             Star
@@ -44,7 +44,7 @@ export function DemoGithub() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" className="px-2 shadow-none">
-                <ChevronDownIcon className="h-4 w-4 text-linear-secondary-foreground" />
+                <ChevronDownIcon className="text-linear-secondary-foreground h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -69,7 +69,7 @@ export function DemoGithub() {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="flex space-x-4 text-sm text-linear-muted-foreground">
+        <div className="text-linear-muted-foreground flex space-x-4 text-sm">
           <div className="flex items-center">
             <CircleIcon className="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
             TypeScript

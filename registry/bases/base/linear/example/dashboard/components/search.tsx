@@ -1,4 +1,4 @@
-import { Input } from "@/registry/linear/ui/input";
+import { Input } from "@/registry/bases/base/linear/ui/input";
 
 export function Search() {
   return (

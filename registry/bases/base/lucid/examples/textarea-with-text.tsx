@@ -1,12 +1,12 @@
-import { Label } from "@/registry/lucid/ui/label";
-import { Textarea } from "@/registry/lucid/ui/textarea";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
+import { Textarea } from "@/registry/bases/base/lucid/ui/textarea";
 
 export default function TextareaWithText() {
   return (
     <div className="grid w-full gap-1.5">
       <Label htmlFor="message-2">Your Message</Label>
       <Textarea placeholder="Type your message here." id="message-2" />
-      <p className="text-sm text-lucid-muted-foreground">
+      <p className="text-lucid-muted-foreground text-sm">
         Your message will be copied to the support team.
       </p>
     </div>

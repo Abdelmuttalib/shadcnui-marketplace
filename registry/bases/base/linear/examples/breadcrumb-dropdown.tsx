@@ -7,13 +7,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/linear/ui/breadcrumb";
+} from "@/registry/bases/base/linear/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
 
 export default function BreadcrumbWithDropdown() {
   return (

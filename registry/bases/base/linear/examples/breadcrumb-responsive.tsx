@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/linear/ui/breadcrumb";
-import { Button } from "@/registry/linear/ui/button";
+} from "@/registry/bases/base/linear/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/linear/ui/drawer";
+} from "@/registry/bases/base/linear/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
 
 const items = [
   { href: "#", label: "Home" },

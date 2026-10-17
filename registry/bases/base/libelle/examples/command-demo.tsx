@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/libelle/ui/command";
+} from "@/registry/bases/base/libelle/ui/command";
 
 export default function CommandDemo() {
   return (

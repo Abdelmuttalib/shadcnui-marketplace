@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 
 export default function ButtonAsChild() {
   return (

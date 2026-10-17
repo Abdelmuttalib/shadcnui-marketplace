@@ -1,5 +1,5 @@
-import { Label } from "@/registry/lucid/ui/label";
-import { Switch } from "@/registry/lucid/ui/switch";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
+import { Switch } from "@/registry/bases/base/lucid/ui/switch";
 
 export function SwitchDemo() {
   return (

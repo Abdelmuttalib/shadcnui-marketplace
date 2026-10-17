@@ -1,6 +1,6 @@
-import { Button } from "@/registry/libelle/ui/button";
-import { Input } from "@/registry/libelle/ui/input";
-import { Label } from "@/registry/libelle/ui/label";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/libelle/ui/sheet";
+} from "@/registry/bases/base/libelle/ui/sheet";
 
 export function SheetDemo() {
   return (

@@ -7,7 +7,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/lucid/ui/chart";
+} from "@/registry/bases/base/lucid/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

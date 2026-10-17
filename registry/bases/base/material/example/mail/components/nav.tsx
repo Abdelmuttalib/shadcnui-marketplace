@@ -4,12 +4,12 @@ import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/registry/material/ui/button";
+import { buttonVariants } from "@/registry/bases/base/material/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/material/ui/tooltip";
+} from "@/registry/bases/base/material/ui/tooltip";
 
 interface NavProps {
   isCollapsed: boolean;
@@ -48,7 +48,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               <TooltipContent side="right" className="flex items-center gap-4">
                 {link.title}
                 {link.label && (
-                  <span className="ml-auto text-material-muted-foreground">
+                  <span className="text-material-muted-foreground ml-auto">
                     {link.label}
                   </span>
                 )}
@@ -61,7 +61,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               className={cn(
                 buttonVariants({ variant: link.variant, size: "sm" }),
                 link.variant === "default" &&
-                  "dark:bg-material-muted dark:text-white dark:hover:bg-material-muted dark:hover:text-white",
+                  "dark:bg-material-muted dark:hover:bg-material-muted dark:text-white dark:hover:text-white",
                 "justify-start"
               )}
             >

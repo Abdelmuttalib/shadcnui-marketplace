@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/material/ui/hover-card";
-import { Label } from "@/registry/material/ui/label";
-import { Slider } from "@/registry/material/ui/slider";
+} from "@/registry/bases/base/material/ui/hover-card";
+import { Label } from "@/registry/bases/base/material/ui/label";
+import { Slider } from "@/registry/bases/base/material/ui/slider";
 
 interface TopPSelectorProps {
   defaultValue: SliderProps["defaultValue"];
@@ -25,7 +25,7 @@ export function TopPSelector({ defaultValue }: TopPSelectorProps) {
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <Label htmlFor="top-p">Top P</Label>
-              <span className="w-12 rounded-material-md border border-transparent px-2 py-0.5 text-right text-sm text-material-muted-foreground hover:border-border">
+              <span className="rounded-material-md text-material-muted-foreground hover:border-border w-12 border border-transparent px-2 py-0.5 text-right text-sm">
                 {value}
               </span>
             </div>

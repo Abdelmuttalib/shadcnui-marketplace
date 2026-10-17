@@ -1,4 +1,4 @@
-import { Checkbox } from "@/registry/material/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/material/ui/checkbox";
 
 export default function CheckboxDisabled() {
   return (

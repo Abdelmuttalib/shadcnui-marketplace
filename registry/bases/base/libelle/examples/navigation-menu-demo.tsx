@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/libelle/ui/navigation-menu";
+} from "@/registry/bases/base/libelle/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

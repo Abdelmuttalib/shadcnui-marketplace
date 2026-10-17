@@ -16,20 +16,20 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/libelle/ui/input";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/libelle/ui/resizable";
-import { Separator } from "@/registry/libelle/ui/separator";
+} from "@/registry/bases/base/libelle/ui/resizable";
+import { Separator } from "@/registry/bases/base/libelle/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/libelle/ui/tabs";
-import { TooltipProvider } from "@/registry/libelle/ui/tooltip";
+} from "@/registry/bases/base/libelle/ui/tabs";
+import { TooltipProvider } from "@/registry/bases/base/libelle/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -185,7 +185,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-libelle-background/60 bg-libelle-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-libelle-muted-foreground" />
+                  <Search className="text-libelle-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

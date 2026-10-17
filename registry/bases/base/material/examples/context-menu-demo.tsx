@@ -12,7 +12,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/material/ui/context-menu";
+} from "@/registry/bases/base/material/ui/context-menu";
 
 export default function ContextMenuDemo() {
   return (

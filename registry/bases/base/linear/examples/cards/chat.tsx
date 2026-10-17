@@ -6,14 +6,14 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
-import { Button } from "@/registry/linear/ui/button";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/linear/ui/card";
+} from "@/registry/bases/base/linear/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -21,7 +21,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/linear/ui/command";
+} from "@/registry/bases/base/linear/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -29,14 +29,14 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/linear/ui/dialog";
-import { Input } from "@/registry/linear/ui/input";
+} from "@/registry/bases/base/linear/ui/dialog";
+import { Input } from "@/registry/bases/base/linear/ui/input";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/linear/ui/tooltip";
+} from "@/registry/bases/base/linear/ui/tooltip";
 
 const users = [
   {
@@ -104,7 +104,7 @@ export function CardsChat() {
             </Avatar>
             <div>
               <p className="text-sm font-medium leading-none">Sofia Davis</p>
-              <p className="text-sm text-linear-muted-foreground">
+              <p className="text-linear-muted-foreground text-sm">
                 m@example.com
               </p>
             </div>
@@ -132,9 +132,9 @@ export function CardsChat() {
               <div
                 key={index}
                 className={cn(
-                  "flex w-max max-w-[75%] flex-col gap-2 rounded-linear-lg px-3 py-2 text-sm",
+                  "rounded-linear-lg flex w-max max-w-[75%] flex-col gap-2 px-3 py-2 text-sm",
                   message.role === "user"
-                    ? "ml-auto bg-linear-primary text-linear-primary-foreground"
+                    ? "bg-linear-primary text-linear-primary-foreground ml-auto"
                     : "bg-linear-muted"
                 )}
               >
@@ -216,12 +216,12 @@ export function CardsChat() {
                       <p className="text-sm font-medium leading-none">
                         {user.name}
                       </p>
-                      <p className="text-sm text-linear-muted-foreground">
+                      <p className="text-linear-muted-foreground text-sm">
                         {user.email}
                       </p>
                     </div>
                     {selectedUsers.includes(user) ? (
-                      <Check className="ml-auto flex h-5 w-5 text-linear-primary" />
+                      <Check className="text-linear-primary ml-auto flex h-5 w-5" />
                     ) : null}
                   </CommandItem>
                 ))}
@@ -234,7 +234,7 @@ export function CardsChat() {
                 {selectedUsers.map((user) => (
                   <Avatar
                     key={user.email}
-                    className="inline-block border-2 border-background"
+                    className="border-background inline-block border-2"
                   >
                     <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name[0]}</AvatarFallback>
@@ -242,7 +242,7 @@ export function CardsChat() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-linear-muted-foreground">
+              <p className="text-linear-muted-foreground text-sm">
                 Select users to add to this thread.
               </p>
             )}

@@ -6,7 +6,7 @@ import * as React from "react";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
 // import { useConfig } from "@/hooks/use-config";
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Card,
   CardContent,
@@ -14,7 +14,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/libelle/ui/card";
+} from "@/registry/bases/base/libelle/ui/card";
 // import { themes } from "@/lib/themes";
 
 const data = [
@@ -90,7 +90,7 @@ export function CardsActivityGoal() {
           </Button>
           <div className="flex-1 text-center">
             <div className="text-5xl font-bold tracking-tighter">{goal}</div>
-            <div className="text-[0.70rem] uppercase text-muted-foreground">
+            <div className="text-muted-foreground text-[0.70rem] uppercase">
               Calories/day
             </div>
           </div>

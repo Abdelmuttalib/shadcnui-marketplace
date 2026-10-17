@@ -4,24 +4,24 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
-import { Button } from "@/registry/material/ui/button";
+} from "@/registry/bases/base/material/ui/avatar";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/material/ui/card";
-import { Input } from "@/registry/material/ui/input";
+} from "@/registry/bases/base/material/ui/card";
+import { Input } from "@/registry/bases/base/material/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/material/ui/select";
-import { Separator } from "@/registry/material/ui/separator";
+} from "@/registry/bases/base/material/ui/select";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 
 export function DemoShareDocument() {
   return (
@@ -53,7 +53,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-sm text-material-muted-foreground">
+                  <p className="text-material-muted-foreground text-sm">
                     m@example.com
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-sm text-material-muted-foreground">
+                  <p className="text-material-muted-foreground text-sm">
                     b@example.com
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export function DemoShareDocument() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-sm text-material-muted-foreground">
+                  <p className="text-material-muted-foreground text-sm">
                     p@example.com
                   </p>
                 </div>

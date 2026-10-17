@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/libelle/ui/menubar";
+} from "@/registry/bases/base/libelle/ui/menubar";
 
 export default function MenubarDemo() {
   return (

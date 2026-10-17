@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import { Badge } from "@/registry/lucid/ui/badge";
+import { Badge } from "@/registry/bases/base/lucid/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -23,8 +23,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/lucid/ui/breadcrumb";
-import { Button } from "@/registry/lucid/ui/button";
+} from "@/registry/bases/base/lucid/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -32,7 +32,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
+} from "@/registry/bases/base/lucid/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -40,17 +40,21 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
-import { Input } from "@/registry/lucid/ui/input";
-import { Label } from "@/registry/lucid/ui/label";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/lucid/ui/sheet";
+} from "@/registry/bases/base/lucid/ui/select";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/registry/bases/base/lucid/ui/sheet";
 import {
   Table,
   TableBody,
@@ -58,14 +62,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/lucid/ui/table";
-import { Textarea } from "@/registry/lucid/ui/textarea";
-import { ToggleGroup, ToggleGroupItem } from "@/registry/lucid/ui/toggle-group";
+} from "@/registry/bases/base/lucid/ui/table";
+import { Textarea } from "@/registry/bases/base/lucid/ui/textarea";
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/registry/bases/base/lucid/ui/toggle-group";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/lucid/ui/tooltip";
+} from "@/registry/bases/base/lucid/ui/tooltip";
 
 export const description =
   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images.";
@@ -76,12 +83,12 @@ export const containerClassName = "w-full h-full";
 
 export default function Dashboard() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-lucid-muted/40">
-      <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-lucid-background sm:flex">
+    <div className="bg-lucid-muted/40 flex min-h-screen w-full flex-col">
+      <aside className="bg-lucid-background fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 py-4">
           <Link
             href="#"
-            className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-lucid-primary text-lg font-semibold text-lucid-primary-foreground md:h-8 md:w-8 md:text-base"
+            className="bg-lucid-primary text-lucid-primary-foreground group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:h-8 md:w-8 md:text-base"
           >
             <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
             <span className="sr-only">Acme Inc</span>
@@ -90,7 +97,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-lucid-muted-foreground transition-colors hover:text-lucid-foreground md:h-8 md:w-8"
+                className="text-lucid-muted-foreground hover:text-lucid-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Home className="h-5 w-5" />
                 <span className="sr-only">Dashboard</span>
@@ -102,7 +109,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors hover:text-lucid-foreground md:h-8 md:w-8"
+                className="hover:text-lucid-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <ShoppingCart className="h-5 w-5" />
                 <span className="sr-only">Orders</span>
@@ -114,7 +121,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-lucid-accent text-lucid-accent-foreground transition-colors hover:text-lucid-foreground md:h-8 md:w-8"
+                className="bg-lucid-accent text-lucid-accent-foreground hover:text-lucid-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Package className="h-5 w-5" />
                 <span className="sr-only">Products</span>
@@ -126,7 +133,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-lucid-muted-foreground transition-colors hover:text-lucid-foreground md:h-8 md:w-8"
+                className="text-lucid-muted-foreground hover:text-lucid-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Users2 className="h-5 w-5" />
                 <span className="sr-only">Customers</span>
@@ -138,7 +145,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-lucid-muted-foreground transition-colors hover:text-lucid-foreground md:h-8 md:w-8"
+                className="text-lucid-muted-foreground hover:text-lucid-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <LineChart className="h-5 w-5" />
                 <span className="sr-only">Analytics</span>
@@ -152,7 +159,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-lucid-muted-foreground transition-colors hover:text-lucid-foreground md:h-8 md:w-8"
+                className="text-lucid-muted-foreground hover:text-lucid-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Settings className="h-5 w-5" />
                 <span className="sr-only">Settings</span>
@@ -163,7 +170,7 @@ export default function Dashboard() {
         </nav>
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-        <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-lucid-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+        <header className="bg-lucid-background sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
@@ -175,42 +182,42 @@ export default function Dashboard() {
               <nav className="grid gap-6 text-lg font-medium">
                 <Link
                   href="#"
-                  className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-lucid-primary text-lg font-semibold text-lucid-primary-foreground md:text-base"
+                  className="bg-lucid-primary text-lucid-primary-foreground group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:text-base"
                 >
                   <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
                   <span className="sr-only">Acme Inc</span>
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-lucid-muted-foreground hover:text-lucid-foreground"
+                  className="text-lucid-muted-foreground hover:text-lucid-foreground flex items-center gap-4 px-2.5"
                 >
                   <Home className="h-5 w-5" />
                   Dashboard
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-lucid-muted-foreground hover:text-lucid-foreground"
+                  className="text-lucid-muted-foreground hover:text-lucid-foreground flex items-center gap-4 px-2.5"
                 >
                   <ShoppingCart className="h-5 w-5" />
                   Orders
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-lucid-foreground"
+                  className="text-lucid-foreground flex items-center gap-4 px-2.5"
                 >
                   <Package className="h-5 w-5" />
                   Products
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-lucid-muted-foreground hover:text-lucid-foreground"
+                  className="text-lucid-muted-foreground hover:text-lucid-foreground flex items-center gap-4 px-2.5"
                 >
                   <Users2 className="h-5 w-5" />
                   Customers
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-lucid-muted-foreground hover:text-lucid-foreground"
+                  className="text-lucid-muted-foreground hover:text-lucid-foreground flex items-center gap-4 px-2.5"
                 >
                   <LineChart className="h-5 w-5" />
                   Settings
@@ -238,11 +245,11 @@ export default function Dashboard() {
             </BreadcrumbList>
           </Breadcrumb>
           <div className="relative ml-auto flex-1 md:grow-0">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-lucid-muted-foreground" />
+            <Search className="text-lucid-muted-foreground absolute left-2.5 top-2.5 h-4 w-4" />
             <Input
               type="search"
               placeholder="Search..."
-              className="w-full rounded-lg bg-lucid-background pl-8 md:w-[200px] lg:w-[320px]"
+              className="bg-lucid-background w-full rounded-lg pl-8 md:w-[200px] lg:w-[320px]"
             />
           </div>
           <DropdownMenu>
@@ -545,7 +552,7 @@ export default function Dashboard() {
                     <div className="grid gap-2">
                       <Image
                         alt="Product image"
-                        className="aspect-square w-full rounded-lucid-md object-cover"
+                        className="rounded-lucid-md aspect-square w-full object-cover"
                         height="300"
                         src="/placeholder.svg"
                         width="300"
@@ -554,7 +561,7 @@ export default function Dashboard() {
                         <button>
                           <Image
                             alt="Product image"
-                            className="aspect-square w-full rounded-lucid-md object-cover"
+                            className="rounded-lucid-md aspect-square w-full object-cover"
                             height="84"
                             src="/placeholder.svg"
                             width="84"
@@ -563,14 +570,14 @@ export default function Dashboard() {
                         <button>
                           <Image
                             alt="Product image"
-                            className="aspect-square w-full rounded-lucid-md object-cover"
+                            className="rounded-lucid-md aspect-square w-full object-cover"
                             height="84"
                             src="/placeholder.svg"
                             width="84"
                           />
                         </button>
-                        <button className="flex aspect-square w-full items-center justify-center rounded-lucid-md border border-dashed">
-                          <Upload className="h-4 w-4 text-lucid-muted-foreground" />
+                        <button className="rounded-lucid-md flex aspect-square w-full items-center justify-center border border-dashed">
+                          <Upload className="text-lucid-muted-foreground h-4 w-4" />
                           <span className="sr-only">Upload</span>
                         </button>
                       </div>

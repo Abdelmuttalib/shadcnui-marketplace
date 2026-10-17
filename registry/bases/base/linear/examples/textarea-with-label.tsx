@@ -1,5 +1,5 @@
-import { Label } from "@/registry/linear/ui/label";
-import { Textarea } from "@/registry/linear/ui/textarea";
+import { Label } from "@/registry/bases/base/linear/ui/label";
+import { Textarea } from "@/registry/bases/base/linear/ui/textarea";
 
 export default function TextareaWithLabel() {
   return (

@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/libelle/ui/select";
+} from "@/registry/bases/base/libelle/ui/select";
 
 export default function SelectDemo() {
   return (

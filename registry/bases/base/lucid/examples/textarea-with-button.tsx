@@ -1,5 +1,5 @@
-import { Button } from "@/registry/lucid/ui/button";
-import { Textarea } from "@/registry/lucid/ui/textarea";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { Textarea } from "@/registry/bases/base/lucid/ui/textarea";
 
 export default function TextareaWithButton() {
   return (

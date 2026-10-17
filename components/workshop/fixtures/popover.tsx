@@ -1,9 +1,9 @@
 "use client";
 
-import * as DefaultButton from "@/registry/default/ui/button";
-import * as Default from "@/registry/default/ui/popover";
-import * as V4Button from "@/registry/default-v4/ui/button";
-import * as V4 from "@/registry/default-v4/ui/popover";
+import * as DefaultButton from "@/registry/bases/base/default/ui/button";
+import * as Default from "@/registry/bases/base/default/ui/popover";
+import * as V4Button from "@/registry/bases/base/default-v4/ui/button";
+import * as V4 from "@/registry/bases/base/default-v4/ui/popover";
 
 import type { FixtureSide } from "./types";
 

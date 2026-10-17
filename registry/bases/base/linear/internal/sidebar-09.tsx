@@ -20,7 +20,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/linear/ui/avatar";
+} from "@/registry/bases/base/linear/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -28,7 +28,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/linear/ui/breadcrumb";
+} from "@/registry/bases/base/linear/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,9 +37,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/linear/ui/dropdown-menu";
-import { Label } from "@/registry/linear/ui/label";
-import { Separator } from "@/registry/linear/ui/separator";
+} from "@/registry/bases/base/linear/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/linear/ui/label";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -55,8 +55,8 @@ import {
   SidebarProvider,
   SidebarTrigger,
   useSidebar,
-} from "@/registry/linear/ui/sidebar";
-import { Switch } from "@/registry/linear/ui/switch";
+} from "@/registry/bases/base/linear/ui/sidebar";
+import { Switch } from "@/registry/bases/base/linear/ui/switch";
 
 // This is sample data
 const data = {
@@ -196,7 +196,7 @@ export default function Page() {
     >
       <AppSidebar />
       <SidebarInset>
-        <header className="sticky top-0 flex shrink-0 items-center gap-2 border-b bg-linear-background p-4">
+        <header className="bg-linear-background sticky top-0 flex shrink-0 items-center gap-2 border-b p-4">
           <SidebarTrigger className="-ml-1" />
           <Separator orientation="vertical" className="mr-2 h-4" />
           <Breadcrumb>
@@ -215,7 +215,7 @@ export default function Page() {
           {Array.from({ length: 24 }).map((_, index) => (
             <div
               key={index}
-              className="aspect-video h-12 w-full rounded-lg bg-linear-muted/50"
+              className="bg-linear-muted/50 aspect-video h-12 w-full rounded-lg"
             />
           ))}
         </div>
@@ -249,7 +249,7 @@ function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild className="md:h-8 md:p-0">
                 <a href="#">
-                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-linear-sidebar-primary text-sidebar-primary-foreground">
+                  <div className="size-8 bg-linear-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
                     <Command className="size-4" />
                   </div>
                   <div className="grid flex-1 text-left text-sm leading-tight">
@@ -305,7 +305,7 @@ function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <Sidebar collapsible="none" className="hidden flex-1 md:flex">
         <SidebarHeader className="gap-3.5 border-b p-4">
           <div className="flex w-full items-center justify-between">
-            <div className="text-base font-medium text-linear-foreground">
+            <div className="text-linear-foreground text-base font-medium">
               {activeItem?.title}
             </div>
             <Label className="flex items-center gap-2 text-sm">
@@ -322,7 +322,7 @@ function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <a
                   href="#"
                   key={mail.email}
-                  className="flex flex-col items-start gap-2 whitespace-nowrap border-b p-4 text-sm leading-tight last:border-b-0 hover:bg-linear-sidebar-accent hover:text-sidebar-accent-foreground"
+                  className="hover:bg-linear-sidebar-accent hover:text-sidebar-accent-foreground flex flex-col items-start gap-2 whitespace-nowrap border-b p-4 text-sm leading-tight last:border-b-0"
                 >
                   <div className="flex w-full items-center gap-2">
                     <span>{mail.name}</span>{" "}
@@ -370,11 +370,11 @@ function NavUser({
                 <span className="truncate font-semibold">{user.name}</span>
                 <span className="truncate text-xs">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4" />
+              <ChevronsUpDown className="size-4 ml-auto" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+            className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
             side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}

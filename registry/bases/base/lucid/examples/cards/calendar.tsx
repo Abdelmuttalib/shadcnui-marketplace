@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns";
 
-import { Calendar } from "@/registry/lucid/ui/calendar";
-import { Card, CardContent } from "@/registry/lucid/ui/card";
+import { Calendar } from "@/registry/bases/base/lucid/ui/calendar";
+import { Card, CardContent } from "@/registry/bases/base/lucid/ui/card";
 
 const start = new Date(2023, 5, 5);
 

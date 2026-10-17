@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/material/ui/alert";
+} from "@/registry/bases/base/material/ui/alert";
 
 export function AlertDemo() {
   return (

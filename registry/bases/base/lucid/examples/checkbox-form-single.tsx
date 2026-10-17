@@ -6,8 +6,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/lucid/ui/button";
-import { Checkbox } from "@/registry/lucid/ui/checkbox";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { Checkbox } from "@/registry/bases/base/lucid/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -15,7 +15,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/lucid/ui/form";
+} from "@/registry/bases/base/lucid/ui/form";
 
 const FormSchema = z.object({
   mobile: z.boolean().default(false).optional(),
@@ -42,7 +42,7 @@ export default function CheckboxReactHookFormSingle() {
           control={form.control}
           name="mobile"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-lucid-md border p-4">
+            <FormItem className="rounded-lucid-md flex flex-row items-start space-x-3 space-y-0 border p-4">
               <FormControl>
                 <Checkbox
                   checked={field.value}

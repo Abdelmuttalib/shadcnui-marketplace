@@ -1,4 +1,4 @@
-import { Checkbox } from "@/registry/lucid/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/lucid/ui/checkbox";
 
 export default function CheckboxDisabled() {
   return (

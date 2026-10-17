@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/libelle/ui/button";
-import { ScrollArea } from "@/registry/libelle/ui/scroll-area";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { ScrollArea } from "@/registry/bases/base/libelle/ui/scroll-area";
 
 import { Playlist } from "../data/playlists";
 

@@ -2,15 +2,18 @@ import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Button } from "@/registry/lucid/ui/button";
-import { ScrollArea, ScrollBar } from "@/registry/lucid/ui/scroll-area";
-import { Separator } from "@/registry/lucid/ui/separator";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/bases/base/lucid/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/lucid/ui/tabs";
+} from "@/registry/bases/base/lucid/ui/tabs";
 
 import { AlbumArtwork } from "./components/album-artwork";
 import { Menu } from "./components/menu";
@@ -29,7 +32,7 @@ export function MusicPage() {
     <>
       <div className="block">
         <Menu />
-        <div className="border-t border-t-lucid-border">
+        <div className="border-t-lucid-border border-t">
           <div className="bg-lucid-background">
             <div className="grid grid-cols-3 lg:grid-cols-5">
               <Sidebar playlists={playlists} className="hidden lg:block" />
@@ -62,7 +65,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             Listen Now
                           </h2>
-                          <p className="text-sm text-lucid-muted-foreground">
+                          <p className="text-lucid-muted-foreground text-sm">
                             Top picks for you. Updated daily.
                           </p>
                         </div>
@@ -89,7 +92,7 @@ export function MusicPage() {
                         <h2 className="text-2xl font-semibold tracking-tight">
                           Made for You
                         </h2>
-                        <p className="text-sm text-lucid-muted-foreground">
+                        <p className="text-lucid-muted-foreground text-sm">
                           Your personal playlists. Updated daily.
                         </p>
                       </div>
@@ -121,7 +124,7 @@ export function MusicPage() {
                           <h2 className="text-2xl font-semibold tracking-tight">
                             New Episodes
                           </h2>
-                          <p className="text-sm text-lucid-muted-foreground">
+                          <p className="text-lucid-muted-foreground text-sm">
                             Your favorite podcasts. Updated daily.
                           </p>
                         </div>

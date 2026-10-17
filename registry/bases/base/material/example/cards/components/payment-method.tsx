@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Card,
   CardContent,
@@ -7,17 +7,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/material/ui/card";
-import { Input } from "@/registry/material/ui/input";
-import { Label } from "@/registry/material/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/material/ui/radio-group";
+} from "@/registry/bases/base/material/ui/card";
+import { Input } from "@/registry/bases/base/material/ui/input";
+import { Label } from "@/registry/bases/base/material/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/material/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/material/ui/select";
+} from "@/registry/bases/base/material/ui/select";
 
 export function DemoPaymentMethod() {
   return (
@@ -34,7 +37,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="card" id="card" className="peer sr-only" />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between rounded-material-md border-2 border-material-muted bg-material-popover p-4 hover:bg-material-accent hover:text-material-accent-foreground peer-data-[state=checked]:border-material-primary [&:has([data-state=checked])]:border-material-primary"
+              className="rounded-material-md border-material-muted bg-material-popover hover:bg-material-accent hover:text-material-accent-foreground peer-data-[state=checked]:border-material-primary [&:has([data-state=checked])]:border-material-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +63,7 @@ export function DemoPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between rounded-material-md border-2 border-material-muted bg-material-popover p-4 hover:bg-material-accent hover:text-material-accent-foreground peer-data-[state=checked]:border-material-primary [&:has([data-state=checked])]:border-material-primary"
+              className="rounded-material-md border-material-muted bg-material-popover hover:bg-material-accent hover:text-material-accent-foreground peer-data-[state=checked]:border-material-primary [&:has([data-state=checked])]:border-material-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -70,7 +73,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between rounded-material-md border-2 border-material-muted bg-material-popover p-4 hover:bg-material-accent hover:text-material-accent-foreground peer-data-[state=checked]:border-material-primary [&:has([data-state=checked])]:border-material-primary"
+              className="rounded-material-md border-material-muted bg-material-popover hover:bg-material-accent hover:text-material-accent-foreground peer-data-[state=checked]:border-material-primary [&:has([data-state=checked])]:border-material-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

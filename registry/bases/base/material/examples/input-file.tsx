@@ -1,5 +1,5 @@
-import { Input } from "@/registry/material/ui/input";
-import { Label } from "@/registry/material/ui/label";
+import { Input } from "@/registry/bases/base/material/ui/input";
+import { Label } from "@/registry/bases/base/material/ui/label";
 
 export default function InputFile() {
   return (

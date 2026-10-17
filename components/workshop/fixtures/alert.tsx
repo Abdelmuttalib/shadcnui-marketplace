@@ -1,7 +1,7 @@
 "use client";
 
-import * as Default from "@/registry/default/ui/alert";
-import * as V4 from "@/registry/default-v4/ui/alert";
+import * as Default from "@/registry/bases/base/default/ui/alert";
+import * as V4 from "@/registry/bases/base/default-v4/ui/alert";
 
 import type { FixtureSide } from "./types";
 

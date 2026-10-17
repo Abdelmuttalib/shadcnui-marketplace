@@ -8,8 +8,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/lucid/ui/button";
-import { Calendar } from "@/registry/lucid/ui/calendar";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
+import { Calendar } from "@/registry/bases/base/lucid/ui/calendar";
 import {
   Form,
   FormControl,
@@ -18,12 +18,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/lucid/ui/form";
+} from "@/registry/bases/base/lucid/ui/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
+} from "@/registry/bases/base/lucid/ui/popover";
 
 const FormSchema = z.object({
   dob: z.date({

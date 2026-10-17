@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
+} from "@/registry/bases/base/lucid/ui/select";
 
 interface AccountSwitcherProps {
   isCollapsed: boolean;
@@ -51,7 +51,7 @@ export function AccountSwitcher({
       <SelectContent className="bg-lucid-popover">
         {accounts.map((account) => (
           <SelectItem key={account.email} value={account.email}>
-            <div className="flex items-center gap-3 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0 [&_svg]:text-lucid-foreground">
+            <div className="[&_svg]:text-lucid-foreground flex items-center gap-3 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0">
               {account.icon}
               {account.email}
             </div>

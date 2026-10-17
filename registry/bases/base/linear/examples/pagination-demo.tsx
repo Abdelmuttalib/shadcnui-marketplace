@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/linear/ui/pagination";
+} from "@/registry/bases/base/linear/ui/pagination";
 
 export default function PaginationDemo() {
   return (

@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/libelle/ui/resizable";
+} from "@/registry/bases/base/libelle/ui/resizable";
 
 export default function ResizableDemo() {
   return (

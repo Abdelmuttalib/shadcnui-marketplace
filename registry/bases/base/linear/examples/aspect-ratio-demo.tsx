@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/linear/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/linear/ui/aspect-ratio";
 
 export default function AspectRatioDemo() {
   return (
@@ -9,7 +9,7 @@ export default function AspectRatioDemo() {
         src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
         alt="Photo by Drew Beamer"
         fill
-        className="h-full w-full rounded-linear-md object-cover"
+        className="rounded-linear-md h-full w-full object-cover"
       />
     </AspectRatio>
   );

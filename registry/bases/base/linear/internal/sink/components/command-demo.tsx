@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/linear/ui/command";
+} from "@/registry/bases/base/linear/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-linear-lg border border-linear-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-linear-lg border-linear-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

@@ -21,9 +21,9 @@ import React from "react";
 
 import { PageContainer } from "@/components/common/page-container";
 import { Icons } from "@/components/icons";
-import { Badge } from "@/registry/material/ui/badge";
-import { Button } from "@/registry/material/ui/button";
-import { Input } from "@/registry/material/ui/input";
+import { Badge } from "@/registry/bases/base/material/ui/badge";
+import { Button } from "@/registry/bases/base/material/ui/button";
+import { Input } from "@/registry/bases/base/material/ui/input";
 import {
   Sidebar,
   SidebarContent,
@@ -38,9 +38,13 @@ import {
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/material/ui/sidebar";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/material/ui/tabs";
-import { Typography } from "@/registry/material/ui/typography";
+} from "@/registry/bases/base/material/ui/sidebar";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/material/ui/tabs";
+import { Typography } from "@/registry/bases/base/material/ui/typography";
 
 import { NavMain } from "./components/nav-main";
 import { NavProjects } from "./components/nav-projects";
@@ -323,7 +327,7 @@ export function BoardPage() {
                     <Typography
                       as={"p"}
                       variant="md/normal"
-                      className="max-w-4xl text-material-muted-foreground"
+                      className="text-material-muted-foreground max-w-4xl"
                     >
                       Manage your tasks and projects with ease.
                     </Typography>
@@ -351,7 +355,7 @@ export function BoardPage() {
                 </div>
               </PageContainer>
             </div>
-            <div className="border-b border-material-border pb-4">
+            <div className="border-material-border border-b pb-4">
               <PageContainer size={"full"} className="h-full">
                 <div className="flex items-center justify-between">
                   <div>
@@ -369,7 +373,7 @@ export function BoardPage() {
                   </div>
                   <div className="flex gap-2">
                     <div className="relative">
-                      <Search className="absolute left-2.5 top-[18px] size-4 -translate-y-1/2 text-material-muted-foreground" />
+                      <Search className="size-4 text-material-muted-foreground absolute left-2.5 top-[18px] -translate-y-1/2" />
                       <Input
                         type="search"
                         placeholder="Search..."

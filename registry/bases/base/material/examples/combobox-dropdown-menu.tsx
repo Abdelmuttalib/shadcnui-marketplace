@@ -3,7 +3,7 @@
 import { Calendar, MoreHorizontal, Tags, Trash, User } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -11,7 +11,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,7 +24,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 
 const labels = [
   "feature",
@@ -43,7 +43,7 @@ export default function ComboboxDropdownMenu() {
   return (
     <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
       <p className="text-sm font-medium leading-none">
-        <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
+        <span className="bg-primary text-primary-foreground mr-2 rounded-lg px-2 py-1 text-xs">
           {label}
         </span>
         <span className="text-muted-foreground">Create a new project</span>

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Form,
   FormControl,
@@ -13,8 +13,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/linear/ui/form";
-import { Switch } from "@/registry/linear/ui/switch";
+} from "@/registry/bases/base/linear/ui/form";
+import { Switch } from "@/registry/bases/base/linear/ui/switch";
 
 const FormSchema = z.object({
   marketing_emails: z.boolean().default(false).optional(),
@@ -45,7 +45,7 @@ export default function SwitchForm() {
               control={form.control}
               name="marketing_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-linear-lg border p-4">
+                <FormItem className="rounded-linear-lg flex flex-row items-center justify-between border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
                       Marketing emails
@@ -67,7 +67,7 @@ export default function SwitchForm() {
               control={form.control}
               name="security_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-linear-lg border p-4">
+                <FormItem className="rounded-linear-lg flex flex-row items-center justify-between border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Security emails</FormLabel>
                     <FormDescription>

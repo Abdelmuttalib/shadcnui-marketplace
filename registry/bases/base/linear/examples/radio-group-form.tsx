@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/linear/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Form,
   FormControl,
@@ -13,8 +13,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/linear/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/registry/linear/ui/radio-group";
+} from "@/registry/bases/base/linear/ui/form";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/linear/ui/radio-group";
 
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/lucid/ui/calendar";
+import { Calendar } from "@/registry/bases/base/lucid/ui/calendar";
 
 export default function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -12,7 +12,7 @@ export default function CalendarDemo() {
       mode="single"
       selected={date}
       onSelect={setDate}
-      className="rounded-lucid-md border border-lucid-border"
+      className="rounded-lucid-md border-lucid-border border"
     />
   );
 }

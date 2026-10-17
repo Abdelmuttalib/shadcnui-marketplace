@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/linear/ui/separator";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
 
 import { DisplayForm } from "./display-form";
 
@@ -7,7 +7,7 @@ export default function SettingsDisplayPage() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Display</h3>
-        <p className="text-sm text-linear-muted-foreground">
+        <p className="text-linear-muted-foreground text-sm">
           Turn items on or off to control what&apos;s displayed in the app.
         </p>
       </div>

@@ -1,10 +1,10 @@
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/material/ui/tooltip";
+} from "@/registry/bases/base/material/ui/tooltip";
 
 export default function TooltipDemo() {
   return (

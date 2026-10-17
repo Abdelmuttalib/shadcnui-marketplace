@@ -1,6 +1,6 @@
+import { Card, CardContent } from "@/registry/bases/base/material/ui/card";
+import { Label } from "@/registry/bases/base/material/ui/label";
 import DatePickerWithRange from "@/registry/material/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/material/ui/card";
-import { Label } from "@/registry/material/ui/label";
 
 export function DemoDatePicker() {
   return (

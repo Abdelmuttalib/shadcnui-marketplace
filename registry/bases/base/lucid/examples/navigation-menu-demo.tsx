@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/lucid/ui/navigation-menu";
+} from "@/registry/bases/base/lucid/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

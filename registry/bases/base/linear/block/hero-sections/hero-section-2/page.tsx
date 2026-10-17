@@ -1,8 +1,8 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import type React from "react";
 
-import { Button } from "@/registry/linear/ui/button";
-import { Typography } from "@/registry/linear/ui/typography";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 export default function HeroSection() {
   return (
@@ -59,7 +59,7 @@ export default function HeroSection() {
                     key={feature}
                     className="bg-card flex items-center rounded-md border p-2"
                   >
-                    <CheckCircle className="text-primary mr-3 size-5" />
+                    <CheckCircle className="text-primary size-5 mr-3" />
                     <Typography as="span" variant="md/normal">
                       {feature}
                     </Typography>

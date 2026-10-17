@@ -13,24 +13,24 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/registry/libelle/ui/alert-dialog";
-import { Button } from "@/registry/libelle/ui/button";
+} from "@/registry/bases/base/libelle/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/libelle/ui/dialog";
+} from "@/registry/bases/base/libelle/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/libelle/ui/dropdown-menu";
-import { Label } from "@/registry/libelle/ui/label";
-import { Switch } from "@/registry/libelle/ui/switch";
+} from "@/registry/bases/base/libelle/ui/dropdown-menu";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
+import { Switch } from "@/registry/bases/base/libelle/ui/switch";
 
 export function PresetActions() {
   const [open, setIsOpen] = React.useState(false);
@@ -69,7 +69,7 @@ export function PresetActions() {
             </DialogDescription>
           </DialogHeader>
           <div className="py-6">
-            <h4 className="text-sm text-libelle-muted-foreground">
+            <h4 className="text-libelle-muted-foreground text-sm">
               Playground Warnings
             </h4>
             <div className="flex items-start justify-between space-x-4 pt-3">
@@ -78,7 +78,7 @@ export function PresetActions() {
                 <span className="font-semibold">
                   Show a warning when content is flagged
                 </span>
-                <span className="text-sm text-libelle-muted-foreground">
+                <span className="text-libelle-muted-foreground text-sm">
                   A warning will be shown when sexual, hateful, violent or
                   self-harm content is detected.
                 </span>

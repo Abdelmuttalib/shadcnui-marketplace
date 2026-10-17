@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/libelle/ui/table";
+} from "@/registry/bases/base/libelle/ui/table";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-libelle-md border border-libelle-border">
+    <div className="rounded-libelle-md border-libelle-border border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

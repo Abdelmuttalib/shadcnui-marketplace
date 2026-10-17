@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/libelle/ui/alert-dialog";
-import { Button } from "@/registry/libelle/ui/button";
+} from "@/registry/bases/base/libelle/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 
 export default function AlertDialogDemo() {
   return (

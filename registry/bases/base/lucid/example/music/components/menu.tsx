@@ -13,7 +13,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/lucid/ui/menubar";
+} from "@/registry/bases/base/lucid/ui/menubar";
 
 export function Menu() {
   return (

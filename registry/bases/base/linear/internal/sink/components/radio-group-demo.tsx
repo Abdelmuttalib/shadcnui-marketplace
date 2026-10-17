@@ -1,5 +1,8 @@
-import { Label } from "@/registry/linear/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/linear/ui/radio-group";
+import { Label } from "@/registry/bases/base/linear/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/linear/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (

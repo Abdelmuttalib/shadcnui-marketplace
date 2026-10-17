@@ -8,8 +8,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/libelle/ui/button";
-import { Calendar } from "@/registry/libelle/ui/calendar";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
+import { Calendar } from "@/registry/bases/base/libelle/ui/calendar";
 import {
   Command,
   CommandEmpty,
@@ -17,7 +17,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/libelle/ui/command";
+} from "@/registry/bases/base/libelle/ui/command";
 import {
   Form,
   FormControl,
@@ -26,13 +26,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/libelle/ui/form";
-import { Input } from "@/registry/libelle/ui/input";
+} from "@/registry/bases/base/libelle/ui/form";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/libelle/ui/popover";
+} from "@/registry/bases/base/libelle/ui/popover";
 
 const languages = [
   { label: "English", value: "en" },

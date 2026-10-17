@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/lucid/ui/accordion";
+} from "@/registry/bases/base/lucid/ui/accordion";
 
 export function AccordionDemo() {
   return (
@@ -55,7 +55,11 @@ export function SonnerDemo() {
 
 import { Terminal } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@/registry/lucid/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/registry/bases/base/lucid/ui/alert";
 
 export function AlertDemo() {
   return (
@@ -79,7 +83,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/lucid/ui/alert-dialog";
+} from "@/registry/bases/base/lucid/ui/alert-dialog";
 
 export function AlertDialogDemo() {
   return (
@@ -106,7 +110,7 @@ export function AlertDialogDemo() {
 
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/lucid/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/lucid/ui/aspect-ratio";
 
 export function AspectRatioDemo() {
   return (
@@ -125,7 +129,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/lucid/ui/avatar";
+} from "@/registry/bases/base/lucid/ui/avatar";
 
 export function AvatarDemo() {
   return (
@@ -141,7 +145,7 @@ export function AvatarDemo() {
   );
 }
 
-import { Badge } from "@/registry/lucid/ui/badge";
+import { Badge } from "@/registry/bases/base/lucid/ui/badge";
 
 export function BadgeDemo() {
   return <Badge>Badge</Badge>;
@@ -155,13 +159,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/lucid/ui/breadcrumb";
+} from "@/registry/bases/base/lucid/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (
@@ -203,7 +207,7 @@ export function ButtonDemo() {
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/lucid/ui/calendar";
+import { Calendar } from "@/registry/bases/base/lucid/ui/calendar";
 
 export function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -225,16 +229,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/lucid/ui/card";
-import { Input } from "@/registry/lucid/ui/input";
-import { Label } from "@/registry/lucid/ui/label";
+} from "@/registry/bases/base/lucid/ui/card";
+import { Input } from "@/registry/bases/base/lucid/ui/input";
+import { Label } from "@/registry/bases/base/lucid/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/lucid/ui/select";
+} from "@/registry/bases/base/lucid/ui/select";
 
 export function CardWithForm() {
   return (
@@ -281,7 +285,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/lucid/ui/carousel";
+} from "@/registry/bases/base/lucid/ui/carousel";
 
 export function CarouselDemo() {
   return (
@@ -305,7 +309,7 @@ export function CarouselDemo() {
   );
 }
 
-import { Checkbox } from "@/registry/lucid/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/lucid/ui/checkbox";
 
 export function CheckboxDemo() {
   return (
@@ -327,7 +331,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/lucid/ui/collapsible";
+} from "@/registry/bases/base/lucid/ui/collapsible";
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -373,12 +377,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/lucid/ui/command";
+} from "@/registry/bases/base/lucid/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/lucid/ui/popover";
+} from "@/registry/bases/base/lucid/ui/popover";
 import { cn } from "@/utils/cn";
 
 const frameworks = [
@@ -464,7 +468,10 @@ import {
   User,
 } from "lucide-react";
 
-import { CommandSeparator, CommandShortcut } from "@/registry/lucid/ui/command";
+import {
+  CommandSeparator,
+  CommandShortcut,
+} from "@/registry/bases/base/lucid/ui/command";
 
 export function CommandDemo() {
   return (
@@ -523,7 +530,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/lucid/ui/context-menu";
+} from "@/registry/bases/base/lucid/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
@@ -616,7 +623,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/lucid/ui/dialog";
+} from "@/registry/bases/base/lucid/ui/dialog";
 
 export function DialogDemo() {
   return (
@@ -665,7 +672,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/lucid/ui/drawer";
+} from "@/registry/bases/base/lucid/ui/drawer";
 
 const data = [
   {
@@ -795,7 +802,7 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from "@/registry/lucid/ui/dropdown-menu";
+} from "@/registry/bases/base/lucid/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (
@@ -861,7 +868,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/lucid/ui/hover-card";
+} from "@/registry/bases/base/lucid/ui/hover-card";
 
 export function HoverCardDemo() {
   return (
@@ -902,7 +909,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/lucid/ui/input-otp";
+} from "@/registry/bases/base/lucid/ui/input-otp";
 
 export function InputOTPDemo() {
   return (
@@ -947,7 +954,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/lucid/ui/menubar";
+} from "@/registry/bases/base/lucid/ui/menubar";
 
 export function MenubarDemo() {
   return (
@@ -1052,7 +1059,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/lucid/ui/navigation-menu";
+} from "@/registry/bases/base/lucid/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -1191,7 +1198,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/lucid/ui/pagination";
+} from "@/registry/bases/base/lucid/ui/pagination";
 
 export function PaginationDemo() {
   return (
@@ -1276,7 +1283,7 @@ export function PopoverDemo() {
   );
 }
 
-import { Progress } from "@/registry/lucid/ui/progress";
+import { Progress } from "@/registry/bases/base/lucid/ui/progress";
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(13);
@@ -1289,7 +1296,10 @@ export function ProgressDemo() {
   return <Progress value={progress} className="w-[60%]" />;
 }
 
-import { RadioGroup, RadioGroupItem } from "@/registry/lucid/ui/radio-group";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/lucid/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (
@@ -1314,7 +1324,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/lucid/ui/resizable";
+} from "@/registry/bases/base/lucid/ui/resizable";
 
 export function ResizableDemo() {
   return (
@@ -1347,8 +1357,8 @@ export function ResizableDemo() {
   );
 }
 
-import { ScrollArea } from "@/registry/lucid/ui/scroll-area";
-import { Separator } from "@/registry/lucid/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/lucid/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/lucid/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -1370,7 +1380,10 @@ export function ScrollAreaDemo() {
   );
 }
 
-import { SelectGroup, SelectLabel } from "@/registry/lucid/ui/select";
+import {
+  SelectGroup,
+  SelectLabel,
+} from "@/registry/bases/base/lucid/ui/select";
 
 export function SelectDemo() {
   return (
@@ -1424,7 +1437,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/lucid/ui/sheet";
+} from "@/registry/bases/base/lucid/ui/sheet";
 
 export function SheetDemo() {
   return (
@@ -1463,7 +1476,7 @@ export function SheetDemo() {
   );
 }
 
-import { Skeleton } from "@/registry/lucid/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/lucid/ui/skeleton";
 
 export function SkeletonDemo() {
   return (
@@ -1477,7 +1490,7 @@ export function SkeletonDemo() {
   );
 }
 
-import { Slider } from "@/registry/lucid/ui/slider";
+import { Slider } from "@/registry/bases/base/lucid/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 
@@ -1493,7 +1506,7 @@ export function SliderDemo({ className, ...props }: SliderProps) {
   );
 }
 
-import { Switch } from "@/registry/lucid/ui/switch";
+import { Switch } from "@/registry/bases/base/lucid/ui/switch";
 
 export function SwitchDemo() {
   return (
@@ -1513,7 +1526,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/lucid/ui/table";
+} from "@/registry/bases/base/lucid/ui/table";
 
 const invoices = [
   {
@@ -1736,13 +1749,13 @@ export function DataTableDemo() {
   );
 }
 
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/lucid/ui/tabs";
+} from "@/registry/bases/base/lucid/ui/tabs";
 
 export function TabsDemo() {
   return (
@@ -1824,7 +1837,7 @@ export function TabsDemo() {
   );
 }
 
-import { Textarea } from "@/registry/lucid/ui/textarea";
+import { Textarea } from "@/registry/bases/base/lucid/ui/textarea";
 
 export function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;
@@ -1832,7 +1845,7 @@ export function TextareaDemo() {
 
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/lucid/ui/toggle";
+import { Toggle } from "@/registry/bases/base/lucid/ui/toggle";
 
 export function ToggleDemo() {
   return (
@@ -1844,7 +1857,10 @@ export function ToggleDemo() {
 
 import { Italic, Underline } from "lucide-react";
 
-import { ToggleGroup, ToggleGroupItem } from "@/registry/lucid/ui/toggle-group";
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/registry/bases/base/lucid/ui/toggle-group";
 
 export function ToggleGroupDemo() {
   return (
@@ -1867,7 +1883,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/lucid/ui/tooltip";
+} from "@/registry/bases/base/lucid/ui/tooltip";
 
 export function TooltipDemo() {
   return (
@@ -1892,7 +1908,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/lucid/ui/chart";
+} from "@/registry/bases/base/lucid/ui/chart";
 const chartData4 = [
   { month: "January", desktop: 186 },
   { month: "February", desktop: 305 },

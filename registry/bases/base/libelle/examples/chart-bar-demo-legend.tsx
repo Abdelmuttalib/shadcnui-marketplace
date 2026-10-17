@@ -9,7 +9,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/libelle/ui/chart";
+} from "@/registry/bases/base/libelle/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

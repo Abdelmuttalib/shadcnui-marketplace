@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/libelle/ui/command";
+} from "@/registry/bases/base/libelle/ui/command";
 
 export function CommandDemo() {
   return (
-    <Command className="rounded-libelle-lg border border-libelle-border shadow-md md:min-w-[450px]">
+    <Command className="rounded-libelle-lg border-libelle-border border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

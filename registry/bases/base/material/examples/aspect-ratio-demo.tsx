@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/material/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/material/ui/aspect-ratio";
 
 export default function AspectRatioDemo() {
   return (

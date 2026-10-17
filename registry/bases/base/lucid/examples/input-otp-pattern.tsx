@@ -4,7 +4,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/lucid/ui/input-otp";
+} from "@/registry/bases/base/lucid/ui/input-otp";
 
 export default function InputOTPPattern() {
   return (

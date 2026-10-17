@@ -1,13 +1,13 @@
 import * as React from "react";
 
-import { Card, CardContent } from "@/registry/libelle/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/libelle/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/libelle/ui/carousel";
+} from "@/registry/bases/base/libelle/ui/carousel";
 
 export default function CarouselDemo() {
   return (

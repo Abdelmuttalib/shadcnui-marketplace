@@ -1,4 +1,4 @@
-import { Button } from "@/registry/lucid/ui/button";
+import { Button } from "@/registry/bases/base/lucid/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/lucid/ui/dialog";
+} from "@/registry/bases/base/lucid/ui/dialog";
 
 export function CodeViewer() {
   return (
@@ -25,7 +25,7 @@ export function CodeViewer() {
         <div className="grid gap-4">
           <div className="rounded-lucid-md bg-gray-950 p-6">
             <pre>
-              <code className="grid gap-1 text-sm text-lucid-muted-foreground [&_span]:h-4">
+              <code className="text-lucid-muted-foreground grid gap-1 text-sm [&_span]:h-4">
                 <span>
                   <span className="text-blue-400">import</span> os
                 </span>
@@ -76,7 +76,7 @@ export function CodeViewer() {
             </pre>
           </div>
           <div>
-            <p className="text-sm text-lucid-muted-foreground">
+            <p className="text-lucid-muted-foreground text-sm">
               Your API Key can be found here. You should use environment
               variables or a secret management tool to expose your key to your
               applications.

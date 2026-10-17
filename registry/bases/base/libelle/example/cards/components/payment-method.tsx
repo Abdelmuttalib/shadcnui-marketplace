@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/libelle/ui/button";
+import { Button } from "@/registry/bases/base/libelle/ui/button";
 import {
   Card,
   CardContent,
@@ -7,17 +7,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/libelle/ui/card";
-import { Input } from "@/registry/libelle/ui/input";
-import { Label } from "@/registry/libelle/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/registry/libelle/ui/radio-group";
+} from "@/registry/bases/base/libelle/ui/card";
+import { Input } from "@/registry/bases/base/libelle/ui/input";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/libelle/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/libelle/ui/select";
+} from "@/registry/bases/base/libelle/ui/select";
 
 export function DemoPaymentMethod() {
   return (
@@ -34,7 +37,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="card" id="card" className="peer sr-only" />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between rounded-libelle-md border-2 border-libelle-muted bg-libelle-popover p-4 hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary"
+              className="rounded-libelle-md border-libelle-muted bg-libelle-popover hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +63,7 @@ export function DemoPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between rounded-libelle-md border-2 border-libelle-muted bg-libelle-popover p-4 hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary"
+              className="rounded-libelle-md border-libelle-muted bg-libelle-popover hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -70,7 +73,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between rounded-libelle-md border-2 border-libelle-muted bg-libelle-popover p-4 hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary"
+              className="rounded-libelle-md border-libelle-muted bg-libelle-popover hover:bg-libelle-accent hover:text-libelle-accent-foreground peer-data-[state=checked]:border-libelle-primary [&:has([data-state=checked])]:border-libelle-primary flex flex-col items-center justify-between border-2 p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple

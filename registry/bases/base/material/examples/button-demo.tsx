@@ -1,4 +1,4 @@
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 
 export default function ButtonDemo() {
   return (

@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/libelle/ui/checkbox";
-import { Label } from "@/registry/libelle/ui/label";
+import { Checkbox } from "@/registry/bases/base/libelle/ui/checkbox";
+import { Label } from "@/registry/bases/base/libelle/ui/label";
 
 export function LabelDemo() {
   return (
