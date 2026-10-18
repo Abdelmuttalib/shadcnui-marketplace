@@ -44,6 +44,7 @@ const DEV_STYLES_PATH: Record<StyleType, string> = {
   neon: "http://localhost:3000",
   libelle: "http://localhost:3000",
   "default-v4": "http://localhost:3000",
+  "carbon-v4": "http://localhost:3000",
 };
 const PROD_STYLES_PATH: Record<StyleType, string> = {
   default: "https://shadcn-default.vercel.app",
@@ -59,6 +60,7 @@ const PROD_STYLES_PATH: Record<StyleType, string> = {
   neon: "https://shadcn-neon.vercel.app",
   libelle: "https://shadcn-libelle.vercel.app",
   "default-v4": "https://shadcn-default-v4.vercel.app",
+  "carbon-v4": "https://shadcn-carbon-v4.vercel.app",
 };
 
 // NEXT_PUBLIC_NODE_ENV
@@ -84,6 +86,7 @@ type StyleType =
   | "default"
   | "default-v4"
   | "carbon"
+  | "carbon-v4"
   | "catalyst"
   | "material"
   | "linear"
@@ -155,6 +158,18 @@ export const STYLES_DATA: Record<Style, StyleData> = {
     defaultRadius: "0.5rem",
     showcaseComponents: <DefaultV4ShowcaseComponents />,
     hero: <DefaultV4UI />,
+  },
+  "carbon-v4": {
+    name: "carbon-v4",
+    title: "Carbon v4",
+    description: "Isolated upstream shadcn ui collection in the cb namespace",
+    styleVariablePrefix: "cb",
+    styleSitePath: getStyleSitePath("carbon-v4"),
+    directoryName: "carbon-v4",
+    defaultPalette: "",
+    defaultRadius: "0rem",
+    showcaseComponents: <CarbonShowcaseComponents />,
+    hero: <CarbonUI />,
   },
   carbon: {
     name: "carbon",

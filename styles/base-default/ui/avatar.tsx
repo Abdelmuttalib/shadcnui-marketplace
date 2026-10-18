@@ -56,7 +56,7 @@ function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
     <span
       data-slot="avatar-badge"
       className={cn(
-        "rounded-dft-full bg-dft-primary bg-dft-primary-foreground bg-dft-background absolute bottom-0 right-0 z-10 inline-flex select-none items-center justify-center bg-blend-color ring-2",
+        "rounded-dft-full bg-dft-primary text-dft-primary-foreground bg-dft-background absolute right-0 bottom-0 z-10 inline-flex items-center justify-center bg-blend-color ring-2 select-none",
         "group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&>svg]:hidden",
         "group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&>svg]:size-2",
         "group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&>svg]:size-2",
@@ -88,7 +88,7 @@ function AvatarGroupCount({
     <div
       data-slot="avatar-group-count"
       className={cn(
-        "rounded-dft-full bg-dft-muted bg-dft-muted-foreground bg-dft-background group-has-data-[size=lg]/avatar-group:size-10 group-has-data-[size=sm]/avatar-group:size-6 group-has-data-[size=lg]/avatar-group:[&>svg]:size-5 group-has-data-[size=sm]/avatar-group:[&>svg]:size-3 relative flex size-8 shrink-0 items-center justify-center text-sm ring-2 [&>svg]:size-4",
+        "rounded-dft-full bg-dft-muted bg-dft-muted-foreground bg-dft-background relative flex size-8 shrink-0 items-center justify-center text-sm ring-2 group-has-data-[size=lg]/avatar-group:size-10 group-has-data-[size=sm]/avatar-group:size-6 [&>svg]:size-4 group-has-data-[size=lg]/avatar-group:[&>svg]:size-5 group-has-data-[size=sm]/avatar-group:[&>svg]:size-3",
         className
       )}
       {...props}

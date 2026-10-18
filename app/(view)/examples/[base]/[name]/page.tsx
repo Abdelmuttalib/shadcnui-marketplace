@@ -1,36 +1,36 @@
-import { type Metadata } from "next"
-import { notFound } from "next/navigation"
-import { getComponent } from "@/examples/__components__"
-import { ExamplesIndex } from "@/examples/__index__"
+import { type Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getComponent } from "@/examples/__components__";
+import { ExamplesIndex } from "@/examples/__index__";
 
-import { siteConfig } from "@/lib/config"
-import { absoluteUrl } from "@/lib/utils"
+import { siteConfig } from "@/lib/config";
+import { absoluteUrl } from "@/lib/utils";
 
-export const dynamicParams = true
-export const revalidate = 3600
+export const dynamicParams = true;
+export const revalidate = 3600;
 
 function getExample(base: string, name: string) {
-  const item = ExamplesIndex[base]?.[name]
-  const Component = getComponent(base, name)
+  const item = ExamplesIndex[base]?.[name];
+  const Component = getComponent(base, name);
   if (!item || !Component) {
-    return null
+    return null;
   }
-  return { item, Component }
+  return { item, Component };
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ base: string; name: string }>
+  params: Promise<{ base: string; name: string }>;
 }): Promise<Metadata> {
-  const { base, name } = await params
-  const example = getExample(base, name)
+  const { base, name } = await params;
+  const example = getExample(base, name);
 
   if (!example) {
-    return {}
+    return {};
   }
 
-  const title = example.item.name
+  const title = example.item.name;
 
   return {
     title,
@@ -53,22 +53,22 @@ export async function generateMetadata({
       images: [siteConfig.ogImage],
       creator: "@shadcn",
     },
-  }
+  };
 }
 
 export default async function ExamplePage({
   params,
 }: {
-  params: Promise<{ base: string; name: string }>
+  params: Promise<{ base: string; name: string }>;
 }) {
-  const { base, name } = await params
-  const example = getExample(base, name)
+  const { base, name } = await params;
+  const example = getExample(base, name);
 
   if (!example) {
-    return notFound()
+    return notFound();
   }
 
-  const { Component } = example
+  const { Component } = example;
 
-  return <Component />
+  return <Component />;
 }

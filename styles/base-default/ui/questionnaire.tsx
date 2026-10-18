@@ -60,7 +60,7 @@ function QuestionnaireTitle({
     <QuestionnairePrimitive.Title
       data-slot="questionnaire-title"
       className={cn(
-        "font-heading text-pretty text-base font-semibold [&:not(:has(~[data-slot=questionnaire-description]))]:mb-5",
+        "font-heading text-base font-semibold text-pretty [&:not(:has(~[data-slot=questionnaire-description]))]:mb-5",
         className
       )}
       {...props}
@@ -75,7 +75,7 @@ function QuestionnaireDescription({
   return (
     <QuestionnairePrimitive.Description
       data-slot="questionnaire-description"
-      className={cn("text-dft-muted-foreground text-pretty text-sm", className)}
+      className={cn("text-dft-muted-foreground text-sm text-pretty", className)}
       {...props}
     />
   );
@@ -106,7 +106,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice rounded-dft-md border-dft-input shadow-xs hover:border-dft-muted/50 has-[>input:focus-visible]:border-dft-ring has-[>input:focus-visible]:ring-3 has-[>input:focus-visible]:border-dft-ring/50 data-invalid:border-dft-destructive dark:border-dft-input/20 data-checked:border-dft-primary/40 data-checked:border-dft-muted dark:data-checked:border-dft-muted relative flex min-h-11 cursor-pointer select-none items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm outline-none transition-colors",
+        "group/questionnaire-choice rounded-dft-md border-dft-input hover:border-dft-muted/50 has-[>input:focus-visible]:border-dft-ring has-[>input:focus-visible]:border-dft-ring/50 data-invalid:border-dft-destructive dark:border-dft-input/20 data-checked:border-dft-primary/40 data-checked:border-dft-muted dark:data-checked:border-dft-muted relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -119,15 +119,15 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="border-dft-input group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-dft-full group-data-checked/questionnaire-choice:border-dft-primary group-data-checked/questionnaire-choice:border-dft-primary group-data-checked/questionnaire-choice:border-dft-primary-foreground dark:border-dft-input/30 dark:group-data-checked/questionnaire-choice:border-dft-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border"
+        className="border-dft-input group-data-[type=radio]/questionnaire-choice:rounded-dft-full group-data-checked/questionnaire-choice:border-dft-primary group-data-checked/questionnaire-choice:border-dft-primary group-data-checked/questionnaire-choice:border-dft-primary-foreground dark:border-dft-input/30 dark:group-data-checked/questionnaire-choice:border-dft-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
-          className="rounded-dft-full bg-dft-primary-foreground group-data-checked/questionnaire-choice:block hidden size-2 group-data-[type=checkbox]/questionnaire-choice:hidden"
+          className="rounded-dft-full text-dft-primary-foreground hidden size-2 group-data-checked/questionnaire-choice:block group-data-[type=checkbox]/questionnaire-choice:hidden"
         />
         <CheckIcon
           data-slot="questionnaire-choice-indicator-check"
-          className="group-data-checked/questionnaire-choice:block hidden size-3.5 group-data-[type=radio]/questionnaire-choice:hidden"
+          className="hidden size-3.5 group-data-checked/questionnaire-choice:block group-data-[type=radio]/questionnaire-choice:hidden"
         />
       </span>
       <QuestionnairePrimitive.ChoiceLabel
@@ -138,7 +138,7 @@ function QuestionnaireChoice({
       </QuestionnairePrimitive.ChoiceLabel>
       <QuestionnairePrimitive.ChoiceShortcut
         data-slot="questionnaire-choice-shortcut"
-        className="rounded-dft-md border-dft-input border-dft-background border-dft-muted-foreground shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center border font-mono text-[0.625rem] font-medium leading-none group-data-[shortcut]/questionnaire-choice:inline-flex"
+        className="rounded-dft-md border-dft-input border-dft-background border-dft-muted-foreground pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
       />
     </QuestionnairePrimitive.Choice>
   );
@@ -169,8 +169,8 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "rounded-dft-md border-dft-input shadow-xs focus-visible:border-dft-ring focus-visible:ring-3 focus-visible:border-dft-ring/50 aria-invalid:border-dft-destructive aria-invalid:ring-3 aria-invalid:border-dft-destructive/20 dark:border-dft-input/30 dark:aria-invalid:border-dft-destructive/50 dark:aria-invalid:border-dft-destructive/40 h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base outline-none transition-[color,box-shadow,background-color] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 sm:min-h-0 md:text-sm",
-          "selection:bg-dft-primary selection:bg-dft-primary-foreground placeholder:bg-dft-muted-foreground",
+          "rounded-dft-md border-dft-input focus-visible:border-dft-ring focus-visible:border-dft-ring/50 aria-invalid:border-dft-destructive aria-invalid:border-dft-destructive/20 dark:border-dft-input/30 dark:aria-invalid:border-dft-destructive/50 dark:aria-invalid:border-dft-destructive/40 h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "selection:bg-dft-primary selection:text-dft-primary-foreground placeholder:bg-dft-muted-foreground",
           className
         )}
         {...props}

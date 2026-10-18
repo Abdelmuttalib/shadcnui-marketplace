@@ -8,7 +8,7 @@ import {
   Card,
   CardContent,
 } from "@/registry/bases/base/styles/carbon-v4/ui/card";
-import { STYLES } from "@/registry/styles-components";
+import { STYLES } from "@/registry/styles";
 
 export function StyleOverview() {
   const [params] = useDesignSystemSearchParams();

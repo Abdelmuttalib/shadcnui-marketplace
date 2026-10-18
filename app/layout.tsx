@@ -3,6 +3,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import { DevTools } from "@/components/dev-tools";
 import { fontVariables } from "@/lib/fonts";
@@ -47,12 +48,15 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn("font-sans antialiased", inter.variable, fontVariables)}
+      suppressHydrationWarning
     >
       <AppProviders>
         <body>
-          <DevTools />
-          <Analytics />
-          {children}
+          <NuqsAdapter>
+            <DevTools />
+            <Analytics />
+            {children}
+          </NuqsAdapter>
         </body>
       </AppProviders>
     </html>

@@ -311,6 +311,8 @@ export function getStyleVariablesPrefix(style: Style) {
       return "dft";
     case "default-v4":
       return "dft";
+    case "carbon-v4":
+      return "cb";
     case "carbon":
       return "cb";
     case "linear":

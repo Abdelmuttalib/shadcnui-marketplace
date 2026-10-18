@@ -63,20 +63,40 @@ export async function getBaseItem(
   return registryItemSchema.parse(index[name]);
 }
 
+// export async function getBaseComponent(
+//   name: string,
+//   base: BaseName,
+//   styleName: Style["name"] = defaultStyle.name
+// ) {
+//   const { Index } = await import("@/registry/bases/__index__");
+//   const index = Index[base][styleName];
+
+//   if (!index?.[name] || EXCLUDED_ITEMS.includes(name)) {
+//     return null;
+//   }
+
+//   const { getComponent } = await import("@/registry/bases/__components__");
+//   return getComponent(base, name) ?? null;
+// }
+
 export async function getBaseComponent(
   name: string,
   base: BaseName,
   styleName: Style["name"] = defaultStyle.name
 ) {
   const { Index } = await import("@/registry/bases/__index__");
-  const index = Index[base][styleName];
+
+  const index = Index[base]?.[styleName];
 
   if (!index?.[name] || EXCLUDED_ITEMS.includes(name)) {
     return null;
   }
 
-  const { getComponent } = await import("@/registry/bases/__components__");
-  return getComponent(base, name) ?? null;
+  const { getComponent } = await import(
+    "@/registry/bases/__components__"
+  );
+
+  return getComponent(`${base}/${styleName}`, name) ?? null;
 }
 
 export async function getAllItems() {

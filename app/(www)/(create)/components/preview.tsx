@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useDesignSystemSearchParams } from "../lib/search-params";
 
 // import { CMD_K_FORWARD_TYPE } from "@/app/(www)/(create)/components/action-menu";
 // import { CreateDevtools } from "@/app/(www)/(create)/components/create-devtools";

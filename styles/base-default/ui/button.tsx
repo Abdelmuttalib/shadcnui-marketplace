@@ -8,11 +8,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-dft-primary bg-dft-primary-foreground hover:bg-dft-primary/80",
+          "bg-dft-primary text-dft-primary-foreground hover:bg-dft-primary/80",
         outline:
           "border-dft-border border-dft-background shadow-xs hover:border-dft-muted hover:border-dft-foreground aria-expanded:border-dft-muted aria-expanded:border-dft-foreground dark:border-dft-input dark:border-dft-input/30 dark:hover:border-dft-input/50",
         secondary:
-          "bg-dft-secondary bg-dft-secondary-foreground hover:bg-[color-mix(in_oklch,var(--dft-secondary),var(--dft-foreground)_5%)] aria-expanded:bg-dft-secondary aria-expanded:bg-dft-secondary-foreground",
+          "bg-dft-secondary text-dft-secondary-foreground hover:bg-[color-mix(in_oklch,var(--dft-secondary),var(--dft-foreground)_5%)] aria-expanded:bg-dft-secondary aria-expanded:text-dft-secondary-foreground",
         ghost:
           "hover:bg-dft-muted hover:bg-dft-foreground aria-expanded:bg-dft-muted aria-expanded:bg-dft-foreground dark:hover:bg-dft-muted/50",
         destructive:

@@ -1,15 +1,16 @@
-import { Toggle as TogglePrimitive } from "@base-ui/react/toggle";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "cn";
+"use client"
+
+import { Toggle as TogglePrimitive } from "@base-ui/react/toggle"
+import { cva, type VariantProps } from "class-variance-authority"
+import { cn } from "cn"
 
 const toggleVariants = cva(
-  "group/toggle inline-flex items-center justify-center gap-1 rounded-cb-md text-sm font-medium whitespace-nowrap transition-[color,box-shadow] outline-none hover:bg-cb-muted hover:bg-cb-foreground focus-visible:bg-cb-ring focus-visible:ring-[3px] focus-visible:bg-cb-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:bg-cb-destructive aria-invalid:bg-cb-destructive/20 aria-pressed:bg-cb-muted dark:aria-invalid:bg-cb-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/toggle inline-flex items-center justify-center gap-1 rounded-md text-sm font-medium whitespace-nowrap transition-[color,box-shadow] outline-none hover:bg-muted hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-pressed:bg-muted dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
         default: "bg-transparent",
-        outline:
-          "border border-cb-input bg-transparent shadow-xs hover:border-cb-muted",
+        outline: "border border-input bg-transparent shadow-xs hover:bg-muted",
       },
       size: {
         default:
@@ -23,7 +24,7 @@ const toggleVariants = cva(
       size: "default",
     },
   }
-);
+)
 
 function Toggle({
   className,
@@ -37,7 +38,7 @@ function Toggle({
       className={cn(toggleVariants({ variant, size, className }))}
       {...props}
     />
-  );
+  )
 }
 
-export { Toggle, toggleVariants };
+export { Toggle, toggleVariants }

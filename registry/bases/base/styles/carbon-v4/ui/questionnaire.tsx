@@ -1,11 +1,14 @@
 "use client";
 
+import * as React from "react";
 import { Questionnaire as QuestionnairePrimitive } from "@shadcn/react/questionnaire";
 import { cn } from "cn";
-import { CheckIcon } from "lucide-react";
-import * as React from "react";
 
-import { type Button, buttonVariants } from "@/components/ui/button";
+import {
+  buttonVariants,
+  type Button,
+} from "@/registry/bases/base/styles/default-v4/ui/button";
+import { CheckIcon } from "lucide-react";
 
 function Questionnaire({
   className,
@@ -28,7 +31,7 @@ function QuestionnaireProgress({
     <QuestionnairePrimitive.Progress
       data-slot="questionnaire-progress"
       className={cn(
-        "text-cb-muted-foreground min-h-[1lh] w-fit min-w-[14ch] text-xs font-medium tabular-nums",
+        "text-muted-foreground min-h-[1lh] w-fit min-w-[14ch] text-xs font-medium tabular-nums",
         className
       )}
       {...props}
@@ -60,7 +63,7 @@ function QuestionnaireTitle({
     <QuestionnairePrimitive.Title
       data-slot="questionnaire-title"
       className={cn(
-        "font-heading text-pretty text-base font-semibold [&:not(:has(~[data-slot=questionnaire-description]))]:mb-5",
+        "cn-font-heading text-base font-semibold text-pretty [&:not(:has(~[data-slot=questionnaire-description]))]:mb-5",
         className
       )}
       {...props}
@@ -75,7 +78,7 @@ function QuestionnaireDescription({
   return (
     <QuestionnairePrimitive.Description
       data-slot="questionnaire-description"
-      className={cn("text-cb-muted-foreground text-pretty text-sm", className)}
+      className={cn("text-muted-foreground text-sm text-pretty", className)}
       {...props}
     />
   );
@@ -106,7 +109,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice rounded-cb-md border-cb-input shadow-xs hover:border-cb-muted/50 has-[>input:focus-visible]:border-cb-ring has-[>input:focus-visible]:ring-3 has-[>input:focus-visible]:border-cb-ring/50 data-invalid:border-cb-destructive dark:border-cb-input/20 data-checked:border-cb-primary/40 data-checked:border-cb-muted dark:data-checked:border-cb-muted relative flex min-h-11 cursor-pointer select-none items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm outline-none transition-colors",
+        "group/questionnaire-choice border-input hover:bg-muted/50 has-[>input:focus-visible]:border-ring has-[>input:focus-visible]:ring-ring/50 data-invalid:border-destructive dark:bg-input/20 data-checked:border-primary/40 data-checked:bg-muted dark:data-checked:bg-muted relative flex min-h-11 cursor-pointer items-start gap-3 rounded-md border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -119,15 +122,15 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="border-cb-input group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-cb-full group-data-checked/questionnaire-choice:border-cb-primary group-data-checked/questionnaire-choice:border-cb-primary group-data-checked/questionnaire-choice:border-cb-primary-foreground dark:border-cb-input/30 dark:group-data-checked/questionnaire-choice:border-cb-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border"
+        className="border-input group-data-checked/questionnaire-choice:border-primary group-data-checked/questionnaire-choice:bg-primary group-data-checked/questionnaire-choice:text-primary-foreground dark:bg-input/30 dark:group-data-checked/questionnaire-choice:bg-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
-          className="rounded-cb-full bg-cb-primary-foreground group-data-checked/questionnaire-choice:block hidden size-2 group-data-[type=checkbox]/questionnaire-choice:hidden"
+          className="bg-primary-foreground hidden size-2 rounded-full group-data-checked/questionnaire-choice:block group-data-[type=checkbox]/questionnaire-choice:hidden"
         />
         <CheckIcon
           data-slot="questionnaire-choice-indicator-check"
-          className="group-data-checked/questionnaire-choice:block hidden size-3.5 group-data-[type=radio]/questionnaire-choice:hidden"
+          className="hidden size-3.5 group-data-checked/questionnaire-choice:block group-data-[type=radio]/questionnaire-choice:hidden"
         />
       </span>
       <QuestionnairePrimitive.ChoiceLabel
@@ -138,7 +141,7 @@ function QuestionnaireChoice({
       </QuestionnairePrimitive.ChoiceLabel>
       <QuestionnairePrimitive.ChoiceShortcut
         data-slot="questionnaire-choice-shortcut"
-        className="rounded-cb-md border-cb-input border-cb-background border-cb-muted-foreground shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center border font-mono text-[0.625rem] font-medium leading-none group-data-[shortcut]/questionnaire-choice:inline-flex"
+        className="border-input bg-background text-muted-foreground pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-md border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
       />
     </QuestionnairePrimitive.Choice>
   );
@@ -151,7 +154,7 @@ function QuestionnaireChoiceDescription({
   return (
     <span
       data-slot="questionnaire-choice-description"
-      className={cn("text-cb-muted-foreground", className)}
+      className={cn("text-muted-foreground", className)}
       {...props}
     />
   );
@@ -169,8 +172,8 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "rounded-cb-md border-cb-input shadow-xs focus-visible:border-cb-ring focus-visible:ring-3 focus-visible:border-cb-ring/50 aria-invalid:border-cb-destructive aria-invalid:ring-3 aria-invalid:border-cb-destructive/20 dark:border-cb-input/30 dark:aria-invalid:border-cb-destructive/50 dark:aria-invalid:border-cb-destructive/40 h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base outline-none transition-[color,box-shadow,background-color] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 sm:min-h-0 md:text-sm",
-          "selection:bg-cb-primary selection:bg-cb-primary-foreground placeholder:bg-cb-muted-foreground",
+          "border-input focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-9 min-h-11 w-full min-w-0 rounded-md border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground",
           className
         )}
         {...props}
@@ -186,7 +189,7 @@ function QuestionnaireError({
   return (
     <QuestionnairePrimitive.Error
       data-slot="questionnaire-error"
-      className={cn("text-cb-destructive text-sm", className)}
+      className={cn("text-destructive text-sm", className)}
       {...props}
     />
   );

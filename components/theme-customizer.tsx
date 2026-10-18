@@ -40,7 +40,10 @@ export function ThemeCustomizerWrapper({ children }: ThemeWrapperProps) {
     if (!cssVars || cssVars.length === 0) return;
 
     cssVars.forEach(([key, value]) => {
-      element.style.setProperty(prefixCssVariableWithStyle(style, key), value);
+      element.style.setProperty(
+        prefixCssVariableWithStyle(style, key),
+        `oklch(${value})`
+      );
     });
   }
 

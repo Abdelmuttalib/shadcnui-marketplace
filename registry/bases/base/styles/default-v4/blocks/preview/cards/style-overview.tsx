@@ -8,7 +8,7 @@ import {
   Card,
   CardContent,
 } from "@/registry/bases/base/styles/default-v4/ui/card";
-import { STYLES } from "@/registry/styles-components";
+import { STYLES } from "@/registry/styles";
 
 export function StyleOverview() {
   const [params] = useDesignSystemSearchParams();
@@ -64,14 +64,14 @@ export function StyleOverview() {
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="bg-(--color) after:border-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
                     "--color": `var(${variant})`,
                   } as React.CSSProperties
                 }
               />
-              <div className="style-lyra:max-w-10 style-mira:max-w-10 max-w-14 hidden truncate font-mono text-[0.60rem] md:block">
+              <div className="style-lyra:max-w-10 style-mira:max-w-10 hidden max-w-14 truncate font-mono text-[0.60rem] md:block">
                 {variant}
               </div>
             </div>

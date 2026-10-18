@@ -64,8 +64,9 @@
 }
 
 :root {
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   --color-gray-50: oklch(0.97 0 0);
   --color-gray-100: oklch(0.97 0 0);
@@ -962,29 +963,29 @@
   --dft-color-black: oklch(0% 0 0);
   --dft-color-destructive: oklch(56.92% 0.21 25.92);
 
-  --dft-color-background: var(--dft-color-white);
+  --dft-color-background: oklch(1 0 0);
   --dft-color-foreground: var(--dft-color-gray-950);
 
-  --dft-background: var(--dft-color-background);
-  --dft-foreground: var(--dft-color-foreground);
-  --dft-card: var(--dft-color-background);
-  --dft-card-foreground: var(--dft-color-foreground);
-  --dft-popover: var(--dft-color-background);
-  --dft-popover-foreground: var(--dft-color-foreground);
-  --dft-primary: var(--dft-color-primary-600);
-  --dft-primary-foreground: var(--dft-color-white);
-  --dft-secondary: var(--dft-color-gray-200);
-  --dft-secondary-foreground: var(--dft-color-foreground);
-  --dft-muted: var(--dft-color-gray-200);
-  --dft-muted-foreground: var(--dft-color-gray-600);
-  --dft-accent: var(--dft-color-gray-100);
-  --dft-accent-foreground: var(--dft-color-foreground);
-  --dft-destructive: var(--dft-color-destructive);
-  --dft-destructive-foreground: var(--dft-color-white);
-  --dft-border: var(--dft-color-gray-200);
-  --dft-input: var(--dft-color-gray-200);
-  --dft-ring: var(--dft-color-primary-600);
-  --dft-link: var(--dft-color-primary-600);
+  --dft-background: oklch(1 0 0);
+  --dft-foreground: oklch(0.13 0.028 261.692);
+  --dft-card: oklch(1 0 0);
+  --dft-card-foreground: oklch(0.13 0.028 261.692);
+  --dft-popover: oklch(1 0 0);
+  --dft-popover-foreground: oklch(0.13 0.028 261.692);
+  --dft-primary: oklch(0.511 0.262 276.966);
+  --dft-primary-foreground: oklch(1 0 0);
+  --dft-secondary: oklch(0.928 0.006 264.531);
+  --dft-secondary-foreground: oklch(0.13 0.028 261.692);
+  --dft-muted: oklch(0.928 0.006 264.531);
+  --dft-muted-foreground: oklch(0.446 0.03 256.802);
+  --dft-accent: oklch(0.967 0.003 264.542);
+  --dft-accent-foreground: oklch(0.13 0.028 261.692);
+  --dft-destructive: oklch(56.92% 0.21 25.92);
+  --dft-destructive-foreground: oklch(1 0 0);
+  --dft-border: oklch(0.928 0.006 264.531);
+  --dft-input: oklch(0.928 0.006 264.531);
+  --dft-ring: oklch(0.511 0.262 276.966);
+  --dft-link: oklch(0.511 0.262 276.966);
 
   --dft-chart-1: oklch(55.65% 0.24 261.95);
   --dft-chart-2: oklch(62.91% 0.1 192.36);
@@ -995,7 +996,7 @@
   --dft-radius: 0.4rem;
 
   --dft-sidebar-background: var(--dft-background);
-  --dft-sidebar-foreground: var(--dft-color-gray-800);
+  --dft-sidebar-foreground: oklch(0.278 0.033 256.848);
   --dft-sidebar-primary: var(--dft-primary);
   --dft-sidebar-primary-foreground: var(--dft-primary-foreground);
   --dft-sidebar-accent: var(--dft-accent);
@@ -1523,30 +1524,27 @@
   --moon-sidebar-border: oklch(38.67% 0 0);
   --moon-sidebar-ring: oklch(0.24 0.07 283.76);
 
-  --dft-color-background: var(--dft-color-gray-950);
-  --dft-color-foreground: var(--dft-color-white);
-
-  --dft-background: var(--dft-color-background);
-  --dft-foreground: var(--dft-color-foreground);
-  --dft-card: var(--dft-color-background);
-  --dft-card-foreground: var(--dft-color-foreground);
-  --dft-popover: var(--dft-color-background);
-  --dft-popover-foreground: var(--dft-color-foreground);
-  --dft-primary: var(--dft-color-primary-600);
-  --dft-primary-foreground: var(--dft-color-foreground);
-  --dft-secondary: var(--dft-color-gray-800);
-  --dft-secondary-foreground: var(--dft-color-foreground);
-  --dft-muted: var(--dft-color-gray-800);
-  --dft-muted-foreground: var(--dft-color-gray-400);
-  --dft-layer: var(--dft-color-gray-900);
-  --dft-layer-foreground: var(--dft-color-foreground);
-  --dft-accent: var(--dft-color-gray-900);
-  --dft-accent-foreground: var(--dft-color-foreground);
-  --dft-destructive: var(--dft-color-destructive);
-  --dft-destructive-foreground: var(--dft-color-foreground);
-  --dft-border: var(--dft-color-gray-800);
-  --dft-input: var(--dft-color-gray-800);
-  --dft-ring: var(--dft-color-gray-100);
+  --dft-background: oklch(0.13 0.028 261.692);
+  --dft-foreground: oklch(1 0 0);
+  --dft-card: oklch(0.13 0.028 261.692);
+  --dft-card-foreground: oklch(1 0 0);
+  --dft-popover: oklch(0.13 0.028 261.692);
+  --dft-popover-foreground: oklch(1 0 0);
+  --dft-primary: oklch(0.511 0.262 276.966);
+  --dft-primary-foreground: oklch(1 0 0);
+  --dft-secondary: oklch(0.278 0.033 256.848);
+  --dft-secondary-foreground: oklch(1 0 0);
+  --dft-muted: oklch(0.278 0.033 256.848);
+  --dft-muted-foreground: oklch(0.707 0.022 261.325);
+  --dft-layer: oklch(0.21 0.034 264.665);
+  --dft-layer-foreground: oklch(1 0 0);
+  --dft-accent: oklch(0.21 0.034 264.665);
+  --dft-accent-foreground: oklch(1 0 0);
+  --dft-destructive: oklch(56.92% 0.21 25.92);
+  --dft-destructive-foreground: oklch(1 0 0);
+  --dft-border: oklch(0.278 0.033 256.848);
+  --dft-input: oklch(0.278 0.033 256.848);
+  --dft-ring: oklch(0.511 0.262 276.966);
 
   --dft-chart-1: oklch(62.65% 0.24 261.95);
   --dft-chart-2: oklch(68.91% 0.1 192.36);
@@ -1555,7 +1553,7 @@
   --dft-chart-5: oklch(69.62% 0.2 22.13);
 
   --dft-sidebar-background: var(--dft-background);
-  --dft-sidebar-foreground: var(--dft-color-gray-200);
+  --dft-sidebar-foreground: oklch(0.928 0.006 264.531);
   --dft-sidebar-primary: var(--dft-primary);
   --dft-sidebar-primary-foreground: var(--dft-primary-foreground);
   --dft-sidebar-accent: var(--dft-accent);
