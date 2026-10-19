@@ -13,7 +13,7 @@ function Switch({
   return (
     <SwitchPrimitive.Root
       data-slot="switch"
-      data-size={"sm"}
+      data-size={size}
       className={cn(
         "group peer group/switch focus-visible:border-cb-ring focus-visible:ring-cb-ring aria-invalid:border-cb-destructive aria-invalid:ring-cb-destructive data-checked:bg-cb-primary data-unchecked:bg-cb-muted-foreground/50 focus-visible:ring-offset-cb-background aria-invalid:ring-offset-cb-background relative inline-flex shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none group-has-[:focus-visible]/field-label:border-transparent group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:ring-2 focus-visible:ring-offset-1 aria-invalid:ring-2 aria-invalid:ring-offset-1 data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[size=default]:h-6 data-[size=default]:w-12 data-[size=sm]:h-5 data-[size=sm]:w-10",
         // [size=default]:h-[18.4px] data-[size=default]:w-[32px] data-[size=sm]:h-[14px] data-[size=sm]:w-[24px]",
