@@ -9,6 +9,10 @@ import {
   CardContent,
 } from "@/registry/bases/base/styles/carbon-v4/ui/card";
 import { STYLES } from "@/registry/styles";
+import {
+  getStyleVariablesPrefix,
+  prefixCssVariable,
+} from "@/registry/styles-components";
 
 export function StyleOverview() {
   const [params] = useDesignSystemSearchParams();
@@ -27,6 +31,14 @@ export function StyleOverview() {
     () => STYLES.find((style) => style.name === params.style),
     [params.style]
   );
+
+  // read, preview/[base]/[style]/[name].
+  const [, base, style, name] = React.useMemo(() => {
+    const segments = window.location.pathname.split("/").filter(Boolean);
+    return [segments[0], segments[1], segments[2], segments[3]];
+  }, []);
+
+  const styleCssVariableName = `${getStyleVariablesPrefix(style)}`;
 
   return (
     <Card>
@@ -64,15 +76,15 @@ export function StyleOverview() {
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="bg-(--color) after:border-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
-                    "--color": `var(${variant})`,
+                    "--color": `var(${prefixCssVariable(variant, styleCssVariableName)})`,
                   } as React.CSSProperties
                 }
               />
-              <div className="style-lyra:max-w-10 style-mira:max-w-10 max-w-14 hidden truncate font-mono text-[0.60rem] md:block">
-                {variant}
+              <div className="style-lyra:max-w-10 style-mira:max-w-10 hidden max-w-14 truncate font-mono text-[0.60rem] md:block">
+                {prefixCssVariable(variant, styleCssVariableName)}
               </div>
             </div>
           ))}

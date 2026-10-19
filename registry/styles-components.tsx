@@ -340,6 +340,16 @@ export function getStyleVariablesPrefix(style: Style) {
   }
 }
 
+export function prefixCssVariable(cssVariable: string, prefix: string) {
+  // --background => --dft-background
+
+  if (!cssVariable || !cssVariable.startsWith("--")) {
+    return cssVariable;
+  }
+
+  return cssVariable.replace(/^--/, `--${prefix}-`);
+}
+
 export function renderStylePageExample(style: Style, page: string) {
   if (page === "charts") {
     if (style === "moon") {
