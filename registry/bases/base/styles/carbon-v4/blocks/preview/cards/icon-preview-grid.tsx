@@ -131,7 +131,7 @@ export function IconPreviewGrid() {
           {PREVIEW_ICONS.map((icon, index) => (
             <div
               key={index}
-              className="ring-border style-sera:rounded-none *:[svg]:size-4 size-8 flex items-center justify-center rounded-md ring"
+              className="ring-cb-border style-sera:rounded-none rounded-cb-md flex size-8 items-center justify-center ring *:[svg]:size-4"
             >
               <IconPlaceholder
                 lucide={icon.lucide}
