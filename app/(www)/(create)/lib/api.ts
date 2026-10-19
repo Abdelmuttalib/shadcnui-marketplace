@@ -79,6 +79,21 @@ export async function getBaseItem(
 //   return getComponent(base, name) ?? null;
 // }
 
+export async function getBaseStyleSinkPage(
+  base: BaseName,
+  styleName: Style["name"] = defaultStyle.name
+) {
+  const { Index } = await import(
+    `@/registry/bases/${base}/styles/${styleName}/internal/sink`
+  );
+  const SinkPage = Index.default;
+
+  if (!SinkPage) {
+    return null;
+  }
+  return SinkPage;
+}
+
 export async function getBaseComponent(
   name: string,
   base: BaseName,
@@ -92,9 +107,7 @@ export async function getBaseComponent(
     return null;
   }
 
-  const { getComponent } = await import(
-    "@/registry/bases/__components__"
-  );
+  const { getComponent } = await import("@/registry/bases/__components__");
 
   return getComponent(`${base}/${styleName}`, name) ?? null;
 }
