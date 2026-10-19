@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "cn";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/carbon-v4/ui/button";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -111,7 +111,7 @@ function PaginationEllipsis({
       aria-hidden
       data-slot="pagination-ellipsis"
       className={cn(
-        "flex size-9 items-center justify-center [&_svg:not([class*='size-'])]:size-4",
+        "flex size-10 items-center justify-center [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

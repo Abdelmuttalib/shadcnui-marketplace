@@ -37,6 +37,10 @@
     scroll-behavior: smooth;
   }
 
+  .cn-font-heading {
+    @apply font-heading;
+  }
+
   pre {
     @apply hide-scrollbar bg-card max-h-[45rem] max-w-[95vw] overflow-auto overflow-x-auto rounded-lg p-4 font-mono text-sm leading-relaxed;
     white-space: pre;

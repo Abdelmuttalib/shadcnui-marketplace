@@ -7,7 +7,7 @@ import { cn } from "cn";
 import {
   buttonVariants,
   type Button,
-} from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/carbon-v4/ui/button";
 import { CheckIcon } from "lucide-react";
 
 function Questionnaire({
@@ -31,7 +31,7 @@ function QuestionnaireProgress({
     <QuestionnairePrimitive.Progress
       data-slot="questionnaire-progress"
       className={cn(
-        "text-muted-foreground min-h-[1lh] w-fit min-w-[14ch] text-xs font-medium tabular-nums",
+        "text-cb-muted-foreground min-h-[1lh] w-fit min-w-[14ch] text-xs font-medium tabular-nums",
         className
       )}
       {...props}
@@ -78,7 +78,7 @@ function QuestionnaireDescription({
   return (
     <QuestionnairePrimitive.Description
       data-slot="questionnaire-description"
-      className={cn("text-muted-foreground text-sm text-pretty", className)}
+      className={cn("text-cb-muted-foreground text-sm text-pretty", className)}
       {...props}
     />
   );
@@ -109,7 +109,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-input hover:bg-muted/50 has-[>input:focus-visible]:border-ring has-[>input:focus-visible]:ring-ring/50 data-invalid:border-destructive dark:bg-input/20 data-checked:border-primary/40 data-checked:bg-muted dark:data-checked:bg-muted relative flex min-h-11 cursor-pointer items-start gap-3 rounded-md border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "group/questionnaire-choice border-cb-input hover:bg-cb-muted/50 has-[>input:focus-visible]:border-cb-ring has-[>input:focus-visible]:ring-cb-ring data-invalid:border-cb-destructive dark:bg-cb-input/20 data-checked:border-cb-primary/40 data-checked:bg-cb-muted dark:data-checked:bg-cb-muted rounded-cb-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-1",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -122,7 +122,7 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="border-input group-data-checked/questionnaire-choice:border-primary group-data-checked/questionnaire-choice:bg-primary group-data-checked/questionnaire-choice:text-primary-foreground dark:bg-input/30 dark:group-data-checked/questionnaire-choice:bg-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
+        className="border-cb-input group-data-checked/questionnaire-choice:border-cb-primary group-data-checked/questionnaire-choice:bg-cb-primary group-data-checked/questionnaire-choice:text-cb-primary-foreground bg-cb-input/40 dark:group-data-checked/questionnaire-choice:bg-cb-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
@@ -141,7 +141,7 @@ function QuestionnaireChoice({
       </QuestionnairePrimitive.ChoiceLabel>
       <QuestionnairePrimitive.ChoiceShortcut
         data-slot="questionnaire-choice-shortcut"
-        className="border-input bg-background text-muted-foreground pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-md border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
+        className="border-cb-input bg-cb-background text-cb-muted-foreground rounded-cb-md pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
       />
     </QuestionnairePrimitive.Choice>
   );
@@ -154,7 +154,7 @@ function QuestionnaireChoiceDescription({
   return (
     <span
       data-slot="questionnaire-choice-description"
-      className={cn("text-muted-foreground", className)}
+      className={cn("text-cb-muted-foreground", className)}
       {...props}
     />
   );
@@ -172,8 +172,10 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-input focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-9 min-h-11 w-full min-w-0 rounded-md border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
-          "selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground",
+          "focus-visible:border-cb-ring focus-visible:ring-cb-ringfocus-visible:ring-cb-ring aria-invalid:border-cb-destructive aria-invalid:ring-cb-destructive bg-input/40 rounded-cb-md h-10 min-h-11 w-full min-w-0 border border-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-1 sm:min-h-0 md:text-sm",
+          "selection:bg-cb-primary selection:text-cb-primary-foreground placeholder:text-cb-muted-foreground",
+          "border-b-cb-foreground/40",
+
           className
         )}
         {...props}
@@ -189,7 +191,7 @@ function QuestionnaireError({
   return (
     <QuestionnairePrimitive.Error
       data-slot="questionnaire-error"
-      className={cn("text-destructive text-sm", className)}
+      className={cn("text-cb-destructive text-sm", className)}
       {...props}
     />
   );
