@@ -53,7 +53,7 @@ export function LoginForm({
                   Login with Google
                 </Button>
               </Field>
-              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
+              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-linear-card">
                 Or continue with
               </FieldSeparator>
               <Field>

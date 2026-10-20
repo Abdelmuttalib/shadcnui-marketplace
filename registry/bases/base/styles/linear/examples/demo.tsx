@@ -73,7 +73,7 @@ export function Demo() {
   );
 
   return (
-    <div className="bg-muted dark:bg-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
+    <div className="bg-linear-muted dark:bg-linear-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
       <div className="grid max-w-3xl gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-4">
           <Card>
@@ -105,7 +105,7 @@ export function Demo() {
                     className="flex flex-col flex-wrap items-center gap-2"
                   >
                     <div
-                      className="after:border-border relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                      className="after:border-linear-border relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                       style={
                         {
                           "--color": `var(${variant})`,

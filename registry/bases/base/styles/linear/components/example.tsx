@@ -1,8 +1,8 @@
-import { cn } from "cn"
+import { cn } from "cn";
 
 function ExampleWrapper({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div className="w-full bg-muted dark:bg-background">
+    <div className="bg-linear-muted dark:bg-linear-background w-full">
       <div
         data-slot="example-wrapper"
         className={cn(
@@ -13,7 +13,7 @@ function ExampleWrapper({ className, ...props }: React.ComponentProps<"div">) {
         {...props}
       />
     </div>
-  )
+  );
 }
 
 function Example({
@@ -23,8 +23,8 @@ function Example({
   containerClassName,
   ...props
 }: React.ComponentProps<"div"> & {
-  title?: string
-  containerClassName?: string
+  title?: string;
+  containerClassName?: string;
 }) {
   return (
     <div
@@ -36,21 +36,21 @@ function Example({
       {...props}
     >
       {title && (
-        <div className="px-1.5 py-2 text-xs font-medium text-muted-foreground">
+        <div className="text-linear-muted-foreground px-1.5 py-2 text-xs font-medium">
           {title}
         </div>
       )}
       <div
         data-slot="example-content"
         className={cn(
-          "flex min-w-0 flex-1 flex-col items-start gap-6 rounded-xl bg-card p-12 text-foreground style-lyra:rounded-none style-sera:rounded-none *:[div:not([class*='w-'])]:w-full",
+          "bg-linear-card text-linear-foreground style-lyra:rounded-none style-sera:rounded-none flex min-w-0 flex-1 flex-col items-start gap-6 rounded-xl p-12 *:[div:not([class*='w-'])]:w-full",
           className
         )}
       >
         {children}
       </div>
     </div>
-  )
+  );
 }
 
-export { ExampleWrapper, Example }
+export { ExampleWrapper, Example };

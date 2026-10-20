@@ -142,7 +142,7 @@ function AccordionWithBorders() {
             <AccordionTrigger className="style-vega:px-4 style-vega:text-sm style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-luma:text-sm font-medium">
               {item.trigger}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground style-vega:px-4 style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:px-0 style-mira:px-0 style-luma:px-0">
+            <AccordionContent className="text-linear-muted-foreground style-vega:px-4 style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:px-0 style-mira:px-0 style-luma:px-0">
               {item.content}
             </AccordionContent>
           </AccordionItem>
@@ -320,7 +320,7 @@ function AccordionWithDisabled() {
             key={item.value}
             value={item.value}
             disabled={item.disabled}
-            className="data-open:bg-muted/50 p-1"
+            className="data-open:bg-linear-muted/50 p-1"
           >
             <AccordionTrigger className="style-vega:px-4 style-nova:px-2.5 style-lyra:px-2">
               {item.trigger}

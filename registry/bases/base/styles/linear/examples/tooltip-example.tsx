@@ -157,7 +157,7 @@ function TooltipOnLink() {
           render={
             <a
               href="#"
-              className="text-primary w-fit text-sm underline-offset-4 hover:underline"
+              className="text-linear-primary w-fit text-sm underline-offset-4 hover:underline"
               onClick={(e) => e.preventDefault()}
             />
           }

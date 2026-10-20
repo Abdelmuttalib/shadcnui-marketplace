@@ -318,7 +318,7 @@ function ToggleWithIcon() {
             hugeicons="BookmarkIcon"
             phosphor="BookmarkIcon"
             remixicon="RiBookmarkLine"
-            className="group-data-[state=on]/toggle:fill-accent-foreground"
+            className="group-data-[state=on]/toggle:fill-linear-accent-foreground"
           />
         </Toggle>
         <Toggle variant="outline" aria-label="Toggle bookmark outline">
@@ -328,7 +328,7 @@ function ToggleWithIcon() {
             hugeicons="BookmarkIcon"
             phosphor="BookmarkIcon"
             remixicon="RiBookmarkLine"
-            className="group-data-[state=on]/toggle:fill-accent-foreground"
+            className="group-data-[state=on]/toggle:fill-linear-accent-foreground"
           />
           Bookmark
         </Toggle>

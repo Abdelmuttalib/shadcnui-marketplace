@@ -67,14 +67,14 @@ export function SavingsProgress() {
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) - 12}
-                          className="fill-foreground text-2xl font-bold"
+                          className="fill-linear-foreground text-2xl font-bold"
                         >
                           $24,000
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 12}
-                          className="fill-muted-foreground text-xs"
+                          className="fill-linear-muted-foreground text-xs"
                         >
                           80% of $30,000
                         </tspan>
@@ -89,19 +89,23 @@ export function SavingsProgress() {
       </CardContent>
       <CardFooter className="flex-col gap-0">
         <div className="flex w-full items-center justify-between py-3">
-          <span className="text-muted-foreground text-sm">
+          <span className="text-linear-muted-foreground text-sm">
             Projected Finish
           </span>
           <span className="text-sm font-semibold">October 2024</span>
         </div>
         <Separator />
         <div className="flex w-full items-center justify-between py-3">
-          <span className="text-muted-foreground text-sm">Monthly Average</span>
+          <span className="text-linear-muted-foreground text-sm">
+            Monthly Average
+          </span>
           <span className="text-sm font-semibold tabular-nums">$1,250</span>
         </div>
         <Separator />
         <div className="flex w-full items-center justify-between py-3">
-          <span className="text-muted-foreground text-sm">Top Contributor</span>
+          <span className="text-linear-muted-foreground text-sm">
+            Top Contributor
+          </span>
           <span className="text-sm font-semibold">Auto-Transfer</span>
         </div>
       </CardFooter>

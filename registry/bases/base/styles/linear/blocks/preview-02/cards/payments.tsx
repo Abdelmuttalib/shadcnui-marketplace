@@ -95,7 +95,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-linear-muted-foreground size-4 shrink-0"
             />
           </Item>
           <Item variant="muted" render={<a href="#" />}>
@@ -120,7 +120,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-linear-muted-foreground size-4 shrink-0"
             />
           </Item>
           <Item variant="muted" render={<a href="#" />}>
@@ -145,7 +145,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-linear-muted-foreground size-4 shrink-0"
             />
           </Item>
           <Item variant="muted" render={<a href="#" />}>
@@ -170,7 +170,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-linear-muted-foreground size-4 shrink-0"
             />
           </Item>
         </ItemGroup>

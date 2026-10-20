@@ -185,7 +185,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           >
             <SidebarGroup>
               <SidebarGroupLabel
-                className="group/label text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm"
+                className="group/label text-linear-sidebar-foreground hover:bg-linear-sidebar-accent hover:text-linear-sidebar-accent-foreground text-sm"
                 render={<CollapsibleTrigger />}
               >
                 {item.title}{" "}

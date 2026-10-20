@@ -50,7 +50,7 @@ export function SavingsTargets() {
           <ItemGroup className="gap-3">
             <Item variant="muted" className="flex-col items-stretch">
               <ItemContent className="gap-3">
-                <ItemDescription className="cn-font-heading text-muted-foreground text-xs font-medium tracking-wider uppercase">
+                <ItemDescription className="cn-font-heading text-linear-muted-foreground text-xs font-medium tracking-wider uppercase">
                   Retirement
                 </ItemDescription>
                 <span className="text-3xl font-semibold tabular-nums">
@@ -59,7 +59,7 @@ export function SavingsTargets() {
                 <Progress value={65} />
               </ItemContent>
               <ItemFooter>
-                <span className="text-muted-foreground text-sm">
+                <span className="text-linear-muted-foreground text-sm">
                   65% achieved
                 </span>
                 <span className="text-sm font-medium tabular-nums">
@@ -69,7 +69,7 @@ export function SavingsTargets() {
             </Item>
             <Item variant="muted" className="flex-col items-stretch">
               <ItemContent className="gap-3">
-                <ItemDescription className="cn-font-heading text-muted-foreground text-xs font-medium tracking-wider uppercase">
+                <ItemDescription className="cn-font-heading text-linear-muted-foreground text-xs font-medium tracking-wider uppercase">
                   Real Estate
                 </ItemDescription>
                 <span className="text-3xl font-semibold tabular-nums">
@@ -78,7 +78,7 @@ export function SavingsTargets() {
                 <Progress value={32} />
               </ItemContent>
               <ItemFooter>
-                <span className="text-muted-foreground text-sm">
+                <span className="text-linear-muted-foreground text-sm">
                   32% achieved
                 </span>
                 <span className="text-sm font-medium tabular-nums">
@@ -126,13 +126,13 @@ export function SavingsTargets() {
             </Field>
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-linear-muted-foreground text-sm">
                   Estimated Shares
                 </span>
                 <span className="text-sm font-semibold tabular-nums">1.95</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-linear-muted-foreground text-sm">
                   Buying Power
                 </span>
                 <span className="text-sm font-semibold tabular-nums">

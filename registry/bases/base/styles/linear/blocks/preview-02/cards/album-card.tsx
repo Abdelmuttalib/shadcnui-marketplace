@@ -31,13 +31,13 @@ export function AlbumCard() {
         <Separator />
         <div className="grid w-full grid-cols-2 gap-4">
           <div className="flex flex-col gap-0.5">
-            <span className="text-muted-foreground text-xs tracking-wider uppercase">
+            <span className="text-linear-muted-foreground text-xs tracking-wider uppercase">
               Tracks
             </span>
             <span className="text-lg font-medium tabular-nums">6 Tracks</span>
           </div>
           <div className="flex flex-col gap-0.5">
-            <span className="text-muted-foreground line-clamp-1 text-xs tracking-wider uppercase">
+            <span className="text-linear-muted-foreground line-clamp-1 text-xs tracking-wider uppercase">
               Cumulative Streams
             </span>
             <span className="text-lg font-medium tabular-nums">6,198,524</span>

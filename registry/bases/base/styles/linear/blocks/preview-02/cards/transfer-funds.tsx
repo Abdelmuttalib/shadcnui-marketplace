@@ -50,7 +50,7 @@ export function TransferFunds() {
           Move money between your connected accounts.
         </CardDescription>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-linear-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"
@@ -111,14 +111,14 @@ export function TransferFunds() {
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-linear-muted-foreground text-sm">
                   Estimated arrival
                 </span>
                 <span className="text-sm font-medium">Today, Apr 14</span>
               </div>
               <Separator />
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-linear-muted-foreground text-sm">
                   Transaction fee
                 </span>
                 <span className="text-sm font-medium tabular-nums">$0.00</span>

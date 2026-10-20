@@ -180,7 +180,7 @@ function BubbleCollapsible() {
                   render={
                     <Button
                       variant="link"
-                      className="text-muted-foreground gap-1 p-0"
+                      className="text-linear-muted-foreground gap-1 p-0"
                     />
                   }
                 >
@@ -398,7 +398,7 @@ function BubbleReactionsButtons() {
           <BubbleContent>
             We are going to the movies first then dinner. Are you in?
           </BubbleContent>
-          <BubbleReactions className="bg-background gap-1">
+          <BubbleReactions className="bg-linear-background gap-1">
             <Button
               variant="secondary"
               size="icon-xs"
@@ -507,7 +507,7 @@ function BubbleButtonLinks() {
           {quickReplies.map((reply) => (
             <Bubble key={reply.label} variant="outline" align="end">
               <BubbleContent
-                className="border-primary border-dashed"
+                className="border-linear-primary border-dashed"
                 render={
                   <button type="button" onClick={() => toast(reply.message)} />
                 }

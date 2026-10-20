@@ -56,7 +56,7 @@ function DrawerDemo() {
           </DrawerTrigger>
           <DrawerContent>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-linear-muted h-80 w-full" />
             </div>
           </DrawerContent>
         </Drawer>
@@ -73,7 +73,7 @@ function DrawerDemo() {
               </DrawerDescription>
             </DrawerHeader>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-linear-muted h-80 w-full" />
             </div>
           </DrawerContent>
         </Drawer>
@@ -83,7 +83,7 @@ function DrawerDemo() {
           </DrawerTrigger>
           <DrawerContent>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-linear-muted h-80 w-full" />
             </div>
             <DrawerFooter>
               <Button>Submit</Button>
@@ -106,7 +106,7 @@ function DrawerDemo() {
               </DrawerDescription>
             </DrawerHeader>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-linear-muted h-80 w-full" />
             </div>
             <DrawerFooter>
               <Button>Submit</Button>
@@ -148,7 +148,7 @@ function DrawerSwipeHandleExample() {
                 </DrawerDescription>
               </DrawerHeader>
               <div className="flex-1 p-4">
-                <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                <div className="bg-linear-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
               </div>
             </DrawerContent>
           </Drawer>
@@ -296,7 +296,7 @@ function DrawerPosition() {
                 </DrawerDescription>
               </DrawerHeader>
               <div className="flex-1 p-4">
-                <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                <div className="bg-linear-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
               </div>
               <DrawerFooter>
                 <Button>Submit</Button>
@@ -373,7 +373,7 @@ function DrawerSnapPoints() {
           </DrawerHeader>
           <div className="scroll-fade grid flex-1 gap-3 overflow-y-auto p-4">
             {Array.from({ length: 16 }).map((_, index) => (
-              <div key={index} className="bg-muted h-12" />
+              <div key={index} className="bg-linear-muted h-12" />
             ))}
           </div>
         </DrawerContent>
@@ -401,7 +401,7 @@ function DrawerNested() {
                 </DrawerDescription>
               </DrawerHeader>
               <div className="flex-1 p-4">
-                <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                <div className="bg-linear-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
               </div>
               <DrawerFooter>
                 <Drawer swipeDirection={side}>
@@ -416,7 +416,7 @@ function DrawerNested() {
                       </DrawerDescription>
                     </DrawerHeader>
                     <div className="flex-1 p-4">
-                      <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                      <div className="bg-linear-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
                     </div>
                     <DrawerFooter>
                       <Drawer swipeDirection={side}>
@@ -431,7 +431,7 @@ function DrawerNested() {
                             </DrawerDescription>
                           </DrawerHeader>
                           <div className="flex-1 p-4">
-                            <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                            <div className="bg-linear-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
                           </div>
                           <DrawerFooter>
                             <DrawerClose render={<Button variant="outline" />}>
@@ -470,7 +470,7 @@ function DrawerNonModal() {
             <DrawerTitle>Non Modal Drawer</DrawerTitle>
           </DrawerHeader>
           <div className="flex-1 p-4">
-            <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+            <div className="bg-linear-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
           </div>
           <DrawerFooter>
             <DrawerClose render={<Button variant="outline" />}>
