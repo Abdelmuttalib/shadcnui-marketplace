@@ -12,7 +12,7 @@ export function AlbumCard() {
   return (
     <Card>
       <CardContent className="flex flex-col gap-4">
-        <div className="relative overflow-hidden rounded-lg">
+        <div className="rounded-linear-lg relative overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=800&h=800&fit=crop"
             alt="Synthetic Horizons EP cover art"

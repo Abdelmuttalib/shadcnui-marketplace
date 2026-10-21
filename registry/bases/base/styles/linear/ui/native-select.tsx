@@ -23,7 +23,7 @@ function NativeSelect({
       <select
         data-slot="native-select"
         data-size={size}
-        className="border-linear-input selection:bg-linear-primary selection:text-linear-primary-foreground placeholder:text-linear-muted-foreground focus-visible:border-linear-ring focus-visible:ring-linear-ring/50 aria-invalid:border-linear-destructive aria-invalid:ring-linear-destructive/20 dark:bg-linear-input/30 dark:hover:bg-linear-input/50 dark:aria-invalid:border-linear-destructive/50 dark:aria-invalid:ring-linear-destructive/40 h-9 w-full min-w-0 appearance-none rounded-md border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
+        className="border-linear-input selection:bg-linear-primary selection:text-linear-primary-foreground ring-offset-linear-background placeholder:text-linear-muted-foreground focus-visible:ring-linear-ring aria-invalid:ring-linear-destructive rounded-linear-md h-9 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-2 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-2 data-[size=sm]:h-8"
         {...props}
       />
       <ChevronDownIcon

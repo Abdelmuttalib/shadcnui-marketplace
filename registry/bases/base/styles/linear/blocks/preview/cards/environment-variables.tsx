@@ -25,7 +25,7 @@ export function EnvironmentVariables() {
         ].map((env) => (
           <div
             key={env.key}
-            className="ring-linear-border flex items-center gap-2 rounded-md px-2.5 py-2 font-mono text-xs ring"
+            className="ring-linear-border rounded-linear-md flex items-center gap-2 px-2.5 py-2 font-mono text-xs ring"
           >
             <span className="font-medium">{env.key}</span>
             <span className="text-linear-muted-foreground ml-auto">

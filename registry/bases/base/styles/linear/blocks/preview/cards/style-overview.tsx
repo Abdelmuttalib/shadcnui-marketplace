@@ -6,6 +6,10 @@ import { FONTS } from "@/app/(www)/(create)/lib/fonts";
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
 import { Card, CardContent } from "@/registry/bases/base/styles/linear/ui/card";
 import { STYLES } from "@/registry/styles";
+import {
+  getStyleVariablesPrefix,
+  prefixCssVariable,
+} from "@/registry/styles-components";
 
 export function StyleOverview() {
   const [params] = useDesignSystemSearchParams();
@@ -24,6 +28,14 @@ export function StyleOverview() {
     () => STYLES.find((style) => style.name === params.style),
     [params.style]
   );
+
+  // read, preview/[base]/[style]/[name].
+  const [, base, style, name] = React.useMemo(() => {
+    const segments = window.location.pathname.split("/").filter(Boolean);
+    return [segments[0], segments[1], segments[2], segments[3]];
+  }, []);
+
+  const styleCssVariableName = `${getStyleVariablesPrefix(style as any)}`;
 
   return (
     <Card>
@@ -44,9 +56,9 @@ export function StyleOverview() {
         <div className="grid grid-cols-6 gap-3">
           {[
             "--background",
-            "--foreground",
+            "--linear-foreground",
             "--primary",
-            "--secondary",
+            "--linear-secondary",
             "--muted",
             "--accent",
             "--border",
@@ -61,15 +73,15 @@ export function StyleOverview() {
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="after:border-linear-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-linear-border style-sera:rounded-none style-sera:after:rounded-none rounded-linear-lg after:rounded-linear-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
-                    "--color": `var(${variant})`,
+                    "--color": `var(${prefixCssVariable(variant, styleCssVariableName)})`,
                   } as React.CSSProperties
                 }
               />
               <div className="style-lyra:max-w-10 style-mira:max-w-10 hidden max-w-14 truncate font-mono text-[0.60rem] md:block">
-                {variant}
+                {prefixCssVariable(variant, styleCssVariableName)}
               </div>
             </div>
           ))}

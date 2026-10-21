@@ -38,7 +38,7 @@ export function StyleOverview() {
     return [segments[0], segments[1], segments[2], segments[3]];
   }, []);
 
-  const styleCssVariableName = `${getStyleVariablesPrefix(style)}`;
+  const styleCssVariableName = `${getStyleVariablesPrefix(style as any)}`;
 
   return (
     <Card>

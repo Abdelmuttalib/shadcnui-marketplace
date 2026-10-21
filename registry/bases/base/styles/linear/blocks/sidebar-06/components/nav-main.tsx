@@ -55,7 +55,7 @@ export function NavMain({
                 <DropdownMenuContent
                   side={isMobile ? "bottom" : "right"}
                   align={isMobile ? "end" : "start"}
-                  className="min-w-56 rounded-lg"
+                  className="rounded-linear-lg min-w-56"
                 >
                   {item.items.map((item) => (
                     <DropdownMenuItem

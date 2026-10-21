@@ -88,9 +88,9 @@ export function Demo() {
               <div className="grid grid-cols-6 gap-3">
                 {[
                   "--background",
-                  "--foreground",
+                  "--linear-foreground",
                   "--primary",
-                  "--secondary",
+                  "--linear-secondary",
                   "--muted",
                   "--accent",
                   "--border",
@@ -105,7 +105,7 @@ export function Demo() {
                     className="flex flex-col flex-wrap items-center gap-2"
                   >
                     <div
-                      className="after:border-linear-border relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                      className="after:border-linear-border rounded-linear-lg after:rounded-linear-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                       style={
                         {
                           "--color": `var(${variant})`,

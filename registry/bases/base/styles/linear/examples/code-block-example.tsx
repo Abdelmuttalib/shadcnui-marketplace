@@ -1108,7 +1108,7 @@ function MarkdownCode({
 
   if (!block) {
     return (
-      <code className="bg-linear-muted rounded-sm px-1 py-0.5 font-mono text-[0.9em]">
+      <code className="bg-linear-muted rounded-linear-sm px-1 py-0.5 font-mono text-[0.9em]">
         {children}
       </code>
     );

@@ -616,7 +616,7 @@ function DropdownMenuWithAvatar() {
           >
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="Shadcn" />
-              <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+              <AvatarFallback className="rounded-linear-lg">CN</AvatarFallback>
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-semibold">shadcn</span>

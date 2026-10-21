@@ -112,7 +112,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-linear-input hover:bg-linear-muted/50 has-[>input:focus-visible]:border-linear-ring has-[>input:focus-visible]:ring-linear-ring/50 data-invalid:border-linear-destructive dark:bg-linear-input/20 data-checked:border-linear-primary/40 data-checked:bg-linear-muted dark:data-checked:bg-linear-muted relative flex min-h-11 cursor-pointer items-start gap-3 rounded-md border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "group/questionnaire-choice border-linear-input hover:bg-linear-muted/50 has-[>input:focus-visible]:border-linear-ring has-[>input:focus-visible]:ring-linear-ring/50 data-invalid:border-linear-destructive dark:bg-linear-input/20 data-checked:border-linear-primary/40 data-checked:bg-linear-muted dark:data-checked:bg-linear-muted rounded-linear-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -144,7 +144,7 @@ function QuestionnaireChoice({
       </QuestionnairePrimitive.ChoiceLabel>
       <QuestionnairePrimitive.ChoiceShortcut
         data-slot="questionnaire-choice-shortcut"
-        className="border-linear-input bg-linear-background text-linear-muted-foreground pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-md border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
+        className="border-linear-input bg-linear-background text-linear-muted-foreground rounded-linear-md pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
       />
     </QuestionnairePrimitive.Choice>
   );
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-linear-input focus-visible:border-linear-ring focus-visible:ring-linear-ring/50 aria-invalid:border-linear-destructive aria-invalid:ring-linear-destructive/20 dark:bg-linear-input/30 dark:aria-invalid:border-linear-destructive/50 dark:aria-invalid:ring-linear-destructive/40 h-9 min-h-11 w-full min-w-0 rounded-md border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "border-linear-input focus-visible:border-linear-ring focus-visible:ring-linear-ring/50 aria-invalid:border-linear-destructive aria-invalid:ring-linear-destructive/60 dark:bg-linear-input/30 dark:aria-invalid:border-linear-destructive/50 dark:aria-invalid:ring-linear-destructive/40 rounded-linear-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
           "selection:bg-linear-primary selection:text-linear-primary-foreground placeholder:text-linear-muted-foreground",
           className
         )}
