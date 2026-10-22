@@ -44,7 +44,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
-      <SidebarHeader className="border-sidebar-border h-16 border-b">
+      <SidebarHeader className="border-material-sidebar-border h-16 border-b">
         <NavUser user={data.user} />
       </SidebarHeader>
       <SidebarContent>

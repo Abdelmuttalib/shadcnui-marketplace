@@ -22,7 +22,7 @@ function AspectRatio16x9() {
     <Example title="16:9" className="items-center justify-center">
       <AspectRatio
         ratio={16 / 9}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-material-muted style-luma:rounded-3xl rounded-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"
@@ -40,7 +40,7 @@ function AspectRatio1x1() {
     <Example title="1:1" className="items-start">
       <AspectRatio
         ratio={1 / 1}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-material-muted style-luma:rounded-3xl rounded-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"
@@ -58,7 +58,7 @@ function AspectRatio9x16() {
     <Example title="9:16" className="items-center justify-center">
       <AspectRatio
         ratio={9 / 16}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-material-muted style-luma:rounded-3xl rounded-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"
@@ -76,7 +76,7 @@ function AspectRatio21x9() {
     <Example title="21:9" className="items-center justify-center">
       <AspectRatio
         ratio={21 / 9}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-material-muted style-luma:rounded-3xl rounded-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"

@@ -106,14 +106,14 @@ export function PieChartCard() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy - 16}
-                          className="fill-foreground text-2xl font-bold"
+                          className="fill-material-foreground text-2xl font-bold"
                         >
                           {totalVisitors.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 4}
-                          className="fill-muted-foreground text-xs"
+                          className="fill-material-muted-foreground text-xs"
                         >
                           Visitors
                         </tspan>
@@ -133,13 +133,13 @@ export function PieChartCard() {
       <CardFooter className="flex-col items-stretch gap-2">
         <div className="flex items-center text-xs">
           <span className="font-medium">{topBrowserLabel}</span>
-          <span className="text-muted-foreground ml-auto tabular-nums">
+          <span className="text-material-muted-foreground ml-auto tabular-nums">
             {topBrowserShare}%
           </span>
         </div>
         <Progress
           value={topBrowserShare}
-          className="**:data-[slot=progress-indicator]:bg-chart-3"
+          className="**:data-[slot=progress-indicator]:bg-material-chart-3"
         />
       </CardFooter>
     </Card>

@@ -43,7 +43,7 @@ export function NavFavorites({
                 render={
                   <SidebarMenuAction
                     showOnHover
-                    className="aria-expanded:bg-muted"
+                    className="aria-expanded:bg-material-muted"
                   />
                 }
               >
@@ -68,7 +68,7 @@ export function NavFavorites({
                     hugeicons="StarOffIcon"
                     phosphor="StarIcon"
                     remixicon="RiStarOffLine"
-                    className="text-muted-foreground"
+                    className="text-material-muted-foreground"
                   />
                   <span>Remove from Favorites</span>
                 </DropdownMenuItem>
@@ -80,7 +80,7 @@ export function NavFavorites({
                     hugeicons="LinkIcon"
                     phosphor="LinkIcon"
                     remixicon="RiLinksLine"
-                    className="text-muted-foreground"
+                    className="text-material-muted-foreground"
                   />
                   <span>Copy Link</span>
                 </DropdownMenuItem>
@@ -91,7 +91,7 @@ export function NavFavorites({
                     hugeicons="ArrowUpRightIcon"
                     phosphor="ArrowUpRightIcon"
                     remixicon="RiArrowRightUpLine"
-                    className="text-muted-foreground"
+                    className="text-material-muted-foreground"
                   />
                   <span>Open in New Tab</span>
                 </DropdownMenuItem>
@@ -103,7 +103,7 @@ export function NavFavorites({
                     hugeicons="Delete02Icon"
                     phosphor="TrashIcon"
                     remixicon="RiDeleteBinLine"
-                    className="text-muted-foreground"
+                    className="text-material-muted-foreground"
                   />
                   <span>Delete</span>
                 </DropdownMenuItem>
@@ -112,7 +112,7 @@ export function NavFavorites({
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-sidebar-foreground/70">
+          <SidebarMenuButton className="text-material-sidebar-foreground/70">
             <IconPlaceholder
               lucide="MoreHorizontalIcon"
               tabler="IconDots"

@@ -102,7 +102,7 @@ export function ReleaseCatalog() {
               <div className="flex shrink-0 items-center gap-6">
                 <Badge variant="outline">{holding.type}</Badge>
                 <div className="flex flex-col items-end gap-0.5">
-                  <span className="text-muted-foreground text-xs tracking-wider uppercase">
+                  <span className="text-material-muted-foreground text-xs tracking-wider uppercase">
                     Value
                   </span>
                   <span className="font-medium tabular-nums">

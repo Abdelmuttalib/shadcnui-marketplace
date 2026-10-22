@@ -49,7 +49,10 @@ const agentFeatures = [
       <>
         <strong>Root-cause analysis</strong> for production issues with
         deployment context.{" "}
-        <Badge variant="secondary" className="bg-chart-1 text-chart-5">
+        <Badge
+          variant="secondary"
+          className="bg-material-chart-1 text-material-chart-5"
+        >
           Requires Observability Plus
         </Badge>
       </>
@@ -79,11 +82,11 @@ export function ActivateAgentDialog() {
                   hugeicons="CheckmarkCircle02Icon"
                   phosphor="CheckCircleIcon"
                   remixicon="RiCheckboxCircleLine"
-                  className="fill-primary text-primary-foreground size-5"
+                  className="fill-material-primary text-material-primary-foreground size-5"
                 />
               </ItemMedia>
               <ItemContent>
-                <ItemTitle className="text-muted-foreground *:[strong]:text-foreground inline leading-relaxed font-normal *:[strong]:font-medium">
+                <ItemTitle className="text-material-muted-foreground *:[strong]:text-material-foreground inline leading-relaxed font-normal *:[strong]:font-medium">
                   {feature.content}
                 </ItemTitle>
               </ItemContent>
