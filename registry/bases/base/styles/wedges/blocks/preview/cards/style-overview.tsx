@@ -4,10 +4,7 @@ import * as React from "react";
 
 import { FONTS } from "@/app/(www)/(create)/lib/fonts";
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/styles/wedges/ui/card";
 import { STYLES } from "@/registry/styles";
 
 export function StyleOverview() {
@@ -39,32 +36,32 @@ export function StyleOverview() {
               ? currentFontHeading.name
               : currentFont?.name}
           </div>
-          <div className="text-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
+          <div className="text-wedges-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
             Designers love packing quirky glyphs into test phrases. This is a
             preview of the typography styles.
           </div>
         </div>
         <div className="grid grid-cols-6 gap-3">
           {[
-            "--background",
-            "--foreground",
-            "--primary",
-            "--secondary",
-            "--muted",
-            "--accent",
-            "--border",
-            "--chart-1",
-            "--chart-2",
-            "--chart-3",
-            "--chart-4",
-            "--chart-5",
+            "--wedges-background",
+            "--wedges-foreground",
+            "--wedges-primary",
+            "--wedges-secondary",
+            "--wedges-muted",
+            "--wedges-accent",
+            "--wedges-border",
+            "--wedges-chart-1",
+            "--wedges-chart-2",
+            "--wedges-chart-3",
+            "--wedges-chart-4",
+            "--wedges-chart-5",
           ].map((variant) => (
             <div
               key={variant}
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="after:border-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-wedges-border style-sera:rounded-none style-sera:after:rounded-none rounded-wedges-lg after:rounded-wedges-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
                     "--color": `var(${variant})`,

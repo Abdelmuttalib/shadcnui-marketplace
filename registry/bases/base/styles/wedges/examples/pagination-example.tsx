@@ -3,11 +3,11 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/wedges/components/example";
 import {
   Field,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/wedges/ui/field";
 import {
   Pagination,
   PaginationContent,
@@ -16,7 +16,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/bases/base/styles/default-v4/ui/pagination";
+} from "@/registry/bases/base/styles/wedges/ui/pagination";
 import {
   Select,
   SelectContent,
@@ -24,7 +24,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/wedges/ui/select";
 
 export default function PaginationExample() {
   return (

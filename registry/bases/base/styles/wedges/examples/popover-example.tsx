@@ -1,8 +1,8 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,13 +10,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/wedges/ui/dialog";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/wedges/ui/field";
+import { Input } from "@/registry/bases/base/styles/wedges/ui/input";
 import {
   Popover,
   PopoverContent,
@@ -24,7 +24,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/popover";
+} from "@/registry/bases/base/styles/wedges/ui/popover";
 
 export default function PopoverExample() {
   return (

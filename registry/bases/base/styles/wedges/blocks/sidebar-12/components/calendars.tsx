@@ -7,7 +7,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/collapsible";
+} from "@/registry/bases/base/styles/wedges/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -16,7 +16,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 export function Calendars({
   calendars,
@@ -36,7 +36,7 @@ export function Calendars({
               className="group/collapsible"
             >
               <SidebarGroupLabel
-                className="group/label text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground w-full text-sm"
+                className="group/label text-wedges-sidebar-foreground hover:bg-wedges-sidebar-accent hover:text-wedges-sidebar-accent-foreground w-full text-sm"
                 render={<CollapsibleTrigger />}
               >
                 {calendar.name}{" "}
@@ -46,7 +46,7 @@ export function Calendars({
                   hugeicons="ArrowRight01Icon"
                   phosphor="CaretRightIcon"
                   remixicon="RiArrowRightSLine"
-                  className="group-data-open/collapsible:rotate-90 ml-auto transition-transform"
+                  className="ml-auto transition-transform group-data-open/collapsible:rotate-90"
                 />
               </SidebarGroupLabel>
               <CollapsibleContent>
@@ -57,7 +57,7 @@ export function Calendars({
                         <SidebarMenuButton>
                           <div
                             data-active={index < 2}
-                            className="group/calendar-item border-sidebar-border text-sidebar-primary-foreground data-[active=true]:border-sidebar-primary data-[active=true]:bg-sidebar-primary size-4 flex aspect-square shrink-0 items-center justify-center rounded-sm border"
+                            className="group/calendar-item border-wedges-sidebar-border text-wedges-sidebar-primary-foreground data-[active=true]:border-wedges-sidebar-primary data-[active=true]:bg-wedges-sidebar-primary rounded-wedges-sm flex aspect-square size-4 shrink-0 items-center justify-center border"
                           >
                             <IconPlaceholder
                               lucide="CheckIcon"
@@ -65,7 +65,7 @@ export function Calendars({
                               hugeicons="Tick02Icon"
                               phosphor="CheckIcon"
                               remixicon="RiCheckLine"
-                              className="size-3 hidden group-data-[active=true]/calendar-item:block"
+                              className="hidden size-3 group-data-[active=true]/calendar-item:block"
                             />
                           </div>
                           {item}

@@ -60,6 +60,7 @@ const STYLES = {
   spectrum: "spctm",
   libelle: "libelle",
   snow: "snow",
+  wedges: "wedges",
 };
 
 /**

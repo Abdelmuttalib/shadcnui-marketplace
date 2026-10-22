@@ -5,8 +5,8 @@ import * as React from "react";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Checkbox } from "@/registry/bases/base/styles/wedges/ui/checkbox";
 import {
   Field,
   FieldContent,
@@ -14,7 +14,7 @@ import {
   FieldGroup,
   FieldLabel,
   FieldTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/wedges/ui/field";
 import {
   Table,
   TableBody,
@@ -22,7 +22,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/base/styles/default-v4/ui/table";
+} from "@/registry/bases/base/styles/wedges/ui/table";
 
 export default function CheckboxExample() {
   return (

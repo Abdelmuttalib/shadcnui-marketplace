@@ -3,9 +3,9 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Calendars } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/calendars";
-import { DatePicker } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/date-picker";
-import { NavUser } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-user";
+import { Calendars } from "@/registry/bases/base/styles/wedges/blocks/sidebar-15/components/calendars";
+import { DatePicker } from "@/registry/bases/base/styles/wedges/blocks/sidebar-15/components/date-picker";
+import { NavUser } from "@/registry/bases/base/styles/wedges/blocks/sidebar-15/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -16,7 +16,7 @@ import {
   SidebarMenuItem,
   SidebarRail,
   SidebarSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -47,10 +47,10 @@ export function SidebarRight({
   return (
     <Sidebar
       collapsible="none"
-      className="h-svh sticky top-0 hidden border-l lg:flex"
+      className="sticky top-0 hidden h-svh border-l lg:flex"
       {...props}
     >
-      <SidebarHeader className="border-sidebar-border h-16 border-b">
+      <SidebarHeader className="border-wedges-sidebar-border h-16 border-b">
         <NavUser user={data.user} />
       </SidebarHeader>
       <SidebarContent>

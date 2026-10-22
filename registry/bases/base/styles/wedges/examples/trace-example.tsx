@@ -14,13 +14,13 @@ import { createChat } from "@/lib/ai";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Badge } from "@/registry/bases/base/styles/wedges/ui/badge";
 import {
   Bubble,
   BubbleContent,
-} from "@/registry/bases/base/styles/default-v4/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -28,7 +28,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/wedges/ui/dialog";
 import {
   Item,
   ItemActions,
@@ -36,11 +36,11 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/wedges/ui/item";
 import {
   Message,
   MessageContent,
-} from "@/registry/bases/base/styles/default-v4/ui/message";
+} from "@/registry/bases/base/styles/wedges/ui/message";
 import {
   Sheet,
   SheetContent,
@@ -48,13 +48,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sheet";
+} from "@/registry/bases/base/styles/wedges/ui/sheet";
 import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockHeader,
   CodeBlockTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/code-block";
+} from "@/registry/bases/base/styles/wedges/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -63,7 +63,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/trace";
+} from "@/registry/bases/base/styles/wedges/ui/trace";
 
 const REASONING = `The user wants to know why the checkout deploy is slow, so I should start from the build log instead of guessing.
 
@@ -267,7 +267,7 @@ function TraceChat() {
 
   return (
     <Example title="Chat" containerClassName="md:col-span-2">
-      <div className="min-h-96 flex w-full max-w-xl flex-col gap-6 text-sm">
+      <div className="flex min-h-96 w-full max-w-xl flex-col gap-6 text-sm">
         {messages.map((message) => (
           <ChatbotMessageItem
             key={message.id}
@@ -1071,7 +1071,7 @@ function TraceReasoning() {
             {REASONING}
           </TraceCollapsibleContent>
         </TraceCollapsible>
-        <div className="min-h-80 flex flex-col gap-4 border-t pt-8">
+        <div className="flex min-h-80 flex-col gap-4 border-t pt-8">
           {messages.map((message) => {
             const live = status === "streaming" && message === messages.at(-1);
             const runs: { trace: boolean; parts: typeof message.parts }[] = [];

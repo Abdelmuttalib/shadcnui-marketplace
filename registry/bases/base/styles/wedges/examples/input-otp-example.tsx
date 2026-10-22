@@ -7,8 +7,8 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Card,
   CardContent,
@@ -16,19 +16,19 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/wedges/ui/field";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/bases/base/styles/default-v4/ui/input-otp";
+} from "@/registry/bases/base/styles/wedges/ui/input-otp";
 
 export default function InputOTPExample() {
   return (
@@ -276,11 +276,11 @@ function InputOTPForm() {
           <Button type="submit" className="w-full">
             Verify
           </Button>
-          <div className="text-muted-foreground text-sm">
+          <div className="text-wedges-muted-foreground text-sm">
             Having trouble signing in?{" "}
             <a
               href="#"
-              className="hover:text-primary underline underline-offset-4 transition-colors"
+              className="hover:text-wedges-primary underline underline-offset-4 transition-colors"
             >
               Contact support
             </a>

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { loadHighlighter } from "@/registry/bases/base/styles/default-v4/lib/highlighter";
+import { loadHighlighter } from "@/registry/bases/base/styles/wedges/lib/highlighter";
 
 export function useHighlightedCode(value: string, language: string) {
   // A trailing newline would render as an extra empty line.

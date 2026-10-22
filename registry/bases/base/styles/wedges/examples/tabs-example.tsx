@@ -2,22 +2,22 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/wedges/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/styles/wedges/ui/input";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
+} from "@/registry/bases/base/styles/wedges/ui/tabs";
 
 export default function TabsExample() {
   return (
@@ -195,7 +195,7 @@ function TabsWithContent() {
           <TabsTrigger value="password">Password</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
         </TabsList>
-        <div className="style-vega:rounded-lg style-vega:p-6 style-nova:rounded-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
+        <div className="style-vega:rounded-wedges-lg style-vega:p-6 style-nova:rounded-wedges-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-wedges-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
           <TabsContent value="account">
             Manage your account preferences and profile information.
           </TabsContent>
@@ -220,7 +220,7 @@ function TabsLineWithContent() {
           <TabsTrigger value="password">Password</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
         </TabsList>
-        <div className="style-vega:rounded-lg style-vega:p-6 style-nova:rounded-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
+        <div className="style-vega:rounded-wedges-lg style-vega:p-6 style-nova:rounded-wedges-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-wedges-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
           <TabsContent value="account">
             Manage your account preferences and profile information.
           </TabsContent>
@@ -284,7 +284,7 @@ function TabsWithDropdown() {
           </DropdownMenu>
         </div>
 
-        <div className="style-vega:rounded-lg style-vega:p-6 style-nova:rounded-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
+        <div className="style-vega:rounded-wedges-lg style-vega:p-6 style-nova:rounded-wedges-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-wedges-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
           <TabsContent value="overview">
             View your dashboard metrics and key performance indicators.
           </TabsContent>
@@ -309,7 +309,7 @@ function TabsVertical() {
           <TabsTrigger value="password">Password</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
         </TabsList>
-        <div className="style-vega:rounded-lg style-vega:p-6 style-nova:rounded-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
+        <div className="style-vega:rounded-wedges-lg style-vega:p-6 style-nova:rounded-wedges-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-wedges-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
           <TabsContent value="account">
             Manage your account preferences and profile information.
           </TabsContent>
@@ -342,7 +342,7 @@ function TabsWithInputAndButton() {
             <Button>Action</Button>
           </div>
         </div>
-        <div className="style-vega:rounded-lg style-vega:p-6 style-nova:rounded-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
+        <div className="style-vega:rounded-wedges-lg style-vega:p-6 style-nova:rounded-wedges-lg style-nova:p-4 style-lyra:rounded-none style-lyra:p-4 style-maia:rounded-xl style-maia:p-6 style-mira:rounded-wedges-md style-mira:p-4 style-luma:rounded-xl style-luma:p-6 style-rhea:rounded-xl style-rhea:p-6 border">
           <TabsContent value="overview">
             View your dashboard metrics and key performance indicators.
           </TabsContent>

@@ -5,8 +5,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/accordion";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/ui/accordion";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Card,
   CardContent,
@@ -14,13 +14,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
+} from "@/registry/bases/base/styles/wedges/ui/tabs";
 
 const GENERAL_QUESTIONS = [
   {

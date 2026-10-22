@@ -1,27 +1,27 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-12/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/styles/wedges/blocks/sidebar-12/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/wedges/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/styles/wedges/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 export default function Page() {
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="bg-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
+        <header className="bg-wedges-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />
           <Separator
             orientation="vertical"
-            className="data-vertical:h-4 data-vertical:self-auto mr-2"
+            className="mr-2 data-vertical:h-4 data-vertical:self-auto"
           />
           <Breadcrumb>
             <BreadcrumbList>
@@ -34,7 +34,10 @@ export default function Page() {
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-5">
             {Array.from({ length: 20 }).map((_, i) => (
-              <div key={i} className="bg-muted/50 aspect-square rounded-xl" />
+              <div
+                key={i}
+                className="bg-wedges-muted/50 aspect-square rounded-xl"
+              />
             ))}
           </div>
         </div>

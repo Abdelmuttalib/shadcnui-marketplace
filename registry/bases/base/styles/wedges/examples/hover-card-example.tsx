@@ -1,8 +1,8 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,12 +10,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/wedges/ui/dialog";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/hover-card";
+} from "@/registry/bases/base/styles/wedges/ui/hover-card";
 
 export default function HoverCardExample() {
   return (

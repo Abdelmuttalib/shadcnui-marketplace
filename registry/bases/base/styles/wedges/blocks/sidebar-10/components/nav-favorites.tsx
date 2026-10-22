@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/wedges/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -17,7 +17,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 export function NavFavorites({
   favorites,
@@ -44,7 +44,7 @@ export function NavFavorites({
                 render={
                   <SidebarMenuAction
                     showOnHover
-                    className="aria-expanded:bg-muted"
+                    className="aria-expanded:bg-wedges-muted"
                   />
                 }
               >
@@ -58,7 +58,7 @@ export function NavFavorites({
                 <span className="sr-only">More</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent
-                className="w-56 rounded-lg"
+                className="rounded-wedges-lg w-56"
                 side={isMobile ? "bottom" : "right"}
                 align={isMobile ? "end" : "start"}
               >
@@ -70,7 +70,7 @@ export function NavFavorites({
                       hugeicons="StarOffIcon"
                       phosphor="StarIcon"
                       remixicon="RiStarOffLine"
-                      className="text-muted-foreground"
+                      className="text-wedges-muted-foreground"
                     />
                     <span>Remove from Favorites</span>
                   </DropdownMenuItem>
@@ -84,7 +84,7 @@ export function NavFavorites({
                       hugeicons="LinkIcon"
                       phosphor="LinkIcon"
                       remixicon="RiLinksLine"
-                      className="text-muted-foreground"
+                      className="text-wedges-muted-foreground"
                     />
                     <span>Copy Link</span>
                   </DropdownMenuItem>
@@ -95,7 +95,7 @@ export function NavFavorites({
                       hugeicons="ArrowUpRightIcon"
                       phosphor="ArrowUpRightIcon"
                       remixicon="RiArrowRightUpLine"
-                      className="text-muted-foreground"
+                      className="text-wedges-muted-foreground"
                     />
                     <span>Open in New Tab</span>
                   </DropdownMenuItem>
@@ -107,7 +107,7 @@ export function NavFavorites({
                       hugeicons="Delete02Icon"
                       phosphor="TrashIcon"
                       remixicon="RiDeleteBinLine"
-                      className="text-muted-foreground"
+                      className="text-wedges-muted-foreground"
                     />
                     <span>Delete</span>
                   </DropdownMenuItem>
@@ -117,7 +117,7 @@ export function NavFavorites({
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-sidebar-foreground/70">
+          <SidebarMenuButton className="text-wedges-sidebar-foreground/70">
             <IconPlaceholder
               lucide="MoreHorizontalIcon"
               tabler="IconDots"

@@ -1,12 +1,12 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
-import { Field } from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Checkbox } from "@/registry/bases/base/styles/wedges/ui/checkbox";
+import { Field } from "@/registry/bases/base/styles/wedges/ui/field";
+import { Input } from "@/registry/bases/base/styles/wedges/ui/input";
+import { Label } from "@/registry/bases/base/styles/wedges/ui/label";
+import { Textarea } from "@/registry/bases/base/styles/wedges/ui/textarea";
 
 export default function LabelExample() {
   return (

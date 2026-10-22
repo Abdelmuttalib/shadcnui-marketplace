@@ -2,19 +2,19 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import { Kbd, KbdGroup } from "@/registry/bases/base/styles/default-v4/ui/kbd";
+} from "@/registry/bases/base/styles/wedges/ui/input-group";
+import { Kbd, KbdGroup } from "@/registry/bases/base/styles/wedges/ui/kbd";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tooltip";
+} from "@/registry/bases/base/styles/wedges/ui/tooltip";
 
 export default function KbdExample() {
   return (

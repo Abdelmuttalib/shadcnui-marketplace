@@ -1,24 +1,21 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   Empty,
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/empty";
+} from "@/registry/bases/base/styles/wedges/ui/empty";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import { Kbd } from "@/registry/bases/base/styles/default-v4/ui/kbd";
+} from "@/registry/bases/base/styles/wedges/ui/input-group";
+import { Kbd } from "@/registry/bases/base/styles/wedges/ui/kbd";
 
 export function NotFound() {
   return (

@@ -1,15 +1,15 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { SignupForm } from "@/registry/bases/base/styles/default-v4/blocks/signup-02/components/signup-form";
+import { SignupForm } from "@/registry/bases/base/styles/wedges/blocks/signup-02/components/signup-form";
 
 export default function SignupPage() {
   return (
-    <div className="min-h-svh grid lg:grid-cols-2">
+    <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
-            <div className="bg-primary text-primary-foreground size-6 flex items-center justify-center rounded-md">
+            <div className="bg-wedges-primary text-wedges-primary-foreground rounded-wedges-md flex size-6 items-center justify-center">
               <IconPlaceholder
                 lucide="GalleryVerticalEndIcon"
                 tabler="IconLayoutRows"
@@ -28,7 +28,7 @@ export default function SignupPage() {
           </div>
         </div>
       </div>
-      <div className="bg-muted relative hidden lg:block">
+      <div className="bg-wedges-muted relative hidden lg:block">
         <img
           src="/placeholder.svg"
           alt="Image"

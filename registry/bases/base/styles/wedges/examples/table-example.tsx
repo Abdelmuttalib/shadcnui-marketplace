@@ -4,16 +4,16 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/wedges/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/styles/wedges/ui/input";
 import {
   Select,
   SelectContent,
@@ -21,7 +21,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/wedges/ui/select";
 import {
   Table,
   TableBody,
@@ -31,7 +31,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/base/styles/default-v4/ui/table";
+} from "@/registry/bases/base/styles/wedges/ui/table";
 
 const invoices = [
   {

@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-14/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/styles/wedges/blocks/sidebar-14/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,12 +6,12 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
+} from "@/registry/bases/base/styles/wedges/ui/breadcrumb";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 export default function Page() {
   return (
@@ -33,11 +33,11 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            <div className="bg-wedges-muted/50 aspect-video rounded-xl" />
+            <div className="bg-wedges-muted/50 aspect-video rounded-xl" />
+            <div className="bg-wedges-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-wedges-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
       <AppSidebar side="right" />

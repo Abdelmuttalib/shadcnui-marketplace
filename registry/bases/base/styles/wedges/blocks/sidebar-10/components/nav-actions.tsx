@@ -3,12 +3,12 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/popover";
+} from "@/registry/bases/base/styles/wedges/ui/popover";
 import {
   Sidebar,
   SidebarContent,
@@ -17,7 +17,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 const data = [
   [
@@ -192,7 +192,7 @@ export function NavActions() {
   }, []);
   return (
     <div className="flex items-center gap-2 text-sm">
-      <div className="text-muted-foreground hidden font-medium md:inline-block">
+      <div className="text-wedges-muted-foreground hidden font-medium md:inline-block">
         Edit Oct 08
       </div>
       <Button variant="ghost" size="icon" className="h-7 w-7">
@@ -210,7 +210,7 @@ export function NavActions() {
             <Button
               variant="ghost"
               size="icon"
-              className="data-open:bg-accent h-7 w-7"
+              className="data-open:bg-wedges-accent h-7 w-7"
             />
           }
         >
@@ -223,7 +223,7 @@ export function NavActions() {
           />
         </PopoverTrigger>
         <PopoverContent
-          className="w-56 overflow-hidden rounded-lg p-0"
+          className="rounded-wedges-lg w-56 overflow-hidden p-0"
           align="end"
         >
           <Sidebar collapsible="none" className="bg-transparent">

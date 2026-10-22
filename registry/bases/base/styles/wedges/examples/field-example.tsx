@@ -6,9 +6,9 @@ import { useState } from "react";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Badge } from "@/registry/bases/base/styles/wedges/ui/badge";
+import { Checkbox } from "@/registry/bases/base/styles/wedges/ui/checkbox";
 import {
   Field,
   FieldContent,
@@ -18,23 +18,23 @@ import {
   FieldLegend,
   FieldSet,
   FieldTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/wedges/ui/field";
+import { Input } from "@/registry/bases/base/styles/wedges/ui/input";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/bases/base/styles/default-v4/ui/input-otp";
+} from "@/registry/bases/base/styles/wedges/ui/input-otp";
 import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "@/registry/bases/base/styles/default-v4/ui/native-select";
+} from "@/registry/bases/base/styles/wedges/ui/native-select";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/radio-group";
+} from "@/registry/bases/base/styles/wedges/ui/radio-group";
 import {
   Select,
   SelectContent,
@@ -42,10 +42,10 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/wedges/ui/select";
+import { Slider } from "@/registry/bases/base/styles/wedges/ui/slider";
+import { Switch } from "@/registry/bases/base/styles/wedges/ui/switch";
+import { Textarea } from "@/registry/bases/base/styles/wedges/ui/textarea";
 
 export default function FieldExample() {
   return (
@@ -94,7 +94,7 @@ function InputFields() {
         </Field>
         <Field>
           <FieldLabel htmlFor="input-required">
-            Required Field <span className="text-destructive">*</span>
+            Required Field <span className="text-wedges-destructive">*</span>
           </FieldLabel>
           <Input
             id="input-required"

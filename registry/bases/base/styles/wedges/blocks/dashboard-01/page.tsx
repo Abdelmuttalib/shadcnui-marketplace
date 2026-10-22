@@ -1,12 +1,12 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/dashboard-01/components/app-sidebar";
-import { ChartAreaInteractive } from "@/registry/bases/base/styles/default-v4/blocks/dashboard-01/components/chart-area-interactive";
-import { DataTable } from "@/registry/bases/base/styles/default-v4/blocks/dashboard-01/components/data-table";
-import { SectionCards } from "@/registry/bases/base/styles/default-v4/blocks/dashboard-01/components/section-cards";
-import { SiteHeader } from "@/registry/bases/base/styles/default-v4/blocks/dashboard-01/components/site-header";
+import { AppSidebar } from "@/registry/bases/base/styles/wedges/blocks/dashboard-01/components/app-sidebar";
+import { ChartAreaInteractive } from "@/registry/bases/base/styles/wedges/blocks/dashboard-01/components/chart-area-interactive";
+import { DataTable } from "@/registry/bases/base/styles/wedges/blocks/dashboard-01/components/data-table";
+import { SectionCards } from "@/registry/bases/base/styles/wedges/blocks/dashboard-01/components/section-cards";
+import { SiteHeader } from "@/registry/bases/base/styles/wedges/blocks/dashboard-01/components/site-header";
 import {
   SidebarInset,
   SidebarProvider,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 import data from "./data.json";
 

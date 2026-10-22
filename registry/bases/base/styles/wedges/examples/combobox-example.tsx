@@ -7,13 +7,13 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   Combobox,
   ComboboxChip,
@@ -31,7 +31,7 @@ import {
   ComboboxTrigger,
   ComboboxValue,
   useComboboxAnchor,
-} from "@/registry/bases/base/styles/default-v4/ui/combobox";
+} from "@/registry/bases/base/styles/wedges/ui/combobox";
 import {
   Dialog,
   DialogContent,
@@ -40,26 +40,26 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/wedges/ui/dialog";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/wedges/ui/field";
+import { Input } from "@/registry/bases/base/styles/wedges/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/wedges/ui/input-group";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/wedges/ui/item";
 import {
   Select,
   SelectContent,
@@ -67,7 +67,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/wedges/ui/select";
 
 export default function ComboboxExample() {
   return (
@@ -588,7 +588,7 @@ function ComboboxSides() {
           <Combobox key={side} items={frameworks}>
             <ComboboxInput
               placeholder={side.replace("-", " ")}
-              className="**:data-[slot=input-group-control]:capitalize w-32"
+              className="w-32 **:data-[slot=input-group-control]:capitalize"
             />
             <ComboboxContent side={side}>
               <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -1296,7 +1296,7 @@ function ComboboxWithOtherInputs() {
       </Select>
       <Button
         variant="outline"
-        className="text-muted-foreground w-52 justify-between font-normal"
+        className="text-wedges-muted-foreground w-52 justify-between font-normal"
       >
         Select a framework
         <IconPlaceholder

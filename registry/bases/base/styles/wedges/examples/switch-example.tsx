@@ -1,16 +1,16 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/wedges/components/example";
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
+} from "@/registry/bases/base/styles/wedges/ui/field";
+import { Label } from "@/registry/bases/base/styles/wedges/ui/label";
+import { Switch } from "@/registry/bases/base/styles/wedges/ui/switch";
 
 export default function SwitchExample() {
   return (

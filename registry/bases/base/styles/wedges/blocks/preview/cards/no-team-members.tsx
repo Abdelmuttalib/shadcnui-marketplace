@@ -5,12 +5,9 @@ import {
   AvatarFallback,
   AvatarGroup,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/avatar";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   Empty,
   EmptyContent,
@@ -18,7 +15,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/empty";
+} from "@/registry/bases/base/styles/wedges/ui/empty";
 
 export function NoTeamMembers() {
   return (

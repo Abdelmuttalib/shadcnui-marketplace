@@ -2,9 +2,9 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import { Toggle } from "@/registry/bases/base/styles/default-v4/ui/toggle";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
+import { Toggle } from "@/registry/bases/base/styles/wedges/ui/toggle";
 
 export default function ToggleExample() {
   return (
@@ -318,7 +318,7 @@ function ToggleWithIcon() {
             hugeicons="BookmarkIcon"
             phosphor="BookmarkIcon"
             remixicon="RiBookmarkLine"
-            className="group-data-[state=on]/toggle:fill-accent-foreground"
+            className="group-data-[state=on]/toggle:fill-wedges-accent-foreground"
           />
         </Toggle>
         <Toggle variant="outline" aria-label="Toggle bookmark outline">
@@ -328,7 +328,7 @@ function ToggleWithIcon() {
             hugeicons="BookmarkIcon"
             phosphor="BookmarkIcon"
             remixicon="RiBookmarkLine"
-            className="group-data-[state=on]/toggle:fill-accent-foreground"
+            className="group-data-[state=on]/toggle:fill-wedges-accent-foreground"
           />
           Bookmark
         </Toggle>

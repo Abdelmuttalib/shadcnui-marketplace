@@ -1,10 +1,7 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Skeleton } from "@/registry/bases/base/styles/default-v4/ui/skeleton";
+import { Card, CardContent } from "@/registry/bases/base/styles/wedges/ui/card";
+import { Skeleton } from "@/registry/bases/base/styles/wedges/ui/skeleton";
 
 export function SkeletonLoading() {
   return (

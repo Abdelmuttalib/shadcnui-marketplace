@@ -5,7 +5,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/collapsible";
+} from "@/registry/bases/base/styles/wedges/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -17,7 +17,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 export function NavWorkspaces({
   workspaces,
@@ -45,7 +45,7 @@ export function NavWorkspaces({
                 </SidebarMenuButton>
                 <SidebarMenuAction
                   render={<CollapsibleTrigger />}
-                  className="bg-sidebar-accent text-sidebar-accent-foreground data-open:rotate-90 left-2"
+                  className="bg-wedges-sidebar-accent text-wedges-sidebar-accent-foreground left-2 data-open:rotate-90"
                   showOnHover
                 >
                   <IconPlaceholder
@@ -81,7 +81,7 @@ export function NavWorkspaces({
             </Collapsible>
           ))}
           <SidebarMenuItem>
-            <SidebarMenuButton className="text-sidebar-foreground/70">
+            <SidebarMenuButton className="text-wedges-sidebar-foreground/70">
               <IconPlaceholder
                 lucide="MoreHorizontalIcon"
                 tabler="IconDots"

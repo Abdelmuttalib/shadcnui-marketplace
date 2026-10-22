@@ -5,7 +5,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/collapsible";
+} from "@/registry/bases/base/styles/wedges/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -15,7 +15,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/wedges/ui/sidebar";
 
 export function NavMain({
   items,
@@ -53,7 +53,7 @@ export function NavMain({
                 hugeicons="ArrowRight01Icon"
                 phosphor="CaretRightIcon"
                 remixicon="RiArrowRightSLine"
-                className="group-data-open/collapsible:rotate-90 ml-auto transition-transform duration-200"
+                className="ml-auto transition-transform duration-200 group-data-open/collapsible:rotate-90"
               />
             </CollapsibleTrigger>
             <CollapsibleContent>

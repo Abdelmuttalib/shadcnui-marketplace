@@ -2,21 +2,21 @@
 
 import { Area, AreaChart } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Badge } from "@/registry/bases/base/styles/wedges/ui/badge";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Card,
   CardAction,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/wedges/ui/chart";
 
 // Monthly visitor data for the area chart.
 const chartData = [
@@ -32,7 +32,7 @@ const chartData = [
 const chartConfig = {
   visitors: {
     label: "Visitors",
-    color: "var(--chart-1)",
+    color: "var(--wedges-chart-1)",
   },
 } satisfies ChartConfig;
 

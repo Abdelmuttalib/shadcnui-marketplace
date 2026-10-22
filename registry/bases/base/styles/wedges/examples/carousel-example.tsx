@@ -1,18 +1,15 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/components/example";
+import { Card, CardContent } from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/bases/base/styles/default-v4/ui/carousel";
+} from "@/registry/bases/base/styles/wedges/ui/carousel";
 
 export default function CarouselExample() {
   return (

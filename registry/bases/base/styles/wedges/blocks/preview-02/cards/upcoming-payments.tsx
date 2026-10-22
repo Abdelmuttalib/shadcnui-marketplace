@@ -2,15 +2,15 @@
 
 import * as React from "react";
 
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Calendar } from "@/registry/bases/base/styles/default-v4/ui/calendar";
+import { Badge } from "@/registry/bases/base/styles/wedges/ui/badge";
+import { Calendar } from "@/registry/bases/base/styles/wedges/ui/calendar";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   Item,
   ItemContent,
@@ -18,7 +18,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/wedges/ui/item";
 
 export function UpcomingPayments() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());

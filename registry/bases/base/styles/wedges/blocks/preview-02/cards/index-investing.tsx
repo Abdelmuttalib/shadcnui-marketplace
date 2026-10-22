@@ -1,5 +1,5 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Card,
   CardAction,
@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/card";
 
 export function IndexInvesting() {
   return (
@@ -22,7 +22,7 @@ export function IndexInvesting() {
         <CardDescription className="style-sera:mt-0 mt-3 text-sm leading-relaxed">
           <a
             href="#"
-            className="hover:text-primary underline underline-offset-4"
+            className="hover:text-wedges-primary underline underline-offset-4"
           >
             Over time
           </a>

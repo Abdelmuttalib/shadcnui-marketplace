@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import {
   Card,
   CardAction,
@@ -11,20 +11,20 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/wedges/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/wedges/ui/dropdown-menu";
 import {
   Table,
   TableBody,
   TableCell,
   TableRow,
-} from "@/registry/bases/base/styles/default-v4/ui/table";
+} from "@/registry/bases/base/styles/wedges/ui/table";
 
 export function RecentTransactions() {
   return (
@@ -43,7 +43,7 @@ export function RecentTransactions() {
           <TableBody>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-muted size-10 flex items-center justify-center rounded-lg">
+                <div className="bg-wedges-muted rounded-wedges-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="CoffeeIcon"
@@ -57,12 +57,12 @@ export function RecentTransactions() {
               <TableCell>
                 <div className="flex flex-col">
                   <span className="font-medium">Blue Bottle Coffee</span>
-                  <span className="text-muted-foreground text-sm">
+                  <span className="text-wedges-muted-foreground text-sm">
                     Food & Drink
                   </span>
                 </div>
               </TableCell>
-              <TableCell className="text-muted-foreground text-sm">
+              <TableCell className="text-wedges-muted-foreground text-sm">
                 Today, 10:24 AM
               </TableCell>
               <TableCell className="text-right">
@@ -95,7 +95,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-muted size-10 flex items-center justify-center rounded-lg">
+                <div className="bg-wedges-muted rounded-wedges-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="ShoppingCartIcon"
@@ -109,12 +109,12 @@ export function RecentTransactions() {
               <TableCell>
                 <div className="flex flex-col">
                   <span className="font-medium">Whole Foods Market</span>
-                  <span className="text-muted-foreground text-sm">
+                  <span className="text-wedges-muted-foreground text-sm">
                     Groceries
                   </span>
                 </div>
               </TableCell>
-              <TableCell className="text-muted-foreground text-sm">
+              <TableCell className="text-wedges-muted-foreground text-sm">
                 Yesterday
               </TableCell>
               <TableCell className="text-right">
@@ -147,7 +147,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-muted size-10 flex items-center justify-center rounded-lg">
+                <div className="bg-wedges-muted rounded-wedges-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="WalletIcon"
@@ -161,14 +161,16 @@ export function RecentTransactions() {
               <TableCell>
                 <div className="flex flex-col">
                   <span className="font-medium">Stripe Payout</span>
-                  <span className="text-muted-foreground text-sm">Income</span>
+                  <span className="text-wedges-muted-foreground text-sm">
+                    Income
+                  </span>
                 </div>
               </TableCell>
-              <TableCell className="text-muted-foreground text-sm">
+              <TableCell className="text-wedges-muted-foreground text-sm">
                 Oct 12
               </TableCell>
               <TableCell className="text-right">
-                <span className="text-sm font-semibold tabular-nums text-emerald-500">
+                <span className="text-sm font-semibold text-emerald-500 tabular-nums">
                   +$4,200.00
                 </span>
               </TableCell>
@@ -197,7 +199,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-muted size-10 flex items-center justify-center rounded-lg">
+                <div className="bg-wedges-muted rounded-wedges-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="CarIcon"
@@ -211,12 +213,12 @@ export function RecentTransactions() {
               <TableCell>
                 <div className="flex flex-col">
                   <span className="font-medium">Uber Technologies</span>
-                  <span className="text-muted-foreground text-sm">
+                  <span className="text-wedges-muted-foreground text-sm">
                     Transport
                   </span>
                 </div>
               </TableCell>
-              <TableCell className="text-muted-foreground text-sm">
+              <TableCell className="text-wedges-muted-foreground text-sm">
                 Oct 11
               </TableCell>
               <TableCell className="text-right">
@@ -249,7 +251,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-muted size-10 flex items-center justify-center rounded-lg">
+                <div className="bg-wedges-muted rounded-wedges-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="TvIcon"
@@ -263,12 +265,12 @@ export function RecentTransactions() {
               <TableCell>
                 <div className="flex flex-col">
                   <span className="font-medium">Netflix Subscription</span>
-                  <span className="text-muted-foreground text-sm">
+                  <span className="text-wedges-muted-foreground text-sm">
                     Entertainment
                   </span>
                 </div>
               </TableCell>
-              <TableCell className="text-muted-foreground text-sm">
+              <TableCell className="text-wedges-muted-foreground text-sm">
                 Oct 10
               </TableCell>
               <TableCell className="text-right">
