@@ -34,7 +34,7 @@ export function ReceivingMethod() {
         <CardDescription>Payout Preferences</CardDescription>
         <CardTitle>Receiving Method</CardTitle>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-spectrum-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"

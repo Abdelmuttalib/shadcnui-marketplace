@@ -933,7 +933,7 @@ function MessageActions() {
               </BubbleContent>
             </Bubble>
             <MessageFooter className="gap-2">
-              <span className="text-destructive font-normal">
+              <span className="text-spectrum-destructive font-normal">
                 Failed to send
               </span>
               <Button variant="secondary" size="xs">

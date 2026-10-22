@@ -163,7 +163,7 @@ function AlertDialogDestructive() {
         />
         <AlertDialogContent size="sm">
           <AlertDialogHeader>
-            <AlertDialogMedia className="bg-destructive/10 text-destructive dark:bg-destructive/20 dark:text-destructive">
+            <AlertDialogMedia className="bg-spectrum-destructive/10 text-spectrum-destructive dark:bg-spectrum-destructive/20 dark:text-spectrum-destructive">
               <IconPlaceholder
                 lucide="Trash2Icon"
                 tabler="IconTrash"

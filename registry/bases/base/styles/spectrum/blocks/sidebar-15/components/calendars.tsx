@@ -36,7 +36,7 @@ export function Calendars({
               className="group/collapsible"
             >
               <SidebarGroupLabel
-                className="group/label text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground w-full text-sm"
+                className="group/label text-spectrum-sidebar-foreground hover:bg-spectrum-sidebar-accent hover:text-spectrum-sidebar-accent-foreground w-full text-sm"
                 render={<CollapsibleTrigger />}
               >
                 {calendar.name}{" "}
@@ -57,7 +57,7 @@ export function Calendars({
                         <SidebarMenuButton>
                           <div
                             data-active={index < 2}
-                            className="group/calendar-item border-sidebar-border text-sidebar-primary-foreground data-[active=true]:border-sidebar-primary data-[active=true]:bg-sidebar-primary flex aspect-square size-4 shrink-0 items-center justify-center rounded-xs border"
+                            className="group/calendar-item border-spectrum-sidebar-border text-spectrum-sidebar-primary-foreground data-[active=true]:border-spectrum-sidebar-primary data-[active=true]:bg-spectrum-sidebar-primary flex aspect-square size-4 shrink-0 items-center justify-center rounded-xs border"
                           >
                             <IconPlaceholder
                               lucide="CheckIcon"

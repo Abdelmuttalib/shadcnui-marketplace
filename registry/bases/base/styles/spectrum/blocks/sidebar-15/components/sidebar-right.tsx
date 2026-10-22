@@ -50,7 +50,7 @@ export function SidebarRight({
       className="sticky top-0 hidden h-svh border-l lg:flex"
       {...props}
     >
-      <SidebarHeader className="border-sidebar-border h-16 border-b">
+      <SidebarHeader className="border-spectrum-sidebar-border h-16 border-b">
         <NavUser user={data.user} />
       </SidebarHeader>
       <SidebarContent>

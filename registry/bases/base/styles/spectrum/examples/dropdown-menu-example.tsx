@@ -620,7 +620,7 @@ function DropdownMenuWithAvatar() {
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-semibold">shadcn</span>
-              <span className="text-muted-foreground truncate text-xs">
+              <span className="text-spectrum-muted-foreground truncate text-xs">
                 shadcn@example.com
               </span>
             </div>
@@ -630,7 +630,7 @@ function DropdownMenuWithAvatar() {
               hugeicons="UnfoldMoreIcon"
               phosphor="CaretUpDownIcon"
               remixicon="RiArrowUpDownLine"
-              className="text-muted-foreground ml-auto"
+              className="text-spectrum-muted-foreground ml-auto"
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-(--anchor-width) min-w-56">

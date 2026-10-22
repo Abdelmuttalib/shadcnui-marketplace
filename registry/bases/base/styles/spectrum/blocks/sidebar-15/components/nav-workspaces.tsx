@@ -45,7 +45,7 @@ export function NavWorkspaces({
                 </SidebarMenuButton>
                 <SidebarMenuAction
                   render={<CollapsibleTrigger />}
-                  className="bg-sidebar-accent text-sidebar-accent-foreground left-2 data-open:rotate-90"
+                  className="bg-spectrum-sidebar-accent text-spectrum-sidebar-accent-foreground left-2 data-open:rotate-90"
                   showOnHover
                 >
                   <IconPlaceholder
@@ -81,7 +81,7 @@ export function NavWorkspaces({
             </Collapsible>
           ))}
           <SidebarMenuItem>
-            <SidebarMenuButton className="text-sidebar-foreground/70">
+            <SidebarMenuButton className="text-spectrum-sidebar-foreground/70">
               <IconPlaceholder
                 lucide="MoreHorizontalIcon"
                 tabler="IconDots"

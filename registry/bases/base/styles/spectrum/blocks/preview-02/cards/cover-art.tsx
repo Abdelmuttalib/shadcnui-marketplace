@@ -15,7 +15,7 @@ export function CoverArt() {
       <CardContent className="flex flex-col gap-3">
         <Label
           htmlFor="cover-art"
-          className="text-muted-foreground text-center text-xs font-normal tracking-wider uppercase"
+          className="text-spectrum-muted-foreground text-center text-xs font-normal tracking-wider uppercase"
         >
           Cover Art
         </Label>
@@ -30,7 +30,7 @@ export function CoverArt() {
               hugeicons="Image01Icon"
               phosphor="ImageIcon"
               remixicon="RiImageLine"
-              className="text-muted-foreground/50 size-10"
+              className="text-spectrum-muted-foreground/50 size-10"
             />
           </label>
         </Item>

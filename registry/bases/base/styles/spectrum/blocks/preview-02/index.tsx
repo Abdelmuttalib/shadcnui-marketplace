@@ -34,10 +34,10 @@ import { UpcomingPayments } from "@/registry/bases/base/styles/spectrum/blocks/p
 
 export default function Preview02Example() {
   return (
-    <div className="bg-muted 3xl:[--gap:--spacing(12)] dark:bg-background style-lyra:md:[--gap:--spacing(6)] style-mira:md:[--gap:--spacing(6)] overflow-x-auto overflow-y-hidden contain-[paint] [--gap:--spacing(4)] md:[--gap:--spacing(10)]">
+    <div className="bg-spectrum-muted 3xl:[--gap:--spacing(12)] dark:bg-spectrum-background style-lyra:md:[--gap:--spacing(6)] style-mira:md:[--gap:--spacing(6)] overflow-x-auto overflow-y-hidden contain-[paint] [--gap:--spacing(4)] md:[--gap:--spacing(10)]">
       <div className="flex w-full min-w-max justify-center">
         <div
-          className="bg-muted dark:bg-background style-lyra:md:w-[2600px] style-mira:md:w-[2600px] grid w-[2400px] grid-cols-7 items-start gap-(--gap) p-(--gap) md:w-[3000px] *:[div]:gap-(--gap)"
+          className="bg-spectrum-muted dark:bg-spectrum-background style-lyra:md:w-[2600px] style-mira:md:w-[2600px] grid w-[2400px] grid-cols-7 items-start gap-(--gap) p-(--gap) md:w-[3000px] *:[div]:gap-(--gap)"
           data-slot="capture-target"
         >
           <div className="flex flex-col p-1 [contain-intrinsic-size:380px_1200px] [content-visibility:auto]">
