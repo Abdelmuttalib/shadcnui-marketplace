@@ -57,6 +57,7 @@ const STYLES = {
   linear: "linear",
   material: "material",
   neon: "neon",
+  spectrum: "spectrum",
 };
 
 /**
