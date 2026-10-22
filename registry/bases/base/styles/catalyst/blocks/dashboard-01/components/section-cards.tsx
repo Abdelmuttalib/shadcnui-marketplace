@@ -1,7 +1,7 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
+import { Badge } from "@/registry/bases/base/styles/catalyst/ui/badge";
 import {
   Card,
   CardAction,
@@ -9,15 +9,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 
 export function SectionCards() {
   return (
-    <div className="*:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card *:data-[slot=card]:shadow-xs @xl/main:grid-cols-2 @5xl/main:grid-cols-4 dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 lg:px-6">
+    <div className="*:data-[slot=card]:from-catalyst-primary/5 *:data-[slot=card]:to-catalyst-card dark:*:data-[slot=card]:bg-catalyst-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Total Revenue</CardDescription>
-          <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
+          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             $1,250.00
           </CardTitle>
           <CardAction>
@@ -45,7 +45,7 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground">
+          <div className="text-catalyst-muted-foreground">
             Visitors for the last 6 months
           </div>
         </CardFooter>
@@ -53,7 +53,7 @@ export function SectionCards() {
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>New Customers</CardDescription>
-          <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
+          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             1,234
           </CardTitle>
           <CardAction>
@@ -81,7 +81,7 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground">
+          <div className="text-catalyst-muted-foreground">
             Acquisition needs attention
           </div>
         </CardFooter>
@@ -89,7 +89,7 @@ export function SectionCards() {
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Active Accounts</CardDescription>
-          <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
+          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             45,678
           </CardTitle>
           <CardAction>
@@ -117,13 +117,15 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground">Engagement exceed targets</div>
+          <div className="text-catalyst-muted-foreground">
+            Engagement exceed targets
+          </div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Growth Rate</CardDescription>
-          <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
+          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             4.5%
           </CardTitle>
           <CardAction>
@@ -151,7 +153,9 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground">Meets growth projections</div>
+          <div className="text-catalyst-muted-foreground">
+            Meets growth projections
+          </div>
         </CardFooter>
       </Card>
     </div>

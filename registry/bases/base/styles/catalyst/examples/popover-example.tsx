@@ -1,8 +1,8 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/components/example";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,13 +10,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/catalyst/ui/dialog";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
+import { Input } from "@/registry/bases/base/styles/catalyst/ui/input";
 import {
   Popover,
   PopoverContent,
@@ -24,7 +24,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/popover";
+} from "@/registry/bases/base/styles/catalyst/ui/popover";
 
 export default function PopoverExample() {
   return (

@@ -6,14 +6,14 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/catalyst/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 export function NavMain({
   items,
@@ -38,7 +38,7 @@ export function NavMain({
             <SidebarMenuItem>
               <DropdownMenuTrigger
                 render={
-                  <SidebarMenuButton className="aria-expanded:bg-muted" />
+                  <SidebarMenuButton className="aria-expanded:bg-catalyst-muted" />
                 }
               >
                 {item.title}{" "}
@@ -55,7 +55,7 @@ export function NavMain({
                 <DropdownMenuContent
                   side={isMobile ? "bottom" : "right"}
                   align={isMobile ? "end" : "start"}
-                  className="min-w-56 rounded-lg"
+                  className="rounded-catalyst-lg min-w-56"
                 >
                   {item.items.map((item) => (
                     <DropdownMenuItem

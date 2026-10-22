@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardAction,
@@ -12,13 +12,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
 import {
   Select,
   SelectContent,
@@ -26,9 +26,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/catalyst/ui/select";
+import { Slider } from "@/registry/bases/base/styles/catalyst/ui/slider";
+import { Textarea } from "@/registry/bases/base/styles/catalyst/ui/textarea";
 
 const CURRENCIES = [
   { label: "USD — United States Dollar", value: "usd" },
@@ -48,7 +48,7 @@ export function PayoutThreshold() {
           Set the minimum balance required before a payout is triggered.
         </CardDescription>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-catalyst-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"

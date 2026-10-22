@@ -3,7 +3,7 @@ import * as React from "react";
 import {
   Card,
   CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   Item,
   ItemActions,
@@ -11,8 +11,8 @@ import {
   ItemHeader,
   ItemSeparator,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
-import { Kbd } from "@/registry/bases/base/styles/default-v4/ui/kbd";
+} from "@/registry/bases/base/styles/catalyst/ui/item";
+import { Kbd } from "@/registry/bases/base/styles/catalyst/ui/kbd";
 
 const shortcuts = [
   { label: "Search", keys: ["⌘", "K"] },
@@ -28,7 +28,10 @@ export function Shortcuts() {
       <CardContent>
         <div className="flex flex-col gap-3">
           <div className="text-sm font-medium">Shortcuts</div>
-          <ItemGroup className="text-muted-foreground gap-2" data-size="xs">
+          <ItemGroup
+            className="text-catalyst-muted-foreground gap-2"
+            data-size="xs"
+          >
             {shortcuts.map(({ label, keys }, i) => (
               <React.Fragment key={label}>
                 {i > 0 && <ItemSeparator />}

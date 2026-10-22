@@ -6,12 +6,12 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/components/example";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   Command,
   CommandDialog,
@@ -22,7 +22,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/bases/base/styles/default-v4/ui/command";
+} from "@/registry/bases/base/styles/catalyst/ui/command";
 
 export default function CommandExample() {
   return (

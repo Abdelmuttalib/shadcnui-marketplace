@@ -1,12 +1,12 @@
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { SidebarInput } from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
+import { SidebarInput } from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 export function SidebarOptInForm() {
   return (
@@ -21,7 +21,7 @@ export function SidebarOptInForm() {
         <form>
           <div className="grid gap-2.5">
             <SidebarInput type="email" placeholder="Email" />
-            <Button className="bg-sidebar-primary text-sidebar-primary-foreground w-full shadow-none">
+            <Button className="bg-catalyst-sidebar-primary text-catalyst-sidebar-primary-foreground w-full shadow-none">
               Subscribe
             </Button>
           </div>

@@ -1,4 +1,4 @@
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardAction,
@@ -7,35 +7,35 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/catalyst/ui/input-group";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemFooter,
   ItemGroup,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/catalyst/ui/item";
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/registry/bases/base/styles/default-v4/ui/native-select";
-import { Progress } from "@/registry/bases/base/styles/default-v4/ui/progress";
+} from "@/registry/bases/base/styles/catalyst/ui/native-select";
+import { Progress } from "@/registry/bases/base/styles/catalyst/ui/progress";
 
 export function SavingsTargets() {
   return (
-    <div className="gap-(--gap) grid grid-cols-2">
+    <div className="grid grid-cols-2 gap-(--gap)">
       <Card>
         <CardHeader>
           <CardTitle>Savings Targets</CardTitle>
@@ -50,7 +50,7 @@ export function SavingsTargets() {
           <ItemGroup className="gap-3">
             <Item variant="muted" className="flex-col items-stretch">
               <ItemContent className="gap-3">
-                <ItemDescription className="cn-font-heading text-muted-foreground text-xs font-medium uppercase tracking-wider">
+                <ItemDescription className="cn-font-heading text-catalyst-muted-foreground text-xs font-medium tracking-wider uppercase">
                   Retirement
                 </ItemDescription>
                 <span className="text-3xl font-semibold tabular-nums">
@@ -59,7 +59,7 @@ export function SavingsTargets() {
                 <Progress value={65} />
               </ItemContent>
               <ItemFooter>
-                <span className="text-muted-foreground text-sm">
+                <span className="text-catalyst-muted-foreground text-sm">
                   65% achieved
                 </span>
                 <span className="text-sm font-medium tabular-nums">
@@ -69,7 +69,7 @@ export function SavingsTargets() {
             </Item>
             <Item variant="muted" className="flex-col items-stretch">
               <ItemContent className="gap-3">
-                <ItemDescription className="cn-font-heading text-muted-foreground text-xs font-medium uppercase tracking-wider">
+                <ItemDescription className="cn-font-heading text-catalyst-muted-foreground text-xs font-medium tracking-wider uppercase">
                   Real Estate
                 </ItemDescription>
                 <span className="text-3xl font-semibold tabular-nums">
@@ -78,7 +78,7 @@ export function SavingsTargets() {
                 <Progress value={32} />
               </ItemContent>
               <ItemFooter>
-                <span className="text-muted-foreground text-sm">
+                <span className="text-catalyst-muted-foreground text-sm">
                   32% achieved
                 </span>
                 <span className="text-sm font-medium tabular-nums">
@@ -126,13 +126,13 @@ export function SavingsTargets() {
             </Field>
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-catalyst-muted-foreground text-sm">
                   Estimated Shares
                 </span>
                 <span className="text-sm font-semibold tabular-nums">1.95</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-catalyst-muted-foreground text-sm">
                   Buying Power
                 </span>
                 <span className="text-sm font-semibold tabular-nums">

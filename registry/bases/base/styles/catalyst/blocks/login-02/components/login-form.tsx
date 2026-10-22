@@ -1,14 +1,14 @@
 import { cn } from "cn";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
+import { Input } from "@/registry/bases/base/styles/catalyst/ui/input";
 
 export function LoginForm({
   className,
@@ -19,7 +19,7 @@ export function LoginForm({
       <FieldGroup>
         <div className="flex flex-col items-center gap-1 text-center">
           <h1 className="text-2xl font-bold">Login to your account</h1>
-          <p className="text-muted-foreground text-balance text-sm">
+          <p className="text-catalyst-muted-foreground text-sm text-balance">
             Enter your email below to login to your account
           </p>
         </div>

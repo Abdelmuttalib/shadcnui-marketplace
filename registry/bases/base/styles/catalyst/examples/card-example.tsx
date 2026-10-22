@@ -6,15 +6,15 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/catalyst/components/example";
 import {
   Avatar,
   AvatarFallback,
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/ui/avatar";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardAction,
@@ -23,17 +23,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
+import { Input } from "@/registry/bases/base/styles/catalyst/ui/input";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/toggle-group";
+} from "@/registry/bases/base/styles/catalyst/ui/toggle-group";
 
 const spacingOptions = [
   {
@@ -88,7 +88,7 @@ function CardContentEdgeToEdge() {
           </CardDescription>
         </CardHeader>
         <CardContent className="-mb-(--card-spacing) px-0">
-          <div className="bg-muted/50 px-(--card-spacing) max-h-48 space-y-4 overflow-y-scroll border-t py-4 text-sm leading-relaxed">
+          <div className="bg-catalyst-muted/50 max-h-48 space-y-4 overflow-y-scroll border-t px-(--card-spacing) py-4 text-sm leading-relaxed">
             <p>
               These terms govern your use of the workspace, including access to
               shared documents, project files, and collaboration tools.
@@ -151,13 +151,17 @@ function CardCustomSpacing() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="bg-muted/50 style-lyra:rounded-none style-sera:rounded-none grid gap-2 rounded-lg p-3 text-sm">
+            <div className="bg-catalyst-muted/50 style-lyra:rounded-none style-sera:rounded-none rounded-catalyst-lg grid gap-2 p-3 text-sm">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-muted-foreground">Checks passed</span>
+                <span className="text-catalyst-muted-foreground">
+                  Checks passed
+                </span>
                 <span className="font-medium">24 / 26</span>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span className="text-muted-foreground">Open blockers</span>
+                <span className="text-catalyst-muted-foreground">
+                  Open blockers
+                </span>
                 <span className="font-medium">2</span>
               </div>
             </div>
@@ -292,12 +296,12 @@ function CardWithImage() {
   return (
     <Example title="With Image">
       <Card size="default" className="relative mx-auto w-full max-w-sm pt-0">
-        <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
+        <div className="bg-catalyst-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
         <img
           src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Photo by mymind on Unsplash"
           title="Photo by mymind on Unsplash"
-          className="brightness-60 relative z-20 aspect-video w-full object-cover grayscale"
+          className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
         />
         <CardHeader>
           <CardTitle>Beautiful Landscape</CardTitle>
@@ -327,12 +331,12 @@ function CardWithImageSmall() {
   return (
     <Example title="With Image (Small)">
       <Card size="sm" className="relative mx-auto w-full max-w-sm pt-0">
-        <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
+        <div className="bg-catalyst-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
         <img
           src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Photo by mymind on Unsplash"
           title="Photo by mymind on Unsplash"
-          className="brightness-60 relative z-20 aspect-video w-full object-cover grayscale"
+          className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
         />
         <CardHeader>
           <CardTitle>Beautiful Landscape</CardTitle>

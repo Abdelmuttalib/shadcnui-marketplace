@@ -2,7 +2,7 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/catalyst/components/example";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -14,8 +14,8 @@ import {
   AlertDialogMedia,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/alert-dialog";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/ui/alert-dialog";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -24,7 +24,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/catalyst/ui/dialog";
 
 export default function AlertDialogExample() {
   return (
@@ -163,7 +163,7 @@ function AlertDialogDestructive() {
         />
         <AlertDialogContent size="sm">
           <AlertDialogHeader>
-            <AlertDialogMedia className="bg-destructive/10 text-destructive dark:bg-destructive/20 dark:text-destructive">
+            <AlertDialogMedia className="bg-catalyst-destructive/10 text-catalyst-destructive dark:bg-catalyst-destructive/20 dark:text-catalyst-destructive">
               <IconPlaceholder
                 lucide="Trash2Icon"
                 tabler="IconTrash"

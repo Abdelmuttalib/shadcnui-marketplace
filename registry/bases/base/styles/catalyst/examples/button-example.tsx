@@ -4,11 +4,11 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/catalyst/components/example";
 import {
   Button,
   buttonVariants,
-} from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/ui/button";
 
 export default function ButtonExample() {
   return (

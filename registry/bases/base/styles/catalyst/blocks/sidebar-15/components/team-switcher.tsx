@@ -12,12 +12,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/catalyst/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 export function TeamSwitcher({
   teams,
@@ -38,10 +38,10 @@ export function TeamSwitcher({
         <DropdownMenu>
           <DropdownMenuTrigger
             render={
-              <SidebarMenuButton className="aria-expanded:bg-muted aria-expanded:text-foreground w-fit px-1.5" />
+              <SidebarMenuButton className="aria-expanded:bg-catalyst-muted aria-expanded:text-catalyst-foreground w-fit px-1.5" />
             }
           >
-            <div className="bg-sidebar-primary text-sidebar-primary-foreground size-5 flex aspect-square items-center justify-center rounded-md">
+            <div className="bg-catalyst-sidebar-primary text-catalyst-sidebar-primary-foreground rounded-catalyst-md flex aspect-square size-5 items-center justify-center">
               {activeTeam.logo}
             </div>
             <span className="truncate font-medium">{activeTeam.name}</span>
@@ -55,13 +55,13 @@ export function TeamSwitcher({
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-64 rounded-lg"
+            className="rounded-catalyst-lg w-64"
             align="start"
             side="bottom"
             sideOffset={4}
           >
             <DropdownMenuGroup>
-              <DropdownMenuLabel className="text-muted-foreground text-xs">
+              <DropdownMenuLabel className="text-catalyst-muted-foreground text-xs">
                 Teams
               </DropdownMenuLabel>
               {teams.map((team, index) => (
@@ -70,7 +70,7 @@ export function TeamSwitcher({
                   onClick={() => setActiveTeam(team)}
                   className="gap-2 p-2"
                 >
-                  <div className="rounded-xs size-6 flex items-center justify-center border">
+                  <div className="flex size-6 items-center justify-center rounded-xs border">
                     {team.logo}
                   </div>
                   {team.name}
@@ -81,7 +81,7 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-2 p-2">
-                <div className="bg-background size-6 flex items-center justify-center rounded-md border">
+                <div className="bg-catalyst-background rounded-catalyst-md flex size-6 items-center justify-center border">
                   <IconPlaceholder
                     lucide="PlusIcon"
                     tabler="IconPlus"
@@ -91,7 +91,7 @@ export function TeamSwitcher({
                     className="size-4"
                   />
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-catalyst-muted-foreground font-medium">
                   Add team
                 </div>
               </DropdownMenuItem>

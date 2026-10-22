@@ -3,10 +3,10 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { NavMain } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-main";
-import { NavProjects } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-projects";
-import { NavSecondary } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-secondary";
-import { NavUser } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-user";
+import { NavMain } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-08/components/nav-main";
+import { NavProjects } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-08/components/nav-projects";
+import { NavSecondary } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-08/components/nav-secondary";
+import { NavUser } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-08/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -15,7 +15,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 const data = {
   user: {
@@ -219,7 +219,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" render={<a href="#" />}>
-              <div className="bg-sidebar-primary text-sidebar-primary-foreground size-8 flex aspect-square items-center justify-center rounded-lg">
+              <div className="bg-catalyst-sidebar-primary text-catalyst-sidebar-primary-foreground rounded-catalyst-lg flex aspect-square size-8 items-center justify-center">
                 <IconPlaceholder
                   lucide="TerminalIcon"
                   tabler="IconCommand"

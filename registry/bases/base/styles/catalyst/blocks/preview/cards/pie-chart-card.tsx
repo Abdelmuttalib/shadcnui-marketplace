@@ -2,7 +2,7 @@
 
 import { Label, Pie, PieChart } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
+import { Badge } from "@/registry/bases/base/styles/catalyst/ui/badge";
 import {
   Card,
   CardAction,
@@ -11,7 +11,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
@@ -19,8 +19,8 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
-import { Progress } from "@/registry/bases/base/styles/default-v4/ui/progress";
+} from "@/registry/bases/base/styles/catalyst/ui/chart";
+import { Progress } from "@/registry/bases/base/styles/catalyst/ui/progress";
 
 const pieChartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -35,19 +35,19 @@ const pieChartConfig = {
   },
   chrome: {
     label: "Chrome",
-    color: "var(--chart-1)",
+    color: "var(--catalyst-chart-1)",
   },
   safari: {
     label: "Safari",
-    color: "var(--chart-2)",
+    color: "var(--catalyst-chart-2)",
   },
   firefox: {
     label: "Firefox",
-    color: "var(--chart-3)",
+    color: "var(--catalyst-chart-3)",
   },
   edge: {
     label: "Edge",
-    color: "var(--chart-4)",
+    color: "var(--catalyst-chart-4)",
   },
 } satisfies ChartConfig;
 
@@ -106,14 +106,14 @@ export function PieChartCard() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy - 16}
-                          className="fill-foreground text-2xl font-bold"
+                          className="fill-catalyst-foreground text-2xl font-bold"
                         >
                           {totalVisitors.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 4}
-                          className="fill-muted-foreground text-xs"
+                          className="fill-catalyst-muted-foreground text-xs"
                         >
                           Visitors
                         </tspan>
@@ -133,13 +133,13 @@ export function PieChartCard() {
       <CardFooter className="flex-col items-stretch gap-2">
         <div className="flex items-center text-xs">
           <span className="font-medium">{topBrowserLabel}</span>
-          <span className="text-muted-foreground ml-auto tabular-nums">
+          <span className="text-catalyst-muted-foreground ml-auto tabular-nums">
             {topBrowserShare}%
           </span>
         </div>
         <Progress
           value={topBrowserShare}
-          className="**:data-[slot=progress-indicator]:bg-chart-3"
+          className="**:data-[slot=progress-indicator]:bg-catalyst-chart-3"
         />
       </CardFooter>
     </Card>

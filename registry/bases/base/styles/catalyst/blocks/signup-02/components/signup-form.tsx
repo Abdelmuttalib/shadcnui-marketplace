@@ -1,14 +1,14 @@
 import { cn } from "cn";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
+import { Input } from "@/registry/bases/base/styles/catalyst/ui/input";
 
 export function SignupForm({
   className,
@@ -19,7 +19,7 @@ export function SignupForm({
       <FieldGroup>
         <div className="flex flex-col items-center gap-1 text-center">
           <h1 className="text-2xl font-bold">Create your account</h1>
-          <p className="text-muted-foreground text-balance text-sm">
+          <p className="text-catalyst-muted-foreground text-sm text-balance">
             Fill in the form below to create your account
           </p>
         </div>
@@ -30,7 +30,7 @@ export function SignupForm({
             type="text"
             placeholder="John Doe"
             required
-            className="bg-background"
+            className="bg-catalyst-background"
           />
         </Field>
         <Field>
@@ -40,7 +40,7 @@ export function SignupForm({
             type="email"
             placeholder="m@example.com"
             required
-            className="bg-background"
+            className="bg-catalyst-background"
           />
           <FieldDescription>
             We&apos;ll use this to contact you. We will not share your email
@@ -53,7 +53,7 @@ export function SignupForm({
             id="password"
             type="password"
             required
-            className="bg-background"
+            className="bg-catalyst-background"
           />
           <FieldDescription>
             Must be at least 8 characters long.
@@ -65,7 +65,7 @@ export function SignupForm({
             id="confirm-password"
             type="password"
             required
-            className="bg-background"
+            className="bg-catalyst-background"
           />
           <FieldDescription>Please confirm your password.</FieldDescription>
         </Field>

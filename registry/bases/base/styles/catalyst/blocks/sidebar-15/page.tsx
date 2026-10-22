@@ -1,24 +1,24 @@
-import { SidebarLeft } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/sidebar-left";
-import { SidebarRight } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/sidebar-right";
+import { SidebarLeft } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-15/components/sidebar-left";
+import { SidebarRight } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-15/components/sidebar-right";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/catalyst/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/styles/catalyst/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 export default function Page() {
   return (
     <SidebarProvider>
       <SidebarLeft />
       <SidebarInset>
-        <header className="bg-background sticky top-0 flex h-14 shrink-0 items-center gap-2">
+        <header className="bg-catalyst-background sticky top-0 flex h-14 shrink-0 items-center gap-2">
           <div className="flex flex-1 items-center gap-2 px-3">
             <SidebarTrigger />
             <Separator
@@ -37,8 +37,8 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          <div className="bg-muted/50 mx-auto h-24 w-full max-w-3xl rounded-xl" />
-          <div className="bg-muted/50 mx-auto h-[100vh] w-full max-w-3xl rounded-xl" />
+          <div className="bg-catalyst-muted/50 mx-auto h-24 w-full max-w-3xl rounded-xl" />
+          <div className="bg-catalyst-muted/50 mx-auto h-[100vh] w-full max-w-3xl rounded-xl" />
         </div>
       </SidebarInset>
       <SidebarRight />

@@ -2,9 +2,9 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/catalyst/components/example";
+import { Badge } from "@/registry/bases/base/styles/catalyst/ui/badge";
+import { Spinner } from "@/registry/bases/base/styles/catalyst/ui/spinner";
 
 export default function BadgeExample() {
   return (

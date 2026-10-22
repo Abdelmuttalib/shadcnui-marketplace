@@ -4,7 +4,7 @@ import { cn } from "cn";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardContent,
@@ -12,7 +12,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 
 const LiveWaveform = ({
   active = false,
@@ -383,10 +383,10 @@ const LiveWaveform = ({
         const dataToRender = processing
           ? staticBarsRef.current
           : active
-          ? staticBarsRef.current
-          : staticBarsRef.current.length > 0
-          ? staticBarsRef.current
-          : [];
+            ? staticBarsRef.current
+            : staticBarsRef.current.length > 0
+              ? staticBarsRef.current
+              : [];
         for (let i = 0; i < barCount && i < dataToRender.length; i++) {
           const value = dataToRender[i] || 0.1;
           const x = i * step;
@@ -470,14 +470,14 @@ const LiveWaveform = ({
         active
           ? "Live audio waveform"
           : processing
-          ? "Processing audio"
-          : "Audio waveform idle"
+            ? "Processing audio"
+            : "Audio waveform idle"
       }
       role="img"
       {...props}
     >
       {!active && !processing && (
-        <div className="border-muted-foreground/20 absolute left-0 right-0 top-1/2 -translate-y-1/2 border-t-2 border-dotted" />
+        <div className="border-catalyst-muted-foreground/20 absolute top-1/2 right-0 left-0 -translate-y-1/2 border-t-2 border-dotted" />
       )}
       <canvas
         className="block h-full w-full"

@@ -13,18 +13,18 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/alert-dialog";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import { ButtonGroup } from "@/registry/bases/base/styles/default-v4/ui/button-group";
+} from "@/registry/bases/base/styles/catalyst/ui/alert-dialog";
+import { Badge } from "@/registry/bases/base/styles/catalyst/ui/badge";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
+import { ButtonGroup } from "@/registry/bases/base/styles/catalyst/ui/button-group";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
+import { Checkbox } from "@/registry/bases/base/styles/catalyst/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,31 +33,31 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/catalyst/ui/dropdown-menu";
 import {
   Field,
   FieldGroup,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/catalyst/ui/input-group";
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/catalyst/ui/item";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/radio-group";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/catalyst/ui/radio-group";
+import { Slider } from "@/registry/bases/base/styles/catalyst/ui/slider";
+import { Switch } from "@/registry/bases/base/styles/catalyst/ui/switch";
+import { Textarea } from "@/registry/bases/base/styles/catalyst/ui/textarea";
 
 export function Demo() {
   const [sliderValue, setSliderValue] = React.useState<number[]>([500]);
@@ -73,7 +73,7 @@ export function Demo() {
   );
 
   return (
-    <div className="bg-muted dark:bg-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
+    <div className="bg-catalyst-muted dark:bg-catalyst-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
       <div className="grid max-w-3xl gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-4">
           <Card>
@@ -87,32 +87,32 @@ export function Demo() {
             <CardContent>
               <div className="grid grid-cols-6 gap-3">
                 {[
-                  "--background",
-                  "--foreground",
-                  "--primary",
-                  "--secondary",
-                  "--muted",
-                  "--accent",
-                  "--border",
-                  "--chart-1",
-                  "--chart-2",
-                  "--chart-3",
-                  "--chart-4",
-                  "--chart-5",
+                  "--catalyst-background",
+                  "--catalyst-foreground",
+                  "--catalyst-primary",
+                  "--catalyst-secondary",
+                  "--catalyst-muted",
+                  "--catalyst-accent",
+                  "--catalyst-border",
+                  "--catalyst-chart-1",
+                  "--catalyst-chart-2",
+                  "--catalyst-chart-3",
+                  "--catalyst-chart-4",
+                  "--catalyst-chart-5",
                 ].map((variant) => (
                   <div
                     key={variant}
                     className="flex flex-col flex-wrap items-center gap-2"
                   >
                     <div
-                      className="bg-(--color) after:border-border relative aspect-square w-full rounded-lg after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                      className="after:border-catalyst-border rounded-catalyst-lg after:rounded-catalyst-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                       style={
                         {
                           "--color": `var(${variant})`,
                         } as React.CSSProperties
                       }
                     />
-                    <div className="max-w-14 hidden truncate font-mono text-[0.60rem] md:block">
+                    <div className="hidden max-w-14 truncate font-mono text-[0.60rem] md:block">
                       {variant}
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export function Demo() {
           <Card>
             <CardContent>
               <div className="grid grid-cols-8 place-items-center gap-4">
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="CopyIcon"
                     tabler="IconCopy"
@@ -132,7 +132,7 @@ export function Demo() {
                     remixicon="RiFileCopyLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="CircleAlertIcon"
                     tabler="IconExclamationCircle"
@@ -141,7 +141,7 @@ export function Demo() {
                     remixicon="RiErrorWarningLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="TrashIcon"
                     tabler="IconTrash"
@@ -150,7 +150,7 @@ export function Demo() {
                     remixicon="RiDeleteBinLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="ShareIcon"
                     tabler="IconShare"
@@ -159,7 +159,7 @@ export function Demo() {
                     remixicon="RiShareLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="ShoppingBagIcon"
                     tabler="IconShoppingBag"
@@ -168,7 +168,7 @@ export function Demo() {
                     remixicon="RiShoppingBagLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="MoreHorizontalIcon"
                     tabler="IconDots"
@@ -177,7 +177,7 @@ export function Demo() {
                     remixicon="RiMoreLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="Loader2Icon"
                     tabler="IconLoader"
@@ -186,7 +186,7 @@ export function Demo() {
                     remixicon="RiLoaderLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="PlusIcon"
                     tabler="IconPlus"
@@ -195,7 +195,7 @@ export function Demo() {
                     remixicon="RiAddLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="MinusIcon"
                     tabler="IconMinus"
@@ -204,7 +204,7 @@ export function Demo() {
                     remixicon="RiSubtractLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="ArrowLeftIcon"
                     tabler="IconArrowLeft"
@@ -213,7 +213,7 @@ export function Demo() {
                     remixicon="RiArrowLeftLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="ArrowRightIcon"
                     tabler="IconArrowRight"
@@ -222,7 +222,7 @@ export function Demo() {
                     remixicon="RiArrowRightLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="CheckIcon"
                     tabler="IconCheck"
@@ -231,7 +231,7 @@ export function Demo() {
                     remixicon="RiCheckLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="ChevronDownIcon"
                     tabler="IconChevronDown"
@@ -240,7 +240,7 @@ export function Demo() {
                     remixicon="RiArrowDownSLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="ChevronRightIcon"
                     tabler="IconChevronRight"
@@ -249,7 +249,7 @@ export function Demo() {
                     remixicon="RiArrowRightSLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="SearchIcon"
                     tabler="IconSearch"
@@ -258,7 +258,7 @@ export function Demo() {
                     remixicon="RiSearchLine"
                   />
                 </Card>
-                <Card className="*:[svg]:size-4 size-8 flex items-center justify-center p-0 shadow-none">
+                <Card className="flex size-8 items-center justify-center p-0 shadow-none *:[svg]:size-4">
                   <IconPlaceholder
                     lucide="SettingsIcon"
                     tabler="IconSettings"

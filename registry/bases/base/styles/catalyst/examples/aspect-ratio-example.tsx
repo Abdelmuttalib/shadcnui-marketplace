@@ -3,8 +3,8 @@ import Image from "next/image";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { AspectRatio } from "@/registry/bases/base/styles/default-v4/ui/aspect-ratio";
+} from "@/registry/bases/base/styles/catalyst/components/example";
+import { AspectRatio } from "@/registry/bases/base/styles/catalyst/ui/aspect-ratio";
 
 export default function AspectRatioExample() {
   return (
@@ -22,13 +22,13 @@ function AspectRatio16x9() {
     <Example title="16:9" className="items-center justify-center">
       <AspectRatio
         ratio={16 / 9}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-catalyst-muted style-luma:rounded-3xl rounded-catalyst-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"
           alt="Photo"
           fill
-          className="dark:brightness-20 style-luma:rounded-3xl h-full w-full rounded-lg object-cover grayscale"
+          className="style-luma:rounded-3xl rounded-catalyst-lg h-full w-full object-cover grayscale dark:brightness-20"
         />
       </AspectRatio>
     </Example>
@@ -40,13 +40,13 @@ function AspectRatio1x1() {
     <Example title="1:1" className="items-start">
       <AspectRatio
         ratio={1 / 1}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-catalyst-muted style-luma:rounded-3xl rounded-catalyst-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"
           alt="Photo"
           fill
-          className="dark:brightness-20 style-luma:rounded-3xl h-full w-full rounded-lg object-cover grayscale"
+          className="style-luma:rounded-3xl rounded-catalyst-lg h-full w-full object-cover grayscale dark:brightness-20"
         />
       </AspectRatio>
     </Example>
@@ -58,13 +58,13 @@ function AspectRatio9x16() {
     <Example title="9:16" className="items-center justify-center">
       <AspectRatio
         ratio={9 / 16}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-catalyst-muted style-luma:rounded-3xl rounded-catalyst-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"
           alt="Photo"
           fill
-          className="dark:brightness-20 style-luma:rounded-3xl h-full w-full rounded-lg object-cover grayscale"
+          className="style-luma:rounded-3xl rounded-catalyst-lg h-full w-full object-cover grayscale dark:brightness-20"
         />
       </AspectRatio>
     </Example>
@@ -76,13 +76,13 @@ function AspectRatio21x9() {
     <Example title="21:9" className="items-center justify-center">
       <AspectRatio
         ratio={21 / 9}
-        className="bg-muted style-luma:rounded-3xl rounded-lg"
+        className="bg-catalyst-muted style-luma:rounded-3xl rounded-catalyst-lg"
       >
         <Image
           src="https://avatar.vercel.sh/shadcn1"
           alt="Photo"
           fill
-          className="dark:brightness-20 style-luma:rounded-3xl h-full w-full rounded-lg object-cover grayscale"
+          className="style-luma:rounded-3xl rounded-catalyst-lg h-full w-full object-cover grayscale dark:brightness-20"
         />
       </AspectRatio>
     </Example>

@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-01/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-01/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/catalyst/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/styles/catalyst/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 export default function Page() {
   return (
@@ -23,7 +23,7 @@ export default function Page() {
           <SidebarTrigger className="-ml-1" />
           <Separator
             orientation="vertical"
-            className="data-vertical:h-4 data-vertical:self-auto mr-2"
+            className="mr-2 data-vertical:h-4 data-vertical:self-auto"
           />
           <Breadcrumb>
             <BreadcrumbList>
@@ -39,11 +39,11 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            <div className="bg-catalyst-muted/50 aspect-video rounded-xl" />
+            <div className="bg-catalyst-muted/50 aspect-video rounded-xl" />
+            <div className="bg-catalyst-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-muted/50 min-h-screen flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-catalyst-muted/50 min-h-screen flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

@@ -13,15 +13,15 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/alert-dialog";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import { ButtonGroup } from "@/registry/bases/base/styles/default-v4/ui/button-group";
+} from "@/registry/bases/base/styles/catalyst/ui/alert-dialog";
+import { Badge } from "@/registry/bases/base/styles/catalyst/ui/badge";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
+import { ButtonGroup } from "@/registry/bases/base/styles/catalyst/ui/button-group";
 import {
   Card,
   CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
+import { Checkbox } from "@/registry/bases/base/styles/catalyst/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,31 +30,31 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/catalyst/ui/dropdown-menu";
 import {
   Field,
   FieldGroup,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/catalyst/ui/input-group";
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/catalyst/ui/item";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/radio-group";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/catalyst/ui/radio-group";
+import { Slider } from "@/registry/bases/base/styles/catalyst/ui/slider";
+import { Switch } from "@/registry/bases/base/styles/catalyst/ui/switch";
+import { Textarea } from "@/registry/bases/base/styles/catalyst/ui/textarea";
 
 export function UIElements() {
   const [sliderValue, setSliderValue] = React.useState<number[]>([500]);

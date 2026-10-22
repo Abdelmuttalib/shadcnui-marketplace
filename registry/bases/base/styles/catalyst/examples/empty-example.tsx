@@ -2,8 +2,8 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/components/example";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -11,13 +11,13 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/empty";
+} from "@/registry/bases/base/styles/catalyst/ui/empty";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import { Kbd } from "@/registry/bases/base/styles/default-v4/ui/kbd";
+} from "@/registry/bases/base/styles/catalyst/ui/input-group";
+import { Kbd } from "@/registry/bases/base/styles/catalyst/ui/kbd";
 
 export default function EmptyExample() {
   return (
@@ -53,7 +53,7 @@ function EmptyBasic() {
           <Button
             variant="link"
             render={<a href="#" />}
-            className="text-muted-foreground"
+            className="text-catalyst-muted-foreground"
             nativeButton={false}
           >
             Learn more{" "}
@@ -74,7 +74,7 @@ function EmptyBasic() {
 function EmptyWithMutedBackground() {
   return (
     <Example title="With Muted Background">
-      <Empty className="bg-muted">
+      <Empty className="bg-catalyst-muted">
         <EmptyHeader>
           <EmptyTitle>No results found</EmptyTitle>
           <EmptyDescription>
@@ -86,7 +86,7 @@ function EmptyWithMutedBackground() {
           <Button
             variant="link"
             render={<a href="#" />}
-            className="text-muted-foreground"
+            className="text-catalyst-muted-foreground"
             nativeButton={false}
           >
             Learn more{" "}
@@ -181,7 +181,7 @@ function EmptyWithIcon() {
 function EmptyWithMutedBackgroundAlt() {
   return (
     <Example title="With Muted Background Alt">
-      <Empty className="bg-muted/50">
+      <Empty className="bg-catalyst-muted/50">
         <EmptyHeader>
           <EmptyTitle>404 - Not Found</EmptyTitle>
           <EmptyDescription>
@@ -244,7 +244,7 @@ function EmptyInCard() {
           <Button
             variant="link"
             render={<a href="#" />}
-            className="text-muted-foreground"
+            className="text-catalyst-muted-foreground"
             nativeButton={false}
           >
             Learn more{" "}

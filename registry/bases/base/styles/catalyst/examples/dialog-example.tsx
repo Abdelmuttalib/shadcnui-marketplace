@@ -6,9 +6,9 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/catalyst/components/example";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
+import { Checkbox } from "@/registry/bases/base/styles/catalyst/ui/checkbox";
 import {
   Dialog,
   DialogClose,
@@ -18,7 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/catalyst/ui/dialog";
 import {
   Field,
   FieldContent,
@@ -28,19 +28,19 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
+import { Input } from "@/registry/bases/base/styles/catalyst/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import { Kbd } from "@/registry/bases/base/styles/default-v4/ui/kbd";
+} from "@/registry/bases/base/styles/catalyst/ui/input-group";
+import { Kbd } from "@/registry/bases/base/styles/catalyst/ui/kbd";
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/registry/bases/base/styles/default-v4/ui/native-select";
+} from "@/registry/bases/base/styles/catalyst/ui/native-select";
 import {
   Select,
   SelectContent,
@@ -49,20 +49,20 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
+} from "@/registry/bases/base/styles/catalyst/ui/select";
+import { Switch } from "@/registry/bases/base/styles/catalyst/ui/switch";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/catalyst/ui/tabs";
+import { Textarea } from "@/registry/bases/base/styles/catalyst/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tooltip";
+} from "@/registry/bases/base/styles/catalyst/ui/tooltip";
 
 export default function DialogExample() {
   return (
@@ -314,7 +314,7 @@ function DialogChatSettings() {
                 </TabsTrigger>
                 <TabsTrigger value="security">Security</TabsTrigger>
               </TabsList>
-              <div className="**:data-[slot=select-trigger]:min-w-[125px] style-vega:min-h-[550px] style-vega:rounded-lg style-vega:p-6 style-nova:min-h-[460px] style-nova:rounded-lg style-nova:p-4 style-lyra:min-h-[450px] style-lyra:rounded-none style-lyra:p-4 style-maia:min-h-[550px] style-maia:rounded-xl style-maia:p-6 style-mira:min-h-[450px] style-mira:rounded-md style-mira:p-4 style-luma:min-h-[550px] style-luma:rounded-xl style-luma:p-6 style-rhea:min-h-[480px] style-rhea:rounded-2xl style-rhea:p-6 border">
+              <div className="style-vega:min-h-[550px] style-vega:rounded-catalyst-lg style-vega:p-6 style-nova:min-h-[460px] style-nova:rounded-catalyst-lg style-nova:p-4 style-lyra:min-h-[450px] style-lyra:rounded-none style-lyra:p-4 style-maia:min-h-[550px] style-maia:rounded-xl style-maia:p-6 style-mira:min-h-[450px] style-mira:rounded-catalyst-md style-mira:p-4 style-luma:min-h-[550px] style-luma:rounded-xl style-luma:p-6 style-rhea:min-h-[480px] style-rhea:rounded-2xl style-rhea:p-6 border **:data-[slot=select-trigger]:min-w-[125px]">
                 <TabsContent value="general">
                   <FieldSet>
                     <FieldGroup>
@@ -527,7 +527,7 @@ function DialogChatSettings() {
                       <Textarea
                         id="about"
                         placeholder="I'm a software engineer..."
-                        className="@md/field-group:min-w-full @2xl/field-group:min-w-[300px] min-h-[120px]"
+                        className="min-h-[120px] @md/field-group:min-w-full @2xl/field-group:min-w-[300px]"
                       />
                     </Field>
                     <FieldSeparator />

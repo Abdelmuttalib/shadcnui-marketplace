@@ -4,9 +4,9 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Alert,
   AlertDescription,
-} from "@/registry/bases/base/styles/default-v4/ui/alert";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/ui/alert";
+import { Badge } from "@/registry/bases/base/styles/catalyst/ui/badge";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardContent,
@@ -14,14 +14,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   Item,
   ItemContent,
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/catalyst/ui/item";
 
 // Agent feature descriptions.
 const agentFeatures = [
@@ -49,7 +49,10 @@ const agentFeatures = [
       <>
         <strong>Root-cause analysis</strong> for production issues with
         deployment context.{" "}
-        <Badge variant="secondary" className="bg-chart-1 text-chart-5">
+        <Badge
+          variant="secondary"
+          className="bg-catalyst-chart-1 text-catalyst-chart-5"
+        >
           Requires Observability Plus
         </Badge>
       </>
@@ -79,11 +82,11 @@ export function ActivateAgentDialog() {
                   hugeicons="CheckmarkCircle02Icon"
                   phosphor="CheckCircleIcon"
                   remixicon="RiCheckboxCircleLine"
-                  className="fill-primary text-primary-foreground size-5"
+                  className="fill-catalyst-primary text-catalyst-primary-foreground size-5"
                 />
               </ItemMedia>
               <ItemContent>
-                <ItemTitle className="text-muted-foreground *:[strong]:font-medium *:[strong]:text-foreground inline font-normal leading-relaxed">
+                <ItemTitle className="text-catalyst-muted-foreground *:[strong]:text-catalyst-foreground inline leading-relaxed font-normal *:[strong]:font-medium">
                   {feature.content}
                 </ItemTitle>
               </ItemContent>

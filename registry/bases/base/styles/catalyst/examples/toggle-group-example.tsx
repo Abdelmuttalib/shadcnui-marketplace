@@ -6,13 +6,13 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/catalyst/components/example";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
+import { Input } from "@/registry/bases/base/styles/catalyst/ui/input";
 import {
   Select,
   SelectContent,
@@ -20,11 +20,11 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/catalyst/ui/select";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/toggle-group";
+} from "@/registry/bases/base/styles/catalyst/ui/toggle-group";
 
 export default function ToggleGroupExample() {
   return (
@@ -200,7 +200,7 @@ function ToggleGroupWithIcons() {
         <ToggleGroupItem
           value="star"
           aria-label="Toggle star"
-          className="aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foreground aria-pressed:bg-transparent"
+          className="aria-pressed:*:[svg]:fill-catalyst-foreground aria-pressed:*:[svg]:stroke-catalyst-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
             lucide="StarIcon"
@@ -214,7 +214,7 @@ function ToggleGroupWithIcons() {
         <ToggleGroupItem
           value="heart"
           aria-label="Toggle heart"
-          className="aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foreground aria-pressed:bg-transparent"
+          className="aria-pressed:*:[svg]:fill-catalyst-foreground aria-pressed:*:[svg]:stroke-catalyst-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
             lucide="HeartIcon"
@@ -228,7 +228,7 @@ function ToggleGroupWithIcons() {
         <ToggleGroupItem
           value="bookmark"
           aria-label="Toggle bookmark"
-          className="aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foreground aria-pressed:bg-transparent"
+          className="aria-pressed:*:[svg]:fill-catalyst-foreground aria-pressed:*:[svg]:stroke-catalyst-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
             lucide="BookmarkIcon"
@@ -481,39 +481,45 @@ function ToggleGroupFontWeightSelector() {
           <ToggleGroupItem
             value="light"
             aria-label="Light"
-            className="size-16 flex flex-col items-center justify-center rounded-xl"
+            className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
-            <span className="text-2xl font-light leading-none">Aa</span>
-            <span className="text-muted-foreground text-xs">Light</span>
+            <span className="text-2xl leading-none font-light">Aa</span>
+            <span className="text-catalyst-muted-foreground text-xs">
+              Light
+            </span>
           </ToggleGroupItem>
           <ToggleGroupItem
             value="normal"
             aria-label="Normal"
-            className="size-16 flex flex-col items-center justify-center rounded-xl"
+            className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
-            <span className="text-2xl font-normal leading-none">Aa</span>
-            <span className="text-muted-foreground text-xs">Normal</span>
+            <span className="text-2xl leading-none font-normal">Aa</span>
+            <span className="text-catalyst-muted-foreground text-xs">
+              Normal
+            </span>
           </ToggleGroupItem>
           <ToggleGroupItem
             value="medium"
             aria-label="Medium"
-            className="size-16 flex flex-col items-center justify-center rounded-xl"
+            className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
-            <span className="text-2xl font-medium leading-none">Aa</span>
-            <span className="text-muted-foreground text-xs">Medium</span>
+            <span className="text-2xl leading-none font-medium">Aa</span>
+            <span className="text-catalyst-muted-foreground text-xs">
+              Medium
+            </span>
           </ToggleGroupItem>
           <ToggleGroupItem
             value="bold"
             aria-label="Bold"
-            className="size-16 flex flex-col items-center justify-center rounded-xl"
+            className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
-            <span className="text-2xl font-bold leading-none">Aa</span>
-            <span className="text-muted-foreground text-xs">Bold</span>
+            <span className="text-2xl leading-none font-bold">Aa</span>
+            <span className="text-catalyst-muted-foreground text-xs">Bold</span>
           </ToggleGroupItem>
         </ToggleGroup>
         <FieldDescription>
           Use{" "}
-          <code className="bg-muted rounded-md px-1 py-0.5 font-mono">
+          <code className="bg-catalyst-muted rounded-catalyst-md px-1 py-0.5 font-mono">
             font-{fontWeight}
           </code>{" "}
           to set the font weight.

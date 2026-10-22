@@ -3,17 +3,17 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { NavFavorites } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-favorites";
-import { NavMain } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-main";
-import { NavSecondary } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-secondary";
-import { NavWorkspaces } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-workspaces";
-import { TeamSwitcher } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-15/components/team-switcher";
+import { NavFavorites } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-15/components/nav-favorites";
+import { NavMain } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-15/components/nav-main";
+import { NavSecondary } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-15/components/nav-secondary";
+import { NavWorkspaces } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-15/components/nav-workspaces";
+import { TeamSwitcher } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-15/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarHeader,
   SidebarRail,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 // This is sample data.
 const data = {

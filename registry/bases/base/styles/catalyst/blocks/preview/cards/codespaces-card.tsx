@@ -3,11 +3,11 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Card,
   CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/catalyst/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,7 +15,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/catalyst/ui/dropdown-menu";
 import {
   Empty,
   EmptyContent,
@@ -23,38 +23,38 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/empty";
+} from "@/registry/bases/base/styles/catalyst/ui/empty";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/catalyst/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/catalyst/ui/input-group";
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/catalyst/ui/item";
+import { Separator } from "@/registry/bases/base/styles/catalyst/ui/separator";
+import { Spinner } from "@/registry/bases/base/styles/catalyst/ui/spinner";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
+} from "@/registry/bases/base/styles/catalyst/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tooltip";
+} from "@/registry/bases/base/styles/catalyst/ui/tooltip";
 
 export function CodespacesCard() {
   const [isCreatingCodespace, setIsCreatingCodespace] = React.useState(false);
@@ -171,7 +171,7 @@ export function CodespacesCard() {
                 </DropdownMenu>
               </ItemActions>
             </Item>
-            <Separator className="w-auto! -mx-2 my-2" />
+            <Separator className="-mx-2 my-2 w-auto!" />
             <Empty className="p-4">
               <EmptyHeader>
                 <EmptyMedia variant="icon">
@@ -209,14 +209,14 @@ export function CodespacesCard() {
                 </Button>
                 <a
                   href="#learn-more"
-                  className="text-muted-foreground text-xs underline underline-offset-4"
+                  className="text-catalyst-muted-foreground text-xs underline underline-offset-4"
                 >
                   Learn more about codespaces
                 </a>
               </EmptyContent>
             </Empty>
-            <Separator className="w-auto! -mx-2 my-2" />
-            <div className="text-muted-foreground p-1.5 text-xs">
+            <Separator className="-mx-2 my-2 w-auto!" />
+            <div className="text-catalyst-muted-foreground p-1.5 text-xs">
               Codespace usage for this repository is paid for by{" "}
               <span className="font-medium">shadcn</span>.
             </div>
@@ -258,13 +258,13 @@ export function CodespacesCard() {
             <Tabs defaultValue="https">
               <TabsList
                 variant="line"
-                className="*:[button]:flex-0 w-full justify-start border-b"
+                className="w-full justify-start border-b *:[button]:flex-0"
               >
                 <TabsTrigger value="https">HTTPS</TabsTrigger>
                 <TabsTrigger value="ssh">SSH</TabsTrigger>
                 <TabsTrigger value="cli">GitHub CLI</TabsTrigger>
               </TabsList>
-              <div className="bg-muted/30 rounded-md border p-2">
+              <div className="bg-catalyst-muted/30 rounded-catalyst-md border p-2">
                 <TabsContent value="https">
                   <Field className="gap-2">
                     <FieldLabel htmlFor="https-url" className="sr-only">
@@ -352,7 +352,7 @@ export function CodespacesCard() {
                 </TabsContent>
               </div>
             </Tabs>
-            <Separator className="w-auto! -mx-2 my-2" />
+            <Separator className="-mx-2 my-2 w-auto!" />
             <div className="flex flex-col">
               <Button
                 variant="ghost"

@@ -6,7 +6,7 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/catalyst/components/example";
 import {
   Attachment,
   AttachmentAction,
@@ -17,8 +17,8 @@ import {
   AttachmentMedia,
   AttachmentTitle,
   AttachmentTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/attachment";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/catalyst/ui/attachment";
+import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -26,8 +26,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/catalyst/ui/dialog";
+import { Spinner } from "@/registry/bases/base/styles/catalyst/ui/spinner";
 
 export default function AttachmentExample() {
   return (
@@ -48,7 +48,7 @@ function AttachmentFiles() {
   return (
     <Example title="Files" className="gap-8">
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-3">
@@ -133,7 +133,7 @@ function AttachmentFiles() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">
@@ -277,7 +277,7 @@ function AttachmentContentOnly() {
   return (
     <Example title="Content Only" className="gap-8">
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Title
         </div>
         <div className="flex flex-col gap-3">
@@ -331,7 +331,7 @@ function AttachmentContentOnly() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Title and Description
         </div>
         <div className="flex flex-col gap-3">
@@ -371,7 +371,7 @@ function AttachmentContentOnly() {
               </AttachmentAction>
             </AttachmentActions>
           </Attachment>
-          <Attachment size="sm" className="max-w-80 w-full">
+          <Attachment size="sm" className="w-full max-w-80">
             <AttachmentContent>
               <AttachmentTitle>Compound components in React</AttachmentTitle>
               <AttachmentDescription>ui.shadcn.com/docs</AttachmentDescription>
@@ -397,7 +397,7 @@ function AttachmentStates() {
   return (
     <Example title="States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-2">
@@ -539,7 +539,7 @@ function AttachmentStates() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">
@@ -686,7 +686,7 @@ function AttachmentImages() {
   return (
     <Example title="Images" className="gap-8">
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-2">
@@ -792,7 +792,7 @@ function AttachmentImages() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">
@@ -971,7 +971,7 @@ function AttachmentImageStates() {
   return (
     <Example title="Image States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-2">
@@ -1102,7 +1102,7 @@ function AttachmentImageStates() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-catalyst-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">

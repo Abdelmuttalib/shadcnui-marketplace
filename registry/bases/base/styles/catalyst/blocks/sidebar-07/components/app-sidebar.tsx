@@ -3,17 +3,17 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { NavMain } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-07/components/nav-main";
-import { NavProjects } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-07/components/nav-projects";
-import { NavUser } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-07/components/nav-user";
-import { TeamSwitcher } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-07/components/team-switcher";
+import { NavMain } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-07/components/nav-main";
+import { NavProjects } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-07/components/nav-projects";
+import { NavUser } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-07/components/nav-user";
+import { TeamSwitcher } from "@/registry/bases/base/styles/catalyst/blocks/sidebar-07/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/catalyst/ui/sidebar";
 
 // This is sample data.
 const data = {

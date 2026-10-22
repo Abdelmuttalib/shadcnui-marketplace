@@ -61,6 +61,7 @@ const STYLES = {
   libelle: "libelle",
   snow: "snow",
   wedges: "wedges",
+  catalyst: "catalyst",
 };
 
 /**
