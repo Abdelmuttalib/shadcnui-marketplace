@@ -112,7 +112,7 @@ function ButtonGroupWithText() {
           <Input
             id="input-text"
             placeholder="Type something here..."
-            className="style-luma:border-border"
+            className="style-luma:border-libelle-border"
           />
         </ButtonGroup>
       </div>
@@ -332,7 +332,7 @@ function ButtonGroupWithInputGroup() {
           <InputGroupInput placeholder="Type to search..." />
           <InputGroupAddon
             align="inline-start"
-            className="text-muted-foreground"
+            className="text-libelle-muted-foreground"
           >
             <IconPlaceholder
               lucide="SearchIcon"
@@ -357,12 +357,12 @@ function ButtonGroupWithFields() {
           <ButtonGroup>
             <InputGroup>
               <InputGroupInput id="width" />
-              <InputGroupAddon className="text-muted-foreground">
+              <InputGroupAddon className="text-libelle-muted-foreground">
                 W
               </InputGroupAddon>
               <InputGroupAddon
                 align="inline-end"
-                className="text-muted-foreground"
+                className="text-libelle-muted-foreground"
               >
                 px
               </InputGroupAddon>

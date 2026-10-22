@@ -38,7 +38,7 @@ export function NavMain({
             <SidebarMenuItem>
               <DropdownMenuTrigger
                 render={
-                  <SidebarMenuButton className="aria-expanded:bg-muted" />
+                  <SidebarMenuButton className="aria-expanded:bg-libelle-muted" />
                 }
               >
                 {item.title}{" "}

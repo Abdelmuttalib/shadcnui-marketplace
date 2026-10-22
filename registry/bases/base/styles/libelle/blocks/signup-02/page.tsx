@@ -9,7 +9,7 @@ export default function SignupPage() {
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
-            <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
+            <div className="bg-libelle-primary text-libelle-primary-foreground flex size-6 items-center justify-center rounded-md">
               <IconPlaceholder
                 lucide="GalleryVerticalEndIcon"
                 tabler="IconLayoutRows"
@@ -28,7 +28,7 @@ export default function SignupPage() {
           </div>
         </div>
       </div>
-      <div className="bg-muted relative hidden lg:block">
+      <div className="bg-libelle-muted relative hidden lg:block">
         <img
           src="/placeholder.svg"
           alt="Image"

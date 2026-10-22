@@ -2,7 +2,7 @@ import { SignupForm } from "@/registry/bases/base/styles/libelle/blocks/signup-0
 
 export default function SignupPage() {
   return (
-    <div className="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+    <div className="bg-libelle-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="w-full max-w-sm">
         <SignupForm />
       </div>

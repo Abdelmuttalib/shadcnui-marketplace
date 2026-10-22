@@ -48,7 +48,7 @@ function AttachmentFiles() {
   return (
     <Example title="Files" className="gap-8">
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-3">
@@ -133,7 +133,7 @@ function AttachmentFiles() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">
@@ -277,7 +277,7 @@ function AttachmentContentOnly() {
   return (
     <Example title="Content Only" className="gap-8">
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Title
         </div>
         <div className="flex flex-col gap-3">
@@ -331,7 +331,7 @@ function AttachmentContentOnly() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Title and Description
         </div>
         <div className="flex flex-col gap-3">
@@ -397,7 +397,7 @@ function AttachmentStates() {
   return (
     <Example title="States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-2">
@@ -539,7 +539,7 @@ function AttachmentStates() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">
@@ -686,7 +686,7 @@ function AttachmentImages() {
   return (
     <Example title="Images" className="gap-8">
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-2">
@@ -792,7 +792,7 @@ function AttachmentImages() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">
@@ -971,7 +971,7 @@ function AttachmentImageStates() {
   return (
     <Example title="Image States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Horizontal
         </div>
         <div className="flex flex-col gap-2">
@@ -1102,7 +1102,7 @@ function AttachmentImageStates() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2">
-        <div className="text-muted-foreground px-1 text-xs font-medium">
+        <div className="text-libelle-muted-foreground px-1 text-xs font-medium">
           Vertical
         </div>
         <AttachmentGroup className="w-full">

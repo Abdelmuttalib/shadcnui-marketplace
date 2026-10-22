@@ -5,10 +5,10 @@ import { SignupForm } from "@/registry/bases/base/styles/libelle/blocks/signup-0
 
 export default function SignupPage() {
   return (
-    <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+    <div className="bg-libelle-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
         <a href="#" className="flex items-center gap-2 self-center font-medium">
-          <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
+          <div className="bg-libelle-primary text-libelle-primary-foreground flex size-6 items-center justify-center rounded-md">
             <IconPlaceholder
               lucide="GalleryVerticalEndIcon"
               tabler="IconLayoutRows"

@@ -75,21 +75,25 @@ export function PowerUsage() {
         <Separator />
         <div className="grid grid-cols-2 gap-4">
           <div className="flex flex-col gap-0.5">
-            <span className="text-muted-foreground text-sm">
+            <span className="text-libelle-muted-foreground text-sm">
               Currently Using
             </span>
             <span className="text-lg font-semibold tabular-nums">3.4 kW</span>
           </div>
           <div className="flex flex-col gap-0.5">
-            <span className="text-muted-foreground text-sm">Solar Gen</span>
-            <span className="text-chart-1 text-lg font-semibold tabular-nums">
+            <span className="text-libelle-muted-foreground text-sm">
+              Solar Gen
+            </span>
+            <span className="text-libelle-chart-1 text-lg font-semibold tabular-nums">
               +1.2 kW
             </span>
           </div>
         </div>
       </CardContent>
       <CardFooter className="flex-col items-start gap-1">
-        <span className="text-muted-foreground text-sm">Battery Level</span>
+        <span className="text-libelle-muted-foreground text-sm">
+          Battery Level
+        </span>
         <div className="flex w-full items-center gap-2">
           <Progress value={85} className="flex-1" />
           <span className="text-sm font-medium tabular-nums">85%</span>
