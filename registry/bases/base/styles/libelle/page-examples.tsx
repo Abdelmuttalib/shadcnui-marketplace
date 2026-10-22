@@ -28,7 +28,7 @@ export function ExamplePage({ title }: { title: string }) {
       <div className="flex items-center justify-between">
         <div className="space-y-1">
           <h2 className="text-xl font-semibold capitalize">{title}</h2>
-          <p className="text-dft-muted-foreground text-sm">
+          <p className="text-libelle-muted-foreground text-sm">
             libelle preview rendered from isolated components.
           </p>
         </div>

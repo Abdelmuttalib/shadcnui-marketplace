@@ -198,7 +198,7 @@ export function ShowcaseComponents() {
         <div className="w-full max-w-xs">
           <p className="text-sm">Above the separator</p>
           <Separator className="my-2" />
-          <p className="text-dft-muted-foreground text-sm">
+          <p className="text-libelle-muted-foreground text-sm">
             Below the separator
           </p>
         </div>
