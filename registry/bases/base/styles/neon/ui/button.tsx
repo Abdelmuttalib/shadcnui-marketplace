@@ -12,7 +12,7 @@ const buttonVariants = cva(
         outline:
           "border-neon-border bg-neon-background shadow-xs hover:bg-neon-muted hover:text-neon-foreground aria-expanded:bg-neon-muted aria-expanded:text-neon-foreground dark:border-neon-input dark:bg-neon-input/30 dark:hover:bg-neon-input/50",
         secondary:
-          "bg-neon-secondary text-neon-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-neon-secondary aria-expanded:text-neon-secondary-foreground",
+          "bg-neon-secondary text-neon-secondary-foreground hover:bg-[color-mix(in_oklch,var(--neon-secondary),var(--neon-foreground)_5%)] aria-expanded:bg-neon-secondary aria-expanded:text-neon-secondary-foreground",
         ghost:
           "hover:bg-neon-muted hover:text-neon-foreground aria-expanded:bg-neon-muted aria-expanded:text-neon-foreground dark:hover:bg-neon-muted/50",
         destructive:

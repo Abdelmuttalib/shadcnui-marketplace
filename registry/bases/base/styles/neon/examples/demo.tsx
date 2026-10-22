@@ -84,18 +84,18 @@ export function Demo() {
             <CardContent>
               <div className="grid grid-cols-6 gap-3">
                 {[
-                  "--background",
-                  "--foreground",
-                  "--primary",
-                  "--secondary",
-                  "--muted",
-                  "--accent",
-                  "--border",
-                  "--chart-1",
-                  "--chart-2",
-                  "--chart-3",
-                  "--chart-4",
-                  "--chart-5",
+                  "--neon-background",
+                  "--neon-foreground",
+                  "--neon-primary",
+                  "--neon-secondary",
+                  "--neon-muted",
+                  "--neon-accent",
+                  "--neon-border",
+                  "--neon-chart-1",
+                  "--neon-chart-2",
+                  "--neon-chart-3",
+                  "--neon-chart-4",
+                  "--neon-chart-5",
                 ].map((variant) => (
                   <div
                     key={variant}

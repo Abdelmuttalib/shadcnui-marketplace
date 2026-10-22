@@ -34,7 +34,7 @@ const chartData = [
 const chartConfig = {
   usage: {
     label: "Usage (kW)",
-    color: "var(--chart-2)",
+    color: "var(--neon-chart-2)",
   },
 } satisfies ChartConfig;
 

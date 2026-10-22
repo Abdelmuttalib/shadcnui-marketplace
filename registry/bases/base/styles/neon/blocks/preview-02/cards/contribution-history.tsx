@@ -38,7 +38,7 @@ const chartData = [
 const chartConfig = {
   amount: {
     label: "Contribution",
-    color: "var(--chart-2)",
+    color: "var(--neon-chart-2)",
   },
 } satisfies ChartConfig;
 

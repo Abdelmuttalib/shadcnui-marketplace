@@ -32,15 +32,15 @@ const sleepChartData = [
 const sleepChartConfig = {
   deep: {
     label: "Deep",
-    color: "var(--chart-1)",
+    color: "var(--neon-chart-1)",
   },
   light: {
     label: "Light",
-    color: "var(--chart-2)",
+    color: "var(--neon-chart-2)",
   },
   rem: {
     label: "REM",
-    color: "var(--chart-3)",
+    color: "var(--neon-chart-3)",
   },
 } satisfies ChartConfig;
 

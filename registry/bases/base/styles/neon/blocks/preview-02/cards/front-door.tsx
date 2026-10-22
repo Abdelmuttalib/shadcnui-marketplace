@@ -30,7 +30,7 @@ export function FrontDoor() {
         </CardAction>
       </CardHeader>
       <CardContent>
-        <div className="bg-neon-muted relative flex aspect-video items-center justify-center overflow-hidden rounded-lg bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,var(--border)_10px,var(--border)_11px)]">
+        <div className="bg-neon-muted relative flex aspect-video items-center justify-center overflow-hidden rounded-lg bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,var(--neon-border)_10px,var(--neon-border)_11px)]">
           <Badge variant="destructive" className="absolute top-2 right-2">
             Live
           </Badge>

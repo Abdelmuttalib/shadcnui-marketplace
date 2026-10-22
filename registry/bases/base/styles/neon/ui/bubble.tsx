@@ -22,11 +22,11 @@ const bubbleVariants = cva(
         default:
           "*:data-[slot=bubble-content]:bg-neon-primary *:data-[slot=bubble-content]:text-neon-primary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-neon-primary/80",
         secondary:
-          "*:data-[slot=bubble-content]:bg-neon-secondary *:data-[slot=bubble-content]:text-neon-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-neon-secondary *:data-[slot=bubble-content]:text-neon-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--neon-secondary),var(--neon-foreground)_5%)]",
         muted:
-          "*:data-[slot=bubble-content]:bg-neon-muted [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--muted),var(--foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-neon-muted [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--neon-muted),var(--neon-foreground)_5%)]",
         tinted:
-          "*:data-[slot=bubble-content]:bg-[oklch(from_var(--primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-neon-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--primary)_0.35_calc(c*0.5)_h)]",
+          "*:data-[slot=bubble-content]:bg-[oklch(from_var(--neon-primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-neon-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--neon-primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--neon-primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--neon-primary)_0.35_calc(c*0.5)_h)]",
         outline:
           "*:data-[slot=bubble-content]:border-neon-border *:data-[slot=bubble-content]:bg-neon-background [&>[data-slot=bubble-content]:is(button,a):hover]:bg-neon-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-neon-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-neon-input/30",
         ghost:

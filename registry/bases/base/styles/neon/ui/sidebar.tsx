@@ -482,7 +482,7 @@ const sidebarMenuButtonVariants = cva(
         default:
           "hover:bg-neon-sidebar-accent hover:text-neon-sidebar-accent-foreground",
         outline:
-          "bg-neon-background shadow-[0_0_0_1px_var(--sidebar-border)] hover:bg-neon-sidebar-accent hover:text-neon-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--sidebar-accent)]",
+          "bg-neon-background shadow-[0_0_0_1px_var(--neon-sidebar-border)] hover:bg-neon-sidebar-accent hover:text-neon-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--neon-sidebar-accent)]",
       },
       size: {
         default: "h-8 text-sm",
