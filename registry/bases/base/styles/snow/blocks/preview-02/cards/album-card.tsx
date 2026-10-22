@@ -12,7 +12,7 @@ export function AlbumCard() {
   return (
     <Card>
       <CardContent className="flex flex-col gap-4">
-        <div className="relative overflow-hidden rounded-lg">
+        <div className="rounded-snow-lg relative overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=800&h=800&fit=crop"
             alt="Synthetic Horizons EP cover art"
@@ -31,13 +31,13 @@ export function AlbumCard() {
         <Separator />
         <div className="grid w-full grid-cols-2 gap-4">
           <div className="flex flex-col gap-0.5">
-            <span className="text-muted-foreground text-xs tracking-wider uppercase">
+            <span className="text-snow-muted-foreground text-xs tracking-wider uppercase">
               Tracks
             </span>
             <span className="text-lg font-medium tabular-nums">6 Tracks</span>
           </div>
           <div className="flex flex-col gap-0.5">
-            <span className="text-muted-foreground line-clamp-1 text-xs tracking-wider uppercase">
+            <span className="text-snow-muted-foreground line-clamp-1 text-xs tracking-wider uppercase">
               Cumulative Streams
             </span>
             <span className="text-lg font-medium tabular-nums">6,198,524</span>

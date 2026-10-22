@@ -59,6 +59,7 @@ const STYLES = {
   neon: "neon",
   spectrum: "spctm",
   libelle: "libelle",
+  snow: "snow",
 };
 
 /**

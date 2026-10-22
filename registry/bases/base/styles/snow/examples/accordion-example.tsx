@@ -137,12 +137,12 @@ function AccordionWithBorders() {
           <AccordionItem
             key={item.value}
             value={item.value}
-            className="style-vega:rounded-lg style-vega:border style-nova:rounded-lg style-nova:border style-lyra:border"
+            className="style-vega:rounded-snow-lg style-vega:border style-nova:rounded-snow-lg style-nova:border style-lyra:border"
           >
             <AccordionTrigger className="style-vega:px-4 style-vega:text-sm style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-luma:text-sm font-medium">
               {item.trigger}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground style-vega:px-4 style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:px-0 style-mira:px-0 style-luma:px-0">
+            <AccordionContent className="text-snow-muted-foreground style-vega:px-4 style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:px-0 style-mira:px-0 style-luma:px-0">
               {item.content}
             </AccordionContent>
           </AccordionItem>
@@ -272,7 +272,7 @@ function AccordionInCard() {
           <Accordion
             multiple
             defaultValue={["plans"]}
-            className="style-maia:rounded-md style-mira:rounded-md"
+            className="style-maia:rounded-snow-md style-mira:rounded-snow-md"
           >
             {items.map((item) => (
               <AccordionItem key={item.value} value={item.value}>
@@ -314,13 +314,13 @@ function AccordionWithDisabled() {
 
   return (
     <Example title="With Disabled">
-      <Accordion className="style-vega:rounded-lg style-nova:rounded-lg style-lyra:rounded-none style-maia:rounded-lg style-mira:rounded-lg style-luma:rounded-xl mx-auto max-w-lg overflow-hidden border">
+      <Accordion className="style-vega:rounded-snow-lg style-nova:rounded-snow-lg style-lyra:rounded-none style-maia:rounded-snow-lg style-mira:rounded-snow-lg style-luma:rounded-xl mx-auto max-w-lg overflow-hidden border">
         {items.map((item) => (
           <AccordionItem
             key={item.value}
             value={item.value}
             disabled={item.disabled}
-            className="data-open:bg-muted/50 p-1"
+            className="data-open:bg-snow-muted/50 p-1"
           >
             <AccordionTrigger className="style-vega:px-4 style-nova:px-2.5 style-lyra:px-2">
               {item.trigger}

@@ -36,32 +36,32 @@ export function StyleOverview() {
               ? currentFontHeading.name
               : currentFont?.name}
           </div>
-          <div className="text-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
+          <div className="text-snow-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
             Designers love packing quirky glyphs into test phrases. This is a
             preview of the typography styles.
           </div>
         </div>
         <div className="grid grid-cols-6 gap-3">
           {[
-            "--background",
-            "--foreground",
-            "--primary",
-            "--secondary",
-            "--muted",
-            "--accent",
-            "--border",
-            "--chart-1",
-            "--chart-2",
-            "--chart-3",
-            "--chart-4",
-            "--chart-5",
+            "--snow-background",
+            "--snow-foreground",
+            "--snow-primary",
+            "--snow-secondary",
+            "--snow-muted",
+            "--snow-accent",
+            "--snow-border",
+            "--snow-chart-1",
+            "--snow-chart-2",
+            "--snow-chart-3",
+            "--snow-chart-4",
+            "--snow-chart-5",
           ].map((variant) => (
             <div
               key={variant}
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="after:border-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-snow-border style-sera:rounded-none style-sera:after:rounded-none rounded-snow-lg after:rounded-snow-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
                     "--color": `var(${variant})`,

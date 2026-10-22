@@ -70,7 +70,7 @@ export function Demo() {
   );
 
   return (
-    <div className="bg-muted dark:bg-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
+    <div className="bg-snow-muted dark:bg-snow-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
       <div className="grid max-w-3xl gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-4">
           <Card>
@@ -84,25 +84,25 @@ export function Demo() {
             <CardContent>
               <div className="grid grid-cols-6 gap-3">
                 {[
-                  "--background",
-                  "--foreground",
-                  "--primary",
-                  "--secondary",
-                  "--muted",
-                  "--accent",
-                  "--border",
-                  "--chart-1",
-                  "--chart-2",
-                  "--chart-3",
-                  "--chart-4",
-                  "--chart-5",
+                  "--snow-background",
+                  "--snow-foreground",
+                  "--snow-primary",
+                  "--snow-secondary",
+                  "--snow-muted",
+                  "--snow-accent",
+                  "--snow-border",
+                  "--snow-chart-1",
+                  "--snow-chart-2",
+                  "--snow-chart-3",
+                  "--snow-chart-4",
+                  "--snow-chart-5",
                 ].map((variant) => (
                   <div
                     key={variant}
                     className="flex flex-col flex-wrap items-center gap-2"
                   >
                     <div
-                      className="after:border-border relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                      className="after:border-snow-border rounded-snow-lg after:rounded-snow-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                       style={
                         {
                           "--color": `var(${variant})`,

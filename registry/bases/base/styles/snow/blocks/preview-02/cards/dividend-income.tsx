@@ -77,7 +77,7 @@ const HOLDINGS = [
 const miniChartConfig = {
   value: {
     label: "Dividend",
-    color: "var(--chart-2)",
+    color: "var(--snow-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -93,7 +93,7 @@ export function DividendIncome() {
           Quarterly dividend payouts across your portfolio holdings.
         </CardDescription>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-snow-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"

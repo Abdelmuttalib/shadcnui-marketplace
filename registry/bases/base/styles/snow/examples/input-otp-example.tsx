@@ -276,11 +276,11 @@ function InputOTPForm() {
           <Button type="submit" className="w-full">
             Verify
           </Button>
-          <div className="text-muted-foreground text-sm">
+          <div className="text-snow-muted-foreground text-sm">
             Having trouble signing in?{" "}
             <a
               href="#"
-              className="hover:text-primary underline underline-offset-4 transition-colors"
+              className="hover:text-snow-primary underline underline-offset-4 transition-colors"
             >
               Contact support
             </a>

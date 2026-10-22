@@ -25,20 +25,20 @@ export function ClaimableBalance() {
         <Item variant="muted" className="flex-col items-stretch">
           <ItemContent className="gap-3">
             <div className="flex items-center justify-between">
-              <span className="text-muted-foreground text-sm">
+              <span className="text-snow-muted-foreground text-sm">
                 Net Royalties
               </span>
               <span className="text-sm font-medium tabular-nums">$0.00</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-muted-foreground text-sm">
+              <span className="text-snow-muted-foreground text-sm">
                 Processing Fee
               </span>
               <span className="text-sm font-medium tabular-nums">-$0.00</span>
             </div>
             <Separator />
             <div className="flex items-center justify-between">
-              <span className="text-muted-foreground text-sm">
+              <span className="text-snow-muted-foreground text-sm">
                 Total Ready to Claim
               </span>
               <span className="text-sm font-semibold tabular-nums">

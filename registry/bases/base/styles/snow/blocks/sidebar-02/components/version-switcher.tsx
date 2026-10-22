@@ -31,11 +31,11 @@ export function VersionSwitcher({
             render={
               <SidebarMenuButton
                 size="lg"
-                className="data-open:bg-sidebar-accent data-open:text-sidebar-accent-foreground"
+                className="data-open:bg-snow-sidebar-accent data-open:text-snow-sidebar-accent-foreground"
               />
             }
           >
-            <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+            <div className="bg-snow-sidebar-primary text-snow-sidebar-primary-foreground rounded-snow-lg flex aspect-square size-8 items-center justify-center">
               <IconPlaceholder
                 lucide="GalleryVerticalEndIcon"
                 tabler="IconLayoutRows"

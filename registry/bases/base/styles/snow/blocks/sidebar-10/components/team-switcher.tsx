@@ -39,7 +39,7 @@ export function TeamSwitcher({
           <DropdownMenuTrigger
             render={<SidebarMenuButton className="w-fit px-1.5" />}
           >
-            <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-5 items-center justify-center rounded-md">
+            <div className="bg-snow-sidebar-primary text-snow-sidebar-primary-foreground rounded-snow-md flex aspect-square size-5 items-center justify-center">
               {activeTeam.logo}
             </div>
             <span className="truncate font-medium">{activeTeam.name}</span>
@@ -53,13 +53,13 @@ export function TeamSwitcher({
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-64 rounded-lg"
+            className="rounded-snow-lg w-64"
             align="start"
             side="bottom"
             sideOffset={4}
           >
             <DropdownMenuGroup>
-              <DropdownMenuLabel className="text-muted-foreground text-xs">
+              <DropdownMenuLabel className="text-snow-muted-foreground text-xs">
                 Teams
               </DropdownMenuLabel>
               {teams.map((team, index) => (
@@ -79,7 +79,7 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-2 p-2">
-                <div className="bg-background flex size-6 items-center justify-center rounded-md border">
+                <div className="bg-snow-background rounded-snow-md flex size-6 items-center justify-center border">
                   <IconPlaceholder
                     lucide="PlusIcon"
                     tabler="IconPlus"
@@ -89,7 +89,7 @@ export function TeamSwitcher({
                     className="size-4"
                   />
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-snow-muted-foreground font-medium">
                   Add team
                 </div>
               </DropdownMenuItem>

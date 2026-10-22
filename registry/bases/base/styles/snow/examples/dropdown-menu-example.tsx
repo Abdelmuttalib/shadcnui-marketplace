@@ -616,11 +616,11 @@ function DropdownMenuWithAvatar() {
           >
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="Shadcn" />
-              <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+              <AvatarFallback className="rounded-snow-lg">CN</AvatarFallback>
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-semibold">shadcn</span>
-              <span className="text-muted-foreground truncate text-xs">
+              <span className="text-snow-muted-foreground truncate text-xs">
                 shadcn@example.com
               </span>
             </div>
@@ -630,7 +630,7 @@ function DropdownMenuWithAvatar() {
               hugeicons="UnfoldMoreIcon"
               phosphor="CaretUpDownIcon"
               remixicon="RiArrowUpDownLine"
-              className="text-muted-foreground ml-auto"
+              className="text-snow-muted-foreground ml-auto"
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-(--anchor-width) min-w-56">

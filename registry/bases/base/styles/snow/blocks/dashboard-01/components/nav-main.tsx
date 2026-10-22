@@ -26,7 +26,7 @@ export function NavMain({
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton
               tooltip="Quick Create"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear"
+              className="bg-snow-primary text-snow-primary-foreground hover:bg-snow-primary/90 hover:text-snow-primary-foreground active:bg-snow-primary/90 active:text-snow-primary-foreground min-w-8 duration-200 ease-linear"
             >
               <IconPlaceholder
                 lucide="CirclePlusIcon"

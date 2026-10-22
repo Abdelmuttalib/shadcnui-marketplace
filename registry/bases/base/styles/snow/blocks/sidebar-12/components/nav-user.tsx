@@ -38,7 +38,10 @@ export function NavUser({
         <DropdownMenu>
           <DropdownMenuTrigger
             render={
-              <SidebarMenuButton size="lg" className="aria-expanded:bg-muted" />
+              <SidebarMenuButton
+                size="lg"
+                className="aria-expanded:bg-snow-muted"
+              />
             }
           >
             <Avatar>
@@ -59,7 +62,7 @@ export function NavUser({
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="min-w-56 rounded-lg"
+            className="rounded-snow-lg min-w-56"
             side={isMobile ? "bottom" : "right"}
             align="start"
             sideOffset={4}

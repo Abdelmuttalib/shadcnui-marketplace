@@ -57,17 +57,17 @@ export function TypographySpecimen() {
   return (
     <Card>
       <CardContent className="flex flex-col gap-2">
-        <div className="text-muted-foreground text-xs font-medium uppercase">
+        <div className="text-snow-muted-foreground text-xs font-medium uppercase">
           {headingLabel} - {bodyLabel}
         </div>
         <p className="cn-font-heading style-sera:text-lg style-sera:font-semibold style-sera:tracking-wider style-sera:uppercase text-2xl font-medium">
           Designing with rhythm and hierarchy.
         </p>
-        <p className="text-muted-foreground text-sm leading-relaxed">
+        <p className="text-snow-muted-foreground text-sm leading-relaxed">
           A strong body style keeps long-form content readable and balances the
           visual weight of headings.
         </p>
-        <p className="text-muted-foreground text-sm leading-relaxed">
+        <p className="text-snow-muted-foreground text-sm leading-relaxed">
           Thoughtful spacing and cadence help paragraphs scan quickly without
           feeling dense.
         </p>

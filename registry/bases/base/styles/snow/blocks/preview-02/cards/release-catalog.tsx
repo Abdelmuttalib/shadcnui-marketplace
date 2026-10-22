@@ -89,7 +89,7 @@ export function ReleaseCatalog() {
           {HOLDINGS.map((holding) => (
             <Item key={holding.ticker} variant="muted">
               <ItemMedia>
-                <div className="flex size-12 items-center justify-center rounded-lg border text-sm font-semibold">
+                <div className="rounded-snow-lg flex size-12 items-center justify-center border text-sm font-semibold">
                   {holding.ticker}
                 </div>
               </ItemMedia>
@@ -102,7 +102,7 @@ export function ReleaseCatalog() {
               <div className="flex shrink-0 items-center gap-6">
                 <Badge variant="outline">{holding.type}</Badge>
                 <div className="flex flex-col items-end gap-0.5">
-                  <span className="text-muted-foreground text-xs tracking-wider uppercase">
+                  <span className="text-snow-muted-foreground text-xs tracking-wider uppercase">
                     Value
                   </span>
                   <span className="font-medium tabular-nums">

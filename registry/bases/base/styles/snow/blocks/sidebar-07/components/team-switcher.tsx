@@ -42,11 +42,11 @@ export function TeamSwitcher({
             render={
               <SidebarMenuButton
                 size="lg"
-                className="data-open:bg-sidebar-accent data-open:text-sidebar-accent-foreground"
+                className="data-open:bg-snow-sidebar-accent data-open:text-snow-sidebar-accent-foreground"
               />
             }
           >
-            <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+            <div className="bg-snow-sidebar-primary text-snow-sidebar-primary-foreground rounded-snow-lg flex aspect-square size-8 items-center justify-center">
               {activeTeam.logo}
             </div>
             <div className="grid flex-1 text-left text-sm leading-tight">
@@ -69,7 +69,7 @@ export function TeamSwitcher({
             sideOffset={4}
           >
             <DropdownMenuGroup>
-              <DropdownMenuLabel className="text-muted-foreground text-xs">
+              <DropdownMenuLabel className="text-snow-muted-foreground text-xs">
                 Teams
               </DropdownMenuLabel>
               {teams.map((team, index) => (
@@ -78,7 +78,7 @@ export function TeamSwitcher({
                   onClick={() => setActiveTeam(team)}
                   className="gap-2 p-2"
                 >
-                  <div className="flex size-6 items-center justify-center rounded-md border">
+                  <div className="rounded-snow-md flex size-6 items-center justify-center border">
                     {team.logo}
                   </div>
                   {team.name}
@@ -89,7 +89,7 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-2 p-2">
-                <div className="flex size-6 items-center justify-center rounded-md border bg-transparent">
+                <div className="rounded-snow-md flex size-6 items-center justify-center border bg-transparent">
                   <IconPlaceholder
                     lucide="PlusIcon"
                     tabler="IconPlus"
@@ -99,7 +99,7 @@ export function TeamSwitcher({
                     className="size-4"
                   />
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-snow-muted-foreground font-medium">
                   Add team
                 </div>
               </DropdownMenuItem>

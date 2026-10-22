@@ -43,7 +43,7 @@ export function NavProjects({
                 render={
                   <SidebarMenuAction
                     showOnHover
-                    className="aria-expanded:bg-muted"
+                    className="aria-expanded:bg-snow-muted"
                   />
                 }
               >
@@ -97,14 +97,14 @@ export function NavProjects({
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-sidebar-foreground/70">
+          <SidebarMenuButton className="text-snow-sidebar-foreground/70">
             <IconPlaceholder
               lucide="MoreHorizontalIcon"
               tabler="IconDots"
               hugeicons="MoreHorizontalCircle01Icon"
               phosphor="DotsThreeOutlineIcon"
               remixicon="RiMoreLine"
-              className="text-sidebar-foreground/70"
+              className="text-snow-sidebar-foreground/70"
             />
             <span>More</span>
           </SidebarMenuButton>
