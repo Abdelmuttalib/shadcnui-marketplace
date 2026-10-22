@@ -56,6 +56,7 @@ const STYLES = {
   "default-v4": "dft",
   linear: "linear",
   material: "material",
+  neon: "neon",
 };
 
 /**
