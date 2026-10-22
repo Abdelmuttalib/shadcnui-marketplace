@@ -1,13 +1,13 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Item } from "@/registry/bases/base/styles/default-v4/ui/item";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
+} from "@/registry/bases/base/styles/moon/ui/card";
+import { Item } from "@/registry/bases/base/styles/moon/ui/item";
+import { Label } from "@/registry/bases/base/styles/moon/ui/label";
 
 export function CoverArt() {
   return (
@@ -15,14 +15,14 @@ export function CoverArt() {
       <CardContent className="flex flex-col gap-3">
         <Label
           htmlFor="cover-art"
-          className="text-muted-foreground text-center text-xs font-normal uppercase tracking-wider"
+          className="text-moon-muted-foreground text-center text-xs font-normal tracking-wider uppercase"
         >
           Cover Art
         </Label>
         <Item className="aspect-square" variant="outline">
           <label
             htmlFor="cover-art"
-            className="size-full flex cursor-pointer items-center justify-center"
+            className="flex size-full cursor-pointer items-center justify-center"
           >
             <IconPlaceholder
               lucide="ImageIcon"
@@ -30,7 +30,7 @@ export function CoverArt() {
               hugeicons="Image01Icon"
               phosphor="ImageIcon"
               remixicon="RiImageLine"
-              className="text-muted-foreground/50 size-10"
+              className="text-moon-muted-foreground/50 size-10"
             />
           </label>
         </Item>

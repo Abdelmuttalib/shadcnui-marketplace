@@ -26,7 +26,7 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Card,
   CardContent,
@@ -34,13 +34,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/moon/ui/chart";
 
 const areaChartData = [
   { month: "January", desktop: 186 },
@@ -54,7 +54,7 @@ const areaChartData = [
 const areaChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
 } satisfies ChartConfig;
 
@@ -116,7 +116,7 @@ function ChartAreaExample() {
         <CardFooter>
           <div className="flex w-full items-start gap-2">
             <div className="grid gap-2">
-              <div className="flex items-center gap-2 font-medium leading-none">
+              <div className="flex items-center gap-2 leading-none font-medium">
                 Trending up by 5.2% this month{" "}
                 <IconPlaceholder
                   lucide="TrendingUpIcon"
@@ -127,7 +127,7 @@ function ChartAreaExample() {
                   className="size-4"
                 />
               </div>
-              <div className="text-muted-foreground flex items-center gap-2 leading-none">
+              <div className="text-moon-muted-foreground flex items-center gap-2 leading-none">
                 January - June 2024
               </div>
             </div>
@@ -150,11 +150,11 @@ const barChartData = [
 const barChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -187,7 +187,7 @@ function ChartBarExample() {
           </ChartContainer>
         </CardContent>
         <CardFooter className="flex-col items-start gap-2">
-          <div className="flex gap-2 font-medium leading-none">
+          <div className="flex gap-2 leading-none font-medium">
             Trending up by 5.2% this month{" "}
             <IconPlaceholder
               lucide="TrendingUpIcon"
@@ -198,7 +198,7 @@ function ChartBarExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground leading-none">
+          <div className="text-moon-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>
@@ -219,11 +219,11 @@ const lineChartData = [
 const lineChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -274,7 +274,7 @@ function ChartLineExample() {
         <CardFooter>
           <div className="flex w-full items-start gap-2">
             <div className="grid gap-2">
-              <div className="flex items-center gap-2 font-medium leading-none">
+              <div className="flex items-center gap-2 leading-none font-medium">
                 Trending up by 5.2% this month{" "}
                 <IconPlaceholder
                   lucide="TrendingUpIcon"
@@ -285,7 +285,7 @@ function ChartLineExample() {
                   className="size-4"
                 />
               </div>
-              <div className="text-muted-foreground flex items-center gap-2 leading-none">
+              <div className="text-moon-muted-foreground flex items-center gap-2 leading-none">
                 Showing total visitors for the last 6 months
               </div>
             </div>
@@ -310,23 +310,23 @@ const pieChartConfig = {
   },
   chrome: {
     label: "Chrome",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
   safari: {
     label: "Safari",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
   firefox: {
     label: "Firefox",
-    color: "var(--chart-3)",
+    color: "var(--moon-chart-3)",
   },
   edge: {
     label: "Edge",
-    color: "var(--chart-4)",
+    color: "var(--moon-chart-4)",
   },
   other: {
     label: "Other",
-    color: "var(--chart-5)",
+    color: "var(--moon-chart-5)",
   },
 } satisfies ChartConfig;
 
@@ -372,14 +372,14 @@ function ChartPieExample() {
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="fill-foreground text-3xl font-bold"
+                            className="fill-moon-foreground text-3xl font-bold"
                           >
                             {totalVisitors.toLocaleString()}
                           </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) + 24}
-                            className="fill-muted-foreground"
+                            className="fill-moon-muted-foreground"
                           >
                             Visitors
                           </tspan>
@@ -393,7 +393,7 @@ function ChartPieExample() {
           </ChartContainer>
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <div className="flex items-center gap-2 font-medium leading-none">
+          <div className="flex items-center gap-2 leading-none font-medium">
             Trending up by 5.2% this month{" "}
             <IconPlaceholder
               lucide="TrendingUpIcon"
@@ -404,7 +404,7 @@ function ChartPieExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground leading-none">
+          <div className="text-moon-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>
@@ -425,11 +425,11 @@ const radarChartData = [
 const radarChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -465,7 +465,7 @@ function ChartRadarExample() {
           </ChartContainer>
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <div className="flex items-center gap-2 font-medium leading-none">
+          <div className="flex items-center gap-2 leading-none font-medium">
             Trending up by 5.2% this month{" "}
             <IconPlaceholder
               lucide="TrendingUpIcon"
@@ -476,7 +476,7 @@ function ChartRadarExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground flex items-center gap-2 leading-none">
+          <div className="text-moon-muted-foreground flex items-center gap-2 leading-none">
             January - June 2024
           </div>
         </CardFooter>
@@ -495,7 +495,7 @@ const radialChartConfig = {
   },
   safari: {
     label: "Safari",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -522,7 +522,7 @@ function ChartRadialExample() {
                 gridType="circle"
                 radialLines={false}
                 stroke="none"
-                className="first:fill-muted last:fill-background"
+                className="first:fill-moon-muted last:fill-moon-background"
                 polarRadius={[86, 74]}
               />
               <RadialBar dataKey="visitors" background />
@@ -540,14 +540,14 @@ function ChartRadialExample() {
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="fill-foreground text-4xl font-bold"
+                            className="fill-moon-foreground text-4xl font-bold"
                           >
                             {radialChartData[0].visitors.toLocaleString()}
                           </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) + 24}
-                            className="fill-muted-foreground"
+                            className="fill-moon-muted-foreground"
                           >
                             Visitors
                           </tspan>
@@ -561,7 +561,7 @@ function ChartRadialExample() {
           </ChartContainer>
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <div className="flex items-center gap-2 font-medium leading-none">
+          <div className="flex items-center gap-2 leading-none font-medium">
             Trending up by 5.2% this month{" "}
             <IconPlaceholder
               lucide="TrendingUpIcon"
@@ -572,7 +572,7 @@ function ChartRadialExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground leading-none">
+          <div className="text-moon-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>

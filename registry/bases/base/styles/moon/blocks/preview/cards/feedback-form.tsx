@@ -1,21 +1,21 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/moon/ui/field";
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/registry/bases/base/styles/default-v4/ui/native-select";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/moon/ui/native-select";
+import { Textarea } from "@/registry/bases/base/styles/moon/ui/textarea";
 
 export function FeedbackForm() {
   return (

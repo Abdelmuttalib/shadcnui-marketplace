@@ -5,9 +5,9 @@ import * as React from "react";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
+} from "@/registry/bases/base/styles/moon/components/example";
+import { Label } from "@/registry/bases/base/styles/moon/ui/label";
+import { Slider } from "@/registry/bases/base/styles/moon/ui/slider";
 
 export default function SliderExample() {
   return (
@@ -77,7 +77,7 @@ function SliderControlled() {
       <div className="grid w-full gap-3">
         <div className="flex items-center justify-between gap-2">
           <Label htmlFor="slider-demo-temperature">Temperature</Label>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-moon-muted-foreground text-sm">
             {value.join(", ")}
           </span>
         </div>

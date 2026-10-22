@@ -1,12 +1,12 @@
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   Table,
   TableBody,
@@ -15,10 +15,10 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/base/styles/default-v4/ui/table";
+} from "@/registry/bases/base/styles/moon/ui/table";
 
 /**
- * Shared example page for the default-v4 collection, rendered from the
+ * Shared example page for the moon collection, rendered from the
  * isolated v4 primitives. Every page-example type resolves to this preview
  * until dedicated per-page v4 examples are authored.
  */
@@ -28,8 +28,8 @@ export function ExamplePage({ title }: { title: string }) {
       <div className="flex items-center justify-between">
         <div className="space-y-1">
           <h2 className="text-xl font-semibold capitalize">{title}</h2>
-          <p className="text-dft-muted-foreground text-sm">
-            default-v4 preview rendered from isolated components.
+          <p className="text-moon-muted-foreground text-sm">
+            moon preview rendered from isolated components.
           </p>
         </div>
         <Badge variant="outline">v4</Badge>

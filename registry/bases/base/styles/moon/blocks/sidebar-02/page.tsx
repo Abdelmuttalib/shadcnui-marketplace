@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-02/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/styles/moon/blocks/sidebar-02/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,24 +6,24 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/moon/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/styles/moon/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/moon/ui/sidebar";
 
 export default function Page() {
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="bg-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
+        <header className="bg-moon-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />
           <Separator
             orientation="vertical"
-            className="data-vertical:h-4 data-vertical:self-auto mr-2"
+            className="mr-2 data-vertical:h-4 data-vertical:self-auto"
           />
           <Breadcrumb>
             <BreadcrumbList>
@@ -41,7 +41,7 @@ export default function Page() {
           {Array.from({ length: 24 }).map((_, index) => (
             <div
               key={index}
-              className="bg-muted/50 aspect-video h-12 w-full rounded-lg"
+              className="bg-moon-muted/50 rounded-moon-lg aspect-video h-12 w-full"
             />
           ))}
         </div>

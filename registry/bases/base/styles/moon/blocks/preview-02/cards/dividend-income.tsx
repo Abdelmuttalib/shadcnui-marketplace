@@ -4,7 +4,7 @@ import { Bar, BarChart, XAxis } from "recharts";
 
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardAction,
@@ -12,20 +12,20 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/moon/ui/chart";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemGroup,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/moon/ui/item";
 
 const HOLDINGS = [
   {
@@ -77,7 +77,7 @@ const HOLDINGS = [
 const miniChartConfig = {
   value: {
     label: "Dividend",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -93,7 +93,7 @@ export function DividendIncome() {
           Quarterly dividend payouts across your portfolio holdings.
         </CardDescription>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-moon-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"

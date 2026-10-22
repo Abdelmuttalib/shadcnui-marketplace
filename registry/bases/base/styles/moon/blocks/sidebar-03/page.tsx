@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-03/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/styles/moon/blocks/sidebar-03/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/moon/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/styles/moon/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/moon/ui/sidebar";
 
 export default function Page() {
   return (
@@ -24,7 +24,7 @@ export default function Page() {
             <SidebarTrigger />
             <Separator
               orientation="vertical"
-              className="data-vertical:h-4 data-vertical:self-auto mr-2"
+              className="mr-2 data-vertical:h-4 data-vertical:self-auto"
             />
             <Breadcrumb>
               <BreadcrumbList>
@@ -43,11 +43,11 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            <div className="bg-moon-muted/50 aspect-video rounded-xl" />
+            <div className="bg-moon-muted/50 aspect-video rounded-xl" />
+            <div className="bg-moon-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-moon-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

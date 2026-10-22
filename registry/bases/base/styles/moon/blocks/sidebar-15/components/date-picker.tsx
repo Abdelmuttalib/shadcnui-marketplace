@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import { Calendar } from "@/registry/bases/base/styles/default-v4/ui/calendar";
+import { Calendar } from "@/registry/bases/base/styles/moon/ui/calendar";
 import {
   SidebarGroup,
   SidebarGroupContent,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/moon/ui/sidebar";
 
 export function DatePicker() {
   const [date, setDate] = React.useState<Date | undefined>(

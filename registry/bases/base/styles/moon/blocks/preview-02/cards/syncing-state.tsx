@@ -1,8 +1,5 @@
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/styles/moon/ui/card";
 import {
   Empty,
   EmptyContent,
@@ -10,8 +7,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/empty";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/moon/ui/empty";
+import { Spinner } from "@/registry/bases/base/styles/moon/ui/spinner";
 
 export function SyncingState() {
   return (

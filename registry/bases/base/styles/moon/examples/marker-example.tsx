@@ -6,14 +6,14 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/accordion";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/ui/accordion";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/drawer";
+} from "@/registry/bases/base/styles/moon/ui/drawer";
 import {
   Marker,
   MarkerContent,
   MarkerIcon,
-} from "@/registry/bases/base/styles/default-v4/ui/marker";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/moon/ui/marker";
+import { Spinner } from "@/registry/bases/base/styles/moon/ui/spinner";
 
 export default function MarkerExamples() {
   return (
@@ -94,7 +94,7 @@ function MarkerExample() {
         render={
           <button
             onClick={() => toast("You clicked the button")}
-            className="hover:text-foreground transition-colors"
+            className="hover:text-moon-foreground transition-colors"
           />
         }
       >
@@ -266,7 +266,7 @@ function MarkerAccordion() {
             </Marker>
           </AccordionTrigger>
           <AccordionContent>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-moon-muted-foreground text-sm">
               The user asked for a list of all the files in the current
               directory. The assistant responded with a list of all the files in
               the current directory.
@@ -303,17 +303,17 @@ function MarkerDrawer() {
             </DrawerDescription>
           </DrawerHeader>
           <div className="grid gap-3 px-4 text-sm">
-            <div className="flex items-center justify-between gap-4 rounded-md border px-3 py-2">
+            <div className="rounded-moon-md flex items-center justify-between gap-4 border px-3 py-2">
               <span className="truncate">app/chat/page.tsx</span>
-              <span className="text-muted-foreground">read</span>
+              <span className="text-moon-muted-foreground">read</span>
             </div>
-            <div className="flex items-center justify-between gap-4 rounded-md border px-3 py-2">
+            <div className="rounded-moon-md flex items-center justify-between gap-4 border px-3 py-2">
               <span className="truncate">components/message.tsx</span>
-              <span className="text-muted-foreground">read</span>
+              <span className="text-moon-muted-foreground">read</span>
             </div>
-            <div className="flex items-center justify-between gap-4 rounded-md border px-3 py-2">
+            <div className="rounded-moon-md flex items-center justify-between gap-4 border px-3 py-2">
               <span className="truncate">lib/ai.ts</span>
-              <span className="text-muted-foreground">read</span>
+              <span className="text-moon-muted-foreground">read</span>
             </div>
           </div>
           <DrawerFooter>

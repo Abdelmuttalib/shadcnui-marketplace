@@ -4,7 +4,7 @@ import * as React from "react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
@@ -12,7 +12,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
@@ -20,7 +20,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/moon/ui/chart";
 
 const barChartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -34,11 +34,11 @@ const barChartData = [
 const barChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -97,9 +97,9 @@ export function BarChartCard() {
             />
           </BarChart>
         </ChartContainer>
-        <div className="divide-border/60 grid w-full grid-cols-3 divide-x">
+        <div className="divide-moon-border/60 grid w-full grid-cols-3 divide-x">
           <div className="px-2 text-center">
-            <div className="text-muted-foreground text-[0.65rem] uppercase">
+            <div className="text-moon-muted-foreground text-[0.65rem] uppercase">
               Desktop
             </div>
             <div className="text-sm font-medium tabular-nums">
@@ -107,7 +107,7 @@ export function BarChartCard() {
             </div>
           </div>
           <div className="px-2 text-center">
-            <div className="text-muted-foreground text-[0.65rem] uppercase">
+            <div className="text-moon-muted-foreground text-[0.65rem] uppercase">
               Mobile
             </div>
             <div className="text-sm font-medium tabular-nums">
@@ -115,7 +115,7 @@ export function BarChartCard() {
             </div>
           </div>
           <div className="px-2 text-center">
-            <div className="text-muted-foreground text-[0.65rem] uppercase">
+            <div className="text-moon-muted-foreground text-[0.65rem] uppercase">
               Mix Delta
             </div>
             <div className="text-sm font-medium tabular-nums">

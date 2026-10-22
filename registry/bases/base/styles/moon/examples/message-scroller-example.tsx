@@ -8,11 +8,11 @@ import { createChat, getMessageText } from "@/lib/ai";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Bubble,
   BubbleContent,
-} from "@/registry/bases/base/styles/default-v4/ui/bubble";
+} from "@/registry/bases/base/styles/moon/ui/bubble";
 import {
   Card,
   CardContent,
@@ -20,22 +20,22 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/moon/ui/input-group";
 import {
   Marker,
   MarkerContent,
   MarkerIcon,
-} from "@/registry/bases/base/styles/default-v4/ui/marker";
+} from "@/registry/bases/base/styles/moon/ui/marker";
 import {
   Message,
   MessageContent,
-} from "@/registry/bases/base/styles/default-v4/ui/message";
+} from "@/registry/bases/base/styles/moon/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -43,8 +43,8 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/registry/bases/base/styles/default-v4/ui/message-scroller";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/moon/ui/message-scroller";
+import { Spinner } from "@/registry/bases/base/styles/moon/ui/spinner";
 
 export default function MessageScrollerExample() {
   return (
@@ -208,7 +208,7 @@ function MessageScrollerDemo() {
             <InputGroup>
               <InputGroupTextarea
                 placeholder="Ask me anything..."
-                className="min-h-10 h-10 overflow-y-auto"
+                className="h-10 min-h-10 overflow-y-auto"
                 value={
                   isBusy ? "" : nextMessage ? getMessageText(nextMessage) : ""
                 }

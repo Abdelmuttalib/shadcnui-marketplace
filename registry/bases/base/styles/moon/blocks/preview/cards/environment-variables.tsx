@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 
 export function EnvironmentVariables() {
   return (
@@ -25,10 +25,10 @@ export function EnvironmentVariables() {
         ].map((env) => (
           <div
             key={env.key}
-            className="ring-border flex items-center gap-2 rounded-md px-2.5 py-2 font-mono text-xs ring"
+            className="ring-moon-border rounded-moon-md flex items-center gap-2 px-2.5 py-2 font-mono text-xs ring"
           >
             <span className="font-medium">{env.key}</span>
-            <span className="text-muted-foreground ml-auto">
+            <span className="text-moon-muted-foreground ml-auto">
               {env.masked ? "••••••••" : "https://api.example.com"}
             </span>
           </div>

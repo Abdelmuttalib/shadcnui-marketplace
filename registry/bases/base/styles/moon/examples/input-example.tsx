@@ -1,19 +1,19 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/components/example";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/moon/ui/field";
+import { Input } from "@/registry/bases/base/styles/moon/ui/input";
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/registry/bases/base/styles/default-v4/ui/native-select";
+} from "@/registry/bases/base/styles/moon/ui/native-select";
 import {
   Select,
   SelectContent,
@@ -21,7 +21,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/moon/ui/select";
 
 export default function InputExample() {
   return (

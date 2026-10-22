@@ -1,17 +1,17 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/moon/ui/field";
 import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "@/registry/bases/base/styles/default-v4/ui/native-select";
+} from "@/registry/bases/base/styles/moon/ui/native-select";
 
 export default function NativeSelectExample() {
   return (

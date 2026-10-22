@@ -3,8 +3,8 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/components/example";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -14,7 +14,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/drawer";
+} from "@/registry/bases/base/styles/moon/ui/drawer";
 
 const PARAGRAPHS = [
   "Your changes are saved automatically as you type.",
@@ -56,7 +56,7 @@ function DrawerDemo() {
           </DrawerTrigger>
           <DrawerContent>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-moon-muted h-80 w-full" />
             </div>
           </DrawerContent>
         </Drawer>
@@ -73,7 +73,7 @@ function DrawerDemo() {
               </DrawerDescription>
             </DrawerHeader>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-moon-muted h-80 w-full" />
             </div>
           </DrawerContent>
         </Drawer>
@@ -83,7 +83,7 @@ function DrawerDemo() {
           </DrawerTrigger>
           <DrawerContent>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-moon-muted h-80 w-full" />
             </div>
             <DrawerFooter>
               <Button>Submit</Button>
@@ -106,7 +106,7 @@ function DrawerDemo() {
               </DrawerDescription>
             </DrawerHeader>
             <div className="p-4">
-              <div className="bg-muted h-80 w-full" />
+              <div className="bg-moon-muted h-80 w-full" />
             </div>
             <DrawerFooter>
               <Button>Submit</Button>
@@ -148,7 +148,7 @@ function DrawerSwipeHandleExample() {
                 </DrawerDescription>
               </DrawerHeader>
               <div className="flex-1 p-4">
-                <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                <div className="bg-moon-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
               </div>
             </DrawerContent>
           </Drawer>
@@ -173,7 +173,7 @@ function DrawerCustomWidthAndHeight() {
                 Drawer with a custom height.
               </DrawerDescription>
             </DrawerHeader>
-            <div className="scroll-fade scrollbar-thin flex-1 overflow-y-auto p-4">
+            <div className="scroll-fade flex-1 scrollbar-thin overflow-y-auto p-4">
               {Array.from({ length: 10 }).map((_, index) => (
                 <p
                   key={index}
@@ -296,7 +296,7 @@ function DrawerPosition() {
                 </DrawerDescription>
               </DrawerHeader>
               <div className="flex-1 p-4">
-                <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                <div className="bg-moon-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
               </div>
               <DrawerFooter>
                 <Button>Submit</Button>
@@ -373,7 +373,7 @@ function DrawerSnapPoints() {
           </DrawerHeader>
           <div className="scroll-fade grid flex-1 gap-3 overflow-y-auto p-4">
             {Array.from({ length: 16 }).map((_, index) => (
-              <div key={index} className="bg-muted h-12" />
+              <div key={index} className="bg-moon-muted h-12" />
             ))}
           </div>
         </DrawerContent>
@@ -401,7 +401,7 @@ function DrawerNested() {
                 </DrawerDescription>
               </DrawerHeader>
               <div className="flex-1 p-4">
-                <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                <div className="bg-moon-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
               </div>
               <DrawerFooter>
                 <Drawer swipeDirection={side}>
@@ -416,7 +416,7 @@ function DrawerNested() {
                       </DrawerDescription>
                     </DrawerHeader>
                     <div className="flex-1 p-4">
-                      <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                      <div className="bg-moon-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
                     </div>
                     <DrawerFooter>
                       <Drawer swipeDirection={side}>
@@ -431,7 +431,7 @@ function DrawerNested() {
                             </DrawerDescription>
                           </DrawerHeader>
                           <div className="flex-1 p-4">
-                            <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+                            <div className="bg-moon-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
                           </div>
                           <DrawerFooter>
                             <DrawerClose render={<Button variant="outline" />}>
@@ -470,7 +470,7 @@ function DrawerNonModal() {
             <DrawerTitle>Non Modal Drawer</DrawerTitle>
           </DrawerHeader>
           <div className="flex-1 p-4">
-            <div className="bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+            <div className="bg-moon-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
           </div>
           <DrawerFooter>
             <DrawerClose render={<Button variant="outline" />}>

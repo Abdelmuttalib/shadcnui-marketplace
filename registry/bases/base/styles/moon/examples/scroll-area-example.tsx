@@ -4,12 +4,12 @@ import * as React from "react";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   ScrollArea,
   ScrollBar,
-} from "@/registry/bases/base/styles/default-v4/ui/scroll-area";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/moon/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/styles/moon/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -42,9 +42,9 @@ export default function ScrollAreaExample() {
 function ScrollAreaVertical() {
   return (
     <Example title="Vertical">
-      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl mx-auto h-72 w-48 rounded-md border">
+      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl rounded-moon-md mx-auto h-72 w-48 border">
         <div className="p-4">
-          <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+          <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
           {tags.map((tag) => (
             <React.Fragment key={tag}>
               <div className="text-sm">{tag}</div>
@@ -60,11 +60,11 @@ function ScrollAreaVertical() {
 function ScrollAreaHorizontal() {
   return (
     <Example title="Horizontal">
-      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl max-w-96 mx-auto w-full rounded-md border p-4">
+      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl rounded-moon-md mx-auto w-full max-w-96 border p-4">
         <div className="flex gap-4">
           {works.map((artwork) => (
             <figure key={artwork.artist} className="shrink-0">
-              <div className="overflow-hidden rounded-md">
+              <div className="rounded-moon-md overflow-hidden">
                 <Image
                   src={artwork.art}
                   alt={`Photo by ${artwork.artist}`}
@@ -73,9 +73,9 @@ function ScrollAreaHorizontal() {
                   height={400}
                 />
               </div>
-              <figcaption className="text-muted-foreground pt-2 text-xs">
+              <figcaption className="text-moon-muted-foreground pt-2 text-xs">
                 Photo by{" "}
-                <span className="text-foreground font-semibold">
+                <span className="text-moon-foreground font-semibold">
                   {artwork.artist}
                 </span>
               </figcaption>

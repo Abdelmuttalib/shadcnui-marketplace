@@ -4,8 +4,8 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/components/example";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Item,
   ItemActions,
@@ -17,7 +17,7 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/moon/ui/item";
 
 export default function ItemExample() {
   return (
@@ -1620,7 +1620,7 @@ function ItemFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-moon-muted-foreground text-sm">
             Last updated 2 hours ago
           </span>
         </ItemFooter>
@@ -1634,7 +1634,7 @@ function ItemFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-moon-muted-foreground text-sm">
             Created by Sarah Chen
           </span>
         </ItemFooter>
@@ -1648,7 +1648,9 @@ function ItemFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-muted-foreground text-sm">12 comments</span>
+          <span className="text-moon-muted-foreground text-sm">
+            12 comments
+          </span>
         </ItemFooter>
       </Item>
     </Example>
@@ -1670,7 +1672,7 @@ function ItemHeaderAndFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-moon-muted-foreground text-sm">
             Updated 5 minutes ago
           </span>
         </ItemFooter>
@@ -1687,7 +1689,7 @@ function ItemHeaderAndFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-moon-muted-foreground text-sm">
             Status: In Progress
           </span>
         </ItemFooter>
@@ -1704,7 +1706,7 @@ function ItemHeaderAndFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-moon-muted-foreground text-sm">
             Category: Technical • 3 attachments
           </span>
         </ItemFooter>

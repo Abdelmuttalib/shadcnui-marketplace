@@ -7,22 +7,22 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Bubble,
   BubbleContent,
   BubbleGroup,
   BubbleReactions,
-} from "@/registry/bases/base/styles/default-v4/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Collapsible,
   CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/collapsible";
+} from "@/registry/bases/base/styles/moon/ui/collapsible";
 import {
   Marker,
   MarkerContent,
-} from "@/registry/bases/base/styles/default-v4/ui/marker";
+} from "@/registry/bases/base/styles/moon/ui/marker";
 
 export default function BubbleExample() {
   return (
@@ -180,7 +180,7 @@ function BubbleCollapsible() {
                   render={
                     <Button
                       variant="link"
-                      className="text-muted-foreground gap-1 p-0"
+                      className="text-moon-muted-foreground gap-1 p-0"
                     />
                   }
                 >
@@ -398,7 +398,7 @@ function BubbleReactionsButtons() {
           <BubbleContent>
             We are going to the movies first then dinner. Are you in?
           </BubbleContent>
-          <BubbleReactions className="bg-background gap-1">
+          <BubbleReactions className="bg-moon-background gap-1">
             <Button
               variant="secondary"
               size="icon-xs"
@@ -507,7 +507,7 @@ function BubbleButtonLinks() {
           {quickReplies.map((reply) => (
             <Bubble key={reply.label} variant="outline" align="end">
               <BubbleContent
-                className="border-primary border-dashed"
+                className="border-moon-primary border-dashed"
                 render={
                   <button type="button" onClick={() => toast(reply.message)} />
                 }

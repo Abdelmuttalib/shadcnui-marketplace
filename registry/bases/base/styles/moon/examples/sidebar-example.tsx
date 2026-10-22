@@ -8,15 +8,15 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/moon/ui/dropdown-menu";
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
+} from "@/registry/bases/base/styles/moon/ui/item";
+import { Label } from "@/registry/bases/base/styles/moon/ui/label";
 import {
   Sidebar,
   SidebarContent,
@@ -32,7 +32,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/moon/ui/sidebar";
 
 export default function SidebarExample() {
   const data = {
@@ -181,7 +181,7 @@ export default function SidebarExample() {
                   render={
                     <SidebarMenuButton
                       size="lg"
-                      className="data-open:bg-sidebar-accent data-open:text-sidebar-accent-foreground"
+                      className="data-open:bg-moon-sidebar-accent data-open:text-moon-sidebar-accent-foreground"
                     />
                   }
                 >
@@ -241,7 +241,7 @@ export default function SidebarExample() {
                   hugeicons="SearchIcon"
                   phosphor="MagnifyingGlassIcon"
                   remixicon="RiSearchLine"
-                  className="size-4 pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 select-none opacity-50"
+                  className="pointer-events-none absolute top-1/2 left-2 size-4 -translate-y-1/2 opacity-50 select-none"
                 />
               </SidebarGroupContent>
             </SidebarGroup>
@@ -276,11 +276,11 @@ export default function SidebarExample() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            <div className="bg-moon-muted/50 aspect-video rounded-xl" />
+            <div className="bg-moon-muted/50 aspect-video rounded-xl" />
+            <div className="bg-moon-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-moon-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

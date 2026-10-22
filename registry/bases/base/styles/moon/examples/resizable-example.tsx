@@ -6,12 +6,12 @@ import type { Layout } from "react-resizable-panels";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/bases/base/styles/default-v4/ui/resizable";
+} from "@/registry/bases/base/styles/moon/ui/resizable";
 
 export default function ResizableExample() {
   return (
@@ -30,7 +30,7 @@ function ResizableHorizontal() {
     <Example title="Horizontal">
       <ResizablePanelGroup
         orientation="horizontal"
-        className="min-h-[200px] rounded-lg border"
+        className="rounded-moon-lg min-h-[200px] border"
       >
         <ResizablePanel defaultSize="25%">
           <div className="flex h-full items-center justify-center p-6">
@@ -53,7 +53,7 @@ function ResizableVertical() {
     <Example title="Vertical">
       <ResizablePanelGroup
         orientation="vertical"
-        className="min-h-[200px] rounded-lg border"
+        className="rounded-moon-lg min-h-[200px] border"
       >
         <ResizablePanel defaultSize="25%">
           <div className="flex h-full items-center justify-center p-6">
@@ -76,7 +76,7 @@ function ResizableWithHandle() {
     <Example title="With Handle">
       <ResizablePanelGroup
         orientation="horizontal"
-        className="min-h-[200px] rounded-lg border"
+        className="rounded-moon-lg min-h-[200px] border"
       >
         <ResizablePanel defaultSize="25%">
           <div className="flex h-full items-center justify-center p-6">
@@ -99,7 +99,7 @@ function ResizableNested() {
     <Example title="Nested">
       <ResizablePanelGroup
         orientation="horizontal"
-        className="rounded-lg border"
+        className="rounded-moon-lg border"
       >
         <ResizablePanel defaultSize="50%">
           <div className="flex h-[200px] items-center justify-center p-6">
@@ -134,7 +134,7 @@ function ResizableControlled() {
     <Example title="Controlled">
       <ResizablePanelGroup
         orientation="horizontal"
-        className="min-h-[200px] rounded-lg border"
+        className="rounded-moon-lg min-h-[200px] border"
         onLayoutChange={setLayout}
       >
         <ResizablePanel defaultSize="30%" id="left" minSize="20%">

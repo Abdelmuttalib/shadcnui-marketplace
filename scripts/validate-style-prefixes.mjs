@@ -62,6 +62,7 @@ const STYLES = {
   snow: "snow",
   wedges: "wedges",
   catalyst: "catalyst",
+  moon: "moon",
 };
 
 /**

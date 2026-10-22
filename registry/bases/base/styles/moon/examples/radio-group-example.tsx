@@ -1,7 +1,7 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Field,
   FieldContent,
@@ -9,11 +9,11 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/moon/ui/field";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/radio-group";
+} from "@/registry/bases/base/styles/moon/ui/radio-group";
 
 export default function RadioGroupExample() {
   return (

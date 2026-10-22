@@ -1,14 +1,14 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { SignupForm } from "@/registry/bases/base/styles/default-v4/blocks/signup-03/components/signup-form";
+import { SignupForm } from "@/registry/bases/base/styles/moon/blocks/signup-03/components/signup-form";
 
 export default function SignupPage() {
   return (
-    <div className="bg-muted min-h-svh flex flex-col items-center justify-center gap-6 p-6 md:p-10">
+    <div className="bg-moon-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
         <a href="#" className="flex items-center gap-2 self-center font-medium">
-          <div className="bg-primary text-primary-foreground size-6 flex items-center justify-center rounded-md">
+          <div className="bg-moon-primary text-moon-primary-foreground rounded-moon-md flex size-6 items-center justify-center">
             <IconPlaceholder
               lucide="GalleryVerticalEndIcon"
               tabler="IconLayoutRows"

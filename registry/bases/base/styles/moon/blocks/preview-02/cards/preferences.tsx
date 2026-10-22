@@ -1,5 +1,5 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardAction,
@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   Field,
   FieldContent,
@@ -16,7 +16,7 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/moon/ui/field";
 import {
   Select,
   SelectContent,
@@ -24,8 +24,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
+} from "@/registry/bases/base/styles/moon/ui/select";
+import { Switch } from "@/registry/bases/base/styles/moon/ui/switch";
 
 const CURRENCIES = [
   { label: "USD — United States Dollar", value: "usd" },
@@ -43,7 +43,7 @@ export function Preferences() {
           Manage your account settings and notifications.
         </CardDescription>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-moon-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"

@@ -5,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   Item,
   ItemActions,
@@ -13,7 +13,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/moon/ui/item";
 
 // Usage items with percentage and value.
 const items = [
@@ -114,14 +114,14 @@ export function UsageCard() {
               className="px-0 group-hover/item-group:bg-transparent"
               render={<a href="#" />}
             >
-              <ItemMedia variant="icon" className="text-primary">
+              <ItemMedia variant="icon" className="text-moon-primary">
                 <CircularGauge percentage={item.percentage} />
               </ItemMedia>
               <ItemContent className="inline-block truncate">
                 <ItemTitle className="inline">{item.name}</ItemTitle>
               </ItemContent>
               <ItemActions>
-                <span className="text-muted-foreground font-mono text-xs font-medium tabular-nums">
+                <span className="text-moon-muted-foreground font-mono text-xs font-medium tabular-nums">
                   {item.value}
                 </span>
               </ItemActions>

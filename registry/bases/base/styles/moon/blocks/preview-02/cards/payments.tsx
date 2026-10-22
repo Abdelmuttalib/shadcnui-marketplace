@@ -8,20 +8,20 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
   CardHeader,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/moon/ui/dropdown-menu";
 import {
   Item,
   ItemContent,
@@ -29,7 +29,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/moon/ui/item";
 
 export function Payments() {
   return (
@@ -95,7 +95,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-moon-muted-foreground size-4 shrink-0"
             />
           </Item>
           <Item variant="muted" render={<a href="#" />}>
@@ -120,7 +120,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-moon-muted-foreground size-4 shrink-0"
             />
           </Item>
           <Item variant="muted" render={<a href="#" />}>
@@ -145,7 +145,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-moon-muted-foreground size-4 shrink-0"
             />
           </Item>
           <Item variant="muted" render={<a href="#" />}>
@@ -170,7 +170,7 @@ export function Payments() {
               hugeicons="ArrowRight01Icon"
               phosphor="CaretRightIcon"
               remixicon="RiArrowRightSLine"
-              className="text-muted-foreground size-4 shrink-0"
+              className="text-moon-muted-foreground size-4 shrink-0"
             />
           </Item>
         </ItemGroup>

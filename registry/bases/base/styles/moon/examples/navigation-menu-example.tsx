@@ -7,7 +7,7 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,7 +16,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/bases/base/styles/default-v4/ui/navigation-menu";
+} from "@/registry/bases/base/styles/moon/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -176,8 +176,10 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink render={<Link href={href} />}>
         <div className="style-vega:text-sm style-nova:text-sm style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-luma:text-sm flex flex-col gap-1">
-          <div className="font-medium leading-none">{title}</div>
-          <div className="text-muted-foreground line-clamp-2">{children}</div>
+          <div className="leading-none font-medium">{title}</div>
+          <div className="text-moon-muted-foreground line-clamp-2">
+            {children}
+          </div>
         </div>
       </NavigationMenuLink>
     </li>

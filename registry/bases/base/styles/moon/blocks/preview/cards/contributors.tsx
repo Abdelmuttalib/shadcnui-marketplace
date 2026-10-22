@@ -4,15 +4,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
+} from "@/registry/bases/base/styles/moon/ui/avatar";
+import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 
 // GitHub usernames displayed as contributor avatars.
 const usernames = [

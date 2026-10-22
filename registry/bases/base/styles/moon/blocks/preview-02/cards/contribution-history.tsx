@@ -3,8 +3,8 @@
 import { Bar, BarChart, XAxis } from "recharts";
 
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardAction,
@@ -13,18 +13,18 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/moon/ui/chart";
 import {
   Item,
   ItemContent,
   ItemDescription,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/moon/ui/item";
 
 const chartData = [
   { month: "Dec", amount: 800 },
@@ -38,7 +38,7 @@ const chartData = [
 const chartConfig = {
   amount: {
     label: "Contribution",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -82,26 +82,26 @@ export function ContributionHistory() {
         <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-1">
-              <ItemDescription className="text-muted-foreground text-xs font-medium uppercase tracking-wider">
+              <ItemDescription className="text-moon-muted-foreground text-xs font-medium tracking-wider uppercase">
                 Upcoming
               </ItemDescription>
               <span className="cn-font-heading text-lg font-semibold">
                 May 25, 2024
               </span>
-              <span className="text-muted-foreground text-sm">
+              <span className="text-moon-muted-foreground text-sm">
                 $1,000 scheduled
               </span>
             </ItemContent>
           </Item>
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-1">
-              <ItemDescription className="text-muted-foreground text-xs font-medium uppercase tracking-wider">
+              <ItemDescription className="text-moon-muted-foreground text-xs font-medium tracking-wider uppercase">
                 Auto-Save Plan
               </ItemDescription>
               <span className="cn-font-heading text-lg font-semibold">
                 Accelerated
               </span>
-              <span className="text-muted-foreground text-sm">
+              <span className="text-moon-muted-foreground text-sm">
                 Recurring weekly
               </span>
             </ItemContent>

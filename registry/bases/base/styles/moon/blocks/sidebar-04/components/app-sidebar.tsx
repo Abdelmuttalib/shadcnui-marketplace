@@ -14,7 +14,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/moon/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -163,7 +163,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" render={<a href="#" />}>
-              <div className="bg-sidebar-primary text-sidebar-primary-foreground size-8 flex aspect-square items-center justify-center rounded-lg">
+              <div className="bg-moon-sidebar-primary text-moon-sidebar-primary-foreground rounded-moon-lg flex aspect-square size-8 items-center justify-center">
                 <IconPlaceholder
                   lucide="GalleryVerticalEndIcon"
                   tabler="IconLayoutRows"

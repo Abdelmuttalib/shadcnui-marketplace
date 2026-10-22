@@ -1,17 +1,17 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
+import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
 import {
   Card,
   CardContent,
   CardHeader,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/moon/ui/input-group";
 import {
   Item,
   ItemContent,
@@ -19,11 +19,11 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/moon/ui/item";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/toggle-group";
+} from "@/registry/bases/base/styles/moon/ui/toggle-group";
 
 const HOLDINGS = [
   {
@@ -89,20 +89,20 @@ export function ReleaseCatalog() {
           {HOLDINGS.map((holding) => (
             <Item key={holding.ticker} variant="muted">
               <ItemMedia>
-                <div className="size-12 flex items-center justify-center rounded-lg border text-sm font-semibold">
+                <div className="rounded-moon-lg flex size-12 items-center justify-center border text-sm font-semibold">
                   {holding.ticker}
                 </div>
               </ItemMedia>
               <ItemContent>
                 <ItemTitle>{holding.name}</ItemTitle>
-                <ItemDescription className="text-xs uppercase tracking-wider">
+                <ItemDescription className="text-xs tracking-wider uppercase">
                   {holding.shares} Shares · {holding.added}
                 </ItemDescription>
               </ItemContent>
               <div className="flex shrink-0 items-center gap-6">
                 <Badge variant="outline">{holding.type}</Badge>
                 <div className="flex flex-col items-end gap-0.5">
-                  <span className="text-muted-foreground text-xs uppercase tracking-wider">
+                  <span className="text-moon-muted-foreground text-xs tracking-wider uppercase">
                     Value
                   </span>
                   <span className="font-medium tabular-nums">

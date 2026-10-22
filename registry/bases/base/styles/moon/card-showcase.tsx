@@ -4,9 +4,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/ui/avatar";
+import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
@@ -14,8 +14,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/moon/ui/card";
+import { Separator } from "@/registry/bases/base/styles/moon/ui/separator";
 
 export function CardShowcase() {
   return (
@@ -57,7 +57,7 @@ export function CardShowcase() {
               />
               <AvatarFallback>CN2</AvatarFallback>
             </Avatar>
-            <span className="text-dft-muted-foreground text-sm">
+            <span className="text-moon-muted-foreground text-sm">
               2 contributors
             </span>
           </div>

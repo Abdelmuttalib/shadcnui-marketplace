@@ -2,8 +2,8 @@
 
 import { Bar, BarChart } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
@@ -11,11 +11,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/moon/ui/chart";
 
 const sleepChartData = [
   { hour: "10pm", deep: 0, light: 30, rem: 0 },
@@ -32,15 +32,15 @@ const sleepChartData = [
 const sleepChartConfig = {
   deep: {
     label: "Deep",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
   light: {
     label: "Light",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
   rem: {
     label: "REM",
-    color: "var(--chart-3)",
+    color: "var(--moon-chart-3)",
   },
 } satisfies ChartConfig;
 
@@ -88,7 +88,9 @@ export function SleepReport() {
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="text-sm font-medium tabular-nums">{s.value}</div>
-              <div className="text-muted-foreground text-xs">{s.label}</div>
+              <div className="text-moon-muted-foreground text-xs">
+                {s.label}
+              </div>
             </div>
           ))}
         </div>

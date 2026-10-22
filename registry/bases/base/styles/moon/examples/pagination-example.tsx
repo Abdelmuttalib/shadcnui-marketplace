@@ -3,11 +3,8 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import {
-  Field,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/moon/components/example";
+import { Field, FieldLabel } from "@/registry/bases/base/styles/moon/ui/field";
 import {
   Pagination,
   PaginationContent,
@@ -16,7 +13,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/bases/base/styles/default-v4/ui/pagination";
+} from "@/registry/bases/base/styles/moon/ui/pagination";
 import {
   Select,
   SelectContent,
@@ -24,7 +21,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/moon/ui/select";
 
 export default function PaginationExample() {
   return (

@@ -2,15 +2,15 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Alert,
   AlertAction,
   AlertDescription,
   AlertTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/alert";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/ui/alert";
+import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 
 export default function AlertExample() {
   return (

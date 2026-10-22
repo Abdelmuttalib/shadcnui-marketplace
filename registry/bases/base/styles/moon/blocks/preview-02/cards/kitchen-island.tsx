@@ -10,7 +10,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   Item,
   ItemActions,
@@ -18,13 +18,13 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
+} from "@/registry/bases/base/styles/moon/ui/item";
+import { Slider } from "@/registry/bases/base/styles/moon/ui/slider";
+import { Switch } from "@/registry/bases/base/styles/moon/ui/switch";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/toggle-group";
+} from "@/registry/bases/base/styles/moon/ui/toggle-group";
 
 const SCENES = {
   cooking: { brightness: [90], colorTemp: [70], volume: [30], fade: [0] },

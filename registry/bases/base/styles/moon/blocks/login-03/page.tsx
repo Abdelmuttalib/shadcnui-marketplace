@@ -1,14 +1,14 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { LoginForm } from "@/registry/bases/base/styles/default-v4/blocks/login-03/components/login-form";
+import { LoginForm } from "@/registry/bases/base/styles/moon/blocks/login-03/components/login-form";
 
 export default function LoginPage() {
   return (
-    <div className="bg-muted min-h-svh flex flex-col items-center justify-center gap-6 p-6 md:p-10">
+    <div className="bg-moon-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
         <a href="#" className="flex items-center gap-2 self-center font-medium">
-          <div className="bg-primary text-primary-foreground size-6 flex items-center justify-center rounded-md">
+          <div className="bg-moon-primary text-moon-primary-foreground rounded-moon-md flex size-6 items-center justify-center">
             <IconPlaceholder
               lucide="GalleryVerticalEndIcon"
               tabler="IconLayoutRows"

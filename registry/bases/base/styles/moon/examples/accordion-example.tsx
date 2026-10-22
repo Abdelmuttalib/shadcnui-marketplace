@@ -2,21 +2,21 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/accordion";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/ui/accordion";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 
 export default function AccordionExample() {
   return (
@@ -137,12 +137,12 @@ function AccordionWithBorders() {
           <AccordionItem
             key={item.value}
             value={item.value}
-            className="style-vega:rounded-lg style-vega:border style-nova:rounded-lg style-nova:border style-lyra:border"
+            className="style-vega:rounded-moon-lg style-vega:border style-nova:rounded-moon-lg style-nova:border style-lyra:border"
           >
             <AccordionTrigger className="style-vega:px-4 style-vega:text-sm style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-luma:text-sm font-medium">
               {item.trigger}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground style-vega:px-4 style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:px-0 style-mira:px-0 style-luma:px-0">
+            <AccordionContent className="text-moon-muted-foreground style-vega:px-4 style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:px-0 style-mira:px-0 style-luma:px-0">
               {item.content}
             </AccordionContent>
           </AccordionItem>
@@ -272,7 +272,7 @@ function AccordionInCard() {
           <Accordion
             multiple
             defaultValue={["plans"]}
-            className="style-maia:rounded-md style-mira:rounded-md"
+            className="style-maia:rounded-moon-md style-mira:rounded-moon-md"
           >
             {items.map((item) => (
               <AccordionItem key={item.value} value={item.value}>
@@ -314,13 +314,13 @@ function AccordionWithDisabled() {
 
   return (
     <Example title="With Disabled">
-      <Accordion className="style-vega:rounded-lg style-nova:rounded-lg style-lyra:rounded-none style-maia:rounded-lg style-mira:rounded-lg style-luma:rounded-xl mx-auto max-w-lg overflow-hidden border">
+      <Accordion className="style-vega:rounded-moon-lg style-nova:rounded-moon-lg style-lyra:rounded-none style-maia:rounded-moon-lg style-mira:rounded-moon-lg style-luma:rounded-xl mx-auto max-w-lg overflow-hidden border">
         {items.map((item) => (
           <AccordionItem
             key={item.value}
             value={item.value}
             disabled={item.disabled}
-            className="data-open:bg-muted/50 p-1"
+            className="data-open:bg-moon-muted/50 p-1"
           >
             <AccordionTrigger className="style-vega:px-4 style-nova:px-2.5 style-lyra:px-2">
               {item.trigger}

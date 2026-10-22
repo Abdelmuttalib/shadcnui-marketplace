@@ -6,14 +6,14 @@ import {
   Card,
   CardContent,
   CardFooter,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/moon/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/moon/ui/chart";
+import { Separator } from "@/registry/bases/base/styles/moon/ui/separator";
 
 const chartData = [
   { name: "saved", value: 24000, fill: "var(--color-saved)" },
@@ -23,11 +23,11 @@ const chartData = [
 const chartConfig = {
   saved: {
     label: "Saved",
-    color: "var(--chart-2)",
+    color: "var(--moon-chart-2)",
   },
   remaining: {
     label: "Remaining",
-    color: "var(--chart-1)",
+    color: "var(--moon-chart-1)",
   },
 } satisfies ChartConfig;
 
@@ -67,14 +67,14 @@ export function SavingsProgress() {
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) - 12}
-                          className="fill-foreground text-2xl font-bold"
+                          className="fill-moon-foreground text-2xl font-bold"
                         >
                           $24,000
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 12}
-                          className="fill-muted-foreground text-xs"
+                          className="fill-moon-muted-foreground text-xs"
                         >
                           80% of $30,000
                         </tspan>
@@ -89,19 +89,23 @@ export function SavingsProgress() {
       </CardContent>
       <CardFooter className="flex-col gap-0">
         <div className="flex w-full items-center justify-between py-3">
-          <span className="text-muted-foreground text-sm">
+          <span className="text-moon-muted-foreground text-sm">
             Projected Finish
           </span>
           <span className="text-sm font-semibold">October 2024</span>
         </div>
         <Separator />
         <div className="flex w-full items-center justify-between py-3">
-          <span className="text-muted-foreground text-sm">Monthly Average</span>
+          <span className="text-moon-muted-foreground text-sm">
+            Monthly Average
+          </span>
           <span className="text-sm font-semibold tabular-nums">$1,250</span>
         </div>
         <Separator />
         <div className="flex w-full items-center justify-between py-3">
-          <span className="text-muted-foreground text-sm">Top Contributor</span>
+          <span className="text-moon-muted-foreground text-sm">
+            Top Contributor
+          </span>
           <span className="text-sm font-semibold">Auto-Transfer</span>
         </div>
       </CardFooter>

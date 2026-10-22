@@ -2,7 +2,7 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/moon/components/example";
 import {
   Avatar,
   AvatarBadge,
@@ -10,8 +10,8 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/moon/ui/avatar";
+import { Button } from "@/registry/bases/base/styles/moon/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -19,7 +19,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/empty";
+} from "@/registry/bases/base/styles/moon/ui/empty";
 
 export default function AvatarExample() {
   return (
