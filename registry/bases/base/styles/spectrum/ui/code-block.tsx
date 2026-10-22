@@ -8,7 +8,7 @@ import { Button } from "@/registry/bases/base/styles/spectrum/ui/button";
 import { CheckIcon, CopyIcon } from "lucide-react";
 
 const codeBlockVariants = cva(
-  "group/code-block relative flex w-full min-w-0 flex-col overflow-hidden rounded-lg text-sm has-[>[data-slot=code-block-content]:focus-visible]:ring-3 has-[>[data-slot=code-block-content]:focus-visible]:ring-spectrum-ring/50 data-[size=sm]:text-xs",
+  "group/code-block relative flex w-full min-w-0 flex-col overflow-hidden rounded-spectrum-lg text-sm has-[>[data-slot=code-block-content]:focus-visible]:ring-3 has-[>[data-slot=code-block-content]:focus-visible]:ring-spectrum-ring/50 data-[size=sm]:text-xs",
   {
     variants: {
       variant: {

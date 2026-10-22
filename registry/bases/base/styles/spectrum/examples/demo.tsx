@@ -105,7 +105,7 @@ export function Demo() {
                     className="flex flex-col flex-wrap items-center gap-2"
                   >
                     <div
-                      className="after:border-spectrum-border relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                      className="after:border-spectrum-border rounded-spectrum-lg after:rounded-spectrum-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                       style={
                         {
                           "--color": `var(${variant})`,

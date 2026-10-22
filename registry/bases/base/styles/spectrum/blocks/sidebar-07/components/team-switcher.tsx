@@ -46,7 +46,7 @@ export function TeamSwitcher({
               />
             }
           >
-            <div className="bg-spectrum-sidebar-primary text-spectrum-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+            <div className="bg-spectrum-sidebar-primary text-spectrum-sidebar-primary-foreground rounded-spectrum-lg flex aspect-square size-8 items-center justify-center">
               {activeTeam.logo}
             </div>
             <div className="grid flex-1 text-left text-sm leading-tight">
@@ -78,7 +78,7 @@ export function TeamSwitcher({
                   onClick={() => setActiveTeam(team)}
                   className="gap-2 p-2"
                 >
-                  <div className="flex size-6 items-center justify-center rounded-md border">
+                  <div className="rounded-spectrum-md flex size-6 items-center justify-center border">
                     {team.logo}
                   </div>
                   {team.name}
@@ -89,7 +89,7 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-2 p-2">
-                <div className="flex size-6 items-center justify-center rounded-md border bg-transparent">
+                <div className="rounded-spectrum-md flex size-6 items-center justify-center border bg-transparent">
                   <IconPlaceholder
                     lucide="PlusIcon"
                     tabler="IconPlus"

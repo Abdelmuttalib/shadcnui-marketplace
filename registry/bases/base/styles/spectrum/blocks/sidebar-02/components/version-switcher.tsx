@@ -35,7 +35,7 @@ export function VersionSwitcher({
               />
             }
           >
-            <div className="bg-spectrum-sidebar-primary text-spectrum-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+            <div className="bg-spectrum-sidebar-primary text-spectrum-sidebar-primary-foreground rounded-spectrum-lg flex aspect-square size-8 items-center justify-center">
               <IconPlaceholder
                 lucide="GalleryVerticalEndIcon"
                 tabler="IconLayoutRows"
