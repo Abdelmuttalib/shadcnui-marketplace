@@ -541,7 +541,7 @@ export function DataTable({
         value="outline"
         className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6"
       >
-        <div className="overflow-hidden rounded-lg border">
+        <div className="rounded-material-lg overflow-hidden border">
           <DndContext
             collisionDetection={closestCenter}
             modifiers={[restrictToVerticalAxis]}
@@ -699,16 +699,16 @@ export function DataTable({
         value="past-performance"
         className="flex flex-col px-4 lg:px-6"
       >
-        <div className="aspect-video w-full flex-1 rounded-lg border border-dashed"></div>
+        <div className="rounded-material-lg aspect-video w-full flex-1 border border-dashed"></div>
       </TabsContent>
       <TabsContent value="key-personnel" className="flex flex-col px-4 lg:px-6">
-        <div className="aspect-video w-full flex-1 rounded-lg border border-dashed"></div>
+        <div className="rounded-material-lg aspect-video w-full flex-1 border border-dashed"></div>
       </TabsContent>
       <TabsContent
         value="focus-documents"
         className="flex flex-col px-4 lg:px-6"
       >
-        <div className="aspect-video w-full flex-1 rounded-lg border border-dashed"></div>
+        <div className="rounded-material-lg aspect-video w-full flex-1 border border-dashed"></div>
       </TabsContent>
     </Tabs>
   );
@@ -748,11 +748,11 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--primary)",
+    color: "var(--material-primary)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--primary)",
+    color: "var(--material-primary)",
   },
 } satisfies ChartConfig;
 function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {

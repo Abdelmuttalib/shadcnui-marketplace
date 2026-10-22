@@ -29,7 +29,7 @@ export function RollerShades() {
         <CardDescription>Roller Shades</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <div className="bg-material-muted flex h-32 flex-col overflow-hidden rounded-lg border">
+        <div className="bg-material-muted rounded-material-lg flex h-32 flex-col overflow-hidden border">
           <div
             className="bg-material-muted-foreground transition-all duration-300"
             style={{ height: `${position[0]}%` }}

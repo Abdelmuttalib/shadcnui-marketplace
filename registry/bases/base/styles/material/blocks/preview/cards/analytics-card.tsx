@@ -32,7 +32,7 @@ const chartData = [
 const chartConfig = {
   visitors: {
     label: "Visitors",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
 } satisfies ChartConfig;
 

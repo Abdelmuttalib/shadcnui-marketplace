@@ -23,7 +23,7 @@ function NativeSelect({
       <select
         data-slot="native-select"
         data-size={size}
-        className="border-material-input selection:bg-material-primary selection:text-material-primary-foreground placeholder:text-material-muted-foreground focus-visible:border-material-ring focus-visible:ring-material-ring/50 aria-invalid:border-material-destructive aria-invalid:ring-material-destructive/20 dark:bg-material-input/30 dark:hover:bg-material-input/50 dark:aria-invalid:border-material-destructive/50 dark:aria-invalid:ring-material-destructive/40 h-9 w-full min-w-0 appearance-none rounded-md border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
+        className="border-material-input selection:bg-material-primary selection:text-material-primary-foreground placeholder:text-material-muted-foreground focus-visible:border-material-ring focus-visible:ring-material-ring/50 aria-invalid:border-material-destructive aria-invalid:ring-material-destructive/20 dark:bg-material-input/30 dark:hover:bg-material-input/50 dark:aria-invalid:border-material-destructive/50 dark:aria-invalid:ring-material-destructive/40 rounded-material-md h-9 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
         {...props}
       />
       <ChevronDownIcon

@@ -64,7 +64,7 @@ const DEFAULT_DATA = [
 const chartConfig = {
   price: {
     label: "Price",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
 } satisfies ChartConfig;
 

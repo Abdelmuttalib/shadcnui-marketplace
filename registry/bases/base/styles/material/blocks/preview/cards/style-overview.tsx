@@ -46,25 +46,25 @@ export function StyleOverview() {
         </div>
         <div className="grid grid-cols-6 gap-3">
           {[
-            "--background",
-            "--foreground",
-            "--primary",
-            "--secondary",
-            "--muted",
-            "--accent",
-            "--border",
-            "--chart-1",
-            "--chart-2",
-            "--chart-3",
-            "--chart-4",
-            "--chart-5",
+            "--material-background",
+            "--material-foreground",
+            "--material-primary",
+            "--material-secondary",
+            "--material-muted",
+            "--material-accent",
+            "--material-border",
+            "--material-chart-1",
+            "--material-chart-2",
+            "--material-chart-3",
+            "--material-chart-4",
+            "--material-chart-5",
           ].map((variant) => (
             <div
               key={variant}
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="after:border-material-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-material-border style-sera:rounded-none style-sera:after:rounded-none rounded-material-lg after:rounded-material-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
                     "--color": `var(${variant})`,

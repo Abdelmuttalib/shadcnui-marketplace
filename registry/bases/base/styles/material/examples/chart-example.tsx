@@ -54,7 +54,7 @@ const areaChartData = [
 const areaChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
 } satisfies ChartConfig;
 
@@ -150,11 +150,11 @@ const barChartData = [
 const barChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--material-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -219,11 +219,11 @@ const lineChartData = [
 const lineChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--material-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -310,23 +310,23 @@ const pieChartConfig = {
   },
   chrome: {
     label: "Chrome",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
   safari: {
     label: "Safari",
-    color: "var(--chart-2)",
+    color: "var(--material-chart-2)",
   },
   firefox: {
     label: "Firefox",
-    color: "var(--chart-3)",
+    color: "var(--material-chart-3)",
   },
   edge: {
     label: "Edge",
-    color: "var(--chart-4)",
+    color: "var(--material-chart-4)",
   },
   other: {
     label: "Other",
-    color: "var(--chart-5)",
+    color: "var(--material-chart-5)",
   },
 } satisfies ChartConfig;
 
@@ -425,11 +425,11 @@ const radarChartData = [
 const radarChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--material-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -495,7 +495,7 @@ const radialChartConfig = {
   },
   safari: {
     label: "Safari",
-    color: "var(--chart-2)",
+    color: "var(--material-chart-2)",
   },
 } satisfies ChartConfig;
 

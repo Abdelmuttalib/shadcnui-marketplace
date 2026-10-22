@@ -57,7 +57,7 @@ export function Calendars({
                         <SidebarMenuButton>
                           <div
                             data-active={index < 2}
-                            className="group/calendar-item border-material-sidebar-border text-material-sidebar-primary-foreground data-[active=true]:border-material-sidebar-primary data-[active=true]:bg-material-sidebar-primary flex aspect-square size-4 shrink-0 items-center justify-center rounded-sm border"
+                            className="group/calendar-item border-material-sidebar-border text-material-sidebar-primary-foreground data-[active=true]:border-material-sidebar-primary data-[active=true]:bg-material-sidebar-primary rounded-material-sm flex aspect-square size-4 shrink-0 items-center justify-center border"
                           >
                             <IconPlaceholder
                               lucide="CheckIcon"

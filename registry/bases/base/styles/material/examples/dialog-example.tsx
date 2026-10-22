@@ -314,7 +314,7 @@ function DialogChatSettings() {
                 </TabsTrigger>
                 <TabsTrigger value="security">Security</TabsTrigger>
               </TabsList>
-              <div className="style-vega:min-h-[550px] style-vega:rounded-lg style-vega:p-6 style-nova:min-h-[460px] style-nova:rounded-lg style-nova:p-4 style-lyra:min-h-[450px] style-lyra:rounded-none style-lyra:p-4 style-maia:min-h-[550px] style-maia:rounded-xl style-maia:p-6 style-mira:min-h-[450px] style-mira:rounded-md style-mira:p-4 style-luma:min-h-[550px] style-luma:rounded-xl style-luma:p-6 style-rhea:min-h-[480px] style-rhea:rounded-2xl style-rhea:p-6 border **:data-[slot=select-trigger]:min-w-[125px]">
+              <div className="style-vega:min-h-[550px] style-vega:rounded-material-lg style-vega:p-6 style-nova:min-h-[460px] style-nova:rounded-material-lg style-nova:p-4 style-lyra:min-h-[450px] style-lyra:rounded-none style-lyra:p-4 style-maia:min-h-[550px] style-maia:rounded-xl style-maia:p-6 style-mira:min-h-[450px] style-mira:rounded-material-md style-mira:p-4 style-luma:min-h-[550px] style-luma:rounded-xl style-luma:p-6 style-rhea:min-h-[480px] style-rhea:rounded-2xl style-rhea:p-6 border **:data-[slot=select-trigger]:min-w-[125px]">
                 <TabsContent value="general">
                   <FieldSet>
                     <FieldGroup>

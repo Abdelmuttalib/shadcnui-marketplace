@@ -58,7 +58,7 @@ export function NavFavorites({
                 <span className="sr-only">More</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent
-                className="w-56 rounded-lg"
+                className="rounded-material-lg w-56"
                 side={isMobile ? "bottom" : "right"}
                 align={isMobile ? "end" : "start"}
               >

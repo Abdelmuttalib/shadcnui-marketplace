@@ -22,11 +22,11 @@ const bubbleVariants = cva(
         default:
           "*:data-[slot=bubble-content]:bg-material-primary *:data-[slot=bubble-content]:text-material-primary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-primary/80",
         secondary:
-          "*:data-[slot=bubble-content]:bg-material-secondary *:data-[slot=bubble-content]:text-material-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-material-secondary *:data-[slot=bubble-content]:text-material-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--material-secondary),var(--material-foreground)_5%)]",
         muted:
-          "*:data-[slot=bubble-content]:bg-material-muted [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--muted),var(--foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-material-muted [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--material-muted),var(--material-foreground)_5%)]",
         tinted:
-          "*:data-[slot=bubble-content]:bg-[oklch(from_var(--primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-material-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--primary)_0.35_calc(c*0.5)_h)]",
+          "*:data-[slot=bubble-content]:bg-[oklch(from_var(--material-primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-material-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--material-primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--material-primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--material-primary)_0.35_calc(c*0.5)_h)]",
         outline:
           "*:data-[slot=bubble-content]:border-material-border *:data-[slot=bubble-content]:bg-material-background [&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-material-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-input/30",
         ghost:

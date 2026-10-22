@@ -34,11 +34,11 @@ const barChartData = [
 const barChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--material-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--material-chart-2)",
   },
 } satisfies ChartConfig;
 
