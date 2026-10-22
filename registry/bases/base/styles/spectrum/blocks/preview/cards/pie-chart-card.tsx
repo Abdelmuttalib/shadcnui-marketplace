@@ -35,19 +35,19 @@ const pieChartConfig = {
   },
   chrome: {
     label: "Chrome",
-    color: "var(--chart-1)",
+    color: "var(--spectrum-chart-1)",
   },
   safari: {
     label: "Safari",
-    color: "var(--chart-2)",
+    color: "var(--spectrum-chart-2)",
   },
   firefox: {
     label: "Firefox",
-    color: "var(--chart-3)",
+    color: "var(--spectrum-chart-3)",
   },
   edge: {
     label: "Edge",
-    color: "var(--chart-4)",
+    color: "var(--spectrum-chart-4)",
   },
 } satisfies ChartConfig;
 
