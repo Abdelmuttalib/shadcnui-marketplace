@@ -3,7 +3,7 @@
 import { cn } from "cn";
 import * as React from "react";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -11,14 +11,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 
 type AgentState =
-  | "connecting"
-  | "initializing"
-  | "listening"
-  | "speaking"
-  | "thinking";
+  "connecting" | "initializing" | "listening" | "speaking" | "thinking";
 
 type AnimationState = AgentState | undefined;
 
@@ -59,9 +55,11 @@ function createAudioAnalyser(
   mediaStream: MediaStream,
   options: AudioAnalyserOptions = {}
 ) {
-  const audioContext = new (window.AudioContext ||
+  const audioContext = new (
+    window.AudioContext ||
     (window as unknown as { webkitAudioContext: typeof AudioContext })
-      .webkitAudioContext)();
+      .webkitAudioContext
+  )();
   const source = audioContext.createMediaStreamSource(mediaStream);
   const analyser = audioContext.createAnalyser();
 
@@ -278,10 +276,10 @@ const Bar = React.memo<{
   <div
     data-highlighted={isHighlighted}
     className={cn(
-      "min-w-[8px] max-w-[12px] flex-1 transition-all duration-150",
+      "max-w-[12px] min-w-[8px] flex-1 transition-all duration-150",
       "rounded-full",
-      "bg-border data-[highlighted=true]:bg-chart-3",
-      state === "speaking" && "bg-chart-3",
+      "bg-lucid-border data-[highlighted=true]:bg-lucid-chart-3",
+      state === "speaking" && "bg-lucid-chart-3",
       state === "thinking" && isHighlighted && "animate-pulse"
     )}
     style={{
@@ -401,10 +399,10 @@ const BarVisualizerComponent = React.forwardRef<
       state === "connecting"
         ? 2000 / barCount
         : state === "thinking"
-        ? 150
-        : state === "listening"
-        ? 500
-        : 1000
+          ? 150
+          : state === "listening"
+            ? 500
+            : 1000
     );
 
     return (
@@ -414,7 +412,7 @@ const BarVisualizerComponent = React.forwardRef<
         className={cn(
           "relative flex justify-center gap-1.5",
           centerAlign ? "items-center" : "items-end",
-          "bg-muted h-32 w-full overflow-hidden rounded-lg p-4",
+          "bg-lucid-muted rounded-lucid-lg h-32 w-full overflow-hidden p-4",
           className
         )}
         style={{

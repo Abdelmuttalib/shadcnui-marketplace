@@ -7,8 +7,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/ui/avatar";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardAction,
@@ -16,7 +16,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Combobox,
   ComboboxChip,
@@ -28,12 +28,12 @@ import {
   ComboboxList,
   ComboboxValue,
   useComboboxAnchor,
-} from "@/registry/bases/base/styles/default-v4/ui/combobox";
+} from "@/registry/bases/base/styles/lucid/ui/combobox";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tooltip";
+} from "@/registry/bases/base/styles/lucid/ui/tooltip";
 
 // Users available for assignment.
 const users = [

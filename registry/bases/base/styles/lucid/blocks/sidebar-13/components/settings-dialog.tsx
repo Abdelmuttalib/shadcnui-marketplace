@@ -10,15 +10,15 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/lucid/ui/dialog";
 import {
   Sidebar,
   SidebarContent,
@@ -28,7 +28,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 const data = {
   nav: [
@@ -212,7 +212,7 @@ export function SettingsDialog() {
             </SidebarContent>
           </Sidebar>
           <main className="flex h-[480px] flex-1 flex-col overflow-hidden">
-            <header className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear">
+            <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
               <div className="flex items-center gap-2 px-4">
                 <Breadcrumb>
                   <BreadcrumbList>
@@ -233,7 +233,7 @@ export function SettingsDialog() {
               }).map((_, i) => (
                 <div
                   key={i}
-                  className="bg-muted/50 aspect-video max-w-3xl rounded-xl"
+                  className="bg-lucid-muted/50 aspect-video max-w-3xl rounded-xl"
                 />
               ))}
             </div>

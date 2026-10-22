@@ -1,17 +1,17 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-10/components/app-sidebar";
-import { NavActions } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-10/components/nav-actions";
+import { AppSidebar } from "@/registry/bases/base/styles/lucid/blocks/sidebar-10/components/app-sidebar";
+import { NavActions } from "@/registry/bases/base/styles/lucid/blocks/sidebar-10/components/nav-actions";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/lucid/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/styles/lucid/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 export default function Page() {
   return (
@@ -23,7 +23,7 @@ export default function Page() {
             <SidebarTrigger />
             <Separator
               orientation="vertical"
-              className="data-vertical:h-4 data-vertical:self-auto mr-2"
+              className="mr-2 data-vertical:h-4 data-vertical:self-auto"
             />
             <Breadcrumb>
               <BreadcrumbList>
@@ -40,8 +40,8 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 px-4 py-10">
-          <div className="bg-muted/50 mx-auto h-24 w-full max-w-3xl rounded-xl" />
-          <div className="bg-muted/50 mx-auto h-full w-full max-w-3xl rounded-xl" />
+          <div className="bg-lucid-muted/50 mx-auto h-24 w-full max-w-3xl rounded-xl" />
+          <div className="bg-lucid-muted/50 mx-auto h-full w-full max-w-3xl rounded-xl" />
         </div>
       </SidebarInset>
     </SidebarProvider>

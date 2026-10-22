@@ -6,7 +6,7 @@ import { createChat } from "@/lib/ai";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/lucid/components/example";
 import {
   Attachment,
   AttachmentAction,
@@ -16,24 +16,24 @@ import {
   AttachmentGroup,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/attachment";
+} from "@/registry/bases/base/styles/lucid/ui/attachment";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
+} from "@/registry/bases/base/styles/lucid/ui/avatar";
 import {
   Bubble,
   BubbleContent,
   BubbleGroup,
   BubbleReactions,
-} from "@/registry/bases/base/styles/default-v4/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Marker,
   MarkerContent,
   MarkerIcon,
-} from "@/registry/bases/base/styles/default-v4/ui/marker";
+} from "@/registry/bases/base/styles/lucid/ui/marker";
 import {
   Message,
   MessageAvatar,
@@ -41,8 +41,8 @@ import {
   MessageFooter,
   MessageGroup,
   MessageHeader,
-} from "@/registry/bases/base/styles/default-v4/ui/message";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/lucid/ui/message";
+import { Spinner } from "@/registry/bases/base/styles/lucid/ui/spinner";
 
 type MessagePartsData = {
   deployment: {
@@ -170,7 +170,7 @@ function MessageTextPart({
 function MessageDefault() {
   return (
     <Example title="Message">
-      <div className="flex w-full min-w-0 max-w-md flex-col gap-10">
+      <div className="flex w-full max-w-md min-w-0 flex-col gap-10">
         <Message align="end">
           <MessageContent>
             <Bubble>
@@ -933,7 +933,7 @@ function MessageActions() {
               </BubbleContent>
             </Bubble>
             <MessageFooter className="gap-2">
-              <span className="text-destructive font-normal">
+              <span className="text-lucid-destructive font-normal">
                 Failed to send
               </span>
               <Button variant="secondary" size="xs">

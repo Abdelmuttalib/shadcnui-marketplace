@@ -1,13 +1,13 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/lucid/components/example";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Textarea } from "@/registry/bases/base/styles/lucid/ui/textarea";
 
 export default function TextareaExample() {
   return (

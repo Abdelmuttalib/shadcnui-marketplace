@@ -1,5 +1,5 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardAction,
@@ -8,22 +8,19 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/lucid/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import {
-  Item,
-  ItemContent,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/lucid/ui/input-group";
+import { Item, ItemContent } from "@/registry/bases/base/styles/lucid/ui/item";
 import {
   Select,
   SelectContent,
@@ -31,8 +28,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/lucid/ui/select";
+import { Separator } from "@/registry/bases/base/styles/lucid/ui/separator";
 
 const FROM_ACCOUNTS = [
   { label: "Main Checking (··8402) — $12,450.00", value: "checking" },
@@ -53,7 +50,7 @@ export function TransferFunds() {
           Move money between your connected accounts.
         </CardDescription>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-lucid-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"
@@ -114,14 +111,14 @@ export function TransferFunds() {
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-lucid-muted-foreground text-sm">
                   Estimated arrival
                 </span>
                 <span className="text-sm font-medium">Today, Apr 14</span>
               </div>
               <Separator />
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground text-sm">
+                <span className="text-lucid-muted-foreground text-sm">
                   Transaction fee
                 </span>
                 <span className="text-sm font-medium tabular-nums">$0.00</span>

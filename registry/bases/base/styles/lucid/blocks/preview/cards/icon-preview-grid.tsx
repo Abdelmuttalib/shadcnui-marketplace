@@ -3,10 +3,7 @@
 import { type IconLibraryName } from "shadcn/icons";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+import { Card, CardContent } from "@/registry/bases/base/styles/lucid/ui/card";
 
 const PREVIEW_ICONS = [
   {
@@ -131,7 +128,7 @@ export function IconPreviewGrid() {
           {PREVIEW_ICONS.map((icon, index) => (
             <div
               key={index}
-              className="ring-border style-sera:rounded-none flex size-8 items-center justify-center rounded-md ring *:[svg]:size-4"
+              className="ring-lucid-border style-sera:rounded-none rounded-lucid-md flex size-8 items-center justify-center ring *:[svg]:size-4"
             >
               <IconPlaceholder
                 lucide={icon.lucide}

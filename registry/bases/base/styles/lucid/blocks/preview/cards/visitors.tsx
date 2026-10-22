@@ -2,7 +2,7 @@
 
 import { Area, AreaChart, XAxis } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
+import { Badge } from "@/registry/bases/base/styles/lucid/ui/badge";
 import {
   Card,
   CardAction,
@@ -10,13 +10,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/lucid/ui/chart";
 
 const areaChartData = [
   { month: "January", desktop: 186 },
@@ -30,7 +30,7 @@ const areaChartData = [
 const areaChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--lucid-chart-1)",
   },
 } satisfies ChartConfig;
 

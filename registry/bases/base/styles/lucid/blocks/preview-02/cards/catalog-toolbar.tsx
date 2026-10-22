@@ -1,16 +1,16 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/lucid/ui/input-group";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/toggle-group";
+} from "@/registry/bases/base/styles/lucid/ui/toggle-group";
 
 export function CatalogToolbar() {
   return (

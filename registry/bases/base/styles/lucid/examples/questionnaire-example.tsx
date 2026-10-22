@@ -6,8 +6,8 @@ import { toast } from "sonner";
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardAction,
@@ -16,7 +16,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -25,7 +25,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/lucid/ui/dialog";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -42,7 +42,7 @@ import {
   QuestionnaireSkip,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/questionnaire";
+} from "@/registry/bases/base/styles/lucid/ui/questionnaire";
 
 const questionnaireItems = [
   {
@@ -239,7 +239,7 @@ function QuestionnaireDialog() {
                 Answer three questions to shape the next prototype.
               </DialogDescription>
               <QuestionnaireProgress
-                className="text-foreground font-semibold uppercase tracking-widest"
+                className="text-lucid-foreground font-semibold tracking-widest uppercase"
                 render={(props, state) => (
                   <span {...props}>
                     Question {state.current} of {state.total}

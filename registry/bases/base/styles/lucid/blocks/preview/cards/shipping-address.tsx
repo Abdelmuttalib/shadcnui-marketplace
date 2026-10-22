@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -8,14 +8,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/lucid/ui/card";
+import { Checkbox } from "@/registry/bases/base/styles/lucid/ui/checkbox";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   Select,
   SelectContent,
@@ -23,7 +23,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/lucid/ui/select";
 
 export function ShippingAddress() {
   return (

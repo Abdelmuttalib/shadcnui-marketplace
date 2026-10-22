@@ -6,29 +6,29 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/ui/avatar";
+import { Badge } from "@/registry/bases/base/styles/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
+} from "@/registry/bases/base/styles/lucid/ui/card";
+import { Checkbox } from "@/registry/bases/base/styles/lucid/ui/checkbox";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
+import { Label } from "@/registry/bases/base/styles/lucid/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
-import { Skeleton } from "@/registry/bases/base/styles/default-v4/ui/skeleton";
-import { Switch } from "@/registry/bases/base/styles/default-v4/ui/switch";
+} from "@/registry/bases/base/styles/lucid/ui/select";
+import { Separator } from "@/registry/bases/base/styles/lucid/ui/separator";
+import { Skeleton } from "@/registry/bases/base/styles/lucid/ui/skeleton";
+import { Switch } from "@/registry/bases/base/styles/lucid/ui/switch";
 import {
   Table,
   TableBody,
@@ -36,13 +36,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/base/styles/default-v4/ui/table";
+} from "@/registry/bases/base/styles/lucid/ui/table";
 import {
   Tabs,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/lucid/ui/tabs";
+import { Textarea } from "@/registry/bases/base/styles/lucid/ui/textarea";
 
 const BUTTON_VARIANTS: React.ComponentProps<typeof Button>["variant"][] = [
   "default",
@@ -61,7 +61,7 @@ const BADGE_VARIANTS: React.ComponentProps<typeof Badge>["variant"][] = [
 ];
 
 export function ShowcaseComponents() {
-  const style = "default-v4";
+  const style = "lucid";
 
   return (
     <div className="grid gap-4 lg:grid-cols-4 lg:gap-6">
@@ -198,7 +198,7 @@ export function ShowcaseComponents() {
         <div className="w-full max-w-xs">
           <p className="text-sm">Above the separator</p>
           <Separator className="my-2" />
-          <p className="text-dft-muted-foreground text-sm">
+          <p className="text-lucid-muted-foreground text-sm">
             Below the separator
           </p>
         </div>

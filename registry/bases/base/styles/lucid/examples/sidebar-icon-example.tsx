@@ -7,13 +7,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/ui/avatar";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/collapsible";
+} from "@/registry/bases/base/styles/lucid/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,14 +22,14 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/lucid/ui/dropdown-menu";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/lucid/ui/item";
 import {
   Sidebar,
   SidebarContent,
@@ -47,7 +47,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 export default function SidebarIconExample() {
   const data = {
@@ -245,7 +245,7 @@ export default function SidebarIconExample() {
                   render={
                     <SidebarMenuButton
                       size="lg"
-                      className="data-open:bg-sidebar-accent data-open:text-sidebar-accent-foreground"
+                      className="data-open:bg-lucid-sidebar-accent data-open:text-lucid-sidebar-accent-foreground"
                     />
                   }
                 >
@@ -339,7 +339,7 @@ export default function SidebarIconExample() {
                         hugeicons="ArrowRight01Icon"
                         phosphor="CaretRightIcon"
                         remixicon="RiArrowRightSLine"
-                        className="group-data-open/collapsible:rotate-90 ml-auto transition-transform duration-100"
+                        className="ml-auto transition-transform duration-100 group-data-open/collapsible:rotate-90"
                       />
                     </CollapsibleTrigger>
                     <CollapsibleContent>
@@ -382,13 +382,15 @@ export default function SidebarIconExample() {
                   render={
                     <SidebarMenuButton
                       size="lg"
-                      className="data-open:bg-sidebar-accent data-open:text-sidebar-accent-foreground"
+                      className="data-open:bg-lucid-sidebar-accent data-open:text-lucid-sidebar-accent-foreground"
                     />
                   }
                 >
                   <Avatar>
                     <AvatarImage src={data.user.avatar} alt={data.user.name} />
-                    <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                    <AvatarFallback className="rounded-lucid-lg">
+                      CN
+                    </AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-medium">
@@ -442,18 +444,18 @@ export default function SidebarIconExample() {
         <SidebarRail />
       </Sidebar>
       <SidebarInset>
-        <header className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
+        <header className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
+            <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
+            <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-lucid-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

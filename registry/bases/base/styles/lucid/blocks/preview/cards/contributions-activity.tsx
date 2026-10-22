@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -8,8 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/lucid/ui/card";
+import { Checkbox } from "@/registry/bases/base/styles/lucid/ui/checkbox";
 import {
   Field,
   FieldContent,
@@ -18,7 +18,7 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/lucid/ui/field";
 
 export function ContributionsActivity() {
   return (

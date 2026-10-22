@@ -1,14 +1,14 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   Sheet,
   SheetClose,
@@ -18,7 +18,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sheet";
+} from "@/registry/bases/base/styles/lucid/ui/sheet";
 
 export default function SheetExample() {
   return (

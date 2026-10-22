@@ -4,12 +4,12 @@ import * as React from "react";
 
 import { FONTS } from "@/app/(www)/(create)/lib/fonts";
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Dialog,
   DialogClose,
@@ -19,13 +19,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/lucid/ui/dialog";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   Select,
   SelectContent,
@@ -33,8 +33,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/lucid/ui/select";
+import { Textarea } from "@/registry/bases/base/styles/lucid/ui/textarea";
 
 export function TypographySpecimen() {
   const [params] = useDesignSystemSearchParams();
@@ -57,17 +57,17 @@ export function TypographySpecimen() {
   return (
     <Card>
       <CardContent className="flex flex-col gap-2">
-        <div className="text-muted-foreground text-xs font-medium uppercase">
+        <div className="text-lucid-muted-foreground text-xs font-medium uppercase">
           {headingLabel} - {bodyLabel}
         </div>
         <p className="cn-font-heading style-sera:text-lg style-sera:font-semibold style-sera:tracking-wider style-sera:uppercase text-2xl font-medium">
           Designing with rhythm and hierarchy.
         </p>
-        <p className="text-muted-foreground text-sm leading-relaxed">
+        <p className="text-lucid-muted-foreground text-sm leading-relaxed">
           A strong body style keeps long-form content readable and balances the
           visual weight of headings.
         </p>
-        <p className="text-muted-foreground text-sm leading-relaxed">
+        <p className="text-lucid-muted-foreground text-sm leading-relaxed">
           Thoughtful spacing and cadence help paragraphs scan quickly without
           feeling dense.
         </p>

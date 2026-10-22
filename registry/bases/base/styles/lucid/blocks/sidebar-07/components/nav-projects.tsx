@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/lucid/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 export function NavProjects({
   projects,
@@ -43,7 +43,7 @@ export function NavProjects({
                 render={
                   <SidebarMenuAction
                     showOnHover
-                    className="aria-expanded:bg-muted"
+                    className="aria-expanded:bg-lucid-muted"
                   />
                 }
               >
@@ -97,14 +97,14 @@ export function NavProjects({
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-sidebar-foreground/70">
+          <SidebarMenuButton className="text-lucid-sidebar-foreground/70">
             <IconPlaceholder
               lucide="MoreHorizontalIcon"
               tabler="IconDots"
               hugeicons="MoreHorizontalCircle01Icon"
               phosphor="DotsThreeOutlineIcon"
               remixicon="RiMoreLine"
-              className="text-sidebar-foreground/70"
+              className="text-lucid-sidebar-foreground/70"
             />
             <span>More</span>
           </SidebarMenuButton>

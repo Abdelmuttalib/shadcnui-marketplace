@@ -1,18 +1,15 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Card, CardContent } from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/bases/base/styles/default-v4/ui/carousel";
+} from "@/registry/bases/base/styles/lucid/ui/carousel";
 
 export default function CarouselExample() {
   return (

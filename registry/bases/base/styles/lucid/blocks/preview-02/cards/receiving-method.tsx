@@ -1,7 +1,7 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardAction,
@@ -10,7 +10,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Field,
   FieldContent,
@@ -20,12 +20,12 @@ import {
   FieldLegend,
   FieldSet,
   FieldTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/radio-group";
+} from "@/registry/bases/base/styles/lucid/ui/radio-group";
 
 export function ReceivingMethod() {
   return (
@@ -34,7 +34,7 @@ export function ReceivingMethod() {
         <CardDescription>Payout Preferences</CardDescription>
         <CardTitle>Receiving Method</CardTitle>
         <CardAction>
-          <Button variant="ghost" size="icon-sm" className="bg-muted">
+          <Button variant="ghost" size="icon-sm" className="bg-lucid-muted">
             <IconPlaceholder
               lucide="XIcon"
               tabler="IconX"

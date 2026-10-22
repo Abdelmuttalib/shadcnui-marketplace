@@ -3,13 +3,13 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { SearchForm } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-02/components/search-form";
-import { VersionSwitcher } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-02/components/version-switcher";
+import { SearchForm } from "@/registry/bases/base/styles/lucid/blocks/sidebar-02/components/search-form";
+import { VersionSwitcher } from "@/registry/bases/base/styles/lucid/blocks/sidebar-02/components/version-switcher";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/collapsible";
+} from "@/registry/bases/base/styles/lucid/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -21,7 +21,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -185,7 +185,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           >
             <SidebarGroup>
               <SidebarGroupLabel
-                className="group/label text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm"
+                className="group/label text-lucid-sidebar-foreground hover:bg-lucid-sidebar-accent hover:text-lucid-sidebar-accent-foreground text-sm"
                 render={<CollapsibleTrigger />}
               >
                 {item.title}{" "}
@@ -195,7 +195,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   hugeicons="ArrowRight01Icon"
                   phosphor="CaretRightIcon"
                   remixicon="RiArrowRightSLine"
-                  className="group-data-open/collapsible:rotate-90 ml-auto transition-transform"
+                  className="ml-auto transition-transform group-data-open/collapsible:rotate-90"
                 />
               </SidebarGroupLabel>
               <CollapsibleContent>

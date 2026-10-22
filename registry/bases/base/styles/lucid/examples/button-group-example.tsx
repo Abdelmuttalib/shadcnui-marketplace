@@ -4,12 +4,12 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/registry/bases/base/styles/default-v4/ui/button-group";
+} from "@/registry/bases/base/styles/lucid/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,18 +17,15 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
-import {
-  Field,
-  FieldGroup,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/dropdown-menu";
+import { Field, FieldGroup } from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
+} from "@/registry/bases/base/styles/lucid/ui/input-group";
+import { Label } from "@/registry/bases/base/styles/lucid/ui/label";
 import {
   Select,
   SelectContent,
@@ -36,12 +33,12 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
+} from "@/registry/bases/base/styles/lucid/ui/select";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tooltip";
+} from "@/registry/bases/base/styles/lucid/ui/tooltip";
 
 export default function ButtonGroupExample() {
   return (
@@ -112,7 +109,7 @@ function ButtonGroupWithText() {
           <Input
             id="input-text"
             placeholder="Type something here..."
-            className="style-luma:border-border"
+            className="style-luma:border-lucid-border"
           />
         </ButtonGroup>
       </div>
@@ -332,7 +329,7 @@ function ButtonGroupWithInputGroup() {
           <InputGroupInput placeholder="Type to search..." />
           <InputGroupAddon
             align="inline-start"
-            className="text-muted-foreground"
+            className="text-lucid-muted-foreground"
           >
             <IconPlaceholder
               lucide="SearchIcon"
@@ -357,12 +354,12 @@ function ButtonGroupWithFields() {
           <ButtonGroup>
             <InputGroup>
               <InputGroupInput id="width" />
-              <InputGroupAddon className="text-muted-foreground">
+              <InputGroupAddon className="text-lucid-muted-foreground">
                 W
               </InputGroupAddon>
               <InputGroupAddon
                 align="inline-end"
-                className="text-muted-foreground"
+                className="text-lucid-muted-foreground"
               >
                 px
               </InputGroupAddon>

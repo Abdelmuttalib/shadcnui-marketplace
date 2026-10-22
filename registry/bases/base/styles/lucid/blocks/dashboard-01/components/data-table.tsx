@@ -43,16 +43,16 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { useIsMobile } from "@/registry/bases/base/styles/default-v4/hooks/use-mobile";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { useIsMobile } from "@/registry/bases/base/styles/lucid/hooks/use-mobile";
+import { Badge } from "@/registry/bases/base/styles/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
-import { Checkbox } from "@/registry/bases/base/styles/default-v4/ui/checkbox";
+} from "@/registry/bases/base/styles/lucid/ui/chart";
+import { Checkbox } from "@/registry/bases/base/styles/lucid/ui/checkbox";
 import {
   Drawer,
   DrawerClose,
@@ -62,7 +62,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/drawer";
+} from "@/registry/bases/base/styles/lucid/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -70,9 +70,9 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
+} from "@/registry/bases/base/styles/lucid/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
+import { Label } from "@/registry/bases/base/styles/lucid/ui/label";
 import {
   Select,
   SelectContent,
@@ -80,8 +80,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/base/styles/default-v4/ui/select";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/lucid/ui/select";
+import { Separator } from "@/registry/bases/base/styles/lucid/ui/separator";
 import {
   Table,
   TableBody,
@@ -89,13 +89,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/base/styles/default-v4/ui/table";
+} from "@/registry/bases/base/styles/lucid/ui/table";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
+} from "@/registry/bases/base/styles/lucid/ui/tabs";
 
 // New in v9: declare the features this table uses — anything you don't
 // register is tree-shaken out of the bundle.
@@ -136,7 +136,7 @@ function DragHandle({ id }: { id: number }) {
       {...listeners}
       variant="ghost"
       size="icon"
-      className="text-muted-foreground size-7 hover:bg-transparent"
+      className="text-lucid-muted-foreground size-7 hover:bg-transparent"
     >
       <IconPlaceholder
         lucide="GripVerticalIcon"
@@ -144,7 +144,7 @@ function DragHandle({ id }: { id: number }) {
         hugeicons="DragDropVerticalIcon"
         phosphor="DotsSixVerticalIcon"
         remixicon="RiDraggable"
-        className="text-muted-foreground size-3"
+        className="text-lucid-muted-foreground size-3"
       />
       <span className="sr-only">Drag to reorder</span>
     </Button>
@@ -194,7 +194,7 @@ const columns = columnHelper.columns([
     header: "Section Type",
     cell: ({ row }) => (
       <div className="w-32">
-        <Badge variant="outline" className="text-muted-foreground px-1.5">
+        <Badge variant="outline" className="text-lucid-muted-foreground px-1.5">
           {row.original.type}
         </Badge>
       </div>
@@ -203,7 +203,7 @@ const columns = columnHelper.columns([
   columnHelper.accessor("status", {
     header: "Status",
     cell: ({ row }) => (
-      <Badge variant="outline" className="text-muted-foreground px-1.5">
+      <Badge variant="outline" className="text-lucid-muted-foreground px-1.5">
         {row.original.status === "Done" ? (
           <IconPlaceholder
             lucide="CircleCheckIcon"
@@ -243,7 +243,7 @@ const columns = columnHelper.columns([
           Target
         </Label>
         <Input
-          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+          className="hover:bg-lucid-input/30 focus-visible:bg-lucid-background dark:hover:bg-lucid-input/30 dark:focus-visible:bg-lucid-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
           defaultValue={row.original.target}
           id={`${row.original.id}-target`}
         />
@@ -267,7 +267,7 @@ const columns = columnHelper.columns([
           Limit
         </Label>
         <Input
-          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+          className="hover:bg-lucid-input/30 focus-visible:bg-lucid-background dark:hover:bg-lucid-input/30 dark:focus-visible:bg-lucid-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
           defaultValue={row.original.limit}
           id={`${row.original.id}-limit`}
         />
@@ -320,7 +320,7 @@ const columns = columnHelper.columns([
           render={
             <Button
               variant="ghost"
-              className="text-muted-foreground data-open:bg-muted size-8 flex"
+              className="text-lucid-muted-foreground data-open:bg-lucid-muted flex size-8"
               size="icon"
             />
           }
@@ -447,7 +447,7 @@ export function DataTable({
           ]}
         >
           <SelectTrigger
-            className="@4xl/main:hidden flex w-fit"
+            className="flex w-fit @4xl/main:hidden"
             size="sm"
             id="view-selector"
           >
@@ -462,7 +462,7 @@ export function DataTable({
             </SelectGroup>
           </SelectContent>
         </Select>
-        <TabsList className="**:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:bg-muted-foreground/30 **:data-[slot=badge]:px-1 @4xl/main:flex hidden">
+        <TabsList className="**:data-[slot=badge]:bg-lucid-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
           <TabsTrigger value="outline">Outline</TabsTrigger>
           <TabsTrigger value="past-performance">
             Past Performance <Badge variant="secondary">3</Badge>
@@ -535,7 +535,7 @@ export function DataTable({
         value="outline"
         className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6"
       >
-        <div className="overflow-hidden rounded-lg border">
+        <div className="rounded-lucid-lg overflow-hidden border">
           <DndContext
             collisionDetection={closestCenter}
             modifiers={[restrictToVerticalAxis]}
@@ -544,7 +544,7 @@ export function DataTable({
             id={sortableId}
           >
             <Table>
-              <TableHeader className="bg-muted sticky top-0 z-10">
+              <TableHeader className="bg-lucid-muted sticky top-0 z-10">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>
                     {headerGroup.headers.map((header) => {
@@ -584,7 +584,7 @@ export function DataTable({
           </DndContext>
         </div>
         <div className="flex items-center justify-between px-4">
-          <div className="text-muted-foreground hidden flex-1 text-sm lg:flex">
+          <div className="text-lucid-muted-foreground hidden flex-1 text-sm lg:flex">
             {table.getFilteredSelectedRowModel().rows.length} of{" "}
             {table.getFilteredRowModel().rows.length} row(s) selected.
           </div>
@@ -671,7 +671,7 @@ export function DataTable({
               </Button>
               <Button
                 variant="outline"
-                className="size-8 hidden lg:flex"
+                className="hidden size-8 lg:flex"
                 size="icon"
                 onClick={() => table.setPageIndex(table.getPageCount() - 1)}
                 disabled={!table.getCanNextPage()}
@@ -693,16 +693,16 @@ export function DataTable({
         value="past-performance"
         className="flex flex-col px-4 lg:px-6"
       >
-        <div className="aspect-video w-full flex-1 rounded-lg border border-dashed"></div>
+        <div className="rounded-lucid-lg aspect-video w-full flex-1 border border-dashed"></div>
       </TabsContent>
       <TabsContent value="key-personnel" className="flex flex-col px-4 lg:px-6">
-        <div className="aspect-video w-full flex-1 rounded-lg border border-dashed"></div>
+        <div className="rounded-lucid-lg aspect-video w-full flex-1 border border-dashed"></div>
       </TabsContent>
       <TabsContent
         value="focus-documents"
         className="flex flex-col px-4 lg:px-6"
       >
-        <div className="aspect-video w-full flex-1 rounded-lg border border-dashed"></div>
+        <div className="rounded-lucid-lg aspect-video w-full flex-1 border border-dashed"></div>
       </TabsContent>
     </Tabs>
   );
@@ -742,11 +742,11 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--primary)",
+    color: "var(--lucid-primary)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--primary)",
+    color: "var(--lucid-primary)",
   },
 } satisfies ChartConfig;
 function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
@@ -757,7 +757,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
         render={
           <Button
             variant="link"
-            className="text-foreground w-fit px-0 text-left"
+            className="text-lucid-foreground w-fit px-0 text-left"
           />
         }
       >
@@ -815,7 +815,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
               </ChartContainer>
               <Separator />
               <div className="grid gap-2">
-                <div className="flex gap-2 font-medium leading-none">
+                <div className="flex gap-2 leading-none font-medium">
                   Trending up by 5.2% this month{" "}
                   <IconPlaceholder
                     lucide="TrendingUpIcon"
@@ -826,7 +826,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
                     className="size-4"
                   />
                 </div>
-                <div className="text-muted-foreground">
+                <div className="text-lucid-muted-foreground">
                   Showing total visitors for the last 6 months. This is just
                   some random text to test the layout. It spans multiple lines
                   and should wrap around.

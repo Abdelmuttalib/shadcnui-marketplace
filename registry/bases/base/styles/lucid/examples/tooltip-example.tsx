@@ -4,14 +4,14 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import { Kbd } from "@/registry/bases/base/styles/default-v4/ui/kbd";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
+import { Kbd } from "@/registry/bases/base/styles/lucid/ui/kbd";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tooltip";
+} from "@/registry/bases/base/styles/lucid/ui/tooltip";
 
 export default function TooltipExample() {
   return (
@@ -157,7 +157,7 @@ function TooltipOnLink() {
           render={
             <a
               href="#"
-              className="text-primary w-fit text-sm underline-offset-4 hover:underline"
+              className="text-lucid-primary w-fit text-sm underline-offset-4 hover:underline"
               onClick={(e) => e.preventDefault()}
             />
           }

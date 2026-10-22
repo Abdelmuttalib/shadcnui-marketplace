@@ -1,7 +1,7 @@
 "use client";
 
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Badge } from "@/registry/bases/base/styles/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardAction,
@@ -10,7 +10,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Table,
   TableBody,
@@ -19,7 +19,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/base/styles/default-v4/ui/table";
+} from "@/registry/bases/base/styles/lucid/ui/table";
 
 const INVOICE_ITEMS = [
   { item: "Design System License", qty: 1, unitPrice: 499 },

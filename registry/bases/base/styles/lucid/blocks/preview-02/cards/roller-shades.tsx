@@ -9,12 +9,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
+} from "@/registry/bases/base/styles/lucid/ui/card";
+import { Slider } from "@/registry/bases/base/styles/lucid/ui/slider";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/bases/base/styles/default-v4/ui/toggle-group";
+} from "@/registry/bases/base/styles/lucid/ui/toggle-group";
 
 export function RollerShades() {
   const [position, setPosition] = React.useState([50]);
@@ -29,14 +29,14 @@ export function RollerShades() {
         <CardDescription>Roller Shades</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <div className="bg-muted flex h-32 flex-col overflow-hidden rounded-lg border">
+        <div className="bg-lucid-muted rounded-lucid-lg flex h-32 flex-col overflow-hidden border">
           <div
-            className="bg-muted-foreground transition-all duration-300"
+            className="bg-lucid-muted-foreground transition-all duration-300"
             style={{ height: `${position[0]}%` }}
           />
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-muted-foreground text-xs font-medium uppercase tracking-wider">
+          <span className="text-lucid-muted-foreground text-xs font-medium tracking-wider uppercase">
             Open
           </span>
           <Slider
@@ -47,7 +47,7 @@ export function RollerShades() {
             max={100}
             className="flex-1"
           />
-          <span className="text-muted-foreground text-xs font-medium uppercase tracking-wider">
+          <span className="text-lucid-muted-foreground text-xs font-medium tracking-wider uppercase">
             Close
           </span>
         </div>

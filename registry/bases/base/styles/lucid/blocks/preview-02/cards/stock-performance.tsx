@@ -9,13 +9,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/lucid/ui/chart";
 import {
   Combobox,
   ComboboxContent,
@@ -23,13 +23,13 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@/registry/bases/base/styles/default-v4/ui/combobox";
+} from "@/registry/bases/base/styles/lucid/ui/combobox";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Separator } from "@/registry/bases/base/styles/lucid/ui/separator";
 
 const TICKERS = ["VOO", "VIG", "AAPL", "MSFT", "GOOGL", "AMZN", "TSLA"];
 
@@ -64,7 +64,7 @@ const DEFAULT_DATA = [
 const chartConfig = {
   price: {
     label: "Price",
-    color: "var(--chart-1)",
+    color: "var(--lucid-chart-1)",
   },
 } satisfies ChartConfig;
 

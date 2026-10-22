@@ -2,20 +2,20 @@
 
 import { Bar, BarChart, XAxis } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Badge } from "@/registry/bases/base/styles/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/bases/base/styles/default-v4/ui/chart";
+} from "@/registry/bases/base/styles/lucid/ui/chart";
 
 const activityData = [
   { month: "Jan", amount: 40 },
@@ -35,7 +35,7 @@ const activityData = [
 const chartConfig = {
   amount: {
     label: "Activity",
-    color: "var(--chart-2)",
+    color: "var(--lucid-chart-2)",
   },
 } satisfies ChartConfig;
 

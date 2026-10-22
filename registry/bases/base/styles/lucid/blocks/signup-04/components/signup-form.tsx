@@ -1,18 +1,15 @@
 import { cn } from "cn";
 
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 
 export function SignupForm({
   className,
@@ -26,7 +23,7 @@ export function SignupForm({
             <FieldGroup>
               <div className="flex flex-col items-center gap-2 text-center">
                 <h1 className="text-2xl font-bold">Create your account</h1>
-                <p className="text-muted-foreground text-balance text-sm">
+                <p className="text-lucid-muted-foreground text-sm text-balance">
                   Enter your email below to create your account
                 </p>
               </div>
@@ -63,7 +60,7 @@ export function SignupForm({
               <Field>
                 <Button type="submit">Create Account</Button>
               </Field>
-              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
+              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-lucid-card">
                 Or continue with
               </FieldSeparator>
               <Field className="grid grid-cols-3 gap-4">
@@ -100,7 +97,7 @@ export function SignupForm({
               </FieldDescription>
             </FieldGroup>
           </form>
-          <div className="bg-muted relative hidden md:block">
+          <div className="bg-lucid-muted relative hidden md:block">
             <img
               src="/placeholder.svg"
               alt="Image"

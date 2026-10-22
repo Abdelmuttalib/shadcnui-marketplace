@@ -2,9 +2,9 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Badge } from "@/registry/bases/base/styles/default-v4/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Badge } from "@/registry/bases/base/styles/lucid/ui/badge";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -12,17 +12,14 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/empty";
-import {
-  Field,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/lucid/ui/empty";
+import { Field, FieldLabel } from "@/registry/bases/base/styles/lucid/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
+} from "@/registry/bases/base/styles/lucid/ui/input-group";
+import { Spinner } from "@/registry/bases/base/styles/lucid/ui/spinner";
 
 export default function SpinnerExample() {
   return (
@@ -135,7 +132,7 @@ function SpinnerInEmpty() {
             variant="link"
             render={<a href="#" />}
             nativeButton={false}
-            className="text-muted-foreground"
+            className="text-lucid-muted-foreground"
           >
             Learn more{" "}
             <IconPlaceholder

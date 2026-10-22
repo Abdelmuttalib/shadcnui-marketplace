@@ -5,7 +5,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/styles/default-v4/ui/avatar";
+} from "@/registry/bases/base/styles/lucid/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,13 +14,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/lucid/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 export function NavUser({
   user,
@@ -40,7 +40,7 @@ export function NavUser({
             render={
               <SidebarMenuButton
                 size="lg"
-                className="aria-expanded:bg-muted aria-expanded:text-foreground"
+                className="aria-expanded:bg-lucid-muted aria-expanded:text-lucid-foreground"
               />
             }
           >
@@ -58,11 +58,11 @@ export function NavUser({
               hugeicons="UnfoldMoreIcon"
               phosphor="CaretUpDownIcon"
               remixicon="RiArrowUpDownLine"
-              className="size-4 ml-auto"
+              className="ml-auto size-4"
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="min-w-56 rounded-lg"
+            className="rounded-lucid-lg min-w-56"
             side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}

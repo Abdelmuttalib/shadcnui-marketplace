@@ -3,9 +3,9 @@
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
-import { toast } from "@/registry/bases/base/styles/default-v4/ui/toast";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
+import { toast } from "@/registry/bases/base/styles/lucid/ui/toast";
 
 export default function ToastExample() {
   return (

@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default-v4/blocks/sidebar-09/components/app-sidebar";
+import { AppSidebar } from "@/registry/bases/base/styles/lucid/blocks/sidebar-09/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default-v4/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default-v4/ui/separator";
+} from "@/registry/bases/base/styles/lucid/ui/breadcrumb";
+import { Separator } from "@/registry/bases/base/styles/lucid/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 export default function Page() {
   return (
@@ -25,11 +25,11 @@ export default function Page() {
     >
       <AppSidebar />
       <SidebarInset>
-        <header className="bg-background sticky top-0 flex shrink-0 items-center gap-2 border-b p-4">
+        <header className="bg-lucid-background sticky top-0 flex shrink-0 items-center gap-2 border-b p-4">
           <SidebarTrigger className="-ml-1" />
           <Separator
             orientation="vertical"
-            className="data-vertical:h-4 data-vertical:self-auto mr-2"
+            className="mr-2 data-vertical:h-4 data-vertical:self-auto"
           />
           <Breadcrumb>
             <BreadcrumbList>
@@ -47,7 +47,7 @@ export default function Page() {
           {Array.from({ length: 24 }).map((_, index) => (
             <div
               key={index}
-              className="bg-muted/50 aspect-video h-12 w-full rounded-lg"
+              className="bg-lucid-muted/50 rounded-lucid-lg aspect-video h-12 w-full"
             />
           ))}
         </div>

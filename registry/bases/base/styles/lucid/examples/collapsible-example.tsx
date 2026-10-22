@@ -6,31 +6,31 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/collapsible";
+} from "@/registry/bases/base/styles/lucid/ui/collapsible";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   Tabs,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
+} from "@/registry/bases/base/styles/lucid/ui/tabs";
 
 export default function CollapsibleExample() {
   return (
@@ -105,7 +105,7 @@ function CollapsibleFileTree() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="hover:bg-accent hover:text-accent-foreground group w-full justify-start transition-none"
+                className="hover:bg-lucid-accent hover:text-lucid-accent-foreground group w-full justify-start transition-none"
               />
             }
           >
@@ -126,7 +126,7 @@ function CollapsibleFileTree() {
             />
             {fileItem.name}
           </CollapsibleTrigger>
-          <CollapsibleContent className="style-lyra:ml-4 ml-5 mt-1">
+          <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
               {fileItem.items.map((child) => renderItem(child))}
             </div>
@@ -139,7 +139,7 @@ function CollapsibleFileTree() {
         key={fileItem.name}
         variant="link"
         size="sm"
-        className="text-foreground w-full justify-start gap-2"
+        className="text-lucid-foreground w-full justify-start gap-2"
       >
         <IconPlaceholder
           lucide="FileIcon"
@@ -205,7 +205,7 @@ function CollapsibleSettings() {
                 </FieldLabel>
                 <Input id="radius" placeholder="0" defaultValue={0} />
               </Field>
-              <CollapsibleContent className="grid-cols-subgrid col-span-full grid gap-2">
+              <CollapsibleContent className="col-span-full grid grid-cols-subgrid gap-2">
                 <Field>
                   <FieldLabel htmlFor="radius-x" className="sr-only">
                     Radius X

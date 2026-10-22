@@ -1,28 +1,28 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
-import { Field } from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/lucid/ui/dropdown-menu";
+import { Field } from "@/registry/bases/base/styles/lucid/ui/field";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/lucid/ui/item";
 import {
   Sidebar,
   SidebarContent,
@@ -37,7 +37,7 @@ import {
   SidebarProvider,
   SidebarRail,
   SidebarTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+} from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 export default function SidebarFloatingExample() {
   const data = {
@@ -171,7 +171,7 @@ export default function SidebarFloatingExample() {
   };
 
   return (
-    <SidebarProvider className="bg-background">
+    <SidebarProvider className="bg-lucid-background">
       <Sidebar variant="floating">
         <SidebarHeader>
           <SidebarMenu>
@@ -195,7 +195,7 @@ export default function SidebarFloatingExample() {
                   <SidebarMenuItem>
                     <DropdownMenuTrigger
                       render={
-                        <SidebarMenuButton className="data-popup-open:bg-sidebar-accent data-popup-open:text-sidebar-accent-foreground" />
+                        <SidebarMenuButton className="data-popup-open:bg-lucid-sidebar-accent data-popup-open:text-lucid-sidebar-accent-foreground" />
                       }
                     >
                       {item.title}{" "}
@@ -244,7 +244,7 @@ export default function SidebarFloatingExample() {
                   <Field>
                     <SidebarInput type="email" placeholder="Email" />
                     <Button
-                      className="bg-sidebar-primary text-sidebar-primary-foreground w-full"
+                      className="bg-lucid-sidebar-primary text-lucid-sidebar-primary-foreground w-full"
                       size="sm"
                     >
                       Subscribe
@@ -263,11 +263,11 @@ export default function SidebarFloatingExample() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
+            <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
+            <div className="bg-lucid-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-lucid-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

@@ -6,7 +6,7 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
+} from "@/registry/bases/base/styles/lucid/components/example";
 import {
   Item,
   ItemActions,
@@ -14,13 +14,13 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/lucid/ui/item";
 import {
   Progress,
   ProgressLabel,
   ProgressValue,
-} from "@/registry/bases/base/styles/default-v4/ui/progress";
-import { Slider } from "@/registry/bases/base/styles/default-v4/ui/slider";
+} from "@/registry/bases/base/styles/lucid/ui/progress";
+import { Slider } from "@/registry/bases/base/styles/lucid/ui/slider";
 
 export default function ProgressExample() {
   return (
@@ -130,7 +130,7 @@ function FileUploadList() {
               <Progress value={file.progress} className="w-32" />
             </ItemContent>
             <ItemActions className="w-16 justify-end">
-              <span className="text-muted-foreground text-sm">
+              <span className="text-lucid-muted-foreground text-sm">
                 {file.timeRemaining}
               </span>
             </ItemActions>

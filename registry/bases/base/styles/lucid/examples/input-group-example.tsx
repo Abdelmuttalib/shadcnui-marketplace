@@ -7,12 +7,12 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/registry/bases/base/styles/default-v4/ui/button-group";
+} from "@/registry/bases/base/styles/lucid/ui/button-group";
 import {
   Card,
   CardContent,
@@ -20,20 +20,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/lucid/ui/dropdown-menu";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
@@ -41,8 +41,8 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
-import { Kbd, KbdGroup } from "@/registry/bases/base/styles/default-v4/ui/kbd";
+} from "@/registry/bases/base/styles/lucid/ui/input-group";
+import { Kbd, KbdGroup } from "@/registry/bases/base/styles/lucid/ui/kbd";
 import {
   Popover,
   PopoverContent,
@@ -50,14 +50,14 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/popover";
-import { Spinner } from "@/registry/bases/base/styles/default-v4/ui/spinner";
-import { Textarea } from "@/registry/bases/base/styles/default-v4/ui/textarea";
+} from "@/registry/bases/base/styles/lucid/ui/popover";
+import { Spinner } from "@/registry/bases/base/styles/lucid/ui/spinner";
+import { Textarea } from "@/registry/bases/base/styles/lucid/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tooltip";
+} from "@/registry/bases/base/styles/lucid/ui/tooltip";
 
 export default function InputGroupExample() {
   const [country, setCountry] = useState("+1");
@@ -133,7 +133,7 @@ function InputGroupWithAddons() {
                 hugeicons="SearchIcon"
                 phosphor="MagnifyingGlassIcon"
                 remixicon="RiSearchLine"
-                className="text-muted-foreground"
+                className="text-lucid-muted-foreground"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -168,7 +168,7 @@ function InputGroupWithAddons() {
                 hugeicons="VoiceIcon"
                 phosphor="MicrophoneIcon"
                 remixicon="RiMicLine"
-                className="text-muted-foreground"
+                className="text-lucid-muted-foreground"
               />
             </InputGroupAddon>
             <InputGroupAddon align="inline-end">
@@ -195,7 +195,7 @@ function InputGroupWithAddons() {
                 hugeicons="AlertCircleIcon"
                 phosphor="InfoIcon"
                 remixicon="RiInformationLine"
-                className="text-muted-foreground ml-auto"
+                className="text-lucid-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -212,7 +212,7 @@ function InputGroupWithAddons() {
                 hugeicons="AlertCircleIcon"
                 phosphor="InfoIcon"
                 remixicon="RiInformationLine"
-                className="text-muted-foreground ml-auto"
+                className="text-lucid-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -401,7 +401,7 @@ function InputGroupWithTooltip({
               <DropdownMenu>
                 <DropdownMenuTrigger
                   render={
-                    <InputGroupButton className="text-muted-foreground tabular-nums" />
+                    <InputGroupButton className="text-lucid-muted-foreground tabular-nums" />
                   }
                 >
                   {country}{" "}
@@ -460,7 +460,7 @@ function InputGroupWithTooltip({
                 </PopoverHeader>
               </PopoverContent>
             </Popover>
-            <InputGroupAddon className="text-muted-foreground pl-1">
+            <InputGroupAddon className="text-lucid-muted-foreground pl-1">
               https://
             </InputGroupAddon>
             <InputGroupInput id="input-secure-19" />
@@ -565,7 +565,7 @@ function InputGroupWithKbd() {
           <InputGroup>
             <InputGroupInput id="input-username-26" defaultValue="shadcn" />
             <InputGroupAddon align="inline-end">
-              <div className="size-4 flex items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
+              <div className="flex size-4 items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
                 <IconPlaceholder
                   lucide="CheckIcon"
                   tabler="IconCheck"
@@ -807,7 +807,7 @@ function InputGroupTextareaExamples() {
                 hugeicons="AlertCircleIcon"
                 phosphor="InfoIcon"
                 remixicon="RiInformationLine"
-                className="text-muted-foreground ml-auto"
+                className="text-lucid-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>

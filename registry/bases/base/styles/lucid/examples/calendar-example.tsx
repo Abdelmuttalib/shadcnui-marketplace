@@ -9,32 +9,32 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Calendar,
   CalendarDayButton,
-} from "@/registry/bases/base/styles/default-v4/ui/calendar";
+} from "@/registry/bases/base/styles/lucid/ui/calendar";
 import {
   Card,
   CardContent,
   CardFooter,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
+} from "@/registry/bases/base/styles/lucid/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/base/styles/default-v4/ui/input-group";
+} from "@/registry/bases/base/styles/lucid/ui/input-group";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/popover";
+} from "@/registry/bases/base/styles/lucid/ui/popover";
 
 export default function CalendarExample() {
   return (
@@ -233,7 +233,7 @@ function CalendarWithTime() {
             className="p-0"
           />
         </CardContent>
-        <CardFooter className="bg-card border-t">
+        <CardFooter className="bg-lucid-card border-t">
           <FieldGroup>
             <Field>
               <FieldLabel htmlFor="time-from">Start Time</FieldLabel>
@@ -252,7 +252,7 @@ function CalendarWithTime() {
                     hugeicons="Clock03Icon"
                     phosphor="ClockIcon"
                     remixicon="RiTimeLine"
-                    className="text-muted-foreground"
+                    className="text-lucid-muted-foreground"
                   />
                 </InputGroupAddon>
               </InputGroup>
@@ -274,7 +274,7 @@ function CalendarWithTime() {
                     hugeicons="Clock03Icon"
                     phosphor="ClockIcon"
                     remixicon="RiTimeLine"
-                    className="text-muted-foreground"
+                    className="text-lucid-muted-foreground"
                   />
                 </InputGroupAddon>
               </InputGroup>

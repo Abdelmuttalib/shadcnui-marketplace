@@ -11,20 +11,20 @@ import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholde
 import {
   Example,
   ExampleWrapper,
-} from "@/registry/bases/base/styles/default-v4/components/example";
-import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+} from "@/registry/bases/base/styles/lucid/components/example";
+import { useHighlightedCode } from "@/registry/bases/base/styles/lucid/hooks/use-highlighted-code";
 import {
   Bubble,
   BubbleContent,
-} from "@/registry/bases/base/styles/default-v4/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+} from "@/registry/bases/base/styles/lucid/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -32,17 +32,17 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/dialog";
+} from "@/registry/bases/base/styles/lucid/ui/dialog";
 import {
   Message,
   MessageContent,
-} from "@/registry/bases/base/styles/default-v4/ui/message";
+} from "@/registry/bases/base/styles/lucid/ui/message";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/base/styles/default-v4/ui/tabs";
+} from "@/registry/bases/base/styles/lucid/ui/tabs";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -52,7 +52,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/code-block";
+} from "@/registry/bases/base/styles/lucid/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -61,7 +61,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/trace";
+} from "@/registry/bases/base/styles/lucid/ui/trace";
 
 const build = `$ pnpm build
 > next build
@@ -530,7 +530,7 @@ function CodeBlockWithActions() {
               size="icon-xs"
               aria-label="Wrap lines"
               aria-pressed={wrap}
-              className="aria-pressed:text-foreground"
+              className="aria-pressed:text-lucid-foreground"
               onClick={() => setWrap(!wrap)}
             >
               <IconPlaceholder
@@ -616,7 +616,7 @@ function CodeBlockShowMore() {
               hugeicons="ArrowDown01Icon"
               phosphor="CaretDownIcon"
               remixicon="RiArrowDownSLine"
-              className="in-aria-expanded:rotate-180 transition-transform aria-expanded:rotate-180"
+              className="transition-transform in-aria-expanded:rotate-180 aria-expanded:rotate-180"
             />
             {expanded ? "Show less" : "Show more"}
           </Button>
@@ -667,7 +667,7 @@ function CodeBlockShowMoreScroll() {
               hugeicons="ArrowDown01Icon"
               phosphor="CaretDownIcon"
               remixicon="RiArrowDownSLine"
-              className="in-aria-expanded:rotate-180 transition-transform aria-expanded:rotate-180"
+              className="transition-transform in-aria-expanded:rotate-180 aria-expanded:rotate-180"
             />
             {expanded ? "Show less" : "Show more"}
           </Button>
@@ -1034,11 +1034,11 @@ function StreamedBlock({
                 ? rows[index]?.startsWith("+")
                   ? "added"
                   : rows[index]?.startsWith("-")
-                  ? "removed"
-                  : "default"
+                    ? "removed"
+                    : "default"
                 : block.highlight?.includes(index)
-                ? "highlighted"
-                : "default"
+                  ? "highlighted"
+                  : "default"
             }
           >
             {line}
@@ -1108,7 +1108,7 @@ function MarkdownCode({
 
   if (!block) {
     return (
-      <code className="bg-muted rounded-sm px-1 py-0.5 font-mono text-[0.9em]">
+      <code className="bg-lucid-muted rounded-lucid-sm px-1 py-0.5 font-mono text-[0.9em]">
         {children}
       </code>
     );

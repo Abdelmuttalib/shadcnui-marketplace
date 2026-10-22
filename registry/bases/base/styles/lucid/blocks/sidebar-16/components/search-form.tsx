@@ -1,8 +1,8 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Label } from "@/registry/bases/base/styles/default-v4/ui/label";
-import { SidebarInput } from "@/registry/bases/base/styles/default-v4/ui/sidebar";
+import { Label } from "@/registry/bases/base/styles/lucid/ui/label";
+import { SidebarInput } from "@/registry/bases/base/styles/lucid/ui/sidebar";
 
 export function SearchForm({ ...props }: React.ComponentProps<"form">) {
   return (
@@ -22,7 +22,7 @@ export function SearchForm({ ...props }: React.ComponentProps<"form">) {
           hugeicons="SearchIcon"
           phosphor="MagnifyingGlassIcon"
           remixicon="RiSearchLine"
-          className="size-4 pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 select-none opacity-50"
+          className="pointer-events-none absolute top-1/2 left-2 size-4 -translate-y-1/2 opacity-50 select-none"
         />
       </div>
     </form>

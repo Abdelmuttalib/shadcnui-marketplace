@@ -1,7 +1,7 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default-v4/ui/button";
+import { Button } from "@/registry/bases/base/styles/lucid/ui/button";
 import {
   Card,
   CardContent,
@@ -9,20 +9,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/card";
+} from "@/registry/bases/base/styles/lucid/ui/card";
 import {
   Field,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/base/styles/default-v4/ui/field";
-import { Input } from "@/registry/bases/base/styles/default-v4/ui/input";
+} from "@/registry/bases/base/styles/lucid/ui/field";
+import { Input } from "@/registry/bases/base/styles/lucid/ui/input";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/base/styles/default-v4/ui/item";
+} from "@/registry/bases/base/styles/lucid/ui/item";
 
 export function AccountAccess() {
   return (
@@ -50,7 +50,7 @@ export function AccountAccess() {
               </FieldLabel>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-foreground text-xs font-medium uppercase tracking-wider"
+                className="text-lucid-muted-foreground hover:text-lucid-foreground text-xs font-medium tracking-wider uppercase"
               >
                 Forgot?
               </a>
@@ -82,7 +82,7 @@ export function AccountAccess() {
               hugeicons="AlertCircleIcon"
               phosphor="WarningCircleIcon"
               remixicon="RiErrorWarningLine"
-              className="text-destructive"
+              className="text-lucid-destructive"
             />
           </ItemMedia>
           <ItemContent>

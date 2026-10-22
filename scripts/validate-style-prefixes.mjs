@@ -63,6 +63,7 @@ const STYLES = {
   wedges: "wedges",
   catalyst: "catalyst",
   moon: "moon",
+  lucid: "lucid",
 };
 
 /**
