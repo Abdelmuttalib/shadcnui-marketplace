@@ -12,7 +12,7 @@ const buttonVariants = cva(
         outline:
           "border-libelle-border bg-libelle-background shadow-xs hover:bg-libelle-muted hover:text-libelle-foreground aria-expanded:bg-libelle-muted aria-expanded:text-libelle-foreground dark:border-libelle-input dark:bg-libelle-input/30 dark:hover:bg-libelle-input/50",
         secondary:
-          "bg-libelle-secondary text-libelle-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-libelle-secondary aria-expanded:text-libelle-secondary-foreground",
+          "bg-libelle-secondary text-libelle-secondary-foreground hover:bg-[color-mix(in_oklch,var(--libelle-secondary),var(--libelle-foreground)_5%)] aria-expanded:bg-libelle-secondary aria-expanded:text-libelle-secondary-foreground",
         ghost:
           "hover:bg-libelle-muted hover:text-libelle-foreground aria-expanded:bg-libelle-muted aria-expanded:text-libelle-foreground dark:hover:bg-libelle-muted/50",
         destructive:

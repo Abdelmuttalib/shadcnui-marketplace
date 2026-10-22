@@ -23,11 +23,11 @@ const chartData = [
 const chartConfig = {
   saved: {
     label: "Saved",
-    color: "var(--chart-2)",
+    color: "var(--libelle-chart-2)",
   },
   remaining: {
     label: "Remaining",
-    color: "var(--chart-1)",
+    color: "var(--libelle-chart-1)",
   },
 } satisfies ChartConfig;
 

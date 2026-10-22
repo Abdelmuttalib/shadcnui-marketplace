@@ -482,7 +482,7 @@ const sidebarMenuButtonVariants = cva(
         default:
           "hover:bg-libelle-sidebar-accent hover:text-libelle-sidebar-accent-foreground",
         outline:
-          "bg-libelle-background shadow-[0_0_0_1px_var(--sidebar-border)] hover:bg-libelle-sidebar-accent hover:text-libelle-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--sidebar-accent)]",
+          "bg-libelle-background shadow-[0_0_0_1px_var(--libelle-sidebar-border)] hover:bg-libelle-sidebar-accent hover:text-libelle-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--libelle-sidebar-accent)]",
       },
       size: {
         default: "h-8 text-sm",

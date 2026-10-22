@@ -46,18 +46,18 @@ export function StyleOverview() {
         </div>
         <div className="grid grid-cols-6 gap-3">
           {[
-            "--background",
-            "--foreground",
-            "--primary",
-            "--secondary",
-            "--muted",
-            "--accent",
-            "--border",
-            "--chart-1",
-            "--chart-2",
-            "--chart-3",
-            "--chart-4",
-            "--chart-5",
+            "--libelle-background",
+            "--libelle-foreground",
+            "--libelle-primary",
+            "--libelle-secondary",
+            "--libelle-muted",
+            "--libelle-accent",
+            "--libelle-border",
+            "--libelle-chart-1",
+            "--libelle-chart-2",
+            "--libelle-chart-3",
+            "--libelle-chart-4",
+            "--libelle-chart-5",
           ].map((variant) => (
             <div
               key={variant}

@@ -22,11 +22,11 @@ const bubbleVariants = cva(
         default:
           "*:data-[slot=bubble-content]:bg-libelle-primary *:data-[slot=bubble-content]:text-libelle-primary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-libelle-primary/80",
         secondary:
-          "*:data-[slot=bubble-content]:bg-libelle-secondary *:data-[slot=bubble-content]:text-libelle-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-libelle-secondary *:data-[slot=bubble-content]:text-libelle-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--libelle-secondary),var(--libelle-foreground)_5%)]",
         muted:
-          "*:data-[slot=bubble-content]:bg-libelle-muted [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--muted),var(--foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-libelle-muted [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--libelle-muted),var(--libelle-foreground)_5%)]",
         tinted:
-          "*:data-[slot=bubble-content]:bg-[oklch(from_var(--primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-libelle-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--primary)_0.35_calc(c*0.5)_h)]",
+          "*:data-[slot=bubble-content]:bg-[oklch(from_var(--libelle-primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-libelle-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--libelle-primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--libelle-primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--libelle-primary)_0.35_calc(c*0.5)_h)]",
         outline:
           "*:data-[slot=bubble-content]:border-libelle-border *:data-[slot=bubble-content]:bg-libelle-background [&>[data-slot=bubble-content]:is(button,a):hover]:bg-libelle-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-libelle-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-libelle-input/30",
         ghost:
