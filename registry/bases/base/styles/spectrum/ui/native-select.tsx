@@ -23,11 +23,11 @@ function NativeSelect({
       <select
         data-slot="native-select"
         data-size={size}
-        className="border-spectrum-input selection:bg-spectrum-primary selection:text-spectrum-primary-foreground placeholder:text-spectrum-muted-foreground focus-visible:border-spectrum-ring focus-visible:ring-spectrum-ring/50 aria-invalid:border-spectrum-destructive aria-invalid:ring-spectrum-destructive/20 dark:bg-spectrum-input/30 dark:hover:bg-spectrum-input/50 dark:aria-invalid:border-spectrum-destructive/50 dark:aria-invalid:ring-spectrum-destructive/40 rounded-spectrum-md h-9 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
+        className="border-spctm-input selection:bg-spctm-primary selection:text-spctm-primary-foreground placeholder:text-spctm-muted-foreground focus-visible:border-spctm-ring focus-visible:ring-spctm-ring/50 aria-invalid:border-spctm-destructive aria-invalid:ring-spctm-destructive/20 dark:bg-spctm-input/30 dark:hover:bg-spctm-input/50 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:ring-spctm-destructive/40 rounded-spctm-md h-9 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
         {...props}
       />
       <ChevronDownIcon
-        className="text-spectrum-muted-foreground pointer-events-none absolute top-1/2 right-2.5 size-4 -translate-y-1/2 select-none"
+        className="text-spctm-muted-foreground pointer-events-none absolute top-1/2 right-2.5 size-4 -translate-y-1/2 select-none"
         aria-hidden="true"
         data-slot="native-select-icon"
       />

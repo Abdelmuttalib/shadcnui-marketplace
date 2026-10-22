@@ -233,7 +233,7 @@ export function SettingsDialog() {
               }).map((_, i) => (
                 <div
                   key={i}
-                  className="bg-spectrum-muted/50 aspect-video max-w-3xl rounded-xl"
+                  className="bg-spctm-muted/50 aspect-video max-w-3xl rounded-xl"
                 />
               ))}
             </div>

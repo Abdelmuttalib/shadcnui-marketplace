@@ -200,7 +200,7 @@ function ToggleGroupWithIcons() {
         <ToggleGroupItem
           value="star"
           aria-label="Toggle star"
-          className="aria-pressed:*:[svg]:fill-spectrum-foreground aria-pressed:*:[svg]:stroke-spectrum-foreground aria-pressed:bg-transparent"
+          className="aria-pressed:*:[svg]:fill-spctm-foreground aria-pressed:*:[svg]:stroke-spctm-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
             lucide="StarIcon"
@@ -214,7 +214,7 @@ function ToggleGroupWithIcons() {
         <ToggleGroupItem
           value="heart"
           aria-label="Toggle heart"
-          className="aria-pressed:*:[svg]:fill-spectrum-foreground aria-pressed:*:[svg]:stroke-spectrum-foreground aria-pressed:bg-transparent"
+          className="aria-pressed:*:[svg]:fill-spctm-foreground aria-pressed:*:[svg]:stroke-spctm-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
             lucide="HeartIcon"
@@ -228,7 +228,7 @@ function ToggleGroupWithIcons() {
         <ToggleGroupItem
           value="bookmark"
           aria-label="Toggle bookmark"
-          className="aria-pressed:*:[svg]:fill-spectrum-foreground aria-pressed:*:[svg]:stroke-spectrum-foreground aria-pressed:bg-transparent"
+          className="aria-pressed:*:[svg]:fill-spctm-foreground aria-pressed:*:[svg]:stroke-spctm-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
             lucide="BookmarkIcon"
@@ -484,9 +484,7 @@ function ToggleGroupFontWeightSelector() {
             className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
             <span className="text-2xl leading-none font-light">Aa</span>
-            <span className="text-spectrum-muted-foreground text-xs">
-              Light
-            </span>
+            <span className="text-spctm-muted-foreground text-xs">Light</span>
           </ToggleGroupItem>
           <ToggleGroupItem
             value="normal"
@@ -494,9 +492,7 @@ function ToggleGroupFontWeightSelector() {
             className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
             <span className="text-2xl leading-none font-normal">Aa</span>
-            <span className="text-spectrum-muted-foreground text-xs">
-              Normal
-            </span>
+            <span className="text-spctm-muted-foreground text-xs">Normal</span>
           </ToggleGroupItem>
           <ToggleGroupItem
             value="medium"
@@ -504,9 +500,7 @@ function ToggleGroupFontWeightSelector() {
             className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
             <span className="text-2xl leading-none font-medium">Aa</span>
-            <span className="text-spectrum-muted-foreground text-xs">
-              Medium
-            </span>
+            <span className="text-spctm-muted-foreground text-xs">Medium</span>
           </ToggleGroupItem>
           <ToggleGroupItem
             value="bold"
@@ -514,12 +508,12 @@ function ToggleGroupFontWeightSelector() {
             className="flex size-16 flex-col items-center justify-center rounded-xl"
           >
             <span className="text-2xl leading-none font-bold">Aa</span>
-            <span className="text-spectrum-muted-foreground text-xs">Bold</span>
+            <span className="text-spctm-muted-foreground text-xs">Bold</span>
           </ToggleGroupItem>
         </ToggleGroup>
         <FieldDescription>
           Use{" "}
-          <code className="bg-spectrum-muted rounded-spectrum-md px-1 py-0.5 font-mono">
+          <code className="bg-spctm-muted rounded-spctm-md px-1 py-0.5 font-mono">
             font-{fontWeight}
           </code>{" "}
           to set the font weight.

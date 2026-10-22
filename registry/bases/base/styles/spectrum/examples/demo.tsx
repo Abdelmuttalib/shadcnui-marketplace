@@ -73,7 +73,7 @@ export function Demo() {
   );
 
   return (
-    <div className="bg-spectrum-muted dark:bg-spectrum-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
+    <div className="bg-spctm-muted dark:bg-spctm-background flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-12">
       <div className="grid max-w-3xl gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-4">
           <Card>
@@ -87,25 +87,25 @@ export function Demo() {
             <CardContent>
               <div className="grid grid-cols-6 gap-3">
                 {[
-                  "--spectrum-background",
-                  "--spectrum-foreground",
-                  "--spectrum-primary",
-                  "--spectrum-secondary",
-                  "--spectrum-muted",
-                  "--spectrum-accent",
-                  "--spectrum-border",
-                  "--spectrum-chart-1",
-                  "--spectrum-chart-2",
-                  "--spectrum-chart-3",
-                  "--spectrum-chart-4",
-                  "--spectrum-chart-5",
+                  "--spctm-background",
+                  "--spctm-foreground",
+                  "--spctm-primary",
+                  "--spctm-secondary",
+                  "--spctm-muted",
+                  "--spctm-accent",
+                  "--spctm-border",
+                  "--spctm-chart-1",
+                  "--spctm-chart-2",
+                  "--spctm-chart-3",
+                  "--spctm-chart-4",
+                  "--spctm-chart-5",
                 ].map((variant) => (
                   <div
                     key={variant}
                     className="flex flex-col flex-wrap items-center gap-2"
                   >
                     <div
-                      className="after:border-spectrum-border rounded-spectrum-lg after:rounded-spectrum-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                      className="after:border-spctm-border rounded-spctm-lg after:rounded-spctm-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                       style={
                         {
                           "--color": `var(${variant})`,

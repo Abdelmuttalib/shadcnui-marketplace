@@ -30,7 +30,7 @@ const areaChartData = [
 const areaChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--spectrum-chart-1)",
+    color: "var(--spctm-chart-1)",
   },
 } satisfies ChartConfig;
 

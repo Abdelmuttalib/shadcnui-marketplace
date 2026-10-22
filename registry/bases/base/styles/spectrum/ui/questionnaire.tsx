@@ -31,7 +31,7 @@ function QuestionnaireProgress({
     <QuestionnairePrimitive.Progress
       data-slot="questionnaire-progress"
       className={cn(
-        "text-spectrum-muted-foreground min-h-[1lh] w-fit min-w-[14ch] text-xs font-medium tabular-nums",
+        "text-spctm-muted-foreground min-h-[1lh] w-fit min-w-[14ch] text-xs font-medium tabular-nums",
         className
       )}
       {...props}
@@ -79,7 +79,7 @@ function QuestionnaireDescription({
     <QuestionnairePrimitive.Description
       data-slot="questionnaire-description"
       className={cn(
-        "text-spectrum-muted-foreground text-sm text-pretty",
+        "text-spctm-muted-foreground text-sm text-pretty",
         className
       )}
       {...props}
@@ -112,7 +112,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-spectrum-input hover:bg-spectrum-muted/50 has-[>input:focus-visible]:border-spectrum-ring has-[>input:focus-visible]:ring-spectrum-ring/50 data-invalid:border-spectrum-destructive dark:bg-spectrum-input/20 data-checked:border-spectrum-primary/40 data-checked:bg-spectrum-muted dark:data-checked:bg-spectrum-muted rounded-spectrum-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "group/questionnaire-choice border-spctm-input hover:bg-spctm-muted/50 has-[>input:focus-visible]:border-spctm-ring has-[>input:focus-visible]:ring-spctm-ring/50 data-invalid:border-spctm-destructive dark:bg-spctm-input/20 data-checked:border-spctm-primary/40 data-checked:bg-spctm-muted dark:data-checked:bg-spctm-muted rounded-spctm-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -125,11 +125,11 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="border-spectrum-input group-data-checked/questionnaire-choice:border-spectrum-primary group-data-checked/questionnaire-choice:bg-spectrum-primary group-data-checked/questionnaire-choice:text-spectrum-primary-foreground dark:bg-spectrum-input/30 dark:group-data-checked/questionnaire-choice:bg-spectrum-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
+        className="border-spctm-input group-data-checked/questionnaire-choice:border-spctm-primary group-data-checked/questionnaire-choice:bg-spctm-primary group-data-checked/questionnaire-choice:text-spctm-primary-foreground dark:bg-spctm-input/30 dark:group-data-checked/questionnaire-choice:bg-spctm-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
-          className="bg-spectrum-primary-foreground hidden size-2 rounded-full group-data-checked/questionnaire-choice:block group-data-[type=checkbox]/questionnaire-choice:hidden"
+          className="bg-spctm-primary-foreground hidden size-2 rounded-full group-data-checked/questionnaire-choice:block group-data-[type=checkbox]/questionnaire-choice:hidden"
         />
         <CheckIcon
           data-slot="questionnaire-choice-indicator-check"
@@ -144,7 +144,7 @@ function QuestionnaireChoice({
       </QuestionnairePrimitive.ChoiceLabel>
       <QuestionnairePrimitive.ChoiceShortcut
         data-slot="questionnaire-choice-shortcut"
-        className="border-spectrum-input bg-spectrum-background text-spectrum-muted-foreground rounded-spectrum-md pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
+        className="border-spctm-input bg-spctm-background text-spctm-muted-foreground rounded-spctm-md pointer-events-none ms-auto hidden size-5 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center border font-mono text-[0.625rem] leading-none font-medium shadow-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[shortcut]/questionnaire-choice:inline-flex"
       />
     </QuestionnairePrimitive.Choice>
   );
@@ -157,7 +157,7 @@ function QuestionnaireChoiceDescription({
   return (
     <span
       data-slot="questionnaire-choice-description"
-      className={cn("text-spectrum-muted-foreground", className)}
+      className={cn("text-spctm-muted-foreground", className)}
       {...props}
     />
   );
@@ -175,8 +175,8 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-spectrum-input focus-visible:border-spectrum-ring focus-visible:ring-spectrum-ring/50 aria-invalid:border-spectrum-destructive aria-invalid:ring-spectrum-destructive/20 dark:bg-spectrum-input/30 dark:aria-invalid:border-spectrum-destructive/50 dark:aria-invalid:ring-spectrum-destructive/40 rounded-spectrum-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
-          "selection:bg-spectrum-primary selection:text-spectrum-primary-foreground placeholder:text-spectrum-muted-foreground",
+          "border-spctm-input focus-visible:border-spctm-ring focus-visible:ring-spctm-ring/50 aria-invalid:border-spctm-destructive aria-invalid:ring-spctm-destructive/20 dark:bg-spctm-input/30 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:ring-spctm-destructive/40 rounded-spctm-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "selection:bg-spctm-primary selection:text-spctm-primary-foreground placeholder:text-spctm-muted-foreground",
           className
         )}
         {...props}
@@ -192,7 +192,7 @@ function QuestionnaireError({
   return (
     <QuestionnairePrimitive.Error
       data-slot="questionnaire-error"
-      className={cn("text-spectrum-destructive text-sm", className)}
+      className={cn("text-spctm-destructive text-sm", className)}
       {...props}
     />
   );

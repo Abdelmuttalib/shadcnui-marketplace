@@ -43,7 +43,7 @@ export function NavProjects({
                 render={
                   <SidebarMenuAction
                     showOnHover
-                    className="aria-expanded:bg-spectrum-muted"
+                    className="aria-expanded:bg-spctm-muted"
                   />
                 }
               >
@@ -68,7 +68,7 @@ export function NavProjects({
                     hugeicons="FolderIcon"
                     phosphor="FolderIcon"
                     remixicon="RiFolderLine"
-                    className="text-spectrum-muted-foreground"
+                    className="text-spctm-muted-foreground"
                   />
                   <span>View Project</span>
                 </DropdownMenuItem>
@@ -79,7 +79,7 @@ export function NavProjects({
                     hugeicons="Share03Icon"
                     phosphor="ShareIcon"
                     remixicon="RiShareLine"
-                    className="text-spectrum-muted-foreground"
+                    className="text-spctm-muted-foreground"
                   />
                   <span>Share Project</span>
                 </DropdownMenuItem>
@@ -91,7 +91,7 @@ export function NavProjects({
                     hugeicons="Delete02Icon"
                     phosphor="TrashIcon"
                     remixicon="RiDeleteBinLine"
-                    className="text-spectrum-muted-foreground"
+                    className="text-spctm-muted-foreground"
                   />
                   <span>Delete Project</span>
                 </DropdownMenuItem>

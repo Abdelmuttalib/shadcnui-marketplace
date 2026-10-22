@@ -177,7 +177,7 @@ function ListItem({
       <NavigationMenuLink render={<Link href={href} />}>
         <div className="style-vega:text-sm style-nova:text-sm style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-luma:text-sm flex flex-col gap-1">
           <div className="leading-none font-medium">{title}</div>
-          <div className="text-spectrum-muted-foreground line-clamp-2">
+          <div className="text-spctm-muted-foreground line-clamp-2">
             {children}
           </div>
         </div>

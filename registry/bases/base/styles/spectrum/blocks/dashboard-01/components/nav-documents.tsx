@@ -43,7 +43,7 @@ export function NavDocuments({
                 render={
                   <SidebarMenuAction
                     showOnHover
-                    className="aria-expanded:bg-spectrum-muted"
+                    className="aria-expanded:bg-spctm-muted"
                   />
                 }
               >
@@ -97,14 +97,14 @@ export function NavDocuments({
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-spectrum-sidebar-foreground/70">
+          <SidebarMenuButton className="text-spctm-sidebar-foreground/70">
             <IconPlaceholder
               lucide="MoreHorizontalIcon"
               tabler="IconDots"
               hugeicons="MoreHorizontalCircle01Icon"
               phosphor="DotsThreeOutlineIcon"
               remixicon="RiMoreLine"
-              className="text-spectrum-sidebar-foreground/70"
+              className="text-spctm-sidebar-foreground/70"
             />
             <span>More</span>
           </SidebarMenuButton>

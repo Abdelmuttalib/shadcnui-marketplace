@@ -233,7 +233,7 @@ function CalendarWithTime() {
             className="p-0"
           />
         </CardContent>
-        <CardFooter className="bg-spectrum-card border-t">
+        <CardFooter className="bg-spctm-card border-t">
           <FieldGroup>
             <Field>
               <FieldLabel htmlFor="time-from">Start Time</FieldLabel>
@@ -252,7 +252,7 @@ function CalendarWithTime() {
                     hugeicons="Clock03Icon"
                     phosphor="ClockIcon"
                     remixicon="RiTimeLine"
-                    className="text-spectrum-muted-foreground"
+                    className="text-spctm-muted-foreground"
                   />
                 </InputGroupAddon>
               </InputGroup>
@@ -274,7 +274,7 @@ function CalendarWithTime() {
                     hugeicons="Clock03Icon"
                     phosphor="ClockIcon"
                     remixicon="RiTimeLine"
-                    className="text-spectrum-muted-foreground"
+                    className="text-spctm-muted-foreground"
                   />
                 </InputGroupAddon>
               </InputGroup>

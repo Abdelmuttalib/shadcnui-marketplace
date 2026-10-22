@@ -1620,7 +1620,7 @@ function ItemFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-spectrum-muted-foreground text-sm">
+          <span className="text-spctm-muted-foreground text-sm">
             Last updated 2 hours ago
           </span>
         </ItemFooter>
@@ -1634,7 +1634,7 @@ function ItemFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-spectrum-muted-foreground text-sm">
+          <span className="text-spctm-muted-foreground text-sm">
             Created by Sarah Chen
           </span>
         </ItemFooter>
@@ -1648,7 +1648,7 @@ function ItemFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-spectrum-muted-foreground text-sm">
+          <span className="text-spctm-muted-foreground text-sm">
             12 comments
           </span>
         </ItemFooter>
@@ -1672,7 +1672,7 @@ function ItemHeaderAndFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-spectrum-muted-foreground text-sm">
+          <span className="text-spctm-muted-foreground text-sm">
             Updated 5 minutes ago
           </span>
         </ItemFooter>
@@ -1689,7 +1689,7 @@ function ItemHeaderAndFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-spectrum-muted-foreground text-sm">
+          <span className="text-spctm-muted-foreground text-sm">
             Status: In Progress
           </span>
         </ItemFooter>
@@ -1706,7 +1706,7 @@ function ItemHeaderAndFooterExamples() {
           </ItemDescription>
         </ItemContent>
         <ItemFooter>
-          <span className="text-spectrum-muted-foreground text-sm">
+          <span className="text-spctm-muted-foreground text-sm">
             Category: Technical • 3 attachments
           </span>
         </ItemFooter>

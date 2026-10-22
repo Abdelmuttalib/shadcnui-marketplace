@@ -130,7 +130,7 @@ function FileUploadList() {
               <Progress value={file.progress} className="w-32" />
             </ItemContent>
             <ItemActions className="w-16 justify-end">
-              <span className="text-spectrum-muted-foreground text-sm">
+              <span className="text-spctm-muted-foreground text-sm">
                 {file.timeRemaining}
               </span>
             </ItemActions>

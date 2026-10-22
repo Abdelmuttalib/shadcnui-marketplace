@@ -44,7 +44,7 @@ export function NavFavorites({
                 render={
                   <SidebarMenuAction
                     showOnHover
-                    className="aria-expanded:bg-spectrum-muted"
+                    className="aria-expanded:bg-spctm-muted"
                   />
                 }
               >
@@ -58,7 +58,7 @@ export function NavFavorites({
                 <span className="sr-only">More</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent
-                className="rounded-spectrum-lg w-56"
+                className="rounded-spctm-lg w-56"
                 side={isMobile ? "bottom" : "right"}
                 align={isMobile ? "end" : "start"}
               >
@@ -70,7 +70,7 @@ export function NavFavorites({
                       hugeicons="StarOffIcon"
                       phosphor="StarIcon"
                       remixicon="RiStarOffLine"
-                      className="text-spectrum-muted-foreground"
+                      className="text-spctm-muted-foreground"
                     />
                     <span>Remove from Favorites</span>
                   </DropdownMenuItem>
@@ -84,7 +84,7 @@ export function NavFavorites({
                       hugeicons="LinkIcon"
                       phosphor="LinkIcon"
                       remixicon="RiLinksLine"
-                      className="text-spectrum-muted-foreground"
+                      className="text-spctm-muted-foreground"
                     />
                     <span>Copy Link</span>
                   </DropdownMenuItem>
@@ -95,7 +95,7 @@ export function NavFavorites({
                       hugeicons="ArrowUpRightIcon"
                       phosphor="ArrowUpRightIcon"
                       remixicon="RiArrowRightUpLine"
-                      className="text-spectrum-muted-foreground"
+                      className="text-spctm-muted-foreground"
                     />
                     <span>Open in New Tab</span>
                   </DropdownMenuItem>
@@ -107,7 +107,7 @@ export function NavFavorites({
                       hugeicons="Delete02Icon"
                       phosphor="TrashIcon"
                       remixicon="RiDeleteBinLine"
-                      className="text-spectrum-muted-foreground"
+                      className="text-spctm-muted-foreground"
                     />
                     <span>Delete</span>
                   </DropdownMenuItem>
@@ -117,7 +117,7 @@ export function NavFavorites({
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-spectrum-sidebar-foreground/70">
+          <SidebarMenuButton className="text-spctm-sidebar-foreground/70">
             <IconPlaceholder
               lucide="MoreHorizontalIcon"
               tabler="IconDots"

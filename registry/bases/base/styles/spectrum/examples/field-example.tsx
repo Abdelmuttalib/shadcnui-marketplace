@@ -94,7 +94,7 @@ function InputFields() {
         </Field>
         <Field>
           <FieldLabel htmlFor="input-required">
-            Required Field <span className="text-spectrum-destructive">*</span>
+            Required Field <span className="text-spctm-destructive">*</span>
           </FieldLabel>
           <Input
             id="input-required"

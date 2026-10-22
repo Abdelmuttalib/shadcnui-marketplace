@@ -278,8 +278,8 @@ const Bar = React.memo<{
     className={cn(
       "max-w-[12px] min-w-[8px] flex-1 transition-all duration-150",
       "rounded-full",
-      "bg-spectrum-border data-[highlighted=true]:bg-spectrum-chart-3",
-      state === "speaking" && "bg-spectrum-chart-3",
+      "bg-spctm-border data-[highlighted=true]:bg-spctm-chart-3",
+      state === "speaking" && "bg-spctm-chart-3",
       state === "thinking" && isHighlighted && "animate-pulse"
     )}
     style={{
@@ -412,7 +412,7 @@ const BarVisualizerComponent = React.forwardRef<
         className={cn(
           "relative flex justify-center gap-1.5",
           centerAlign ? "items-center" : "items-end",
-          "bg-spectrum-muted rounded-spectrum-lg h-32 w-full overflow-hidden p-4",
+          "bg-spctm-muted rounded-spctm-lg h-32 w-full overflow-hidden p-4",
           className
         )}
         style={{

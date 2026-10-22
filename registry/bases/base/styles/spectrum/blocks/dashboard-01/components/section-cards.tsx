@@ -13,7 +13,7 @@ import {
 
 export function SectionCards() {
   return (
-    <div className="*:data-[slot=card]:from-spectrum-primary/5 *:data-[slot=card]:to-spectrum-card dark:*:data-[slot=card]:bg-spectrum-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
+    <div className="*:data-[slot=card]:from-spctm-primary/5 *:data-[slot=card]:to-spctm-card dark:*:data-[slot=card]:bg-spctm-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Total Revenue</CardDescription>
@@ -45,7 +45,7 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground">
+          <div className="text-spctm-muted-foreground">
             Visitors for the last 6 months
           </div>
         </CardFooter>
@@ -81,7 +81,7 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground">
+          <div className="text-spctm-muted-foreground">
             Acquisition needs attention
           </div>
         </CardFooter>
@@ -117,7 +117,7 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground">
+          <div className="text-spctm-muted-foreground">
             Engagement exceed targets
           </div>
         </CardFooter>
@@ -153,7 +153,7 @@ export function SectionCards() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground">
+          <div className="text-spctm-muted-foreground">
             Meets growth projections
           </div>
         </CardFooter>

@@ -40,7 +40,7 @@ export function NavUser({
             render={
               <SidebarMenuButton
                 size="lg"
-                className="aria-expanded:bg-spectrum-muted"
+                className="aria-expanded:bg-spctm-muted"
               />
             }
           >
@@ -62,7 +62,7 @@ export function NavUser({
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="rounded-spectrum-lg min-w-56"
+            className="rounded-spctm-lg min-w-56"
             side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}

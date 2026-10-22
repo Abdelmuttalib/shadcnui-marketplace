@@ -40,19 +40,17 @@ export function NavUser({
             render={
               <SidebarMenuButton
                 size="lg"
-                className="aria-expanded:bg-spectrum-muted"
+                className="aria-expanded:bg-spctm-muted"
               />
             }
           >
-            <Avatar className="rounded-spectrum-lg size-8 grayscale">
+            <Avatar className="rounded-spctm-lg size-8 grayscale">
               <AvatarImage src={user.avatar} alt={user.name} />
-              <AvatarFallback className="rounded-spectrum-lg">
-                CN
-              </AvatarFallback>
+              <AvatarFallback className="rounded-spctm-lg">CN</AvatarFallback>
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-medium">{user.name}</span>
-              <span className="text-spectrum-foreground/70 truncate text-xs">
+              <span className="text-spctm-foreground/70 truncate text-xs">
                 {user.email}
               </span>
             </div>
@@ -76,13 +74,13 @@ export function NavUser({
                 <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                   <Avatar className="size-8">
                     <AvatarImage src={user.avatar} alt={user.name} />
-                    <AvatarFallback className="rounded-spectrum-lg">
+                    <AvatarFallback className="rounded-spctm-lg">
                       CN
                     </AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-medium">{user.name}</span>
-                    <span className="text-spectrum-muted-foreground truncate text-xs">
+                    <span className="text-spctm-muted-foreground truncate text-xs">
                       {user.email}
                     </span>
                   </div>

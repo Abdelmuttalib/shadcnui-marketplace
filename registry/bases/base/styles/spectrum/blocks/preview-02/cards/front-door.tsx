@@ -16,7 +16,7 @@ export function FrontDoor() {
         <CardTitle>Front Door</CardTitle>
         <CardDescription>Smart Lock Pro</CardDescription>
         <CardAction>
-          <div className="text-spectrum-muted-foreground flex items-center gap-1.5 text-sm">
+          <div className="text-spctm-muted-foreground flex items-center gap-1.5 text-sm">
             Locked
             <IconPlaceholder
               lucide="LockIcon"
@@ -30,7 +30,7 @@ export function FrontDoor() {
         </CardAction>
       </CardHeader>
       <CardContent>
-        <div className="bg-spectrum-muted rounded-spectrum-lg relative flex aspect-video items-center justify-center overflow-hidden bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,var(--spectrum-border)_10px,var(--spectrum-border)_11px)]">
+        <div className="bg-spctm-muted rounded-spctm-lg relative flex aspect-video items-center justify-center overflow-hidden bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,var(--spctm-border)_10px,var(--spctm-border)_11px)]">
           <Badge variant="destructive" className="absolute top-2 right-2">
             Live
           </Badge>

@@ -32,15 +32,15 @@ const sleepChartData = [
 const sleepChartConfig = {
   deep: {
     label: "Deep",
-    color: "var(--spectrum-chart-1)",
+    color: "var(--spctm-chart-1)",
   },
   light: {
     label: "Light",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
   rem: {
     label: "REM",
-    color: "var(--spectrum-chart-3)",
+    color: "var(--spctm-chart-3)",
   },
 } satisfies ChartConfig;
 
@@ -88,7 +88,7 @@ export function SleepReport() {
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="text-sm font-medium tabular-nums">{s.value}</div>
-              <div className="text-spectrum-muted-foreground text-xs">
+              <div className="text-spctm-muted-foreground text-xs">
                 {s.label}
               </div>
             </div>

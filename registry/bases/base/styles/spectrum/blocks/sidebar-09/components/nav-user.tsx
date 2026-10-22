@@ -40,15 +40,13 @@ export function NavUser({
             render={
               <SidebarMenuButton
                 size="lg"
-                className="data-open:bg-spectrum-sidebar-accent data-open:text-spectrum-sidebar-accent-foreground md:h-8 md:p-0"
+                className="data-open:bg-spctm-sidebar-accent data-open:text-spctm-sidebar-accent-foreground md:h-8 md:p-0"
               />
             }
           >
-            <Avatar className="rounded-spectrum-lg h-8 w-8">
+            <Avatar className="rounded-spctm-lg h-8 w-8">
               <AvatarImage src={user.avatar} alt={user.name} />
-              <AvatarFallback className="rounded-spectrum-lg">
-                CN
-              </AvatarFallback>
+              <AvatarFallback className="rounded-spctm-lg">CN</AvatarFallback>
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-medium">{user.name}</span>
@@ -64,16 +62,16 @@ export function NavUser({
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="rounded-spectrum-lg min-w-56"
+            className="rounded-spctm-lg min-w-56"
             side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}
           >
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-                <Avatar className="rounded-spectrum-lg h-8 w-8">
+                <Avatar className="rounded-spctm-lg h-8 w-8">
                   <AvatarImage src={user.avatar} alt={user.name} />
-                  <AvatarFallback className="rounded-spectrum-lg">
+                  <AvatarFallback className="rounded-spctm-lg">
                     CN
                   </AvatarFallback>
                 </Avatar>

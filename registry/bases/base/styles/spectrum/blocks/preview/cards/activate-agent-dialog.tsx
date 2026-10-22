@@ -51,7 +51,7 @@ const agentFeatures = [
         deployment context.{" "}
         <Badge
           variant="secondary"
-          className="bg-spectrum-chart-1 text-spectrum-chart-5"
+          className="bg-spctm-chart-1 text-spctm-chart-5"
         >
           Requires Observability Plus
         </Badge>
@@ -82,11 +82,11 @@ export function ActivateAgentDialog() {
                   hugeicons="CheckmarkCircle02Icon"
                   phosphor="CheckCircleIcon"
                   remixicon="RiCheckboxCircleLine"
-                  className="fill-spectrum-primary text-spectrum-primary-foreground size-5"
+                  className="fill-spctm-primary text-spctm-primary-foreground size-5"
                 />
               </ItemMedia>
               <ItemContent>
-                <ItemTitle className="text-spectrum-muted-foreground *:[strong]:text-spectrum-foreground inline leading-relaxed font-normal *:[strong]:font-medium">
+                <ItemTitle className="text-spctm-muted-foreground *:[strong]:text-spctm-foreground inline leading-relaxed font-normal *:[strong]:font-medium">
                   {feature.content}
                 </ItemTitle>
               </ItemContent>

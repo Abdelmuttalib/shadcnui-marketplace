@@ -477,7 +477,7 @@ const LiveWaveform = ({
       {...props}
     >
       {!active && !processing && (
-        <div className="border-spectrum-muted-foreground/20 absolute top-1/2 right-0 left-0 -translate-y-1/2 border-t-2 border-dotted" />
+        <div className="border-spctm-muted-foreground/20 absolute top-1/2 right-0 left-0 -translate-y-1/2 border-t-2 border-dotted" />
       )}
       <canvas
         className="block h-full w-full"

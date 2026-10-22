@@ -29,7 +29,7 @@ export function Shortcuts() {
         <div className="flex flex-col gap-3">
           <div className="text-sm font-medium">Shortcuts</div>
           <ItemGroup
-            className="text-spectrum-muted-foreground gap-2"
+            className="text-spctm-muted-foreground gap-2"
             data-size="xs"
           >
             {shortcuts.map(({ label, keys }, i) => (

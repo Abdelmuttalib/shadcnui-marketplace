@@ -29,14 +29,14 @@ export function RollerShades() {
         <CardDescription>Roller Shades</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <div className="bg-spectrum-muted rounded-spectrum-lg flex h-32 flex-col overflow-hidden border">
+        <div className="bg-spctm-muted rounded-spctm-lg flex h-32 flex-col overflow-hidden border">
           <div
-            className="bg-spectrum-muted-foreground transition-all duration-300"
+            className="bg-spctm-muted-foreground transition-all duration-300"
             style={{ height: `${position[0]}%` }}
           />
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-spectrum-muted-foreground text-xs font-medium tracking-wider uppercase">
+          <span className="text-spctm-muted-foreground text-xs font-medium tracking-wider uppercase">
             Open
           </span>
           <Slider
@@ -47,7 +47,7 @@ export function RollerShades() {
             max={100}
             className="flex-1"
           />
-          <span className="text-spectrum-muted-foreground text-xs font-medium tracking-wider uppercase">
+          <span className="text-spctm-muted-foreground text-xs font-medium tracking-wider uppercase">
             Close
           </span>
         </div>

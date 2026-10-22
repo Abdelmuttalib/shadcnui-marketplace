@@ -5,10 +5,10 @@ import { SignupForm } from "@/registry/bases/base/styles/spectrum/blocks/signup-
 
 export default function SignupPage() {
   return (
-    <div className="bg-spectrum-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+    <div className="bg-spctm-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
         <a href="#" className="flex items-center gap-2 self-center font-medium">
-          <div className="bg-spectrum-primary text-spectrum-primary-foreground rounded-spectrum-md flex size-6 items-center justify-center">
+          <div className="bg-spctm-primary text-spctm-primary-foreground rounded-spctm-md flex size-6 items-center justify-center">
             <IconPlaceholder
               lucide="GalleryVerticalEndIcon"
               tabler="IconLayoutRows"

@@ -1296,7 +1296,7 @@ function ComboboxWithOtherInputs() {
       </Select>
       <Button
         variant="outline"
-        className="text-spectrum-muted-foreground w-52 justify-between font-normal"
+        className="text-spctm-muted-foreground w-52 justify-between font-normal"
       >
         Select a framework
         <IconPlaceholder

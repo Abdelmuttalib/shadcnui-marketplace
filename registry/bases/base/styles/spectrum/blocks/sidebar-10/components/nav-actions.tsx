@@ -192,7 +192,7 @@ export function NavActions() {
   }, []);
   return (
     <div className="flex items-center gap-2 text-sm">
-      <div className="text-spectrum-muted-foreground hidden font-medium md:inline-block">
+      <div className="text-spctm-muted-foreground hidden font-medium md:inline-block">
         Edit Oct 08
       </div>
       <Button variant="ghost" size="icon" className="h-7 w-7">
@@ -210,7 +210,7 @@ export function NavActions() {
             <Button
               variant="ghost"
               size="icon"
-              className="data-open:bg-spectrum-accent h-7 w-7"
+              className="data-open:bg-spctm-accent h-7 w-7"
             />
           }
         >
@@ -223,7 +223,7 @@ export function NavActions() {
           />
         </PopoverTrigger>
         <PopoverContent
-          className="rounded-spectrum-lg w-56 overflow-hidden p-0"
+          className="rounded-spctm-lg w-56 overflow-hidden p-0"
           align="end"
         >
           <Sidebar collapsible="none" className="bg-transparent">

@@ -54,7 +54,7 @@ const areaChartData = [
 const areaChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--spectrum-chart-1)",
+    color: "var(--spctm-chart-1)",
   },
 } satisfies ChartConfig;
 
@@ -127,7 +127,7 @@ function ChartAreaExample() {
                   className="size-4"
                 />
               </div>
-              <div className="text-spectrum-muted-foreground flex items-center gap-2 leading-none">
+              <div className="text-spctm-muted-foreground flex items-center gap-2 leading-none">
                 January - June 2024
               </div>
             </div>
@@ -150,11 +150,11 @@ const barChartData = [
 const barChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--spectrum-chart-1)",
+    color: "var(--spctm-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -198,7 +198,7 @@ function ChartBarExample() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground leading-none">
+          <div className="text-spctm-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>
@@ -219,11 +219,11 @@ const lineChartData = [
 const lineChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--spectrum-chart-1)",
+    color: "var(--spctm-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -285,7 +285,7 @@ function ChartLineExample() {
                   className="size-4"
                 />
               </div>
-              <div className="text-spectrum-muted-foreground flex items-center gap-2 leading-none">
+              <div className="text-spctm-muted-foreground flex items-center gap-2 leading-none">
                 Showing total visitors for the last 6 months
               </div>
             </div>
@@ -310,23 +310,23 @@ const pieChartConfig = {
   },
   chrome: {
     label: "Chrome",
-    color: "var(--spectrum-chart-1)",
+    color: "var(--spctm-chart-1)",
   },
   safari: {
     label: "Safari",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
   firefox: {
     label: "Firefox",
-    color: "var(--spectrum-chart-3)",
+    color: "var(--spctm-chart-3)",
   },
   edge: {
     label: "Edge",
-    color: "var(--spectrum-chart-4)",
+    color: "var(--spctm-chart-4)",
   },
   other: {
     label: "Other",
-    color: "var(--spectrum-chart-5)",
+    color: "var(--spctm-chart-5)",
   },
 } satisfies ChartConfig;
 
@@ -372,14 +372,14 @@ function ChartPieExample() {
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="fill-spectrum-foreground text-3xl font-bold"
+                            className="fill-spctm-foreground text-3xl font-bold"
                           >
                             {totalVisitors.toLocaleString()}
                           </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) + 24}
-                            className="fill-spectrum-muted-foreground"
+                            className="fill-spctm-muted-foreground"
                           >
                             Visitors
                           </tspan>
@@ -404,7 +404,7 @@ function ChartPieExample() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground leading-none">
+          <div className="text-spctm-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>
@@ -425,11 +425,11 @@ const radarChartData = [
 const radarChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--spectrum-chart-1)",
+    color: "var(--spctm-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -476,7 +476,7 @@ function ChartRadarExample() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground flex items-center gap-2 leading-none">
+          <div className="text-spctm-muted-foreground flex items-center gap-2 leading-none">
             January - June 2024
           </div>
         </CardFooter>
@@ -495,7 +495,7 @@ const radialChartConfig = {
   },
   safari: {
     label: "Safari",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -522,7 +522,7 @@ function ChartRadialExample() {
                 gridType="circle"
                 radialLines={false}
                 stroke="none"
-                className="first:fill-spectrum-muted last:fill-spectrum-background"
+                className="first:fill-spctm-muted last:fill-spctm-background"
                 polarRadius={[86, 74]}
               />
               <RadialBar dataKey="visitors" background />
@@ -540,14 +540,14 @@ function ChartRadialExample() {
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="fill-spectrum-foreground text-4xl font-bold"
+                            className="fill-spctm-foreground text-4xl font-bold"
                           >
                             {radialChartData[0].visitors.toLocaleString()}
                           </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) + 24}
-                            className="fill-spectrum-muted-foreground"
+                            className="fill-spctm-muted-foreground"
                           >
                             Visitors
                           </tspan>
@@ -572,7 +572,7 @@ function ChartRadialExample() {
               className="size-4"
             />
           </div>
-          <div className="text-spectrum-muted-foreground leading-none">
+          <div className="text-spctm-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>

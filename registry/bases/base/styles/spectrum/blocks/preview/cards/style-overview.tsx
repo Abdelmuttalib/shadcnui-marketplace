@@ -39,32 +39,32 @@ export function StyleOverview() {
               ? currentFontHeading.name
               : currentFont?.name}
           </div>
-          <div className="text-spectrum-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
+          <div className="text-spctm-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
             Designers love packing quirky glyphs into test phrases. This is a
             preview of the typography styles.
           </div>
         </div>
         <div className="grid grid-cols-6 gap-3">
           {[
-            "--spectrum-background",
-            "--spectrum-foreground",
-            "--spectrum-primary",
-            "--spectrum-secondary",
-            "--spectrum-muted",
-            "--spectrum-accent",
-            "--spectrum-border",
-            "--spectrum-chart-1",
-            "--spectrum-chart-2",
-            "--spectrum-chart-3",
-            "--spectrum-chart-4",
-            "--spectrum-chart-5",
+            "--spctm-background",
+            "--spctm-foreground",
+            "--spctm-primary",
+            "--spctm-secondary",
+            "--spctm-muted",
+            "--spctm-accent",
+            "--spctm-border",
+            "--spctm-chart-1",
+            "--spctm-chart-2",
+            "--spctm-chart-3",
+            "--spctm-chart-4",
+            "--spctm-chart-5",
           ].map((variant) => (
             <div
               key={variant}
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="after:border-spectrum-border style-sera:rounded-none style-sera:after:rounded-none rounded-spectrum-lg after:rounded-spectrum-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-spctm-border style-sera:rounded-none style-sera:after:rounded-none rounded-spctm-lg after:rounded-spctm-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
                     "--color": `var(${variant})`,

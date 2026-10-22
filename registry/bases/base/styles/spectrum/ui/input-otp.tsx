@@ -31,7 +31,7 @@ function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="input-otp-group"
       className={cn(
-        "has-aria-invalid:border-spectrum-destructive has-aria-invalid:ring-spectrum-destructive/20 dark:has-aria-invalid:ring-spectrum-destructive/40 rounded-spectrum-md flex items-center has-aria-invalid:ring-3",
+        "has-aria-invalid:border-spctm-destructive has-aria-invalid:ring-spctm-destructive/20 dark:has-aria-invalid:ring-spctm-destructive/40 rounded-spctm-md flex items-center has-aria-invalid:ring-3",
         className
       )}
       {...props}
@@ -54,7 +54,7 @@ function InputOTPSlot({
       data-slot="input-otp-slot"
       data-active={isActive}
       className={cn(
-        "border-spectrum-input aria-invalid:border-spectrum-destructive data-[active=true]:border-spectrum-ring data-[active=true]:ring-spectrum-ring/50 data-[active=true]:aria-invalid:border-spectrum-destructive data-[active=true]:aria-invalid:ring-spectrum-destructive/20 dark:bg-spectrum-input/30 dark:data-[active=true]:aria-invalid:ring-spectrum-destructive/40 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-3",
+        "border-spctm-input aria-invalid:border-spctm-destructive data-[active=true]:border-spctm-ring data-[active=true]:ring-spctm-ring/50 data-[active=true]:aria-invalid:border-spctm-destructive data-[active=true]:aria-invalid:ring-spctm-destructive/20 dark:bg-spctm-input/30 dark:data-[active=true]:aria-invalid:ring-spctm-destructive/40 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-3",
         className
       )}
       {...props}
@@ -62,7 +62,7 @@ function InputOTPSlot({
       {char}
       {hasFakeCaret && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="animate-caret-blink bg-spectrum-foreground h-4 w-px duration-1000" />
+          <div className="animate-caret-blink bg-spctm-foreground h-4 w-px duration-1000" />
         </div>
       )}
     </div>

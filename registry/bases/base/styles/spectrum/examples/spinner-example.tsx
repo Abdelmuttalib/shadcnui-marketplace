@@ -135,7 +135,7 @@ function SpinnerInEmpty() {
             variant="link"
             render={<a href="#" />}
             nativeButton={false}
-            className="text-spectrum-muted-foreground"
+            className="text-spctm-muted-foreground"
           >
             Learn more{" "}
             <IconPlaceholder

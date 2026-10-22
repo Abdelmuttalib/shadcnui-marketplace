@@ -25,7 +25,7 @@ function Command({
     <CommandPrimitive
       data-slot="command"
       className={cn(
-        "bg-spectrum-popover text-spectrum-popover-foreground flex size-full flex-col overflow-hidden rounded-xl! p-1",
+        "bg-spctm-popover text-spctm-popover-foreground flex size-full flex-col overflow-hidden rounded-xl! p-1",
         className
       )}
       {...props}
@@ -72,7 +72,7 @@ function CommandInput({
 }: React.ComponentProps<typeof CommandPrimitive.Input>) {
   return (
     <div data-slot="command-input-wrapper" className="p-1 pb-0">
-      <InputGroup className="border-spectrum-input/30 bg-spectrum-input/30 rounded-spectrum-lg! h-8! shadow-none! *:data-[slot=input-group-addon]:pl-2!">
+      <InputGroup className="border-spctm-input/30 bg-spctm-input/30 rounded-spctm-lg! h-8! shadow-none! *:data-[slot=input-group-addon]:pl-2!">
         <CommandPrimitive.Input
           data-slot="command-input"
           className={cn(
@@ -126,7 +126,7 @@ function CommandGroup({
     <CommandPrimitive.Group
       data-slot="command-group"
       className={cn(
-        "text-spectrum-foreground **:[[cmdk-group-heading]]:text-spectrum-muted-foreground overflow-hidden p-1 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-medium",
+        "text-spctm-foreground **:[[cmdk-group-heading]]:text-spctm-muted-foreground overflow-hidden p-1 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-medium",
         className
       )}
       {...props}
@@ -141,7 +141,7 @@ function CommandSeparator({
   return (
     <CommandPrimitive.Separator
       data-slot="command-separator"
-      className={cn("bg-spectrum-border -mx-1 h-px w-auto", className)}
+      className={cn("bg-spctm-border -mx-1 h-px w-auto", className)}
       {...props}
     />
   );
@@ -156,7 +156,7 @@ function CommandItem({
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        "group/command-item data-selected:bg-spectrum-muted data-selected:text-spectrum-foreground data-selected:**:[svg]:text-spectrum-foreground rounded-spectrum-sm in-data-[slot=dialog-content]:rounded-spectrum-lg! relative flex cursor-default items-center gap-2 px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "group/command-item data-selected:bg-spctm-muted data-selected:text-spctm-foreground data-selected:**:[svg]:text-spctm-foreground rounded-spctm-sm in-data-[slot=dialog-content]:rounded-spctm-lg! relative flex cursor-default items-center gap-2 px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -175,7 +175,7 @@ function CommandShortcut({
     <span
       data-slot="command-shortcut"
       className={cn(
-        "text-spectrum-muted-foreground group-data-selected/command-item:text-spectrum-foreground ml-auto text-xs tracking-widest",
+        "text-spctm-muted-foreground group-data-selected/command-item:text-spctm-foreground ml-auto text-xs tracking-widest",
         className
       )}
       {...props}

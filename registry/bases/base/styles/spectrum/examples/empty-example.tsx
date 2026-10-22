@@ -53,7 +53,7 @@ function EmptyBasic() {
           <Button
             variant="link"
             render={<a href="#" />}
-            className="text-spectrum-muted-foreground"
+            className="text-spctm-muted-foreground"
             nativeButton={false}
           >
             Learn more{" "}
@@ -74,7 +74,7 @@ function EmptyBasic() {
 function EmptyWithMutedBackground() {
   return (
     <Example title="With Muted Background">
-      <Empty className="bg-spectrum-muted">
+      <Empty className="bg-spctm-muted">
         <EmptyHeader>
           <EmptyTitle>No results found</EmptyTitle>
           <EmptyDescription>
@@ -86,7 +86,7 @@ function EmptyWithMutedBackground() {
           <Button
             variant="link"
             render={<a href="#" />}
-            className="text-spectrum-muted-foreground"
+            className="text-spctm-muted-foreground"
             nativeButton={false}
           >
             Learn more{" "}
@@ -181,7 +181,7 @@ function EmptyWithIcon() {
 function EmptyWithMutedBackgroundAlt() {
   return (
     <Example title="With Muted Background Alt">
-      <Empty className="bg-spectrum-muted/50">
+      <Empty className="bg-spctm-muted/50">
         <EmptyHeader>
           <EmptyTitle>404 - Not Found</EmptyTitle>
           <EmptyDescription>
@@ -244,7 +244,7 @@ function EmptyInCard() {
           <Button
             variant="link"
             render={<a href="#" />}
-            className="text-spectrum-muted-foreground"
+            className="text-spctm-muted-foreground"
             nativeButton={false}
           >
             Learn more{" "}

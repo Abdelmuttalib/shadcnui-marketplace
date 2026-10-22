@@ -38,7 +38,7 @@ const chartData = [
 const chartConfig = {
   amount: {
     label: "Contribution",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -82,26 +82,26 @@ export function ContributionHistory() {
         <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-1">
-              <ItemDescription className="text-spectrum-muted-foreground text-xs font-medium tracking-wider uppercase">
+              <ItemDescription className="text-spctm-muted-foreground text-xs font-medium tracking-wider uppercase">
                 Upcoming
               </ItemDescription>
               <span className="cn-font-heading text-lg font-semibold">
                 May 25, 2024
               </span>
-              <span className="text-spectrum-muted-foreground text-sm">
+              <span className="text-spctm-muted-foreground text-sm">
                 $1,000 scheduled
               </span>
             </ItemContent>
           </Item>
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-1">
-              <ItemDescription className="text-spectrum-muted-foreground text-xs font-medium tracking-wider uppercase">
+              <ItemDescription className="text-spctm-muted-foreground text-xs font-medium tracking-wider uppercase">
                 Auto-Save Plan
               </ItemDescription>
               <span className="cn-font-heading text-lg font-semibold">
                 Accelerated
               </span>
-              <span className="text-spectrum-muted-foreground text-sm">
+              <span className="text-spctm-muted-foreground text-sm">
                 Recurring weekly
               </span>
             </ItemContent>

@@ -38,10 +38,10 @@ export function TeamSwitcher({
         <DropdownMenu>
           <DropdownMenuTrigger
             render={
-              <SidebarMenuButton className="aria-expanded:bg-spectrum-muted aria-expanded:text-spectrum-foreground w-fit px-1.5" />
+              <SidebarMenuButton className="aria-expanded:bg-spctm-muted aria-expanded:text-spctm-foreground w-fit px-1.5" />
             }
           >
-            <div className="bg-spectrum-sidebar-primary text-spectrum-sidebar-primary-foreground rounded-spectrum-md flex aspect-square size-5 items-center justify-center">
+            <div className="bg-spctm-sidebar-primary text-spctm-sidebar-primary-foreground rounded-spctm-md flex aspect-square size-5 items-center justify-center">
               {activeTeam.logo}
             </div>
             <span className="truncate font-medium">{activeTeam.name}</span>
@@ -55,13 +55,13 @@ export function TeamSwitcher({
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="rounded-spectrum-lg w-64"
+            className="rounded-spctm-lg w-64"
             align="start"
             side="bottom"
             sideOffset={4}
           >
             <DropdownMenuGroup>
-              <DropdownMenuLabel className="text-spectrum-muted-foreground text-xs">
+              <DropdownMenuLabel className="text-spctm-muted-foreground text-xs">
                 Teams
               </DropdownMenuLabel>
               {teams.map((team, index) => (
@@ -81,7 +81,7 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-2 p-2">
-                <div className="bg-spectrum-background rounded-spectrum-md flex size-6 items-center justify-center border">
+                <div className="bg-spctm-background rounded-spctm-md flex size-6 items-center justify-center border">
                   <IconPlaceholder
                     lucide="PlusIcon"
                     tabler="IconPlus"
@@ -91,7 +91,7 @@ export function TeamSwitcher({
                     className="size-4"
                   />
                 </div>
-                <div className="text-spectrum-muted-foreground font-medium">
+                <div className="text-spctm-muted-foreground font-medium">
                   Add team
                 </div>
               </DropdownMenuItem>

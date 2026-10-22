@@ -22,7 +22,7 @@ export function IndexInvesting() {
         <CardDescription className="style-sera:mt-0 mt-3 text-sm leading-relaxed">
           <a
             href="#"
-            className="hover:text-spectrum-primary underline underline-offset-4"
+            className="hover:text-spctm-primary underline underline-offset-4"
           >
             Over time
           </a>

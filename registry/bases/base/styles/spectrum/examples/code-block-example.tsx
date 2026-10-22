@@ -530,7 +530,7 @@ function CodeBlockWithActions() {
               size="icon-xs"
               aria-label="Wrap lines"
               aria-pressed={wrap}
-              className="aria-pressed:text-spectrum-foreground"
+              className="aria-pressed:text-spctm-foreground"
               onClick={() => setWrap(!wrap)}
             >
               <IconPlaceholder
@@ -1108,7 +1108,7 @@ function MarkdownCode({
 
   if (!block) {
     return (
-      <code className="bg-spectrum-muted rounded-spectrum-sm px-1 py-0.5 font-mono text-[0.9em]">
+      <code className="bg-spctm-muted rounded-spctm-sm px-1 py-0.5 font-mono text-[0.9em]">
         {children}
       </code>
     );

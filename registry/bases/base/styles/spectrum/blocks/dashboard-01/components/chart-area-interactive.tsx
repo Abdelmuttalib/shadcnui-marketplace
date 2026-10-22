@@ -132,11 +132,11 @@ const chartConfig = {
   },
   desktop: {
     label: "Desktop",
-    color: "var(--spectrum-primary)",
+    color: "var(--spctm-primary)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--spectrum-primary)",
+    color: "var(--spctm-primary)",
   },
 } satisfies ChartConfig;
 
@@ -204,13 +204,13 @@ export function ChartAreaInteractive() {
               <SelectValue placeholder="Last 3 months" />
             </SelectTrigger>
             <SelectContent className="rounded-xl">
-              <SelectItem value="90d" className="rounded-spectrum-lg">
+              <SelectItem value="90d" className="rounded-spctm-lg">
                 Last 3 months
               </SelectItem>
-              <SelectItem value="30d" className="rounded-spectrum-lg">
+              <SelectItem value="30d" className="rounded-spctm-lg">
                 Last 30 days
               </SelectItem>
-              <SelectItem value="7d" className="rounded-spectrum-lg">
+              <SelectItem value="7d" className="rounded-spctm-lg">
                 Last 7 days
               </SelectItem>
             </SelectContent>

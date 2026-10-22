@@ -25,7 +25,7 @@ export default function Page() {
     >
       <AppSidebar />
       <SidebarInset>
-        <header className="bg-spectrum-background sticky top-0 flex shrink-0 items-center gap-2 border-b p-4">
+        <header className="bg-spctm-background sticky top-0 flex shrink-0 items-center gap-2 border-b p-4">
           <SidebarTrigger className="-ml-1" />
           <Separator
             orientation="vertical"
@@ -47,7 +47,7 @@ export default function Page() {
           {Array.from({ length: 24 }).map((_, index) => (
             <div
               key={index}
-              className="bg-spectrum-muted/50 rounded-spectrum-lg aspect-video h-12 w-full"
+              className="bg-spctm-muted/50 rounded-spctm-lg aspect-video h-12 w-full"
             />
           ))}
         </div>

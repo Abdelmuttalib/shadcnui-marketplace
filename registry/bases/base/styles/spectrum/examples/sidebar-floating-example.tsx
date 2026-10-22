@@ -171,7 +171,7 @@ export default function SidebarFloatingExample() {
   };
 
   return (
-    <SidebarProvider className="bg-spectrum-background">
+    <SidebarProvider className="bg-spctm-background">
       <Sidebar variant="floating">
         <SidebarHeader>
           <SidebarMenu>
@@ -195,7 +195,7 @@ export default function SidebarFloatingExample() {
                   <SidebarMenuItem>
                     <DropdownMenuTrigger
                       render={
-                        <SidebarMenuButton className="data-popup-open:bg-spectrum-sidebar-accent data-popup-open:text-spectrum-sidebar-accent-foreground" />
+                        <SidebarMenuButton className="data-popup-open:bg-spctm-sidebar-accent data-popup-open:text-spctm-sidebar-accent-foreground" />
                       }
                     >
                       {item.title}{" "}
@@ -244,7 +244,7 @@ export default function SidebarFloatingExample() {
                   <Field>
                     <SidebarInput type="email" placeholder="Email" />
                     <Button
-                      className="bg-spectrum-sidebar-primary text-spectrum-sidebar-primary-foreground w-full"
+                      className="bg-spctm-sidebar-primary text-spctm-sidebar-primary-foreground w-full"
                       size="sm"
                     >
                       Subscribe
@@ -263,11 +263,11 @@ export default function SidebarFloatingExample() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-spectrum-muted/50 aspect-video rounded-xl" />
-            <div className="bg-spectrum-muted/50 aspect-video rounded-xl" />
-            <div className="bg-spectrum-muted/50 aspect-video rounded-xl" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
+            <div className="bg-spctm-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-spectrum-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-spctm-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

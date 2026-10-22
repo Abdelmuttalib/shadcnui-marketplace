@@ -2,7 +2,7 @@ import { cn } from "cn";
 
 function ExampleWrapper({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div className="bg-spectrum-muted dark:bg-spectrum-background w-full">
+    <div className="bg-spctm-muted dark:bg-spctm-background w-full">
       <div
         data-slot="example-wrapper"
         className={cn(
@@ -36,14 +36,14 @@ function Example({
       {...props}
     >
       {title && (
-        <div className="text-spectrum-muted-foreground px-1.5 py-2 text-xs font-medium">
+        <div className="text-spctm-muted-foreground px-1.5 py-2 text-xs font-medium">
           {title}
         </div>
       )}
       <div
         data-slot="example-content"
         className={cn(
-          "bg-spectrum-card text-spectrum-foreground style-lyra:rounded-none style-sera:rounded-none flex min-w-0 flex-1 flex-col items-start gap-6 rounded-xl p-12 *:[div:not([class*='w-'])]:w-full",
+          "bg-spctm-card text-spctm-foreground style-lyra:rounded-none style-sera:rounded-none flex min-w-0 flex-1 flex-col items-start gap-6 rounded-xl p-12 *:[div:not([class*='w-'])]:w-full",
           className
         )}
       >

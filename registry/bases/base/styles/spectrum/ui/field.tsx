@@ -52,7 +52,7 @@ function FieldGroup({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const fieldVariants = cva(
-  "group/field flex w-full gap-3 data-[invalid=true]:text-spectrum-destructive",
+  "group/field flex w-full gap-3 data-[invalid=true]:text-spctm-destructive",
   {
     variants: {
       orientation: {
@@ -106,7 +106,7 @@ function FieldLabel({
     <Label
       data-slot="field-label"
       className={cn(
-        "group/field-label peer/field-label has-data-checked:border-spectrum-primary/30 has-data-checked:bg-spectrum-primary/5 has-[>[data-slot=field]]:not-has-[:disabled,[data-disabled]]:hover:bg-spectrum-muted/50 has-[>[data-slot=field]]:has-[:focus-visible]:border-spectrum-ring has-[>[data-slot=field]]:has-[:focus-visible]:ring-spectrum-ring/50 dark:has-data-checked:border-spectrum-primary/20 dark:has-data-checked:bg-spectrum-primary/10 has-[>[data-slot=field]]:rounded-spectrum-md flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[>[data-slot=field]]:border has-[>[data-slot=field]]:has-[:focus-visible]:ring-3 *:data-[slot=field]:p-3",
+        "group/field-label peer/field-label has-data-checked:border-spctm-primary/30 has-data-checked:bg-spctm-primary/5 has-[>[data-slot=field]]:not-has-[:disabled,[data-disabled]]:hover:bg-spctm-muted/50 has-[>[data-slot=field]]:has-[:focus-visible]:border-spctm-ring has-[>[data-slot=field]]:has-[:focus-visible]:ring-spctm-ring/50 dark:has-data-checked:border-spctm-primary/20 dark:has-data-checked:bg-spctm-primary/10 has-[>[data-slot=field]]:rounded-spctm-md flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[>[data-slot=field]]:border has-[>[data-slot=field]]:has-[:focus-visible]:ring-3 *:data-[slot=field]:p-3",
         "has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col",
         className
       )}
@@ -133,9 +133,9 @@ function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
     <p
       data-slot="field-description"
       className={cn(
-        "text-spectrum-muted-foreground text-left text-sm leading-normal font-normal group-has-data-horizontal/field:text-balance [[data-variant=legend]+&]:-mt-1.5",
+        "text-spctm-muted-foreground text-left text-sm leading-normal font-normal group-has-data-horizontal/field:text-balance [[data-variant=legend]+&]:-mt-1.5",
         "last:mt-0 nth-last-2:-mt-1",
-        "[&>a:hover]:text-spectrum-primary [&>a]:underline [&>a]:underline-offset-4",
+        "[&>a:hover]:text-spctm-primary [&>a]:underline [&>a]:underline-offset-4",
         className
       )}
       {...props}
@@ -163,7 +163,7 @@ function FieldSeparator({
       <Separator className="absolute inset-0 top-1/2" />
       {children && (
         <span
-          className="bg-spectrum-background text-spectrum-muted-foreground relative mx-auto block w-fit px-2"
+          className="bg-spctm-background text-spctm-muted-foreground relative mx-auto block w-fit px-2"
           data-slot="field-separator-content"
         >
           {children}
@@ -216,7 +216,7 @@ function FieldError({
     <div
       role="alert"
       data-slot="field-error"
-      className={cn("text-spectrum-destructive text-sm font-normal", className)}
+      className={cn("text-spctm-destructive text-sm font-normal", className)}
       {...props}
     >
       {content}

@@ -42,7 +42,7 @@ export default function ScrollAreaExample() {
 function ScrollAreaVertical() {
   return (
     <Example title="Vertical">
-      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl rounded-spectrum-md mx-auto h-72 w-48 border">
+      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl rounded-spctm-md mx-auto h-72 w-48 border">
         <div className="p-4">
           <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
           {tags.map((tag) => (
@@ -60,11 +60,11 @@ function ScrollAreaVertical() {
 function ScrollAreaHorizontal() {
   return (
     <Example title="Horizontal">
-      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl rounded-spectrum-md mx-auto w-full max-w-96 border p-4">
+      <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl rounded-spctm-md mx-auto w-full max-w-96 border p-4">
         <div className="flex gap-4">
           {works.map((artwork) => (
             <figure key={artwork.artist} className="shrink-0">
-              <div className="rounded-spectrum-md overflow-hidden">
+              <div className="rounded-spctm-md overflow-hidden">
                 <Image
                   src={artwork.art}
                   alt={`Photo by ${artwork.artist}`}
@@ -73,9 +73,9 @@ function ScrollAreaHorizontal() {
                   height={400}
                 />
               </div>
-              <figcaption className="text-spectrum-muted-foreground pt-2 text-xs">
+              <figcaption className="text-spctm-muted-foreground pt-2 text-xs">
                 Photo by{" "}
-                <span className="text-spectrum-foreground font-semibold">
+                <span className="text-spctm-foreground font-semibold">
                   {artwork.artist}
                 </span>
               </figcaption>

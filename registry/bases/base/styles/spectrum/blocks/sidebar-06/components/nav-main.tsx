@@ -38,7 +38,7 @@ export function NavMain({
             <SidebarMenuItem>
               <DropdownMenuTrigger
                 render={
-                  <SidebarMenuButton className="aria-expanded:bg-spectrum-muted" />
+                  <SidebarMenuButton className="aria-expanded:bg-spctm-muted" />
                 }
               >
                 {item.title}{" "}
@@ -55,7 +55,7 @@ export function NavMain({
                 <DropdownMenuContent
                   side={isMobile ? "bottom" : "right"}
                   align={isMobile ? "end" : "start"}
-                  className="rounded-spectrum-lg min-w-56"
+                  className="rounded-spctm-lg min-w-56"
                 >
                   {item.items.map((item) => (
                     <DropdownMenuItem

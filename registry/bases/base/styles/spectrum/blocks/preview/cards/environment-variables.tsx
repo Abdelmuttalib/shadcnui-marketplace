@@ -25,10 +25,10 @@ export function EnvironmentVariables() {
         ].map((env) => (
           <div
             key={env.key}
-            className="ring-spectrum-border rounded-spectrum-md flex items-center gap-2 px-2.5 py-2 font-mono text-xs ring"
+            className="ring-spctm-border rounded-spctm-md flex items-center gap-2 px-2.5 py-2 font-mono text-xs ring"
           >
             <span className="font-medium">{env.key}</span>
-            <span className="text-spectrum-muted-foreground ml-auto">
+            <span className="text-spctm-muted-foreground ml-auto">
               {env.masked ? "••••••••" : "https://api.example.com"}
             </span>
           </div>

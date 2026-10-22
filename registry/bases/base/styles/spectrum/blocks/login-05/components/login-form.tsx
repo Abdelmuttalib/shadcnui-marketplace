@@ -26,7 +26,7 @@ export function LoginForm({
               href="#"
               className="flex flex-col items-center gap-2 font-medium"
             >
-              <div className="rounded-spectrum-md flex size-8 items-center justify-center">
+              <div className="rounded-spctm-md flex size-8 items-center justify-center">
                 <IconPlaceholder
                   lucide="GalleryVerticalEndIcon"
                   tabler="IconLayoutRows"

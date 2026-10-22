@@ -40,7 +40,7 @@ export function NavUser({
             render={
               <SidebarMenuButton
                 size="lg"
-                className="aria-expanded:bg-spectrum-muted"
+                className="aria-expanded:bg-spctm-muted"
               />
             }
           >

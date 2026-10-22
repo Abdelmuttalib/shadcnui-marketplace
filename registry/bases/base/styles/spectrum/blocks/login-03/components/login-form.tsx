@@ -53,7 +53,7 @@ export function LoginForm({
                   Login with Google
                 </Button>
               </Field>
-              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-spectrum-card">
+              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-spctm-card">
                 Or continue with
               </FieldSeparator>
               <Field>

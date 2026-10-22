@@ -35,7 +35,7 @@ const activityData = [
 const chartConfig = {
   amount: {
     label: "Activity",
-    color: "var(--spectrum-chart-2)",
+    color: "var(--spctm-chart-2)",
   },
 } satisfies ChartConfig;
 

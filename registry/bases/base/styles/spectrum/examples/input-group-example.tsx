@@ -133,7 +133,7 @@ function InputGroupWithAddons() {
                 hugeicons="SearchIcon"
                 phosphor="MagnifyingGlassIcon"
                 remixicon="RiSearchLine"
-                className="text-spectrum-muted-foreground"
+                className="text-spctm-muted-foreground"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -168,7 +168,7 @@ function InputGroupWithAddons() {
                 hugeicons="VoiceIcon"
                 phosphor="MicrophoneIcon"
                 remixicon="RiMicLine"
-                className="text-spectrum-muted-foreground"
+                className="text-spctm-muted-foreground"
               />
             </InputGroupAddon>
             <InputGroupAddon align="inline-end">
@@ -195,7 +195,7 @@ function InputGroupWithAddons() {
                 hugeicons="AlertCircleIcon"
                 phosphor="InfoIcon"
                 remixicon="RiInformationLine"
-                className="text-spectrum-muted-foreground ml-auto"
+                className="text-spctm-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -212,7 +212,7 @@ function InputGroupWithAddons() {
                 hugeicons="AlertCircleIcon"
                 phosphor="InfoIcon"
                 remixicon="RiInformationLine"
-                className="text-spectrum-muted-foreground ml-auto"
+                className="text-spctm-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -401,7 +401,7 @@ function InputGroupWithTooltip({
               <DropdownMenu>
                 <DropdownMenuTrigger
                   render={
-                    <InputGroupButton className="text-spectrum-muted-foreground tabular-nums" />
+                    <InputGroupButton className="text-spctm-muted-foreground tabular-nums" />
                   }
                 >
                   {country}{" "}
@@ -460,7 +460,7 @@ function InputGroupWithTooltip({
                 </PopoverHeader>
               </PopoverContent>
             </Popover>
-            <InputGroupAddon className="text-spectrum-muted-foreground pl-1">
+            <InputGroupAddon className="text-spctm-muted-foreground pl-1">
               https://
             </InputGroupAddon>
             <InputGroupInput id="input-secure-19" />
@@ -807,7 +807,7 @@ function InputGroupTextareaExamples() {
                 hugeicons="AlertCircleIcon"
                 phosphor="InfoIcon"
                 remixicon="RiInformationLine"
-                className="text-spectrum-muted-foreground ml-auto"
+                className="text-spctm-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>

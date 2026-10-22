@@ -26,7 +26,7 @@ export function LoginForm({
             <FieldGroup>
               <div className="flex flex-col items-center gap-2 text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>
-                <p className="text-spectrum-muted-foreground text-balance">
+                <p className="text-spctm-muted-foreground text-balance">
                   Login to your Acme Inc account
                 </p>
               </div>
@@ -54,7 +54,7 @@ export function LoginForm({
               <Field>
                 <Button type="submit">Login</Button>
               </Field>
-              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-spectrum-card">
+              <FieldSeparator className="*:data-[slot=field-separator-content]:bg-spctm-card">
                 Or continue with
               </FieldSeparator>
               <Field className="grid grid-cols-3 gap-4">
@@ -91,7 +91,7 @@ export function LoginForm({
               </FieldDescription>
             </FieldGroup>
           </form>
-          <div className="bg-spectrum-muted relative hidden md:block">
+          <div className="bg-spctm-muted relative hidden md:block">
             <img
               src="/placeholder.svg"
               alt="Image"

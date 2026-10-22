@@ -55,7 +55,7 @@ function ContextMenuBasic() {
   return (
     <Example title="Basic">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -74,7 +74,7 @@ function ContextMenuWithIcons() {
   return (
     <Example title="With Icons">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -133,7 +133,7 @@ function ContextMenuWithShortcuts() {
   return (
     <Example title="With Shortcuts">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -172,7 +172,7 @@ function ContextMenuWithSubmenu() {
   return (
     <Example title="With Submenu">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -214,7 +214,7 @@ function ContextMenuWithGroups() {
   return (
     <Example title="With Groups, Labels & Separators">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -277,7 +277,7 @@ function ContextMenuWithCheckboxes() {
   return (
     <Example title="With Checkboxes">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -303,7 +303,7 @@ function ContextMenuWithRadio() {
   return (
     <Example title="With Radio Group">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -337,7 +337,7 @@ function ContextMenuWithDestructive() {
   return (
     <Example title="With Destructive Items">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>
@@ -407,7 +407,7 @@ function ContextMenuWithSides() {
           ] as const
         ).map((side) => (
           <ContextMenu key={side}>
-            <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] items-center justify-center border p-4 text-sm capitalize">
+            <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] items-center justify-center border p-4 text-sm capitalize">
               {side.replace("-", " ")}
             </ContextMenuTrigger>
             <ContextMenuContent side={side}>
@@ -439,7 +439,7 @@ function ContextMenuInDialog() {
             </DialogDescription>
           </DialogHeader>
           <ContextMenu>
-            <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+            <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
               Right click here
             </ContextMenuTrigger>
             <ContextMenuContent>
@@ -519,7 +519,7 @@ function ContextMenuWithInset() {
   return (
     <Example title="With Inset">
       <ContextMenu>
-        <ContextMenuTrigger className="rounded-spectrum-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
+        <ContextMenuTrigger className="rounded-spctm-lg flex aspect-[2/0.5] w-full items-center justify-center border text-sm">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent className="w-44">

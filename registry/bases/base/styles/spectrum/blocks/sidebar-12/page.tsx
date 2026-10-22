@@ -17,7 +17,7 @@ export default function Page() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="bg-spectrum-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
+        <header className="bg-spctm-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />
           <Separator
             orientation="vertical"
@@ -36,7 +36,7 @@ export default function Page() {
             {Array.from({ length: 20 }).map((_, i) => (
               <div
                 key={i}
-                className="bg-spectrum-muted/50 aspect-square rounded-xl"
+                className="bg-spctm-muted/50 aspect-square rounded-xl"
               />
             ))}
           </div>

@@ -13,15 +13,15 @@ export function LoadingCard() {
         <Skeleton className="h-4 w-48" />
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <Skeleton className="rounded-spectrum-lg h-32 w-full" />
+        <Skeleton className="rounded-spctm-lg h-32 w-full" />
         <div className="flex flex-col gap-2">
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-3/4" />
           <Skeleton className="h-4 w-1/2" />
         </div>
         <div className="flex gap-2">
-          <Skeleton className="rounded-spectrum-md h-9 flex-1" />
-          <Skeleton className="rounded-spectrum-md h-9 flex-1" />
+          <Skeleton className="rounded-spctm-md h-9 flex-1" />
+          <Skeleton className="rounded-spctm-md h-9 flex-1" />
         </div>
       </CardContent>
     </Card>
