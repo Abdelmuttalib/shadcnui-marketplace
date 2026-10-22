@@ -64,7 +64,7 @@ export function StyleOverview() {
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="after:border-libelle-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-libelle-border style-sera:rounded-none style-sera:after:rounded-none rounded-libelle-lg after:rounded-libelle-lg relative aspect-square w-full bg-(--color) after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
                     "--color": `var(${variant})`,

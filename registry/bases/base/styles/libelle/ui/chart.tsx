@@ -190,7 +190,7 @@ function ChartTooltipContent({
   return (
     <div
       className={cn(
-        "border-libelle-border/50 bg-libelle-background grid min-w-32 items-start gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs shadow-xl",
+        "border-libelle-border/50 bg-libelle-background rounded-libelle-lg grid min-w-32 items-start gap-1.5 border px-2.5 py-1.5 text-xs shadow-xl",
         className
       )}
     >

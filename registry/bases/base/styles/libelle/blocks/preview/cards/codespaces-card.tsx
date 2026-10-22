@@ -264,7 +264,7 @@ export function CodespacesCard() {
                 <TabsTrigger value="ssh">SSH</TabsTrigger>
                 <TabsTrigger value="cli">GitHub CLI</TabsTrigger>
               </TabsList>
-              <div className="bg-libelle-muted/30 rounded-md border p-2">
+              <div className="bg-libelle-muted/30 rounded-libelle-md border p-2">
                 <TabsContent value="https">
                   <Field className="gap-2">
                     <FieldLabel htmlFor="https-url" className="sr-only">

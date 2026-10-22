@@ -223,7 +223,7 @@ export function NavActions() {
           />
         </PopoverTrigger>
         <PopoverContent
-          className="w-56 overflow-hidden rounded-lg p-0"
+          className="rounded-libelle-lg w-56 overflow-hidden p-0"
           align="end"
         >
           <Sidebar collapsible="none" className="bg-transparent">
