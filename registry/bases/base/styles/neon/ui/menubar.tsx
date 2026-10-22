@@ -27,7 +27,7 @@ function Menubar({ className, ...props }: MenubarPrimitive.Props) {
     <MenubarPrimitive
       data-slot="menubar"
       className={cn(
-        "flex h-9 items-center gap-1 rounded-md border p-1 shadow-xs",
+        "rounded-neon-md flex h-9 items-center gap-1 border p-1 shadow-xs",
         className
       )}
       {...props}
@@ -59,7 +59,7 @@ function MenubarTrigger({
     <DropdownMenuTrigger
       data-slot="menubar-trigger"
       className={cn(
-        "hover:bg-neon-muted aria-expanded:bg-neon-muted flex items-center rounded-sm px-2 py-1 text-sm font-medium outline-hidden select-none",
+        "hover:bg-neon-muted aria-expanded:bg-neon-muted rounded-neon-sm flex items-center px-2 py-1 text-sm font-medium outline-hidden select-none",
         className
       )}
       {...props}
@@ -81,7 +81,7 @@ function MenubarContent({
       alignOffset={alignOffset}
       sideOffset={sideOffset}
       className={cn(
-        "cn-menu-target cn-menu-translucent bg-neon-popover text-neon-popover-foreground ring-neon-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 min-w-36 rounded-md p-1 shadow-md ring-1 duration-100",
+        "cn-menu-target cn-menu-translucent bg-neon-popover text-neon-popover-foreground ring-neon-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 rounded-neon-md min-w-36 p-1 shadow-md ring-1 duration-100",
         className
       )}
       {...props}
@@ -101,7 +101,7 @@ function MenubarItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "group/menubar-item focus:bg-neon-accent focus:text-neon-accent-foreground not-data-[variant=destructive]:focus:**:text-neon-accent-foreground data-[variant=destructive]:text-neon-destructive data-[variant=destructive]:focus:bg-neon-destructive/10 data-[variant=destructive]:focus:text-neon-destructive dark:data-[variant=destructive]:focus:bg-neon-destructive/20 data-[variant=destructive]:*:[svg]:text-neon-destructive! gap-2 rounded-sm px-2 py-1.5 text-sm data-disabled:opacity-50 data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
+        "group/menubar-item focus:bg-neon-accent focus:text-neon-accent-foreground not-data-[variant=destructive]:focus:**:text-neon-accent-foreground data-[variant=destructive]:text-neon-destructive data-[variant=destructive]:focus:bg-neon-destructive/10 data-[variant=destructive]:focus:text-neon-destructive dark:data-[variant=destructive]:focus:bg-neon-destructive/20 data-[variant=destructive]:*:[svg]:text-neon-destructive! rounded-neon-sm gap-2 px-2 py-1.5 text-sm data-disabled:opacity-50 data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -123,7 +123,7 @@ function MenubarCheckboxItem({
       data-slot="menubar-checkbox-item"
       data-inset={inset}
       className={cn(
-        "focus:bg-neon-accent focus:text-neon-accent-foreground focus:**:text-neon-accent-foreground relative flex cursor-default items-center gap-2 rounded-md py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "focus:bg-neon-accent focus:text-neon-accent-foreground focus:**:text-neon-accent-foreground rounded-neon-md relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       checked={checked}
@@ -158,7 +158,7 @@ function MenubarRadioItem({
       data-slot="menubar-radio-item"
       data-inset={inset}
       className={cn(
-        "focus:bg-neon-accent focus:text-neon-accent-foreground focus:**:text-neon-accent-foreground relative flex cursor-default items-center gap-2 rounded-md py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-neon-accent focus:text-neon-accent-foreground focus:**:text-neon-accent-foreground rounded-neon-md relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -240,7 +240,7 @@ function MenubarSubTrigger({
       data-slot="menubar-sub-trigger"
       data-inset={inset}
       className={cn(
-        "focus:bg-neon-accent focus:text-neon-accent-foreground data-open:bg-neon-accent data-open:text-neon-accent-foreground gap-2 rounded-sm px-2 py-1.5 text-sm data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-neon-accent focus:text-neon-accent-foreground data-open:bg-neon-accent data-open:text-neon-accent-foreground rounded-neon-sm gap-2 px-2 py-1.5 text-sm data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -256,7 +256,7 @@ function MenubarSubContent({
     <DropdownMenuSubContent
       data-slot="menubar-sub-content"
       className={cn(
-        "cn-menu-target cn-menu-translucent bg-neon-popover text-neon-popover-foreground ring-neon-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 min-w-32 rounded-md p-1 shadow-lg ring-1 duration-100",
+        "cn-menu-target cn-menu-translucent bg-neon-popover text-neon-popover-foreground ring-neon-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 rounded-neon-md min-w-32 p-1 shadow-lg ring-1 duration-100",
         className
       )}
       {...props}

@@ -137,7 +137,7 @@ function AccordionWithBorders() {
           <AccordionItem
             key={item.value}
             value={item.value}
-            className="style-vega:rounded-lg style-vega:border style-nova:rounded-lg style-nova:border style-lyra:border"
+            className="style-vega:rounded-neon-lg style-vega:border style-nova:rounded-neon-lg style-nova:border style-lyra:border"
           >
             <AccordionTrigger className="style-vega:px-4 style-vega:text-sm style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-luma:text-sm font-medium">
               {item.trigger}
@@ -272,7 +272,7 @@ function AccordionInCard() {
           <Accordion
             multiple
             defaultValue={["plans"]}
-            className="style-maia:rounded-md style-mira:rounded-md"
+            className="style-maia:rounded-neon-md style-mira:rounded-neon-md"
           >
             {items.map((item) => (
               <AccordionItem key={item.value} value={item.value}>
@@ -314,7 +314,7 @@ function AccordionWithDisabled() {
 
   return (
     <Example title="With Disabled">
-      <Accordion className="style-vega:rounded-lg style-nova:rounded-lg style-lyra:rounded-none style-maia:rounded-lg style-mira:rounded-lg style-luma:rounded-xl mx-auto max-w-lg overflow-hidden border">
+      <Accordion className="style-vega:rounded-neon-lg style-nova:rounded-neon-lg style-lyra:rounded-none style-maia:rounded-neon-lg style-mira:rounded-neon-lg style-luma:rounded-xl mx-auto max-w-lg overflow-hidden border">
         {items.map((item) => (
           <AccordionItem
             key={item.value}

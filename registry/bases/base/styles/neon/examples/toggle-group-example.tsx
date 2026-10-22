@@ -513,7 +513,7 @@ function ToggleGroupFontWeightSelector() {
         </ToggleGroup>
         <FieldDescription>
           Use{" "}
-          <code className="bg-neon-muted rounded-md px-1 py-0.5 font-mono">
+          <code className="bg-neon-muted rounded-neon-md px-1 py-0.5 font-mono">
             font-{fontWeight}
           </code>{" "}
           to set the font weight.

@@ -43,7 +43,7 @@ export function RecentTransactions() {
           <TableBody>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-neon-muted flex size-10 items-center justify-center rounded-lg">
+                <div className="bg-neon-muted rounded-neon-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="CoffeeIcon"
@@ -95,7 +95,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-neon-muted flex size-10 items-center justify-center rounded-lg">
+                <div className="bg-neon-muted rounded-neon-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="ShoppingCartIcon"
@@ -147,7 +147,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-neon-muted flex size-10 items-center justify-center rounded-lg">
+                <div className="bg-neon-muted rounded-neon-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="WalletIcon"
@@ -199,7 +199,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-neon-muted flex size-10 items-center justify-center rounded-lg">
+                <div className="bg-neon-muted rounded-neon-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="CarIcon"
@@ -251,7 +251,7 @@ export function RecentTransactions() {
             </TableRow>
             <TableRow>
               <TableCell className="w-10">
-                <div className="bg-neon-muted flex size-10 items-center justify-center rounded-lg">
+                <div className="bg-neon-muted rounded-neon-lg flex size-10 items-center justify-center">
                   <IconPlaceholder
                     className="size-4 shrink-0"
                     lucide="TvIcon"

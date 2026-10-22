@@ -163,7 +163,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" render={<a href="#" />}>
-              <div className="bg-neon-sidebar-primary text-neon-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+              <div className="bg-neon-sidebar-primary text-neon-sidebar-primary-foreground rounded-neon-lg flex aspect-square size-8 items-center justify-center">
                 <IconPlaceholder
                   lucide="GalleryVerticalEndIcon"
                   tabler="IconLayoutRows"

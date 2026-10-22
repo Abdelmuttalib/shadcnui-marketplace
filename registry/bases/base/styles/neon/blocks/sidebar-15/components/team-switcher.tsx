@@ -41,7 +41,7 @@ export function TeamSwitcher({
               <SidebarMenuButton className="aria-expanded:bg-neon-muted aria-expanded:text-neon-foreground w-fit px-1.5" />
             }
           >
-            <div className="bg-neon-sidebar-primary text-neon-sidebar-primary-foreground flex aspect-square size-5 items-center justify-center rounded-md">
+            <div className="bg-neon-sidebar-primary text-neon-sidebar-primary-foreground rounded-neon-md flex aspect-square size-5 items-center justify-center">
               {activeTeam.logo}
             </div>
             <span className="truncate font-medium">{activeTeam.name}</span>
@@ -55,7 +55,7 @@ export function TeamSwitcher({
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-64 rounded-lg"
+            className="rounded-neon-lg w-64"
             align="start"
             side="bottom"
             sideOffset={4}
@@ -81,7 +81,7 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-2 p-2">
-                <div className="bg-neon-background flex size-6 items-center justify-center rounded-md border">
+                <div className="bg-neon-background rounded-neon-md flex size-6 items-center justify-center border">
                   <IconPlaceholder
                     lucide="PlusIcon"
                     tabler="IconPlus"

@@ -151,7 +151,7 @@ function CardCustomSpacing() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="bg-neon-muted/50 style-lyra:rounded-none style-sera:rounded-none grid gap-2 rounded-lg p-3 text-sm">
+            <div className="bg-neon-muted/50 style-lyra:rounded-none style-sera:rounded-none rounded-neon-lg grid gap-2 p-3 text-sm">
               <div className="flex items-center justify-between gap-2">
                 <span className="text-neon-muted-foreground">
                   Checks passed

@@ -9,7 +9,7 @@ export default function LoginPage() {
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
-            <div className="bg-neon-primary text-neon-primary-foreground flex size-6 items-center justify-center rounded-md">
+            <div className="bg-neon-primary text-neon-primary-foreground rounded-neon-md flex size-6 items-center justify-center">
               <IconPlaceholder
                 lucide="GalleryVerticalEndIcon"
                 tabler="IconLayoutRows"
