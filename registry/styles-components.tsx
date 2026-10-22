@@ -38,9 +38,9 @@ import {
   DefaultSettingsProfilePage,
   DefaultTaskPage,
 } from "@/registry/bases/base/default/page-examples";
-import { DefaultV4CardShowcase } from "@/registry/bases/base/styles/default-v4/card-showcase";
-import { DefaultV4UI } from "@/registry/bases/base/styles/default-v4/hero";
-import { DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default-v4/showcase-components";
+import { CardShowcase as DefaultV4CardShowcase } from "@/registry/bases/base/styles/default-v4/card-showcase";
+import { HeroUI as DefaultV4UI } from "@/registry/bases/base/styles/default-v4/hero";
+import { ShowcaseComponents as DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default-v4/showcase-components";
 import {
   DefaultV4AuthenticationPage,
   DefaultV4CardsPage,
