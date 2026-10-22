@@ -23,20 +23,20 @@ export function HeroUI() {
       <div className="-ml-[32rem] h-[46.375rem] origin-top select-none sm:-mt-16 sm:-ml-[24rem] sm:h-auto md:-ml-64 lg:mt-0 lg:-ml-16 xl:-mr-4 xl:ml-0">
         <div className="flex justify-end">
           <div className="relative flex items-end">
-            <div className="bg-dft-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+            <div className="bg-neon-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
             <div>
               <div>
                 <div className="relative ml-auto hidden w-fit justify-end p-4 lg:flex">
-                  <div className="bg-dft-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                  <div className="bg-dft-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                  <div className="bg-dft-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="bg-neon-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="bg-neon-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                  <div className="bg-neon-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                   <Switch />
                 </div>
               </div>
               <div className="relative p-4">
-                <div className="bg-dft-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                <div className="bg-dft-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                <div className="bg-dft-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                <div className="bg-neon-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                <div className="bg-neon-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                <div className="bg-neon-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 <div className="flex items-center justify-end">
                   <div className="flex flex-wrap gap-2">
                     <Button>Default</Button>
@@ -46,9 +46,9 @@ export function HeroUI() {
                 </div>
               </div>
               <div className="relative z-10 flex flex-col items-end gap-2 p-4 text-right">
-                <div className="bg-dft-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                <div className="bg-dft-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                <div className="bg-dft-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                <div className="bg-neon-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                <div className="bg-neon-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                <div className="bg-neon-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 <div className="flex justify-end gap-2">
                   <Tabs defaultValue="tab1">
                     <TabsList>
@@ -71,10 +71,10 @@ export function HeroUI() {
               </div>
             </div>
             <div className="relative z-10 p-4">
-              <div className="bg-dft-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-              <div className="bg-dft-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-              <div className="bg-dft-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-              <div className="divide-dft-border rounded-dft-lg border-dft-input bg-dft-card text-dft-foreground w-[24.5rem] divide-y border text-[0.8125rem]/5 shadow-xl shadow-black/5">
+              <div className="bg-neon-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+              <div className="bg-neon-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+              <div className="bg-neon-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+              <div className="divide-neon-border rounded-neon-lg border-neon-input bg-neon-card text-neon-foreground w-[24.5rem] divide-y border text-[0.8125rem]/5 shadow-xl shadow-black/5">
                 <div className="flex items-center p-4">
                   <Avatar className="size-10 flex-none rounded-full">
                     <AvatarImage
@@ -85,7 +85,7 @@ export function HeroUI() {
                   </Avatar>
                   <div className="ml-4 flex-auto">
                     <div className="font-medium">Leonard Krasner</div>
-                    <div className="text-dft-muted-foreground mt-1">
+                    <div className="text-neon-muted-foreground mt-1">
                       @leonardkrasner
                     </div>
                   </div>
@@ -103,7 +103,7 @@ export function HeroUI() {
                   </Avatar>
                   <div className="ml-4 flex-auto">
                     <div className="font-medium">Floyd Miles</div>
-                    <div className="text-dft-muted-foreground mt-1">
+                    <div className="text-neon-muted-foreground mt-1">
                       @floydmiles
                     </div>
                   </div>
@@ -122,9 +122,9 @@ export function HeroUI() {
         </div>
         <div className="flex justify-end">
           <div className="relative z-10 p-4">
-            <div className="bg-dft-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            <div className="bg-dft-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            <div className="bg-dft-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+            <div className="bg-neon-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+            <div className="bg-neon-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+            <div className="bg-neon-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
             <div className="flex w-fit items-center gap-2">
               <Input placeholder="Search components" className="w-48" />
               <div className="flex items-center space-x-2">
@@ -153,9 +153,9 @@ export function HeroUI() {
           </div>
         </div>
         <div className="relative z-10 w-[32.125rem] p-4">
-          <div className="bg-dft-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-          <div className="bg-dft-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-          <div className="bg-dft-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+          <div className="bg-neon-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+          <div className="bg-neon-foreground/10 absolute -inset-y-8 left-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+          <div className="bg-neon-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
 
           {renderStyleCardShowcase("neon")}
         </div>

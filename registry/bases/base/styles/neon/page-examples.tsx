@@ -28,7 +28,7 @@ export function DefaultV4ExamplePage({ title }: { title: string }) {
       <div className="flex items-center justify-between">
         <div className="space-y-1">
           <h2 className="text-xl font-semibold capitalize">{title}</h2>
-          <p className="text-dft-muted-foreground text-sm">
+          <p className="text-neon-muted-foreground text-sm">
             neon preview rendered from isolated components.
           </p>
         </div>

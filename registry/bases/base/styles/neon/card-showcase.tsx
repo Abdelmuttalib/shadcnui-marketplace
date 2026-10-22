@@ -57,7 +57,7 @@ export function CardShowcase() {
               />
               <AvatarFallback>CN2</AvatarFallback>
             </Avatar>
-            <span className="text-dft-muted-foreground text-sm">
+            <span className="text-neon-muted-foreground text-sm">
               2 contributors
             </span>
           </div>
