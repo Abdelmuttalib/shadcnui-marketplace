@@ -94,7 +94,7 @@ function ToastDescription({
   return (
     <ToastPrimitive.Description
       data-slot="toast-description"
-      className={cn("text-muted-foreground text-sm", className)}
+      className={cn("text-cb-muted-foreground text-sm", className)}
       {...props}
     />
   );
@@ -127,7 +127,7 @@ function ToastClose({
       aria-label="Close toast"
       render={render}
       className={cn(
-        "text-muted-foreground hover:text-foreground relative shrink-0 after:absolute after:-inset-2 after:content-['']",
+        "text-cb-muted-foreground hover:text-cb-foreground relative shrink-0 after:absolute after:-inset-2 after:content-['']",
         className
       )}
       {...props}
@@ -153,7 +153,7 @@ function ToastIcon({ type }: { type: string | undefined }) {
   }
 
   if (type === "error") {
-    icon = <OctagonXIcon className="text-destructive" aria-hidden="true" />;
+    icon = <OctagonXIcon className="text-cb-destructive" aria-hidden="true" />;
   }
 
   if (type === "loading") {

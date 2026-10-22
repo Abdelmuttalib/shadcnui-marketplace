@@ -20,7 +20,7 @@ const bubbleVariants = cva(
     variants: {
       variant: {
         default:
-          "*:data-[slot=bubble-content]:bg-primary *:data-[slot=bubble-content]:text-cb-primary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-cb-primary/80",
+          "*:data-[slot=bubble-content]:bg-cb-primary *:data-[slot=bubble-content]:text-cb-primary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-cb-primary/80",
         secondary:
           "*:data-[slot=bubble-content]:bg-cb-secondary *:data-[slot=bubble-content]:text-cb-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--cb-secondary),var(--cb-foreground)_5%)]",
         muted:

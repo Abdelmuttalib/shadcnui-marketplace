@@ -59,7 +59,7 @@ function MenubarTrigger({
     <DropdownMenuTrigger
       data-slot="menubar-trigger"
       className={cn(
-        "hover:bg-cb-muted aria-expanded:bg-cb-muted flex items-center rounded-sm px-3 py-2.5 text-sm font-medium outline-hidden select-none",
+        "hover:bg-cb-muted aria-expanded:bg-cb-muted rounded-cb-sm flex items-center px-3 py-2.5 text-sm font-medium outline-hidden select-none",
         className
       )}
       {...props}
@@ -214,7 +214,7 @@ function MenubarShortcut({
     <DropdownMenuShortcut
       data-slot="menubar-shortcut"
       className={cn(
-        "text-cb-muted-foreground/80 group-focus/menubar-item:text-cb-accent-foreground rounded-cb-md border-cb-border bg-input/30 ml-auto border px-px text-xs tracking-widest",
+        "text-cb-muted-foreground/80 group-focus/menubar-item:text-cb-accent-foreground rounded-cb-md border-cb-border bg-cb-input/30 ml-auto border px-px text-xs tracking-widest",
         className
       )}
       {...props}

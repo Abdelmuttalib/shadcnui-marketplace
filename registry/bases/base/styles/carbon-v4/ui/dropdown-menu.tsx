@@ -115,7 +115,7 @@ function DropdownMenuSubTrigger({
       data-slot="dropdown-menu-sub-trigger"
       data-inset={inset}
       className={cn(
-        "focus:bg-cb-accent focus:text-cb-accent-foreground not-data-[variant=destructive]:focus:**:text-cb-accent-foreground data-popup-open:bg-cb-accent data-popup-open:text-cb-accent-foreground data-open:bg-cb-accent data-open:text-cb-accent-foreground flex cursor-default items-center gap-2 rounded-sm px-3 py-1.5 text-sm outline-hidden select-none data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-cb-accent focus:text-cb-accent-foreground not-data-[variant=destructive]:focus:**:text-cb-accent-foreground data-popup-open:bg-cb-accent data-popup-open:text-cb-accent-foreground data-open:bg-cb-accent data-open:text-cb-accent-foreground rounded-cb-sm flex cursor-default items-center gap-2 px-3 py-1.5 text-sm outline-hidden select-none data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -138,7 +138,7 @@ function DropdownMenuSubContent({
     <DropdownMenuContent
       data-slot="dropdown-menu-sub-content"
       className={cn(
-        "cn-menu-target cn-menu-translucent bg-popover text-popover-foreground ring-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 w-auto min-w-[96px] rounded-md p-1 shadow-lg ring-1 duration-100",
+        "cn-menu-target cn-menu-translucent bg-cb-popover text-cb-popover-foreground ring-cb-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 rounded-cb-md w-auto min-w-[96px] p-1 shadow-lg ring-1 duration-100",
         className
       )}
       align={align}

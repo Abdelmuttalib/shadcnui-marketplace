@@ -126,7 +126,7 @@ function QuestionnaireChoice({
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
-          className="bg-primary-foreground hidden size-2 rounded-full group-data-checked/questionnaire-choice:block group-data-[type=checkbox]/questionnaire-choice:hidden"
+          className="bg-cb-primary-foreground hidden size-2 rounded-full group-data-checked/questionnaire-choice:block group-data-[type=checkbox]/questionnaire-choice:hidden"
         />
         <CheckIcon
           data-slot="questionnaire-choice-indicator-check"
@@ -172,7 +172,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "focus-visible:border-cb-ring focus-visible:ring-cb-ringfocus-visible:ring-cb-ring aria-invalid:border-cb-destructive aria-invalid:ring-cb-destructive bg-input/40 rounded-cb-md h-10 min-h-11 w-full min-w-0 border border-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-1 sm:min-h-0 md:text-sm",
+          "focus-visible:border-cb-ring focus-visible:ring-cb-ringfocus-visible:ring-cb-ring aria-invalid:border-cb-destructive aria-invalid:ring-cb-destructive bg-cb-input/40 rounded-cb-md h-10 min-h-11 w-full min-w-0 border border-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-1 sm:min-h-0 md:text-sm",
           "selection:bg-cb-primary selection:text-cb-primary-foreground placeholder:text-cb-muted-foreground",
           "border-b-cb-foreground/40",
 
