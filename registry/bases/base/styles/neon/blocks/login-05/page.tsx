@@ -2,7 +2,7 @@ import { LoginForm } from "@/registry/bases/base/styles/neon/blocks/login-05/com
 
 export default function LoginPage() {
   return (
-    <div className="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+    <div className="bg-neon-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="w-full max-w-sm">
         <LoginForm />
       </div>

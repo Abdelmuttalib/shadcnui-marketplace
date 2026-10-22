@@ -136,7 +136,7 @@ function DragHandle({ id }: { id: number }) {
       {...listeners}
       variant="ghost"
       size="icon"
-      className="text-muted-foreground size-7 hover:bg-transparent"
+      className="text-neon-muted-foreground size-7 hover:bg-transparent"
     >
       <IconPlaceholder
         lucide="GripVerticalIcon"
@@ -144,7 +144,7 @@ function DragHandle({ id }: { id: number }) {
         hugeicons="DragDropVerticalIcon"
         phosphor="DotsSixVerticalIcon"
         remixicon="RiDraggable"
-        className="text-muted-foreground size-3"
+        className="text-neon-muted-foreground size-3"
       />
       <span className="sr-only">Drag to reorder</span>
     </Button>
@@ -194,7 +194,7 @@ const columns = columnHelper.columns([
     header: "Section Type",
     cell: ({ row }) => (
       <div className="w-32">
-        <Badge variant="outline" className="text-muted-foreground px-1.5">
+        <Badge variant="outline" className="text-neon-muted-foreground px-1.5">
           {row.original.type}
         </Badge>
       </div>
@@ -203,7 +203,7 @@ const columns = columnHelper.columns([
   columnHelper.accessor("status", {
     header: "Status",
     cell: ({ row }) => (
-      <Badge variant="outline" className="text-muted-foreground px-1.5">
+      <Badge variant="outline" className="text-neon-muted-foreground px-1.5">
         {row.original.status === "Done" ? (
           <IconPlaceholder
             lucide="CircleCheckIcon"
@@ -243,7 +243,7 @@ const columns = columnHelper.columns([
           Target
         </Label>
         <Input
-          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+          className="hover:bg-neon-input/30 focus-visible:bg-neon-background dark:hover:bg-neon-input/30 dark:focus-visible:bg-neon-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
           defaultValue={row.original.target}
           id={`${row.original.id}-target`}
         />
@@ -267,7 +267,7 @@ const columns = columnHelper.columns([
           Limit
         </Label>
         <Input
-          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+          className="hover:bg-neon-input/30 focus-visible:bg-neon-background dark:hover:bg-neon-input/30 dark:focus-visible:bg-neon-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
           defaultValue={row.original.limit}
           id={`${row.original.id}-limit`}
         />
@@ -320,7 +320,7 @@ const columns = columnHelper.columns([
           render={
             <Button
               variant="ghost"
-              className="text-muted-foreground data-open:bg-muted flex size-8"
+              className="text-neon-muted-foreground data-open:bg-neon-muted flex size-8"
               size="icon"
             />
           }
@@ -462,7 +462,7 @@ export function DataTable({
             </SelectGroup>
           </SelectContent>
         </Select>
-        <TabsList className="**:data-[slot=badge]:bg-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
+        <TabsList className="**:data-[slot=badge]:bg-neon-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
           <TabsTrigger value="outline">Outline</TabsTrigger>
           <TabsTrigger value="past-performance">
             Past Performance <Badge variant="secondary">3</Badge>
@@ -544,7 +544,7 @@ export function DataTable({
             id={sortableId}
           >
             <Table>
-              <TableHeader className="bg-muted sticky top-0 z-10">
+              <TableHeader className="bg-neon-muted sticky top-0 z-10">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>
                     {headerGroup.headers.map((header) => {
@@ -584,7 +584,7 @@ export function DataTable({
           </DndContext>
         </div>
         <div className="flex items-center justify-between px-4">
-          <div className="text-muted-foreground hidden flex-1 text-sm lg:flex">
+          <div className="text-neon-muted-foreground hidden flex-1 text-sm lg:flex">
             {table.getFilteredSelectedRowModel().rows.length} of{" "}
             {table.getFilteredRowModel().rows.length} row(s) selected.
           </div>
@@ -757,7 +757,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
         render={
           <Button
             variant="link"
-            className="text-foreground w-fit px-0 text-left"
+            className="text-neon-foreground w-fit px-0 text-left"
           />
         }
       >
@@ -826,7 +826,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
                     className="size-4"
                   />
                 </div>
-                <div className="text-muted-foreground">
+                <div className="text-neon-muted-foreground">
                   Showing total visitors for the last 6 months. This is just
                   some random text to test the layout. It spans multiple lines
                   and should wrap around.

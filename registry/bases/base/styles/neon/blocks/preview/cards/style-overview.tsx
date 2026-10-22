@@ -36,7 +36,7 @@ export function StyleOverview() {
               ? currentFontHeading.name
               : currentFont?.name}
           </div>
-          <div className="text-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
+          <div className="text-neon-muted-foreground style-lyra:text-sm style-mira:text-sm style-sera:text-sm style-sera:leading-relaxed line-clamp-2 text-base">
             Designers love packing quirky glyphs into test phrases. This is a
             preview of the typography styles.
           </div>
@@ -61,7 +61,7 @@ export function StyleOverview() {
               className="flex flex-col flex-wrap items-center gap-2"
             >
               <div
-                className="after:border-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
+                className="after:border-neon-border style-sera:rounded-none style-sera:after:rounded-none relative aspect-square w-full rounded-lg bg-(--color) after:absolute after:inset-0 after:rounded-lg after:border after:mix-blend-darken dark:after:mix-blend-lighten"
                 style={
                   {
                     "--color": `var(${variant})`,

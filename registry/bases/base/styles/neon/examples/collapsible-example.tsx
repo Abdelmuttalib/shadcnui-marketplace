@@ -105,7 +105,7 @@ function CollapsibleFileTree() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="hover:bg-accent hover:text-accent-foreground group w-full justify-start transition-none"
+                className="hover:bg-neon-accent hover:text-neon-accent-foreground group w-full justify-start transition-none"
               />
             }
           >
@@ -139,7 +139,7 @@ function CollapsibleFileTree() {
         key={fileItem.name}
         variant="link"
         size="sm"
-        className="text-foreground w-full justify-start gap-2"
+        className="text-neon-foreground w-full justify-start gap-2"
       >
         <IconPlaceholder
           lucide="FileIcon"

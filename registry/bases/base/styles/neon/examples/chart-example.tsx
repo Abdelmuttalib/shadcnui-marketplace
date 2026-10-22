@@ -127,7 +127,7 @@ function ChartAreaExample() {
                   className="size-4"
                 />
               </div>
-              <div className="text-muted-foreground flex items-center gap-2 leading-none">
+              <div className="text-neon-muted-foreground flex items-center gap-2 leading-none">
                 January - June 2024
               </div>
             </div>
@@ -198,7 +198,7 @@ function ChartBarExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground leading-none">
+          <div className="text-neon-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>
@@ -285,7 +285,7 @@ function ChartLineExample() {
                   className="size-4"
                 />
               </div>
-              <div className="text-muted-foreground flex items-center gap-2 leading-none">
+              <div className="text-neon-muted-foreground flex items-center gap-2 leading-none">
                 Showing total visitors for the last 6 months
               </div>
             </div>
@@ -372,14 +372,14 @@ function ChartPieExample() {
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="fill-foreground text-3xl font-bold"
+                            className="fill-neon-foreground text-3xl font-bold"
                           >
                             {totalVisitors.toLocaleString()}
                           </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) + 24}
-                            className="fill-muted-foreground"
+                            className="fill-neon-muted-foreground"
                           >
                             Visitors
                           </tspan>
@@ -404,7 +404,7 @@ function ChartPieExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground leading-none">
+          <div className="text-neon-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>
@@ -476,7 +476,7 @@ function ChartRadarExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground flex items-center gap-2 leading-none">
+          <div className="text-neon-muted-foreground flex items-center gap-2 leading-none">
             January - June 2024
           </div>
         </CardFooter>
@@ -522,7 +522,7 @@ function ChartRadialExample() {
                 gridType="circle"
                 radialLines={false}
                 stroke="none"
-                className="first:fill-muted last:fill-background"
+                className="first:fill-neon-muted last:fill-neon-background"
                 polarRadius={[86, 74]}
               />
               <RadialBar dataKey="visitors" background />
@@ -540,14 +540,14 @@ function ChartRadialExample() {
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="fill-foreground text-4xl font-bold"
+                            className="fill-neon-foreground text-4xl font-bold"
                           >
                             {radialChartData[0].visitors.toLocaleString()}
                           </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) + 24}
-                            className="fill-muted-foreground"
+                            className="fill-neon-muted-foreground"
                           >
                             Visitors
                           </tspan>
@@ -572,7 +572,7 @@ function ChartRadialExample() {
               className="size-4"
             />
           </div>
-          <div className="text-muted-foreground leading-none">
+          <div className="text-neon-muted-foreground leading-none">
             Showing total visitors for the last 6 months
           </div>
         </CardFooter>

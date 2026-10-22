@@ -50,7 +50,7 @@ export function AccountAccess() {
               </FieldLabel>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-foreground text-xs font-medium tracking-wider uppercase"
+                className="text-neon-muted-foreground hover:text-neon-foreground text-xs font-medium tracking-wider uppercase"
               >
                 Forgot?
               </a>
@@ -82,7 +82,7 @@ export function AccountAccess() {
               hugeicons="AlertCircleIcon"
               phosphor="WarningCircleIcon"
               remixicon="RiErrorWarningLine"
-              className="text-destructive"
+              className="text-neon-destructive"
             />
           </ItemMedia>
           <ItemContent>

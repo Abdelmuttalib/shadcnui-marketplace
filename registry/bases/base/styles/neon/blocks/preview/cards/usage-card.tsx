@@ -114,14 +114,14 @@ export function UsageCard() {
               className="px-0 group-hover/item-group:bg-transparent"
               render={<a href="#" />}
             >
-              <ItemMedia variant="icon" className="text-primary">
+              <ItemMedia variant="icon" className="text-neon-primary">
                 <CircularGauge percentage={item.percentage} />
               </ItemMedia>
               <ItemContent className="inline-block truncate">
                 <ItemTitle className="inline">{item.name}</ItemTitle>
               </ItemContent>
               <ItemActions>
-                <span className="text-muted-foreground font-mono text-xs font-medium tabular-nums">
+                <span className="text-neon-muted-foreground font-mono text-xs font-medium tabular-nums">
                   {item.value}
                 </span>
               </ItemActions>

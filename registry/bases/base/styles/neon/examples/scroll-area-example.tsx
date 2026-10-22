@@ -73,9 +73,9 @@ function ScrollAreaHorizontal() {
                   height={400}
                 />
               </div>
-              <figcaption className="text-muted-foreground pt-2 text-xs">
+              <figcaption className="text-neon-muted-foreground pt-2 text-xs">
                 Photo by{" "}
-                <span className="text-foreground font-semibold">
+                <span className="text-neon-foreground font-semibold">
                   {artwork.artist}
                 </span>
               </figcaption>

@@ -2,7 +2,7 @@ import { SignupForm } from "@/registry/bases/base/styles/neon/blocks/signup-05/c
 
 export default function SignupPage() {
   return (
-    <div className="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+    <div className="bg-neon-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="w-full max-w-sm">
         <SignupForm />
       </div>
