@@ -19,7 +19,7 @@ function RadioGroupItem({ className, ...props }: RadioPrimitive.Root.Props) {
     <RadioPrimitive.Root
       data-slot="radio-group-item"
       className={cn(
-        "group/radio-group-item peer border-cb-ring text-cb-background group-has-[:focus-visible]/field-label:not-data-checked:border-cb-ring focus-visible:border-cb-ring focus-visible:ring-cb-ring aria-invalid:border-cb-destructive aria-invalid:ring-cb-destructive aria-invalid:aria-checked:border-cb-primary bg-cb-input/40 data-checked:border-cb-ring data-checked:bg-cb-primary data-checked:text-cb-primary-foreground group-has-[:focus-visible]/field-label:data-checked:border-cb-primary relative flex aspect-square size-4.5 shrink-0 rounded-full border outline-none group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:ring-1 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-1",
+        "group/radio-group-item peer border-cb-ring text-cb-background group-has-[:focus-visible]/field-label:not-data-checked:border-cb-ring focus-visible:ring-cb-ring aria-invalid:ring-cb-destructive aria-invalid:aria-checked:border-cb-primary data-checked:border-cb-ring data-checked:bg-cb-ring data-checked:text-cb-background group-has-[:focus-visible]/field-label:data-checked:border-cb-primary relative flex aspect-square size-5 shrink-0 rounded-full border outline-none group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:ring-1 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-1",
         className
       )}
       {...props}
@@ -28,7 +28,7 @@ function RadioGroupItem({ className, ...props }: RadioPrimitive.Root.Props) {
         data-slot="radio-group-indicator"
         className="flex size-4 items-center justify-center"
       >
-        <span className="bg-cb-primary-foreground absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+        <span className="bg-cb-background absolute top-1/2 left-1/2 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full" />
       </RadioPrimitive.Indicator>
     </RadioPrimitive.Root>
   );

@@ -24,37 +24,6 @@ export default function Home() {
             className={cn(
               "relative min-h-screen w-full overflow-x-hidden pb-56"
             )}
-            style={{
-              ["--moon-background"]: "var(--cb-background)",
-              ["--moon-foreground"]: "var(--cb-foreground)",
-              ["--moon-primary"]: "var(--cb-primary)",
-              ["--moon-primary-foreground"]: "var(--cb-primary-foreground)",
-              ["--moon-secondary"]: "var(--cb-secondary)",
-              ["--moon-secondary-foreground"]: "var(--cb-secondary-foreground)",
-              ["--moon-accent"]: "var(--cb-accent)",
-              ["--moon-accent-foreground"]: "var(--cb-accent-foreground)",
-              ["--moon-destructive"]: "var(--cb-destructive)",
-              ["--moon-destructive-foreground"]:
-                "var(--cb-destructive-foreground)",
-              ["--moon-border"]: "var(--cb-border)",
-              ["--moon-input"]: "var(--cb-input)",
-              ["--moon-ring"]: "var(--cb-ring)",
-              ["--moon-chart-1"]: "var(--cb-chart-1)",
-              ["--moon-chart-2"]: "var(--cb-chart-2)",
-              ["--moon-chart-3"]: "var(--cb-chart-3)",
-              ["--moon-chart-4"]: "var(--cb-chart-4)",
-              ["--moon-chart-5"]: "var(--cb-chart-5)",
-              ["--moon-sidebar-background"]: "var(--cb-sidebar-background)",
-              ["--moon-sidebar-foreground"]: "var(--cb-sidebar-foreground)",
-              ["--moon-sidebar-primary"]: "var(--cb-sidebar-primary)",
-              ["--moon-sidebar-primary-foreground"]:
-                "var(--cb-sidebar-primary-foreground)",
-              ["--moon-sidebar-accent"]: "var(--cb-sidebar-accent)",
-              ["--moon-sidebar-accent-foreground"]:
-                "var(--cb-sidebar-accent-foreground)",
-              ["--moon-sidebar-border"]: "var(--cb-sidebar-border)",
-              ["--moon-sidebar-ring"]: "var(--cb-sidebar-ring)",
-            }}
           >
             <StyleGradientBackgroundColorComponent className="absolute inset-0 w-full" />
 

@@ -22,7 +22,7 @@ import {
  * isolated v4 primitives. Every page-example type resolves to this preview
  * until dedicated per-page v4 examples are authored.
  */
-export function LinearExamplePage({ title }: { title: string }) {
+export function ExamplePage({ title }: { title: string }) {
   return (
     <div className="flex flex-col gap-4 p-4">
       <div className="flex items-center justify-between">
@@ -93,33 +93,33 @@ export function LinearExamplePage({ title }: { title: string }) {
 }
 
 export function DefaultV4MailPage() {
-  return <LinearExamplePage title="mail" />;
+  return <ExamplePage title="mail" />;
 }
 
 export function DefaultV4CardsPage() {
-  return <LinearExamplePage title="cards" />;
+  return <ExamplePage title="cards" />;
 }
 
 export function DefaultV4AuthenticationPage() {
-  return <LinearExamplePage title="authentication" />;
+  return <ExamplePage title="authentication" />;
 }
 
 export function DefaultV4SettingsProfilePage() {
-  return <LinearExamplePage title="forms" />;
+  return <ExamplePage title="forms" />;
 }
 
 export function DefaultV4DashboardPage() {
-  return <LinearExamplePage title="dashboard" />;
+  return <ExamplePage title="dashboard" />;
 }
 
 export function DefaultV4MusicPage() {
-  return <LinearExamplePage title="music" />;
+  return <ExamplePage title="music" />;
 }
 
 export function DefaultV4PlaygroundPage() {
-  return <LinearExamplePage title="playground" />;
+  return <ExamplePage title="playground" />;
 }
 
 export function DefaultV4TaskPage() {
-  return <LinearExamplePage title="tasks" />;
+  return <ExamplePage title="tasks" />;
 }
