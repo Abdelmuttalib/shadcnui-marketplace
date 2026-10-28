@@ -7,7 +7,7 @@ import { StylePageExamplePreview } from "@/components/views/styles/style-page-ex
 import { Style, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function StylePreviewCard({
   title,
@@ -29,8 +29,8 @@ export function StylePreviewCard({
   const styleCssVariableWithPrefix = `--${getStyleVariablesPrefix(style)}`;
 
   return (
-    <div className="group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-gradient-to-r from-transparent to-accent p-6">
-      {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-transparent to-accent"></div> */}
+    <div className="to-accent group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-linear-to-r from-transparent p-6">
+      {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-linear-to-br from-transparent to-accent"></div> */}
 
       {link ? (
         <Link
@@ -45,11 +45,11 @@ export function StylePreviewCard({
       <div className="z-10 flex w-full items-center justify-between">
         <Typography
           variant="3xl/semibold"
-          className="font-[490] capitalize tracking-tight"
+          className="font-[490] tracking-tight capitalize"
         >
           {title}{" "}
           {link && link.href ? (
-            <ArrowRightIcon className="inline-block h-5 w-5 -rotate-45 text-muted-foreground/40 group-hover:text-foreground" />
+            <ArrowRightIcon className="text-muted-foreground/40 group-hover:text-foreground inline-block h-5 w-5 -rotate-45" />
           ) : null}
         </Typography>
         <div className="flex items-center gap-2">
@@ -67,7 +67,7 @@ export function StylePreviewCard({
                   })}
                   style={{
                     // backgroundColor: `oklch(${palette.light[color]})`,
-                    backgroundColor: `oklch(var(${styleCssVariableWithPrefix}-${color}))`,
+                    backgroundColor: `var(${styleCssVariableWithPrefix}-${color})`,
                   }}
                   title={`${title}-${style}-${color}`}
                 />
@@ -78,17 +78,19 @@ export function StylePreviewCard({
       </div>
       <div className="relative -ml-1">
         <div
-          className="absolute left-0 top-0 z-10 flex size-[29rem] items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-70 group-hover:blur-2xl"
+          className="absolute top-0 left-0 z-10 flex size-[29rem] items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-70 group-hover:blur-2xl"
           style={{
             backgroundColor: `oklch(var(${stylePrimaryColorCssVariableName}))`,
           }}
         ></div>
         <StylePageExamplePreview
-          id="dashboard"
+          id={`${style}-${pageExampleType || ""}-example-preview`}
           styleProp={style}
           pageExampleTypeProp={pageExampleType || "dashboard"}
           hideBadge={true}
-          className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
+          // className="absolute left-1/2 top-0 z-50 w-[1440px] max-w-[1440px] -translate-x-1/2"
+          className="absolute top-0 left-0 z-20 w-[1440px] max-w-[1440px]"
+          // className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
         />
       </div>
     </div>

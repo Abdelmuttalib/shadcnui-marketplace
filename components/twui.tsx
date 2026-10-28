@@ -103,7 +103,7 @@ export default function DD() {
               Guides
             </Link>
           </h2>
-          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 dark:border-white/5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-4 dark:border-white/5">
             <div>
               <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">
                 Authentication
@@ -244,7 +244,7 @@ export default function DD() {
               Resources
             </Link>
           </h2>
-          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 dark:border-white/5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-4 dark:border-white/5">
             <C
               title={"Contacts"}
               href="/contacts"
@@ -284,7 +284,7 @@ function C({
   href: string;
 }) {
   return (
-    <div className="hover:shadow-overlay-on-surface-background group relative flex overflow-hidden rounded-2xl bg-card transition-shadow hover:shadow-md">
+    <div className="hover:shadow-overlay-on-surface-background bg-card group relative flex overflow-hidden rounded-2xl transition-shadow hover:shadow-md">
       <div className="pointer-events-none">
         <div className="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50">
           <svg
@@ -322,7 +322,7 @@ function C({
           </svg>
         </div>
         <div
-          className="absolute inset-0 rounded-2xl bg-card opacity-0 transition duration-300 group-hover:opacity-100"
+          className="bg-card absolute inset-0 rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100"
           // style="mask-image: radial-gradient(180px at 0px 0px, white, transparent);"
           style={{
             maskImage: "radial-gradient(180px at 0px 0px, white, transparent);",
@@ -398,7 +398,7 @@ function C({
             ></path>
           </svg>
         </div>
-        <h3 className="mt-4 text-sm font-semibold leading-7 text-foreground">
+        <h3 className="text-foreground mt-4 text-sm font-semibold leading-7">
           <Link href={href}>
             <span className="absolute inset-0 rounded-2xl"></span>
             {title}
@@ -445,14 +445,14 @@ function Sidebar() {
             data-open=""
           >
             <div
-              className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 bg-white px-4 transition data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in dark:bg-zinc-900 sm:px-6 lg:left-72 lg:z-30 lg:px-8 xl:left-80"
+              className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 bg-white px-4 transition data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:px-6 lg:left-72 lg:z-30 lg:px-8 xl:left-80 dark:bg-zinc-900"
               // style="--bg-opacity-light: 0.5; --bg-opacity-dark: 0.2;"
             >
               <div className="bg-zinc-900/7.5 dark:bg-white/7.5 absolute inset-x-0 top-full h-px transition"></div>
               <div className="hidden lg:block lg:max-w-md lg:flex-auto">
                 <button
                   type="button"
-                  className="ui-not-focus-visible:outline-none hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 lg:flex"
+                  className="ui-not-focus-visible:outline-none hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 lg:flex dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20"
                 >
                   <svg
                     viewBox="0 0 20 20"
@@ -543,7 +543,7 @@ function Sidebar() {
                   <div className="contents lg:hidden">
                     <button
                       type="button"
-                      className="ui-not-focus-visible:outline-none flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5 lg:hidden"
+                      className="ui-not-focus-visible:outline-none flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 lg:hidden dark:hover:bg-white/5"
                       aria-label="Find something..."
                     >
                       <svg
@@ -604,7 +604,7 @@ function Sidebar() {
                 </div>
               </div>
             </div>
-            <div className="ring-zinc-900/7.5 fixed bottom-0 left-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 duration-500 ease-in-out data-[closed]:-translate-x-full dark:bg-zinc-900 dark:ring-zinc-800 min-[416px]:max-w-sm sm:px-6 sm:pb-10">
+            <div className="ring-zinc-900/7.5 fixed bottom-0 left-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 duration-500 ease-in-out data-[closed]:-translate-x-full min-[416px]:max-w-sm sm:px-6 sm:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
               <nav>
                 <ul role="list">
                   <li className="md:hidden">
@@ -919,7 +919,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
               </Link>
             </div>
             <div
-              className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 bg-white/[var(--bg-opacity-light)] px-4 backdrop-blur-sm transition dark:bg-zinc-900/[var(--bg-opacity-dark)] dark:backdrop-blur sm:px-6 lg:left-72 lg:left-72 lg:z-30 lg:px-8 xl:left-80 xl:left-80"
+              className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 bg-white/[var(--bg-opacity-light)] px-4 backdrop-blur-sm transition sm:px-6 lg:left-72 lg:left-72 lg:z-30 lg:px-8 xl:left-80 xl:left-80 dark:bg-zinc-900/[var(--bg-opacity-dark)] dark:backdrop-blur"
               // style="--bg-opacity-light: 0.5; --bg-opacity-dark: 0.2;"
             >
               <div className="bg-zinc-900/7.5 dark:bg-white/7.5 absolute inset-x-0 top-full h-px transition"></div>
@@ -982,7 +982,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                     {navLinks.map((navLink) => (
                       <li key={navLink.label}>
                         <Link
-                          className="text-foreground-secondary text-sm leading-5 transition  hover:text-foreground"
+                          className="text-foreground-secondary hover:text-foreground text-sm leading-5  transition"
                           href={navLink.href}
                         >
                           {navLink.label}
@@ -996,7 +996,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                   <div className="contents lg:hidden">
                     <button
                       type="button"
-                      className="ui-not-focus-visible:outline-none flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5 lg:hidden"
+                      className="ui-not-focus-visible:outline-none flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 lg:hidden dark:hover:bg-white/5"
                       aria-label="Find something..."
                     >
                       <svg
@@ -1097,7 +1097,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                           <li className="relative" key={link.label + index}>
                             <Link
                               aria-current="page"
-                              className="text-foreground-subtle flex justify-between gap-2 py-2 pl-4 pr-3 text-sm transition hover:text-foreground"
+                              className="text-foreground-subtle hover:text-foreground flex justify-between gap-2 py-2 pl-4 pr-3 text-sm transition"
                               //  bg-card
                               href={link.href}
                             >
@@ -1151,7 +1151,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
               <div className="prose dark:prose-invert flex-auto lg:mx-auto lg:max-w-screen-xl [html_:where(&>*)]:mx-auto [html_:where(&>*)]:max-w-2xl [html_:where(&>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&>*)]:lg:max-w-3xl">
                 <div className="absolute inset-0 -z-10 mx-0 max-w-none overflow-hidden">
                   <div className="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#36b49f] to-[#DBFF75] opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-[#36b49f]/30 dark:to-[#DBFF75]/30 dark:opacity-100">
+                    <div className="bg-linear-to-r absolute inset-0 from-[#36b49f] to-[#DBFF75] opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-[#36b49f]/30 dark:to-[#DBFF75]/30 dark:opacity-100">
                       <svg
                         aria-hidden="true"
                         className="dark:fill-white/2.5 absolute inset-x-0 inset-y-[-50%] h-[200%] w-full skew-y-[-18deg] fill-black/40 stroke-black/50 mix-blend-overlay dark:stroke-white/5"
@@ -1252,7 +1252,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 dark:border-white/5 sm:flex-row">
+            <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 sm:flex-row dark:border-white/5">
               <p className="text-xs text-zinc-600 dark:text-zinc-400">
                 © Copyright 2025. All rights reserved.
               </p>
@@ -1344,7 +1344,7 @@ function DocLayout({ children }: { children: React.ReactNode }) {
 //                           </svg>
 //                         </div>
 //                         <div
-//                           className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#D7EDEA] to-[#F4FBDF] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
+//                           className="absolute inset-0 rounded-2xl bg-linear-to-r from-[#D7EDEA] to-[#F4FBDF] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
 //                           style={{
 //                             maskImage:
 //                               "radial-gradient(180px at 0px 0px, white, transparent);",

@@ -2,7 +2,6 @@ import { PageContainer } from "@/components/common/page-container";
 import { PageExampleSelect } from "@/components/common/page-example-select";
 import { PageSubTitle, PageTitle } from "@/components/common/page-header";
 import { ShowcaseStylePageExamplePreview } from "@/components/common/showcase-style-page-example-preview";
-import { StringCode } from "@/components/common/string-code";
 import { StyleGradientBackgroundColorComponent } from "@/components/common/style-background-color-component";
 import { StyleHeroUI } from "@/components/common/style-hero-ui";
 import { StyleSelect } from "@/components/common/style-select";
@@ -15,6 +14,7 @@ import { StylePaletteCommand } from "@/components/style-palette-command";
 import { Typography } from "@/components/ui/typography";
 import { StylesPreview } from "@/components/views/home/styles-preview";
 import { cn } from "@/lib/utils";
+import { LucidShowcaseComponents } from "@/registry/bases/base/lucid/lucid-showcase-components";
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
                 <Typography
                   as="p"
                   variant="lg/normal"
-                  className="z-10 col-start-1 row-start-2 mt-4 max-w-xl text-muted-foreground"
+                  className="text-muted-foreground z-10 col-start-1 row-start-2 mt-4 max-w-xl"
                 >
                   Discover the best shadcn ui kits and styles for modern web
                   interfaces.
@@ -61,44 +61,15 @@ export default function Home() {
             </PageContainer>
           </div>
 
-          {/* <LandingPageSection sectionId="features">
-            <FeaturesSection />
-          </LandingPageSection> */}
-
-          {/* <LandingPageSection
-            sectionId="shadcn-ui-styles"
-            className="flex flex-col gap-8"
-          >
-            <PageContainer>
-              <div className="space-y-4">
-                <PageTitle>
-                  <span className="lowercase">A Marketplace for shadcn ui</span>
-                  <br />
-                  <span className="flex w-fit gap-4 divide-x-2 rounded-lg border bg-accent/10">
-                    <span className="decoration p-4 capitalize italic text-foreground underline decoration-blue-500 underline-offset-4">
-                      Styles
-                    </span>{" "}
-                    <span className="decoration p-4 capitalize italic text-foreground underline decoration-orange-500 underline-offset-4">
-                      Palletes
-                    </span>{" "}
-                    <span className="decoration p-4 capitalize italic text-foreground underline decoration-emerald-500 underline-offset-4">
-                      Blocks
-                    </span>
-                  </span>
-                </PageTitle>
-              </div>
-            </PageContainer>
-          </LandingPageSection> */}
-
           <LandingPageSection
             sectionId="shadcn-ui-styles"
             className="flex min-h-screen flex-col gap-8"
           >
             <PageContainer>
               <div className="space-y-4">
-                <PageTitle>
+                <PageTitle as="h2">
                   <span className="lowercase">shadcn, </span>
-                  <span className="decoration lowercase italic text-foreground underline decoration-primary underline-offset-4">
+                  <span className="decoration text-foreground decoration-primary lowercase italic underline underline-offset-4">
                     your way
                   </span>
                 </PageTitle>
@@ -118,7 +89,7 @@ export default function Home() {
                 <div className="flex items-end justify-between gap-4 py-2">
                   <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                     <div className="flex w-full flex-col gap-2 md:w-auto">
-                      <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
+                      <h2 className="border-input bg-accent/80 text-muted-foreground w-fit rounded-md border px-1.5 py-0.5 text-sm font-medium">
                         Choose style
                       </h2>
                       <div className="w-full">
@@ -126,7 +97,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex w-full flex-col gap-2 md:w-auto">
-                      <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
+                      <h2 className="border-input bg-accent/80 text-muted-foreground w-fit rounded-md border px-1.5 py-0.5 text-sm font-medium">
                         Choose example
                       </h2>
                       <PageExampleSelect />
@@ -134,7 +105,7 @@ export default function Home() {
                     <div className="flex w-full flex-col gap-2 md:w-auto">
                       <div className="inline-flex justify-between">
                         <div>
-                          <h2 className="w-fit rounded-md border border-input bg-accent/80 px-1.5 py-0.5 text-sm font-medium text-muted-foreground">
+                          <h2 className="border-input bg-accent/80 text-muted-foreground w-fit rounded-md border px-1.5 py-0.5 text-sm font-medium">
                             Choose palette
                           </h2>
                         </div>
@@ -186,7 +157,7 @@ export default function Home() {
                 <PageContainer>
                   <div className="space-y-2">
                     <PageTitle as={"h2"} className="">
-                      custom shadcn styles,
+                      shadcn styles,
                       <br /> inspired by popular design systems
                     </PageTitle>
                     <PageSubTitle className="max-w-2xl">
@@ -194,7 +165,7 @@ export default function Home() {
                         Discover custom shadcn styles and ui kits, inspired by
                         popular design systems. Easily download all custom
                         styled{" "}
-                        <span className="rounded bg-accent p-1 font-mono text-sm">
+                        <span className="bg-accent rounded p-1 font-mono text-sm">
                           /ui/*
                         </span>{" "}
                         components directly into your project.
@@ -255,7 +226,7 @@ export default function Home() {
           </section> */}
 
           {/* <section className="relative py-32">
-            <div className="absolute inset-0 h-32 w-full bg-gradient-to-b from-accent/40 to-background"></div>
+            <div className="absolute inset-0 h-32 w-full bg-linear-to-b from-accent/40 to-background"></div>
             <div className="grid gap-16">
               <PageContainer>
                 <div className="">

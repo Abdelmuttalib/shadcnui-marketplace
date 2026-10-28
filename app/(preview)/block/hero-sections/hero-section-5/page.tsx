@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/registry/wedges/ui/button";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 export default function HeroSectionPage() {
   const appName = "Acme";
@@ -25,7 +25,7 @@ export default function HeroSectionPage() {
           <Link href="/" className="flex items-center gap-x-1">
             <p className="text-2xl font-semibold uppercase tracking-tight text-white/90">
               {appName}
-              <span className="ml-1 font-normal lowercase text-wedges-muted-foreground">
+              <span className="text-wedges-muted-foreground ml-1 font-normal lowercase">
                 tech
               </span>
             </p>
@@ -53,13 +53,13 @@ export default function HeroSectionPage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 flex h-full w-full items-end justify-end bg-transparent">
-          <div className="h-[43%] w-full bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent lg:h-[45%]">
+          <div className="bg-linear-to-t h-[43%] w-full from-slate-900 via-slate-900/60 to-transparent lg:h-[45%]">
             <div className="flex flex-col gap-y-4 px-4 text-white lg:gap-y-10 lg:px-20">
-              <div className="flex w-full items-end justify-between text-balance text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+              <div className="text-balance flex w-full items-end justify-between text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
                 <Typography
                   as="h1"
                   variant="5xl/semibold"
-                  className="max-w-5xl text-balance tracking-tight text-white"
+                  className="text-balance max-w-5xl tracking-tight text-white"
                 >
                   {heroTitle}
                 </Typography>
@@ -77,7 +77,7 @@ export default function HeroSectionPage() {
                 <Typography
                   as="h1"
                   variant="lg/normal"
-                  className="max-w-6xl text-balance tracking-tight text-white/60"
+                  className="text-balance max-w-6xl tracking-tight text-white/60"
                 >
                   {heroDescription}
                 </Typography>

@@ -1,7 +1,7 @@
 import { ArrowRightIcon, LockIcon } from "lucide-react";
 import Image from "next/image";
 
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Card,
   CardContent,
@@ -9,15 +9,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/wedges/ui/card";
-import { Checkbox } from "@/registry/wedges/ui/checkbox";
-import { Input } from "@/registry/wedges/ui/input";
+} from "@/registry/bases/base/wedges/ui/card";
+import { Checkbox } from "@/registry/bases/base/wedges/ui/checkbox";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/wedges/ui/tabs";
+} from "@/registry/bases/base/wedges/ui/tabs";
 
 const LoginForm = ({ className = "", variant = "default" }) => (
   <div className={`space-y-4 ${className}`}>
@@ -84,7 +84,7 @@ const LoginForm = ({ className = "", variant = "default" }) => (
 
 const ModernSplitScreenLogin = () => (
   <div className="flex min-h-screen flex-col md:flex-row">
-    <div className="flex flex-1 items-center justify-center bg-gradient-to-br from-purple-700 to-blue-500 p-10">
+    <div className="bg-linear-to-br flex flex-1 items-center justify-center from-purple-700 to-blue-500 p-10">
       <div className="w-full max-w-md space-y-8">
         <div>
           <h2 className="mt-6 text-4xl font-extrabold text-white">
@@ -125,7 +125,7 @@ const GlassmorphismLogin = () => (
         "url('/placeholder.svg?height=1080&width=1920&text=Blurred+Background')",
     }}
   >
-    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-600/30 backdrop-blur-xl"></div>
+    <div className="bg-linear-to-br absolute inset-0 from-blue-500/30 to-purple-600/30 backdrop-blur-xl"></div>
     <Card className="w-full max-w-md border border-white/20 bg-white/10 shadow-2xl backdrop-blur-lg">
       <CardHeader>
         <CardTitle className="text-center text-3xl font-bold text-white">
@@ -147,7 +147,7 @@ const CorporateLogin = () => (
     <div className="bg-grid-gray-200/50 absolute inset-0"></div>
     <Card className="w-full max-w-lg shadow-xl">
       <CardHeader className="flex flex-col items-center space-y-1">
-        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-wedges-primary">
+        <div className="bg-wedges-primary mb-4 flex h-16 w-16 items-center justify-center rounded-full">
           <LockIcon className="h-8 w-8 text-white" />
         </div>
         <CardTitle className="text-3xl font-bold">Enterprise Portal</CardTitle>

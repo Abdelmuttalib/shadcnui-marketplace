@@ -27,18 +27,18 @@ export function BlockCategoryPreviewCard({
 }: BlockCategoryPreviewCardProps) {
   return (
     <Card
-      className={`overflow-hidden bg-background transition-all duration-300 hover:shadow-lg hover:shadow-foreground/5`}
+      className={`bg-background hover:shadow-foreground/5 overflow-hidden transition-all duration-300`}
     >
       <CardContent className="relative p-0">
         <GradientEffect />
-        <div className="relative aspect-video overflow-hidden bg-accent/50 dark:bg-inherit">
+        <div className="bg-accent/50 relative aspect-video overflow-hidden dark:bg-inherit">
           <Image
             src={`${block.image}-light.png`}
             width={1919 / 2}
             height={963 / 2}
             quality={100}
             alt={block.name}
-            className="ml-4 mt-11 block rounded-md border shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:rounded-tl-none dark:hidden"
+            className="group-hover:scale-103 ml-4 mt-11 block rounded-md border shadow-2xl transition-all duration-300 dark:hidden"
           />
           <Image
             src={`${block.image}-dark.png`}
@@ -46,14 +46,14 @@ export function BlockCategoryPreviewCard({
             height={963 / 2}
             quality={100}
             alt={block.name}
-            className="ml-4 mt-11 hidden rounded-md border shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:rounded-tl-none dark:block"
+            className="group-hover:scale-103 ml-4 mt-11 hidden rounded-md border shadow-2xl transition-all duration-300 dark:block"
           />
           <div className="absolute left-4 right-4 top-2 flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <Typography
                 as="h3"
                 variant="lg/medium"
-                className="capitalize tracking-tight text-foreground"
+                className="text-foreground capitalize tracking-tight"
               >
                 {block.name}
               </Typography>
@@ -63,8 +63,8 @@ export function BlockCategoryPreviewCard({
                   : `${block.count} Block`}
               </Badge>
             </div>
-            <div className="-mr-1 -mt-1 hidden rounded-md border bg-accent p-0.5 group-hover:block">
-              <ArrowRight className="size-4 -rotate-45 text-muted-foreground" />
+            <div className="bg-accent -mr-1 -mt-1 hidden rounded-md border p-0.5 group-hover:block">
+              <ArrowRight className="text-muted-foreground size-4 -rotate-45" />
             </div>
           </div>
         </div>

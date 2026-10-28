@@ -90,12 +90,12 @@ export function FeaturesSection() {
               return (
                 <Card
                   key={index}
-                  className="group bg-gradient-to-br from-background to-accent/10 transition-colors hover:border-input hover:to-accent/60"
+                  className="bg-linear-to-br from-background to-accent/10 hover:border-input hover:to-accent/60 group transition-colors"
                 >
                   <CardHeader className="pb-2">
                     <div className="mb-2">
-                      <span className="inline-flex rounded-md border bg-muted/60 p-1.5 group-hover:bg-muted/80">
-                        <FeatureIcon className="size-5 text-foreground" />
+                      <span className="bg-muted/60 group-hover:bg-muted/80 inline-flex rounded-md border p-1.5">
+                        <FeatureIcon className="text-foreground size-5" />
                       </span>
                     </div>
                     <CardTitle className="text-xl font-medium">

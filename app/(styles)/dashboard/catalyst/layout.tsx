@@ -1,7 +1,7 @@
 import {
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/catalyst/ui/sidebar";
+} from "@/registry/bases/base/catalyst/ui/sidebar";
 
 import { AppSidebar } from "./components/app-sidebar";
 
@@ -10,8 +10,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="font-sans">
       <SidebarProvider>
         <AppSidebar />
-        <main className="w-full flex-1 overflow-hidden bg-catalyst-sidebar lg:p-1.5">
-          <div className="h-full w-full bg-catalyst-background p-2 lg:rounded-xl lg:border lg:border-catalyst-border">
+        <main className="bg-catalyst-sidebar w-full flex-1 overflow-hidden lg:p-1.5">
+          <div className="bg-catalyst-background lg:border-catalyst-border h-full w-full p-2 lg:rounded-xl lg:border">
             <SidebarTrigger />
             <div className="px-2 py-8 sm:px-4 md:px-10 lg:px-14">
               {children}

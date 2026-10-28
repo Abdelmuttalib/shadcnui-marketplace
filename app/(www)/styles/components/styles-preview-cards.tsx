@@ -12,23 +12,21 @@ import { StylePageExamplePreview } from "@/components/views/styles/style-page-ex
 import { STYLES, stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function StylesPreviewCards() {
   const { pageExampleType } = useStyleStore();
 
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-6 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-6 2xl:grid-cols-3">
       {STYLES.filter((s) => s !== "default" && s !== "material").map(
         (style, index) => {
           const s = `--${getStyleVariablesPrefix(style)}-primary`;
           const c = `--${getStyleVariablesPrefix(style)}`;
           return (
-            <StyleCssWrapper key={style + index}>
+            <StyleCssWrapper key={style + index} className="rounded-md">
               <StyleFontWrapper sStyle={style}>
-                {/* <StyleShowcaseCardLink style={style} /> */}
-                <div className="group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-gradient-to-r from-transparent to-accent p-6">
-                  {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-transparent to-accent"></div> */}
+                <div className="to-accent bg-linear-to-r group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border from-transparent p-6">
                   <div className="z-20 flex w-full items-center justify-between">
                     <Typography
                       variant="3xl/semibold"
@@ -38,9 +36,18 @@ export function StylesPreviewCards() {
                     </Typography>
                     <div className="flex items-center gap-2">
                       <div className="inline-flex items-center gap-2">
-                        <RichBadge variant="neutral" className="capitalize">
-                          Palette
-                        </RichBadge>
+                        <StyleCssWrapper
+                          key={style + index}
+                          className="inline-flex rounded-full"
+                        >
+                          <RichBadge
+                            variant="neutral"
+                            className="capitalize backdrop-blur-xl"
+                          >
+                            Palette
+                          </RichBadge>
+                        </StyleCssWrapper>
+
                         <div className="flex rounded-sm border">
                           {mainPaletteColorsKeys.map((color, index) => (
                             <div
@@ -63,8 +70,7 @@ export function StylesPreviewCards() {
                   </div>
                   <div className="relative -ml-2">
                     <div
-                      // bg-blue-500/30
-                      className="absolute left-0 top-0 z-10 flex size-[29rem] items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:size-96 group-hover:opacity-50 group-hover:blur-lg"
+                      className="size-144 group-hover:size-120 absolute left-0 top-0 z-10 flex items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-50 group-hover:blur-2xl dark:opacity-80 dark:blur-3xl"
                       style={{
                         backgroundColor: `oklch(var(${s}))`,
                       }}
@@ -100,9 +106,9 @@ export function StylesPagesExamplesPreviews() {
 
           return (
             <div key={styleData.name + index}>
-              <div className="relative grid grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-6">
+              <div className="relative grid grid-cols-1 gap-4 lg:gap-6 xl:grid-cols-7">
                 <div className="relative xl:col-span-2">
-                  <div className="sticky top-20 z-10 space-y-8 p-4 pt-10 xl:ml-auto xl:max-w-md xl:p-0 xl:pt-28">
+                  <div className="sticky top-20 z-10 space-y-8 p-4 pt-10 xl:ml-auto xl:max-w-md xl:p-0 xl:px-6 xl:pt-28">
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center gap-4">
                         <Typography
@@ -128,7 +134,7 @@ export function StylesPagesExamplesPreviews() {
                                     >
                                       Default {styleData.title} Palette
                                     </RichBadge> */}
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-muted-foreground text-sm">
                               Default {styleData.title} Palette
                             </p>
                             <div className="flex w-fit rounded-sm border">
@@ -169,13 +175,14 @@ export function StylesPagesExamplesPreviews() {
                             </div> */}
                   </div>
                 </div>
-                <div className="grid p-4 py-0 lg:py-4 xl:col-span-4">
+                <div className="grid overflow-scroll p-4 py-0 lg:py-4 xl:col-span-5">
                   <StylePageExamplePreview
                     id="dashboard"
                     styleProp={styleData.name}
                     pageExampleTypeProp={pageExampleType || "dashboard"}
                     hideBadge={true}
                     className="overflow-auto"
+                    screenWidth
                     // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
                   />
                 </div>

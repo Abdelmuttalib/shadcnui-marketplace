@@ -26,6 +26,9 @@ export function ThemeToggle({
       size="icon-sm"
       variant={variant ?? "ghost"}
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      aria-label={
+        theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+      }
       className={cn("text-muted-foreground sm:inline-flex", className)}
     >
       {theme === "light" ? (

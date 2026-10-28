@@ -10,46 +10,39 @@ import {
   getStyleFontClassname,
   getStyleVariablesPrefix,
   renderStylePageExample,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 import { cn } from "@/utils/cn";
 
 export function StylePageExamplePreview({
   id,
   styleProp = "carbon",
-  plan,
   pageExampleTypeProp,
   className,
   coloredEdge = false,
   style,
   hideBadge = false,
+  screenWidth,
 }: {
   id: string;
   styleProp?: Style;
-  plan?: BlockPlan;
   className?: string;
   coloredEdge?: boolean;
   pageExampleTypeProp?: PageExampleType;
   style?: React.CSSProperties;
   hideBadge?: boolean;
+  screenWidth?: boolean;
 }) {
   const { pageExampleType } = useStyleStore();
 
-  function getPlanBadge() {
-    switch (plan) {
-      case BlockPlan.Free:
-        return "green";
-      case BlockPlan.Basic:
-        return "default";
-      case BlockPlan.Pro:
-        return "blue";
-      default:
-        return "neutral";
-    }
-  }
-
   return (
     <div
-      className={cn("w-full max-w-[1440px]", className)}
+      className={cn(
+        "w-full max-w-full",
+        {
+          "w-[1440px] max-w-[1440px]": screenWidth,
+        },
+        className
+      )}
       id={id}
       style={style}
     >
@@ -58,7 +51,7 @@ export function StylePageExamplePreview({
           <Typography
             as="h2"
             variant="5xl/medium"
-            className="bg-gradient-to-br from-foreground to-foreground bg-clip-text px-3 tracking-tighter text-transparent dark:to-accent"
+            className="bg-linear-to-br from-foreground to-foreground bg-clip-text px-3 tracking-tighter text-transparent dark:to-accent"
           >
             {title}
           </Typography>
@@ -82,7 +75,7 @@ export function StylePageExamplePreview({
         )}
       >
         {/* gradient effect lightning */}
-        {/* <div className="absolute left-0 top-0 z-10 flex size-44 items-center justify-center bg-gradient-to-br from-primary to-accent blur-lg"></div> */}
+        {/* <div className="absolute left-0 top-0 z-10 flex size-44 items-center justify-center bg-linear-to-br from-primary to-accent blur-lg"></div> */}
         {!hideBadge ? (
           <div className="flex items-center gap-2 px-0.5">
             <RichBadge variant="neutral" className="capitalize">
@@ -92,7 +85,7 @@ export function StylePageExamplePreview({
           </div>
         ) : null}
         <div
-          className="relative flex flex-col justify-between gap-2 overflow-x-auto rounded-2xl border bg-background p-2"
+          className="bg-background relative flex flex-col justify-between gap-2 overflow-x-auto rounded-xl border p-1"
           style={
             coloredEdge
               ? {
@@ -103,6 +96,14 @@ export function StylePageExamplePreview({
               : {}
           }
         >
+          {/* <div
+            className="absolute -inset-10 z-10 flex items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:opacity-70 group-hover:blur-2xl"
+            style={{
+              backgroundColor: `oklch(var(--${getStyleVariablesPrefix(
+                styleProp
+              )}-primary))`,
+            }}
+          ></div> */}
           {/* gradient effect lightning */}
           <div className="flex h-full w-full gap-2 overflow-hidden">
             <div

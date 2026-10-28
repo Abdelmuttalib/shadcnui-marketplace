@@ -4,7 +4,6 @@ export const loadComponent = async (style: string, componentName: string) => {
     const md = await import(
       `@/registry/${style || "carbon"}/example/${lowerCaseComponentName}-demo`
     );
-    console.log(md, md[componentName]);
     return md["default"];
     // return md[componentName];
   } catch (error) {

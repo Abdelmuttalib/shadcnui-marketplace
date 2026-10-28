@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/select";
 import { stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function StyleSelect({
   defaultStyle,
@@ -27,7 +27,10 @@ export function StyleSelect({
 
   return (
     <Select defaultValue={style || defaultStyle} onValueChange={onStyleChange}>
-      <SelectTrigger className={cn("", triggerClassName)}>
+      <SelectTrigger
+        aria-label="Select style"
+        className={cn("", triggerClassName)}
+      >
         <SelectValue
           placeholder="select a style"
           className="text-muted-foreground"
@@ -41,25 +44,23 @@ export function StyleSelect({
       <SelectContent>
         <SelectGroup>
           {stylesDataList.map((style) => {
-            const hoverBgColor = `focus:bg-${getStyleVariablesPrefix(
+            const hoverBgColor = `hover:bg-${getStyleVariablesPrefix(
               style.name
             )}-primary`;
+            const hoverTextColor = `hover:text-${getStyleVariablesPrefix(
+              style.name
+            )}-primary-foreground`;
 
             return (
               <SelectItem
                 value={style.name}
                 key={style.name}
-                className={`${hoverBgColor} capitalize focus:bg-opacity-15`}
+                className={`${hoverBgColor} ${hoverTextColor} capitalize`}
               >
                 {style.title}
               </SelectItem>
             );
           })}
-          {/* {STYLES.map((style) => (
-            <SelectItem value={style} key={style} className="capitalize">
-              {style}
-            </SelectItem>
-          ))} */}
         </SelectGroup>
       </SelectContent>
     </Select>

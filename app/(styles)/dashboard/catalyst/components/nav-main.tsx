@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/catalyst/ui/collapsible";
+} from "@/registry/bases/base/catalyst/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/registry/catalyst/ui/sidebar";
+} from "@/registry/bases/base/catalyst/ui/sidebar";
 
 export function NavMain({
   items,

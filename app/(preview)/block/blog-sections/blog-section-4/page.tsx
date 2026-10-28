@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-import { Badge } from "@/registry/wedges/ui/badge";
-import { Card, CardContent } from "@/registry/wedges/ui/card";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Badge } from "@/registry/bases/base/wedges/ui/badge";
+import { Card, CardContent } from "@/registry/bases/base/wedges/ui/card";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 const blogPosts = [
   {
@@ -75,7 +75,7 @@ export default function BlogSectionPage() {
             >
               Latest Articles
             </Typography>
-            <div className="mx-auto h-1 w-24 bg-wedges-primary" />
+            <div className="bg-wedges-primary mx-auto h-1 w-24" />
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
@@ -100,7 +100,7 @@ function BlogCard({ title, date, category, imageUrl, slug }: BlogCardProps) {
   return (
     <Card className="group overflow-hidden transition-all duration-300 hover:shadow-md">
       <Link href={`/blog/${slug}`} className="block">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-wedges-accent">
+        <div className="bg-wedges-accent relative aspect-[16/9] w-full overflow-hidden">
           {/* <Image
             src={imageUrl || "/placeholder.svg"}
             alt={title}
@@ -115,7 +115,7 @@ function BlogCard({ title, date, category, imageUrl, slug }: BlogCardProps) {
           </Typography>
           <div className="flex items-center justify-between text-sm text-gray-500">
             <time dateTime={date}>{formatDate(date)}</time>
-            <div className="flex items-center text-wedges-primary">
+            <div className="text-wedges-primary flex items-center">
               <Typography
                 as="span"
                 variant="sm/medium"

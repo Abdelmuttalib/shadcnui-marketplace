@@ -25,8 +25,8 @@
 //       <div className="flex flex-col items-center justify-center lg:col-span-2">
 //         <MinimalistLogin />
 //       </div>
-//       <div className="relative h-full w-full bg-gradient-to-b from-accent/90 to-accent/90 pl-10 pt-10 lg:col-span-3 lg:border-l">
-//         <div className="absolute inset-0 z-20 h-full w-full bg-gradient-to-br from-accent/10 to-background"></div>
+//       <div className="relative h-full w-full bg-linear-to-b from-accent/90 to-accent/90 pl-10 pt-10 lg:col-span-3 lg:border-l">
+//         <div className="absolute inset-0 z-20 h-full w-full bg-linear-to-br from-accent/10 to-background"></div>
 //         {/* <PageContainer> */}
 //         {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-8">
 //           {["default", "carbon", "linear", "catalyst", "material", "spectrum"]

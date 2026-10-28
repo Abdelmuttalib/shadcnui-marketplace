@@ -120,7 +120,7 @@ export function StylePreview({
           <Typography
             as="h2"
             variant="5xl/medium"
-            className="bg-gradient-to-br from-foreground to-foreground bg-clip-text px-3 tracking-tighter text-transparent dark:to-accent"
+            className="bg-linear-to-br from-foreground to-foreground dark:to-accent bg-clip-text px-3 tracking-tighter text-transparent"
           >
             {/* Landing Pages */}
             {title}
@@ -149,7 +149,7 @@ export function StylePreview({
             {styleCat || pageExampleType}
           </RichBadge>
         </div>
-        <div className="flex flex-col justify-between gap-2 overflow-x-auto rounded-2xl border bg-background p-2">
+        <div className="bg-background flex flex-col justify-between gap-2 overflow-x-auto rounded-2xl border p-2">
           <div className="hidden  justify-between overflow-x-auto px-1">
             <div className="flex w-full items-center justify-between gap-2">
               <div className="flex gap-0.5 rounded-lg outline-none">
@@ -157,7 +157,7 @@ export function StylePreview({
                 {/* <Button size={"sm"}>Get Access</Button> */}
               </div>
               <div className="flex gap-2">
-                <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 outline-none dark:bg-gray-950/50 md:flex">
+                <div className="hidden gap-0.5 rounded-md border-[0.5px] bg-gray-100 p-0.5 outline-none md:flex dark:bg-gray-950/50">
                   {breakpoints.map((bp) => (
                     <Button
                       key={bp.label}

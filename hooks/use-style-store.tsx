@@ -3,30 +3,32 @@
 import * as React from "react";
 import { create } from "zustand";
 
-import { CarbonUI } from "@/registry/carbon/carbon-hero";
-import { CarbonShowcaseComponents } from "@/registry/carbon/carbon-showcase-components";
-import { CatalystUI } from "@/registry/catalyst/catalyst-hero";
-import { CatalystShowcaseComponents } from "@/registry/catalyst/catalyst-showcase-components";
-import { DefaultUI } from "@/registry/default/default-hero";
-import { DefaultShowcaseComponents } from "@/registry/default/default-showcase-components";
-import { LibelleUI } from "@/registry/libelle/libelle-hero";
-import { LibelleShowcaseComponents } from "@/registry/libelle/libelle-showcase-components";
-import { LinearUI } from "@/registry/linear/linear-hero";
-import { LinearShowcaseComponents } from "@/registry/linear/linear-showcase-components";
-import { LucidUI } from "@/registry/lucid/lucid-hero";
-import { LucidShowcaseComponents } from "@/registry/lucid/lucid-showcase-components";
-import { MaterialUI } from "@/registry/material/material-hero";
-import { MaterialShowcaseComponents } from "@/registry/material/material-showcase-components";
-import { MoonUI } from "@/registry/moon/moon-hero";
-import { MoonShowcaseComponents } from "@/registry/moon/moon-showcase-components";
-import { NeonUI } from "@/registry/neon/neon-hero";
-import { NeonShowcaseComponents } from "@/registry/neon/neon-showcase-components";
-import { SnowUI } from "@/registry/snow/snow-hero";
-import { SnowShowcaseComponents } from "@/registry/snow/snow-showcase-components";
-import { SpectrumUI } from "@/registry/spectrum/spectrum-hero";
-import { SpectrumShowcaseComponents } from "@/registry/spectrum/spectrum-showcase-components";
-import { WedgesUI } from "@/registry/wedges/wedges-hero";
-import { WedgesShowcaseComponents } from "@/registry/wedges/wedges-showcase-components";
+import { CarbonUI } from "@/registry/bases/base/carbon/carbon-hero";
+import { CarbonShowcaseComponents } from "@/registry/bases/base/carbon/carbon-showcase-components";
+import { CatalystUI } from "@/registry/bases/base/catalyst/catalyst-hero";
+import { CatalystShowcaseComponents } from "@/registry/bases/base/catalyst/catalyst-showcase-components";
+import { DefaultUI } from "@/registry/bases/base/default/default-hero";
+import { DefaultShowcaseComponents } from "@/registry/bases/base/default/default-showcase-components";
+import { HeroUI as DefaultV4UI } from "@/registry/bases/base/styles/default/hero";
+import { ShowcaseComponents as DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default/showcase-components";
+import { LibelleUI } from "@/registry/bases/base/libelle/libelle-hero";
+import { LibelleShowcaseComponents } from "@/registry/bases/base/libelle/libelle-showcase-components";
+import { LinearUI } from "@/registry/bases/base/linear/linear-hero";
+import { LinearShowcaseComponents } from "@/registry/bases/base/linear/linear-showcase-components";
+import { LucidUI } from "@/registry/bases/base/lucid/lucid-hero";
+import { LucidShowcaseComponents } from "@/registry/bases/base/lucid/lucid-showcase-components";
+import { MaterialUI } from "@/registry/bases/base/material/material-hero";
+import { MaterialShowcaseComponents } from "@/registry/bases/base/material/material-showcase-components";
+import { MoonUI } from "@/registry/bases/base/moon/moon-hero";
+import { MoonShowcaseComponents } from "@/registry/bases/base/moon/moon-showcase-components";
+import { NeonUI } from "@/registry/bases/base/neon/neon-hero";
+import { NeonShowcaseComponents } from "@/registry/bases/base/neon/neon-showcase-components";
+import { SnowUI } from "@/registry/bases/base/snow/snow-hero";
+import { SnowShowcaseComponents } from "@/registry/bases/base/snow/snow-showcase-components";
+import { SpectrumUI } from "@/registry/bases/base/spectrum/spectrum-hero";
+import { SpectrumShowcaseComponents } from "@/registry/bases/base/spectrum/spectrum-showcase-components";
+import { WedgesUI } from "@/registry/bases/base/wedges/wedges-hero";
+import { WedgesShowcaseComponents } from "@/registry/bases/base/wedges/wedges-showcase-components";
 
 const DEV_STYLES_PATH: Record<StyleType, string> = {
   default: "http://localhost:3000",
@@ -42,19 +44,7 @@ const DEV_STYLES_PATH: Record<StyleType, string> = {
   neon: "http://localhost:3000",
   libelle: "http://localhost:3000",
 };
-const styles = [
-  "default",
-  "carbon",
-  "linear",
-  "material",
-  "spectrum",
-  "wedges",
-  "moon",
-  "lucid",
-  "snow",
-  "neon",
-  "libelle",
-];
+
 const PROD_STYLES_PATH: Record<StyleType, string> = {
   default: "https://shadcn-default.vercel.app",
   carbon: "https://shadcn-carbon.vercel.app",
@@ -87,7 +77,7 @@ export function getStylesPath(env: string) {
   return PROD_STYLES_PATH;
 }
 
-// "default" | "carbon" | "catalyst" | "material" | "linear" | "spectrum" | "wedges" | "moon" | "lucid" | "snow" | "neon" | "libelle"
+// "default" | "default-v4" | "carbon" | "catalyst" | "material" | "linear" | "spectrum" | "wedges" | "moon" | "lucid" | "snow" | "neon" | "libelle"
 
 type StyleType =
   | "default"
@@ -155,7 +145,7 @@ export const STYLES_DATA: Record<Style, StyleData> = {
   carbon: {
     name: "carbon",
     title: "Carbon",
-    description: "Carbon IBM inspired design system style",
+    description: "Isolated upstream shadcn ui collection in the cb namespace",
     styleVariablePrefix: "cb",
     styleSitePath: getStyleSitePath("carbon"),
     directoryName: "carbon",

@@ -1,0 +1,90 @@
+import Image from "next/image";
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/base/styles/material/components/example";
+import { AspectRatio } from "@/registry/bases/base/styles/material/ui/aspect-ratio";
+
+export default function AspectRatioExample() {
+  return (
+    <ExampleWrapper className="max-w-4xl 2xl:max-w-4xl">
+      <AspectRatio16x9 />
+      <AspectRatio21x9 />
+      <AspectRatio1x1 />
+      <AspectRatio9x16 />
+    </ExampleWrapper>
+  );
+}
+
+function AspectRatio16x9() {
+  return (
+    <Example title="16:9" className="items-center justify-center">
+      <AspectRatio
+        ratio={16 / 9}
+        className="bg-material-muted style-luma:rounded-3xl rounded-material-lg"
+      >
+        <Image
+          src="https://avatar.vercel.sh/shadcn1"
+          alt="Photo"
+          fill
+          className="style-luma:rounded-3xl rounded-material-lg h-full w-full object-cover grayscale dark:brightness-20"
+        />
+      </AspectRatio>
+    </Example>
+  );
+}
+
+function AspectRatio1x1() {
+  return (
+    <Example title="1:1" className="items-start">
+      <AspectRatio
+        ratio={1 / 1}
+        className="bg-material-muted style-luma:rounded-3xl rounded-material-lg"
+      >
+        <Image
+          src="https://avatar.vercel.sh/shadcn1"
+          alt="Photo"
+          fill
+          className="style-luma:rounded-3xl rounded-material-lg h-full w-full object-cover grayscale dark:brightness-20"
+        />
+      </AspectRatio>
+    </Example>
+  );
+}
+
+function AspectRatio9x16() {
+  return (
+    <Example title="9:16" className="items-center justify-center">
+      <AspectRatio
+        ratio={9 / 16}
+        className="bg-material-muted style-luma:rounded-3xl rounded-material-lg"
+      >
+        <Image
+          src="https://avatar.vercel.sh/shadcn1"
+          alt="Photo"
+          fill
+          className="style-luma:rounded-3xl rounded-material-lg h-full w-full object-cover grayscale dark:brightness-20"
+        />
+      </AspectRatio>
+    </Example>
+  );
+}
+
+function AspectRatio21x9() {
+  return (
+    <Example title="21:9" className="items-center justify-center">
+      <AspectRatio
+        ratio={21 / 9}
+        className="bg-material-muted style-luma:rounded-3xl rounded-material-lg"
+      >
+        <Image
+          src="https://avatar.vercel.sh/shadcn1"
+          alt="Photo"
+          fill
+          className="style-luma:rounded-3xl rounded-material-lg h-full w-full object-cover grayscale dark:brightness-20"
+        />
+      </AspectRatio>
+    </Example>
+  );
+}

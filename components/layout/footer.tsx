@@ -15,10 +15,10 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="relative flex flex-col border-t border-border/50 pb-8 pt-40"
+      className="border-border/50 relative flex flex-col border-t pt-40 pb-8"
     >
       {/* gradient */}
-      {/* <div className="absolute bottom-0 h-32 w-full bg-gradient-to-t from-accent/60 to-background"></div> */}
+      {/* <div className="absolute bottom-0 h-32 w-full bg-linear-to-t from-accent/60 to-background"></div> */}
       <PageContainer className="relative pb-6">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="relative inline-flex items-center gap-2">
@@ -28,7 +28,7 @@ export function Footer() {
             <h3 className="text-xl">
               <span className="font-medium tracking-tight">
                 shadcn{" "}
-                <span className="bg-gradient-to-r from-foreground/90 to-primary bg-clip-text font-normal italic text-transparent dark:to-foreground/30">
+                <span className="from-foreground/90 to-primary dark:to-foreground/30 bg-linear-to-r bg-clip-text font-normal text-transparent italic">
                   marketplace
                   {/* styles */}
                 </span>
@@ -54,7 +54,7 @@ export function Footer() {
       <PageContainer>
         <div className="flex w-full flex-col justify-between border-t py-6 pb-4 sm:flex-row sm:items-center">
           <div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               &copy; {new Date().getFullYear()} shadcn marketplace. All rights
               reserved.
             </p>
@@ -62,16 +62,20 @@ export function Footer() {
           <div>
             <div className="flex h-full flex-wrap items-center gap-4">
               <div className="flex flex-wrap gap-2 sm:gap-1">
-                <Button asChild variant={"ghost"} size={"icon-sm"}>
-                  <a
-                    href={siteConfig.twitterUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="sr-only">Twitter link</span>
-                    <Icons.twitter className="text-muted-foreground" />
-                  </a>
-                </Button>
+                <Button
+                  variant={"ghost"}
+                  size={"icon-sm"}
+                  render={
+                    <a
+                      href={siteConfig.twitterUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="sr-only">Twitter link</span>
+                      <Icons.twitter className="text-muted-foreground" />
+                    </a>
+                  }
+                ></Button>
                 {/* <Button asChild variant={"ghost"} size={"icon-sm"}>
                   <a
                     href={siteConfig.twitterUrl}
@@ -106,7 +110,7 @@ export function Footer() {
   );
 }
 
-// <button className="text-sm font-medium relative border border-[transparent] dark:text-black bg-neutral-900 dark:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-neutral-900 hover:opacity-90 transition-all duration-150 ease-in-out flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#2c2c30] to-[#1d1d20] px-4 py-2 text-white shadow-inner before:pointer-events-none before:absolute before:inset-0 before:rounded-xl before:shadow-[0px_2px_0.4px_0px_rgba(255,_255,_255,_0.16)_inset] hover:bg-[#1f1f1f] hover:shadow-none"><img alt="Sign up with Google" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" className="h-4 w-4" src="https://www.datocms-assets.com/77432/1729797489-google.svg" style="color: transparent;"><p className="text-sm">Sign up with Google</p></button>
+// <button className="text-sm font-medium relative border border-[transparent] dark:text-black bg-neutral-900 dark:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-neutral-900 hover:opacity-90 transition-all duration-150 ease-in-out flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-b from-[#2c2c30] to-[#1d1d20] px-4 py-2 text-white shadow-inner before:pointer-events-none before:absolute before:inset-0 before:rounded-xl before:shadow-[0px_2px_0.4px_0px_rgba(255,_255,_255,_0.16)_inset] hover:bg-[#1f1f1f] hover:shadow-none"><img alt="Sign up with Google" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" className="h-4 w-4" src="https://www.datocms-assets.com/77432/1729797489-google.svg" style="color: transparent;"><p className="text-sm">Sign up with Google</p></button>
 
 function ThemeRadio() {
   return (

@@ -1,4 +1,4 @@
-import { CarbonStyleRegistryIndex } from "./carbon/registry-index";
+import { CarbonStyleRegistryIndex } from "./bases/base/carbon/registry-index";
 import { MaterialStyleRegistryIndex } from "./material";
 import { WedgesStyleRegistryIndex } from "./wedges";
 

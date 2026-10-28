@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 
 type StyleFontWrapperProps = React.ComponentPropsWithoutRef<"div"> & {
   sStyle?: Style;

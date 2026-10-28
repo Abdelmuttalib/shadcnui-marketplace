@@ -3,9 +3,13 @@
 import { CheckIcon, MessageSquare, Users } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
-import { Card, CardContent, CardHeader } from "@/registry/wedges/ui/card";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/bases/base/wedges/ui/card";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 const pricingTiers = [
   {
@@ -70,7 +74,7 @@ export default function PricingPage() {
         <Typography
           as="p"
           variant="base/normal"
-          className="mx-auto max-w-2xl text-wedges-muted-foreground"
+          className="text-wedges-muted-foreground mx-auto max-w-2xl"
         >
           Choose a plan that fits your needs. Get access to our team of
           designers and developers ready to help you grow.
@@ -115,7 +119,7 @@ function PricingCard({
     >
       {highlighted && (
         <div className="absolute right-4 top-4 z-20">
-          <span className="rounded-full bg-wedges-primary px-3 py-1 text-sm text-white">
+          <span className="bg-wedges-primary rounded-full px-3 py-1 text-sm text-white">
             Best value!
           </span>
         </div>
@@ -132,7 +136,7 @@ function PricingCard({
           <Typography
             as="span"
             variant="lg/normal"
-            className="ml-1 text-wedges-muted-foreground/60"
+            className="text-wedges-muted-foreground/60 ml-1"
           >
             /month
           </Typography>
@@ -168,7 +172,7 @@ function PricingCard({
             {features.map((feature, index) => (
               <li key={index} className="flex items-start gap-2">
                 <CheckIcon className="size-4 text-wedges-primary" />
-                <span className="text-sm text-wedges-muted-foreground">
+                <span className="text-wedges-muted-foreground text-sm">
                   {feature.text}
                 </span>
               </li>

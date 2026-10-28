@@ -1,4 +1,7 @@
-import { SidebarProvider, SidebarTrigger } from "@/registry/wedges/ui/sidebar";
+import {
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/registry/bases/base/wedges/ui/sidebar";
 
 import { AppSidebar } from "./components/app-sidebar";
 
@@ -7,8 +10,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="font-wedges">
       <SidebarProvider>
         <AppSidebar />
-        <main className="w-full flex-1 overflow-hidden bg-wedges-sidebar">
-          <div className="h-full w-full bg-wedges-background p-2">
+        <main className="bg-wedges-sidebar w-full flex-1 overflow-hidden">
+          <div className="bg-wedges-background h-full w-full p-2">
             <SidebarTrigger />
             <div className="px-2 py-8 sm:px-4 md:px-10 lg:px-14">
               {children}

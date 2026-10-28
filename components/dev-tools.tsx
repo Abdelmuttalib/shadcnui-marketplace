@@ -3,6 +3,8 @@ import { StyleSelect } from "@/components/common/style-select";
 import { ThemePaletteSelect } from "./common/theme-palette-select";
 import { ThemeButton } from "./theme-button";
 import ThemeSwitcher from "./theme-select";
+import { ThemeToggle } from "./common/theme";
+import { PreviewStyleSwitcher } from "./common/preview-style-switcher";
 
 export function DevTools() {
   return (
@@ -17,7 +19,7 @@ function ThemePaletteSelectWrapper() {
   if (process.env.NODE_ENV === "production") return null;
 
   return (
-    <div className="fixed right-8 top-2 z-[99999999]">
+    <div className="fixed top-2 right-8 z-[99999999]">
       <ThemePaletteSelect />
       {/* <ThemeButton /> */}
     </div>
@@ -28,7 +30,7 @@ function ThemeButtonWrapper() {
   if (process.env.NODE_ENV === "production") return null;
 
   return (
-    <div className="fixed right-2 top-2 z-[99999999]">
+    <div className="fixed top-2 right-2 z-[99999999]">
       <ThemeSwitcher />
       {/* <ThemeButton /> */}
     </div>
@@ -39,7 +41,7 @@ function TailwindIndicator() {
   if (process.env.NODE_ENV === "production") return null;
 
   return (
-    <div className="fixed bottom-2 right-2 z-[9999] flex items-end gap-2 rounded-md border bg-accent p-1 text-sm">
+    <div className="bg-accent fixed right-2 bottom-2 z-[9999] flex items-end gap-2 rounded-md border p-1 text-sm">
       <div className="size-fit rounded-md border p-0.5">
         <div className="block sm:hidden">xs</div>
         <div className="hidden sm:block md:hidden">sm</div>
@@ -50,6 +52,8 @@ function TailwindIndicator() {
       </div>
       <ThemePaletteSelect />
       <StyleSelect />
+      <PreviewStyleSwitcher />
+      <ThemeToggle />
     </div>
   );
 }

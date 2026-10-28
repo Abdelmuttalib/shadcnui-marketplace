@@ -9,10 +9,10 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
-import { Badge } from "@/registry/material/ui/badge";
-import { Button } from "@/registry/material/ui/button";
-import { DataTable } from "@/registry/material/ui/data-table";
+} from "@/registry/bases/base/material/ui/avatar";
+import { Badge } from "@/registry/bases/base/material/ui/badge";
+import { Button } from "@/registry/bases/base/material/ui/button";
+import { DataTable } from "@/registry/bases/base/material/ui/data-table";
 import {
   Select,
   SelectContent,
@@ -21,8 +21,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/material/ui/select";
-import { Typography } from "@/registry/material/ui/typography";
+} from "@/registry/bases/base/material/ui/select";
+import { Typography } from "@/registry/bases/base/material/ui/typography";
 
 const data = {
   overview: [
@@ -238,7 +238,7 @@ export default function DashboardPage() {
           {data.overview.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-3 border-t border-t-material-input py-6"
+              className="border-t-material-input flex flex-col gap-3 border-t py-6"
             >
               <div className="flex-1">
                 <Typography as="h2" variant="md/normal">
@@ -261,7 +261,7 @@ export default function DashboardPage() {
                 >
                   {item.percentage}
                 </Badge>
-                <p className="text-sm text-material-muted-foreground">
+                <p className="text-material-muted-foreground text-sm">
                   {item.lastUpdate}
                 </p>
               </div>
