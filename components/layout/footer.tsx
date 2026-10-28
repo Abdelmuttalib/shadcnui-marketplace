@@ -15,7 +15,7 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="border-border/50 relative flex flex-col border-t pb-8 pt-40"
+      className="border-border/50 relative flex flex-col border-t pt-40 pb-8"
     >
       {/* gradient */}
       {/* <div className="absolute bottom-0 h-32 w-full bg-linear-to-t from-accent/60 to-background"></div> */}
@@ -28,7 +28,7 @@ export function Footer() {
             <h3 className="text-xl">
               <span className="font-medium tracking-tight">
                 shadcn{" "}
-                <span className="bg-linear-to-r from-foreground/90 to-primary dark:to-foreground/30 bg-clip-text font-normal italic text-transparent">
+                <span className="from-foreground/90 to-primary dark:to-foreground/30 bg-linear-to-r bg-clip-text font-normal text-transparent italic">
                   marketplace
                   {/* styles */}
                 </span>
@@ -62,16 +62,20 @@ export function Footer() {
           <div>
             <div className="flex h-full flex-wrap items-center gap-4">
               <div className="flex flex-wrap gap-2 sm:gap-1">
-                <Button asChild variant={"ghost"} size={"icon-sm"}>
-                  <a
-                    href={siteConfig.twitterUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="sr-only">Twitter link</span>
-                    <Icons.twitter className="text-muted-foreground" />
-                  </a>
-                </Button>
+                <Button
+                  variant={"ghost"}
+                  size={"icon-sm"}
+                  render={
+                    <a
+                      href={siteConfig.twitterUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="sr-only">Twitter link</span>
+                      <Icons.twitter className="text-muted-foreground" />
+                    </a>
+                  }
+                ></Button>
                 {/* <Button asChild variant={"ghost"} size={"icon-sm"}>
                   <a
                     href={siteConfig.twitterUrl}
