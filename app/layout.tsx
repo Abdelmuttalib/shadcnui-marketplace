@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://shadcnmarketplace.com",
     title: "shadcn ui marketplace",
     description:
-      "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
+      "shadcn ui marketplace, a marketplace for shadcn ui styles, blocks, palettes, components, and styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
     images: [
       {
         url: "https://shadcn-ui-marketplace.com/images/og.png",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
+    "shadcn ui marketplace, a marketplace for shadcn ui styles, blocks, palettes, components, and styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
   metadataBase: new URL("https://shadcnmarketplace.com"),
 };
 

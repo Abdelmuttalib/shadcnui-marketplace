@@ -26,5 +26,3 @@ export const registry = {
     // ...examples,
   ],
 } satisfies Registry;
-
-console.log("Registry exports:", exports);
