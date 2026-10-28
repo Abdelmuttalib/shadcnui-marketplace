@@ -8,7 +8,7 @@ import {
   DefaultCardsPage,
   DefaultMailPage,
 } from "@/registry/bases/base/default/page-examples";
-import { DefaultV4CardsPage } from "@/registry/bases/base/styles/default-v4/page-examples";
+import { DefaultV4CardsPage } from "@/registry/bases/base/styles/default/page-examples";
 import { LibelleBoardPage } from "@/registry/bases/base/libelle/page-examples";
 import { LucidMusicPage } from "@/registry/bases/base/lucid/page-examples";
 import {

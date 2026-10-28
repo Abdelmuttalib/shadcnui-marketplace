@@ -3,14 +3,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-neon-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-neon-ring focus-visible:ring-3 focus-visible:ring-neon-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-neon-destructive aria-invalid:ring-3 aria-invalid:ring-neon-destructive/20 dark:aria-invalid:border-neon-destructive/50 dark:aria-invalid:ring-neon-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 ring-offset-2 ring-offset-transparent items-center justify-center rounded-neon-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:ring-2 focus-visible:ring-neon-ring active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-neon-destructive aria-invalid:ring-2 aria-invalid:ring-neon-destructive   [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
         default:
           "bg-neon-primary text-neon-primary-foreground hover:bg-neon-primary/80",
         outline:
-          "border-neon-border bg-neon-background shadow-xs hover:bg-neon-muted hover:text-neon-foreground aria-expanded:bg-neon-muted aria-expanded:text-neon-foreground dark:border-neon-input dark:bg-neon-input/30 dark:hover:bg-neon-input/50",
+          "border-neon-border bg-neon-background shadow-xs hover:bg-neon-muted hover:text-neon-foreground aria-expanded:bg-neon-muted aria-expanded:text-neon-foreground dark:border-neon-input bg-neon-input/40 dark:hover:bg-neon-input/50",
         secondary:
           "bg-neon-secondary text-neon-secondary-foreground hover:bg-[color-mix(in_oklch,var(--neon-secondary),var(--neon-foreground)_5%)] aria-expanded:bg-neon-secondary aria-expanded:text-neon-secondary-foreground",
         ghost:

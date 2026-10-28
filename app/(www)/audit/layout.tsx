@@ -40,6 +40,73 @@ const sections = [
       },
     ],
   },
+
+  {
+    title: "STYLES",
+    links: [
+      {
+        label: "All styles",
+        href: "/audit/styles",
+        icon: Palette,
+      },
+      {
+        label: "Carbon",
+        href: "/audit/styles/carbon",
+        icon: Palette,
+      },
+      {
+        label: "Catalyst",
+        href: "/audit/styles/catalyst",
+        icon: Palette,
+      },
+      {
+        label: "Libelle",
+        href: "/audit/styles/libelle",
+        icon: Palette,
+      },
+      {
+        label: "Linear",
+        href: "/audit/styles/linear",
+        icon: Palette,
+      },
+      {
+        label: "Lucid",
+        href: "/audit/styles/lucid",
+        icon: Palette,
+      },
+      {
+        label: "Material",
+        href: "/audit/styles/material",
+        icon: Palette,
+      },
+      {
+        label: "Moon",
+        href: "/audit/styles/moon",
+        icon: Palette,
+      },
+      {
+        label: "Neon",
+        href: "/audit/styles/neon",
+        icon: Palette,
+      },
+      {
+        label: "Snow",
+        href: "/audit/styles/snow",
+        icon: Palette,
+      },
+      {
+        label: "Spectrum",
+        href: "/audit/styles/spectrum",
+        icon: Palette,
+      },
+      {
+        label: "Wedges",
+        href: "/audit/styles/wedges",
+        icon: Palette,
+      },
+    ],
+  },
+
   {
     title: "PROJECT",
     links: [

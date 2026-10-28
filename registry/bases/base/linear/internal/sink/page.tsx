@@ -15,74 +15,74 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/registry/bases/base/linear/ui/sidebar";
-import { AccordionDemo } from "@/registry/linear/internal/sink/components/accordion-demo";
-import { AlertDemo } from "@/registry/linear/internal/sink/components/alert-demo";
-import { AlertDialogDemo } from "@/registry/linear/internal/sink/components/alert-dialog-demo";
-import { AppSidebar } from "@/registry/linear/internal/sink/components/app-sidebar";
-import { AspectRatioDemo } from "@/registry/linear/internal/sink/components/aspect-ratio-demo";
-import { AvatarDemo } from "@/registry/linear/internal/sink/components/avatar-demo";
-import { BadgeDemo } from "@/registry/linear/internal/sink/components/badge-demo";
-import { BadgeDestructive } from "@/registry/linear/internal/sink/components/badge-destructive";
-import { BadgeOutline } from "@/registry/linear/internal/sink/components/badge-outline";
-import { BadgeSecondary } from "@/registry/linear/internal/sink/components/badge-secondary";
-import { BreadcrumbDemo } from "@/registry/linear/internal/sink/components/breadcrumb-demo";
-import { ButtonDemo } from "@/registry/linear/internal/sink/components/button-demo";
-import { ButtonDestructive } from "@/registry/linear/internal/sink/components/button-destructive";
-import { ButtonGhost } from "@/registry/linear/internal/sink/components/button-ghost";
-import { ButtonLink } from "@/registry/linear/internal/sink/components/button-link";
-import { ButtonLoading } from "@/registry/linear/internal/sink/components/button-loading";
-import { ButtonOutline } from "@/registry/linear/internal/sink/components/button-outline";
-import { ButtonSecondary } from "@/registry/linear/internal/sink/components/button-secondary";
-import { ButtonWithIcon } from "@/registry/linear/internal/sink/components/button-with-icon";
-import { CalendarDemo } from "@/registry/linear/internal/sink/components/calendar-demo";
-import { CardDemo } from "@/registry/linear/internal/sink/components/card-demo";
-import { CarouselDemo } from "@/registry/linear/internal/sink/components/carousel-demo";
-import { CheckboxDemo } from "@/registry/linear/internal/sink/components/checkbox-demo";
-import { CollapsibleDemo } from "@/registry/linear/internal/sink/components/collapsible-demo";
-import { ComboboxDemo } from "@/registry/linear/internal/sink/components/combobox-demo";
-import { CommandDemo } from "@/registry/linear/internal/sink/components/command-demo";
-import { ComponentWrapper } from "@/registry/linear/internal/sink/components/component-wrapper";
-import { ContextMenuDemo } from "@/registry/linear/internal/sink/components/context-menu-demo";
-import { DatePickerDemo } from "@/registry/linear/internal/sink/components/date-picker-demo";
-import { DialogDemo } from "@/registry/linear/internal/sink/components/dialog-demo";
-import { DrawerDemo } from "@/registry/linear/internal/sink/components/drawer-demo";
-import { DropdownMenuDemo } from "@/registry/linear/internal/sink/components/dropdown-menu-demo";
-import { HoverCardDemo } from "@/registry/linear/internal/sink/components/hover-card-demo";
-import { InputDemo } from "@/registry/linear/internal/sink/components/input-demo";
-import { InputOTPDemo } from "@/registry/linear/internal/sink/components/input-otp-demo";
-import { LabelDemo } from "@/registry/linear/internal/sink/components/label-demo";
-import { MenubarDemo } from "@/registry/linear/internal/sink/components/menubar-demo";
-import { NavigationMenuDemo } from "@/registry/linear/internal/sink/components/navigation-menu-demo";
-import { PaginationDemo } from "@/registry/linear/internal/sink/components/pagination-demo";
-import { PopoverDemo } from "@/registry/linear/internal/sink/components/popover-demo";
-import { ProgressDemo } from "@/registry/linear/internal/sink/components/progress-demo";
-import { RadioGroupDemo } from "@/registry/linear/internal/sink/components/radio-group-demo";
-import { ResizableHandleDemo } from "@/registry/linear/internal/sink/components/resizable-handle";
-import { ScrollAreaDemo } from "@/registry/linear/internal/sink/components/scroll-area-demo";
-import { SelectDemo } from "@/registry/linear/internal/sink/components/select-demo";
-import { SeparatorDemo } from "@/registry/linear/internal/sink/components/separator-demo";
-import { SheetDemo } from "@/registry/linear/internal/sink/components/sheet-demo";
-import { SkeletonDemo } from "@/registry/linear/internal/sink/components/skeleton-demo";
-import { SliderDemo } from "@/registry/linear/internal/sink/components/slider-demo";
-import { SonnerDemo } from "@/registry/linear/internal/sink/components/sonner-demo";
-import { SwitchDemo } from "@/registry/linear/internal/sink/components/switch-demo";
-import { TableDemo } from "@/registry/linear/internal/sink/components/table-demo";
-import { TabsDemo } from "@/registry/linear/internal/sink/components/tabs-demo";
-import { TextareaDemo } from "@/registry/linear/internal/sink/components/textarea-demo";
-import { ToastDemo } from "@/registry/linear/internal/sink/components/toast-demo";
-import { ToggleDemo } from "@/registry/linear/internal/sink/components/toggle-demo";
-import { ToggleDisabled } from "@/registry/linear/internal/sink/components/toggle-disabled";
-import { ToggleGroupDemo } from "@/registry/linear/internal/sink/components/toggle-group-demo";
-import { ToggleOutline } from "@/registry/linear/internal/sink/components/toggle-outline";
-import { ToggleWithText } from "@/registry/linear/internal/sink/components/toggle-with-text";
-import { TooltipDemo } from "@/registry/linear/internal/sink/components/tooltip-demo";
+import { AccordionDemo } from "@/registry/bases/base/linear/internal/sink/components/accordion-demo";
+import { AlertDemo } from "@/registry/bases/base/linear/internal/sink/components/alert-demo";
+import { AlertDialogDemo } from "@/registry/bases/base/linear/internal/sink/components/alert-dialog-demo";
+import { AppSidebar } from "@/registry/bases/base/linear/internal/sink/components/app-sidebar";
+import { AspectRatioDemo } from "@/registry/bases/base/linear/internal/sink/components/aspect-ratio-demo";
+import { AvatarDemo } from "@/registry/bases/base/linear/internal/sink/components/avatar-demo";
+import { BadgeDemo } from "@/registry/bases/base/linear/internal/sink/components/badge-demo";
+import { BadgeDestructive } from "@/registry/bases/base/linear/internal/sink/components/badge-destructive";
+import { BadgeOutline } from "@/registry/bases/base/linear/internal/sink/components/badge-outline";
+import { BadgeSecondary } from "@/registry/bases/base/linear/internal/sink/components/badge-secondary";
+import { BreadcrumbDemo } from "@/registry/bases/base/linear/internal/sink/components/breadcrumb-demo";
+import { ButtonDemo } from "@/registry/bases/base/linear/internal/sink/components/button-demo";
+import { ButtonDestructive } from "@/registry/bases/base/linear/internal/sink/components/button-destructive";
+import { ButtonGhost } from "@/registry/bases/base/linear/internal/sink/components/button-ghost";
+import { ButtonLink } from "@/registry/bases/base/linear/internal/sink/components/button-link";
+import { ButtonLoading } from "@/registry/bases/base/linear/internal/sink/components/button-loading";
+import { ButtonOutline } from "@/registry/bases/base/linear/internal/sink/components/button-outline";
+import { ButtonSecondary } from "@/registry/bases/base/linear/internal/sink/components/button-secondary";
+import { ButtonWithIcon } from "@/registry/bases/base/linear/internal/sink/components/button-with-icon";
+import { CalendarDemo } from "@/registry/bases/base/linear/internal/sink/components/calendar-demo";
+import { CardDemo } from "@/registry/bases/base/linear/internal/sink/components/card-demo";
+import { CarouselDemo } from "@/registry/bases/base/linear/internal/sink/components/carousel-demo";
+import { CheckboxDemo } from "@/registry/bases/base/linear/internal/sink/components/checkbox-demo";
+import { CollapsibleDemo } from "@/registry/bases/base/linear/internal/sink/components/collapsible-demo";
+import { ComboboxDemo } from "@/registry/bases/base/linear/internal/sink/components/combobox-demo";
+import { CommandDemo } from "@/registry/bases/base/linear/internal/sink/components/command-demo";
+import { ComponentWrapper } from "@/registry/bases/base/linear/internal/sink/components/component-wrapper";
+import { ContextMenuDemo } from "@/registry/bases/base/linear/internal/sink/components/context-menu-demo";
+import { DatePickerDemo } from "@/registry/bases/base/linear/internal/sink/components/date-picker-demo";
+import { DialogDemo } from "@/registry/bases/base/linear/internal/sink/components/dialog-demo";
+import { DrawerDemo } from "@/registry/bases/base/linear/internal/sink/components/drawer-demo";
+import { DropdownMenuDemo } from "@/registry/bases/base/linear/internal/sink/components/dropdown-menu-demo";
+import { HoverCardDemo } from "@/registry/bases/base/linear/internal/sink/components/hover-card-demo";
+import { InputDemo } from "@/registry/bases/base/linear/internal/sink/components/input-demo";
+import { InputOTPDemo } from "@/registry/bases/base/linear/internal/sink/components/input-otp-demo";
+import { LabelDemo } from "@/registry/bases/base/linear/internal/sink/components/label-demo";
+import { MenubarDemo } from "@/registry/bases/base/linear/internal/sink/components/menubar-demo";
+import { NavigationMenuDemo } from "@/registry/bases/base/linear/internal/sink/components/navigation-menu-demo";
+import { PaginationDemo } from "@/registry/bases/base/linear/internal/sink/components/pagination-demo";
+import { PopoverDemo } from "@/registry/bases/base/linear/internal/sink/components/popover-demo";
+import { ProgressDemo } from "@/registry/bases/base/linear/internal/sink/components/progress-demo";
+import { RadioGroupDemo } from "@/registry/bases/base/linear/internal/sink/components/radio-group-demo";
+import { ResizableHandleDemo } from "@/registry/bases/base/linear/internal/sink/components/resizable-handle";
+import { ScrollAreaDemo } from "@/registry/bases/base/linear/internal/sink/components/scroll-area-demo";
+import { SelectDemo } from "@/registry/bases/base/linear/internal/sink/components/select-demo";
+import { SeparatorDemo } from "@/registry/bases/base/linear/internal/sink/components/separator-demo";
+import { SheetDemo } from "@/registry/bases/base/linear/internal/sink/components/sheet-demo";
+import { SkeletonDemo } from "@/registry/bases/base/linear/internal/sink/components/skeleton-demo";
+import { SliderDemo } from "@/registry/bases/base/linear/internal/sink/components/slider-demo";
+import { SonnerDemo } from "@/registry/bases/base/linear/internal/sink/components/sonner-demo";
+import { SwitchDemo } from "@/registry/bases/base/linear/internal/sink/components/switch-demo";
+import { TableDemo } from "@/registry/bases/base/linear/internal/sink/components/table-demo";
+import { TabsDemo } from "@/registry/bases/base/linear/internal/sink/components/tabs-demo";
+import { TextareaDemo } from "@/registry/bases/base/linear/internal/sink/components/textarea-demo";
+import { ToastDemo } from "@/registry/bases/base/linear/internal/sink/components/toast-demo";
+import { ToggleDemo } from "@/registry/bases/base/linear/internal/sink/components/toggle-demo";
+import { ToggleDisabled } from "@/registry/bases/base/linear/internal/sink/components/toggle-disabled";
+import { ToggleGroupDemo } from "@/registry/bases/base/linear/internal/sink/components/toggle-group-demo";
+import { ToggleOutline } from "@/registry/bases/base/linear/internal/sink/components/toggle-outline";
+import { ToggleWithText } from "@/registry/bases/base/linear/internal/sink/components/toggle-with-text";
+import { TooltipDemo } from "@/registry/bases/base/linear/internal/sink/components/tooltip-demo";
 
 export default function SinkPage() {
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="border-b-linear-border group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
+        <header className="border-b-linear-border flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />

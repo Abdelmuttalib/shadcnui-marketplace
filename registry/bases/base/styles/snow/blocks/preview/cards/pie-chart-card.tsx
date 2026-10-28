@@ -35,19 +35,19 @@ const pieChartConfig = {
   },
   chrome: {
     label: "Chrome",
-    color: "var(--chart-1)",
+    color: "var(--snow-chart-1)",
   },
   safari: {
     label: "Safari",
-    color: "var(--chart-2)",
+    color: "var(--snow-chart-2)",
   },
   firefox: {
     label: "Firefox",
-    color: "var(--chart-3)",
+    color: "var(--snow-chart-3)",
   },
   edge: {
     label: "Edge",
-    color: "var(--chart-4)",
+    color: "var(--snow-chart-4)",
   },
 } satisfies ChartConfig;
 
@@ -106,14 +106,14 @@ export function PieChartCard() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy - 16}
-                          className="fill-foreground text-2xl font-bold"
+                          className="fill-snow-foreground text-2xl font-bold"
                         >
                           {totalVisitors.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 4}
-                          className="fill-muted-foreground text-xs"
+                          className="fill-snow-muted-foreground text-xs"
                         >
                           Visitors
                         </tspan>
@@ -133,13 +133,13 @@ export function PieChartCard() {
       <CardFooter className="flex-col items-stretch gap-2">
         <div className="flex items-center text-xs">
           <span className="font-medium">{topBrowserLabel}</span>
-          <span className="text-muted-foreground ml-auto tabular-nums">
+          <span className="text-snow-muted-foreground ml-auto tabular-nums">
             {topBrowserShare}%
           </span>
         </div>
         <Progress
           value={topBrowserShare}
-          className="**:data-[slot=progress-indicator]:bg-chart-3"
+          className="**:data-[slot=progress-indicator]:bg-snow-chart-3"
         />
       </CardFooter>
     </Card>

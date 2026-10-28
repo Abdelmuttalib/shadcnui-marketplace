@@ -249,7 +249,7 @@ const columns = columnHelper.columns([
           Target
         </Label>
         <Input
-          className="hover:bg-material-input/30 focus-visible:bg-material-background dark:hover:bg-material-input/30 dark:focus-visible:bg-material-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+          className="hover:bg-material-input/60 focus-visible:bg-material-background dark:hover:bg-material-input/60 dark:focus-visible:bg-material-input/60 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
           defaultValue={row.original.target}
           id={`${row.original.id}-target`}
         />
@@ -273,7 +273,7 @@ const columns = columnHelper.columns([
           Limit
         </Label>
         <Input
-          className="hover:bg-material-input/30 focus-visible:bg-material-background dark:hover:bg-material-input/30 dark:focus-visible:bg-material-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+          className="hover:bg-material-input/60 focus-visible:bg-material-background dark:hover:bg-material-input/60 dark:focus-visible:bg-material-input/60 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
           defaultValue={row.original.limit}
           id={`${row.original.id}-limit`}
         />

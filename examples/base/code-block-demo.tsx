@@ -3,7 +3,7 @@
 import { DownloadIcon, FileCodeIcon, WrapTextIcon } from "lucide-react";
 import * as React from "react";
 
-import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { useHighlightedCode } from "@/registry/bases/base/styles/default/hooks/use-highlighted-code";
 import { Button } from "@/styles/base-default/ui/button";
 import {
   CodeBlock,

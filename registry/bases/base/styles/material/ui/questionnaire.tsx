@@ -125,7 +125,7 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="border-material-input group-data-checked/questionnaire-choice:border-material-primary group-data-checked/questionnaire-choice:bg-material-primary group-data-checked/questionnaire-choice:text-material-primary-foreground dark:bg-material-input/30 dark:group-data-checked/questionnaire-choice:bg-material-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
+        className="border-material-input group-data-checked/questionnaire-choice:border-material-primary group-data-checked/questionnaire-choice:bg-material-primary group-data-checked/questionnaire-choice:text-material-primary-foreground dark:group-data-checked/questionnaire-choice:bg-material-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-material-input focus-visible:border-material-ring focus-visible:ring-material-ring/50 aria-invalid:border-material-destructive aria-invalid:ring-material-destructive/20 dark:bg-material-input/30 dark:aria-invalid:border-material-destructive/50 dark:aria-invalid:ring-material-destructive/40 rounded-material-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "border-material-input focus-visible:border-material-ring focus-visible:ring-material-ring/50 aria-invalid:border-material-destructive aria-invalid:ring-material-destructive/20 dark:aria-invalid:border-material-destructive/50 dark:aria-invalid:ring-material-destructive/40 rounded-material-md h-10 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
           "selection:bg-material-primary selection:text-material-primary-foreground placeholder:text-material-muted-foreground",
           className
         )}

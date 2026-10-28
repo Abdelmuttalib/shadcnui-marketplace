@@ -8,7 +8,12 @@ import { fileURLToPath } from "url";
 import { parseArgs } from "util";
 import prettier from "prettier";
 import { rimraf } from "rimraf";
-import { registrySchema, type RegistryItem } from "shadcn/schema";
+import {
+  registryItemSchema,
+  registrySchema,
+  type RegistryItem,
+} from "shadcn/schema";
+
 import {
   createStyleMap,
   transformDirection,
@@ -17,12 +22,14 @@ import {
 } from "shadcn/utils";
 import { Project, ScriptKind } from "ts-morph";
 
-import { legacyStyles } from "@/registry/_legacy-styles";
-import { BASE_COLORS } from "@/registry/base-colors";
-import { BASES, type Base } from "@/registry/bases";
-import { PRESETS } from "@/registry/config";
-import { fonts } from "@/registry/fonts";
-import { Style, STYLES } from "@/registry/styles";
+import { legacyStyles } from "../registry/_legacy-styles";
+import { BASE_COLORS } from "../registry/base-colors";
+import { BASES, type Base } from "../registry/bases";
+import { PRESETS } from "../registry/config";
+import { fonts } from "../registry/fonts";
+import { Style, STYLES } from "../registry/styles.ts";
+
+import { transformRegistryContent } from "./transform-registry-content";
 
 /*
  * build-registry.mts is the single v4 registry pipeline.
@@ -124,6 +131,151 @@ const resolveFromScript = createRequire(import.meta.url).resolve;
 const iconProject = new Project({
   compilerOptions: {},
 });
+
+function getRegistryRoot(styleName: string): string {
+  const styleCombination = getStyleCombination(styleName);
+
+  if (styleCombination) {
+    const { base, style } = styleCombination;
+
+    return `registry/bases/${base.name}/styles/${style.name}`;
+  }
+
+  return `registry/${styleName}`;
+}
+
+// function normalizeRegistryFilePath(
+//   filePath: string,
+//   registryRoot: string
+// ): string {
+//   const normalizedPath = path.posix.normalize(filePath.replaceAll("\\", "/"));
+
+//   const normalizedRoot = path.posix.normalize(
+//     registryRoot.replaceAll("\\", "/")
+//   );
+
+//   if (
+//     normalizedPath === normalizedRoot ||
+//     normalizedPath.startsWith(`${normalizedRoot}/`)
+//   ) {
+//     return normalizedPath;
+//   }
+
+//   return path.posix.join(normalizedRoot, normalizedPath);
+// }
+
+function normalizeRegistryFilePath(
+  filePath: string,
+  registryRoot: string
+): string {
+  const normalizedPath = path.posix.normalize(filePath.replaceAll("\\", "/"));
+
+  const normalizedRoot = path.posix.normalize(
+    registryRoot.replaceAll("\\", "/")
+  );
+
+  if (
+    normalizedPath === normalizedRoot ||
+    normalizedPath.startsWith(`${normalizedRoot}/`)
+  ) {
+    return normalizedPath;
+  }
+
+  return path.posix.join(normalizedRoot, normalizedPath);
+}
+
+const SITE_REGISTRY_URL = (
+  process.env.SITE_REGISTRY_URL ?? "https://shadcnmarketplace.com"
+).replace(/\/$/, "");
+
+const PUBLIC_REGISTRY_TYPES = new Set([
+  "registry:ui",
+  "registry:component",
+  "registry:example",
+  "registry:block",
+  "registry:hook",
+  "registry:lib",
+  "registry:font",
+]);
+
+function getPublicStyleOutputDir(styleName: string) {
+  return path.join(process.cwd(), "public", "r", "styles", styleName);
+}
+
+function normalizePublicFilePath(filePath: string, registryRoot: string) {
+  const prefix = `${registryRoot}/`;
+
+  return filePath.startsWith(prefix) ? filePath.slice(prefix.length) : filePath;
+}
+
+function normalizePublicFileContent(
+  content: string,
+  baseName: string,
+  styleName: string
+) {
+  // Convert imports pointing at the registry's internal UI files
+  // into imports that make sense in the consuming application.
+  const internalUIPath = `@/registry/bases/${baseName}/styles/${styleName}/ui`;
+
+  return content.split(internalUIPath).join("@/components/ui");
+}
+
+export function getStyleVariablesPrefix(style: Style["name"]) {
+  switch (style) {
+    case "default":
+      return "dft";
+    case "carbon":
+      return "cb";
+    case "linear":
+      return "linear";
+    case "material":
+      return "material";
+    case "catalyst":
+      return "catalyst";
+    case "spectrum":
+      return "spctm";
+    case "wedges":
+      return "wedges";
+    case "moon":
+      return "moon";
+    case "lucid":
+      return "lucid";
+    case "snow":
+      return "snow";
+    case "neon":
+      return "neon";
+    case "libelle":
+      return "libelle";
+    default:
+      return "dft";
+  }
+}
+
+function transformRegistryContent(
+  content: string,
+  stylePrefix: string
+): string {
+  let transformed = content;
+
+  // Remove the style-specific prefix from Tailwind utilities and
+  // custom radius utilities, such as bg-cb-primary and rounded-cb-lg.
+  //
+  // Only remove the configured prefix. Do not remove arbitrary
+  // suffixes from unrelated utilities.
+  const escapedPrefix = stylePrefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  const stylePrefixPattern = new RegExp(`-${escapedPrefix}(?=-|/|\\b)`, "g");
+
+  transformed = transformed.replace(stylePrefixPattern, "");
+
+  // Rewrite internal UI imports to consumer-facing component imports.
+  transformed = transformed.replace(
+    /@\/registry\/(?:bases\/[^/]+\/styles\/[^/]+|(?:default-v4|default|carbon|catalyst|linear|material|spectrum|wedges|moon|lucid|snow|neon|libelle))\/ui(?=\/)/g,
+    "@/components/ui"
+  );
+
+  return transformed;
+}
 
 function getStylesToBuild() {
   const stylesToBuild = new Map<string, { name: string; title: string }>();
@@ -350,11 +502,22 @@ export function getComponent(styleName: string, name: string) {
     ...shards.map((shard) => `${shard.key}.tsx`),
     "index.tsx",
   ]);
-  for (const entry of await fs.readdir(outputDir)) {
-    if (!expectedFiles.has(entry)) {
-      await fs.rm(path.join(outputDir, entry), { force: true });
+
+  for (const entry of await fs.readdir(outputDir, {
+    withFileTypes: true,
+  })) {
+    // Only remove stale files generated by this function.
+    // Preserve directories such as "base/".
+    if (entry.isFile() && !expectedFiles.has(entry.name)) {
+      await fs.rm(path.join(outputDir, entry.name), { force: true });
     }
   }
+
+  // for (const entry of await fs.readdir(outputDir)) {
+  //   if (!expectedFiles.has(entry)) {
+  //     await fs.rm(path.join(outputDir, entry), { force: true });
+  //   }
+  // }
 }
 
 function normalizeRegistryFiles(item: RegistryItem): Array<{
@@ -688,10 +851,342 @@ async function runWithConcurrency<T, R>(
   return results;
 }
 
+// ----------------------------------------------------------------------------
+// Build public/r/styles/index.json.
+// ----------------------------------------------------------------------------
+// async function buildStylesCatalog() {
+//   const outputPath = path.join(
+//     process.cwd(),
+//     "public",
+//     "r",
+//     "styles",
+//     "index.json"
+//   );
+
+//   await fs.mkdir(path.dirname(outputPath), {
+//     recursive: true,
+//   });
+
+//   await writeIfChanged(
+//     outputPath,
+//     await formatGeneratedJson(STYLES, outputPath)
+//   );
+// }
+
+async function buildStylePublicIndex(
+  styleName: string,
+  siteRegistryUrl: string
+) {
+  const registryRoot = getRegistryRoot(styleName);
+
+  const { registry: importedRegistry } = await import(
+    `../${registryRoot}/registry.ts`
+  );
+
+  const parseResult = registrySchema.safeParse(importedRegistry);
+
+  if (!parseResult.success) {
+    console.error(`❌ Registry validation failed for ${styleName}:`);
+
+    console.error(parseResult.error.format());
+
+    throw new Error(`Invalid registry schema for ${styleName}`);
+  }
+
+  const registry = parseResult.data;
+
+  // The source registry defines both "index" and "style"
+  // using the same base style metadata.
+  const styleItem = registry.items.find((item) => item.name === "style");
+
+  if (!styleItem) {
+    throw new Error(`Missing "style" item in registry "${styleName}".`);
+  }
+
+  // Include actual UI components, not examples, internal items,
+  // hooks, or implementation details.
+  const componentItems = registry.items.filter(
+    (item) =>
+      item.type === "registry:ui" &&
+      item.name !== "index" &&
+      item.name !== "style" &&
+      normalizeRegistryFiles(item).length > 0
+  );
+
+  const dependencies = Array.from(
+    new Set([
+      ...(styleItem.registryDependencies ?? []).filter(
+        (dependency) =>
+          !dependency.startsWith("http://") &&
+          !dependency.startsWith("https://")
+      ),
+
+      ...componentItems.map(
+        (item) =>
+          `${siteRegistryUrl.replace(/\/+$/, "")}` +
+          `/r/styles/${styleName}/${item.name}.json`
+      ),
+    ])
+  );
+
+  const payload = {
+    ...styleItem,
+
+    name: styleName,
+
+    registryDependencies: dependencies,
+
+    files: [],
+  };
+
+  const outputPath = path.join(
+    process.cwd(),
+    "public",
+    "r",
+    "styles",
+    styleName,
+    "index.json"
+  );
+
+  await fs.mkdir(path.dirname(outputPath), {
+    recursive: true,
+  });
+
+  await writeIfChanged(
+    outputPath,
+    await formatGeneratedJson(payload, outputPath)
+  );
+}
+
+async function buildStylesCatalog() {
+  const outputPath = path.join(
+    process.cwd(),
+    "public",
+    "r",
+    "styles",
+    "index.json"
+  );
+
+  await fs.mkdir(path.dirname(outputPath), {
+    recursive: true,
+  });
+
+  await writeIfChanged(
+    outputPath,
+    await formatGeneratedJson(STYLES, outputPath)
+  );
+}
+
+async function getImplementedStyleNames(
+  bases: Base[],
+  styles: Style[]
+): Promise<string[]> {
+  const combinations = bases.flatMap((base) =>
+    styles.map((style) => ({
+      base,
+      style,
+      styleName: `${base.name}-${style.name}`,
+    }))
+  );
+
+  const results = await Promise.all(
+    combinations.map(async ({ base, style, styleName }) => {
+      const registryPath = path.join(
+        process.cwd(),
+        "registry",
+        "bases",
+        base.name,
+        "styles",
+        style.name,
+        "registry.ts"
+      );
+
+      try {
+        await fs.access(registryPath);
+        return styleName;
+      } catch {
+        return null;
+      }
+    })
+  );
+
+  return results.filter((styleName): styleName is string => styleName !== null);
+}
+
+const styleNames = await getImplementedStyleNames(BASES, STYLES);
+
+async function buildRegistry2() {
+  console.log("🚀 Building registry...");
+
+  await buildBases(BASES);
+
+  await buildBasesStylesIndex(BASES, STYLES);
+
+  const styleNames = BASES.flatMap((base) =>
+    STYLES.map((style) => `${base.name}-${style.name}`)
+  );
+
+  await Promise.all(
+    styleNames.map(async (styleName) => {
+      await buildRegistryJsonFile(styleName);
+      await buildStyleComponentJsonFiles(styleName);
+    })
+  );
+
+  console.log("✅ Registry build complete!");
+}
+
+// async function buildRegistry2() {
+//   console.log("🚀 Building registry...");
+
+//   // 1. Build each implemented base/style combination.
+//   await buildBases(BASES);
+
+//   // 2. Generate the application-side index and lazy component shards.
+//   await buildBasesStylesIndex(BASES, STYLES);
+
+//   // 3. Build public registry JSON for implemented combinations.
+//   const styleNames = await getImplementedStyleNames(BASES, STYLES);
+
+//   const siteRegistryUrl = (
+//     process.env.NEXT_PUBLIC_SITE_URL ?? "https://shadcnmarketplace.com"
+//   ).replace(/\/+$/, "");
+
+//   await runWithConcurrency(
+//     styleNames,
+//     STYLE_BUILD_CONCURRENCY,
+//     async (styleName) => {
+//       console.log(`   📦 Public registry: ${styleName}`);
+
+//       // Preserve the complete registry JSON.
+//       await buildRegistryJsonFile(styleName);
+
+//       // Generate individual component JSON files.
+//       await buildStyleComponentJsonFiles(styleName);
+
+//       // Generate the style installation manifest.
+//       await buildStylePublicIndex(styleName, siteRegistryUrl);
+//     }
+//   );
+
+//   // 4. Generate the style catalog.
+//   await buildStylesCatalog();
+
+//   console.log("✅ Registry build complete!");
+// }
+
+// async function buildRegistry2() {
+//   console.log("🚀 Building registry...");
+
+//   // 1. Prepare temporary registries and copy source files.
+//   await buildBases(BASES);
+
+//   // 2. Generate the application-side registry index and component shards.
+//   await buildBasesStylesIndex(BASES, STYLES);
+
+//   // 3. Resolve the public registry origin.
+//   const siteRegistryUrl =
+//     process.env.NEXT_PUBLIC_SITE_URL ?? "https://shadcnmarketplace.com";
+
+//   // 4. Find combinations that actually have a source registry.
+//   const styleNames = await getImplementedStyleNames(BASES, STYLES);
+
+//   // 5. Generate the complete public registry for each combination.
+//   await runWithConcurrency(
+//     styleNames,
+//     STYLE_BUILD_CONCURRENCY,
+//     async (styleName) => {
+//       // Preserve the existing registry format.
+//       await buildRegistryJsonFile(styleName);
+
+//       // Generate individual component JSON files and the style manifest.
+//       await buildStylePublicRegistry(styleName, siteRegistryUrl);
+//     }
+//   );
+
+//   // 6. Generate the style catalog.
+//   await buildStylesCatalog();
+
+//   // 7. Generate the general registry index if required.
+//   // await buildIndex();
+
+//   console.log("✅ Registry build complete!");
+// }
+
+// async function buildRegistry2() {
+//   console.log("🚀 Building registry...");
+
+//   // 1. Build each implemented base/style combination.
+//   await buildBases(BASES);
+
+//   // 2. Generate the application-side base/style registry index
+//   //    and component shards.
+//   await buildBasesStylesIndex(BASES, STYLES);
+
+//   // 3. Determine the public registry URL.
+//   const siteRegistryUrl =
+//     process.env.NEXT_PUBLIC_SITE_URL ?? "https://shadcnmarketplace.com";
+
+//   // 4. Build the complete public registry for each base/style.
+//   const styleNames = BASES.flatMap((base) =>
+//     STYLES.map((style) => `${base.name}-${style.name}`)
+//   );
+
+//   await runWithConcurrency(
+//     styleNames,
+//     STYLE_BUILD_CONCURRENCY,
+//     async (styleName) => {
+//       await buildRegistryJsonFile(styleName);
+
+//       await buildStylePublicRegistry(styleName, siteRegistryUrl);
+//     }
+//   );
+
+//   await buildStylesCatalog();
+
+//   // await runWithConcurrency(
+//   //   styleNames,
+//   //   STYLE_BUILD_CONCURRENCY,
+//   //   async (styleName) => {
+//   //     // Generate the existing registry.json first.
+//   //     await buildRegistryJsonFile(styleName);
+
+//   //     // Then generate index.json and individual item JSON files.
+//   //     await buildStylePublicRegistry(styleName, siteRegistryUrl);
+//   //   }
+//   // );
+
+//   console.log("✅ Registry build complete!");
+// }
+
+// async function buildRegistry2() {
+//   console.log("🚀 Building registry...");
+
+//   // 1. Build each base/style combination.
+//   await buildBases(BASES);
+
+//   // 2. Generate the base/style registry index.
+//   await buildBasesStylesIndex(BASES, STYLES);
+
+//   // 3. Generate registry JSON files for each base/style combination.
+//   const styleNames = BASES.flatMap((base) =>
+//     STYLES.map((style) => `${base.name}-${style.name}`)
+//   );
+
+//   await Promise.all(
+//     styleNames.map((styleName) => buildRegistryJsonFile(styleName))
+//   );
+
+//   console.log("✅ Registry build complete!");
+// }
+
 try {
   const totalStart = performance.now();
   const options = parseBuildOptions(process.argv.slice(2));
-  await buildBasesStylesIndex(Array.from(BASES), Array.from(STYLES));
+
+  buildRegistry2();
+
+  //  await buildBasesStylesIndex(Array.from(BASES), Array.from(STYLES));
 
   // if (isFullBuild(options)) {
   //   await runFullBuild();
@@ -1078,9 +1573,9 @@ async function buildBasesStylesIndex(bases: Base[], styles: Style[]) {
         if (componentPath) {
           shard.entries += `
             "${item.name}": ${lazyComponentExpression(
-            componentPath,
-            item.name
-          )},
+              componentPath,
+              item.name
+            )},
           `;
 
           shard.names.push(item.name);
@@ -1224,6 +1719,7 @@ async function buildBasesStylesIndex(bases: Base[], styles: Style[]) {
 //   );
 // }
 
+/*
 async function buildBases(bases: Base[], targetStyleNames?: Set<string>) {
   // For targeted builds, only load bases that contribute a requested
   // combination. Otherwise a single-base target (e.g. --style base-nova) would
@@ -1403,6 +1899,156 @@ async function buildBases(bases: Base[], targetStyleNames?: Set<string>) {
   );
 }
 
+*/
+
+async function buildBases(bases: Base[], targetStyleNames?: Set<string>) {
+  // Only process base/style combinations explicitly requested.
+  const combinations = bases.flatMap((base) =>
+    STYLES.filter((style) => {
+      const styleName = `${base.name}-${style.name}`;
+      return !targetStyleNames || targetStyleNames.has(styleName);
+    }).map((style) => ({
+      base,
+      style,
+      styleName: `${base.name}-${style.name}`,
+    }))
+  );
+
+  await runWithConcurrency(
+    combinations,
+    STYLE_BUILD_CONCURRENCY,
+    async ({ base, style, styleName }) => {
+      const styleRegistryPath = `registry/bases/${base.name}/styles/${style.name}/registry.ts`;
+
+      let importedRegistry: unknown;
+
+      try {
+        const { registry } = await import(`../${styleRegistryPath}`);
+
+        importedRegistry = registry;
+      } catch (error) {
+        // This base/style combination may not be implemented.
+        if (
+          error instanceof Error &&
+          (error.message.includes("Cannot find module") ||
+            error.message.includes("Failed to resolve") ||
+            error.message.includes("ERR_MODULE_NOT_FOUND"))
+        ) {
+          console.log(`   ⏭️  ${styleName} (no style registry)`);
+          return;
+        }
+
+        throw error;
+      }
+
+      const parseResult = registrySchema.safeParse(importedRegistry);
+
+      if (!parseResult.success) {
+        console.error(
+          `❌ Registry validation failed for ${base.name}/${style.name}:`
+        );
+        console.error(parseResult.error.format());
+
+        throw new Error(
+          `Invalid registry schema for ${base.name}/${style.name}`
+        );
+      }
+
+      const registry = parseResult.data;
+
+      const registryItems = registry.items.filter(
+        (item) => item.type !== "registry:internal"
+      );
+
+      // Read files from the style-specific directory. The paths in the
+      // registry should be relative to registry/bases/<base>/styles/<style>.
+      const styleSourceRoot = path.join(
+        process.cwd(),
+        "registry",
+        "bases",
+        base.name,
+        "styles",
+        style.name
+      );
+
+      const filesToBuild = registryItems.flatMap((item) =>
+        normalizeRegistryFiles(item)
+      );
+
+      const sourceFilePaths = Array.from(
+        new Set(filesToBuild.map((file) => file.path))
+      );
+
+      const sourceFiles = new Map(
+        await Promise.all(
+          sourceFilePaths.map(
+            async (filePath): Promise<readonly [string, string]> => {
+              const normalizedPath = filePath.replace(
+                `registry/bases/${base.name}/styles/${style.name}/`,
+                ""
+              );
+
+              const absolutePath = path.join(styleSourceRoot, normalizedPath);
+
+              return [
+                filePath,
+                await fs.readFile(absolutePath, "utf8"),
+              ] as const;
+            }
+          )
+        )
+      );
+
+      const styleOutputDir = getTemporaryRegistryRoot(styleName);
+
+      console.log(`   ✅ ${styleName}...`);
+
+      await rimraf(styleOutputDir);
+      await fs.mkdir(styleOutputDir, { recursive: true });
+
+      // Preserve the metadata from the style-specific registry.
+      const styleRegistry = {
+        ...registry,
+        items: registryItems,
+      };
+
+      await fs.writeFile(
+        path.join(styleOutputDir, "registry.ts"),
+        `export const registry = ${JSON.stringify(styleRegistry, null, 2)}\n`
+      );
+
+      // Copy the already-implemented style-specific component files.
+      // No CSS transformation is needed.
+      await runWithConcurrency(
+        filesToBuild,
+        FILE_BUILD_CONCURRENCY,
+        async (file) => {
+          const source = sourceFiles.get(file.path);
+
+          if (typeof source !== "string") {
+            throw new Error(
+              `Missing cached source for ${base.name}/${style.name}/${file.path}`
+            );
+          }
+
+          const normalizedPath = file.path.replace(
+            `registry/bases/${base.name}/styles/${style.name}/`,
+            ""
+          );
+
+          const outputPath = path.join(styleOutputDir, normalizedPath);
+
+          await fs.mkdir(path.dirname(outputPath), {
+            recursive: true,
+          });
+
+          await fs.writeFile(outputPath, source);
+        }
+      );
+    }
+  );
+}
+
 async function buildExamplesIndex() {
   const examplesDir = path.join(process.cwd(), "examples");
 
@@ -1454,9 +2100,9 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {`;
 
       shard.entries += `
   "${name}": ${lazyComponentExpression(
-        `@/examples/${baseName}/${stripFileExtension(file)}`,
-        name
-      )},`;
+    `@/examples/${baseName}/${stripFileExtension(file)}`,
+    name
+  )},`;
       shard.names.push(name);
     }
 
@@ -1618,6 +2264,7 @@ export const Index: Record<string, Record<string, any>> = {`;
   );
 }
 
+/*
 async function buildRegistryJsonFile(styleName: string) {
   const { registry: importedRegistry } = await import(
     `../registry/${styleName}/registry.ts`
@@ -1680,55 +2327,813 @@ async function buildRegistryJsonFile(styleName: string) {
   );
   await fs.writeFile(tempRegistryPath, fixedRegistryJson);
 }
+*/
 
-// Components import cn directly, so every item that uses it declares the
-// package. Projects initialized before cn existed rely on this to install it.
+// async function buildRegistryJsonFile(styleName: string) {
+//   const styleCombination = getStyleCombination(styleName);
+
+//   let importedRegistry: unknown;
+//   // let registryRoot: string;
+//   const registryRoot = getRegistryRoot(styleName);
+
+//   if (styleCombination) {
+//     const { base, style } = styleCombination;
+
+//     // registryRoot = `registry/bases/${base.name}/styles/${style.name}`;
+
+//     const { registry } = await import(`../${registryRoot}/registry.ts`);
+
+//     importedRegistry = registry;
+//   } else {
+//     // registryRoot = `registry/${styleName}`;
+
+//     const { registry } = await import(`../${registryRoot}/registry.ts`);
+
+//     importedRegistry = registry;
+//   }
+
+//   const parseResult = registrySchema.safeParse(importedRegistry);
+
+//   if (!parseResult.success) {
+//     console.error(`❌ Registry validation failed for ${styleName}:`);
+//     console.error(parseResult.error.format());
+
+//     throw new Error(`Invalid registry schema for ${styleName}`);
+//   }
+
+//   const registry = parseResult.data;
+
+//   // Legacy registries don't author font items. Inject shared fonts so
+//   // the shadcn CLI generates font-*.json for those registries as well.
+//   const registryItems = styleCombination
+//     ? registry.items
+//     : [
+//         ...registry.items,
+//         ...fonts.filter(
+//           (font) => !registry.items.some((item) => item.name === font.name)
+//         ),
+//       ];
+
+//   const fixedRegistry = {
+//     ...registry,
+//     items: await Promise.all(
+//       registryItems.map(async (item) => {
+//         const files = normalizeRegistryFiles(item).map((file) => {
+//           const relativePath = file.path.replace(`${registryRoot}/`, "");
+
+//           return {
+//             ...file,
+//             path: `${registryRoot}/${relativePath}`,
+//           };
+//         });
+
+//         if (files.length === 0) {
+//           return item;
+//         }
+
+//         const dependencies = await getItemDependencies(item, files);
+
+//         return {
+//           ...item,
+//           files,
+//           ...(dependencies && { dependencies }),
+//         };
+//       })
+//     ),
+//   };
+
+//   const outputDir = path.join(process.cwd(), `public/r/styles/${styleName}`);
+
+//   await rimraf(outputDir);
+//   await fs.mkdir(outputDir, { recursive: true });
+
+//   const registryJsonPath = path.join(outputDir, "registry.json");
+
+//   const fixedRegistryJson = await formatGeneratedJson(
+//     fixedRegistry,
+//     registryJsonPath
+//   );
+
+//   await writeIfChanged(registryJsonPath, fixedRegistryJson);
+
+//   const tempRegistryPath = path.join(
+//     process.cwd(),
+//     `registry-${styleName}.json`
+//   );
+
+//   await fs.writeFile(tempRegistryPath, fixedRegistryJson);
+// }
+
+async function buildRegistryJsonFile(styleName: string) {
+  const registryRoot = getRegistryRoot(styleName);
+  const styleCombination = getStyleCombination(styleName);
+
+  const { registry: importedRegistry } = await import(
+    `../${registryRoot}/registry.ts`
+  );
+
+  const parseResult = registrySchema.safeParse(importedRegistry);
+
+  if (!parseResult.success) {
+    console.error(`❌ Registry validation failed for ${styleName}:`);
+
+    console.error(parseResult.error.format());
+
+    throw new Error(`Invalid registry schema for ${styleName}`);
+  }
+
+  const registry = parseResult.data;
+
+  // Legacy registries don't author font items. Inject shared fonts
+  // so those registries continue to expose font items.
+  const registryItems = getStyleCombination(styleName)
+    ? registry.items
+    : [
+        ...registry.items,
+        ...fonts.filter(
+          (font) => !registry.items.some((item) => item.name === font.name)
+        ),
+      ];
+
+  const styleNameForPrefix = styleCombination
+    ? styleCombination.style.name
+    : styleName;
+
+  // const stylePrefix = getStyleVariablesPrefix(styleNameForPrefix as Style);
+
+  // const stylePrefix = getStyleVariablesPrefix(
+  //   styleCombination ? styleCombination.style.name : styleName
+  // );
+
+  const stylePrefix = styleCombination
+    ? getStyleVariablesPrefix(styleCombination.style.name)
+    : getStyleVariablesPrefix(styleName);
+
+  const fixedRegistry = {
+    ...registry,
+
+    items: await Promise.all(
+      registryItems.map(async (item) => {
+        const normalizedFiles = normalizeRegistryFiles(item).map((file) => ({
+          ...file,
+          path: normalizeRegistryFilePath(file.path, registryRoot),
+        }));
+
+        if (normalizedFiles.length === 0) {
+          return item;
+        }
+
+        const dependencies = await getItemDependencies(item, normalizedFiles);
+
+        const files = await Promise.all(
+          normalizedFiles.map(async (file) => {
+            const sourcePath = path.join(process.cwd(), file.path);
+
+            let content: string;
+
+            try {
+              content = await fs.readFile(sourcePath, "utf8");
+            } catch (error) {
+              throw new Error(
+                `Failed to read registry source file "${file.path}" ` +
+                  `for item "${item.name}" in "${styleName}".`,
+                { cause: error }
+              );
+            }
+
+            return {
+              ...file,
+              content: transformRegistryContent(content, stylePrefix),
+            };
+          })
+        );
+
+        return {
+          ...item,
+          files,
+          ...(dependencies && { dependencies }),
+        };
+      })
+    ),
+  };
+
+  // const fixedRegistry = {
+  //   ...registry,
+
+  //   items: await Promise.all(
+  //     registryItems.map(async (item) => {
+  //       // const files = normalizeRegistryFiles(item).map((file) => {
+  //       //   const normalizedPath = normalizeRegistryFilePath(
+  //       //     file.path,
+  //       //     registryRoot
+  //       //   );
+
+  //       //   return {
+  //       //     ...file,
+
+  //       //     // Preserve the source registry path so the CLI can locate
+  //       //     // the file when it installs the component.
+  //       //     path: normalizedPath,
+
+  //       //     // Transform only the content included in the public registry.
+  //       //     content:
+  //       //       typeof file.content === "string"
+  //       //         ? transformRegistryContent(file.content, stylePrefix)
+  //       //         : file.content,
+  //       //   };
+  //       // });
+
+  //       const files = normalizeRegistryFiles(item).map((file) => ({
+  //         ...file,
+  //         path: normalizeRegistryFilePath(file.path, registryRoot),
+  //       }));
+
+  //       if (files.length === 0) {
+  //         return item;
+  //       }
+
+  //       const dependencies = await getItemDependencies(item, files);
+
+  //       return {
+  //         ...item,
+  //         files,
+  //         ...(dependencies && { dependencies }),
+  //       };
+  //     })
+  //   ),
+  // };
+
+  // const fixedRegistry = {
+  //   ...registry,
+
+  //   items: await Promise.all(
+  //     registryItems.map(async (item) => {
+  //       const files = normalizeRegistryFiles(item).map((file) => ({
+  //         ...file,
+
+  //         path: normalizeRegistryFilePath(file.path, registryRoot),
+  //       }));
+
+  //       if (files.length === 0) {
+  //         return item;
+  //       }
+
+  //       const dependencies = await getItemDependencies(item, files);
+
+  //       return {
+  //         ...item,
+  //         files,
+  //         ...(dependencies && { dependencies }),
+  //       };
+  //     })
+  //   ),
+  // };
+
+  const outputDir = path.join(
+    process.cwd(),
+    "public",
+    "r",
+    "styles",
+    styleName
+  );
+
+  await fs.mkdir(outputDir, {
+    recursive: true,
+  });
+
+  const registryJsonPath = path.join(outputDir, "registry.json");
+
+  const fixedRegistryJson = await formatGeneratedJson(
+    fixedRegistry,
+    registryJsonPath
+  );
+
+  await writeIfChanged(registryJsonPath, fixedRegistryJson);
+
+  const tempRegistryPath = path.join(
+    process.cwd(),
+    `registry-${styleName}.json`
+  );
+
+  await fs.writeFile(tempRegistryPath, fixedRegistryJson);
+}
+
+// ----------------------------------------------------------------------------
+// Build public/r/styles/[styleName]/[itemName].json.
+// ----------------------------------------------------------------------------
+// async function buildStyleComponentJsonFiles(
+//   styleName: string,
+//   registryRoot: string,
+//   registry: Awaited<ReturnType<typeof registrySchema.parse>>
+// ) {
+//   const outputDir = path.join(
+//     process.cwd(),
+//     "public",
+//     "r",
+//     "styles",
+//     styleName
+//   );
+
+//   await fs.mkdir(outputDir, { recursive: true });
+
+//   const registryItems = registry.items.filter(
+//     (item) =>
+//       item.type !== "registry:internal" &&
+//       item.name !== "index" &&
+//       item.name !== "style"
+//   );
+
+//   await runWithConcurrency(
+//     registryItems,
+//     FILE_BUILD_CONCURRENCY,
+//     async (item) => {
+//       const normalizedFiles = normalizeRegistryFiles(item);
+
+//       const files = await Promise.all(
+//         normalizedFiles.map(async (file) => {
+//           const normalizedPath = normalizeRegistryFilePath(
+//             file.path,
+//             registryRoot
+//           );
+
+//           const absolutePath = path.resolve(process.cwd(), normalizedPath);
+
+//           const sourceRoot = path.resolve(process.cwd(), registryRoot);
+
+//           // Prevent registry paths from escaping their source directory.
+//           if (
+//             absolutePath !== sourceRoot &&
+//             !absolutePath.startsWith(`${sourceRoot}${path.sep}`)
+//           ) {
+//             throw new Error(
+//               `Registry file escapes source directory: ${file.path}`
+//             );
+//           }
+
+//           let content: string;
+
+//           try {
+//             content = await fs.readFile(absolutePath, "utf8");
+//           } catch (error) {
+//             throw new Error(
+//               `Failed to read source file for ${styleName}/${item.name}: ${normalizedPath}`,
+//               { cause: error }
+//             );
+//           }
+
+//           // Keep paths relative to the base/style registry root.
+//           const publicPath = path.relative(registryRoot, normalizedPath);
+
+//           return {
+//             path: publicPath.split(path.sep).join("/"),
+//             type: file.type,
+//             content,
+//             target: file.target ?? "",
+//           };
+//         })
+//       );
+
+//       const filesWithDependencies = files.length
+//         ? await getItemDependencies(
+//             item,
+//             files.map((file) => ({
+//               ...file,
+//               path: normalizeRegistryFilePath(file.path, registryRoot),
+//             }))
+//           )
+//         : undefined;
+
+//       const payload = {
+//         $schema: "https://ui.shadcn.com/schema/registry-item.json",
+//         author: "shadcn marketplace (https://shadcnmarketplace.com)",
+//         ...item,
+//         files,
+//         ...(filesWithDependencies && {
+//           dependencies: filesWithDependencies,
+//         }),
+//       };
+
+//       const result = registryItemSchema.safeParse(payload);
+
+//       if (!result.success) {
+//         console.error(`❌ Invalid registry item ${styleName}/${item.name}:`);
+//         console.error(result.error.format());
+
+//         throw new Error(
+//           `Registry item validation failed: ${styleName}/${item.name}`
+//         );
+//       }
+
+//       const outputPath = path.join(outputDir, `${item.name}.json`);
+
+//       await writeIfChanged(
+//         outputPath,
+//         await formatGeneratedJson(result.data, outputPath)
+//       );
+//     }
+//   );
+// }
+
+// async function buildStyleComponentJsonFiles(styleName: string) {
+//   const registryRoot = getRegistryRoot(styleName);
+
+//   const { registry: importedRegistry } = await import(
+//     `../${registryRoot}/registry.ts`
+//   );
+
+//   const parseResult = registrySchema.safeParse(importedRegistry);
+
+//   if (!parseResult.success) {
+//     console.error(`❌ Registry validation failed for ${styleName}:`);
+
+//     console.error(parseResult.error.format());
+
+//     throw new Error(`Invalid registry schema for ${styleName}`);
+//   }
+
+//   const registry = parseResult.data;
+
+//   const outputDir = path.join(
+//     process.cwd(),
+//     "public",
+//     "r",
+//     "styles",
+//     styleName
+//   );
+
+//   await fs.mkdir(outputDir, {
+//     recursive: true,
+//   });
+
+//   // Skip the style metadata items because index.json is generated
+//   // separately and registry.json already contains the full registry.
+//   const items = registry.items.filter(
+//     (item) =>
+//       item.type !== "registry:internal" &&
+//       item.type !== "registry:theme" &&
+//       item.type !== "registry:style" &&
+//       item.name !== "index" &&
+//       item.name !== "style"
+//   );
+
+//   await runWithConcurrency(items, FILE_BUILD_CONCURRENCY, async (item) => {
+//     const normalizedFiles = normalizeRegistryFiles(item).map((file) => ({
+//       ...file,
+
+//       path: normalizeRegistryFilePath(file.path, registryRoot),
+//     }));
+
+//     const dependencies = await getItemDependencies(item, normalizedFiles);
+
+//     const files = await Promise.all(
+//       normalizedFiles.map(async (file) => {
+//         const sourcePath = path.join(process.cwd(), file.path);
+
+//         let content: string;
+
+//         try {
+//           content = await fs.readFile(sourcePath, "utf8");
+//         } catch (error) {
+//           throw new Error(
+//             `Failed to read registry source file "${file.path}" ` +
+//               `for item "${item.name}" in "${styleName}".`,
+//             { cause: error }
+//           );
+//         }
+
+//         // Keep public paths relative to the registry root.
+//         const relativePath = path.posix.relative(registryRoot, file.path);
+
+//         return {
+//           path: relativePath,
+//           content,
+//           type: file.type,
+//           target: file.target ?? "",
+//         };
+//       })
+//     );
+
+//     const payload = {
+//       $schema: "https://ui.shadcn.com/schema/registry-item.json",
+
+//       author: "shadcn marketplace (https://shadcnmarketplace.com)",
+
+//       ...item,
+
+//       ...(dependencies && { dependencies }),
+
+//       files,
+//     };
+
+//     const outputPath = path.join(outputDir, `${item.name}.json`);
+
+//     const formatted = await formatGeneratedJson(payload, outputPath);
+
+//     await writeIfChanged(outputPath, formatted);
+//   });
+// }
+
+async function buildStyleComponentJsonFiles(styleName: string) {
+  const registryRoot = getRegistryRoot(styleName);
+  const styleCombination = getStyleCombination(styleName);
+
+  const { registry: importedRegistry } = await import(
+    `../${registryRoot}/registry.ts`
+  );
+
+  const parseResult = registrySchema.safeParse(importedRegistry);
+
+  if (!parseResult.success) {
+    console.error(`❌ Registry validation failed for ${styleName}:`);
+    console.error(parseResult.error.format());
+
+    throw new Error(`Invalid registry schema for ${styleName}`);
+  }
+
+  const registry = parseResult.data;
+
+  const stylePrefix = getStyleVariablesPrefix(
+    (styleCombination?.style.name ?? styleName) as Style["name"]
+  );
+
+  const outputDir = path.join(
+    process.cwd(),
+    "public",
+    "r",
+    "styles",
+    styleName
+  );
+
+  await fs.mkdir(outputDir, {
+    recursive: true,
+  });
+
+  // These items are represented by index.json or registry.json.
+  // They should not be generated as individual component files.
+  const items = registry.items.filter(
+    (item) =>
+      item.type !== "registry:internal" &&
+      item.type !== "registry:theme" &&
+      item.type !== "registry:style" &&
+      item.name !== "index" &&
+      item.name !== "style"
+  );
+
+  await runWithConcurrency(items, FILE_BUILD_CONCURRENCY, async (item) => {
+    const normalizedFiles = normalizeRegistryFiles(item).map((file) => ({
+      ...file,
+      path: normalizeRegistryFilePath(file.path, registryRoot),
+    }));
+
+    const dependencies = await getItemDependencies(item, normalizedFiles);
+
+    const files = await Promise.all(
+      normalizedFiles.map(async (file) => {
+        const sourcePath = path.join(process.cwd(), file.path);
+
+        let content: string;
+
+        try {
+          content = await fs.readFile(sourcePath, "utf8");
+        } catch (error) {
+          throw new Error(
+            `Failed to read registry source file "${file.path}" ` +
+              `for item "${item.name}" in "${styleName}".`,
+            { cause: error }
+          );
+        }
+
+        // Transform only the content exposed by the public registry.
+        // The original registry source remains unchanged.
+        content = transformRegistryContent(content, stylePrefix);
+
+        // Keep paths relative to the registry root.
+        const relativePath = path.posix.relative(
+          registryRoot.replaceAll("\\", "/"),
+          file.path.replaceAll("\\", "/")
+        );
+
+        return {
+          path: relativePath,
+          content,
+          type: file.type,
+          target: file.target ?? "",
+        };
+      })
+    );
+
+    const payload = {
+      $schema: "https://ui.shadcn.com/schema/registry-item.json",
+      author: "shadcn marketplace (https://shadcnmarketplace.com)",
+      ...item,
+      ...(dependencies && { dependencies }),
+      files,
+    };
+
+    const outputPath = path.join(outputDir, `${item.name}.json`);
+
+    const formatted = await formatGeneratedJson(payload, outputPath);
+
+    await writeIfChanged(outputPath, formatted);
+  });
+}
+
+// ----------------------------------------------------------------------------
+// Build public/r/styles/[styleName]/index.json.
+// ----------------------------------------------------------------------------
+async function buildStyleIndexJson(
+  styleName: string,
+  registry: Awaited<ReturnType<typeof registrySchema.parse>>,
+  siteRegistryUrl: string
+) {
+  const outputDir = path.join(
+    process.cwd(),
+    "public",
+    "r",
+    "styles",
+    styleName
+  );
+
+  await fs.mkdir(outputDir, { recursive: true });
+
+  // The "style" item contains the common CSS, dependencies,
+  // devDependencies, and other style installation metadata.
+  const styleItem = registry.items.find((item) => item.name === "style");
+
+  if (!styleItem) {
+    throw new Error(`Missing "style" item in registry: ${styleName}`);
+  }
+
+  // Match the old behavior: the style index depends on its UI
+  // components, not every example, hook, or internal registry item.
+  const uiItems = registry.items.filter(
+    (item) =>
+      item.type === "registry:ui" &&
+      item.name !== "index" &&
+      item.name !== "style"
+  );
+
+  const registryDependencies = [
+    ...(styleItem.registryDependencies ?? []),
+    ...uiItems.map(
+      (item) =>
+        `${siteRegistryUrl.replace(/\/$/, "")}/r/styles/${styleName}/${item.name}.json`
+    ),
+  ];
+
+  const payload = {
+    ...styleItem,
+    name: styleName,
+    type: "registry:style" as const,
+    registryDependencies: [...new Set(registryDependencies)],
+    files: [],
+  };
+
+  const result = registryItemSchema.safeParse(payload);
+
+  if (!result.success) {
+    console.error(`❌ Invalid style index for ${styleName}:`);
+    console.error(result.error.format());
+
+    throw new Error(`Style index validation failed: ${styleName}`);
+  }
+
+  const outputPath = path.join(outputDir, "index.json");
+
+  await writeIfChanged(
+    outputPath,
+    await formatGeneratedJson(result.data, outputPath)
+  );
+}
+
+// ----------------------------------------------------------------------------
+// Build the legacy-compatible public files for a base/style combination.
+// Keeps registry.json and additionally generates index.json and item JSONs.
+// ----------------------------------------------------------------------------
+async function buildStylePublicRegistry(
+  styleName: string,
+  siteRegistryUrl: string
+) {
+  const registryRoot = getRegistryRoot(styleName);
+
+  const { registry: importedRegistry } = await import(
+    `../${registryRoot}/registry.ts`
+  );
+
+  const parseResult = registrySchema.safeParse(importedRegistry);
+
+  if (!parseResult.success) {
+    console.error(`❌ Registry validation failed for ${styleName}:`);
+    console.error(parseResult.error.format());
+
+    throw new Error(`Invalid registry schema for ${styleName}`);
+  }
+
+  const registry = parseResult.data;
+
+  await buildStyleComponentJsonFiles(styleName, registryRoot, registry);
+
+  await buildStyleIndexJson(styleName, registry, siteRegistryUrl);
+}
+
+// // Components import cn directly, so every item that uses it declares the
+// // package. Projects initialized before cn existed rely on this to install it.
+// async function getItemDependencies(
+//   item: RegistryItem,
+//   files: Array<{ path: string }>
+// ) {
+//   const dependencies = item.dependencies ?? [];
+//   if (dependencies.includes("cn")) {
+//     return dependencies;
+//   }
+
+//   for (const file of files) {
+//     const content = await readFileIfExists(path.join(process.cwd(), file.path));
+//     if (content && /from ["']cn["']/.test(content)) {
+//       return ["cn", ...dependencies];
+//     }
+//   }
+
+//   return item.dependencies;
+// }
+
+// async function buildRegistry(styleName: string) {
+//   const outputPath = `public/r/styles/${styleName}`;
+//   const registryPath = `registry-${styleName}.json`;
+
+//   await new Promise<void>((resolve, reject) => {
+//     const proc = spawn(
+//       "node",
+//       [
+//         "../../packages/shadcn/dist/index.js",
+//         "build",
+//         registryPath,
+//         "--output",
+//         outputPath,
+//       ],
+//       { cwd: process.cwd(), stdio: "pipe" }
+//     );
+//     let stderr = "";
+//     proc.stderr?.on("data", (data) => (stderr += data));
+//     proc.on("close", (code) => {
+//       if (code !== 0) {
+//         reject(new Error(`Process exited with code ${code}: ${stderr}`));
+//       } else {
+//         resolve();
+//       }
+//     });
+//     proc.on("error", reject);
+//   });
+// }
+
+// Components that import cn directly must declare it as a dependency.
+// Older projects may rely on this declaration to install cn.
+// async function getItemDependencies(
+//   item: RegistryItem,
+//   files: Array<{ path: string }>
+// ) {
+//   const dependencies = item.dependencies ?? [];
+
+//   if (dependencies.includes("cn")) {
+//     return dependencies;
+//   }
+
+//   for (const file of files) {
+//     const content = await readFileIfExists(path.join(process.cwd(), file.path));
+
+//     if (content && /\bfrom\s+["']cn["']/.test(content)) {
+//       return ["cn", ...dependencies];
+//     }
+//   }
+
+//   return item.dependencies;
+// }
+
 async function getItemDependencies(
   item: RegistryItem,
-  files: Array<{ path: string }>
+  files: Array<{
+    path: string;
+    content?: string;
+  }>
 ) {
   const dependencies = item.dependencies ?? [];
+
   if (dependencies.includes("cn")) {
     return dependencies;
   }
 
   for (const file of files) {
-    const content = await readFileIfExists(path.join(process.cwd(), file.path));
+    const content =
+      typeof file.content === "string"
+        ? file.content
+        : await readFileIfExists(path.join(process.cwd(), file.path));
+
     if (content && /from ["']cn["']/.test(content)) {
       return ["cn", ...dependencies];
     }
   }
 
   return item.dependencies;
-}
-
-async function buildRegistry(styleName: string) {
-  const outputPath = `public/r/styles/${styleName}`;
-  const registryPath = `registry-${styleName}.json`;
-
-  await new Promise<void>((resolve, reject) => {
-    const proc = spawn(
-      "node",
-      [
-        "../../packages/shadcn/dist/index.js",
-        "build",
-        registryPath,
-        "--output",
-        outputPath,
-      ],
-      { cwd: process.cwd(), stdio: "pipe" }
-    );
-    let stderr = "";
-    proc.stderr?.on("data", (data) => (stderr += data));
-    proc.on("close", (code) => {
-      if (code !== 0) {
-        reject(new Error(`Process exited with code ${code}: ${stderr}`));
-      } else {
-        resolve();
-      }
-    });
-    proc.on("error", reject);
-  });
 }
 
 async function buildBlocksIndex() {
@@ -1927,6 +3332,7 @@ async function buildRtlStyles(targetStyleNames?: Set<string>) {
   );
 }
 
+/*
 async function buildIndex() {
   const baseUiRegistries = await Promise.all(
     Array.from(BASES).map(async (base) => {
@@ -1966,6 +3372,89 @@ async function buildIndex() {
   );
 
   const outputPath = path.join(process.cwd(), "public/r/index.json");
+  await writeIfChanged(
+    outputPath,
+    await formatGeneratedJson(index, outputPath)
+  );
+}
+*/
+
+async function buildIndex() {
+  const registryRoot = path.join(process.cwd(), "registry/bases");
+
+  const registryGroups = await Promise.all(
+    ["base", "styles"].map(async (group) => {
+      const groupPath = path.join(registryRoot, group);
+
+      const styles = await fs.readdir(groupPath, {
+        withFileTypes: true,
+      });
+
+      return Promise.all(
+        styles
+          .filter((style) => style.isDirectory())
+          .map(async (style) => {
+            const registryPath = path.join(
+              groupPath,
+              style.name,
+              "ui/_registry.ts"
+            );
+
+            const { ui } = await import(registryPath);
+
+            return {
+              baseName: group,
+              styleName: style.name,
+              items: ui as RegistryItem[],
+            };
+          })
+      );
+    })
+  );
+
+  type IndexItem = Omit<RegistryItem, "meta"> & {
+    meta?: { links?: Record<string, RegistryItem["meta"]> };
+  };
+
+  const componentMap = new Map<string, IndexItem>();
+
+  for (const registries of registryGroups) {
+    for (const { baseName, styleName, items } of registries) {
+      const registryKey = `${baseName}/${styleName}`;
+
+      for (const item of items) {
+        if (!componentMap.has(item.name)) {
+          const { meta, ...rest } = item;
+
+          componentMap.set(item.name, {
+            ...rest,
+            ...(meta?.links
+              ? {
+                  meta: {
+                    links: {
+                      [registryKey]: meta.links,
+                    },
+                  },
+                }
+              : {}),
+          });
+        } else if (item.meta?.links) {
+          const existing = componentMap.get(item.name)!;
+
+          existing.meta ??= {};
+          existing.meta.links ??= {};
+          existing.meta.links[registryKey] = item.meta.links;
+        }
+      }
+    }
+  }
+
+  const index = Array.from(componentMap.values()).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
+  const outputPath = path.join(process.cwd(), "public/r/index.json");
+
   await writeIfChanged(
     outputPath,
     await formatGeneratedJson(index, outputPath)

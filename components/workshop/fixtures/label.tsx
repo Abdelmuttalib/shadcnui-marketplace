@@ -1,7 +1,7 @@
 "use client";
 
 import * as Default from "@/registry/bases/base/default/ui/label";
-import * as V4 from "@/registry/bases/base/styles/default-v4/ui/label";
+import * as V4 from "@/registry/bases/base/styles/default/ui/label";
 
 import type { FixtureSide } from "./types";
 

@@ -8,12 +8,12 @@ import { Button } from "@/registry/bases/base/styles/material/ui/button";
 import { CheckIcon, CopyIcon } from "lucide-react";
 
 const codeBlockVariants = cva(
-  "group/code-block relative flex w-full min-w-0 flex-col overflow-hidden rounded-material-lg text-sm has-[>[data-slot=code-block-content]:focus-visible]:ring-3 has-[>[data-slot=code-block-content]:focus-visible]:ring-material-ring/50 data-[size=sm]:text-xs",
+  "group/code-block relative flex w-full min-w-0 flex-col overflow-hidden rounded-material-lg text-sm has-[>[data-slot=code-block-content]:focus-visible]:ring-1 has-[>[data-slot=code-block-content]:focus-visible]:ring-material-ring/50 data-[size=sm]:text-xs",
   {
     variants: {
       variant: {
         default:
-          "border border-material-input text-material-foreground has-[>[data-slot=code-block-content]:focus-visible]:border-material-ring dark:bg-material-input/30",
+          "border border-material-input text-material-foreground has-[>[data-slot=code-block-content]:focus-visible]:border-material-ring ",
         destructive:
           "border border-material-destructive/30 text-material-destructive dark:border-material-destructive/40",
       },

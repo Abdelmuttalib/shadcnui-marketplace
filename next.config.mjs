@@ -20,7 +20,7 @@ const nextConfig = {
   transpilePackages: ["shiki"],
 
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["images.unsplash.com", "avatar.vercel.sh"],
   },
 };
 

@@ -21,7 +21,8 @@
     "registry:health:prepare": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/monitor-registries.mts --phase prepare",
     "registry:health:check": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/monitor-registries.mts --phase check",
     "registry:health:publish": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/monitor-registries.mts --phase publish",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "reg:build": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts"
   },
   "dependencies": {
     "@ai-sdk/react": "4.0.0-canary.162",
@@ -112,6 +113,7 @@
     "rehype-highlight": "^7.0.2",
     "remark-gfm": "^4.0.1",
     "rimraf": "^6.0.1",
+    "server-only": "^0.0.1",
     "shadcn": "4.21.5",
     "sonner": "^2.0.8",
     "streamdown": "^2.7.0",

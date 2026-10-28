@@ -14,6 +14,7 @@ import { StylePaletteCommand } from "@/components/style-palette-command";
 import { Typography } from "@/components/ui/typography";
 import { StylesPreview } from "@/components/views/home/styles-preview";
 import { cn } from "@/lib/utils";
+import { LucidShowcaseComponents } from "@/registry/bases/base/lucid/lucid-showcase-components";
 
 export default function Home() {
   return (
@@ -156,7 +157,7 @@ export default function Home() {
                 <PageContainer>
                   <div className="space-y-2">
                     <PageTitle as={"h2"} className="">
-                      custom shadcn styles,
+                      shadcn styles,
                       <br /> inspired by popular design systems
                     </PageTitle>
                     <PageSubTitle className="max-w-2xl">

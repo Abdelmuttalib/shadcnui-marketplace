@@ -9,8 +9,8 @@ import { CatalystUI } from "@/registry/bases/base/catalyst/catalyst-hero";
 import { CatalystShowcaseComponents } from "@/registry/bases/base/catalyst/catalyst-showcase-components";
 import { DefaultUI } from "@/registry/bases/base/default/default-hero";
 import { DefaultShowcaseComponents } from "@/registry/bases/base/default/default-showcase-components";
-import { HeroUI as DefaultV4UI } from "@/registry/bases/base/styles/default-v4/hero";
-import { ShowcaseComponents as DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default-v4/showcase-components";
+import { HeroUI as DefaultV4UI } from "@/registry/bases/base/styles/default/hero";
+import { ShowcaseComponents as DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default/showcase-components";
 import { LibelleUI } from "@/registry/bases/base/libelle/libelle-hero";
 import { LibelleShowcaseComponents } from "@/registry/bases/base/libelle/libelle-showcase-components";
 import { LinearUI } from "@/registry/bases/base/linear/linear-hero";
@@ -43,9 +43,8 @@ const DEV_STYLES_PATH: Record<StyleType, string> = {
   snow: "http://localhost:3000",
   neon: "http://localhost:3000",
   libelle: "http://localhost:3000",
-  "default-v4": "http://localhost:3000",
-  "carbon-v4": "http://localhost:3000",
 };
+
 const PROD_STYLES_PATH: Record<StyleType, string> = {
   default: "https://shadcn-default.vercel.app",
   carbon: "https://shadcn-carbon.vercel.app",
@@ -59,8 +58,6 @@ const PROD_STYLES_PATH: Record<StyleType, string> = {
   snow: "https://shadcn-snow.vercel.app",
   neon: "https://shadcn-neon.vercel.app",
   libelle: "https://shadcn-libelle.vercel.app",
-  "default-v4": "https://shadcn-default-v4.vercel.app",
-  "carbon-v4": "https://shadcn-carbon-v4.vercel.app",
 };
 
 // NEXT_PUBLIC_NODE_ENV
@@ -84,9 +81,7 @@ export function getStylesPath(env: string) {
 
 type StyleType =
   | "default"
-  | "default-v4"
   | "carbon"
-  | "carbon-v4"
   | "catalyst"
   | "material"
   | "linear"
@@ -147,34 +142,10 @@ export const STYLES_DATA: Record<Style, StyleData> = {
     showcaseComponents: <DefaultShowcaseComponents />,
     hero: <DefaultUI />,
   },
-  "default-v4": {
-    name: "default-v4",
-    title: "Default v4",
-    description: "Isolated upstream shadcn ui collection in the dft namespace",
-    styleVariablePrefix: "dft",
-    styleSitePath: getStyleSitePath("default-v4"),
-    directoryName: "default-v4",
-    defaultPalette: "",
-    defaultRadius: "0.5rem",
-    showcaseComponents: <DefaultV4ShowcaseComponents />,
-    hero: <DefaultV4UI />,
-  },
-  "carbon-v4": {
-    name: "carbon-v4",
-    title: "Carbon v4",
-    description: "Isolated upstream shadcn ui collection in the cb namespace",
-    styleVariablePrefix: "cb",
-    styleSitePath: getStyleSitePath("carbon-v4"),
-    directoryName: "carbon-v4",
-    defaultPalette: "",
-    defaultRadius: "0rem",
-    showcaseComponents: <CarbonShowcaseComponents />,
-    hero: <CarbonUI />,
-  },
   carbon: {
     name: "carbon",
     title: "Carbon",
-    description: "Carbon IBM inspired design system style",
+    description: "Isolated upstream shadcn ui collection in the cb namespace",
     styleVariablePrefix: "cb",
     styleSitePath: getStyleSitePath("carbon"),
     directoryName: "carbon",

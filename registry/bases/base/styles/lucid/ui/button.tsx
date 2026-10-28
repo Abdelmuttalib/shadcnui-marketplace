@@ -3,20 +3,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-lucid-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-lucid-ring focus-visible:ring-3 focus-visible:ring-lucid-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-lucid-destructive aria-invalid:ring-3 aria-invalid:ring-lucid-destructive/20 dark:aria-invalid:border-lucid-destructive/50 dark:aria-invalid:ring-lucid-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 items-center border border-transparent justify-center rounded-lucid-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none outline-transparent select-none outline-offset-2 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-lucid-ring active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-lucid-destructive [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
         default:
           "bg-lucid-primary text-lucid-primary-foreground hover:bg-lucid-primary/80",
         outline:
-          "border-lucid-border bg-lucid-background shadow-xs hover:bg-lucid-muted hover:text-lucid-foreground aria-expanded:bg-lucid-muted aria-expanded:text-lucid-foreground dark:border-lucid-input dark:bg-lucid-input/30 dark:hover:bg-lucid-input/50",
+          "border-lucid-border bg-lucid-background shadow-xs hover:bg-lucid-primary hover:text-lucid-primary-foreground aria-expanded:bg-lucid-muted aria-expanded:text-lucid-foreground",
         secondary:
-          "bg-lucid-secondary text-lucid-secondary-foreground hover:bg-[color-mix(in_oklch,var(--lucid-secondary),var(--lucid-foreground)_5%)] aria-expanded:bg-lucid-secondary aria-expanded:text-lucid-secondary-foreground",
+          "border-lucid-foreground/50 bg-lucid-secondary text-lucid-secondary-foreground hover:bg-[color-mix(in_oklch,var(--lucid-secondary),var(--lucid-foreground)_5%)] aria-expanded:bg-lucid-secondary aria-expanded:text-lucid-secondary-foreground",
         ghost:
           "hover:bg-lucid-muted hover:text-lucid-foreground aria-expanded:bg-lucid-muted aria-expanded:text-lucid-foreground dark:hover:bg-lucid-muted/50",
         destructive:
-          "bg-lucid-destructive/10 text-lucid-destructive hover:bg-lucid-destructive/20 focus-visible:border-lucid-destructive/40 focus-visible:ring-lucid-destructive/20 dark:bg-lucid-destructive/20 dark:hover:bg-lucid-destructive/30 dark:focus-visible:ring-lucid-destructive/40",
+          "bg-lucid-destructive text-lucid-destructive-foreground hover:bg-lucid-destructive/80 focus-visible:border-lucid-destructive/40 focus-visible:outline-lucid-destructive/20",
         link: "text-lucid-primary underline-offset-4 hover:underline",
       },
       size: {

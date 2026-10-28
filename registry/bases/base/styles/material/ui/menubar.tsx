@@ -27,7 +27,7 @@ function Menubar({ className, ...props }: MenubarPrimitive.Props) {
     <MenubarPrimitive
       data-slot="menubar"
       className={cn(
-        "rounded-material-md flex h-9 items-center gap-1 border p-1 shadow-xs",
+        "rounded-material-md flex h-10 items-center gap-1 border p-1 shadow-xs",
         className
       )}
       {...props}
@@ -214,7 +214,7 @@ function MenubarShortcut({
     <DropdownMenuShortcut
       data-slot="menubar-shortcut"
       className={cn(
-        "text-material-muted-foreground group-focus/menubar-item:text-material-accent-foreground ml-auto text-xs tracking-widest",
+        "text-material-muted-foreground group-focus/menubar-item:text-material-accent-foreground ml-auto text-xs tracking-widest opacity-60",
         className
       )}
       {...props}

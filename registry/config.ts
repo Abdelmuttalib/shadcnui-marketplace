@@ -35,7 +35,7 @@ export const POINTER_CURSOR_SELECTOR =
 // Derive font values from registry fonts (e.g., "font-inter" -> "inter").
 const fontValues = bodyFonts.map((f) => f.name.replace("font-", "")) as [
   string,
-  ...string[]
+  ...string[],
 ];
 const fontHeadingValues = ["inherit", ...fontValues] as const;
 
@@ -114,7 +114,7 @@ export const designSystemConfigSchema = z
       .enum(
         MENU_ACCENTS.map((a) => a.value) as [
           MenuAccentValue,
-          ...MenuAccentValue[]
+          ...MenuAccentValue[],
         ]
       )
       .default("subtle"),
@@ -766,8 +766,8 @@ export function buildThemeForPreset(config: DesignSystemConfig) {
   const radius = RADII.find((r) => r.name === config.radius);
   const radiusValue =
     config.radius === "default"
-      ? registryTheme.cssVars?.light?.radius ?? DEFAULT_RADIUS_VALUE
-      : radius?.value ?? registryTheme.cssVars?.light?.radius;
+      ? (registryTheme.cssVars?.light?.radius ?? DEFAULT_RADIUS_VALUE)
+      : (radius?.value ?? registryTheme.cssVars?.light?.radius);
 
   return registryItemSchema.parse({
     $schema: "https://ui.shadcn.com/schema/registry-item.json",
@@ -859,7 +859,9 @@ export function buildRegistryBase(config: DesignSystemConfig) {
     },
     ...(config.rtl && {
       docs: `To learn how to set up the RTL provider and fonts for your app, see https://ui.shadcn.com/docs/rtl/${
-        config.template === "next-monorepo" ? "next" : config.template ?? "next"
+        config.template === "next-monorepo"
+          ? "next"
+          : (config.template ?? "next")
       }`,
     }),
   };

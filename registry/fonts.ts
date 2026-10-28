@@ -1,6 +1,6 @@
-import { type RegistryItem } from "shadcn/schema"
+import { type RegistryItem } from "shadcn/schema";
 
-import { FONT_DEFINITIONS, type FontDefinition } from "@/lib/font-definitions"
+import { FONT_DEFINITIONS, type FontDefinition } from "@/lib/font-definitions";
 
 function createFontItem(definition: FontDefinition, role: "body" | "heading") {
   return {
@@ -20,15 +20,15 @@ function createFontItem(definition: FontDefinition, role: "body" | "heading") {
       import: definition.import,
       dependency: definition.dependency,
     },
-  } satisfies RegistryItem
+  } satisfies RegistryItem;
 }
 
 export const bodyFonts = FONT_DEFINITIONS.map((definition) =>
   createFontItem(definition, "body")
-) satisfies RegistryItem[]
+) satisfies RegistryItem[];
 
 export const headingFonts = FONT_DEFINITIONS.map((definition) =>
   createFontItem(definition, "heading")
-) satisfies RegistryItem[]
+) satisfies RegistryItem[];
 
-export const fonts = [...bodyFonts, ...headingFonts] satisfies RegistryItem[]
+export const fonts = [...bodyFonts, ...headingFonts] satisfies RegistryItem[];

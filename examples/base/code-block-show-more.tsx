@@ -3,7 +3,7 @@
 import { ChevronDownIcon } from "lucide-react";
 import * as React from "react";
 
-import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { useHighlightedCode } from "@/registry/bases/base/styles/default/hooks/use-highlighted-code";
 import { Button } from "@/styles/base-default/ui/button";
 import {
   CodeBlock,
@@ -84,7 +84,7 @@ export function CodeBlockShowMore() {
             aria-controls={id}
             onClick={() => setExpanded(!expanded)}
           >
-            <ChevronDownIcon className="in-aria-expanded:rotate-180 transition-transform" />
+            <ChevronDownIcon className="transition-transform in-aria-expanded:rotate-180" />
             {expanded ? "Show less" : "Show more"}
           </Button>
         </CodeBlockFooter>

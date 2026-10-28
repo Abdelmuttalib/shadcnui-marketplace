@@ -25,7 +25,7 @@ function Command({
     <CommandPrimitive
       data-slot="command"
       className={cn(
-        "bg-material-popover text-material-popover-foreground flex size-full flex-col overflow-hidden rounded-xl! p-1",
+        "bg-material-popover text-material-popover-foreground flex size-full flex-col overflow-hidden rounded-xl!",
         className
       )}
       {...props}
@@ -72,7 +72,7 @@ function CommandInput({
 }: React.ComponentProps<typeof CommandPrimitive.Input>) {
   return (
     <div data-slot="command-input-wrapper" className="p-1 pb-0">
-      <InputGroup className="border-material-input/30 bg-material-input/30 rounded-material-lg! h-8! shadow-none! *:data-[slot=input-group-addon]:pl-2!">
+      <InputGroup className="border-material-input/30 bg-material-input/60 rounded-material-lg! h-10! shadow-none! *:data-[slot=input-group-addon]:pl-2!">
         <CommandPrimitive.Input
           data-slot="command-input"
           className={cn(
@@ -126,7 +126,7 @@ function CommandGroup({
     <CommandPrimitive.Group
       data-slot="command-group"
       className={cn(
-        "text-material-foreground **:[[cmdk-group-heading]]:text-material-muted-foreground overflow-hidden p-1 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-medium",
+        "text-material-foreground **:[[cmdk-group-heading]]:text-material-muted-foreground overflow-hidden **:[[cmdk-group-heading]]:px-3 **:[[cmdk-group-heading]]:py-1 **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-medium",
         className
       )}
       {...props}
@@ -156,7 +156,7 @@ function CommandItem({
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        "group/command-item data-selected:bg-material-muted data-selected:text-material-foreground data-selected:**:[svg]:text-material-foreground rounded-material-sm in-data-[slot=dialog-content]:rounded-material-lg! relative flex cursor-default items-center gap-2 px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "group/command-item data-selected:bg-material-muted data-selected:text-material-foreground data-selected:**:[svg]:text-material-foreground relative flex cursor-default items-center gap-2 px-3 py-2.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

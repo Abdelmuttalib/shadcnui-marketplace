@@ -6,7 +6,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { useHighlightedCode } from "@/registry/bases/base/styles/default/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockActions,

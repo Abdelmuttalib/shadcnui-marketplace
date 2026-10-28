@@ -52,7 +52,7 @@ const STYLES_ROOT = path.join(
  * Keep these prefixes consistent with your actual CSS variables.
  */
 const STYLES = {
-  "carbon-v4": "cb",
+  carbon: "cb",
   "default-v4": "dft",
   linear: "linear",
   material: "material",

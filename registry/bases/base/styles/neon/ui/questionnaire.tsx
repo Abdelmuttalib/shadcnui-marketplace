@@ -112,7 +112,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-neon-input hover:bg-neon-muted/50 has-[>input:focus-visible]:border-neon-ring has-[>input:focus-visible]:ring-neon-ring/50 data-invalid:border-neon-destructive dark:bg-neon-input/20 data-checked:border-neon-primary/40 data-checked:bg-neon-muted dark:data-checked:bg-neon-muted rounded-neon-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "group/questionnaire-choice border-neon-input hover:bg-neon-muted/50 has-[>input:focus-visible]:border-neon-ring has-[>input:focus-visible]:ring-neon-ring/50 data-invalid:border-neon-destructive dark:bg-neon-input/20 data-checked:border-neon-primary/40 data-checked:bg-neon-muted dark:data-checked:bg-neon-muted rounded-neon-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-2",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -125,7 +125,7 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="border-neon-input group-data-checked/questionnaire-choice:border-neon-primary group-data-checked/questionnaire-choice:bg-neon-primary group-data-checked/questionnaire-choice:text-neon-primary-foreground dark:bg-neon-input/30 dark:group-data-checked/questionnaire-choice:bg-neon-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
+        className="border-neon-input group-data-checked/questionnaire-choice:border-neon-primary group-data-checked/questionnaire-choice:bg-neon-primary group-data-checked/questionnaire-choice:text-neon-primary-foreground bg-neon-input/40 dark:group-data-checked/questionnaire-choice:bg-neon-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-neon-input focus-visible:border-neon-ring focus-visible:ring-neon-ring/50 aria-invalid:border-neon-destructive aria-invalid:ring-neon-destructive/20 dark:bg-neon-input/30 dark:aria-invalid:border-neon-destructive/50 dark:aria-invalid:ring-neon-destructive/40 rounded-neon-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "border-neon-input focus-visible:ring-neon-ring aria-invalid:border-neon-destructive aria-invalid:ring-neon-destructive bg-neon-input/40 rounded-neon-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-2 sm:min-h-0 md:text-sm",
           "selection:bg-neon-primary selection:text-neon-primary-foreground placeholder:text-neon-muted-foreground",
           className
         )}

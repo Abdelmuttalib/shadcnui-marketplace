@@ -18,7 +18,7 @@ const BASELINE_UI = path.join(BASE_DIR, BASELINE_STYLE, "ui");
 const REPORT_DIR = path.join(ROOT, "reports/registry-ui-diffs");
 const INDEX_PATH = path.join(REPORT_DIR, "index.html");
 
-const IGNORED_STYLES = new Set(["default-v4", "carbon-v4"]);
+const IGNORED_STYLES = new Set(["default-v4", "carbon"]);
 const IGNORE = new Set([".DS_Store"]);
 
 const CHANGE_CONTEXT_LINES = 2;
@@ -249,8 +249,8 @@ function extractLineChanges(baseline, styled) {
           removedLines.length && addedLines.length
             ? "MODIFIED"
             : addedLines.length
-            ? "ADDED"
-            : "REMOVED",
+              ? "ADDED"
+              : "REMOVED",
 
         baselineLineRange: getLineRange(removedLines),
         styledLineRange: getLineRange(addedLines),
@@ -691,8 +691,8 @@ function renderTokenChanges(tokenChanges) {
           return `
           <div class="token-item ${added ? "token-added" : "token-removed"}">
             <span class="status ${added ? "added" : "missing"}">${
-            item.type
-          }</span>
+              item.type
+            }</span>
 
             <code>${escapeHtml(item.token)}</code>
 

@@ -38,9 +38,9 @@ import {
   DefaultSettingsProfilePage,
   DefaultTaskPage,
 } from "@/registry/bases/base/default/page-examples";
-import { CardShowcase as DefaultV4CardShowcase } from "@/registry/bases/base/styles/default-v4/card-showcase";
-import { HeroUI as DefaultV4UI } from "@/registry/bases/base/styles/default-v4/hero";
-import { ShowcaseComponents as DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default-v4/showcase-components";
+import { CardShowcase as DefaultV4CardShowcase } from "@/registry/bases/base/styles/default/card-showcase";
+import { HeroUI as DefaultV4UI } from "@/registry/bases/base/styles/default/hero";
+import { ShowcaseComponents as DefaultV4ShowcaseComponents } from "@/registry/bases/base/styles/default/showcase-components";
 import {
   DefaultV4AuthenticationPage,
   DefaultV4CardsPage,
@@ -50,7 +50,7 @@ import {
   DefaultV4PlaygroundPage,
   DefaultV4SettingsProfilePage,
   DefaultV4TaskPage,
-} from "@/registry/bases/base/styles/default-v4/page-examples";
+} from "@/registry/bases/base/styles/default/page-examples";
 import { LibelleCardShowcase } from "@/registry/bases/base/libelle/libelle-card-showcase";
 import { LibelleUI } from "@/registry/bases/base/libelle/libelle-hero";
 import { LibelleShowcaseComponents } from "@/registry/bases/base/libelle/libelle-showcase-components";
@@ -177,8 +177,6 @@ export function getStyleBackgroundClassname(style: Style) {
   switch (style) {
     case "default":
       return "bg-dft-background";
-    case "default-v4":
-      return "bg-dft-background";
     case "carbon":
       return "bg-cb-background";
     case "linear":
@@ -210,8 +208,6 @@ export function getStyleForegroundClassname(style: Style) {
   switch (style) {
     case "default":
       return "text-dft-foreground";
-    case "default-v4":
-      return "text-dft-foreground";
     case "carbon":
       return "text-cb-foreground";
     case "linear":
@@ -242,8 +238,6 @@ export function getStyleForegroundClassname(style: Style) {
 export function getStyleFontClassname(style: Style) {
   switch (style) {
     case "default":
-      return "font-sans";
-    case "default-v4":
       return "font-sans";
     case "carbon":
       return "font-carbon";
@@ -280,8 +274,6 @@ export function renderStyleCardShowcase(style: Style) {
       return <CatalystCardShowcase />;
     case "default":
       return <DefaultCardShowcase />;
-    case "default-v4":
-      return <DefaultV4CardShowcase />;
     case "linear":
       return <LinearCardShowcase />;
     case "lucid":
@@ -309,9 +301,7 @@ export function getStyleVariablesPrefix(style: Style) {
   switch (style) {
     case "default":
       return "dft";
-    case "default-v4":
-      return "dft";
-    case "carbon-v4":
+    case "carbon":
       return "cb";
     case "carbon":
       return "cb";
@@ -373,8 +363,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystMailPage />;
     } else if (style === "default") {
       return <DefaultMailPage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4MailPage />;
     } else if (style === "linear") {
       return <LinearMailPage />;
     } else if (style === "lucid") {
@@ -403,8 +391,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystCardsPage />;
     } else if (style === "default") {
       return <DefaultCardsPage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4CardsPage />;
     } else if (style === "linear") {
       return <LinearCardsPage />;
     } else if (style === "lucid") {
@@ -433,8 +419,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystAuthenticationPage />;
     } else if (style === "default") {
       return <DefaultAuthenticationPage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4AuthenticationPage />;
     } else if (style === "linear") {
       return <LinearAuthenticationPage />;
     } else if (style === "lucid") {
@@ -463,8 +447,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystSettingsProfilePage />;
     } else if (style === "default") {
       return <DefaultSettingsProfilePage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4SettingsProfilePage />;
     } else if (style === "linear") {
       return <LinearSettingsProfilePage />;
     } else if (style === "lucid") {
@@ -493,8 +475,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystDashboardPage />;
     } else if (style === "default") {
       return <DefaultDashboardPage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4DashboardPage />;
     } else if (style === "linear") {
       return <LinearDashboardPage />;
     } else if (style === "lucid") {
@@ -523,8 +503,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystMusicPage />;
     } else if (style === "default") {
       return <DefaultMusicPage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4MusicPage />;
     } else if (style === "linear") {
       return <LinearMusicPage />;
     } else if (style === "lucid") {
@@ -553,8 +531,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystPlaygroundPage />;
     } else if (style === "default") {
       return <DefaultPlaygroundPage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4PlaygroundPage />;
     } else if (style === "linear") {
       return <LinearPlaygroundPage />;
     } else if (style === "lucid") {
@@ -583,8 +559,6 @@ export function renderStylePageExample(style: Style, page: string) {
       return <CatalystTaskPage />;
     } else if (style === "default") {
       return <DefaultTaskPage />;
-    } else if (style === "default-v4") {
-      return <DefaultV4TaskPage />;
     } else if (style === "linear") {
       return <LinearTaskPage />;
     } else if (style === "lucid") {
@@ -619,8 +593,6 @@ export function renderStyleHero(style: Style) {
       return <CatalystUI />;
     case "default":
       return <DefaultUI />;
-    case "default-v4":
-      return <DefaultV4UI />;
     case "linear":
       return <LinearUI />;
     case "material":
@@ -656,8 +628,6 @@ export function renderStyleShowcaseComponents(style: Style) {
       return <CatalystShowcaseComponents />;
     case "default":
       return <DefaultShowcaseComponents />;
-    case "default-v4":
-      return <DefaultV4ShowcaseComponents />;
     case "spectrum":
       return <SpectrumShowcaseComponents />;
     case "wedges":

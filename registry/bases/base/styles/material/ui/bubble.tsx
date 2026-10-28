@@ -28,7 +28,7 @@ const bubbleVariants = cva(
         tinted:
           "*:data-[slot=bubble-content]:bg-[oklch(from_var(--material-primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-material-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--material-primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--material-primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--material-primary)_0.35_calc(c*0.5)_h)]",
         outline:
-          "*:data-[slot=bubble-content]:border-material-border *:data-[slot=bubble-content]:bg-material-background [&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-material-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-input/30",
+          "*:data-[slot=bubble-content]:border-material-border *:data-[slot=bubble-content]:bg-material-background [&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-material-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-input/60",
         ghost:
           "border-none *:data-[slot=bubble-content]:rounded-none *:data-[slot=bubble-content]:bg-transparent *:data-[slot=bubble-content]:p-0 [&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-material-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-material-muted/50",
         destructive:

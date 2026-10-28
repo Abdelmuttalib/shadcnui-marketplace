@@ -9,11 +9,16 @@ function Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {
     <CheckboxPrimitive.Root
       data-slot="checkbox"
       className={cn(
-        "peer border-material-input group-has-[:focus-visible]/field-label:not-data-checked:border-material-input focus-visible:border-material-ring focus-visible:ring-material-ring/50 aria-invalid:border-material-destructive aria-invalid:ring-material-destructive/20 aria-invalid:aria-checked:border-material-primary dark:bg-material-input/30 dark:aria-invalid:border-material-destructive/50 dark:aria-invalid:ring-material-destructive/40 data-checked:border-material-primary data-checked:bg-material-primary data-checked:text-material-primary-foreground group-has-[:focus-visible]/field-label:data-checked:border-material-primary dark:data-checked:bg-material-primary relative flex size-4 shrink-0 items-center justify-center rounded-[4px] border shadow-xs transition-shadow outline-none group-has-disabled/field:opacity-50 group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3",
+        "peer border-material-input hover:border-material-primary group-has-[:focus-visible]/field-label:not-data-checked:border-material-input focus-visible:ring-material-ring/50 aria-invalid:border-material-destructive aria-invalid:ring-material-destructive/60 aria-invalid:aria-checked:border-material-primary bg-material-background data-checked:border-material-primary data-checked:bg-material-primary data-checked:text-material-primary-foreground group-has-[:focus-visible]/field-label:data-checked:border-material-primary rounded-material-sm relative flex size-5 shrink-0 items-center justify-center border shadow-xs transition-shadow outline-none group-has-disabled/field:opacity-50 group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-1",
+
+        "after:bg-material-primary/15 after:absolute after:-inset-2.5 after:rounded-full after:opacity-0 after:transition-opacity",
+        "hover:after:opacity-100 focus-visible:after:opacity-100",
         className
       )}
       {...props}
     >
+      {/* <span className="bg-material-primary/15 absolute -inset-2.5 z-10 hidden rounded-full group-hover:block group-focus-visible:block"></span> */}
+
       <CheckboxPrimitive.Indicator
         data-slot="checkbox-indicator"
         className="grid place-content-center text-current transition-none [&>svg]:size-3.5"

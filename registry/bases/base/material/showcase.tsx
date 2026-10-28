@@ -317,7 +317,7 @@ export function CheckboxDemo() {
       <Checkbox id="terms" />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -1110,11 +1110,11 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="bg-linear-to-b from-accent/50 to-accent flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md"
+                    className="from-accent/50 to-accent flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-none select-none focus:shadow-md"
                     href="/"
                   >
                     <CalendarIcon className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mt-4 mb-2 text-lg font-medium">
                       shadcn/ui
                     </div>
                     <p className="text-muted-foreground text-sm leading-tight">
@@ -1174,12 +1174,12 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            "hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
@@ -1238,7 +1238,7 @@ export function PopoverDemo() {
       <PopoverContent className="w-80">
         <div className="grid gap-4">
           <div className="space-y-2">
-            <h4 className="font-medium leading-none">Dimensions</h4>
+            <h4 className="leading-none font-medium">Dimensions</h4>
             <p className="text-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
@@ -1368,7 +1368,7 @@ export function ScrollAreaDemo() {
   return (
     <ScrollArea className="h-72 w-48 rounded-md border">
       <div className="p-4">
-        <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+        <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
         {tags.map((tag) => (
           <div key={tag}>
             <div className="text-sm">{tag}</div>
@@ -1411,7 +1411,7 @@ export function SeparatorDemo() {
   return (
     <div>
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
+        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
         <p className="text-muted-foreground text-sm">
           An open-source UI component library.
         </p>
@@ -1969,7 +1969,7 @@ export function Chart4() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
             <div className="text-muted-foreground flex items-center gap-2 leading-none">
@@ -2078,7 +2078,7 @@ export function Chart5() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
             <div className="text-muted-foreground flex items-center gap-2 leading-none">
@@ -2147,7 +2147,7 @@ export function Chart6() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
+        <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-muted-foreground leading-none">
@@ -2229,7 +2229,7 @@ export function Chart7() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
+        <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-muted-foreground leading-none">

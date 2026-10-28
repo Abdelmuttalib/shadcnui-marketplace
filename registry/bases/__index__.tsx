@@ -5,7 +5,7 @@ import "server-only";
 
 export const Index: Record<string, Record<string, Record<string, any>>> = {
   base: {
-    "default-v4": {
+    default: {
       accordion: {
         name: "accordion",
         title: "",
@@ -14,7 +14,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/accordion.tsx",
+            path: "registry/bases/base/styles/default/ui/accordion.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -38,7 +38,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/alert.tsx",
+            path: "registry/bases/base/styles/default/ui/alert.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -61,7 +61,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/alert-dialog.tsx",
+            path: "registry/bases/base/styles/default/ui/alert-dialog.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -85,7 +85,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/aspect-ratio.tsx",
+            path: "registry/bases/base/styles/default/ui/aspect-ratio.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -108,7 +108,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/avatar.tsx",
+            path: "registry/bases/base/styles/default/ui/avatar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -132,7 +132,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/badge.tsx",
+            path: "registry/bases/base/styles/default/ui/badge.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -155,7 +155,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/breadcrumb.tsx",
+            path: "registry/bases/base/styles/default/ui/breadcrumb.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -178,7 +178,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/button.tsx",
+            path: "registry/bases/base/styles/default/ui/button.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -201,7 +201,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["separator"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/button-group.tsx",
+            path: "registry/bases/base/styles/default/ui/button-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -224,7 +224,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/calendar.tsx",
+            path: "registry/bases/base/styles/default/ui/calendar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -248,7 +248,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/card.tsx",
+            path: "registry/bases/base/styles/default/ui/card.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -271,7 +271,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/carousel.tsx",
+            path: "registry/bases/base/styles/default/ui/carousel.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -295,7 +295,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["card"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/chart.tsx",
+            path: "registry/bases/base/styles/default/ui/chart.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -318,7 +318,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/checkbox.tsx",
+            path: "registry/bases/base/styles/default/ui/checkbox.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -342,7 +342,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/collapsible.tsx",
+            path: "registry/bases/base/styles/default/ui/collapsible.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -366,7 +366,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input-group"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/combobox.tsx",
+            path: "registry/bases/base/styles/default/ui/combobox.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -390,7 +390,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["dialog", "input-group"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/command.tsx",
+            path: "registry/bases/base/styles/default/ui/command.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -414,7 +414,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/context-menu.tsx",
+            path: "registry/bases/base/styles/default/ui/context-menu.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -438,7 +438,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/dialog.tsx",
+            path: "registry/bases/base/styles/default/ui/dialog.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -462,7 +462,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/drawer.tsx",
+            path: "registry/bases/base/styles/default/ui/drawer.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -486,7 +486,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/dropdown-menu.tsx",
+            path: "registry/bases/base/styles/default/ui/dropdown-menu.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -510,7 +510,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/empty.tsx",
+            path: "registry/bases/base/styles/default/ui/empty.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -533,7 +533,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["label", "separator"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/field.tsx",
+            path: "registry/bases/base/styles/default/ui/field.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -556,7 +556,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/hover-card.tsx",
+            path: "registry/bases/base/styles/default/ui/hover-card.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -580,7 +580,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/input.tsx",
+            path: "registry/bases/base/styles/default/ui/input.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -603,7 +603,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "textarea"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/input-group.tsx",
+            path: "registry/bases/base/styles/default/ui/input-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -626,7 +626,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/input-otp.tsx",
+            path: "registry/bases/base/styles/default/ui/input-otp.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -650,7 +650,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["separator"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/item.tsx",
+            path: "registry/bases/base/styles/default/ui/item.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -673,7 +673,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/label.tsx",
+            path: "registry/bases/base/styles/default/ui/label.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -697,7 +697,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["dropdown-menu"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/menubar.tsx",
+            path: "registry/bases/base/styles/default/ui/menubar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -721,7 +721,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/navigation-menu.tsx",
+            path: "registry/bases/base/styles/default/ui/navigation-menu.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -745,7 +745,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/pagination.tsx",
+            path: "registry/bases/base/styles/default/ui/pagination.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -768,7 +768,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/popover.tsx",
+            path: "registry/bases/base/styles/default/ui/popover.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -792,7 +792,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/progress.tsx",
+            path: "registry/bases/base/styles/default/ui/progress.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -816,7 +816,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/radio-group.tsx",
+            path: "registry/bases/base/styles/default/ui/radio-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -840,7 +840,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/resizable.tsx",
+            path: "registry/bases/base/styles/default/ui/resizable.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -864,7 +864,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/scroll-area.tsx",
+            path: "registry/bases/base/styles/default/ui/scroll-area.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -888,7 +888,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/select.tsx",
+            path: "registry/bases/base/styles/default/ui/select.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -912,7 +912,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/separator.tsx",
+            path: "registry/bases/base/styles/default/ui/separator.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -936,7 +936,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/sheet.tsx",
+            path: "registry/bases/base/styles/default/ui/sheet.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -968,7 +968,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/sidebar.tsx",
+            path: "registry/bases/base/styles/default/ui/sidebar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -991,7 +991,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/skeleton.tsx",
+            path: "registry/bases/base/styles/default/ui/skeleton.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1014,7 +1014,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/slider.tsx",
+            path: "registry/bases/base/styles/default/ui/slider.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1038,7 +1038,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/sonner.tsx",
+            path: "registry/bases/base/styles/default/ui/sonner.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1062,7 +1062,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/spinner.tsx",
+            path: "registry/bases/base/styles/default/ui/spinner.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1085,7 +1085,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/switch.tsx",
+            path: "registry/bases/base/styles/default/ui/switch.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1109,7 +1109,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/table.tsx",
+            path: "registry/bases/base/styles/default/ui/table.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1132,7 +1132,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/tabs.tsx",
+            path: "registry/bases/base/styles/default/ui/tabs.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1156,7 +1156,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/textarea.tsx",
+            path: "registry/bases/base/styles/default/ui/textarea.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1179,7 +1179,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/toast.tsx",
+            path: "registry/bases/base/styles/default/ui/toast.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1203,7 +1203,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/toggle.tsx",
+            path: "registry/bases/base/styles/default/ui/toggle.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1227,7 +1227,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["toggle"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/toggle-group.tsx",
+            path: "registry/bases/base/styles/default/ui/toggle-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1251,7 +1251,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/tooltip.tsx",
+            path: "registry/bases/base/styles/default/ui/tooltip.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1275,7 +1275,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/kbd.tsx",
+            path: "registry/bases/base/styles/default/ui/kbd.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1298,7 +1298,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/native-select.tsx",
+            path: "registry/bases/base/styles/default/ui/native-select.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1321,7 +1321,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/direction.tsx",
+            path: "registry/bases/base/styles/default/ui/direction.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1343,7 +1343,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/attachment.tsx",
+            path: "registry/bases/base/styles/default/ui/attachment.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1360,7 +1360,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/bubble.tsx",
+            path: "registry/bases/base/styles/default/ui/bubble.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1377,7 +1377,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/message-scroller.tsx",
+            path: "registry/bases/base/styles/default/ui/message-scroller.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1394,7 +1394,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/questionnaire.tsx",
+            path: "registry/bases/base/styles/default/ui/questionnaire.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1417,7 +1417,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/marker.tsx",
+            path: "registry/bases/base/styles/default/ui/marker.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1434,7 +1434,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["collapsible"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/trace.tsx",
+            path: "registry/bases/base/styles/default/ui/trace.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1457,7 +1457,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "use-highlighted-code"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/code-block.tsx",
+            path: "registry/bases/base/styles/default/ui/code-block.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1480,7 +1480,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/ui/message.tsx",
+            path: "registry/bases/base/styles/default/ui/message.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -1497,7 +1497,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["accordion", "button", "card", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/accordion-example.tsx",
+            path: "registry/bases/base/styles/default/examples/accordion-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1514,7 +1514,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["alert", "badge", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/alert-example.tsx",
+            path: "registry/bases/base/styles/default/examples/alert-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1531,7 +1531,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["alert-dialog", "button", "dialog", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/alert-dialog-example.tsx",
+            path: "registry/bases/base/styles/default/examples/alert-dialog-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1548,7 +1548,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["aspect-ratio", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/aspect-ratio-example.tsx",
+            path: "registry/bases/base/styles/default/examples/aspect-ratio-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1565,7 +1565,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["avatar", "button", "empty", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/avatar-example.tsx",
+            path: "registry/bases/base/styles/default/examples/avatar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1582,7 +1582,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["badge", "spinner", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/badge-example.tsx",
+            path: "registry/bases/base/styles/default/examples/badge-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1599,7 +1599,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["breadcrumb", "dropdown-menu", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/breadcrumb-example.tsx",
+            path: "registry/bases/base/styles/default/examples/breadcrumb-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1616,7 +1616,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/button-example.tsx",
+            path: "registry/bases/base/styles/default/examples/button-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1645,7 +1645,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/button-group-example.tsx",
+            path: "registry/bases/base/styles/default/examples/button-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1671,7 +1671,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/calendar-example.tsx",
+            path: "registry/bases/base/styles/default/examples/calendar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1695,7 +1695,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/card-example.tsx",
+            path: "registry/bases/base/styles/default/examples/card-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1712,7 +1712,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["card", "carousel", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/carousel-example.tsx",
+            path: "registry/bases/base/styles/default/examples/carousel-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1729,7 +1729,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["chart", "card", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/chart-example.tsx",
+            path: "registry/bases/base/styles/default/examples/chart-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1746,7 +1746,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["checkbox", "field", "table", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/checkbox-example.tsx",
+            path: "registry/bases/base/styles/default/examples/checkbox-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1771,7 +1771,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/collapsible-example.tsx",
+            path: "registry/bases/base/styles/default/examples/collapsible-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1799,7 +1799,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/combobox-example.tsx",
+            path: "registry/bases/base/styles/default/examples/combobox-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1816,7 +1816,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "command", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/command-example.tsx",
+            path: "registry/bases/base/styles/default/examples/command-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1833,7 +1833,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "context-menu", "dialog", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/context-menu-example.tsx",
+            path: "registry/bases/base/styles/default/examples/context-menu-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1865,7 +1865,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/dialog-example.tsx",
+            path: "registry/bases/base/styles/default/examples/dialog-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1882,7 +1882,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["drawer", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/drawer-example.tsx",
+            path: "registry/bases/base/styles/default/examples/drawer-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1905,7 +1905,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/dropdown-menu-example.tsx",
+            path: "registry/bases/base/styles/default/examples/dropdown-menu-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1928,7 +1928,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/empty-example.tsx",
+            path: "registry/bases/base/styles/default/examples/empty-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1958,7 +1958,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/field-example.tsx",
+            path: "registry/bases/base/styles/default/examples/field-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1975,7 +1975,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "dialog", "hover-card", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/hover-card-example.tsx",
+            path: "registry/bases/base/styles/default/examples/hover-card-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -1999,7 +1999,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/input-example.tsx",
+            path: "registry/bases/base/styles/default/examples/input-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2030,7 +2030,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/input-group-example.tsx",
+            path: "registry/bases/base/styles/default/examples/input-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2053,7 +2053,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/input-otp-example.tsx",
+            path: "registry/bases/base/styles/default/examples/input-otp-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2070,7 +2070,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "item", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/item-example.tsx",
+            path: "registry/bases/base/styles/default/examples/item-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2093,7 +2093,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/kbd-example.tsx",
+            path: "registry/bases/base/styles/default/examples/kbd-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2117,7 +2117,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/label-example.tsx",
+            path: "registry/bases/base/styles/default/examples/label-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2134,7 +2134,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "dialog", "menubar", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/menubar-example.tsx",
+            path: "registry/bases/base/styles/default/examples/menubar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2151,7 +2151,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "native-select", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/native-select-example.tsx",
+            path: "registry/bases/base/styles/default/examples/native-select-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2173,7 +2173,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/navigation-menu-example.tsx",
+            path: "registry/bases/base/styles/default/examples/navigation-menu-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2190,7 +2190,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "pagination", "select", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/pagination-example.tsx",
+            path: "registry/bases/base/styles/default/examples/pagination-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2214,7 +2214,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/popover-example.tsx",
+            path: "registry/bases/base/styles/default/examples/popover-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2237,7 +2237,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/progress-example.tsx",
+            path: "registry/bases/base/styles/default/examples/progress-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2254,7 +2254,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "radio-group", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/radio-group-example.tsx",
+            path: "registry/bases/base/styles/default/examples/radio-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2271,7 +2271,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["resizable", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/resizable-example.tsx",
+            path: "registry/bases/base/styles/default/examples/resizable-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2288,7 +2288,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["scroll-area", "separator", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/scroll-area-example.tsx",
+            path: "registry/bases/base/styles/default/examples/scroll-area-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2314,7 +2314,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/select-example.tsx",
+            path: "registry/bases/base/styles/default/examples/select-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2331,7 +2331,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["separator", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/separator-example.tsx",
+            path: "registry/bases/base/styles/default/examples/separator-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2348,7 +2348,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "field", "input", "sheet", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/sheet-example.tsx",
+            path: "registry/bases/base/styles/default/examples/sheet-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2372,7 +2372,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/sidebar-example.tsx",
+            path: "registry/bases/base/styles/default/examples/sidebar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2397,7 +2397,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/sidebar-icon-example.tsx",
+            path: "registry/bases/base/styles/default/examples/sidebar-icon-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2414,7 +2414,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["collapsible", "sidebar", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/sidebar-inset-example.tsx",
+            path: "registry/bases/base/styles/default/examples/sidebar-inset-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2439,7 +2439,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/sidebar-floating-example.tsx",
+            path: "registry/bases/base/styles/default/examples/sidebar-floating-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2456,7 +2456,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["skeleton", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/skeleton-example.tsx",
+            path: "registry/bases/base/styles/default/examples/skeleton-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2473,7 +2473,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["label", "slider", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/slider-example.tsx",
+            path: "registry/bases/base/styles/default/examples/slider-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2490,7 +2490,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sonner", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/sonner-example.tsx",
+            path: "registry/bases/base/styles/default/examples/sonner-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2515,7 +2515,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/spinner-example.tsx",
+            path: "registry/bases/base/styles/default/examples/spinner-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2532,7 +2532,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "label", "switch", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/switch-example.tsx",
+            path: "registry/bases/base/styles/default/examples/switch-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2556,7 +2556,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/table-example.tsx",
+            path: "registry/bases/base/styles/default/examples/table-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2573,7 +2573,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "dropdown-menu", "tabs", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/tabs-example.tsx",
+            path: "registry/bases/base/styles/default/examples/tabs-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2590,7 +2590,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "textarea", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/textarea-example.tsx",
+            path: "registry/bases/base/styles/default/examples/textarea-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2607,7 +2607,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "toast", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/toast-example.tsx",
+            path: "registry/bases/base/styles/default/examples/toast-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2624,7 +2624,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["toggle", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/toggle-example.tsx",
+            path: "registry/bases/base/styles/default/examples/toggle-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2641,7 +2641,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["input", "select", "toggle-group", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/toggle-group-example.tsx",
+            path: "registry/bases/base/styles/default/examples/toggle-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2658,7 +2658,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "kbd", "tooltip", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/tooltip-example.tsx",
+            path: "registry/bases/base/styles/default/examples/tooltip-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2690,7 +2690,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/demo.tsx",
+            path: "registry/bases/base/styles/default/examples/demo.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2719,7 +2719,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/component-example.tsx",
+            path: "registry/bases/base/styles/default/examples/component-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2742,7 +2742,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/attachment-example.tsx",
+            path: "registry/bases/base/styles/default/examples/attachment-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2766,7 +2766,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/bubble-example.tsx",
+            path: "registry/bases/base/styles/default/examples/bubble-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2794,7 +2794,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/message-scroller-example.tsx",
+            path: "registry/bases/base/styles/default/examples/message-scroller-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2818,7 +2818,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/questionnaire-example.tsx",
+            path: "registry/bases/base/styles/default/examples/questionnaire-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2842,7 +2842,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/marker-example.tsx",
+            path: "registry/bases/base/styles/default/examples/marker-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2870,7 +2870,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/trace-example.tsx",
+            path: "registry/bases/base/styles/default/examples/trace-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2898,7 +2898,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/code-block-example.tsx",
+            path: "registry/bases/base/styles/default/examples/code-block-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2915,7 +2915,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["bubble", "message", "button", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/examples/message-example.tsx",
+            path: "registry/bases/base/styles/default/examples/message-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -2932,7 +2932,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/lib/utils.ts",
+            path: "registry/bases/base/styles/default/lib/utils.ts",
             type: "registry:lib",
             target: "",
           },
@@ -2949,7 +2949,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/components/example.tsx",
+            path: "registry/bases/base/styles/default/components/example.tsx",
             type: "registry:component",
             target: "",
           },
@@ -2994,7 +2994,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/preview/index.tsx",
+            path: "registry/bases/base/styles/default/blocks/preview/index.tsx",
             type: "registry:block",
             target: "",
           },
@@ -3042,7 +3042,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/preview-02/index.tsx",
+            path: "registry/bases/base/styles/default/blocks/preview-02/index.tsx",
             type: "registry:block",
             target: "",
           },
@@ -3059,7 +3059,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: [],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/preview-03/index.tsx",
+            path: "registry/bases/base/styles/default/blocks/preview-03/index.tsx",
             type: "registry:block",
             target: "",
           },
@@ -3076,12 +3076,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-01/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-01/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-01/components/login-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-01/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3098,12 +3098,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-02/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-02/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-02/components/login-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-02/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3120,12 +3120,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-03/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-03/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-03/components/login-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-03/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3142,12 +3142,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-04/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-04/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-04/components/login-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-04/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3164,12 +3164,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-05/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-05/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/login-05/components/login-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/login-05/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3186,12 +3186,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-01/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-01/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-01/components/signup-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-01/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3208,12 +3208,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-02/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-02/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-02/components/signup-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-02/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3230,12 +3230,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-03/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-03/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-03/components/signup-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-03/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3252,12 +3252,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-04/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-04/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-04/components/signup-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-04/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3274,12 +3274,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-05/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-05/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/signup-05/components/signup-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/signup-05/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3316,57 +3316,57 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/data.json",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/data.json",
             type: "registry:file",
             target: "app/dashboard/data.json",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/chart-area-interactive.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/chart-area-interactive.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/data-table.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/data-table.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/nav-documents.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/nav-documents.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/nav-main.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/nav-user.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/section-cards.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/section-cards.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/dashboard-01/components/site-header.tsx",
+            path: "registry/bases/base/styles/default/blocks/dashboard-01/components/site-header.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3389,22 +3389,22 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-01/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-01/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-01/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-01/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-01/components/search-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-01/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-01/components/version-switcher.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-01/components/version-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3427,22 +3427,22 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-02/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-02/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-02/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-02/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-02/components/search-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-02/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-02/components/version-switcher.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-02/components/version-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3459,12 +3459,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-03/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-03/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-03/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-03/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3481,12 +3481,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb", "separator"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-04/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-04/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-04/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-04/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3509,17 +3509,17 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-05/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-05/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-05/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-05/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-05/components/search-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-05/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3542,22 +3542,22 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-06/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-06/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-06/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-06/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-06/components/nav-main.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-06/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-06/components/sidebar-opt-in-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-06/components/sidebar-opt-in-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3581,32 +3581,32 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-07/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-07/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-07/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-07/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-07/components/nav-main.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-07/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-07/components/nav-projects.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-07/components/nav-projects.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-07/components/nav-user.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-07/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-07/components/team-switcher.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-07/components/team-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3630,32 +3630,32 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-08/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-08/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-08/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-08/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-main.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-08/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-projects.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-08/components/nav-projects.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-08/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-08/components/nav-user.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-08/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3681,17 +3681,17 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-09/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-09/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-09/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-09/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-09/components/nav-user.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-09/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3715,42 +3715,42 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/components/nav-actions.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/components/nav-actions.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/components/nav-favorites.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/components/nav-favorites.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/components/nav-main.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/components/nav-workspaces.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/components/nav-workspaces.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-10/components/team-switcher.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-10/components/team-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3772,12 +3772,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-11/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-11/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-11/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-11/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3802,27 +3802,27 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-12/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-12/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-12/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-12/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-12/components/calendars.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-12/components/calendars.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-12/components/date-picker.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-12/components/date-picker.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-12/components/nav-user.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-12/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3839,12 +3839,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb", "button", "dialog"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-13/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-13/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-13/components/settings-dialog.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-13/components/settings-dialog.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3861,12 +3861,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb"],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-14/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-14/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-14/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-14/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3892,57 +3892,57 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/calendars.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/calendars.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/date-picker.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/date-picker.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-favorites.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/nav-favorites.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-main.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-user.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/nav-workspaces.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/nav-workspaces.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/sidebar-left.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/sidebar-left.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/sidebar-right.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/sidebar-right.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-15/components/team-switcher.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-15/components/team-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -3968,42 +3968,42 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/page.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/components/nav-main.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/components/nav-projects.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/components/nav-projects.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/components/nav-user.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/components/search-form.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/blocks/sidebar-16/components/site-header.tsx",
+            path: "registry/bases/base/styles/default/blocks/sidebar-16/components/site-header.tsx",
             type: "registry:component",
             target: "",
           },
@@ -4020,7 +4020,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/hooks/use-mobile.ts",
+            path: "registry/bases/base/styles/default/hooks/use-mobile.ts",
             type: "registry:hook",
             target: "",
           },
@@ -4037,12 +4037,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/default-v4/hooks/use-highlighted-code.ts",
+            path: "registry/bases/base/styles/default/hooks/use-highlighted-code.ts",
             type: "registry:hook",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/default-v4/lib/highlighter.tsx",
+            path: "registry/bases/base/styles/default/lib/highlighter.tsx",
             type: "registry:lib",
             target: "",
           },
@@ -4052,7 +4052,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
       },
     },
 
-    "carbon-v4": {
+    carbon: {
       accordion: {
         name: "accordion",
         title: "",
@@ -4061,7 +4061,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/accordion.tsx",
+            path: "registry/bases/base/styles/carbon/ui/accordion.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4085,7 +4085,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/alert.tsx",
+            path: "registry/bases/base/styles/carbon/ui/alert.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4108,7 +4108,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/alert-dialog.tsx",
+            path: "registry/bases/base/styles/carbon/ui/alert-dialog.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4132,7 +4132,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/aspect-ratio.tsx",
+            path: "registry/bases/base/styles/carbon/ui/aspect-ratio.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4155,7 +4155,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/avatar.tsx",
+            path: "registry/bases/base/styles/carbon/ui/avatar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4179,7 +4179,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/badge.tsx",
+            path: "registry/bases/base/styles/carbon/ui/badge.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4202,7 +4202,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/breadcrumb.tsx",
+            path: "registry/bases/base/styles/carbon/ui/breadcrumb.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4225,7 +4225,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/button.tsx",
+            path: "registry/bases/base/styles/carbon/ui/button.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4248,7 +4248,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["separator"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/button-group.tsx",
+            path: "registry/bases/base/styles/carbon/ui/button-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4271,7 +4271,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/calendar.tsx",
+            path: "registry/bases/base/styles/carbon/ui/calendar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4295,7 +4295,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/card.tsx",
+            path: "registry/bases/base/styles/carbon/ui/card.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4318,7 +4318,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/carousel.tsx",
+            path: "registry/bases/base/styles/carbon/ui/carousel.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4342,7 +4342,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["card"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/chart.tsx",
+            path: "registry/bases/base/styles/carbon/ui/chart.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4365,7 +4365,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/checkbox.tsx",
+            path: "registry/bases/base/styles/carbon/ui/checkbox.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4389,7 +4389,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/collapsible.tsx",
+            path: "registry/bases/base/styles/carbon/ui/collapsible.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4413,7 +4413,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input-group"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/combobox.tsx",
+            path: "registry/bases/base/styles/carbon/ui/combobox.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4437,7 +4437,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["dialog", "input-group"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/command.tsx",
+            path: "registry/bases/base/styles/carbon/ui/command.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4461,7 +4461,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/context-menu.tsx",
+            path: "registry/bases/base/styles/carbon/ui/context-menu.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4485,7 +4485,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/dialog.tsx",
+            path: "registry/bases/base/styles/carbon/ui/dialog.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4509,7 +4509,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/drawer.tsx",
+            path: "registry/bases/base/styles/carbon/ui/drawer.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4533,7 +4533,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/dropdown-menu.tsx",
+            path: "registry/bases/base/styles/carbon/ui/dropdown-menu.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4557,7 +4557,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/empty.tsx",
+            path: "registry/bases/base/styles/carbon/ui/empty.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4580,7 +4580,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["label", "separator"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/field.tsx",
+            path: "registry/bases/base/styles/carbon/ui/field.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4603,7 +4603,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/hover-card.tsx",
+            path: "registry/bases/base/styles/carbon/ui/hover-card.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4627,7 +4627,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/input.tsx",
+            path: "registry/bases/base/styles/carbon/ui/input.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4650,7 +4650,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "textarea"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/input-group.tsx",
+            path: "registry/bases/base/styles/carbon/ui/input-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4673,7 +4673,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/input-otp.tsx",
+            path: "registry/bases/base/styles/carbon/ui/input-otp.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4697,7 +4697,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["separator"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/item.tsx",
+            path: "registry/bases/base/styles/carbon/ui/item.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4720,7 +4720,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/label.tsx",
+            path: "registry/bases/base/styles/carbon/ui/label.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4744,7 +4744,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["dropdown-menu"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/menubar.tsx",
+            path: "registry/bases/base/styles/carbon/ui/menubar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4768,7 +4768,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/navigation-menu.tsx",
+            path: "registry/bases/base/styles/carbon/ui/navigation-menu.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4792,7 +4792,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/pagination.tsx",
+            path: "registry/bases/base/styles/carbon/ui/pagination.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4815,7 +4815,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/popover.tsx",
+            path: "registry/bases/base/styles/carbon/ui/popover.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4839,7 +4839,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/progress.tsx",
+            path: "registry/bases/base/styles/carbon/ui/progress.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4863,7 +4863,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/radio-group.tsx",
+            path: "registry/bases/base/styles/carbon/ui/radio-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4887,7 +4887,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/resizable.tsx",
+            path: "registry/bases/base/styles/carbon/ui/resizable.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4911,7 +4911,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/scroll-area.tsx",
+            path: "registry/bases/base/styles/carbon/ui/scroll-area.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4935,7 +4935,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/select.tsx",
+            path: "registry/bases/base/styles/carbon/ui/select.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4959,7 +4959,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/separator.tsx",
+            path: "registry/bases/base/styles/carbon/ui/separator.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -4983,7 +4983,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/sheet.tsx",
+            path: "registry/bases/base/styles/carbon/ui/sheet.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5015,7 +5015,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/ui/sidebar.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5038,7 +5038,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/skeleton.tsx",
+            path: "registry/bases/base/styles/carbon/ui/skeleton.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5061,7 +5061,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/slider.tsx",
+            path: "registry/bases/base/styles/carbon/ui/slider.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5085,7 +5085,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/sonner.tsx",
+            path: "registry/bases/base/styles/carbon/ui/sonner.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5109,7 +5109,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/spinner.tsx",
+            path: "registry/bases/base/styles/carbon/ui/spinner.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5132,7 +5132,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/switch.tsx",
+            path: "registry/bases/base/styles/carbon/ui/switch.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5156,7 +5156,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/table.tsx",
+            path: "registry/bases/base/styles/carbon/ui/table.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5179,7 +5179,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/tabs.tsx",
+            path: "registry/bases/base/styles/carbon/ui/tabs.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5203,7 +5203,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/textarea.tsx",
+            path: "registry/bases/base/styles/carbon/ui/textarea.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5226,7 +5226,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/toast.tsx",
+            path: "registry/bases/base/styles/carbon/ui/toast.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5250,7 +5250,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/toggle.tsx",
+            path: "registry/bases/base/styles/carbon/ui/toggle.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5274,7 +5274,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["toggle"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/toggle-group.tsx",
+            path: "registry/bases/base/styles/carbon/ui/toggle-group.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5298,7 +5298,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/tooltip.tsx",
+            path: "registry/bases/base/styles/carbon/ui/tooltip.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5322,7 +5322,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/kbd.tsx",
+            path: "registry/bases/base/styles/carbon/ui/kbd.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5345,7 +5345,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/native-select.tsx",
+            path: "registry/bases/base/styles/carbon/ui/native-select.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5368,7 +5368,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/direction.tsx",
+            path: "registry/bases/base/styles/carbon/ui/direction.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5390,7 +5390,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/attachment.tsx",
+            path: "registry/bases/base/styles/carbon/ui/attachment.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5407,7 +5407,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/bubble.tsx",
+            path: "registry/bases/base/styles/carbon/ui/bubble.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5424,7 +5424,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/message-scroller.tsx",
+            path: "registry/bases/base/styles/carbon/ui/message-scroller.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5441,7 +5441,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/questionnaire.tsx",
+            path: "registry/bases/base/styles/carbon/ui/questionnaire.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5464,7 +5464,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/marker.tsx",
+            path: "registry/bases/base/styles/carbon/ui/marker.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5481,7 +5481,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["collapsible"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/trace.tsx",
+            path: "registry/bases/base/styles/carbon/ui/trace.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5504,7 +5504,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "use-highlighted-code"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/code-block.tsx",
+            path: "registry/bases/base/styles/carbon/ui/code-block.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5527,7 +5527,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/ui/message.tsx",
+            path: "registry/bases/base/styles/carbon/ui/message.tsx",
             type: "registry:ui",
             target: "",
           },
@@ -5544,7 +5544,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["accordion", "button", "card", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/accordion-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/accordion-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5561,7 +5561,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["alert", "badge", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/alert-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/alert-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5578,7 +5578,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["alert-dialog", "button", "dialog", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/alert-dialog-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/alert-dialog-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5595,7 +5595,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["aspect-ratio", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/aspect-ratio-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/aspect-ratio-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5612,7 +5612,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["avatar", "button", "empty", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/avatar-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/avatar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5629,7 +5629,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["badge", "spinner", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/badge-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/badge-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5646,7 +5646,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["breadcrumb", "dropdown-menu", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/breadcrumb-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/breadcrumb-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5663,7 +5663,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/button-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/button-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5692,7 +5692,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/button-group-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/button-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5718,7 +5718,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/calendar-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/calendar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5742,7 +5742,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/card-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/card-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5759,7 +5759,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["card", "carousel", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/carousel-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/carousel-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5776,7 +5776,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["chart", "card", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/chart-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/chart-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5793,7 +5793,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["checkbox", "field", "table", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/checkbox-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/checkbox-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5818,7 +5818,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/collapsible-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/collapsible-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5846,7 +5846,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/combobox-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/combobox-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5863,7 +5863,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "command", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/command-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/command-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5880,7 +5880,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "context-menu", "dialog", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/context-menu-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/context-menu-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5912,7 +5912,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/dialog-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/dialog-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5929,7 +5929,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["drawer", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/drawer-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/drawer-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5952,7 +5952,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/dropdown-menu-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/dropdown-menu-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -5975,7 +5975,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/empty-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/empty-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6005,7 +6005,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/field-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/field-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6022,7 +6022,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "dialog", "hover-card", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/hover-card-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/hover-card-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6046,7 +6046,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/input-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/input-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6077,7 +6077,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/input-group-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/input-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6100,7 +6100,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/input-otp-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/input-otp-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6117,7 +6117,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "item", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/item-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/item-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6140,7 +6140,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/kbd-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/kbd-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6164,7 +6164,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/label-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/label-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6181,7 +6181,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "dialog", "menubar", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/menubar-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/menubar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6198,7 +6198,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "native-select", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/native-select-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/native-select-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6220,7 +6220,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/navigation-menu-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/navigation-menu-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6237,7 +6237,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "pagination", "select", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/pagination-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/pagination-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6261,7 +6261,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/popover-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/popover-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6284,7 +6284,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/progress-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/progress-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6301,7 +6301,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "radio-group", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/radio-group-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/radio-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6318,7 +6318,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["resizable", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/resizable-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/resizable-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6335,7 +6335,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["scroll-area", "separator", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/scroll-area-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/scroll-area-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6361,7 +6361,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/select-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/select-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6378,7 +6378,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["separator", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/separator-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/separator-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6395,7 +6395,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "field", "input", "sheet", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/sheet-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/sheet-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6419,7 +6419,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/sidebar-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/sidebar-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6444,7 +6444,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/sidebar-icon-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/sidebar-icon-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6461,7 +6461,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["collapsible", "sidebar", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/sidebar-inset-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/sidebar-inset-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6486,7 +6486,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/sidebar-floating-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/sidebar-floating-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6503,7 +6503,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["skeleton", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/skeleton-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/skeleton-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6520,7 +6520,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["label", "slider", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/slider-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/slider-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6537,7 +6537,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sonner", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/sonner-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/sonner-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6562,7 +6562,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/spinner-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/spinner-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6579,7 +6579,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "label", "switch", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/switch-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/switch-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6603,7 +6603,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/table-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/table-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6620,7 +6620,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "dropdown-menu", "tabs", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/tabs-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/tabs-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6637,7 +6637,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["field", "textarea", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/textarea-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/textarea-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6654,7 +6654,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "toast", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/toast-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/toast-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6671,7 +6671,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["toggle", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/toggle-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/toggle-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6688,7 +6688,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["input", "select", "toggle-group", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/toggle-group-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/toggle-group-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6705,7 +6705,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "kbd", "tooltip", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/tooltip-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/tooltip-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6737,7 +6737,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/demo.tsx",
+            path: "registry/bases/base/styles/carbon/examples/demo.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6766,7 +6766,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/component-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/component-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6789,7 +6789,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/attachment-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/attachment-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6813,7 +6813,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/bubble-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/bubble-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6841,7 +6841,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/message-scroller-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/message-scroller-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6865,7 +6865,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/questionnaire-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/questionnaire-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6889,7 +6889,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/marker-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/marker-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6917,7 +6917,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/trace-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/trace-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6945,7 +6945,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/code-block-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/code-block-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6962,7 +6962,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["bubble", "message", "button", "example"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/examples/message-example.tsx",
+            path: "registry/bases/base/styles/carbon/examples/message-example.tsx",
             type: "registry:example",
             target: "",
           },
@@ -6979,7 +6979,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/lib/utils.ts",
+            path: "registry/bases/base/styles/carbon/lib/utils.ts",
             type: "registry:lib",
             target: "",
           },
@@ -6996,7 +6996,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/components/example.tsx",
+            path: "registry/bases/base/styles/carbon/components/example.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7041,7 +7041,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/preview/index.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/preview/index.tsx",
             type: "registry:block",
             target: "",
           },
@@ -7089,7 +7089,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/preview-02/index.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/preview-02/index.tsx",
             type: "registry:block",
             target: "",
           },
@@ -7106,7 +7106,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: [],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/preview-03/index.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/preview-03/index.tsx",
             type: "registry:block",
             target: "",
           },
@@ -7123,12 +7123,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-01/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-01/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-01/components/login-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-01/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7145,12 +7145,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-02/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-02/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-02/components/login-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-02/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7167,12 +7167,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-03/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-03/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-03/components/login-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-03/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7189,12 +7189,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-04/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-04/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-04/components/login-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-04/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7211,12 +7211,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-05/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-05/page.tsx",
             type: "registry:page",
             target: "app/login/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/login-05/components/login-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/login-05/components/login-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7233,12 +7233,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-01/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-01/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-01/components/signup-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-01/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7255,12 +7255,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-02/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-02/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-02/components/signup-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-02/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7277,12 +7277,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-03/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-03/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-03/components/signup-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-03/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7299,12 +7299,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "card", "input", "label", "field"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-04/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-04/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-04/components/signup-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-04/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7321,12 +7321,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["button", "input", "label"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-05/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-05/page.tsx",
             type: "registry:page",
             target: "app/signup/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/signup-05/components/signup-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/signup-05/components/signup-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7363,57 +7363,57 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/data.json",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/data.json",
             type: "registry:file",
             target: "app/dashboard/data.json",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/chart-area-interactive.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/chart-area-interactive.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/data-table.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/data-table.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/nav-documents.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/nav-documents.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/nav-main.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/nav-user.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/section-cards.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/section-cards.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/dashboard-01/components/site-header.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/dashboard-01/components/site-header.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7436,22 +7436,22 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-01/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-01/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-01/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-01/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-01/components/search-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-01/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-01/components/version-switcher.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-01/components/version-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7474,22 +7474,22 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-02/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-02/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-02/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-02/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-02/components/search-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-02/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-02/components/version-switcher.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-02/components/version-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7506,12 +7506,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-03/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-03/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-03/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-03/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7528,12 +7528,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb", "separator"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-04/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-04/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-04/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-04/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7556,17 +7556,17 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-05/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-05/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-05/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-05/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-05/components/search-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-05/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7589,22 +7589,22 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-06/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-06/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-06/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-06/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-06/components/nav-main.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-06/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-06/components/sidebar-opt-in-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-06/components/sidebar-opt-in-form.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7628,32 +7628,32 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-07/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-07/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-07/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-07/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-07/components/nav-main.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-07/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-07/components/nav-projects.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-07/components/nav-projects.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-07/components/nav-user.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-07/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-07/components/team-switcher.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-07/components/team-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7677,32 +7677,32 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-08/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-08/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-08/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-08/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-08/components/nav-main.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-08/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-08/components/nav-projects.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-08/components/nav-projects.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-08/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-08/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-08/components/nav-user.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-08/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7728,17 +7728,17 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-09/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-09/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-09/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-09/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-09/components/nav-user.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-09/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7762,42 +7762,42 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/components/nav-actions.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/components/nav-actions.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/components/nav-favorites.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/components/nav-favorites.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/components/nav-main.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/components/nav-workspaces.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/components/nav-workspaces.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-10/components/team-switcher.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-10/components/team-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7819,12 +7819,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-11/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-11/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-11/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-11/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7849,27 +7849,27 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-12/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-12/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-12/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-12/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-12/components/calendars.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-12/components/calendars.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-12/components/date-picker.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-12/components/date-picker.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-12/components/nav-user.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-12/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7886,12 +7886,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb", "button", "dialog"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-13/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-13/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-13/components/settings-dialog.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-13/components/settings-dialog.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7908,12 +7908,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: ["sidebar", "breadcrumb"],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-14/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-14/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-14/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-14/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
@@ -7939,57 +7939,57 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/calendars.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/calendars.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/date-picker.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/date-picker.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/nav-favorites.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/nav-favorites.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/nav-main.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/nav-user.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/nav-workspaces.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/nav-workspaces.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/sidebar-left.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/sidebar-left.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/sidebar-right.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/sidebar-right.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-15/components/team-switcher.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-15/components/team-switcher.tsx",
             type: "registry:component",
             target: "",
           },
@@ -8015,42 +8015,42 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         ],
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/page.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/page.tsx",
             type: "registry:page",
             target: "app/dashboard/page.tsx",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/components/app-sidebar.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/components/app-sidebar.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/components/nav-main.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/components/nav-main.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/components/nav-projects.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/components/nav-projects.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/components/nav-secondary.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/components/nav-secondary.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/components/nav-user.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/components/nav-user.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/components/search-form.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/components/search-form.tsx",
             type: "registry:component",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/blocks/sidebar-16/components/site-header.tsx",
+            path: "registry/bases/base/styles/carbon/blocks/sidebar-16/components/site-header.tsx",
             type: "registry:component",
             target: "",
           },
@@ -8067,7 +8067,7 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/hooks/use-mobile.ts",
+            path: "registry/bases/base/styles/carbon/hooks/use-mobile.ts",
             type: "registry:hook",
             target: "",
           },
@@ -8084,12 +8084,12 @@ export const Index: Record<string, Record<string, Record<string, any>>> = {
         registryDependencies: undefined,
         files: [
           {
-            path: "registry/bases/base/styles/carbon-v4/hooks/use-highlighted-code.ts",
+            path: "registry/bases/base/styles/carbon/hooks/use-highlighted-code.ts",
             type: "registry:hook",
             target: "",
           },
           {
-            path: "registry/bases/base/styles/carbon-v4/lib/highlighter.tsx",
+            path: "registry/bases/base/styles/carbon/lib/highlighter.tsx",
             type: "registry:lib",
             target: "",
           },

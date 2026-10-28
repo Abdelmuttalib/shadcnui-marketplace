@@ -31,7 +31,7 @@ function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="input-otp-group"
       className={cn(
-        "has-aria-invalid:border-neon-destructive has-aria-invalid:ring-neon-destructive/20 dark:has-aria-invalid:ring-neon-destructive/40 rounded-neon-md flex items-center has-aria-invalid:ring-3",
+        "has-aria-invalid:border-neon-destructive has-aria-invalid:ring-neon-destructive dark:has-aria-invalid:ring-neon-destructive/40 rounded-neon-md flex items-center has-aria-invalid:ring-2",
         className
       )}
       {...props}
@@ -54,7 +54,7 @@ function InputOTPSlot({
       data-slot="input-otp-slot"
       data-active={isActive}
       className={cn(
-        "border-neon-input aria-invalid:border-neon-destructive data-[active=true]:border-neon-ring data-[active=true]:ring-neon-ring/50 data-[active=true]:aria-invalid:border-neon-destructive data-[active=true]:aria-invalid:ring-neon-destructive/20 dark:bg-neon-input/30 dark:data-[active=true]:aria-invalid:ring-neon-destructive/40 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-3",
+        "border-neon-input aria-invalid:border-neon-destructive data-[active=true]:border-neon-ring data-[active=true]:ring-neon-ring/50 data-[active=true]:aria-invalid:border-neon-destructive data-[active=true]:aria-invalid:ring-neon-destructive bg-neon-input/40 dark:data-[active=true]:aria-invalid:ring-neon-destructive/40 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-2",
         className
       )}
       {...props}

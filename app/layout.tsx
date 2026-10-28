@@ -50,15 +50,15 @@ export default function RootLayout({
       className={cn("font-sans antialiased", inter.variable, fontVariables)}
       suppressHydrationWarning
     >
-      <AppProviders>
-        <body>
+      <body>
+        <AppProviders>
           <NuqsAdapter>
             <DevTools />
             <Analytics />
             {children}
           </NuqsAdapter>
-        </body>
-      </AppProviders>
+        </AppProviders>
+      </body>
     </html>
   );
 }

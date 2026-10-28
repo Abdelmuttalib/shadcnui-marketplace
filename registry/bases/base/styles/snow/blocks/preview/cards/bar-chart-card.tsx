@@ -34,11 +34,11 @@ const barChartData = [
 const barChartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--snow-chart-1)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "var(--snow-chart-2)",
   },
 } satisfies ChartConfig;
 
@@ -97,9 +97,9 @@ export function BarChartCard() {
             />
           </BarChart>
         </ChartContainer>
-        <div className="divide-border/60 grid w-full grid-cols-3 divide-x">
+        <div className="divide-snow-border/60 grid w-full grid-cols-3 divide-x">
           <div className="px-2 text-center">
-            <div className="text-muted-foreground text-[0.65rem] uppercase">
+            <div className="text-snow-muted-foreground text-[0.65rem] uppercase">
               Desktop
             </div>
             <div className="text-sm font-medium tabular-nums">
@@ -107,7 +107,7 @@ export function BarChartCard() {
             </div>
           </div>
           <div className="px-2 text-center">
-            <div className="text-muted-foreground text-[0.65rem] uppercase">
+            <div className="text-snow-muted-foreground text-[0.65rem] uppercase">
               Mobile
             </div>
             <div className="text-sm font-medium tabular-nums">
@@ -115,7 +115,7 @@ export function BarChartCard() {
             </div>
           </div>
           <div className="px-2 text-center">
-            <div className="text-muted-foreground text-[0.65rem] uppercase">
+            <div className="text-snow-muted-foreground text-[0.65rem] uppercase">
               Mix Delta
             </div>
             <div className="text-sm font-medium tabular-nums">

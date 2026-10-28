@@ -112,7 +112,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-lucid-input hover:bg-lucid-muted/50 has-[>input:focus-visible]:border-lucid-ring has-[>input:focus-visible]:ring-lucid-ring/50 data-invalid:border-lucid-destructive dark:bg-lucid-input/20 data-checked:border-lucid-primary/40 data-checked:bg-lucid-muted dark:data-checked:bg-lucid-muted rounded-lucid-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "group/questionnaire-choice border-lucid-input hover:bg-lucid-muted/50 has-[>input:focus-visible]:border-lucid-ring has-[>input:focus-visible]:ring-lucid-ring/50 data-invalid:border-lucid-destructive dark:bg-lucid-input/20 data-checked:border-lucid-primary/40 data-checked:bg-lucid-muted dark:data-checked:bg-lucid-muted rounded-lucid-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-2",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-lucid-input focus-visible:border-lucid-ring focus-visible:ring-lucid-ring/50 aria-invalid:border-lucid-destructive aria-invalid:ring-lucid-destructive/20 dark:bg-lucid-input/30 dark:aria-invalid:border-lucid-destructive/50 dark:aria-invalid:ring-lucid-destructive/40 rounded-lucid-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "border-lucid-input focus-visible:outline-lucid-ring aria-invalid:border-lucid-destructive aria-invalid:ring-lucid-destructive/20 dark:bg-lucid-input/30 rounded-lucid-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 sm:min-h-0 md:text-sm",
           "selection:bg-lucid-primary selection:text-lucid-primary-foreground placeholder:text-lucid-muted-foreground",
           className
         )}

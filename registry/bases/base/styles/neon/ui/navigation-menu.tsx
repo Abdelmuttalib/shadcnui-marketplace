@@ -55,7 +55,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group/navigation-menu-trigger inline-flex h-9 w-max items-center justify-center rounded-neon-md px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-neon-muted focus:bg-neon-muted focus-visible:ring-3 focus-visible:ring-neon-ring/50 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-neon-muted/50 data-popup-open:hover:bg-neon-muted data-open:bg-neon-muted/50 data-open:hover:bg-neon-muted data-open:focus:bg-neon-muted"
+  "group/navigation-menu-trigger inline-flex h-9 w-max items-center justify-center rounded-neon-md px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-neon-muted focus:bg-neon-muted focus-visible:ring-2 focus-visible:ring-neon-ring focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-neon-muted/50 data-popup-open:hover:bg-neon-muted data-open:bg-neon-muted/50 data-open:hover:bg-neon-muted data-open:focus:bg-neon-muted"
 );
 
 function NavigationMenuTrigger({
@@ -131,7 +131,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "hover:bg-neon-muted focus:bg-neon-muted focus-visible:ring-neon-ring/50 data-[active=true]:bg-neon-muted/50 data-[active=true]:hover:bg-neon-muted data-[active=true]:focus:bg-neon-muted rounded-neon-md in-data-[slot=navigation-menu-content]:rounded-neon-sm flex items-center gap-1.5 p-2 text-sm transition-all outline-none focus-visible:ring-3 focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
+        "hover:bg-neon-muted focus:bg-neon-muted focus-visible:ring-neon-ring data-[active=true]:bg-neon-muted/50 data-[active=true]:hover:bg-neon-muted data-[active=true]:focus:bg-neon-muted rounded-neon-md in-data-[slot=navigation-menu-content]:rounded-neon-sm flex items-center gap-1.5 p-2 text-sm transition-all outline-none focus-visible:ring-2 focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

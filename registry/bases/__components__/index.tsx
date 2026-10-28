@@ -12,8 +12,8 @@ const shards: Record<
     names: Set<string>;
   }
 > = {
-  "base/default-v4": {
-    load: () => import("./base/default-v4"),
+  "base/default": {
+    load: () => import("./base/default"),
     names: new Set([
       "accordion",
       "alert",
@@ -183,8 +183,8 @@ const shards: Record<
       "use-highlighted-code",
     ]),
   },
-  "base/carbon-v4": {
-    load: () => import("./base/carbon-v4"),
+  "base/carbon": {
+    load: () => import("./base/carbon"),
     names: new Set([
       "accordion",
       "alert",

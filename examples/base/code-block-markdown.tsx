@@ -9,7 +9,7 @@ import {
 } from "streamdown";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { useHighlightedCode } from "@/registry/bases/base/styles/default-v4/hooks/use-highlighted-code";
+import { useHighlightedCode } from "@/registry/bases/base/styles/default/hooks/use-highlighted-code";
 import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
 import { Button } from "@/styles/base-default/ui/button";
 import {
@@ -114,7 +114,7 @@ export function CodeBlockMarkdown() {
   const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="min-h-112 flex w-full max-w-md flex-col gap-4 py-6 text-sm">
+    <div className="flex min-h-112 w-full max-w-md flex-col gap-4 py-6 text-sm">
       {messages.map((message) =>
         message.role === "user" ? (
           <Message key={message.id} align="end">
