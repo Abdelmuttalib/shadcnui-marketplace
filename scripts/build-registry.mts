@@ -29,8 +29,6 @@ import { PRESETS } from "../registry/config";
 import { fonts } from "../registry/fonts";
 import { Style, STYLES } from "../registry/styles.ts";
 
-import { transformRegistryContent } from "./transform-registry-content";
-
 /*
  * build-registry.mts is the single v4 registry pipeline.
  *
@@ -1223,7 +1221,7 @@ async function runFullBuild() {
     CLI_BUILD_CONCURRENCY,
     async (style) => {
       await buildRegistryJsonFile(style.name);
-      await buildRegistry(style.name);
+      // await buildRegistry(style.name);
 
       console.log(`   ✅ ${style.name}`);
     }
@@ -1353,7 +1351,7 @@ async function runTargetedRegistryBuild(target: "all" | string) {
     CLI_BUILD_CONCURRENCY,
     async (style) => {
       await buildRegistryJsonFile(style.name);
-      await buildRegistry(style.name);
+      // await buildRegistry(style.name);
       console.log(`   ✅ ${style.name}`);
     }
   );
@@ -3031,7 +3029,7 @@ async function buildStylePublicRegistry(
 
   const registry = parseResult.data;
 
-  await buildStyleComponentJsonFiles(styleName, registryRoot, registry);
+  await buildStyleComponentJsonFiles(styleName);
 
   await buildStyleIndexJson(styleName, registry, siteRegistryUrl);
 }
@@ -3057,34 +3055,34 @@ async function buildStylePublicRegistry(
 //   return item.dependencies;
 // }
 
-// async function buildRegistry(styleName: string) {
-//   const outputPath = `public/r/styles/${styleName}`;
-//   const registryPath = `registry-${styleName}.json`;
+async function buildRegistry(styleName: string) {
+  const outputPath = `public/r/styles/${styleName}`;
+  const registryPath = `registry-${styleName}.json`;
 
-//   await new Promise<void>((resolve, reject) => {
-//     const proc = spawn(
-//       "node",
-//       [
-//         "../../packages/shadcn/dist/index.js",
-//         "build",
-//         registryPath,
-//         "--output",
-//         outputPath,
-//       ],
-//       { cwd: process.cwd(), stdio: "pipe" }
-//     );
-//     let stderr = "";
-//     proc.stderr?.on("data", (data) => (stderr += data));
-//     proc.on("close", (code) => {
-//       if (code !== 0) {
-//         reject(new Error(`Process exited with code ${code}: ${stderr}`));
-//       } else {
-//         resolve();
-//       }
-//     });
-//     proc.on("error", reject);
-//   });
-// }
+  await new Promise<void>((resolve, reject) => {
+    const proc = spawn(
+      "node",
+      [
+        "../../packages/shadcn/dist/index.js",
+        "build",
+        registryPath,
+        "--output",
+        outputPath,
+      ],
+      { cwd: process.cwd(), stdio: "pipe" }
+    );
+    let stderr = "";
+    proc.stderr?.on("data", (data) => (stderr += data));
+    proc.on("close", (code) => {
+      if (code !== 0) {
+        reject(new Error(`Process exited with code ${code}: ${stderr}`));
+      } else {
+        resolve();
+      }
+    });
+    proc.on("error", reject);
+  });
+}
 
 // Components that import cn directly must declare it as a dependency.
 // Older projects may rely on this declaration to install cn.

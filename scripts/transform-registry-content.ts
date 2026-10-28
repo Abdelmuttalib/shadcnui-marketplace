@@ -1,5 +1,3 @@
-import type { Style } from "../../registry/styles";
-
 /**
  * Converts style-specific utility and CSS variable prefixes
  * to the unprefixed tokens expected by registry consumers.
