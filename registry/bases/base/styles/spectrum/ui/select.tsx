@@ -11,7 +11,7 @@ function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
   return (
     <SelectPrimitive.Group
       data-slot="select-group"
-      className={cn("scroll-my-1 p-1", className)}
+      className={cn("scroll-my-1 p-2", className)}
       {...props}
     />
   );
@@ -40,7 +40,7 @@ function SelectTrigger({
       data-slot="select-trigger"
       data-size={size}
       className={cn(
-        "border-spctm-input focus-visible:border-spctm-ring focus-visible:ring-spctm-ring/50 aria-invalid:border-spctm-destructive aria-invalid:ring-spctm-destructive/20 data-placeholder:text-spctm-muted-foreground dark:bg-spctm-input/30 dark:hover:bg-spctm-input/50 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:ring-spctm-destructive/40 rounded-spctm-md flex w-fit items-center justify-between gap-1.5 border bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "border-spctm-input/5 focus-visible:border-spctm-primary focus-visible:outline-spctm-ring aria-invalid:border-spctm-destructive aria-invalid:outline-spctm-destructive/20 data-placeholder:text-spctm-muted-foreground bg-spctm-input/30 dark:hover:bg-spctm-input/50 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:outline-spctm-destructive rounded-spctm-md flex w-fit items-center justify-between gap-1.5 border-2 py-2 pr-2 pl-2.5 text-sm whitespace-nowrap shadow-xs outline-offset-2 transition-[color,box-shadow] outline-none focus-visible:outline-2 focus-visible:outline-solid disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 aria-invalid:outline-solid data-[size=default]:h-8.5 data-[size=sm]:h-7 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -48,7 +48,7 @@ function SelectTrigger({
       {children}
       <SelectPrimitive.Icon
         render={
-          <ChevronDownIcon className="text-spctm-muted-foreground pointer-events-none size-4" />
+          <ChevronDownIcon className="text-spctm-foreground pointer-events-none size-4" />
         }
       />
     </SelectPrimitive.Trigger>
@@ -83,7 +83,7 @@ function SelectContent({
           data-slot="select-content"
           data-align-trigger={alignItemWithTrigger}
           className={cn(
-            "cn-menu-target cn-menu-translucent bg-spctm-popover text-spctm-popover-foreground ring-spctm-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 rounded-spctm-md relative isolate z-50 max-h-(--available-height) w-(--anchor-width) min-w-36 origin-(--transform-origin) overflow-x-hidden overflow-y-auto shadow-md ring-1 duration-100 data-[align-trigger=true]:animate-none",
+            "cn-menu-target cn-menu-translucent bg-spctm-popover text-spctm-popover-foreground ring-spctm-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 rounded-spctm-lg relative isolate z-50 max-h-(--available-height) w-(--anchor-width) min-w-36 origin-(--transform-origin) overflow-x-hidden overflow-y-auto shadow-md ring-1 duration-100 data-[align-trigger=true]:animate-none",
             className
           )}
           {...props}
@@ -122,7 +122,7 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "focus:bg-spctm-accent focus:text-spctm-accent-foreground not-data-[variant=destructive]:focus:**:text-spctm-accent-foreground rounded-spctm-sm relative flex w-full cursor-default items-center gap-2 py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "focus:bg-spctm-accent focus:text-spctm-accent-foreground not-data-[variant=destructive]:focus:**:text-spctm-accent-foreground rounded-spctm-sm relative flex w-full cursor-default items-center gap-2 py-2 pr-8 pl-2 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         className
       )}
       {...props}

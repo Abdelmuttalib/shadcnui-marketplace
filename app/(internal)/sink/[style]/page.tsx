@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { isSinkStyle, sinkPageRegistry } from "../lib/style-registry";
 import { ScrollRestoration } from "@/components/scroll-restoration";
+import { getStyleFontClassname } from "@/registry/styles-components";
 
 type SinkStylePageProps = {
   params: Promise<{
@@ -18,11 +19,13 @@ export default async function SinkStylePage({ params }: SinkStylePageProps) {
 
   const SinkPage = sinkPageRegistry[style].current;
 
+  const styleFont = getStyleFontClassname(style);
+
   return (
-    <>
+    <div className={styleFont}>
       <ScrollRestoration />
 
       <SinkPage />
-    </>
+    </div>
   );
 }

@@ -112,7 +112,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-spctm-input hover:bg-spctm-muted/50 has-[>input:focus-visible]:border-spctm-ring has-[>input:focus-visible]:ring-spctm-ring/50 data-invalid:border-spctm-destructive dark:bg-spctm-input/20 data-checked:border-spctm-primary/40 data-checked:bg-spctm-muted dark:data-checked:bg-spctm-muted rounded-spctm-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "group/questionnaire-choice border-spctm-input hover:bg-spctm-muted/50 has-[>input:focus-visible]:border-spctm-ring has-[>input:focus-visible]:ring-spctm-ring/50 data-invalid:border-spctm-destructive dark:bg-spctm-input/20 data-checked:border-spctm-primary/40 data-checked:bg-spctm-muted dark:data-checked:bg-spctm-muted rounded-spctm-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:outline-2",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-spctm-input focus-visible:border-spctm-ring focus-visible:ring-spctm-ring/50 aria-invalid:border-spctm-destructive aria-invalid:ring-spctm-destructive/20 dark:bg-spctm-input/30 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:ring-spctm-destructive/40 rounded-spctm-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "border-spctm-input focus-visible:border-spctm-primary focus-visible:outline-spctm-ring aria-invalid:border-spctm-destructive aria-invalid:outline-spctm-destructive/20 dark:bg-spctm-input/30 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:outline-spctm-destructive rounded-spctm-md h-8 min-h-10 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 sm:min-h-0 md:text-sm",
           "selection:bg-spctm-primary selection:text-spctm-primary-foreground placeholder:text-spctm-muted-foreground",
           className
         )}
@@ -206,7 +206,7 @@ function QuestionnaireActions({
     <div
       data-slot="questionnaire-actions"
       className={cn(
-        "grid min-h-11 w-full grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-2 sm:min-h-9",
+        "grid min-h-10 w-full grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-2 sm:min-h-8",
         className
       )}
       {...props}

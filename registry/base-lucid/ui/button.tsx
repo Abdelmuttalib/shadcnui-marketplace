@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center border border-transparent justify-center rounded-lucid-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none outline-transparent select-none outline-offset-2 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-lucid-ring active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-lucid-destructive [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 items-center border border-transparent justify-center rounded-lucid-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none outline-transparent select-none outline-offset-1 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-lucid-ring active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-lucid-destructive [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-lucid-muted hover:text-lucid-foreground aria-expanded:bg-lucid-muted aria-expanded:text-lucid-foreground dark:hover:bg-lucid-muted/50",
         destructive:
-          "bg-lucid-destructive text-lucid-destructive-foreground hover:bg-lucid-destructive/80 focus-visible:border-lucid-destructive/40 focus-visible:outline-lucid-destructive/20",
+          "bg-lucid-destructive text-lucid-destructive-foreground hover:bg-lucid-destructive/80 focus-visible:outline-lucid-destructive/60",
         link: "text-lucid-primary underline-offset-4 hover:underline",
       },
       size: {

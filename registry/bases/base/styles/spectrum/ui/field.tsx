@@ -106,7 +106,7 @@ function FieldLabel({
     <Label
       data-slot="field-label"
       className={cn(
-        "group/field-label peer/field-label has-data-checked:border-spctm-primary/30 has-data-checked:bg-spctm-primary/5 has-[>[data-slot=field]]:not-has-[:disabled,[data-disabled]]:hover:bg-spctm-muted/50 has-[>[data-slot=field]]:has-[:focus-visible]:border-spctm-ring has-[>[data-slot=field]]:has-[:focus-visible]:ring-spctm-ring/50 dark:has-data-checked:border-spctm-primary/20 dark:has-data-checked:bg-spctm-primary/10 has-[>[data-slot=field]]:rounded-spctm-md flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[>[data-slot=field]]:border has-[>[data-slot=field]]:has-[:focus-visible]:ring-3 *:data-[slot=field]:p-3",
+        "group/field-label peer/field-label has-data-checked:border-spctm-primary/30 has-data-checked:bg-spctm-primary/5 has-[>[data-slot=field]]:not-has-[:disabled,[data-disabled]]:hover:bg-spctm-muted/50 has-[>[data-slot=field]]:has-[:focus-visible]:border-spctm-ring has-[>[data-slot=field]]:has-[:focus-visible]:ring-spctm-ring/50 dark:has-data-checked:border-spctm-primary/20 dark:has-data-checked:bg-spctm-primary/10 has-[>[data-slot=field]]:rounded-spctm-md flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[>[data-slot=field]]:border has-[>[data-slot=field]]:has-[:focus-visible]:outline-2 *:data-[slot=field]:p-3",
         "has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col",
         className
       )}

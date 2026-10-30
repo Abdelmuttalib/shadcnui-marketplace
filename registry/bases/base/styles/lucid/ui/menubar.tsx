@@ -101,7 +101,7 @@ function MenubarItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "group/menubar-item focus:bg-lucid-accent focus:text-lucid-accent-foreground not-data-[variant=destructive]:focus:**:text-lucid-accent-foreground data-[variant=destructive]:text-lucid-destructive data-[variant=destructive]:focus:bg-lucid-destructive/10 data-[variant=destructive]:focus:text-lucid-destructive dark:data-[variant=destructive]:focus:bg-lucid-destructive/20 data-[variant=destructive]:*:[svg]:text-lucid-destructive! rounded-lucid-sm gap-2 px-2 py-1.5 text-sm data-disabled:opacity-50 data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
+        "group/menubar-item focus:bg-lucid-primary focus:text-lucid-primary-foreground not-data-[variant=destructive]:focus:**:text-lucid-accent-foreground data-[variant=destructive]:text-lucid-destructive data-[variant=destructive]:focus:bg-lucid-destructive/10 data-[variant=destructive]:focus:text-lucid-destructive dark:data-[variant=destructive]:focus:bg-lucid-destructive/20 data-[variant=destructive]:*:[svg]:text-lucid-destructive! rounded-lucid-sm gap-2 px-2 py-1.5 text-sm data-disabled:opacity-50 data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -123,7 +123,7 @@ function MenubarCheckboxItem({
       data-slot="menubar-checkbox-item"
       data-inset={inset}
       className={cn(
-        "focus:bg-lucid-accent focus:text-lucid-accent-foreground focus:**:text-lucid-accent-foreground rounded-lucid-md relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "focus:bg-lucid-primary focus:text-lucid-primary-foreground focus:**:text-lucid-accent-foreground rounded-lucid-md relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       checked={checked}
@@ -158,7 +158,7 @@ function MenubarRadioItem({
       data-slot="menubar-radio-item"
       data-inset={inset}
       className={cn(
-        "focus:bg-lucid-accent focus:text-lucid-accent-foreground focus:**:text-lucid-accent-foreground rounded-lucid-md relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-lucid-primary focus:text-lucid-primary-foreground focus:**:text-lucid-accent-foreground rounded-lucid-md relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -240,7 +240,7 @@ function MenubarSubTrigger({
       data-slot="menubar-sub-trigger"
       data-inset={inset}
       className={cn(
-        "focus:bg-lucid-accent focus:text-lucid-accent-foreground data-open:bg-lucid-accent data-open:text-lucid-accent-foreground rounded-lucid-sm gap-2 px-2 py-1.5 text-sm data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-lucid-primary focus:text-lucid-primary-foreground data-open:bg-lucid-accent data-open:text-lucid-accent-foreground rounded-lucid-sm gap-2 px-2 py-1.5 text-sm data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

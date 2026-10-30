@@ -29,6 +29,8 @@ import { PRESETS } from "../registry/config";
 import { fonts } from "../registry/fonts";
 import { Style, STYLES } from "../registry/styles.ts";
 
+import { getSiteRegistryUrl } from "../lib/url.ts";
+
 /*
  * build-registry.mts is the single v4 registry pipeline.
  *
@@ -911,6 +913,8 @@ async function buildStylePublicIndex(
       normalizeRegistryFiles(item).length > 0
   );
 
+  console.log("siteRegistryUrl", siteRegistryUrl, process.env.NODE_ENV);
+
   const dependencies = Array.from(
     new Set([
       ...(styleItem.registryDependencies ?? []).filter(
@@ -1013,65 +1017,73 @@ async function getImplementedStyleNames(
 
 const styleNames = await getImplementedStyleNames(BASES, STYLES);
 
-async function buildRegistry2() {
-  console.log("🚀 Building registry...");
-
-  await buildBases(BASES);
-
-  await buildBasesStylesIndex(BASES, STYLES);
-
-  const styleNames = BASES.flatMap((base) =>
-    STYLES.map((style) => `${base.name}-${style.name}`)
-  );
-
-  await Promise.all(
-    styleNames.map(async (styleName) => {
-      await buildRegistryJsonFile(styleName);
-      await buildStyleComponentJsonFiles(styleName);
-    })
-  );
-
-  console.log("✅ Registry build complete!");
-}
-
 // async function buildRegistry2() {
 //   console.log("🚀 Building registry...");
 
-//   // 1. Build each implemented base/style combination.
 //   await buildBases(BASES);
 
-//   // 2. Generate the application-side index and lazy component shards.
 //   await buildBasesStylesIndex(BASES, STYLES);
 
-//   // 3. Build public registry JSON for implemented combinations.
-//   const styleNames = await getImplementedStyleNames(BASES, STYLES);
-
-//   const siteRegistryUrl = (
-//     process.env.NEXT_PUBLIC_SITE_URL ?? "https://shadcnmarketplace.com"
-//   ).replace(/\/+$/, "");
-
-//   await runWithConcurrency(
-//     styleNames,
-//     STYLE_BUILD_CONCURRENCY,
-//     async (styleName) => {
-//       console.log(`   📦 Public registry: ${styleName}`);
-
-//       // Preserve the complete registry JSON.
-//       await buildRegistryJsonFile(styleName);
-
-//       // Generate individual component JSON files.
-//       await buildStyleComponentJsonFiles(styleName);
-
-//       // Generate the style installation manifest.
-//       await buildStylePublicIndex(styleName, siteRegistryUrl);
-//     }
+//   const styleNames = BASES.flatMap((base) =>
+//     STYLES.map((style) => `${base.name}-${style.name}`)
 //   );
 
-//   // 4. Generate the style catalog.
-//   await buildStylesCatalog();
+//   await Promise.all(
+//     styleNames.map(async (styleName) => {
+//       await buildRegistryJsonFile(styleName);
+//       await buildStyleComponentJsonFiles(styleName);
+//     })
+//   );
 
 //   console.log("✅ Registry build complete!");
 // }
+
+async function buildRegistry2() {
+  console.log("🚀 Building registry...");
+
+  // 1. Build each implemented base/style combination.
+  await buildBases(BASES);
+
+  // 2. Generate the application-side index and lazy component shards.
+  await buildBasesStylesIndex(BASES, STYLES);
+
+  // 3. Build public registry JSON for implemented combinations.
+  const styleNames = await getImplementedStyleNames(BASES, STYLES);
+
+  // process.env.NEXT_PUBLIC_SITE_URL ?? "https://shadcnmarketplace.com"
+  const siteRegistryUrl2 = (
+    process.env.NODE_ENV === "production"
+      ? "https://shadcnmarketplace.com"
+      : "http://localhost:3000"
+  ).replace(/\/+$/, "");
+
+  const siteRegistryUrl = getSiteRegistryUrl();
+
+  await runWithConcurrency(
+    styleNames,
+    STYLE_BUILD_CONCURRENCY,
+    async (styleName) => {
+      console.log(`   📦 Public registry: ${styleName}`);
+
+      // Preserve the complete registry JSON.
+      await buildRegistryJsonFile(styleName);
+
+      // Generate individual component JSON files.
+      await buildStyleComponentJsonFiles(styleName);
+
+      // Generate the style installation manifest.
+      await buildStylePublicIndex(styleName, siteRegistryUrl);
+    }
+  );
+
+  // 4. Generate the style catalog.
+  await buildStylesCatalog();
+
+  console.log("\n📋 Copying compiled ui to styles...");
+  await copyUIToStyles();
+
+  console.log("✅ Registry build complete!");
+}
 
 // async function buildRegistry2() {
 //   console.log("🚀 Building registry...");
@@ -2425,6 +2437,10 @@ async function buildRegistryJsonFile(styleName: string) {
 async function buildRegistryJsonFile(styleName: string) {
   const registryRoot = getRegistryRoot(styleName);
   const styleCombination = getStyleCombination(styleName);
+  const registryBaseUrl =
+    process.env.NODE_ENV === "production"
+      ? "https://shadcnmarketplace.com"
+      : "http://localhost:3000";
 
   const { registry: importedRegistry } = await import(
     `../${registryRoot}/registry.ts`

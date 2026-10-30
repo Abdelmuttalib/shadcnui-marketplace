@@ -103,7 +103,7 @@ function ContextMenuItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "group/context-menu-item focus:bg-lucid-accent focus:text-lucid-accent-foreground data-[variant=destructive]:text-lucid-destructive data-[variant=destructive]:focus:bg-lucid-destructive/10 data-[variant=destructive]:focus:text-lucid-destructive dark:data-[variant=destructive]:focus:bg-lucid-destructive/20 focus:*:[svg]:text-lucid-accent-foreground data-[variant=destructive]:*:[svg]:text-lucid-destructive rounded-lucid-sm relative flex cursor-default items-center gap-2 px-2 py-1.5 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "group/context-menu-item focus:bg-lucid-primary focus:text-lucid-primary-foreground data-[variant=destructive]:text-lucid-destructive data-[variant=destructive]:focus:bg-lucid-destructive/10 data-[variant=destructive]:focus:text-lucid-destructive dark:data-[variant=destructive]:focus:bg-lucid-destructive/20 focus:*:[svg]:text-lucid-accent-foreground data-[variant=destructive]:*:[svg]:text-lucid-destructive rounded-lucid-sm relative flex cursor-default items-center gap-2 px-2 py-1.5 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -130,7 +130,7 @@ function ContextMenuSubTrigger({
       data-slot="context-menu-sub-trigger"
       data-inset={inset}
       className={cn(
-        "focus:bg-lucid-accent focus:text-lucid-accent-foreground data-open:bg-lucid-accent data-open:text-lucid-accent-foreground rounded-lucid-sm flex cursor-default items-center px-2 py-1.5 text-sm outline-hidden select-none data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-lucid-primary focus:text-lucid-primary-foreground data-open:bg-lucid-accent data-open:text-lucid-accent-foreground rounded-lucid-sm flex cursor-default items-center px-2 py-1.5 text-sm outline-hidden select-none data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -168,7 +168,7 @@ function ContextMenuCheckboxItem({
       data-slot="context-menu-checkbox-item"
       data-inset={inset}
       className={cn(
-        "focus:bg-lucid-accent focus:text-lucid-accent-foreground rounded-lucid-sm relative flex cursor-default items-center gap-2 py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-lucid-primary focus:text-lucid-primary-foreground rounded-lucid-sm relative flex cursor-default items-center gap-2 py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       checked={checked}
@@ -208,7 +208,7 @@ function ContextMenuRadioItem({
       data-slot="context-menu-radio-item"
       data-inset={inset}
       className={cn(
-        "focus:bg-lucid-accent focus:text-lucid-accent-foreground rounded-lucid-sm relative flex cursor-default items-center gap-2 py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-lucid-primary focus:text-lucid-primary-foreground rounded-lucid-sm relative flex cursor-default items-center gap-2 py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

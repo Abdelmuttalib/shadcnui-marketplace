@@ -4,12 +4,12 @@ const mainLinks = [
     href: "/",
   },
   {
-    label: "Blocks",
-    href: "/blocks",
-  },
-  {
     label: "Styles",
     href: "/styles",
+  },
+  {
+    label: "Blocks",
+    href: "/blocks",
   },
   {
     label: "Colors",
@@ -39,6 +39,8 @@ export const siteConfig = {
   twitterHandle: "@shadcnui_styles",
 
   siteUrl: "https://shadcnmarketplace.com",
+
+  githubLink: "https://github.com/Abdelmuttalib/shadcnui-marketplace",
 
   mainNavLinks: mainLinks,
   footerLinks: mainLinks,

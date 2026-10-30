@@ -76,6 +76,20 @@ export function Footer() {
                     </a>
                   }
                 ></Button>
+                <Button
+                  variant={"ghost"}
+                  size={"icon-sm"}
+                  render={
+                    <a
+                      href={siteConfig.githubLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="sr-only">Github link</span>
+                      <Icons.gitHub className="text-muted-foreground" />
+                    </a>
+                  }
+                ></Button>
                 {/* <Button asChild variant={"ghost"} size={"icon-sm"}>
                   <a
                     href={siteConfig.twitterUrl}

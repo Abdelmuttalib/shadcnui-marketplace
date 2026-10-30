@@ -10,7 +10,10 @@ import { absoluteUrl } from "@/lib/utils";
 // import { Toaster as BaseToaster } from "@/registry/bases/base/ui/toast";
 import { type Base, BASES } from "@/registry/config";
 import { Style, STYLES, styles } from "@/registry/styles";
-import { getStyleVariablesPrefix } from "@/registry/styles-components";
+import {
+  getStyleFontClassname,
+  getStyleVariablesPrefix,
+} from "@/registry/styles-components";
 
 // import "@/app/style-registry.css";
 // import "streamdown/styles.css";
@@ -142,51 +145,12 @@ export default async function BlockPage({
     return notFound();
   }
 
-  const prefix = getStyleVariablesPrefix(style.name);
+  const prefix = getStyleVariablesPrefix(style.name as any);
+
+  const styleFont = getStyleFontClassname(style.name as any);
 
   return (
-    <div
-      className="bg-background relative"
-
-      // style={{
-      //   ["--background"]: `var(--${prefix}-background)`,
-      //   ["--foreground"]: `var(--${prefix}-foreground)`,
-      //   ["--primary"]: `var(--${prefix}-primary)`,
-      //   ["--primary-foreground"]: `var(--${prefix}-primary-foreground)`,
-      //   ["--secondary"]: `var(--${prefix}-secondary)`,
-      //   ["--secondary-foreground"]: `var(--${prefix}-secondary-foreground)`,
-      //   ["--muted"]: `var(--${prefix}-muted)`,
-      //   ["--muted-foreground"]: `var(--${prefix}-muted-foreground)`,
-      //   ["--accent"]: `var(--${prefix}-accent)`,
-      //   ["--accent-foreground"]: `var(--${prefix}-accent-foreground)`,
-      //   ["--destructive"]: `var(--${prefix}-destructive)`,
-      //   ["--destructive-foreground"]: `var(--${prefix}-destructive-foreground)`,
-      //   ["--border"]: `var(--${prefix}-border)`,
-      //   ["--input"]: `var(--${prefix}-input)`,
-      //   ["--ring"]: `var(--${prefix}-ring)`,
-      //   ["--card"]: `var(--${prefix}-card)`,
-      //   ["--card-foreground"]: `var(--${prefix}-card-foreground)`,
-      //   ["--popover"]: `var(--${prefix}-popover)`,
-      //   ["--popover-foreground"]: `var(--${prefix}-popover-foreground)`,
-
-      //   ["--chart-1"]: `var(--${prefix}-chart-1)`,
-      //   ["--chart-2"]: `var(--${prefix}-chart-2)`,
-      //   ["--chart-3"]: `var(--${prefix}-chart-3)`,
-      //   ["--chart-4"]: `var(--${prefix}-chart-4)`,
-      //   ["--chart-5"]: `var(--${prefix}-chart-5)`,
-
-      //   ["--radius"]: style.defaultRadius,
-
-      //   ["--sidebar-background"]: `var(--${prefix}-sidebar-background)`,
-      //   ["--sidebar-foreground"]: `var(--${prefix}-sidebar-foreground)`,
-      //   ["--sidebar-primary"]: `var(--${prefix}-sidebar-primary)`,
-      //   ["--sidebar-primary-foreground"]: `var(--${prefix}-sidebar-primary-foreground)`,
-      //   ["--sidebar-accent"]: `var(--${prefix}-sidebar-accent)`,
-      //   ["--sidebar-accent-foreground"]: `var(--${prefix}-sidebar-accent-foreground)`,
-      //   ["--sidebar-border"]: `var(--${prefix}-sidebar-border)`,
-      //   ["--sidebar-ring"]: `var(--${prefix}-sidebar-ring)`,
-      // }}
-    >
+    <div className={`bg-background relative ${styleFont}`}>
       <Component />
       {/* <DesignSystemProvider>
         <Component />
