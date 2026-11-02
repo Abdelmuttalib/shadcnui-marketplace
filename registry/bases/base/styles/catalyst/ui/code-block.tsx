@@ -8,12 +8,12 @@ import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 import { CheckIcon, CopyIcon } from "lucide-react";
 
 const codeBlockVariants = cva(
-  "group/code-block relative flex w-full min-w-0 flex-col overflow-hidden rounded-catalyst-lg text-sm has-[>[data-slot=code-block-content]:focus-visible]:ring-3 has-[>[data-slot=code-block-content]:focus-visible]:ring-catalyst-ring/50 data-[size=sm]:text-xs",
+  "group/code-block relative flex w-full min-w-0 flex-col overflow-hidden rounded-catalyst-lg text-sm has-[>[data-slot=code-block-content]:focus-visible]:outline-2 has-[>[data-slot=code-block-content]:focus-visible]:outline-catalyst-ring data-[size=sm]:text-xs",
   {
     variants: {
       variant: {
         default:
-          "border border-catalyst-input text-catalyst-foreground has-[>[data-slot=code-block-content]:focus-visible]:border-catalyst-ring dark:bg-catalyst-input/30",
+          "border border-catalyst-input text-catalyst-foreground has-[>[data-slot=code-block-content]:focus-visible]:border-catalyst-ring dark:bg-catalyst-input/50",
         destructive:
           "border border-catalyst-destructive/30 text-catalyst-destructive dark:border-catalyst-destructive/40",
       },

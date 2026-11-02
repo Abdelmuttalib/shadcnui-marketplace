@@ -55,7 +55,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group/navigation-menu-trigger inline-flex h-9 w-max items-center justify-center rounded-catalyst-md px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-catalyst-muted focus:bg-catalyst-muted focus-visible:ring-3 focus-visible:ring-catalyst-ring/50 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-catalyst-muted/50 data-popup-open:hover:bg-catalyst-muted data-open:bg-catalyst-muted/50 data-open:hover:bg-catalyst-muted data-open:focus:bg-catalyst-muted"
+  "group/navigation-menu-trigger inline-flex h-9 w-max items-center justify-center rounded-catalyst-md px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-catalyst-muted focus:bg-catalyst-muted focus-visible:outline-2 focus-visible:outline-catalyst-ring focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-catalyst-muted/50 data-popup-open:hover:bg-catalyst-muted data-open:bg-catalyst-muted/50 data-open:hover:bg-catalyst-muted data-open:focus:bg-catalyst-muted"
 );
 
 function NavigationMenuTrigger({
@@ -131,7 +131,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "hover:bg-catalyst-muted focus:bg-catalyst-muted focus-visible:ring-catalyst-ring/50 data-[active=true]:bg-catalyst-muted/50 data-[active=true]:hover:bg-catalyst-muted data-[active=true]:focus:bg-catalyst-muted rounded-catalyst-md in-data-[slot=navigation-menu-content]:rounded-catalyst-sm flex items-center gap-1.5 p-2 text-sm transition-all outline-none focus-visible:ring-3 focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
+        "hover:bg-catalyst-muted focus:bg-catalyst-muted focus-visible:outline-catalyst-ring data-[active=true]:bg-catalyst-muted/50 data-[active=true]:hover:bg-catalyst-muted data-[active=true]:focus:bg-catalyst-muted rounded-catalyst-md in-data-[slot=navigation-menu-content]:rounded-catalyst-sm flex items-center gap-1.5 p-2 text-sm transition-all outline-none focus-visible:outline-1 focus-visible:outline-2 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

@@ -112,7 +112,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-neon-input hover:bg-neon-muted/50 has-[>input:focus-visible]:border-neon-ring has-[>input:focus-visible]:ring-neon-ring/50 data-invalid:border-neon-destructive dark:bg-neon-input/20 data-checked:border-neon-primary/40 data-checked:bg-neon-muted dark:data-checked:bg-neon-muted rounded-neon-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-2",
+        "group/questionnaire-choice border-neon-input hover:bg-neon-muted/50 has-[>input:focus-visible]:border-neon-ring has-[>input:focus-visible]:ring-neon-ring/50 data-invalid:border-neon-destructive dark:bg-neon-input/20 data-checked:border-neon-primary/40 data-checked:bg-neon-muted dark:data-checked:bg-neon-muted rounded-neon-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:outline-2",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-neon-input focus-visible:ring-neon-ring aria-invalid:border-neon-destructive aria-invalid:ring-neon-destructive bg-neon-input/40 rounded-neon-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-2 sm:min-h-0 md:text-sm",
+          "border-neon-input focus-visible:outline-neon-ring aria-invalid:border-neon-destructive aria-invalid:outline-neon-destructive bg-neon-input/40 rounded-neon-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 sm:min-h-0 md:text-sm",
           "selection:bg-neon-primary selection:text-neon-primary-foreground placeholder:text-neon-muted-foreground",
           className
         )}

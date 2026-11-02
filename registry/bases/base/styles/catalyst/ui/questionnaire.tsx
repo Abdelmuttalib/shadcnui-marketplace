@@ -112,7 +112,7 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-catalyst-input hover:bg-catalyst-muted/50 has-[>input:focus-visible]:border-catalyst-ring has-[>input:focus-visible]:ring-catalyst-ring/50 data-invalid:border-catalyst-destructive dark:bg-catalyst-input/20 data-checked:border-catalyst-primary/40 data-checked:bg-catalyst-muted dark:data-checked:bg-catalyst-muted rounded-catalyst-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "group/questionnaire-choice border-catalyst-input hover:bg-catalyst-muted/50 has-[>input:focus-visible]:border-catalyst-ring has-[>input:focus-visible]:outline-catalyst-ring data-invalid:border-catalyst-destructive dark:bg-catalyst-input/20 data-checked:border-catalyst-primary/40 data-checked:bg-catalyst-muted dark:data-checked:bg-catalyst-muted rounded-catalyst-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:outline-2",
         "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
@@ -125,7 +125,7 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="border-catalyst-input group-data-checked/questionnaire-choice:border-catalyst-primary group-data-checked/questionnaire-choice:bg-catalyst-primary group-data-checked/questionnaire-choice:text-catalyst-primary-foreground dark:bg-catalyst-input/30 dark:group-data-checked/questionnaire-choice:bg-catalyst-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
+        className="border-catalyst-input group-data-checked/questionnaire-choice:border-catalyst-primary group-data-checked/questionnaire-choice:bg-catalyst-primary group-data-checked/questionnaire-choice:text-catalyst-primary-foreground dark:bg-catalyst-input/50 dark:group-data-checked/questionnaire-choice:bg-catalyst-primary pointer-events-none relative flex size-4 shrink-0 translate-y-[--spacing(0.45)] items-center justify-center rounded-[4px] border group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-catalyst-input focus-visible:border-catalyst-ring focus-visible:ring-catalyst-ring/50 aria-invalid:border-catalyst-destructive aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/30 dark:aria-invalid:border-catalyst-destructive/50 dark:aria-invalid:ring-catalyst-destructive/40 rounded-catalyst-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "border-catalyst-input focus-visible:outline-catalyst-ring aria-invalid:border-catalyst-destructive aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/50 dark:aria-invalid:border-catalyst-destructive/50 dark:aria-invalid:outline-catalyst-destructive rounded-catalyst-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2 sm:min-h-0 md:text-sm",
           "selection:bg-catalyst-primary selection:text-catalyst-primary-foreground placeholder:text-catalyst-muted-foreground",
           className
         )}

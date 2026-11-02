@@ -23,7 +23,7 @@ function NativeSelect({
       <select
         data-slot="native-select"
         data-size={size}
-        className="border-catalyst-input selection:bg-catalyst-primary selection:text-catalyst-primary-foreground placeholder:text-catalyst-muted-foreground focus-visible:border-catalyst-ring focus-visible:ring-catalyst-ring/50 aria-invalid:border-catalyst-destructive aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/30 dark:hover:bg-catalyst-input/50 dark:aria-invalid:border-catalyst-destructive/50 dark:aria-invalid:ring-catalyst-destructive/40 rounded-catalyst-md h-9 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
+        className="border-catalyst-input selection:bg-catalyst-primary selection:text-catalyst-primary-foreground placeholder:text-catalyst-muted-foreground focus-visible:outline-catalyst-ring aria-invalid:border-catalyst-destructive aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/50 dark:hover:bg-catalyst-input/50 dark:aria-invalid:border-catalyst-destructive/50 dark:aria-invalid:outline-catalyst-destructive rounded-catalyst-md h-9 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:outline-2 data-[size=sm]:h-8"
         {...props}
       />
       <ChevronDownIcon

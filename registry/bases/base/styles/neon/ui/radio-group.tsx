@@ -19,7 +19,7 @@ function RadioGroupItem({ className, ...props }: RadioPrimitive.Root.Props) {
     <RadioPrimitive.Root
       data-slot="radio-group-item"
       className={cn(
-        "group/radio-group-item peer border-neon-input ring-offset-neon-background group-has-[:focus-visible]/field-label:not-data-checked:border-neon-input focus-visible:ring-neon-ring aria-invalid:border-neon-destructive aria-invalid:ring-neon-destructive aria-invalid:aria-checked:border-neon-primary bg-neon-input/40 data-checked:border-neon-primary data-checked:text-neon-primary group-has-[:focus-visible]/field-label:data-checked:border-neon-primary rounded-neon-sm relative flex aspect-square size-4 shrink-0 border ring-offset-2 outline-none group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-2",
+        "group/radio-group-item peer border-neon-input ring-offset-neon-background group-has-[:focus-visible]/field-label:not-data-checked:border-neon-input focus-visible:outline-neon-ring aria-invalid:border-neon-destructive aria-invalid:outline-neon-destructive aria-invalid:aria-checked:border-neon-primary bg-neon-input/40 data-checked:border-neon-primary data-checked:text-neon-primary group-has-[:focus-visible]/field-label:data-checked:border-neon-primary rounded-neon-sm relative flex aspect-square size-4 shrink-0 border ring-offset-2 outline-none group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:outline-2",
         className
       )}
       {...props}

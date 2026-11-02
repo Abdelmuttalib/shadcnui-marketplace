@@ -31,7 +31,7 @@ function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="input-otp-group"
       className={cn(
-        "has-aria-invalid:border-catalyst-destructive has-aria-invalid:ring-catalyst-destructive/20 dark:has-aria-invalid:ring-catalyst-destructive/40 rounded-catalyst-md flex items-center has-aria-invalid:ring-3",
+        "has-aria-invalid:border-catalyst-destructive has-aria-invalid:ring-catalyst-destructive/20 dark:has-aria-invalid:ring-catalyst-destructive/40 rounded-catalyst-md flex items-center has-aria-invalid:outline-2",
         className
       )}
       {...props}
@@ -54,7 +54,7 @@ function InputOTPSlot({
       data-slot="input-otp-slot"
       data-active={isActive}
       className={cn(
-        "border-catalyst-input aria-invalid:border-catalyst-destructive data-[active=true]:border-catalyst-ring data-[active=true]:ring-catalyst-ring/50 data-[active=true]:aria-invalid:border-catalyst-destructive data-[active=true]:aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/30 dark:data-[active=true]:aria-invalid:ring-catalyst-destructive/40 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-3",
+        "border-catalyst-input aria-invalid:border-catalyst-destructive data-[active=true]:border-catalyst-ring data-[active=true]:outline-catalyst-ring data-[active=true]:aria-invalid:border-catalyst-destructive data-[active=true]:aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/50 dark:data-[active=true]:aria-invalid:ring-catalyst-destructive/40 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:outline-2",
         className
       )}
       {...props}

@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 ring-offset-2 ring-offset-transparent items-center justify-center rounded-neon-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:ring-2 focus-visible:ring-neon-ring active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-neon-destructive aria-invalid:ring-2 aria-invalid:ring-neon-destructive   [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 outline-offset-2 outline-offset-transparent items-center justify-center rounded-neon-md border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:outline-2 focus-visible:outline-neon-ring active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-neon-destructive aria-invalid:outline-2 aria-invalid:outline-neon-destructive [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-neon-muted hover:text-neon-foreground aria-expanded:bg-neon-muted aria-expanded:text-neon-foreground dark:hover:bg-neon-muted/50",
         destructive:
-          "bg-neon-destructive/10 text-neon-destructive hover:bg-neon-destructive/20 focus-visible:border-neon-destructive/40 focus-visible:ring-neon-destructive/20 dark:bg-neon-destructive/20 dark:hover:bg-neon-destructive/30 dark:focus-visible:ring-neon-destructive/40",
+          "bg-neon-destructive/10 text-neon-destructive hover:bg-neon-destructive/20 focus-visible:border-neon-destructive/40 focus-visible:outline-neon-destructive/20 dark:bg-neon-destructive/20 dark:hover:bg-neon-destructive/30 dark:focus-visible:outline-neon-destructive/40",
         link: "text-neon-primary underline-offset-4 hover:underline",
       },
       size: {

@@ -13,7 +13,7 @@ function Trace({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="trace"
       className={cn(
-        "*:has-[>[data-slot=trace-line]]:focus-visible:ring-catalyst-ring/50 *:has-[>[data-slot=trace-line]]:rounded-catalyst-md flex w-full min-w-0 flex-col gap-2 *:has-[>[data-slot=trace-line]]:flex *:has-[>[data-slot=trace-line]]:w-fit *:has-[>[data-slot=trace-line]]:max-w-full *:has-[>[data-slot=trace-line]]:min-w-0 *:has-[>[data-slot=trace-line]]:text-left *:has-[>[data-slot=trace-line]]:outline-none *:has-[>[data-slot=trace-line]]:focus-visible:ring-3",
+        "*:has-[>[data-slot=trace-line]]:focus-visible:outline-catalyst-ring *:has-[>[data-slot=trace-line]]:rounded-catalyst-md flex w-full min-w-0 flex-col gap-2 *:has-[>[data-slot=trace-line]]:flex *:has-[>[data-slot=trace-line]]:w-fit *:has-[>[data-slot=trace-line]]:max-w-full *:has-[>[data-slot=trace-line]]:min-w-0 *:has-[>[data-slot=trace-line]]:text-left *:has-[>[data-slot=trace-line]]:outline-none *:has-[>[data-slot=trace-line]]:focus-visible:outline-2",
         className
       )}
       {...props}
@@ -112,7 +112,7 @@ function TraceCollapsibleTrigger({
     <CollapsibleTrigger
       data-slot="trace-collapsible-trigger"
       className={cn(
-        "group/trace-collapsible-trigger text-catalyst-muted-foreground hover:text-catalyst-foreground focus-visible:ring-catalyst-ring/50 has-[[data-status=error]]:text-catalyst-destructive rounded-catalyst-md flex w-fit max-w-full min-w-0 cursor-pointer items-center gap-1 text-left transition-colors outline-none focus-visible:ring-3",
+        "group/trace-collapsible-trigger text-catalyst-muted-foreground hover:text-catalyst-foreground focus-visible:outline-catalyst-ring has-[[data-status=error]]:text-catalyst-destructive rounded-catalyst-md flex w-fit max-w-full min-w-0 cursor-pointer items-center gap-1 text-left transition-colors outline-none focus-visible:outline-2",
         className
       )}
       {...props}

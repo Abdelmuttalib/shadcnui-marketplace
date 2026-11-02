@@ -27,7 +27,7 @@ function Menubar({ className, ...props }: MenubarPrimitive.Props) {
     <MenubarPrimitive
       data-slot="menubar"
       className={cn(
-        "rounded-wedges-md border-wedges-border flex h-9 items-center gap-1 border p-1 shadow-xs",
+        "rounded-wedges-md border-wedges-border flex h-9 items-center gap-1 border shadow-xs",
         className
       )}
       {...props}
@@ -59,7 +59,7 @@ function MenubarTrigger({
     <DropdownMenuTrigger
       data-slot="menubar-trigger"
       className={cn(
-        "hover:bg-wedges-muted aria-expanded:bg-wedges-muted rounded-wedges-sm flex items-center px-3 py-1 text-sm font-medium outline-hidden select-none",
+        "hover:bg-wedges-muted aria-expanded:bg-wedges-muted rounded-wedges-sm flex items-center px-3 py-1.5 text-sm font-medium outline-hidden select-none",
         className
       )}
       {...props}
@@ -240,7 +240,7 @@ function MenubarSubTrigger({
       data-slot="menubar-sub-trigger"
       data-inset={inset}
       className={cn(
-        "focus:bg-wedges-accent focus:text-wedges-accent-foreground data-open:bg-wedges-accent data-open:text-wedges-accent-foreground rounded-wedges-sm gap-2 px-3 py-1.5 text-sm data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
+        "focus:bg-wedges-accent focus:text-wedges-accent-foreground data-open:bg-wedges-accent data-open:text-wedges-accent-foreground gap-2 px-3 py-1.5 text-sm data-inset:pl-8 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

@@ -126,7 +126,7 @@ function ComboboxList({ className, ...props }: ComboboxPrimitive.List.Props) {
     <ComboboxPrimitive.List
       data-slot="combobox-list"
       className={cn(
-        "no-scrollbar max-h-[min(calc(--spacing(72)---spacing(9)),calc(var(--available-height)---spacing(9)))] scroll-py-1 overflow-y-auto overscroll-contain p-1 data-empty:p-0",
+        "no-scrollbar max-h-[min(calc(--spacing(72)---spacing(9)),calc(var(--available-height)---spacing(9)))] scroll-py-1 overflow-y-auto overscroll-contain p-0.5 data-empty:p-0",
         className
       )}
       {...props}
@@ -178,7 +178,7 @@ function ComboboxLabel({
     <ComboboxPrimitive.GroupLabel
       data-slot="combobox-label"
       className={cn(
-        "text-catalyst-muted-foreground px-2 py-1.5 text-xs",
+        "text-catalyst-muted-foreground px-2.5 py-1.5 text-xs",
         className
       )}
       {...props}
@@ -227,7 +227,7 @@ function ComboboxChips({
     <ComboboxPrimitive.Chips
       data-slot="combobox-chips"
       className={cn(
-        "border-catalyst-input focus-within:border-catalyst-ring focus-within:ring-catalyst-ring/50 has-aria-invalid:border-catalyst-destructive has-aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/30 dark:has-aria-invalid:border-catalyst-destructive/50 dark:has-aria-invalid:ring-catalyst-destructive/40 rounded-catalyst-md flex min-h-9 flex-wrap items-center gap-1.5 border bg-transparent bg-clip-padding px-2.5 py-1.5 text-sm shadow-xs transition-[color,box-shadow] focus-within:ring-3 has-aria-invalid:ring-3 has-data-[slot=combobox-chip]:px-1.5",
+        "border-catalyst-input focus-within:border-catalyst-ring focus-within:outline-catalyst-ring has-aria-invalid:border-catalyst-destructive has-aria-invalid:ring-catalyst-destructive/20 dark:bg-catalyst-input/50 dark:has-aria-invalid:border-catalyst-destructive/50 dark:has-aria-invalid:ring-catalyst-destructive/40 rounded-catalyst-md flex min-h-9 flex-wrap items-center gap-1.5 border bg-transparent bg-clip-padding px-2.5 py-1.5 text-sm shadow-xs transition-[color,box-shadow] focus-within:outline-2 has-aria-invalid:outline-2 has-data-[slot=combobox-chip]:px-1.5",
         className
       )}
       {...props}

@@ -7,7 +7,7 @@ import { cn } from "cn";
 import { Button } from "@/registry/bases/base/styles/catalyst/ui/button";
 
 const attachmentVariants = cva(
-  "group/attachment relative flex w-fit max-w-full min-w-0 shrink-0 flex-wrap rounded-xl border bg-catalyst-card text-catalyst-card-foreground transition-colors focus-within:ring-1 focus-within:ring-catalyst-ring/50 has-[>a,>button]:hover:bg-catalyst-muted/50 data-[state=error]:border-catalyst-destructive/30 data-[state=idle]:border-dashed",
+  "group/attachment relative flex w-fit max-w-full min-w-0 shrink-0 flex-wrap rounded-xl border bg-catalyst-card text-catalyst-card-foreground transition-colors focus-within:ring-1 focus-within:outline-catalyst-ring has-[>a,>button]:hover:bg-catalyst-muted/50 data-[state=error]:border-catalyst-destructive/30 data-[state=idle]:border-dashed",
   {
     variants: {
       size: {
