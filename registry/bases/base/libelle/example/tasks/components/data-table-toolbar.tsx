@@ -1,7 +1,7 @@
 "use client";
 
 import { Cross2Icon } from "@radix-ui/react-icons";
-import { Table } from "@tanstack/react-table";
+import { RowData, stockFeatures, Table } from "@tanstack/react-table";
 
 import { Button } from "@/registry/bases/base/libelle/ui/button";
 import { Input } from "@/registry/bases/base/libelle/ui/input";
@@ -10,14 +10,14 @@ import { priorities, statuses } from "../data/data";
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 import { DataTableViewOptions } from "./data-table-view-options";
 
-interface DataTableToolbarProps<TData> {
-  table: Table<TData>;
+interface DataTableToolbarProps<TData extends RowData> {
+  table: Table<typeof stockFeatures, TData>;
 }
 
-export function DataTableToolbar<TData>({
+export function DataTableToolbar<TData extends RowData>({
   table,
 }: DataTableToolbarProps<TData>) {
-  const isFiltered = table.getState().columnFilters.length > 0;
+  const isFiltered = (table.atoms.columnFilters?.get() ?? []).length > 0;
 
   return (
     <div className="flex items-center justify-between">

@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./style-vega.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";

@@ -63,21 +63,18 @@ export function Mail({
   return (
     <TooltipProvider delayDuration={0}>
       <ResizablePanelGroup
-        direction="horizontal"
-        onLayout={(sizes: number[]) => {}}
+        orientation="horizontal"
+
         className="h-full items-stretch"
       >
         <ResizablePanel
-          defaultSize={defaultLayout[0]}
+          defaultSize={`${defaultLayout[0]}%`}
           collapsedSize={navCollapsedSize}
           collapsible={true}
-          minSize={15}
-          maxSize={20}
-          onCollapse={() => {
-            setIsCollapsed(true);
-          }}
-          onResize={() => {
-            setIsCollapsed(false);
+          minSize={"15%"}
+          maxSize={"20%"}
+          onResize={(size) => {
+            setIsCollapsed(size.asPercentage <= navCollapsedSize);
           }}
           className={cn(
             isCollapsed &&
@@ -172,7 +169,7 @@ export function Mail({
           />
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
+        <ResizablePanel defaultSize={`${defaultLayout[1]}%`} minSize={30}>
           <Tabs defaultValue="all">
             <div className="flex items-center px-4 py-2">
               <h1 className="text-xl font-bold">Inbox</h1>
@@ -185,7 +182,7 @@ export function Mail({
             <div className="supports-backdrop-filter:bg-libelle-background/60 bg-libelle-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="text-libelle-muted-foreground absolute left-2 top-2.5 h-4 w-4" />
+                  <Search className="text-libelle-muted-foreground absolute top-2.5 left-2 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>
@@ -199,7 +196,7 @@ export function Mail({
           </Tabs>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={defaultLayout[2]} minSize={30}>
+        <ResizablePanel defaultSize={`${defaultLayout[2]}%`} minSize={30}>
           <MailDisplay
             mail={mails.find((item) => item.id === mail.selected) || null}
           />

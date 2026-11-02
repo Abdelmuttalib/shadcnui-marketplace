@@ -7,7 +7,6 @@ export const styles = [
       "The default style is a versatile and widely used design that provides a clean and modern look for user interfaces. It features a balanced combination of colors, typography, and spacing, making it suitable for various applications and platforms.",
     defaultRadius: "0.5rem",
   },
-
   {
     name: "carbon",
     label: "Carbon",
@@ -105,3 +104,4 @@ export const STYLES = styles;
 
 export type StyleRegistry = (typeof styles)[number];
 export type Style = StyleRegistry;
+export type StyleName = StyleRegistry["name"];

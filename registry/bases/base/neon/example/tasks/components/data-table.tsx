@@ -80,7 +80,7 @@ export function DataTable<TData extends RowData>({
 
   return (
     <div className="space-y-4">
-      <DataTableToolbar table={table} />
+      <DataTableToolbar table={table as any} />
 
       <div className="rounded-neon-md border-neon-border border">
         <Table>

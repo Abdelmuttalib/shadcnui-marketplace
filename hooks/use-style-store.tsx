@@ -29,6 +29,7 @@ import { SpectrumUI } from "@/registry/bases/base/spectrum/spectrum-hero";
 import { SpectrumShowcaseComponents } from "@/registry/bases/base/spectrum/spectrum-showcase-components";
 import { WedgesUI } from "@/registry/bases/base/wedges/wedges-hero";
 import { WedgesShowcaseComponents } from "@/registry/bases/base/wedges/wedges-showcase-components";
+import { StyleName } from "@/registry/styles";
 
 const DEV_STYLES_PATH: Record<StyleType, string> = {
   default: "http://localhost:3000",
@@ -77,21 +78,7 @@ export function getStylesPath(env: string) {
   return PROD_STYLES_PATH;
 }
 
-// "default" | "default-v4" | "carbon" | "catalyst" | "material" | "linear" | "spectrum" | "wedges" | "moon" | "lucid" | "snow" | "neon" | "libelle"
-
-type StyleType =
-  | "default"
-  | "carbon"
-  | "catalyst"
-  | "material"
-  | "linear"
-  | "spectrum"
-  | "wedges"
-  | "moon"
-  | "lucid"
-  | "snow"
-  | "neon"
-  | "libelle";
+type StyleType = StyleName;
 
 const STYLES_PATH: Record<StyleType, string> = getStylesPath(NODE_ENV!);
 

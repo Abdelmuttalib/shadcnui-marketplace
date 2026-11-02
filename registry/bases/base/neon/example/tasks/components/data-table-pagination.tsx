@@ -4,7 +4,7 @@ import {
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
 } from "@radix-ui/react-icons";
-import { Table } from "@tanstack/react-table";
+import { RowData, stockFeatures, Table } from "@tanstack/react-table";
 
 import { Button } from "@/registry/bases/base/neon/ui/button";
 import {

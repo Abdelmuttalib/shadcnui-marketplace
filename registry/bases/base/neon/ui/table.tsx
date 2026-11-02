@@ -6,7 +6,7 @@ const Table = React.forwardRef<
   HTMLTableElement,
   React.HTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
-  <div className="relative w-full overflow-auto bg-neon-muted/50">
+  <div className="bg-neon-muted/50 relative w-full overflow-auto">
     <table
       ref={ref}
       className={cn("w-full caption-bottom text-sm", className)}
@@ -22,7 +22,7 @@ const TableHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <thead
     ref={ref}
-    className={cn("[&_tr]:border-b [&_tr]:border-b-neon-border", className)}
+    className={cn("[&_tr]:border-b-neon-border [&_tr]:border-b", className)}
     {...props}
   />
 ));
@@ -47,7 +47,7 @@ const TableFooter = React.forwardRef<
   <tfoot
     ref={ref}
     className={cn(
-      "border-t border-t-neon-border bg-neon-muted/50 font-medium [&>tr]:last:border-b-0",
+      "border-t-neon-border bg-neon-muted/50 border-t font-medium [&>tr]:last:border-b-0",
       className
     )}
     {...props}
@@ -62,7 +62,7 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
-      "border-b border-b-neon-border transition-colors hover:bg-neon-muted/50 data-[state=selected]:bg-neon-muted",
+      "border-b-neon-border hover:bg-neon-muted/50 data-[state=selected]:bg-neon-muted border-b transition-colors",
       className
     )}
     {...props}
@@ -77,7 +77,7 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={cn(
-      "h-12 px-4 text-left align-middle font-medium text-neon-muted-foreground [&:has([role=checkbox])]:pr-0",
+      "text-neon-muted-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
       className
     )}
     {...props}
@@ -103,7 +103,7 @@ const TableCaption = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <caption
     ref={ref}
-    className={cn("mt-4 text-sm text-neon-muted-foreground", className)}
+    className={cn("text-neon-muted-foreground mt-4 text-sm", className)}
     {...props}
   />
 ));

@@ -40,20 +40,6 @@ export function StyleCssWrapper({
 }>) {
   const { style: _style } = useStyleStore();
 
-  // const styles = {
-  //   default: "bg-dft-background",
-  //   carbon: "bg-cb-background",
-  //   linear: "bg-linear-background",
-  //   material: "bg-material-background",
-  //   catalyst: "bg-catalyst-background",
-  //   wedges: "bg-wedges-background",
-  //   spectrum: "bg-spctm-background",
-  //   moon: "bg-moon-background",
-  //   lucid: "bg-lucid-background",
-  //   snow: "bg-snow-background",
-  //   neon: "bg-neon-background",
-  // };
-
   return (
     <div
       className={cn(getStyleBackgroundClassname(style || _style), className)}

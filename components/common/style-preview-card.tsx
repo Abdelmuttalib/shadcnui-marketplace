@@ -29,7 +29,7 @@ export function StylePreviewCard({
   const styleCssVariableWithPrefix = `--${getStyleVariablesPrefix(style)}`;
 
   return (
-    <div className="to-accent group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-linear-to-r from-transparent p-6">
+    <div className="to-accent group relative flex max-h-120 min-h-120 w-full flex-col gap-2 overflow-hidden rounded-md border bg-linear-to-r from-transparent p-6">
       {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-linear-to-br from-transparent to-accent"></div> */}
 
       {link ? (
