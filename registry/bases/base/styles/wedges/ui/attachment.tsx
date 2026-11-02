@@ -7,7 +7,7 @@ import { cn } from "cn";
 import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 
 const attachmentVariants = cva(
-  "group/attachment relative flex w-fit max-w-full min-w-0 shrink-0 flex-wrap rounded-xl border bg-wedges-card text-wedges-card-foreground transition-colors focus-within:ring-1 focus-within:ring-wedges-ring/50 has-[>a,>button]:hover:bg-wedges-muted/50 data-[state=error]:border-wedges-destructive/30 data-[state=idle]:border-dashed",
+  "group/attachment relative flex w-fit max-w-full min-w-0 shrink-0 flex-wrap rounded-xl border bg-wedges-card text-wedges-card-foreground transition-colors focus-within:ring-1 focus-within:ring-wedges-ring/30 has-[>a,>button]:hover:bg-wedges-muted/50 data-[state=error]:border-wedges-destructive/30 data-[state=idle]:border-dashed",
   {
     variants: {
       size: {

@@ -25,7 +25,7 @@ function Command({
     <CommandPrimitive
       data-slot="command"
       className={cn(
-        "bg-spctm-popover text-spctm-popover-foreground flex size-full flex-col overflow-hidden rounded-xl! p-1",
+        "bg-spctm-popover text-spctm-popover-foreground flex size-full flex-col overflow-hidden rounded-xl! p-2",
         className
       )}
       {...props}
@@ -156,7 +156,7 @@ function CommandItem({
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        "group/command-item data-selected:bg-spctm-muted data-selected:text-spctm-foreground data-selected:**:[svg]:text-spctm-foreground rounded-spctm-sm in-data-[slot=dialog-content]:rounded-spctm-lg! relative flex cursor-default items-center gap-2 px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "group/command-item data-selected:bg-spctm-muted data-selected:text-spctm-foreground data-selected:**:[svg]:text-spctm-foreground rounded-spctm-sm in-data-[slot=dialog-content]:rounded-spctm-lg! relative flex cursor-default items-center gap-2 px-2 py-2 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

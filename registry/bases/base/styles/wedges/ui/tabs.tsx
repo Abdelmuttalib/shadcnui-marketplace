@@ -23,11 +23,11 @@ function Tabs({
 }
 
 const tabsListVariants = cva(
-  "group/tabs-list inline-flex w-fit items-center justify-center rounded-wedges-lg p-[3px] text-wedges-muted-foreground group-data-horizontal/tabs:h-9 group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col data-[variant=line]:rounded-none",
+  "group/tabs-list inline-flex w-fit items-center justify-center rounded-wedges-lg text-wedges-muted-foreground group-data-horizontal/tabs:h-9 group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col border border-wedges-border data-[variant=line]:rounded-none data-[variant=line]:border-none",
   {
     variants: {
       variant: {
-        default: "bg-wedges-muted",
+        default: "",
         line: "gap-1 bg-transparent",
       },
     },
@@ -57,9 +57,11 @@ function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "text-wedges-foreground/60 hover:text-wedges-foreground focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/50 focus-visible:outline-wedges-ring dark:text-wedges-muted-foreground dark:hover:text-wedges-foreground rounded-wedges-md relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-all group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-disabled:pointer-events-none aria-disabled:opacity-50 group-data-[variant=default]/tabs-list:data-active:shadow-sm group-data-[variant=line]/tabs-list:data-active:shadow-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "text-wedges-foreground/60 hover:text-wedges-foreground focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/30 focus-visible:outline-wedges-ring dark:text-wedges-muted-foreground dark:hover:text-wedges-foreground rounded-wedges-md relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 border border-b-2 border-transparent px-3.5 py-1.5 text-sm font-medium whitespace-nowrap transition-all group-data-horizontal/tabs:border-b-2 group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start group-data-vertical/tabs:border-e-2 focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-60 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-disabled:pointer-events-none aria-disabled:opacity-60 group-data-[variant=default]/tabs-list:data-active:shadow-sm group-data-[variant=line]/tabs-list:data-active:shadow-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         "group-data-[variant=line]/tabs-list:bg-transparent group-data-[variant=line]/tabs-list:data-active:bg-transparent dark:group-data-[variant=line]/tabs-list:data-active:border-transparent dark:group-data-[variant=line]/tabs-list:data-active:bg-transparent",
-        "data-active:bg-wedges-background data-active:text-wedges-foreground dark:data-active:border-wedges-input dark:data-active:bg-wedges-input/30 dark:data-active:text-wedges-foreground",
+        "data-active:bg-wedges-background data-active:text-wedges-foreground dark:data-active:bg-wedges-input/30 dark:data-active:text-wedges-foreground",
+        "group-data-horizontal/tabs:data-active:border-b-wedges-primary group-data-vertical/tabs:data-active:border-e-wedges-primary",
+        "hover:bg-wedges-muted data-active:hover:bg-wedges-background",
         "after:bg-wedges-foreground after:absolute after:opacity-0 after:transition-opacity group-data-horizontal/tabs:after:inset-x-0 group-data-horizontal/tabs:after:bottom-[-5px] group-data-horizontal/tabs:after:h-0.5 group-data-vertical/tabs:after:inset-y-0 group-data-vertical/tabs:after:-right-1 group-data-vertical/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-active:after:opacity-100",
         className
       )}

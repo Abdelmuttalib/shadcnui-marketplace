@@ -112,8 +112,8 @@ function QuestionnaireChoice({
     <QuestionnairePrimitive.Choice
       data-slot="questionnaire-choice"
       className={cn(
-        "group/questionnaire-choice border-wedges-input hover:bg-wedges-muted/50 has-[>input:focus-visible]:border-wedges-ring has-[>input:focus-visible]:ring-wedges-ring/50 data-invalid:border-wedges-destructive dark:bg-wedges-input/20 data-checked:border-wedges-primary/40 data-checked:bg-wedges-muted dark:data-checked:bg-wedges-muted rounded-wedges-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
-        "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50",
+        "group/questionnaire-choice border-wedges-input hover:bg-wedges-muted/50 has-[>input:focus-visible]:border-wedges-ring has-[>input:focus-visible]:ring-wedges-ring/30 data-invalid:border-wedges-destructive dark:bg-wedges-input/20 data-checked:border-wedges-primary/40 data-checked:bg-wedges-muted dark:data-checked:bg-wedges-muted rounded-wedges-md relative flex min-h-11 cursor-pointer items-start gap-3 border bg-transparent px-4 py-3.5 text-start text-sm shadow-xs transition-colors outline-none select-none has-[>input:focus-visible]:ring-3",
+        "data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-60",
         className
       )}
       {...props}
@@ -175,7 +175,7 @@ function QuestionnaireInput({
       <QuestionnairePrimitive.Input
         data-slot="questionnaire-input"
         className={cn(
-          "border-wedges-input focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/50 aria-invalid:border-wedges-destructive aria-invalid:ring-wedges-destructive/20 dark:bg-wedges-input/30 dark:aria-invalid:border-wedges-destructive/50 dark:aria-invalid:ring-wedges-destructive/40 rounded-wedges-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
+          "border-wedges-input focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/30 aria-invalid:border-wedges-destructive aria-invalid:ring-wedges-destructive/20 dark:bg-wedges-input/30 dark:aria-invalid:border-wedges-destructive/50 dark:aria-invalid:ring-wedges-destructive/30 rounded-wedges-md h-9 min-h-11 w-full min-w-0 border bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow,background-color] outline-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-60 aria-invalid:ring-3 sm:min-h-0 md:text-sm",
           "selection:bg-wedges-primary selection:text-wedges-primary-foreground placeholder:text-wedges-muted-foreground",
           className
         )}

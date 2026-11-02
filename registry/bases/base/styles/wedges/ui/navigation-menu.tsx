@@ -55,7 +55,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group/navigation-menu-trigger inline-flex h-9 w-max items-center justify-center rounded-wedges-md px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-wedges-muted focus:bg-wedges-muted focus-visible:ring-3 focus-visible:ring-wedges-ring/50 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-wedges-muted/50 data-popup-open:hover:bg-wedges-muted data-open:bg-wedges-muted/50 data-open:hover:bg-wedges-muted data-open:focus:bg-wedges-muted"
+  "group/navigation-menu-trigger inline-flex h-9 w-max items-center justify-center rounded-wedges-md px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-wedges-muted focus:bg-wedges-muted focus-visible:ring-3 focus-visible:ring-wedges-ring/30 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-60 data-popup-open:bg-wedges-muted/50 data-popup-open:hover:bg-wedges-muted data-open:bg-wedges-muted/50 data-open:hover:bg-wedges-muted data-open:focus:bg-wedges-muted"
 );
 
 function NavigationMenuTrigger({
@@ -131,7 +131,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "hover:bg-wedges-muted focus:bg-wedges-muted focus-visible:ring-wedges-ring/50 data-[active=true]:bg-wedges-muted/50 data-[active=true]:hover:bg-wedges-muted data-[active=true]:focus:bg-wedges-muted rounded-wedges-md in-data-[slot=navigation-menu-content]:rounded-wedges-sm flex items-center gap-1.5 p-2 text-sm transition-all outline-none focus-visible:ring-3 focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
+        "hover:bg-wedges-muted focus:bg-wedges-muted focus-visible:ring-wedges-ring/30 data-[active=true]:bg-wedges-muted/50 data-[active=true]:hover:bg-wedges-muted data-[active=true]:focus:bg-wedges-muted rounded-wedges-md in-data-[slot=navigation-menu-content]:rounded-wedges-sm flex items-center gap-1.5 p-2 text-sm transition-all outline-none focus-visible:ring-3 focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

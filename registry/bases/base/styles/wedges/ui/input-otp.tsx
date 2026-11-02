@@ -16,7 +16,7 @@ function InputOTP({
     <OTPInput
       data-slot="input-otp"
       containerClassName={cn(
-        "cn-input-otp flex items-center has-disabled:opacity-50",
+        "cn-input-otp flex items-center has-disabled:opacity-60",
         containerClassName
       )}
       spellCheck={false}
@@ -31,7 +31,7 @@ function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="input-otp-group"
       className={cn(
-        "has-aria-invalid:border-wedges-destructive has-aria-invalid:ring-wedges-destructive/20 dark:has-aria-invalid:ring-wedges-destructive/40 rounded-wedges-md flex items-center has-aria-invalid:ring-3",
+        "has-aria-invalid:border-wedges-destructive has-aria-invalid:ring-wedges-destructive/20 dark:has-aria-invalid:ring-wedges-destructive/30 rounded-wedges-md flex items-center has-aria-invalid:ring-3",
         className
       )}
       {...props}
@@ -54,7 +54,7 @@ function InputOTPSlot({
       data-slot="input-otp-slot"
       data-active={isActive}
       className={cn(
-        "border-wedges-input aria-invalid:border-wedges-destructive data-[active=true]:border-wedges-ring data-[active=true]:ring-wedges-ring/50 data-[active=true]:aria-invalid:border-wedges-destructive data-[active=true]:aria-invalid:ring-wedges-destructive/20 dark:bg-wedges-input/30 dark:data-[active=true]:aria-invalid:ring-wedges-destructive/40 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-3",
+        "border-wedges-input aria-invalid:border-wedges-destructive data-[active=true]:border-wedges-ring data-[active=true]:ring-wedges-ring/30 data-[active=true]:aria-invalid:border-wedges-destructive data-[active=true]:aria-invalid:ring-wedges-destructive/20 dark:bg-wedges-input/30 dark:data-[active=true]:aria-invalid:ring-wedges-destructive/30 relative flex size-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-3",
         className
       )}
       {...props}

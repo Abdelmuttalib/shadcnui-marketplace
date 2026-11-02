@@ -11,7 +11,7 @@ function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
   return (
     <SelectPrimitive.Group
       data-slot="select-group"
-      className={cn("scroll-my-1 p-1", className)}
+      className={cn("scroll-my-1", className)}
       {...props}
     />
   );
@@ -40,7 +40,7 @@ function SelectTrigger({
       data-slot="select-trigger"
       data-size={size}
       className={cn(
-        "border-wedges-input focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/50 aria-invalid:border-wedges-destructive aria-invalid:ring-wedges-destructive/20 data-placeholder:text-wedges-muted-foreground dark:bg-wedges-input/30 dark:hover:bg-wedges-input/50 dark:aria-invalid:border-wedges-destructive/50 dark:aria-invalid:ring-wedges-destructive/40 rounded-wedges-md flex w-fit items-center justify-between gap-1.5 border bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "border-wedges-input focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/30 aria-invalid:border-wedges-destructive aria-invalid:ring-wedges-destructive/20 data-placeholder:text-wedges-muted-foreground bg-wedges-input/30 dark:hover:bg-wedges-input/50 dark:aria-invalid:border-wedges-destructive/50 dark:aria-invalid:ring-wedges-destructive/30 rounded-wedges-md flex w-fit items-center justify-between gap-1.5 border py-2 pr-2.5 pl-3 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-60 aria-invalid:ring-3 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -122,7 +122,7 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "focus:bg-wedges-accent focus:text-wedges-accent-foreground not-data-[variant=destructive]:focus:**:text-wedges-accent-foreground rounded-wedges-sm relative flex w-full cursor-default items-center gap-2 py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "focus:bg-wedges-accent focus:text-wedges-accent-foreground not-data-[variant=destructive]:focus:**:text-wedges-accent-foreground relative flex w-full cursor-default items-center gap-2 py-1.5 pr-8 pl-3 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-60 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         className
       )}
       {...props}

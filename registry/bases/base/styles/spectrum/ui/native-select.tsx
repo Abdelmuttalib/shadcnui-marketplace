@@ -23,11 +23,11 @@ function NativeSelect({
       <select
         data-slot="native-select"
         data-size={size}
-        className="border-spctm-input selection:bg-spctm-primary selection:text-spctm-primary-foreground placeholder:text-spctm-muted-foreground focus-visible:border-spctm-primary focus-visible:outline-spctm-ring aria-invalid:border-spctm-destructive aria-invalid:outline-spctm-destructive/20 dark:bg-spctm-input/30 dark:hover:bg-spctm-input/50 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:outline-spctm-destructive rounded-spctm-md h-8 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:outline-2 data-[size=sm]:h-7"
+        className="border-spctm-input/5 selection:bg-spctm-primary selection:text-spctm-primary-foreground placeholder:text-spctm-muted-foreground focus-visible:border-spctm-primary focus-visible:outline-spctm-ring aria-invalid:border-spctm-destructive bg-spctm-input/30 aria-invalid:outline-spctm-destructive/20 dark:hover:bg-spctm-input/50 dark:aria-invalid:border-spctm-destructive/50 dark:aria-invalid:outline-spctm-destructive rounded-spctm-md h-8.5 w-full min-w-0 appearance-none border-2 py-1 pr-8 pl-2.5 text-sm shadow-xs outline-offset-2 transition-[color,box-shadow] outline-none select-none focus-visible:outline-2 focus-visible:outline-solid disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:outline-2 aria-invalid:outline-solid data-[size=sm]:h-7"
         {...props}
       />
       <ChevronDownIcon
-        className="text-spctm-muted-foreground pointer-events-none absolute top-1/2 right-2.5 size-4 -translate-y-1/2 select-none"
+        className="text-spctm-foreground pointer-events-none absolute top-1/2 right-2.5 size-4 -translate-y-1/2 select-none"
         aria-hidden="true"
         data-slot="native-select-icon"
       />

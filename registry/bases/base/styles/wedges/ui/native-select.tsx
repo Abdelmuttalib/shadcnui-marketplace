@@ -23,7 +23,7 @@ function NativeSelect({
       <select
         data-slot="native-select"
         data-size={size}
-        className="border-wedges-input selection:bg-wedges-primary selection:text-wedges-primary-foreground placeholder:text-wedges-muted-foreground focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/50 aria-invalid:border-wedges-destructive aria-invalid:ring-wedges-destructive/20 dark:bg-wedges-input/30 dark:hover:bg-wedges-input/50 dark:aria-invalid:border-wedges-destructive/50 dark:aria-invalid:ring-wedges-destructive/40 rounded-wedges-md h-9 w-full min-w-0 appearance-none border bg-transparent py-1 pr-8 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
+        className="border-wedges-input selection:bg-wedges-primary selection:text-wedges-primary-foreground placeholder:text-wedges-muted-foreground focus-visible:border-wedges-ring focus-visible:ring-wedges-ring/30 aria-invalid:border-wedges-destructive aria-invalid:ring-wedges-destructive/20 bg-wedges-input/30 dark:hover:bg-wedges-input/50 dark:aria-invalid:border-wedges-destructive/50 dark:aria-invalid:ring-wedges-destructive/30 rounded-wedges-md h-9 w-full min-w-0 appearance-none border py-1 pr-8 pl-3 text-sm shadow-xs transition-[color,box-shadow] outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:ring-3 data-[size=sm]:h-8"
         {...props}
       />
       <ChevronDownIcon
