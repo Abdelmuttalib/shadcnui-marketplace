@@ -6,6 +6,7 @@ import { cn } from "cn";
 
 import { Button } from "@/registry/bases/base/styles/wedges/ui/button";
 import { XIcon } from "lucide-react";
+import { useDesignSystemPortalContainer } from "@/registry/bases/base/shared/design-system/design-system-context";
 
 function Dialog({ ...props }: DialogPrimitive.Root.Props) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />;
@@ -16,7 +17,14 @@ function DialogTrigger({ ...props }: DialogPrimitive.Trigger.Props) {
 }
 
 function DialogPortal({ ...props }: DialogPrimitive.Portal.Props) {
-  return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />;
+  const portalContainer = useDesignSystemPortalContainer();
+  return (
+    <DialogPrimitive.Portal
+      data-slot="dialog-portal"
+      container={portalContainer}
+      {...props}
+    />
+  );
 }
 
 function DialogClose({ ...props }: DialogPrimitive.Close.Props) {

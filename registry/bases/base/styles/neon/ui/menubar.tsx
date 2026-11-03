@@ -21,6 +21,7 @@ import {
   DropdownMenuTrigger,
 } from "@/registry/bases/base/styles/neon/ui/dropdown-menu";
 import { CheckIcon } from "lucide-react";
+import { useDesignSystemPortalContainer } from "../../../shared/design-system/design-system-context";
 
 function Menubar({ className, ...props }: MenubarPrimitive.Props) {
   return (
@@ -48,7 +49,14 @@ function MenubarGroup({
 function MenubarPortal({
   ...props
 }: React.ComponentProps<typeof DropdownMenuPortal>) {
-  return <DropdownMenuPortal data-slot="menubar-portal" {...props} />;
+  const portalContainer = useDesignSystemPortalContainer();
+  return (
+    <DropdownMenuPortal
+      data-slot="menubar-portal"
+      container={portalContainer}
+      {...props}
+    />
+  );
 }
 
 function MenubarTrigger({
@@ -81,7 +89,7 @@ function MenubarContent({
       alignOffset={alignOffset}
       sideOffset={sideOffset}
       className={cn(
-        "cn-menu-target cn-menu-translucent bg-neon-popover text-neon-popover-foreground ring-neon-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 rounded-neon-md min-w-36 p-1 shadow-md ring-1 duration-100",
+        "cn-menu-target cn-menu-translucent bg-neon-destructive text-neon-popover-foreground ring-neon-foreground/10 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 rounded-neon-md min-w-36 p-1 shadow-md ring-1 duration-100",
         className
       )}
       {...props}

@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/bases/base/neon/ui/button";
-import { ScrollArea } from "@/registry/bases/base/neon/ui/scroll-area";
 
 import { Playlist } from "../data/playlists";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   playlists: Playlist[];
 }
 
 export function Sidebar({ className, playlists }: SidebarProps) {
+  const { Button, ScrollArea } = useDesignSystem();
   return (
     <div className={cn("pb-12", className)}>
       <div className="space-y-4 py-4">

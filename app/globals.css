@@ -1563,7 +1563,7 @@
 
   --neon-background: oklch(0.1808 0.0139 258.36);
   --neon-foreground: oklch(0.9818 0.0013 106.42);
-  --neon-card: oklch(22 0.0252 262.74);
+  --neon-card: oklch(0.22 0.0252 262.74);
   --neon-card-foreground: oklch(0.9818 0.0013 106.42);
   --neon-popover: oklch(0.24 0.0252 262.74);
   --neon-popover-foreground: oklch(0.9818 0.0013 106.42);

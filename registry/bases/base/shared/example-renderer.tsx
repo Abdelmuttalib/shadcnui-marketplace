@@ -63,13 +63,7 @@ export function ExampleRenderer({ style, name }: ExampleRendererProps) {
 
   return (
     <React.Suspense fallback={null}>
-      <div
-        style={{
-          "--background": "var(--cb-destructive)",
-          "--foreground": "var(--cb-destructive)",
-          "--primary": "var(--cb-destructive)",
-        }}
-      >
+      <div>
         <DesignSystemTheme style={style}>
           <Adapter>
             <Example />

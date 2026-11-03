@@ -8,15 +8,18 @@ import {
   DesignSystemProvider,
   type DesignSystemComponents,
 } from "@/registry/bases/base/shared/components/design-system-provider";
+import { DesignSystemEnvironment } from "../design-system/design-system-environment";
 
 export function WedgesAdapter({ children }: { children: React.ReactNode }) {
   return (
-    <DesignSystemProvider
-      components={Components as unknown as DesignSystemComponents}
-    >
-      <div className="wedges-style" data-design-system="wedges">
-        {children}
-      </div>
-    </DesignSystemProvider>
+    <DesignSystemEnvironment style="wedges" palette="" radius="" theme="">
+      <DesignSystemProvider
+        components={Components as unknown as DesignSystemComponents}
+      >
+        <div className="wedges-style" data-design-system="wedges">
+          {children}
+        </div>
+      </DesignSystemProvider>
+    </DesignSystemEnvironment>
   );
 }
