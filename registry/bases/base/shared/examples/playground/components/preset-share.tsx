@@ -1,20 +1,16 @@
 import { Copy } from "lucide-react";
 
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import { Input } from "@/registry/bases/base/styles/moon/ui/input";
-import { Label } from "@/registry/bases/base/styles/moon/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/bases/base/styles/moon/ui/popover";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function PresetShare() {
+  const { Button, Input, Popover, PopoverContent, PopoverTrigger, Label } =
+    useDesignSystem();
+
   return (
     <Popover>
-      <PopoverTrigger asChild>
-        <Button variant="secondary">Share</Button>
-      </PopoverTrigger>
+      <PopoverTrigger
+        render={<Button variant="secondary">Share</Button>}
+      ></PopoverTrigger>
       <PopoverContent align="end" className="flex w-[520px] flex-col gap-4">
         <div className="flex flex-col gap-1 text-center sm:text-left">
           <h3 className="text-lg font-semibold">Share preset</h3>

@@ -1,18 +1,19 @@
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/moon/ui/dialog";
-import { Input } from "@/registry/bases/base/styles/moon/ui/input";
-import { Label } from "@/registry/bases/base/styles/moon/ui/label";
-import { Textarea } from "@/registry/bases/base/styles/moon/ui/textarea";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function PresetSave() {
+  const {
+    Button,
+    Input,
+    Textarea,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Label,
+  } = useDesignSystem();
   return (
     <Dialog>
       <DialogTrigger asChild>

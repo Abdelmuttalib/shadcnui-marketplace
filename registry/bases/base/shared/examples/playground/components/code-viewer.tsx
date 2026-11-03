@@ -1,19 +1,21 @@
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/moon/ui/dialog";
+import { useDesignSystem } from "@/registry/bases/base/shared/components/design-system-provider";
 
 export function CodeViewer() {
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } = useDesignSystem();
+
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="secondary">View code</Button>
-      </DialogTrigger>
+      <DialogTrigger
+        render={<Button variant="secondary">View code</Button>}
+      ></DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>View code</DialogTitle>

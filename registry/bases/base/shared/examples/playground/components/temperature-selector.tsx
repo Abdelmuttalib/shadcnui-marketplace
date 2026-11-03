@@ -3,13 +3,7 @@
 import * as React from "react";
 import type { Slider as SliderPrimitive } from "radix-ui";
 
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/registry/bases/base/styles/moon/ui/hover-card";
-import { Label } from "@/registry/bases/base/styles/moon/ui/label";
-import { Slider } from "@/registry/bases/base/styles/moon/ui/slider";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface TemperatureSelectorProps {
   defaultValue: React.ComponentProps<
@@ -21,6 +15,9 @@ export function TemperatureSelector({
   defaultValue,
 }: TemperatureSelectorProps) {
   const [value, setValue] = React.useState(defaultValue);
+
+  const { HoverCard, HoverCardContent, HoverCardTrigger, Slider, Label } =
+    useDesignSystem();
 
   return (
     <div className="grid gap-2 pt-2">

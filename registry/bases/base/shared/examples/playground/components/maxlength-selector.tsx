@@ -3,13 +3,7 @@
 import * as React from "react";
 import type { Slider as SliderPrimitive } from "radix-ui";
 
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/registry/bases/base/styles/moon/ui/hover-card";
-import { Label } from "@/registry/bases/base/styles/moon/ui/label";
-import { Slider } from "@/registry/bases/base/styles/moon/ui/slider";
+import { useDesignSystem } from "@/registry/bases/base/shared/components/design-system-provider";
 
 interface MaxLengthSelectorProps {
   defaultValue: React.ComponentProps<
@@ -20,27 +14,38 @@ interface MaxLengthSelectorProps {
 export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
   const [value, setValue] = React.useState(defaultValue);
 
+  const {
+    Slider: SliderPrimitive,
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+    Label,
+    Slider,
+  } = useDesignSystem();
+
   return (
     <div className="grid gap-2 pt-2">
       <HoverCard openDelay={200}>
-        <HoverCardTrigger asChild>
-          <div className="grid gap-4">
-            <div className="flex items-center justify-between">
-              <Label htmlFor="maxlength">Maximum Length</Label>
-              <span className="text-muted-foreground hover:border-border w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm">
-                {value}
-              </span>
+        <HoverCardTrigger
+          render={
+            <div className="grid gap-4">
+              <div className="flex items-center justify-between">
+                <Label htmlFor="maxlength">Maximum Length</Label>
+                <span className="text-muted-foreground hover:border-border w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm">
+                  {value}
+                </span>
+              </div>
+              <Slider
+                id="maxlength"
+                max={4000}
+                defaultValue={value}
+                step={10}
+                onValueChange={setValue}
+                aria-label="Maximum Length"
+              />
             </div>
-            <Slider
-              id="maxlength"
-              max={4000}
-              defaultValue={value}
-              step={10}
-              onValueChange={setValue}
-              aria-label="Maximum Length"
-            />
-          </div>
-        </HoverCardTrigger>
+          }
+        ></HoverCardTrigger>
         <HoverCardContent
           align="start"
           className="w-[260px] text-sm"

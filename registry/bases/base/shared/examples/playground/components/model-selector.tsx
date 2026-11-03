@@ -6,28 +6,10 @@ import { Check, ChevronsUpDown } from "lucide-react";
 import type { Popover as PopoverPrimitive } from "radix-ui";
 
 import { useMutationObserver } from "@/hooks/use-mutation-observer";
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/registry/bases/base/styles/moon/ui/command";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/registry/bases/base/styles/moon/ui/hover-card";
-import { Label } from "@/registry/bases/base/styles/moon/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/bases/base/styles/moon/ui/popover";
 
 import { type Model, type ModelType } from "../data/models";
+
+import { useDesignSystem } from "@/registry/bases/base/shared/components/design-system-provider";
 
 interface ModelSelectorProps extends React.ComponentProps<
   typeof PopoverPrimitive.Root
@@ -41,12 +23,29 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
   const [selectedModel, setSelectedModel] = React.useState<Model>(models[0]);
   const [peekedModel, setPeekedModel] = React.useState<Model>(models[0]);
 
+  const {
+    Button,
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    Label,
+  } = useDesignSystem();
+
   return (
     <div className="grid gap-3">
       <HoverCard openDelay={200}>
-        <HoverCardTrigger asChild>
-          <Label htmlFor="model">Model</Label>
-        </HoverCardTrigger>
+        <HoverCardTrigger
+          render={<Label htmlFor="model">Model</Label>}
+        ></HoverCardTrigger>
         <HoverCardContent
           align="start"
           className="w-[260px] text-sm"
@@ -147,6 +146,8 @@ function ModelItem({ model, isSelected, onSelect, onPeek }: ModelItemProps) {
       }
     });
   });
+
+  const { CommandItem } = useDesignSystem();
 
   return (
     <CommandItem

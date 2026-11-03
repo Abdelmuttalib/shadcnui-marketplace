@@ -1,7 +1,6 @@
 "use client";
 
 import { DesignSystemTheme } from "@/components/common/design-system-theme";
-import { getStyleFontClassname } from "@/registry/styles-components";
 import dynamic from "next/dynamic";
 import * as React from "react";
 
@@ -62,38 +61,21 @@ export function ExampleRenderer({ style, name }: ExampleRendererProps) {
   const Adapter = adapters[style];
   const Example = examples[name];
 
-  const styleFontClass = getStyleFontClassname(style);
-
   return (
     <React.Suspense fallback={null}>
-      <DesignSystemTheme style={style}>
-        <div
-          className={styleFontClass}
-          style={{
-            "--background": "var(--libelle-background)",
-            "--foreground": "var(--libelle-foreground)",
-            "--primary": "var(--libelle-primary)",
-            "--secondary": "var(--libelle-secondary)",
-            "--muted": "var(--libelle-muted)",
-            "--accent": "var(--libelle-accent)",
-            "--destructive": "var(--libelle-destructive)",
-            "--border": "var(--libelle-border)",
-
-            "--neon-background": "var(--libelle-background)",
-            "--neon-foreground": "var(--libelle-foreground)",
-            "--neon-primary": "var(--libelle-primary)",
-            "--neon-secondary": "var(--libelle-secondary)",
-            "--neon-muted": "var(--libelle-muted)",
-            "--neon-accent": "var(--libelle-accent)",
-            "--neon-destructive": "var(--libelle-destructive)",
-            "--neon-border": "var(--libelle-border)",
-          }}
-        >
+      <div
+        style={{
+          "--background": "var(--cb-destructive)",
+          "--foreground": "var(--cb-destructive)",
+          "--primary": "var(--cb-destructive)",
+        }}
+      >
+        <DesignSystemTheme style={style}>
           <Adapter>
             <Example />
           </Adapter>
-        </div>
-      </DesignSystemTheme>
+        </DesignSystemTheme>
+      </div>
     </React.Suspense>
   );
 }

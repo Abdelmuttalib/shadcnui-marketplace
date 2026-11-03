@@ -5,23 +5,8 @@ import { cn } from "cn";
 import { Check, ChevronsUpDown } from "lucide-react";
 import type { Popover as PopoverPrimitive } from "radix-ui";
 
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-} from "@/registry/bases/base/styles/moon/ui/command";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/bases/base/styles/moon/ui/popover";
-
 import { type Preset } from "../data/presets";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface PresetSelectorProps extends React.ComponentProps<
   typeof PopoverPrimitive.Root
@@ -33,20 +18,36 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
   const [open, setOpen] = React.useState(false);
   const [selectedPreset, setSelectedPreset] = React.useState<Preset>();
 
+  const {
+    Button,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    CommandSeparator,
+  } = useDesignSystem();
+
   return (
     <Popover open={open} onOpenChange={setOpen} {...props}>
-      <PopoverTrigger asChild>
-        <Button
-          variant="outline"
-          role="combobox"
-          aria-label="Load a preset..."
-          aria-expanded={open}
-          className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
-        >
-          {selectedPreset ? selectedPreset.name : "Load a preset..."}
-          <ChevronsUpDown className="opacity-50" />
-        </Button>
-      </PopoverTrigger>
+      <PopoverTrigger
+        render={
+          <Button
+            variant="outline"
+            role="combobox"
+            aria-label="Load a preset..."
+            aria-expanded={open}
+            className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
+          >
+            {selectedPreset ? selectedPreset.name : "Load a preset..."}
+            <ChevronsUpDown className="opacity-50" />
+          </Button>
+        }
+      ></PopoverTrigger>
       <PopoverContent className="w-[300px] p-0">
         <Command>
           <CommandInput placeholder="Search presets..." />

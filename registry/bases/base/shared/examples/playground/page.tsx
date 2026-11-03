@@ -1,22 +1,5 @@
 import { type Metadata } from "next";
-import Image from "next/image";
 import { RotateCcw } from "lucide-react";
-
-import { Button } from "@/registry/bases/base/styles/neon/ui/button";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/registry/bases/base/styles/neon/ui/hover-card";
-import { Label } from "@/registry/bases/base/styles/neon/ui/label";
-import { Separator } from "@/registry/bases/base/styles/neon/ui/separator";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/styles/neon/ui/tabs";
-import { Textarea } from "@/registry/bases/base/styles/neon/ui/textarea";
 
 import { CodeViewer } from "./components/code-viewer";
 import { MaxLengthSelector } from "./components/maxlength-selector";
@@ -29,6 +12,7 @@ import { TemperatureSelector } from "./components/temperature-selector";
 import { TopPSelector } from "./components/top-p-selector";
 import { models, types } from "./data/models";
 import { presets } from "./data/presets";
+import { useDesignSystem } from "../../components/design-system-provider";
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -36,25 +20,22 @@ export const metadata: Metadata = {
 };
 
 export default function PlaygroundPage() {
+  const {
+    Separator,
+    Label,
+    Textarea,
+    Button,
+    HoverCard,
+    HoverCardTrigger,
+    HoverCardContent,
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } = useDesignSystem();
   return (
     <>
-      <div className="md:hidden">
-        <Image
-          src="/examples/playground-light.png"
-          width={1280}
-          height={916}
-          alt="Playground"
-          className="block dark:hidden"
-        />
-        <Image
-          src="/examples/playground-dark.png"
-          width={1280}
-          height={916}
-          alt="Playground"
-          className="hidden dark:block"
-        />
-      </div>
-      <div className="hidden flex-1 flex-col md:flex">
+      <div className="flex flex-1 flex-col">
         <div className="container flex flex-col items-start justify-between gap-2 py-4 sm:flex-row sm:items-center sm:gap-0 md:h-16">
           <h2 className="pl-0.5 text-lg font-semibold">Playground</h2>
           <div className="ml-auto flex w-full gap-2 sm:justify-end">

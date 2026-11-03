@@ -4,38 +4,36 @@ import * as React from "react";
 import { MoreHorizontal } from "lucide-react";
 import { toast } from "sonner";
 
-import {
-  AlertDialog,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/registry/bases/base/styles/moon/ui/alert-dialog";
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/registry/bases/base/styles/moon/ui/dialog";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/moon/ui/dropdown-menu";
-import { Label } from "@/registry/bases/base/styles/moon/ui/label";
-import { Switch } from "@/registry/bases/base/styles/moon/ui/switch";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function PresetActions() {
   const [open, setIsOpen] = React.useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = React.useState(false);
+
+  const {
+    Button,
+    AlertDialog,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+    Label,
+    Switch,
+  } = useDesignSystem();
 
   return (
     <>

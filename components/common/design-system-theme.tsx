@@ -4,7 +4,13 @@ import React, { ReactNode, useMemo } from "react";
 
 import { Style } from "@/hooks/use-style-store";
 import { themePalettes } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles-components";
+import {
+  getStyleFontClassname,
+  getStyleVariablesPrefix,
+} from "@/registry/styles-components";
+import { cn } from "@/lib/utils";
+
+const CSS_VARIABLES = {};
 
 interface DesignSystemThemeProps {
   children: ReactNode;
@@ -43,9 +49,11 @@ export function DesignSystemTheme({
     return vars;
   }, [style, palette, radius, theme]);
 
+  const styleFontClass = getStyleFontClassname(style);
+
   return (
     <div
-      className={className}
+      className={cn(className, styleFontClass)}
       data-design-system={style}
       data-theme={theme}
       style={variables as React.CSSProperties}

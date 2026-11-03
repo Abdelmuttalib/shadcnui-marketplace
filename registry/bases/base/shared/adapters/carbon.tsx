@@ -8,23 +8,22 @@ import {
   DesignSystemProvider,
   type DesignSystemComponents,
 } from "@/registry/bases/base/shared/components/design-system-provider";
-import { DesignSystemEnvironment } from "../design-system/design-system-environment";
 
 export function CarbonAdapter({ children }: { children: React.ReactNode }) {
   return (
-    <DesignSystemEnvironment
-      style="carbon"
-      palette="palette-3"
-      radius="0rem"
-      theme="dark"
+    // <DesignSystemEnvironment
+    //   style="carbon"
+    //   palette="palette-3"
+    //   radius="0rem"
+    //   theme="dark"
+    // >
+    <DesignSystemProvider
+      components={Components as unknown as DesignSystemComponents}
     >
-      <DesignSystemProvider
-        components={Components as unknown as DesignSystemComponents}
-      >
-        <div className="carbon-style" data-design-system="carbon">
-          {children}
-        </div>
-      </DesignSystemProvider>
-    </DesignSystemEnvironment>
+      <div className="carbon-style" data-design-system="carbon">
+        {children}
+      </div>
+    </DesignSystemProvider>
+    // </DesignSystemEnvironment>
   );
 }
