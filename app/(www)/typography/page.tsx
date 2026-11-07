@@ -98,9 +98,9 @@ export default function TypographyPage() {
 
                       <TabsContent value="preview">
                         <ScrollArea className="relative h-[30rem]">
-                          <div className="absolute left-0 right-0 top-0 z-10 h-14 w-full rounded-t-md bg-gradient-to-b from-accent/60 to-transparent"></div>
-                          <div className="absolute bottom-0 left-0 right-0 z-10 h-14 w-full rounded-b-md bg-gradient-to-t from-accent/60 to-transparent"></div>
-                          <div className="rounded-md bg-card p-4 py-8">
+                          <div className="bg-linear-to-b from-accent/60 absolute left-0 right-0 top-0 z-10 h-14 w-full rounded-t-md to-transparent"></div>
+                          <div className="bg-linear-to-t from-accent/60 absolute bottom-0 left-0 right-0 z-10 h-14 w-full rounded-b-md to-transparent"></div>
+                          <div className="bg-card rounded-md p-4 py-8">
                             <div className="flex flex-col gap-8">
                               {typographyVariantsList.map((variant) => (
                                 <div
@@ -156,7 +156,7 @@ export default function TypographyPage() {
                         variant="xl/semibold"
                         className="tracking-tight"
                       >
-                        <span className="mr-1 rounded-md border bg-accent p-0.5 text-base">
+                        <span className="bg-accent mr-1 rounded-md border p-0.5 text-base">
                           ✨
                         </span>{" "}
                         Typography Component
@@ -169,7 +169,7 @@ export default function TypographyPage() {
                         font sizing and weight control with a simple API.
                       </p>
                       <div className="space-y-4">
-                        <ul className="flex flex-wrap gap-3 text-foreground/70">
+                        <ul className="text-foreground/70 flex flex-wrap gap-3">
                           <li className="flex items-center gap-2">
                             <RichBadge
                               variant="green"
@@ -243,12 +243,12 @@ export default function TypographyPage() {
                         variant="xl/semibold"
                         className="tracking-tight"
                       >
-                        <span className="mr-1 rounded-md border bg-accent p-0.5 text-base">
+                        <span className="bg-accent mr-1 rounded-md border p-0.5 text-base">
                           🧩
                         </span>{" "}
                         Usage
                       </Typography>
-                      <pre className="rounded-lg bg-accent/60">
+                      <pre className="bg-accent/60 rounded-lg">
                         <code className="language-tsx">
                           {`<Typography variant="2xl/semibold" as="h1">
   Elegant Headings
@@ -269,7 +269,7 @@ export default function TypographyPage() {
                         variant="xl/semibold"
                         className="tracking-tight"
                       >
-                        <span className="mr-1 rounded-md border bg-accent p-0.5 text-base">
+                        <span className="bg-accent mr-1 rounded-md border p-0.5 text-base">
                           🧪
                         </span>{" "}
                         Variants
@@ -298,7 +298,7 @@ export default function TypographyPage() {
                             <tr className="">
                               <td className="px-4 py-3">xs</td>
                               <td className="px-4 py-3">
-                                <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
+                                <code className="bg-accent mr-1 rounded border px-1 py-0.5 italic">
                                   variant=&quot;xs/bold&quot;
                                 </code>
                                 → text-xs font-bold
@@ -307,7 +307,7 @@ export default function TypographyPage() {
                             <tr>
                               <td className="px-4 py-3">base</td>
                               <td className="px-4 py-3">
-                                <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
+                                <code className="bg-accent mr-1 rounded border px-1 py-0.5 italic">
                                   variant=&quot;base/medium&quot;
                                 </code>
                                 → text-sm font-medium
@@ -316,7 +316,7 @@ export default function TypographyPage() {
                             <tr>
                               <td className="px-4 py-3">4xl</td>
                               <td className="px-4 py-3">
-                                <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
+                                <code className="bg-accent mr-1 rounded border px-1 py-0.5 italic">
                                   variant=&quot;4xl/semibold&quot;
                                 </code>
                                 → text-2xl font-semibold
@@ -325,7 +325,7 @@ export default function TypographyPage() {
                             <tr>
                               <td className="px-4 py-3">7xl</td>
                               <td className="px-4 py-3">
-                                <code className="mr-1 rounded border bg-accent px-1 py-0.5 italic">
+                                <code className="bg-accent mr-1 rounded border px-1 py-0.5 italic">
                                   variant=&quot;7xl/extrabold&quot;
                                 </code>
                                 → text-5xl sm:text-6xl md:text-7xl
@@ -343,7 +343,7 @@ export default function TypographyPage() {
                         variant="xl/semibold"
                         className="tracking-tight"
                       >
-                        <span className="mr-1 rounded-md border bg-accent p-0.5 text-base">
+                        <span className="bg-accent mr-1 rounded-md border p-0.5 text-base">
                           🧱
                         </span>{" "}
                         Props
@@ -360,7 +360,7 @@ export default function TypographyPage() {
                           <tr>
                             <td className="px-4 py-3">variant</td>
                             <td className="px-4 py-3">
-                              <code className="rounded border bg-accent px-1 py-0.5 italic">
+                              <code className="bg-accent rounded border px-1 py-0.5 italic">
                                 &quot;xs/normal&quot; | &quot;2xl/bold&quot;
                               </code>
                             </td>
@@ -371,7 +371,7 @@ export default function TypographyPage() {
                           <tr>
                             <td className="px-4 py-3">as</td>
                             <td className="px-4 py-3">
-                              <code className="rounded border bg-accent px-1 py-0.5 italic">
+                              <code className="bg-accent rounded border px-1 py-0.5 italic">
                                 React.ElementType
                               </code>
                             </td>
@@ -382,7 +382,7 @@ export default function TypographyPage() {
                           <tr>
                             <td className="px-4 py-3">className</td>
                             <td className="px-4 py-3">
-                              <code className="rounded border bg-accent px-1 py-0.5 italic">
+                              <code className="bg-accent rounded border px-1 py-0.5 italic">
                                 string
                               </code>
                             </td>
@@ -393,7 +393,7 @@ export default function TypographyPage() {
                           <tr>
                             <td className="px-4 py-3">...props</td>
                             <td className="px-4 py-3">
-                              <code className="rounded border bg-accent px-1 py-0.5 italic">
+                              <code className="bg-accent rounded border px-1 py-0.5 italic">
                                 HTMLAttributes
                               </code>
                             </td>
@@ -409,13 +409,13 @@ export default function TypographyPage() {
                         variant="xl/semibold"
                         className="tracking-tight"
                       >
-                        <span className="mr-1 rounded-md border bg-accent p-0.5 text-base">
+                        <span className="bg-accent mr-1 rounded-md border p-0.5 text-base">
                           🔍
                         </span>{" "}
                         Example Showcase
                       </Typography>
                       <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <div className="space-y-2 rounded-md border bg-card p-4">
+                        <div className="bg-card space-y-2 rounded-md border p-4">
                           <Typography variant="xl/bold">
                             Typography: xl/bold
                           </Typography>
@@ -427,7 +427,7 @@ export default function TypographyPage() {
                             disableCopyButton
                           />
                         </div>
-                        <div className="space-y-2 rounded-md border bg-card p-4">
+                        <div className="bg-card space-y-2 rounded-md border p-4">
                           <Typography variant="4xl/normal">
                             Typography: 4xl/normal
                           </Typography>
@@ -439,7 +439,7 @@ export default function TypographyPage() {
                             disableCopyButton
                           />
                         </div>
-                        <div className="space-y-4 rounded-md border bg-card p-4">
+                        <div className="bg-card space-y-4 rounded-md border p-4">
                           <Typography variant="sm/extrabold">
                             Typography: sm/extrabold
                           </Typography>
@@ -451,7 +451,7 @@ export default function TypographyPage() {
                             disableCopyButton
                           />
                         </div>
-                        <div className="space-y-4 rounded-md border bg-card p-4">
+                        <div className="bg-card space-y-4 rounded-md border p-4">
                           <Typography variant="2xl/medium" as="h2">
                             Typography: 2xl/medium as h2
                           </Typography>
@@ -472,14 +472,14 @@ export default function TypographyPage() {
                         variant="xl/semibold"
                         className="tracking-tight"
                       >
-                        <span className="mr-1 rounded-md border bg-accent p-0.5 text-base">
+                        <span className="bg-accent mr-1 rounded-md border p-0.5 text-base">
                           💡
                         </span>{" "}
                         Design Tip
                       </Typography>
                       <p>
                         Use{" "}
-                        <code className="rounded bg-accent px-1 py-0.5">
+                        <code className="bg-accent rounded px-1 py-0.5">
                           Typography
                         </code>{" "}
                         as your default text component to ensure your site has{" "}

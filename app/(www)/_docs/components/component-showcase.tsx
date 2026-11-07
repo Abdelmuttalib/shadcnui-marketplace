@@ -94,12 +94,12 @@ export function ComponentPreviewShowcase({
         )}
       >
         {/* <GradientEffect /> */}
-        <div className="flex flex-col justify-between gap-1 overflow-x-auto rounded-2xl border bg-background p-2 py-1.5">
+        <div className="bg-background flex flex-col justify-between gap-1 overflow-x-auto rounded-2xl border p-2 py-1.5">
           <div className="flex h-full w-full gap-2 overflow-hidden">
             {preview ? (
               <div
                 className={cn(
-                  "flex h-fit min-h-80 w-full items-center justify-center overflow-hidden rounded-lg border bg-gradient-to-br from-accent/20 to-background p-4"
+                  "bg-linear-to-br from-accent/20 to-background flex h-fit min-h-80 w-full items-center justify-center overflow-hidden rounded-lg border p-4"
                 )}
               >
                 {/* {!Component && <div>Loading...</div>}

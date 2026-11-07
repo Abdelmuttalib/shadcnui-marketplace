@@ -7,7 +7,7 @@ import { Typography } from "@/components/ui/typography";
 export default function HeroSection() {
   return (
     <main>
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background to-accent/60">
+      <div className="bg-linear-to-br from-background to-accent/60 relative min-h-screen overflow-hidden">
         <div className="container relative mx-auto px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
           <div className="lg:grid lg:gap-x-16 xl:gap-x-24">
             {/* Text Content */}
@@ -15,7 +15,7 @@ export default function HeroSection() {
               <Typography as="h1" variant="7xl/bold" className="tracking-tight">
                 Revolutionize Your{" "}
                 <span className="relative whitespace-nowrap">
-                  <span className="relative bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r relative from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                     {" "}
                     Workflow
                   </span>
@@ -25,7 +25,7 @@ export default function HeroSection() {
               <Typography
                 as="p"
                 variant="xl/normal"
-                className="mt-6 leading-8 text-muted-foreground"
+                className="text-muted-foreground mt-6 leading-8"
               >
                 Empower your team with AI-driven insights and seamless
                 collaboration. Boost productivity and make data-driven decisions
@@ -57,9 +57,9 @@ export default function HeroSection() {
                 ].map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center rounded-md border bg-card p-2"
+                    className="bg-card flex items-center rounded-md border p-2"
                   >
-                    <CheckCircle className="mr-3 size-5 text-primary" />
+                    <CheckCircle className="text-primary mr-3 size-5" />
                     <Typography as="span" variant="md/normal">
                       {feature}
                     </Typography>

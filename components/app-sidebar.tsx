@@ -25,7 +25,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/catalyst/ui/sidebar";
+} from "@/registry/bases/base/catalyst/ui/sidebar";
 
 import { NavMain } from "../app/(styles)/dashboard/carbon/components/nav-main";
 import { NavProjects } from "../app/(styles)/dashboard/carbon/components/nav-projects";

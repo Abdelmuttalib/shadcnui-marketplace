@@ -4,8 +4,8 @@ import Image from "next/image";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
-import { Input } from "@/registry/wedges/ui/input";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Input } from "@/registry/bases/base/wedges/ui/input";
 
 const socials = [
   {
@@ -79,7 +79,7 @@ const skillsData = [
         name: "Figma",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -102,7 +102,7 @@ const skillsData = [
         name: "Sketch",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="22"
             height="22"
             viewBox="0 0 22 22"
@@ -127,7 +127,7 @@ const skillsData = [
         name: "HTML",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -155,7 +155,7 @@ const skillsData = [
         name: "CSS",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -186,7 +186,7 @@ const skillsData = [
         name: "Tailwind CSS",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -206,7 +206,7 @@ const skillsData = [
         name: "React",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="160"
             height="143"
             viewBox="0 0 160 143"
@@ -227,7 +227,7 @@ const skillsData = [
         name: "Vue",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="164"
             height="143"
             viewBox="0 0 164 143"
@@ -256,7 +256,7 @@ const skillsData = [
         name: "Notion",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="32"
             height="32"
             viewBox="0 0 32 32"
@@ -280,7 +280,7 @@ const skillsData = [
         name: "Mailchimp",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -302,7 +302,7 @@ const skillsData = [
         name: "Slack",
         icon: (
           <svg
-            className="me-1 size-4 shrink-0"
+            className="size-4 me-1 shrink-0"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -403,7 +403,7 @@ export default function Portfolio1() {
   return (
     <div>
       <header className="sticky inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start">
-        <nav className="relative mx-2 mt-4 w-full max-w-2xl rounded-[2rem] border bg-wedges-background/[0.7] py-2.5 backdrop-blur sm:mx-auto sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-0">
+        <nav className="bg-wedges-background/[0.7] relative mx-2 mt-4 w-full max-w-2xl rounded-[2rem] border py-2.5 backdrop-blur sm:mx-auto sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-0">
           <div className="flex items-center justify-between px-4 md:px-0">
             <div className="flex items-center">
               <a
@@ -426,9 +426,9 @@ export default function Portfolio1() {
                 <a
                   key={link.label}
                   className={cn(
-                    "border-s-2 border-transparent px-4 py-0.5 text-wedges-muted-foreground hover:text-wedges-foreground focus:outline-none sm:border-b-2 sm:border-s-0 sm:px-1 sm:py-3",
+                    "text-wedges-muted-foreground hover:text-wedges-foreground border-s-2 border-transparent px-4 py-0.5 focus:outline-none sm:border-b-2 sm:border-s-0 sm:px-1 sm:py-3",
                     {
-                      "border-foreground font-medium text-wedges-foreground":
+                      "border-foreground text-wedges-foreground font-medium":
                         idx === 0,
                     }
                   )}
@@ -455,17 +455,17 @@ export default function Portfolio1() {
             </div>
 
             <div className="grow">
-              <h1 className="text-lg font-medium text-wedges-foreground">
+              <h1 className="text-wedges-foreground text-lg font-medium">
                 John Doe
               </h1>
-              <p className="text-sm text-wedges-muted-foreground">
+              <p className="text-wedges-muted-foreground text-sm">
                 Graphic Designer, Web designer/developer
               </p>
             </div>
           </div>
 
           <div className="mt-8">
-            <p className="text-sm text-wedges-muted-foreground">
+            <p className="text-wedges-muted-foreground text-sm">
               I am a seasoned graphic designer with over 14 years of experience
               in creating visually appealing and user-centric designs. My
               expertise spans across UI design, design systems, and custom
@@ -473,7 +473,7 @@ export default function Portfolio1() {
               life.
             </p>
 
-            <p className="mt-3 text-sm text-wedges-muted-foreground">
+            <p className="text-wedges-muted-foreground mt-3 text-sm">
               Currently, I work remotely for Notion, where I design template
               UIs, convert them into HTML and CSS, and provide comprehensive
               support to our users. I am passionate about crafting elegant and
@@ -485,7 +485,7 @@ export default function Portfolio1() {
                 <li key={social.name} className="flex items-center gap-x-2.5">
                   {social.icon}
                   <a
-                    className="text-[13px] text-wedges-muted-foreground underline hover:text-wedges-foreground hover:decoration-2 focus:decoration-2 focus:outline-none"
+                    className="text-wedges-muted-foreground hover:text-wedges-foreground text-[13px] underline hover:decoration-2 focus:decoration-2 focus:outline-none"
                     href={social.href}
                   >
                     {/* elianagarcia997@about.me */}
@@ -497,7 +497,7 @@ export default function Portfolio1() {
           </div>
 
           <div className="mt-10 sm:mt-14">
-            <h2 className="mb-5 font-medium text-wedges-foreground">
+            <h2 className="text-wedges-foreground mb-5 font-medium">
               Projects
             </h2>
 
@@ -691,7 +691,7 @@ export default function Portfolio1() {
           </div>
 
           <div className="mt-10 sm:mt-14">
-            <h2 className="mb-3 font-medium text-wedges-foreground">
+            <h2 className="text-wedges-foreground mb-3 font-medium">
               Testimonials
             </h2>
 
@@ -705,7 +705,7 @@ export default function Portfolio1() {
                   })}
                 >
                   <blockquote>
-                    <span className="text-sm text-wedges-foreground">
+                    <span className="text-wedges-foreground text-sm">
                       {testimonial.content}
                     </span>
 
@@ -719,7 +719,7 @@ export default function Portfolio1() {
                           height={32}
                         />
                         <div className="grow">
-                          <div className="text-xs text-wedges-muted-foreground">
+                          <div className="text-wedges-muted-foreground text-xs">
                             {testimonial.name}
                           </div>
                         </div>
@@ -732,7 +732,7 @@ export default function Portfolio1() {
           </div>
 
           <div className="my-10 sm:my-14">
-            <h2 className="mb-5 font-medium text-wedges-foreground">Skills</h2>
+            <h2 className="text-wedges-foreground mb-5 font-medium">Skills</h2>
 
             <div className="space-y-3">
               {skillsData.map((skill) => (
@@ -741,7 +741,7 @@ export default function Portfolio1() {
                   className="flex flex-col gap-1 sm:flex-row"
                 >
                   <dt className="min-w-40">
-                    <span className="block text-sm text-wedges-muted-foreground">
+                    <span className="text-wedges-muted-foreground block text-sm">
                       {skill.section}:
                     </span>
                   </dt>
@@ -750,7 +750,7 @@ export default function Portfolio1() {
                       {skill.items.map((skillItem) => (
                         <li
                           key={skillItem.name}
-                          className="me-1 inline-flex items-center text-sm text-wedges-foreground after:content-[',']"
+                          className="text-wedges-foreground me-1 inline-flex items-center text-sm after:content-[',']"
                         >
                           {/* icon */}
                           {skillItem.icon}
@@ -766,16 +766,16 @@ export default function Portfolio1() {
           </div>
 
           <div className="mt-10 sm:mt-14">
-            <h2 className="mb-5 font-medium text-wedges-foreground">
+            <h2 className="text-wedges-foreground mb-5 font-medium">
               Work experience
             </h2>
 
             <div>
               <div className="group relative flex gap-x-5">
                 <div className="relative after:absolute after:bottom-2 after:start-3 after:top-8 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 group-last:after:hidden dark:after:bg-neutral-700">
-                  <div className="relative z-10 flex size-6 items-center justify-center">
+                  <div className="size-6 relative z-10 flex items-center justify-center">
                     <svg
-                      className="size-6 shrink-0 text-wedges-muted-foreground"
+                      className="size-6 text-wedges-muted-foreground shrink-0"
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
@@ -797,35 +797,35 @@ export default function Portfolio1() {
                 </div>
 
                 <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-wedges-muted-foreground">
+                  <h3 className="text-wedges-muted-foreground mb-1 text-xs">
                     2023 - Present
                   </h3>
 
-                  <p className="text-sm font-semibold text-wedges-foreground">
+                  <p className="text-wedges-foreground text-sm font-semibold">
                     Web Designer &amp; Web Developer
                   </p>
 
-                  <p className="mt-1 text-sm text-wedges-muted-foreground">
+                  <p className="text-wedges-muted-foreground mt-1 text-sm">
                     The company has high expectations and using OKRs there is a
                     mutual understanding of expectations and performance.
                   </p>
 
                   <ul className="ms-6 mt-3 list-disc space-y-1.5">
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Designed template UIs and design systems in Figma.
                     </li>
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Converted UIs into responsive HTML and CSS with a
                       mobile-first approach.
                     </li>
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Created custom illustrations and item description banners.
                     </li>
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Provided detailed documentation and customer support on
                       GitHub.
                     </li>
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Engaged with users to address setup inquiries, bug issues,
                       and feedback.
                     </li>
@@ -835,9 +835,9 @@ export default function Portfolio1() {
 
               <div className="group relative flex gap-x-5">
                 <div className="relative after:absolute after:bottom-2 after:start-3 after:top-8 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 group-last:after:hidden dark:after:bg-neutral-700">
-                  <div className="relative z-10 flex size-6 items-center justify-center">
+                  <div className="size-6 relative z-10 flex items-center justify-center">
                     <svg
-                      className="size-6 shrink-0 text-wedges-muted-foreground"
+                      className="size-6 text-wedges-muted-foreground shrink-0"
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
@@ -868,15 +868,15 @@ export default function Portfolio1() {
                 </div>
 
                 <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-wedges-muted-foreground">
+                  <h3 className="text-wedges-muted-foreground mb-1 text-xs">
                     2021 - 2023
                   </h3>
 
-                  <p className="text-sm font-semibold text-wedges-foreground">
+                  <p className="text-wedges-foreground text-sm font-semibold">
                     Senior Software Engineer at Mailchimp
                   </p>
 
-                  <p className="mt-1 text-sm text-wedges-muted-foreground">
+                  <p className="text-wedges-muted-foreground mt-1 text-sm">
                     This is an excellent company and they reward their
                     employees. It&apos;s becoming a big company but it&apos;s
                     still private, so the culture is as good as it gets at
@@ -898,11 +898,11 @@ export default function Portfolio1() {
                         />
 
                         <div className="ms-32 grow p-4 sm:ms-48">
-                          <div className="flex min-h-24 flex-col justify-center">
+                          <div className="min-h-24 flex flex-col justify-center">
                             <h3 className="text-sm font-semibold text-gray-800 dark:text-neutral-300">
                               Studio by Mailchimp
                             </h3>
-                            <p className="mt-1 text-sm text-wedges-muted-foreground">
+                            <p className="text-wedges-muted-foreground mt-1 text-sm">
                               Produce professional, reliable streams easily
                               leveraging Mailchimp&apos;s innovative broadcast
                               studio.
@@ -917,9 +917,9 @@ export default function Portfolio1() {
 
               <div className="group relative flex gap-x-5">
                 <div className="relative after:absolute after:bottom-2 after:start-3 after:top-8 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 group-last:after:hidden dark:after:bg-neutral-700">
-                  <div className="relative z-10 flex size-6 items-center justify-center">
+                  <div className="size-6 relative z-10 flex items-center justify-center">
                     <svg
-                      className="size-6 shrink-0 text-wedges-muted-foreground"
+                      className="size-6 text-wedges-muted-foreground shrink-0"
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
@@ -955,15 +955,15 @@ export default function Portfolio1() {
                 </div>
 
                 <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-wedges-muted-foreground">
+                  <h3 className="text-wedges-muted-foreground mb-1 text-xs">
                     2011 - 2021
                   </h3>
 
-                  <p className="text-sm font-semibold text-wedges-foreground">
+                  <p className="text-wedges-foreground text-sm font-semibold">
                     Junior Software Engineer at Slack
                   </p>
 
-                  <p className="mt-1 text-sm text-wedges-muted-foreground">
+                  <p className="text-wedges-muted-foreground mt-1 text-sm">
                     Work in Slack is one of the beautiful experience I can do in
                     my entire life. There are a lot of interesting thing to
                     learn and manager respect your time and your personality.
@@ -973,9 +973,9 @@ export default function Portfolio1() {
 
               <div className="group relative flex gap-x-5">
                 <div className="relative after:absolute after:bottom-2 after:start-3 after:top-8 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 group-last:after:hidden dark:after:bg-neutral-700">
-                  <div className="relative z-10 flex size-6 items-center justify-center">
+                  <div className="size-6 relative z-10 flex items-center justify-center">
                     <svg
-                      className="size-6 shrink-0 text-wedges-foreground"
+                      className="size-6 text-wedges-foreground shrink-0"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -995,24 +995,24 @@ export default function Portfolio1() {
                 </div>
 
                 <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-wedges-muted-foreground">
+                  <h3 className="text-wedges-muted-foreground mb-1 text-xs">
                     2010 - 2011
                   </h3>
 
-                  <p className="text-sm font-semibold text-wedges-foreground">
+                  <p className="text-wedges-foreground text-sm font-semibold">
                     Freelance Graphic Designer
                   </p>
 
                   <ul className="ms-6 mt-3 list-disc space-y-1.5">
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Worked with a diverse range of clients, delivering
                       tailored design solutions.
                     </li>
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Developed and maintained strong client relationships
                       through effective communication and project management.
                     </li>
-                    <li className="ps-1 text-sm text-wedges-muted-foreground">
+                    <li className="text-wedges-muted-foreground ps-1 text-sm">
                       Utilized tools such as Notion for project tracking,
                       Mailchimp for email marketing designs, Slack for team
                       collaboration, and GitHub for version control and project
@@ -1025,14 +1025,14 @@ export default function Portfolio1() {
           </div>
 
           <div className="mt-10 sm:mt-14">
-            <h2 className="mb-3 font-medium text-wedges-foreground">
+            <h2 className="text-wedges-foreground mb-3 font-medium">
               Education
             </h2>
 
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div className="rounded-lg border p-4">
                 <svg
-                  className="mb-3 size-10 shrink-0"
+                  className="size-10 mb-3 shrink-0"
                   width="400"
                   height="400"
                   viewBox="0 0 400 400"
@@ -1131,22 +1131,22 @@ export default function Portfolio1() {
                   ></path>
                 </svg>
 
-                <h3 className="mb-1 text-xs text-wedges-muted-foreground">
+                <h3 className="text-wedges-muted-foreground mb-1 text-xs">
                   2012 - 2013
                 </h3>
 
-                <p className="text-sm font-semibold text-wedges-foreground">
+                <p className="text-wedges-foreground text-sm font-semibold">
                   Master&apos;s degree in Computer Software Engineering
                 </p>
 
-                <p className="mt-1 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mt-1 text-sm">
                   The University of Manchester
                 </p>
               </div>
 
               <div className="rounded-lg border p-4">
                 <svg
-                  className="mb-3 size-10 shrink-0"
+                  className="size-10 mb-3 shrink-0"
                   width="123"
                   height="147"
                   viewBox="0 0 123 147"
@@ -1175,15 +1175,15 @@ export default function Portfolio1() {
                   ></path>
                 </svg>
 
-                <h3 className="mb-1 text-xs text-wedges-muted-foreground">
+                <h3 className="text-wedges-muted-foreground mb-1 text-xs">
                   2009 - 2012
                 </h3>
 
-                <p className="text-sm font-semibold text-wedges-foreground">
+                <p className="text-wedges-foreground text-sm font-semibold">
                   Bachelor&apos;s degree in Computer Software Engineering
                 </p>
 
-                <p className="mt-1 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mt-1 text-sm">
                   Harvard University
                 </p>
               </div>
@@ -1191,24 +1191,24 @@ export default function Portfolio1() {
           </div>
 
           <div className="my-10 sm:my-14">
-            <h2 className="mb-5 font-medium text-wedges-foreground">
+            <h2 className="text-wedges-foreground mb-5 font-medium">
               Articles
             </h2>
 
             <ul className="space-y-10">
               <li>
-                <p className="mb-2 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mb-2 text-sm">
                   2024
                 </p>
-                <h5 className="text-sm font-medium text-wedges-foreground">
+                <h5 className="text-wedges-foreground text-sm font-medium">
                   The complete guide to OKRs
                 </h5>
-                <p className="mt-1 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mt-1 text-sm">
                   How to make objectives and key results work for your company.
                 </p>
                 <p className="mt-1">
                   <a
-                    className="text-sm text-wedges-muted-foreground underline hover:text-wedges-foreground hover:decoration-2 focus:decoration-2 focus:outline-none"
+                    className="text-wedges-muted-foreground hover:text-wedges-foreground text-sm underline hover:decoration-2 focus:decoration-2 focus:outline-none"
                     href="#"
                   >
                     Continue reading
@@ -1217,20 +1217,20 @@ export default function Portfolio1() {
               </li>
 
               <li>
-                <p className="mb-2 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mb-2 text-sm">
                   2024
                 </p>
-                <h5 className="text-sm font-medium text-wedges-foreground">
+                <h5 className="text-wedges-foreground text-sm font-medium">
                   Enhancement in Customer Engagement
                 </h5>
-                <p className="mt-1 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mt-1 text-sm">
                   With the aim of optimizing customer interactions and boosting
                   brand loyalty, the team at Preline leveraged Mailchimp&apos;s
                   powerful tools and expertise to deliver exceptional results.
                 </p>
                 <p className="mt-1">
                   <a
-                    className="text-sm text-wedges-muted-foreground underline hover:text-wedges-foreground hover:decoration-2 focus:decoration-2 focus:outline-none"
+                    className="text-wedges-muted-foreground hover:text-wedges-foreground text-sm underline hover:decoration-2 focus:decoration-2 focus:outline-none"
                     href="#"
                   >
                     Continue reading
@@ -1239,19 +1239,19 @@ export default function Portfolio1() {
               </li>
 
               <li>
-                <p className="mb-2 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mb-2 text-sm">
                   2023
                 </p>
-                <h5 className="text-sm font-medium text-wedges-foreground">
+                <h5 className="text-wedges-foreground text-sm font-medium">
                   How Google Assistant now helps you record stories for kids
                 </h5>
-                <p className="mt-1 text-sm text-wedges-muted-foreground">
+                <p className="text-wedges-muted-foreground mt-1 text-sm">
                   Google is constantly updating its consumer AI, Google
                   Assistant, with new features.
                 </p>
                 <p className="mt-1">
                   <a
-                    className="text-sm text-wedges-muted-foreground underline hover:text-wedges-foreground hover:decoration-2 focus:decoration-2 focus:outline-none"
+                    className="text-wedges-muted-foreground hover:text-wedges-foreground text-sm underline hover:decoration-2 focus:decoration-2 focus:outline-none"
                     href="#"
                   >
                     Continue reading
@@ -1262,7 +1262,7 @@ export default function Portfolio1() {
           </div>
 
           <div className="my-10 sm:my-14">
-            <h2 className="mb-5 font-medium text-wedges-foreground">
+            <h2 className="text-wedges-foreground mb-5 font-medium">
               Subscribe
             </h2>
 
@@ -1274,7 +1274,7 @@ export default function Portfolio1() {
                   </label>
                   <div className="pointer-events-none absolute inset-y-0 start-0 z-20 flex items-center ps-3">
                     <svg
-                      className="size-4 shrink-0 text-wedges-muted-foreground"
+                      className="size-4 text-wedges-muted-foreground shrink-0"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -1337,7 +1337,7 @@ export default function Portfolio1() {
                   </svg>
                 </a> */}
               </div>
-              <p className="mt-2 text-xs text-wedges-muted-foreground">
+              <p className="text-wedges-muted-foreground mt-2 text-xs">
                 unsubscribe at any time.
               </p>
             </form>
@@ -1349,15 +1349,15 @@ export default function Portfolio1() {
         <div className="border-t py-6">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <p className="text-xs text-wedges-muted-foreground">
+              <p className="text-wedges-muted-foreground text-xs">
                 © 2025 Portfolio.
               </p>
             </div>
 
             <ul className="flex flex-wrap items-center">
-              <li className="relative inline-block pe-4 text-xs before:absolute before:end-1.5 before:top-1/2 before:size-[3px] before:-translate-y-1/2 before:rounded-full before:bg-gray-400 last:pe-0 last-of-type:before:hidden dark:text-neutral-500 dark:before:bg-neutral-600">
+              <li className="before:size-[3px] relative inline-block pe-4 text-xs before:absolute before:end-1.5 before:top-1/2 before:-translate-y-1/2 before:rounded-full before:bg-gray-400 last:pe-0 last-of-type:before:hidden dark:text-neutral-500 dark:before:bg-neutral-600">
                 <a
-                  className="text-xs text-wedges-muted-foreground underline hover:text-wedges-foreground hover:decoration-2 focus:decoration-2 focus:outline-none"
+                  className="text-wedges-muted-foreground hover:text-wedges-foreground text-xs underline hover:decoration-2 focus:decoration-2 focus:outline-none"
                   href="#"
                 >
                   X (Twitter)
@@ -1366,7 +1366,7 @@ export default function Portfolio1() {
 
               <li className="inline-block pe-4 text-xs">
                 <a
-                  className="text-xs text-wedges-muted-foreground underline hover:text-wedges-foreground hover:decoration-2 focus:decoration-2 focus:outline-none"
+                  className="text-wedges-muted-foreground hover:text-wedges-foreground text-xs underline hover:decoration-2 focus:decoration-2 focus:outline-none"
                   href="#"
                 >
                   Github

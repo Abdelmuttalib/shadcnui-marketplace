@@ -1,11 +1,8 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
-import React from "react";
 
 import { BlockPreview } from "@/components/common/block-preview";
-import { PageContainer } from "@/components/common/page-container";
-import { PageHeader } from "@/components/common/page-header";
 import { StringCode } from "@/components/common/string-code";
 import { SuggestedBlocks } from "@/components/suggested-blocks";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +10,9 @@ import { Typography } from "@/components/ui/typography";
 import { blocksRegistry } from "@/config/blocks-registry";
 import { blockCategories, BlockCategory } from "@/registry/registry-blocks";
 
-import { PreviewContainer } from "../components/preview-container";
+import { HalftoneBackground } from "@/components/landing/halftone-bg";
+import { SignatureMark } from "@/components/landing/signature-mark";
+import Footer from "@/components/landing/footer";
 
 interface Props {
   params: { slug: string };
@@ -30,7 +29,8 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   // read route params
   // blockCategories
-  const slug = (await params).slug.toLocaleLowerCase();
+  const s = await params;
+  const slug = s.slug.toLocaleLowerCase();
 
   const isBlock = blockCategories.includes(slug as unknown as BlockCategory);
 
@@ -64,9 +64,38 @@ export async function generateMetadata(
 // export async function generateStaticParams() {
 //   return Object.keys(blocksRegistry).map((slug) => ({ slug }));
 // }
+function CommunityHero({
+  tag,
+  title,
+  description,
+}: {
+  tag: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="relative flex w-full flex-col justify-center pt-6 pb-6 md:pt-10 lg:h-full lg:pb-0">
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <div className="flex items-center gap-1.5">
+            {/* <UsersIcon className="text-foreground/60 h-4 w-4" /> */}
+            <span className="text-foreground/60 text-sm">{tag}</span>
+          </div>
+          <h1 className="text-2xl leading-tight tracking-tight text-neutral-800 capitalize md:text-3xl xl:text-4xl dark:text-neutral-200">
+            {title}
+          </h1>
+          <p className="text-foreground/70 dark:text-foreground/50 max-w-[260px] text-sm leading-relaxed">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-export default function ComponentPage({ params }: Props) {
-  const slug = params.slug.toLocaleLowerCase();
+export default async function ComponentPage({ params }: Props) {
+  const d = await params;
+  const slug = d.slug.toLocaleLowerCase();
   const BLOCK_PAGE_NAME = blockCategories.includes(
     slug as unknown as BlockCategory
   )
@@ -87,61 +116,90 @@ export default function ComponentPage({ params }: Props) {
   const blockPageTitle = slug?.replace("-", " ");
 
   return (
-    <div>
-      <div className="bg-gradient-to-b from-accent/30 to-background py-20">
-        <PageContainer>
-          <PageHeader
-            title={blockPageTitle}
-            description={`${blockPageTitle} blocks for your website. crafted with shadcn ui and tailwindcss. Preview the blocks in different styles and see how they look together. copy & paste blocks directly to your project.`}
-            badge={<Badge>{blocksData?.length} blocks</Badge>}
-          />
-        </PageContainer>
-      </div>
+    <>
+      <div className="relative min-h-dvh pt-14 lg:pt-0">
+        <div className="text-foreground relative">
+          <div className="flex flex-col lg:flex-row">
+            {/* Left side — Community hero */}
+            <div className="border-foreground/6 relative hidden w-full shrink-0 overflow-clip border-b px-5 sm:px-6 lg:sticky lg:top-0 lg:block lg:h-dvh lg:w-[30%] lg:border-r lg:border-b-0 lg:px-10">
+              <div className="hidden lg:block">
+                <HalftoneBackground />
+              </div>
 
-      {/* <div>
-        <PageContainer size={"xl"}>
-          <div className="rounded-md border bg-linear-background">
-            {registryBlocks[""]}
-            {registryStyleBlocks["blog-sections"][0].component ?? null}
+              <h2 className="mb-4 flex items-center gap-3 font-mono text-sm text-neutral-900 sm:mb-5 sm:text-[15px] dark:text-neutral-100">
+                Blocks
+                <span className="bg-foreground/15 h-px flex-1" />
+              </h2>
+              <CommunityHero
+                tag="Blocks"
+                title={blockPageTitle}
+                description={`${blockPageTitle} crafted with shadcn ui and tailwindcss. Copy & paste blocks directly to your project.`}
+              />
+              <div className="absolute right-6 bottom-4 left-10 z-[3]">
+                <SignatureMark compact />
+              </div>
+            </div>
+
+            {/* Right side — Stats & platforms */}
+            <div className="no-scrollbar relative w-full overflow-x-hidden lg:w-[70%]">
+              <div className="space-y-8 px-5 lg:p-8 lg:pt-20">
+                {/* Mobile header */}
+                <div className="border-foreground/6 relative -mx-5 mb-5 overflow-hidden border-b px-5 sm:-mx-6 sm:px-6 lg:hidden">
+                  <HalftoneBackground />
+                  <div className="relative space-y-2 py-16">
+                    <div className="flex items-center gap-1.5">
+                      {/* <UsersIcon className="text-foreground/60 h-4 w-4" /> */}
+                      <span className="text-foreground/60 text-sm">Blocks</span>
+                    </div>
+                    <h1 className="text-2xl leading-tight tracking-tight text-neutral-800 capitalize md:text-3xl xl:text-4xl dark:text-neutral-200">
+                      {blockPageTitle}{" "}
+                    </h1>
+                    <p className="text-foreground/70 dark:text-foreground/50 text-sm leading-relaxed">
+                      {blockPageTitle} crafted with shadcn ui and tailwindcss.
+                      Copy & paste blocks directly to your project.
+                    </p>
+                  </div>
+                </div>
+
+                <h2 className="mb-4 flex items-center gap-3 font-mono text-sm text-neutral-900 capitalize sm:mb-5 sm:text-[15px] dark:text-neutral-100">
+                  {blockPageTitle}
+                  <span className="bg-foreground/15 h-px flex-1" />
+                </h2>
+
+                <div className="space-y-20">
+                  <div className="space-y-28">
+                    {blocksData.map((block, index) => {
+                      return (
+                        <BlockPreview
+                          key={block.id + index}
+                          id={block.id}
+                          title={block.title}
+                          plan={block.plan}
+                          description={block.description}
+                          category={block.category}
+                          component={block.id}
+                          fileName={block.fileName}
+                        >
+                          <StringCode c={block.code} />
+                        </BlockPreview>
+                      );
+                    })}
+                  </div>
+
+                  {/* suggestion */}
+                  <div>
+                    <SuggestedBlocks exclude={BLOCK_PAGE_NAME} />
+                  </div>
+                </div>
+              </div>
+              <div className="lg:hidden">
+                <Footer />
+              </div>
+            </div>
           </div>
-        </PageContainer>
-      </div> */}
-
-      <div className="space-y-20">
-        <PreviewContainer>
-          <div className="space-y-28">
-            {blocksData.map((block, index) => {
-              return (
-                <BlockPreview
-                  key={block.id + index}
-                  id={block.id}
-                  title={block.title}
-                  plan={block.plan}
-                  description={block.description}
-                  category={block.category}
-                  component={block.id}
-                  fileName={block.fileName}
-                >
-                  {/* <Code
-                    category={block.category}
-                    component={block.id}
-                    fileName={"page.tsx"}
-                  /> */}
-                  <StringCode c={block.code} />
-                </BlockPreview>
-              );
-            })}
-          </div>
-        </PreviewContainer>
-
-        {/* suggestion */}
-        <div>
-          <PageContainer size={"xl"}>
-            <SuggestedBlocks exclude={BLOCK_PAGE_NAME} />
-          </PageContainer>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -166,13 +224,13 @@ function BlocksNotFound({ slug }: { slug: string }) {
     <div className="flex h-screen flex-col items-center justify-center">
       <section className="">
         <div className="container mx-auto flex min-h-screen px-6 py-64">
-          <div className="w-full ">
+          <div className="w-full">
             <div className="mx-auto flex max-w-lg flex-col items-center text-center">
               <Badge>
                 <Typography
                   as="span"
                   variant="sm/medium"
-                  className="font-mono text-primary"
+                  className="text-primary font-mono"
                 >
                   404 error
                 </Typography>
@@ -180,14 +238,14 @@ function BlocksNotFound({ slug }: { slug: string }) {
               <Typography
                 as="p"
                 variant="4xl/semibold"
-                className="mt-4 tracking-tight text-foreground"
+                className="text-foreground mt-4 tracking-tight"
               >
                 Page not found
               </Typography>
               <Typography
                 as="p"
                 variant="base/normal"
-                className="mt-4 text-muted-foreground"
+                className="text-muted-foreground mt-4"
               >
                 Sorry, we couldn&apos;t find the page you&apos;re looking for.
               </Typography>
@@ -197,7 +255,7 @@ function BlocksNotFound({ slug }: { slug: string }) {
               {suggestedNotFoundLinks.map((link) => (
                 <div
                   key={link.title}
-                  className="group relative flex flex-col gap-2 rounded-lg border bg-card p-3.5 py-1.5 hover:border-primary"
+                  className="bg-card hover:border-primary group relative flex flex-col gap-2 rounded-lg border p-3.5 py-1.5"
                 >
                   <div className="flex items-center gap-4">
                     {/* <span className="text-muted-foreground">
@@ -218,11 +276,11 @@ function BlocksNotFound({ slug }: { slug: string }) {
                     </span> */}
 
                     <div className="flex items-center gap-3">
-                      <h3 className="font-medium text-foreground">
+                      <h3 className="text-foreground font-medium">
                         {link.title}
                       </h3>
 
-                      <ArrowRightIcon className="size-4 -rotate-45 text-muted-foreground/30 group-hover:text-primary" />
+                      <ArrowRightIcon className="text-muted-foreground/30 group-hover:text-primary size-4 -rotate-45" />
                     </div>
                   </div>
 

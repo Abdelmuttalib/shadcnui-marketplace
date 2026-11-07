@@ -90,13 +90,13 @@ export function ComponentPreviewCode({
         )}
       >
         {/* <GradientEffect /> */}
-        <div className="flex flex-col justify-between gap-1 overflow-x-auto rounded-2xl border bg-background p-2 py-1.5">
+        <div className="bg-background flex flex-col justify-between gap-1 overflow-x-auto rounded-2xl border p-2 py-1.5">
           <div className="flex justify-between overflow-x-auto px-1 pb-1 pt-1">
             <div className="flex w-full items-center justify-between gap-2">
               <div className="flex gap-0.5 rounded-lg outline-none">
                 <Button
                   className={cn("bg-transparent", {
-                    "border-none text-muted-foreground": !preview,
+                    "text-muted-foreground border-none": !preview,
                   })}
                   variant={preview ? "outline" : "ghost"}
                   onClick={() => setPreview(true)}
@@ -107,7 +107,7 @@ export function ComponentPreviewCode({
                 </Button>
                 <Button
                   className={cn("bg-transparent", {
-                    "border-none text-muted-foreground": preview,
+                    "text-muted-foreground border-none": preview,
                   })}
                   variant={!preview ? "outline" : "ghost"}
                   onClick={() => setPreview(false)}
@@ -152,7 +152,7 @@ export function ComponentPreviewCode({
             {preview ? (
               <div
                 className={cn(
-                  "z-20 flex h-fit min-h-80 w-full items-center justify-center overflow-hidden rounded-lg border bg-gradient-to-br from-accent/20 to-background p-4"
+                  "bg-linear-to-br from-accent/20 to-background z-20 flex h-fit min-h-80 w-full items-center justify-center overflow-hidden rounded-lg border p-4"
                 )}
               >
                 {/* {!Component && <div>Loading...</div>}

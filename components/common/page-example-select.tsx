@@ -11,7 +11,6 @@ import {
 import {
   PageExampleType,
   pageExampleTypes,
-  STYLES,
   useStyleStore,
 } from "@/hooks/use-style-store";
 
@@ -24,7 +23,7 @@ export function PageExampleSelect({
 }) {
   // update search params, 'style'
 
-  const { style, pageExampleType, setPageExampleType } = useStyleStore();
+  const { pageExampleType, setPageExampleType } = useStyleStore();
 
   function onPageExampleChange(v: PageExampleType) {
     setPageExampleType(v);
@@ -32,9 +31,9 @@ export function PageExampleSelect({
 
   return (
     <Select defaultValue={pageExampleType} onValueChange={onPageExampleChange}>
-      <SelectTrigger className="">
+      <SelectTrigger aria-label="Select example" className="">
         <SelectValue
-          placeholder="select a style"
+          placeholder="select an example"
           className="text-muted-foreground"
         >
           <span className="text-muted-foreground">example:</span>{" "}

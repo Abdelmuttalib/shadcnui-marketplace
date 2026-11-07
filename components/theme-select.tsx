@@ -63,9 +63,9 @@ export function ThemeModeRadio() {
         <button
           onClick={() => setTheme("system")}
           className={cn(
-            "flex items-center gap-2 rounded-full p-1 text-muted-foreground hover:text-foreground",
+            "text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full p-1",
             {
-              "border border-input bg-accent/50 text-foreground":
+              "border-input bg-accent/80 text-foreground border":
                 theme === "system",
             }
           )}
@@ -78,9 +78,9 @@ export function ThemeModeRadio() {
         <button
           onClick={() => setTheme("light")}
           className={cn(
-            "flex items-center gap-2 rounded-full p-1 text-muted-foreground hover:text-foreground",
+            "text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full p-1",
             {
-              "border border-input bg-accent/50 text-foreground":
+              "border-input bg-accent/80 text-foreground border":
                 theme === "light",
             }
           )}
@@ -93,9 +93,9 @@ export function ThemeModeRadio() {
         <button
           onClick={() => setTheme("dark")}
           className={cn(
-            "flex items-center gap-2 rounded-full p-1 text-muted-foreground hover:text-foreground",
+            "text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full p-1",
             {
-              "border border-input bg-accent/50 text-foreground":
+              "border-input bg-accent/80 text-foreground border":
                 theme === "dark",
             }
           )}
@@ -199,9 +199,9 @@ export function ThemeColorSelect() {
               });
             }}
             className={cn(
-              "flex items-center rounded-lg font-medium capitalize  text-foreground",
+              "text-foreground flex items-center rounded-lg font-medium capitalize",
               {
-                "ring-2 ring-ring ring-offset-background":
+                "ring-ring ring-offset-background ring-2":
                   name === themeColor.colorName,
               }
             )}
@@ -263,7 +263,7 @@ export function ThemeColorSelect2() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-popover p-1 text-foreground shadow-lg ring-1 ring-border focus:outline-none">
+        <Menu.Items className="bg-popover text-foreground ring-border absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md p-1 shadow-lg ring-1 focus:outline-none">
           <div className="relative">
             {PRIMARY_THEME_COLORS?.map(
               ({ name, color }: { name: ThemeColorType; color: string }) => (
@@ -275,7 +275,7 @@ export function ThemeColorSelect2() {
                       });
                     }}
                     className={cn(
-                      "flex w-full items-center rounded px-3 py-2.5 capitalize text-foreground",
+                      "text-foreground flex w-full items-center rounded px-3 py-2.5 capitalize",
                       {
                         "bg-primary-100 text-foreground dark:bg-muted-foreground/20":
                           name === themeColor.colorName,

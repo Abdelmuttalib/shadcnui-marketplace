@@ -2,7 +2,7 @@
 
 import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
 import { useStyleStore } from "@/hooks/use-style-store";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 export function ShowcaseStylePageExamplePreview() {
   const { style, pageExampleType } = useStyleStore();

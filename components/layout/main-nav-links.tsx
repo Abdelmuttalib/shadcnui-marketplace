@@ -18,9 +18,9 @@ export function MainNavLinks() {
           <Link
             href={link.href}
             className={cn(
-              "rounded-md px-2 py-1 text-sm text-muted-foreground hover:text-foreground",
+              "text-muted-foreground hover:text-foreground rounded-md px-2 py-1 text-sm",
               {
-                "border bg-accent text-foreground": pathname === link.href,
+                "text-foreground border font-medium": pathname === link.href,
               }
             )}
           >

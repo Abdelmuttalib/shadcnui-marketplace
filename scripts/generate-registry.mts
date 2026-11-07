@@ -16,6 +16,8 @@ import { styles } from "../registry/registry-styles";
 import { themePalettes } from "../registry/registry-themes";
 import { registryCategories } from "@/registry/registry-categories";
 import { BASE_SITE_URL } from "@/config/site-config";
+import { STYLES } from "@/registry/styles";
+import { BASES, type Base } from "@/registry/bases";
 
 const REGISTRY_PATH = path.join(process.cwd(), "public/r");
 
@@ -36,6 +38,19 @@ const project = new Project({
 async function createTempSourceFile(filename: string) {
   const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"));
   return path.join(dir, filename);
+}
+
+const STYLE_COMBINATIONS = Array.from(BASES).flatMap((base) =>
+  STYLES.map((style) => ({
+    base,
+    style,
+    name: `${base.name}-${style.name}`,
+    title: `${base.title} ${style.title}`,
+  }))
+);
+
+function getStyleCombination(styleName: string) {
+  return STYLE_COMBINATIONS.find((style) => style.name === styleName) ?? null;
 }
 
 enum RegistryType {
@@ -246,6 +261,9 @@ const LOCAL_EXAMPLES_URL = "/block";
 const SOURCE_EXAMPLES_URL = "https://shadcn-default.vercel.app";
 const SOURCE_CODES_URL = "@/code";
 
+const defaultBlocksStyleName = "wedges";
+const defaultBlocksStylePrefix = "wedges";
+
 function getCode(modulePath: string) {
   const fileContent = fs
     .readFile(modulePath, "utf-8")
@@ -256,7 +274,6 @@ function getCode(modulePath: string) {
         .replaceAll("-wedges", "")
     );
 
-  console.log("fileContent", fileContent);
   // return "";
   return fileContent;
 }
@@ -292,9 +309,6 @@ export const blocksRegistry = Object.fromEntries(
 // write a var to a file, config/data.ts
 
 // write a function to generate the registry
-
-const ROOT_PATH = path.join(process.cwd());
-console.log("ROOT_PATH", blocksRegistry);
 
 async function readFileContent(filePath: string) {
   const fileContent = await fs.readFile(filePath, "utf-8");
@@ -663,21 +677,27 @@ async function buildStyles(registry: Registry) {
               }
             }
 
+            // Legacy styles use style-prefixed tokens (e.g. bg-linear-primary)
+            // that are stripped to base tokens for consumers. The default-v4
+            // collection already uses base tokens, so stripping is skipped to
+            // avoid corrupting core utilities such as ease-linear.
+            let styleContent = sourceFile.getText();
+            if (style.name !== "default-v4") {
+              styleContent = styleContent.replaceAll(
+                /-(dft|cb|catalyst|linear|material|spctm|wedges|moon|lucid|snow|neon|libelle)\b/g,
+                ""
+              );
+            }
+
             return {
               path: file.path,
               type: file.type,
               // content: sourceFile.getText().replaceAll("-cb", ""),
               // replace all @/registry/{style}/ui with @/components/ui
-              content: sourceFile
-                .getText()
-                .replaceAll(
-                  /-(dft|cb|catalyst|linear|material|spctm|wedges|moon|lucid|snow|neon|libelle)\b/g,
-                  ""
-                )
-                .replaceAll(
-                  /@\/registry\/(default|carbon|catalyst|linear|material|spectrum|wedges|moon|lucid|snow|neon|libelle)\/ui/g,
-                  "@/components/ui"
-                ),
+              content: styleContent.replaceAll(
+                /@\/registry\/(default-v4|default|carbon|catalyst|linear|material|spectrum|wedges|moon|lucid|snow|neon|libelle)\/ui/g,
+                "@/components/ui"
+              ),
               target,
             };
           })
@@ -778,7 +798,7 @@ try {
   const isProd = env === "production";
 
   // await syncStyles();
-  // await buildRegistry(result.data);
+  await buildRegistry(result.data);
   await buildStyles(result.data);
   await buildStylesIndex(isProd ? BASE_SITE_URL : "http://localhost:3000");
   await buildThemes();

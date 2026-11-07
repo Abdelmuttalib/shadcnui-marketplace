@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 const footerSections = [
   {
@@ -49,7 +49,7 @@ export default function FooterComprehensive() {
                     <Link
                       key={index}
                       href="#"
-                      className="text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                      className="text-wedges-muted-foreground hover:text-wedges-primary transition-colors duration-300"
                     >
                       <Icon className="h-6 w-6" />
                     </Link>
@@ -67,7 +67,7 @@ export default function FooterComprehensive() {
                     <li key={linkIndex}>
                       <Link
                         href="#"
-                        className="group flex items-center text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                        className="text-wedges-muted-foreground hover:text-wedges-primary group flex items-center transition-colors duration-300"
                       >
                         <ChevronRight className="-ml-4 h-4 w-4 opacity-0 transition-all duration-300 group-hover:ml-0 group-hover:opacity-100" />
                         <span>{link}</span>
@@ -79,19 +79,19 @@ export default function FooterComprehensive() {
             ))}
           </div>
           <div className="mt-12 flex flex-col items-center justify-between border-t border-gray-200 pt-8 dark:border-gray-700 md:flex-row">
-            <p className="text-sm text-wedges-muted-foreground">
+            <p className="text-wedges-muted-foreground text-sm">
               &copy; 2023 Elegant Co. All rights reserved.
             </p>
             <div className="mt-4 space-x-4 md:mt-0">
               <Link
                 href="#"
-                className="text-sm text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                className="text-wedges-muted-foreground hover:text-wedges-primary text-sm transition-colors duration-300"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="#"
-                className="text-sm text-wedges-muted-foreground transition-colors duration-300 hover:text-wedges-primary"
+                className="text-wedges-muted-foreground hover:text-wedges-primary text-sm transition-colors duration-300"
               >
                 Terms of Service
               </Link>

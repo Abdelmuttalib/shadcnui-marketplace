@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 
 type StyleFontWrapperProps = React.ComponentPropsWithoutRef<"div"> & {
   sStyle?: Style;
@@ -39,20 +39,6 @@ export function StyleCssWrapper({
   style?: Style;
 }>) {
   const { style: _style } = useStyleStore();
-
-  // const styles = {
-  //   default: "bg-dft-background",
-  //   carbon: "bg-cb-background",
-  //   linear: "bg-linear-background",
-  //   material: "bg-material-background",
-  //   catalyst: "bg-catalyst-background",
-  //   wedges: "bg-wedges-background",
-  //   spectrum: "bg-spctm-background",
-  //   moon: "bg-moon-background",
-  //   lucid: "bg-lucid-background",
-  //   snow: "bg-snow-background",
-  //   neon: "bg-neon-background",
-  // };
 
   return (
     <div

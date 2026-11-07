@@ -5,8 +5,6 @@ import {
   PageTitle,
 } from "@/components/common/page-header";
 import { ExamplesTabsNav } from "@/components/draft";
-import { Badge } from "@/components/ui/badge";
-import { STYLES_LENGTH } from "@/hooks/use-style-store";
 
 import {
   StylesExamples,
@@ -17,38 +15,12 @@ import {
 export default function StylesPage() {
   return (
     <div className="relative">
-      {/* <div className="absolute inset-0 h-32 w-full bg-gradient-to-b from-accent/40 to-background"></div> */}
       <div className="relative space-y-20 py-20">
         <PageContainer>
-          {/* <div>
-            <Logo />
-          </div>
-          <div>
-            <div className="flex flex-col items-center">
-              <div className="-mb-4 size-7 rounded-full border-2 border-foreground bg-transparent"></div>
-              <div className="relative h-10 w-11 rounded bg-foreground">
-                <div className="absolute bottom-1 mx-auto ml-[19px] h-[80%] w-1 rotate-[49deg] rounded-md bg-background"></div>
-                <div className="absolute bottom-0.5 mx-auto ml-[26px] h-[50%] w-1 rotate-[49deg] rounded-md bg-background"></div>
-              </div>
-            </div>
-          </div> */}
           <div className="flex flex-col gap-y-4">
-            {/* <Typography
-              variant="5xl/medium"
-              className="max-w-md font-[490] tracking-tighter"
-            >
-              Delight the web with Motion
-            </Typography>
-            <Typography
-              variant="5xl/medium"
-              className="max-w-md tracking-tighter"
-            >
-              Styles
-            </Typography> */}
             <PageHeader
               title="Styles"
-              description="Discover shadcn ui styles and UI kits, beyond Default and New York shadcn ui styles."
-              badge={<Badge>{STYLES_LENGTH} styles</Badge>}
+              description="Discover shadcn ui styles and ui kits."
               actions={
                 <div className="mt-4">
                   <ExamplesTabsNav />
@@ -67,13 +39,13 @@ export default function StylesPage() {
           <PageContainer className="flex flex-col gap-4">
             <PageTitle as={"h2"}>See it in action</PageTitle>
 
-            <PageSubTitle className="max-w-2xl text-muted-foreground">
+            <PageSubTitle className="text-muted-foreground max-w-2xl">
               Preview custom shadcn styles in different examples and see how
               they look
             </PageSubTitle>
           </PageContainer>
         </div>
-        <div className="sticky top-14 z-30 w-full bg-background/[0.7] py-2 backdrop-blur-sm">
+        <div className="bg-background/70 sticky top-14 z-30 w-full py-2 backdrop-blur-sm">
           <PageContainer className="flex flex-col gap-6">
             <ExamplesTabsNav />
           </PageContainer>
@@ -88,7 +60,7 @@ export default function StylesPage() {
                   as={"h2"}
                   className="text-5xl font-[490] tracking-tighter"
                 >
-                  <span className="lowercase text-foreground/70">
+                  <span className="text-foreground/70 lowercase">
                     same shadcn,
                   </span>
                   <br />

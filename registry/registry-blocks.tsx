@@ -1,7 +1,6 @@
-import { BlockPlan, RegistryType } from "@/config/types";
 import { type Style } from "@/hooks/use-style-store";
 
-import { registryStyleBlocks as linearStyleBlocks } from "./linear/block";
+import { registryStyleBlocks as linearStyleBlocks } from "./bases/base/linear/block";
 
 export type BlockCategory =
   | "blog-sections"

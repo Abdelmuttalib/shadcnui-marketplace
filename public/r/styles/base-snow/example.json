@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "name": "example",
+  "title": "Example",
+  "files": [
+    {
+      "path": "components/example.tsx",
+      "content": "import { cn } from \"cn\";\n\nfunction ExampleWrapper({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div className=\"bg-muted dark:bg-background w-full\">\n      <div\n        data-slot=\"example-wrapper\"\n        className={cn(\n          \"mx-auto grid min-h-screen w-full max-w-5xl min-w-0 content-center items-start gap-8 p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-2 md:gap-8 lg:p-12 2xl:max-w-6xl\",\n\n          className\n        )}\n        {...props}\n      />\n    </div>\n  );\n}\n\nfunction Example({\n  title,\n  children,\n  className,\n  containerClassName,\n  ...props\n}: React.ComponentProps<\"div\"> & {\n  title?: string;\n  containerClassName?: string;\n}) {\n  return (\n    <div\n      data-slot=\"example\"\n      className={cn(\n        \"mx-auto flex w-full max-w-lg min-w-0 flex-col gap-1 self-stretch lg:max-w-none\",\n        containerClassName\n      )}\n      {...props}\n    >\n      {title && (\n        <div className=\"text-muted-foreground px-1.5 py-2 text-xs font-medium\">\n          {title}\n        </div>\n      )}\n      <div\n        data-slot=\"example-content\"\n        className={cn(\n          \"bg-card text-foreground style-lyra:rounded-none style-sera:rounded-none flex min-w-0 flex-1 flex-col items-start gap-6 rounded-xl p-12 *:[div:not([class*='w-'])]:w-full\",\n          className\n        )}\n      >\n        {children}\n      </div>\n    </div>\n  );\n}\n\nexport { ExampleWrapper, Example };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component",
+  "dependencies": ["cn"]
+}

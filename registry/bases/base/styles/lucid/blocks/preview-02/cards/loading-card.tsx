@@ -1,0 +1,29 @@
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/bases/base/styles/lucid/ui/card";
+import { Skeleton } from "@/registry/bases/base/styles/lucid/ui/skeleton";
+
+export function LoadingCard() {
+  return (
+    <Card>
+      <CardHeader>
+        <Skeleton className="h-5 w-32" />
+        <Skeleton className="h-4 w-48" />
+      </CardHeader>
+      <CardContent className="flex flex-col gap-4">
+        <Skeleton className="rounded-lucid-lg h-32 w-full" />
+        <div className="flex flex-col gap-2">
+          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-4 w-3/4" />
+          <Skeleton className="h-4 w-1/2" />
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="rounded-lucid-md h-9 flex-1" />
+          <Skeleton className="rounded-lucid-md h-9 flex-1" />
+        </div>
+      </CardContent>
+    </Card>
+  );
+}

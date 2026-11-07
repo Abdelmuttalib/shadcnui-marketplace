@@ -8,8 +8,8 @@ export function StylePageExamples({ style = "carbon" }: { style?: Style }) {
     <>
       {pageExampleTypes.map((pageExampleType) => (
         <StylePageExamplePreview
-          key={`carbon-style-page-example-type-${pageExampleType}`}
-          id="dashboard"
+          key={`${style}-style-page-example-type-${pageExampleType}`}
+          id={pageExampleType}
           styleProp={style}
           pageExampleTypeProp={pageExampleType}
           hideBadge={true}

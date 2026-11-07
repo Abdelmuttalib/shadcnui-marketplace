@@ -6,13 +6,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/wedges/ui/avatar";
-import { Badge } from "@/registry/wedges/ui/badge";
-import { Card } from "@/registry/wedges/ui/card";
+} from "@/registry/bases/base/wedges/ui/avatar";
+import { Badge } from "@/registry/bases/base/wedges/ui/badge";
+import { Card } from "@/registry/bases/base/wedges/ui/card";
 import {
   Typography,
   typographyVariants,
-} from "@/registry/wedges/ui/typography";
+} from "@/registry/bases/base/wedges/ui/typography";
 
 function formatDate(dateString: string): string {
   const options: Intl.DateTimeFormatOptions = {
@@ -107,7 +107,7 @@ function BlogCard({
   return (
     <Card className="overflow-hidden hover:shadow-lg">
       <Link href={`#`}>
-        <div className="relative h-48 w-full bg-wedges-accent">
+        <div className="bg-wedges-accent relative h-48 w-full">
           {/* <Image
             src={imageUrl || "/placeholder.svg"}
             alt={title}
@@ -115,7 +115,7 @@ function BlogCard({
             className="object-cover"
           /> */}
           <div className="flex h-full w-full items-center justify-center">
-            <div className="rounded-md border-2 p-6 text-wedges-muted-foreground">
+            <div className="text-wedges-muted-foreground rounded-md border-2 p-6">
               <ImageIcon />
             </div>
           </div>
@@ -128,7 +128,7 @@ function BlogCard({
           <Typography
             as="p"
             variant="base/normal"
-            className="mb-4 text-wedges-muted-foreground"
+            className="text-wedges-muted-foreground mb-4"
           >
             {excerpt}
           </Typography>

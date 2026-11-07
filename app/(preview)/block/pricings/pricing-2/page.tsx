@@ -3,9 +3,13 @@
 import { Check, MessageSquare, Sparkles, Users } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
-import { Card, CardContent, CardHeader } from "@/registry/wedges/ui/card";
-import { Typography } from "@/registry/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/bases/base/wedges/ui/card";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 const pricingTiers = [
   {
@@ -65,7 +69,7 @@ export default function PricingPage() {
           <Typography
             as="h1"
             variant="5xl/bold"
-            className="tracking-tight text-wedges-foreground"
+            className="text-wedges-foreground tracking-tight"
           >
             Start growing today
           </Typography>
@@ -73,7 +77,7 @@ export default function PricingPage() {
           <Typography
             as="p"
             variant="lg/normal"
-            className="mt-6 leading-8 text-wedges-muted-foreground"
+            className="text-wedges-muted-foreground mt-6 leading-8"
           >
             Choose a plan that fits your needs. Get access to our team of
             designers and developers ready to help you grow.
@@ -128,7 +132,7 @@ function PricingCard({
     <div className="h-full transition-transform duration-300 hover:-translate-y-3">
       <Card
         className={cn("relative h-full overflow-hidden", {
-          "border-2 border-primary shadow-2xl": highlighted,
+          "border-primary border-2 shadow-2xl": highlighted,
         })}
       >
         <CardHeader className="space-y-2 pb-8 pt-6">
@@ -153,7 +157,7 @@ function PricingCard({
               </Typography>
             </div>
           </div>
-          <p className="text-sm text-wedges-muted-foreground">{description}</p>
+          <p className="text-wedges-muted-foreground text-sm">{description}</p>
         </CardHeader>
         <CardContent className="grid gap-6">
           <Button
@@ -170,11 +174,11 @@ function PricingCard({
 
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-sm">
-              <MessageSquare className="h-4 w-4 text-wedges-muted-foreground" />
+              <MessageSquare className="text-wedges-muted-foreground h-4 w-4" />
               <span>Slack communication</span>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <Users className="h-4 w-4 text-wedges-muted-foreground" />
+              <Users className="text-wedges-muted-foreground h-4 w-4" />
               <span>{teamMembers}</span>
             </div>
           </div>

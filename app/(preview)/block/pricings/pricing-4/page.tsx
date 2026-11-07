@@ -5,14 +5,14 @@ import { Check } from "lucide-react";
 import type React from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/wedges/ui/button";
+import { Button } from "@/registry/bases/base/wedges/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/wedges/ui/card";
-import { Typography } from "@/registry/wedges/ui/typography";
+} from "@/registry/bases/base/wedges/ui/card";
+import { Typography } from "@/registry/bases/base/wedges/ui/typography";
 
 const pricingTiers = [
   {
@@ -20,7 +20,7 @@ const pricingTiers = [
     price: "$2,900",
     description:
       "Perfect for small businesses looking to establish a professional online presence.",
-    icon: <Briefcase className="h-6 w-6 text-wedges-primary" />,
+    icon: <Briefcase className="text-wedges-primary h-6 w-6" />,
     features: [
       { text: "Custom website design" },
       { text: "Basic SEO optimization" },
@@ -35,7 +35,7 @@ const pricingTiers = [
     price: "$4,900",
     description:
       "Ideal for growing businesses needing comprehensive digital solutions.",
-    icon: <Rocket className="h-6 w-6 text-wedges-primary" />,
+    icon: <Rocket className="text-wedges-primary h-6 w-6" />,
     highlighted: true,
     features: [
       { text: "Everything in Essential" },
@@ -51,7 +51,7 @@ const pricingTiers = [
     price: "$7,900",
     description:
       "For established businesses requiring a full suite of digital services.",
-    icon: <Building className="h-6 w-6 text-wedges-primary" />,
+    icon: <Building className="text-wedges-primary h-6 w-6" />,
     features: [
       { text: "Everything in Growth" },
       { text: "Custom web application" },
@@ -79,7 +79,7 @@ export default function PricingPage() {
           <Typography
             as="p"
             variant="xl/normal"
-            className="mx-auto mt-6 max-w-xl text-wedges-muted-foreground"
+            className="text-wedges-muted-foreground mx-auto mt-6 max-w-xl"
           >
             Choose the perfect plan to transform your online identity and
             accelerate your business growth.
@@ -141,7 +141,7 @@ function PricingCard({
         )}
       >
         <CardHeader>
-          <div className="mb-4 flex w-fit items-center rounded-md bg-wedges-primary/10 pr-4">
+          <div className="bg-wedges-primary/10 mb-4 flex w-fit items-center rounded-md pr-4">
             <div className="flex h-12 w-12 items-center justify-center">
               {icon}
             </div>
@@ -156,7 +156,7 @@ function PricingCard({
             <Typography
               as="span"
               variant="sm/normal"
-              className="ml-1 text-wedges-muted-foreground"
+              className="text-wedges-muted-foreground ml-1"
             >
               /month
             </Typography>
@@ -173,8 +173,8 @@ function PricingCard({
           <ul className="mt-6 space-y-2">
             {features.map((feature, index) => (
               <li key={index} className="flex items-center text-sm">
-                <span className="mr-2 rounded-md bg-wedges-primary/10 p-1.5">
-                  <Check className="h-4 w-4 text-wedges-primary" />
+                <span className="bg-wedges-primary/10 mr-2 rounded-md p-1.5">
+                  <Check className="text-wedges-primary h-4 w-4" />
                 </span>
                 {feature.text}
               </li>

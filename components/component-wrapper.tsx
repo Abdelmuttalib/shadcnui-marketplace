@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 
 export function ComponentWrapper({
   className,
@@ -21,7 +21,7 @@ export function ComponentWrapper({
         id={name}
         data-name={name.toLowerCase()}
         className={cn(
-          "flex h-fit min-w-96 scroll-mt-16 flex-col rounded-lg border",
+          "min-w-96 flex h-fit scroll-mt-16 flex-col rounded-lg border",
           className
         )}
         {...props}
@@ -83,7 +83,7 @@ export function ComponentShowcaseWrapper({
         id={name}
         data-name={name.toLowerCase()}
         className={cn(
-          "flex max-h-72 min-h-72 scroll-mt-16 flex-col overflow-hidden rounded-lg border",
+          "min-h-72 flex max-h-72 scroll-mt-16 flex-col overflow-hidden rounded-lg border",
           //  bg-accent
           getStyleBackgroundClassname(style),
           className
@@ -98,7 +98,7 @@ export function ComponentShowcaseWrapper({
         >
           {children}
         </div>
-        <div className="flex-shrink-0 border-t bg-background px-4 py-3">
+        <div className="bg-background flex-shrink-0 border-t px-4 py-3">
           <div className="text-sm font-medium">{getComponentName(name)}</div>
         </div>
       </div>

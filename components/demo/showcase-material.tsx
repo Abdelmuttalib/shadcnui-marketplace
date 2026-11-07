@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/material/ui/accordion";
+} from "@/registry/bases/base/material/ui/accordion";
 
 export function AccordionDemo() {
   return (
@@ -40,7 +40,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/material/ui/alert";
+} from "@/registry/bases/base/material/ui/alert";
 
 export function AlertDemo() {
   return (
@@ -64,7 +64,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/material/ui/alert-dialog";
+} from "@/registry/bases/base/material/ui/alert-dialog";
 
 export function AlertDialogDemo() {
   return (
@@ -91,7 +91,7 @@ export function AlertDialogDemo() {
 
 import Image from "next/image";
 
-import { AspectRatio } from "@/registry/material/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/material/ui/aspect-ratio";
 
 export function AspectRatioDemo() {
   return (
@@ -110,7 +110,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/material/ui/avatar";
+} from "@/registry/bases/base/material/ui/avatar";
 
 export function AvatarDemo() {
   return (
@@ -121,7 +121,7 @@ export function AvatarDemo() {
   );
 }
 
-import { Badge } from "@/registry/material/ui/badge";
+import { Badge } from "@/registry/bases/base/material/ui/badge";
 
 export function BadgeDemo() {
   return <Badge>Badge</Badge>;
@@ -135,13 +135,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/material/ui/breadcrumb";
+} from "@/registry/bases/base/material/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (
@@ -183,7 +183,7 @@ export function ButtonDemo() {
 
 import * as React from "react";
 
-import { Calendar } from "@/registry/material/ui/calendar";
+import { Calendar } from "@/registry/bases/base/material/ui/calendar";
 
 export function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -205,16 +205,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/material/ui/card";
-import { Input } from "@/registry/material/ui/input";
-import { Label } from "@/registry/material/ui/label";
+} from "@/registry/bases/base/material/ui/card";
+import { Input } from "@/registry/bases/base/material/ui/input";
+import { Label } from "@/registry/bases/base/material/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/material/ui/select";
+} from "@/registry/bases/base/material/ui/select";
 
 export function CardWithForm() {
   return (
@@ -261,7 +261,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/material/ui/carousel";
+} from "@/registry/bases/base/material/ui/carousel";
 
 export function CarouselDemo() {
   return (
@@ -285,7 +285,7 @@ export function CarouselDemo() {
   );
 }
 
-import { Checkbox } from "@/registry/material/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/material/ui/checkbox";
 
 export function CheckboxDemo() {
   return (
@@ -293,7 +293,7 @@ export function CheckboxDemo() {
       <Checkbox id="terms" />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -307,7 +307,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/material/ui/collapsible";
+} from "@/registry/bases/base/material/ui/collapsible";
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -353,12 +353,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/material/ui/popover";
+} from "@/registry/bases/base/material/ui/popover";
 import { cn } from "@/utils/cn";
 
 const frameworks = [
@@ -447,7 +447,7 @@ import {
 import {
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/material/ui/command";
+} from "@/registry/bases/base/material/ui/command";
 
 export function CommandDemo() {
   return (
@@ -506,7 +506,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/material/ui/context-menu";
+} from "@/registry/bases/base/material/ui/context-menu";
 
 export function ContextMenuDemo() {
   return (
@@ -599,7 +599,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/material/ui/dialog";
+} from "@/registry/bases/base/material/ui/dialog";
 
 export function DialogDemo() {
   return (
@@ -648,7 +648,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/material/ui/drawer";
+} from "@/registry/bases/base/material/ui/drawer";
 
 const data = [
   {
@@ -726,7 +726,7 @@ export function DrawerDemo() {
                 <div className="text-7xl font-bold tracking-tighter">
                   {goal}
                 </div>
-                <div className="text-[0.70rem] uppercase text-material-muted-foreground">
+                <div className="text-material-muted-foreground text-[0.70rem] uppercase">
                   Calories/day
                 </div>
               </div>
@@ -778,7 +778,7 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from "@/registry/material/ui/dropdown-menu";
+} from "@/registry/bases/base/material/ui/dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (
@@ -844,7 +844,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/material/ui/hover-card";
+} from "@/registry/bases/base/material/ui/hover-card";
 
 export function HoverCardDemo() {
   return (
@@ -865,7 +865,7 @@ export function HoverCardDemo() {
             </p>
             <div className="flex items-center pt-2">
               <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
-              <span className="text-xs text-muted-foreground">
+              <span className="text-muted-foreground text-xs">
                 Joined December 2021
               </span>
             </div>
@@ -885,7 +885,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/material/ui/input-otp";
+} from "@/registry/bases/base/material/ui/input-otp";
 
 export function InputOTPDemo() {
   return (
@@ -930,7 +930,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/material/ui/menubar";
+} from "@/registry/bases/base/material/ui/menubar";
 
 export function MenubarDemo() {
   return (
@@ -1035,7 +1035,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/material/ui/navigation-menu";
+} from "@/registry/bases/base/material/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -1086,14 +1086,14 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-accent/50 to-accent p-6 no-underline outline-none focus:shadow-md"
+                    className="from-accent/50 to-accent flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-none select-none focus:shadow-md"
                     href="/"
                   >
                     <CalendarIcon className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mt-4 mb-2 text-lg font-medium">
                       shadcn/ui
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    <p className="text-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
@@ -1150,13 +1150,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className="text-sm leading-none font-medium">{title}</div>
+          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>
@@ -1174,7 +1174,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/material/ui/pagination";
+} from "@/registry/bases/base/material/ui/pagination";
 
 export function PaginationDemo() {
   return (
@@ -1214,8 +1214,8 @@ export function PopoverDemo() {
       <PopoverContent className="w-80">
         <div className="grid gap-4">
           <div className="space-y-2">
-            <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-sm text-muted-foreground">
+            <h4 className="leading-none font-medium">Dimensions</h4>
+            <p className="text-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
           </div>
@@ -1259,7 +1259,7 @@ export function PopoverDemo() {
   );
 }
 
-import { Progress } from "@/registry/material/ui/progress";
+import { Progress } from "@/registry/bases/base/material/ui/progress";
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(13);
@@ -1272,7 +1272,10 @@ export function ProgressDemo() {
   return <Progress value={progress} className="w-[60%]" />;
 }
 
-import { RadioGroup, RadioGroupItem } from "@/registry/material/ui/radio-group";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/registry/bases/base/material/ui/radio-group";
 
 export function RadioGroupDemo() {
   return (
@@ -1290,43 +1293,6 @@ export function RadioGroupDemo() {
         <Label htmlFor="r3">Compact</Label>
       </div>
     </RadioGroup>
-  );
-}
-
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/registry/material/ui/resizable";
-
-export function ResizableDemo() {
-  return (
-    <ResizablePanelGroup
-      direction="horizontal"
-      className="max-w-md rounded-cb-lg border border-cb-border md:min-w-[450px]"
-    >
-      <ResizablePanel defaultSize={50}>
-        <div className="flex h-[200px] items-center justify-center p-6">
-          <span className="font-semibold">One</span>
-        </div>
-      </ResizablePanel>
-      <ResizableHandle />
-      <ResizablePanel defaultSize={50}>
-        <ResizablePanelGroup direction="vertical">
-          <ResizablePanel defaultSize={25}>
-            <div className="flex h-full items-center justify-center p-6">
-              <span className="font-semibold">Two</span>
-            </div>
-          </ResizablePanel>
-          <ResizableHandle />
-          <ResizablePanel defaultSize={75}>
-            <div className="flex h-full items-center justify-center p-6">
-              <span className="font-semibold">Three</span>
-            </div>
-          </ResizablePanel>
-        </ResizablePanelGroup>
-      </ResizablePanel>
-    </ResizablePanelGroup>
   );
 }
 
@@ -1400,10 +1366,10 @@ export function ChartLineDemo() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-muted-foreground">
+            <div className="text-muted-foreground flex items-center gap-2 leading-none">
               Showing total visitors for the last 6 months
             </div>
           </div>
@@ -1463,10 +1429,10 @@ export function ChartBarDemo() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
+        <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
+        <div className="text-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
@@ -1536,10 +1502,10 @@ export function ChartAreaDemo() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-muted-foreground">
+            <div className="text-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -1572,7 +1538,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/material/ui/form";
+} from "@/registry/bases/base/material/ui/form";
 
 const items = [
   {
@@ -1731,7 +1697,7 @@ export function FormDemo() {
                   defaultValue={field.value}
                   className="flex flex-col space-y-1"
                 >
-                  <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormItem className="flex items-center space-y-0 space-x-3">
                     <FormControl>
                       <RadioGroupItem value="all" />
                     </FormControl>
@@ -1739,7 +1705,7 @@ export function FormDemo() {
                       All new messages
                     </FormLabel>
                   </FormItem>
-                  <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormItem className="flex items-center space-y-0 space-x-3">
                     <FormControl>
                       <RadioGroupItem value="mentions" />
                     </FormControl>
@@ -1747,7 +1713,7 @@ export function FormDemo() {
                       Direct messages and mentions
                     </FormLabel>
                   </FormItem>
-                  <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormItem className="flex items-center space-y-0 space-x-3">
                     <FormControl>
                       <RadioGroupItem value="none" />
                     </FormControl>
@@ -1763,7 +1729,7 @@ export function FormDemo() {
           control={form.control}
           name="mobile"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow">
+            <FormItem className="flex flex-row items-start space-y-0 space-x-3 rounded-md border p-4 shadow">
               <FormControl>
                 <Checkbox
                   checked={field.value}
@@ -1802,7 +1768,7 @@ export function FormDemo() {
                     return (
                       <FormItem
                         key={item.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
+                        className="flex flex-row items-start space-y-0 space-x-3"
                       >
                         <FormControl>
                           <Checkbox
@@ -1946,8 +1912,8 @@ export function SonnerDemo() {
   );
 }
 
-import { ScrollArea } from "@/registry/material/ui/scroll-area";
-import { Separator } from "@/registry/material/ui/separator";
+import { ScrollArea } from "@/registry/bases/base/material/ui/scroll-area";
+import { Separator } from "@/registry/bases/base/material/ui/separator";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -1955,9 +1921,9 @@ const tags = Array.from({ length: 50 }).map(
 
 export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-72 w-48 rounded-cb-md border border-cb-border">
+    <ScrollArea className="rounded-cb-md border-cb-border h-72 w-48 border">
       <div className="p-4">
-        <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+        <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
         {tags.map((tag) => (
           <div key={tag}>
             <div className="text-sm">{tag}</div>
@@ -1969,7 +1935,10 @@ export function ScrollAreaDemo() {
   );
 }
 
-import { SelectGroup, SelectLabel } from "@/registry/material/ui/select";
+import {
+  SelectGroup,
+  SelectLabel,
+} from "@/registry/bases/base/material/ui/select";
 
 export function SelectDemo() {
   return (
@@ -2068,7 +2037,7 @@ export function CardDemo() {
           </ol>
         </CardContent>
         <CardFooter>
-          <div className="flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale">
+          <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
@@ -2122,8 +2091,8 @@ export function SeparatorDemo() {
   return (
     <div>
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-sm text-muted-foreground">
+        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
+        <p className="text-muted-foreground text-sm">
           An open-source UI component library.
         </p>
       </div>
@@ -2148,7 +2117,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/material/ui/sheet";
+} from "@/registry/bases/base/material/ui/sheet";
 
 export function SheetDemo() {
   return (
@@ -2187,7 +2156,7 @@ export function SheetDemo() {
   );
 }
 
-import { Skeleton } from "@/registry/material/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/material/ui/skeleton";
 
 export function SkeletonDemo() {
   return (
@@ -2201,7 +2170,7 @@ export function SkeletonDemo() {
   );
 }
 
-import { Slider } from "@/registry/material/ui/slider";
+import { Slider } from "@/registry/bases/base/material/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 
@@ -2217,7 +2186,7 @@ export function SliderDemo({ className, ...props }: SliderProps) {
   );
 }
 
-import { Switch } from "@/registry/material/ui/switch";
+import { Switch } from "@/registry/bases/base/material/ui/switch";
 
 export function SwitchDemo() {
   return (
@@ -2237,7 +2206,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/material/ui/table";
+} from "@/registry/bases/base/material/ui/table";
 
 const invoices = [
   {
@@ -2469,13 +2438,13 @@ export function DataTableDemo() {
   );
 }
 
-import { Button } from "@/registry/material/ui/button";
+import { Button } from "@/registry/bases/base/material/ui/button";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/material/ui/tabs";
+} from "@/registry/bases/base/material/ui/tabs";
 
 export function TabsDemo() {
   return (
@@ -2557,7 +2526,7 @@ export function TabsDemo() {
   );
 }
 
-import { Textarea } from "@/registry/material/ui/textarea";
+import { Textarea } from "@/registry/bases/base/material/ui/textarea";
 
 export function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;
@@ -2565,7 +2534,7 @@ export function TextareaDemo() {
 
 import { Bold } from "lucide-react";
 
-import { Toggle } from "@/registry/material/ui/toggle";
+import { Toggle } from "@/registry/bases/base/material/ui/toggle";
 
 export function ToggleDemo() {
   return (
@@ -2580,7 +2549,7 @@ import { Italic, Underline } from "lucide-react";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/material/ui/toggle-group";
+} from "@/registry/bases/base/material/ui/toggle-group";
 
 export function ToggleGroupDemo() {
   return (
@@ -2598,13 +2567,13 @@ export function ToggleGroupDemo() {
   );
 }
 
-import { DataTable } from "@/registry/material/ui/data-table";
+import { DataTable } from "@/registry/bases/base/material/ui/data-table";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/material/ui/tooltip";
+} from "@/registry/bases/base/material/ui/tooltip";
 
 export function TooltipDemo() {
   return (
@@ -2629,7 +2598,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/material/ui/chart";
+} from "@/registry/bases/base/material/ui/chart";
 const chartData4 = [
   { month: "January", desktop: 186 },
   { month: "February", desktop: 305 },
@@ -2690,10 +2659,10 @@ export function Chart4() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-muted-foreground">
+            <div className="text-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -2799,10 +2768,10 @@ export function Chart5() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="flex items-center gap-2 leading-none text-muted-foreground">
+            <div className="text-muted-foreground flex items-center gap-2 leading-none">
               January - June 2024
             </div>
           </div>
@@ -2865,10 +2834,10 @@ export function Chart6() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
+        <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
+        <div className="text-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
@@ -2947,10 +2916,10 @@ export function Chart7() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
+        <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
+        <div className="text-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>

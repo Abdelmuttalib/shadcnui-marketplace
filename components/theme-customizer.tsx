@@ -6,7 +6,7 @@ import React, { ReactNode } from "react";
 import { Style, useStyleStore } from "@/hooks/use-style-store";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { themePalettes } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 // Theme Wrapper Component
 type ThemeWrapperProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -40,7 +40,10 @@ export function ThemeCustomizerWrapper({ children }: ThemeWrapperProps) {
     if (!cssVars || cssVars.length === 0) return;
 
     cssVars.forEach(([key, value]) => {
-      element.style.setProperty(prefixCssVariableWithStyle(style, key), value);
+      element.style.setProperty(
+        prefixCssVariableWithStyle(style, key),
+        `oklch(${value})`
+      );
     });
   }
 

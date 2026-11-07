@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import {
   StyleCssWrapper,
   StyleFontWrapper,
@@ -12,47 +10,69 @@ import { StylePageExamplePreview } from "@/components/views/styles/style-page-ex
 import { STYLES, stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
-import { getStyleVariablesPrefix } from "@/registry/styles";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
+import Link from "next/link";
+import { ArrowRightIcon } from "lucide-react";
 
 export function StylesPreviewCards() {
   const { pageExampleType } = useStyleStore();
 
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-6 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-6">
       {STYLES.filter((s) => s !== "default" && s !== "material").map(
         (style, index) => {
           const s = `--${getStyleVariablesPrefix(style)}-primary`;
           const c = `--${getStyleVariablesPrefix(style)}`;
           return (
-            <StyleCssWrapper key={style + index}>
+            <StyleCssWrapper
+              key={style + index}
+              className="reltative rounded-xl"
+            >
               <StyleFontWrapper sStyle={style}>
-                {/* <StyleShowcaseCardLink style={style} /> */}
-                <div className="group relative flex max-h-[30rem] min-h-[30rem] w-full flex-col gap-2 overflow-hidden rounded-md border bg-gradient-to-r from-transparent to-accent p-6">
-                  {/* <div className="absolute inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-transparent to-accent"></div> */}
+                <div className="to-accent group relative flex max-h-120 min-h-120 w-full flex-col gap-2 overflow-hidden rounded-xl border bg-linear-to-r from-transparent p-6">
                   <div className="z-20 flex w-full items-center justify-between">
-                    <Typography
-                      variant="3xl/semibold"
-                      className="capitalize tracking-tight"
-                    >
-                      {style}
-                    </Typography>
+                    <div className="flex items-center gap-4">
+                      <Typography
+                        variant="3xl/semibold"
+                        className="tracking-tight capitalize"
+                      >
+                        {style}
+                      </Typography>{" "}
+                      <Link
+                        href={`/styles/${style}`}
+                        className="group/link rounded p-2 hover:bg-transparent/60 hover:backdrop-blur-xl"
+                      >
+                        <ArrowRightIcon className="text-foreground/40 group-hover/link:text-foreground size-4 group-hover/link:-rotate-45" />
+                        <span className="sr-only">View {style} style</span>
+                      </Link>
+                    </div>
+
                     <div className="flex items-center gap-2">
                       <div className="inline-flex items-center gap-2">
-                        <RichBadge variant="neutral" className="capitalize">
-                          Palette
-                        </RichBadge>
+                        <StyleCssWrapper
+                          key={style + index}
+                          className="inline-flex rounded-full"
+                        >
+                          <RichBadge
+                            variant="neutral"
+                            className="capitalize backdrop-blur-xl"
+                          >
+                            Palette
+                          </RichBadge>
+                        </StyleCssWrapper>
+
                         <div className="flex rounded-sm border">
                           {mainPaletteColorsKeys.map((color, index) => (
                             <div
                               key={`light-${color}`}
-                              className={cn("size-6", {
+                              className={cn("size-6 xl:w-7", {
                                 "rounded-l-sm": index === 0,
                                 "rounded-r-sm":
                                   index === mainPaletteColorsKeys.length - 1,
                               })}
                               style={{
                                 // backgroundColor: `oklch(${palette.light[color]})`,
-                                backgroundColor: `oklch(var(${c}-${color}))`,
+                                backgroundColor: `var(${c}-${color})`,
                               }}
                               title={`Light ${color}`}
                             />
@@ -63,18 +83,17 @@ export function StylesPreviewCards() {
                   </div>
                   <div className="relative -ml-2">
                     <div
-                      // bg-blue-500/30
-                      className="absolute left-0 top-0 z-10 flex size-[29rem] items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:size-96 group-hover:opacity-50 group-hover:blur-lg"
+                      className="absolute top-0 left-0 z-10 flex size-144 items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:size-120 group-hover:opacity-50 group-hover:blur-2xl dark:opacity-80 dark:blur-3xl"
                       style={{
-                        backgroundColor: `oklch(var(${s}))`,
+                        backgroundColor: `var(${s})`,
                       }}
                     ></div>
                     <StylePageExamplePreview
-                      id="dashboard"
+                      id={pageExampleType || "dashboard"}
                       styleProp={style}
                       pageExampleTypeProp={pageExampleType || "dashboard"}
                       hideBadge={true}
-                      className="absolute left-0 top-0 z-20 w-[70vw] max-w-[70vw]"
+                      className="absolute top-0 left-0 z-20 w-[70vw] max-w-[70vw]"
                     />
                   </div>
                 </div>
@@ -84,6 +103,88 @@ export function StylesPreviewCards() {
         }
       )}
     </div>
+  );
+}
+
+export function StylePreviewCard({ style }: { style: string }) {
+  const { pageExampleType } = useStyleStore();
+
+  const s = `--${getStyleVariablesPrefix(style)}-primary`;
+  const c = `--${getStyleVariablesPrefix(style)}`;
+
+  return (
+    <StyleCssWrapper key={style} className="reltative rounded-xl">
+      <StyleFontWrapper sStyle={style}>
+        <div className="to-accent group relative flex max-h-120 min-h-120 w-full flex-col gap-2 overflow-hidden rounded-xl border bg-linear-to-r from-transparent p-6">
+          <div className="z-20 flex w-full items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Typography
+                variant="3xl/semibold"
+                className="tracking-tight capitalize"
+              >
+                {style}
+              </Typography>{" "}
+              <Link
+                href={`/styles/${style}`}
+                className="group/link rounded p-2 hover:bg-transparent/60 hover:backdrop-blur-xl"
+              >
+                <ArrowRightIcon className="text-foreground/40 group-hover/link:text-foreground size-4 group-hover/link:-rotate-45" />
+                <span className="sr-only">View {style} style</span>
+              </Link>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="inline-flex items-center gap-2">
+                <StyleCssWrapper
+                  key={style}
+                  className="inline-flex rounded-full"
+                >
+                  <RichBadge
+                    variant="neutral"
+                    className="capitalize backdrop-blur-xl"
+                  >
+                    Palette
+                  </RichBadge>
+                </StyleCssWrapper>
+
+                <div className="flex rounded-sm border">
+                  {mainPaletteColorsKeys.map((color, index) => (
+                    <div
+                      key={`light-${color}`}
+                      className={cn("size-6 xl:w-7", {
+                        "rounded-l-sm": index === 0,
+                        "rounded-r-sm":
+                          index === mainPaletteColorsKeys.length - 1,
+                      })}
+                      style={{
+                        // backgroundColor: `oklch(${palette.light[color]})`,
+                        backgroundColor: `var(${c}-${color})`,
+                      }}
+                      title={`Light ${color}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="relative -ml-2">
+            <div
+              className="absolute top-0 left-0 z-10 flex size-144 items-center justify-center opacity-40 blur-xl transition-all duration-200 ease-in-out group-hover:size-120 group-hover:opacity-50 group-hover:blur-2xl dark:opacity-80 dark:blur-3xl"
+              style={{
+                backgroundColor: `var(${s})`,
+              }}
+            ></div>
+            <StylePageExamplePreview
+              id={pageExampleType || "dashboard"}
+              styleProp={style as any}
+              pageExampleTypeProp={pageExampleType || "dashboard"}
+              hideBadge={true}
+              className="absolute top-0 left-0 z-20 w-[70vw] max-w-[70vw]"
+            />
+          </div>
+        </div>
+      </StyleFontWrapper>
+    </StyleCssWrapper>
   );
 }
 
@@ -100,15 +201,15 @@ export function StylesPagesExamplesPreviews() {
 
           return (
             <div key={styleData.name + index}>
-              <div className="relative grid grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-6">
+              <div className="relative grid grid-cols-1 gap-4 lg:gap-6 xl:grid-cols-7">
                 <div className="relative xl:col-span-2">
-                  <div className="sticky top-20 z-10 space-y-8 p-4 pt-10 xl:ml-auto xl:max-w-md xl:p-0 xl:pt-28">
+                  <div className="sticky top-20 z-10 space-y-8 p-4 pt-10 xl:ml-auto xl:max-w-md xl:p-0 xl:px-6 xl:pt-28">
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center gap-4">
                         <Typography
                           as={"h1"}
                           variant="4xl/semibold"
-                          className="capitalize tracking-tighter"
+                          className="tracking-tighter capitalize"
                         >
                           {/* @ts-ignore */}
                           {styleData.title}{" "}
@@ -128,7 +229,7 @@ export function StylesPagesExamplesPreviews() {
                                     >
                                       Default {styleData.title} Palette
                                     </RichBadge> */}
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-muted-foreground text-sm">
                               Default {styleData.title} Palette
                             </p>
                             <div className="flex w-fit rounded-sm border">
@@ -169,13 +270,14 @@ export function StylesPagesExamplesPreviews() {
                             </div> */}
                   </div>
                 </div>
-                <div className="grid p-4 py-0 lg:py-4 xl:col-span-4">
+                <div className="grid overflow-scroll p-4 py-0 lg:py-4 xl:col-span-5">
                   <StylePageExamplePreview
                     id="dashboard"
                     styleProp={styleData.name}
                     pageExampleTypeProp={pageExampleType || "dashboard"}
                     hideBadge={true}
                     className="overflow-auto"
+                    screenWidth
                     // iframeClassName="min-h-[30rem] md:min-h-[33rem] lg:min-h-[39rem] xl:min-h-[45rem] xl:max-h-[45rem]"
                   />
                 </div>

@@ -1,0 +1,80 @@
+{
+  "name": "default-v4",
+  "type": "registry:style",
+  "dependencies": [
+    "tailwindcss-animate",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "https://shadcnmarketplace.com/r/styles/default-v4/accordion.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/alert-dialog.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/alert.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/aspect-ratio.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/attachment.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/avatar.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/badge.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/breadcrumb.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/bubble.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/button-group.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/button.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/card.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/carousel.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/checkbox.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/collapsible.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/command.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/context-menu.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/dialog.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/direction.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/drawer.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/dropdown-menu.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/empty.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/field.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/form.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/hover-card.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/input-group.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/input-otp.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/input.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/item.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/kbd.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/label.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/marker.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/menubar.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/message.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/native-select.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/navigation-menu.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/pagination.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/popover.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/progress.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/radio-group.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/scroll-area.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/select.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/separator.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/sheet.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/sidebar.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/skeleton.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/slider.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/spinner.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/switch.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/table.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/tabs.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/textarea.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/toggle-group.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/toggle.json",
+    "https://shadcnmarketplace.com/r/styles/default-v4/tooltip.json"
+  ],
+  "tailwind": {
+    "config": {
+      "plugins": [
+        "require(\"tailwindcss-animate\")"
+      ]
+    }
+  },
+  "cssVars": {
+    "light": {
+      "radius": "0.5rem"
+    }
+  },
+  "files": []
+}

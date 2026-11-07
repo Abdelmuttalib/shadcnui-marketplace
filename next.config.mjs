@@ -1,3 +1,10 @@
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = bundleAnalyzer({
+  // Active only for explicit baseline runs: ANALYZE=true pnpm build.
+  enabled: process.env.ANALYZE === "true",
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -13,8 +20,8 @@ const nextConfig = {
   transpilePackages: ["shiki"],
 
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["images.unsplash.com", "avatar.vercel.sh"],
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

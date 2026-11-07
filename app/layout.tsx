@@ -1,14 +1,16 @@
 import "./globals.css";
-import "./themes.css";
+import "./style-vega.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import { DevTools } from "@/components/dev-tools";
-import { NextThemesProvider } from "@/components/next-themes-provider";
-import { ThemeCustomizerWrapper } from "@/components/theme-customizer";
-import { Toaster } from "@/components/ui/sonner";
 import { fontVariables } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+
+import { AppProviders } from "./app-providers";
+import { StaggeredNavFiles } from "@/components/landing/staggered-nav-files";
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://shadcnmarketplace.com",
     title: "shadcn ui marketplace",
     description:
-      "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
+      "shadcn ui marketplace, a marketplace for shadcn ui styles, blocks, palettes, components, and styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. .",
     images: [
       {
         url: "https://shadcn-ui-marketplace.com/images/og.png",
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "shadcn ui marketplace, A marketplace for shadcn ui styles, blocks, palettes, and components styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. Going beyond default and new york shadcn ui styles.",
+    "shadcn ui marketplace, a marketplace for shadcn ui styles, blocks, palettes, components, and styles kits. Create beautiful and consistent web applications with a Design System that provides a collection of components, styles, blocks, and palettes. .",
   metadataBase: new URL("https://shadcnmarketplace.com"),
 };
 
@@ -42,16 +44,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <NextThemesProvider>
-        <ThemeCustomizerWrapper />
-        <body className={`${fontVariables} font-sans antialiased`}>
-          <DevTools />
-          <Toaster />
-          <Analytics />
-          {children}
-        </body>
-      </NextThemesProvider>
+    <html
+      lang="en"
+      className={cn("font-sans antialiased", fontVariables)}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                    try {
+                      if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                        document.querySelector('meta[name="theme-color"]').setAttribute('content')
+                      }
+                    } catch (_) {}
+                  `,
+          }}
+        />
+      </head>
+      <body suppressHydrationWarning>
+        <AppProviders>
+          <NuqsAdapter>
+            <div className="relative min-h-dvh">{children}</div>
+          </NuqsAdapter>
+        </AppProviders>
+        <Analytics />
+      </body>
     </html>
   );
 }

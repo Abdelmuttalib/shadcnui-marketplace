@@ -1,0 +1,112 @@
+"use client";
+
+import * as React from "react";
+
+import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+} from "@/registry/bases/base/styles/spectrum/ui/dropdown-menu";
+import {
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  useSidebar,
+} from "@/registry/bases/base/styles/spectrum/ui/sidebar";
+
+export function TeamSwitcher({
+  teams,
+}: {
+  teams: {
+    name: string;
+    logo: React.ReactNode;
+    plan: string;
+  }[];
+}) {
+  const { isMobile } = useSidebar();
+  const [activeTeam, setActiveTeam] = React.useState(teams[0]);
+  if (!activeTeam) {
+    return null;
+  }
+  return (
+    <SidebarMenu>
+      <SidebarMenuItem>
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            render={
+              <SidebarMenuButton
+                size="lg"
+                className="data-open:bg-spctm-sidebar-accent data-open:text-spctm-sidebar-accent-foreground"
+              />
+            }
+          >
+            <div className="bg-spctm-sidebar-primary text-spctm-sidebar-primary-foreground rounded-spctm-lg flex aspect-square size-8 items-center justify-center">
+              {activeTeam.logo}
+            </div>
+            <div className="grid flex-1 text-left text-sm leading-tight">
+              <span className="truncate font-medium">{activeTeam.name}</span>
+              <span className="truncate text-xs">{activeTeam.plan}</span>
+            </div>
+            <IconPlaceholder
+              lucide="ChevronsUpDownIcon"
+              tabler="IconSelector"
+              hugeicons="UnfoldMoreIcon"
+              phosphor="CaretUpDownIcon"
+              remixicon="RiArrowUpDownLine"
+              className="ml-auto"
+            />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            className="w-fit"
+            align="start"
+            side={isMobile ? "bottom" : "right"}
+            sideOffset={4}
+          >
+            <DropdownMenuGroup>
+              <DropdownMenuLabel className="text-spctm-muted-foreground text-xs">
+                Teams
+              </DropdownMenuLabel>
+              {teams.map((team, index) => (
+                <DropdownMenuItem
+                  key={team.name}
+                  onClick={() => setActiveTeam(team)}
+                  className="gap-2 p-2"
+                >
+                  <div className="rounded-spctm-md flex size-6 items-center justify-center border">
+                    {team.logo}
+                  </div>
+                  {team.name}
+                  <DropdownMenuShortcut>⌘{index + 1}</DropdownMenuShortcut>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuGroup>
+            <DropdownMenuSeparator />
+            <DropdownMenuGroup>
+              <DropdownMenuItem className="gap-2 p-2">
+                <div className="rounded-spctm-md flex size-6 items-center justify-center border bg-transparent">
+                  <IconPlaceholder
+                    lucide="PlusIcon"
+                    tabler="IconPlus"
+                    hugeicons="PlusSignIcon"
+                    phosphor="PlusIcon"
+                    remixicon="RiAddLine"
+                    className="size-4"
+                  />
+                </div>
+                <div className="text-spctm-muted-foreground font-medium">
+                  Add team
+                </div>
+              </DropdownMenuItem>
+            </DropdownMenuGroup>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </SidebarMenuItem>
+    </SidebarMenu>
+  );
+}

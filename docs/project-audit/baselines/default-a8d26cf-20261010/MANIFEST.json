@@ -1,0 +1,375 @@
+{
+  "baselineId": "default-a8d26cf-20261010",
+  "style": "default",
+  "capturedAt": "2026-10-09T23:31:17Z",
+  "gitCommit": "a8d26cfbf4758bb8964e8f2730cdec54fc5154b3",
+  "gitCommitDate": "2026-10-10 06:31:50",
+  "gitTreeClean_ui": true,
+  "packages": {
+    "next": "14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0",
+    "cmdk": "^0.2.0",
+    "vaul": "^1.1.2",
+    "sonner": "^0.3.5",
+    "next-themes": "^0.2.1",
+    "recharts": "^2.15.1",
+    "embla-carousel-react": "^8.5.2",
+    "embla-carousel-autoplay": "^8.5.2",
+    "input-otp": "^1.4.2",
+    "react-day-picker": "^8.10.1",
+    "react-hook-form": "^7.52.2",
+    "@hookform/resolvers": "^3.1.1",
+    "zod": "^3.23.8",
+    "react-resizable-panels": "^2.1.7",
+    "typescript": "^5",
+    "tsx": "^4.20.2",
+    "ts-morph": "^26.0.0",
+    "shiki": "^1.26.1",
+    "lucide-react": "^0.426.0"
+  },
+  "radix": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-aspect-ratio": "^1.1.2",
+    "@radix-ui/react-avatar": "^1.0.3",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-collapsible": "^1.1.3",
+    "@radix-ui/react-context-menu": "^2.2.6",
+    "@radix-ui/react-dialog": "^1.0.4",
+    "@radix-ui/react-dropdown-menu": "^2.0.5",
+    "@radix-ui/react-hover-card": "^1.1.6",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-menubar": "^1.1.6",
+    "@radix-ui/react-navigation-menu": "^1.2.5",
+    "@radix-ui/react-popover": "^1.0.6",
+    "@radix-ui/react-progress": "^1.1.2",
+    "@radix-ui/react-radio-group": "^1.2.3",
+    "@radix-ui/react-scroll-area": "^1.0.4",
+    "@radix-ui/react-select": "^1.2.2",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.4",
+    "@radix-ui/react-toggle": "^1.1.2",
+    "@radix-ui/react-toggle-group": "^1.1.2",
+    "@radix-ui/react-tooltip": "^1.0.6"
+  },
+  "components": [
+    {
+      "name": "accordion",
+      "originalPath": "registry/default/ui/accordion.tsx",
+      "lines": 58,
+      "sha256": "c50d32566813f020b2d3c563700349ffe94f9a5a18707700e00f1aec24b16a2c"
+    },
+    {
+      "name": "alert-dialog",
+      "originalPath": "registry/default/ui/alert-dialog.tsx",
+      "lines": 141,
+      "sha256": "5918e0a432f3b8e9072f2b49cdf23db4a66915a5933e86999c3b828cd8e9f7b5"
+    },
+    {
+      "name": "alert",
+      "originalPath": "registry/default/ui/alert.tsx",
+      "lines": 59,
+      "sha256": "eea9d4e1671e88a106c122bcfa94478e195daf59b153c1b6bbc01a0fd4e6b87f"
+    },
+    {
+      "name": "aspect-ratio",
+      "originalPath": "registry/default/ui/aspect-ratio.tsx",
+      "lines": 7,
+      "sha256": "0d8910ffc678a8093210e0e5d92d12d5c1d1da307c7c7e9000ad7f637fa93db5"
+    },
+    {
+      "name": "avatar",
+      "originalPath": "registry/default/ui/avatar.tsx",
+      "lines": 50,
+      "sha256": "adec9b89f444e32920518e9cd44b7e93d4e68eebb415e414ec6f1be85f083ebd"
+    },
+    {
+      "name": "badge",
+      "originalPath": "registry/default/ui/badge.tsx",
+      "lines": 36,
+      "sha256": "7b54b57e2437960a44fbab797f4be1fdfe2be3b3541cd6bd923317f32ce99ddb"
+    },
+    {
+      "name": "breadcrumb",
+      "originalPath": "registry/default/ui/breadcrumb.tsx",
+      "lines": 115,
+      "sha256": "5ee4ba4a4fe27d6d94c59b9fa4a06071695c59e584bdc033ea95b2962ec21271"
+    },
+    {
+      "name": "button",
+      "originalPath": "registry/default/ui/button.tsx",
+      "lines": 106,
+      "sha256": "595e92a3c6f0a7d5a790bd7b9a056c8c7554b40121af6500d671deaa9fb0ac5b"
+    },
+    {
+      "name": "calendar",
+      "originalPath": "registry/default/ui/calendar.tsx",
+      "lines": 70,
+      "sha256": "221f52eaccb690819526a5b22b530f5e7a8a96e8cd44c4d9e36172fd815d8f68"
+    },
+    {
+      "name": "card",
+      "originalPath": "registry/default/ui/card.tsx",
+      "lines": 86,
+      "sha256": "5e571e23e00310b2fb08b71e4e8c87397cee30880abfb10d54b357b752943221"
+    },
+    {
+      "name": "carousel",
+      "originalPath": "registry/default/ui/carousel.tsx",
+      "lines": 262,
+      "sha256": "83c592586edd3c0eca06dd6a93387ddadb6fe8c952fbf2e25cd0b8c14e237935"
+    },
+    {
+      "name": "chart",
+      "originalPath": "registry/default/ui/chart.tsx",
+      "lines": 365,
+      "sha256": "ed870e11fe13e5aaeb28d50af4c868b028a9c3946cf4940fba10a02340ac6906"
+    },
+    {
+      "name": "checkbox",
+      "originalPath": "registry/default/ui/checkbox.tsx",
+      "lines": 30,
+      "sha256": "0508653c5c38d3d18cd975aa64585303000a09697da363d31f70f202f6f77e27"
+    },
+    {
+      "name": "collapsible",
+      "originalPath": "registry/default/ui/collapsible.tsx",
+      "lines": 11,
+      "sha256": "5879202bbeaa5220b09d12068c45eab0a32b279fb72c8e28e001e02d25c5dc60"
+    },
+    {
+      "name": "command",
+      "originalPath": "registry/default/ui/command.tsx",
+      "lines": 156,
+      "sha256": "651775ff27c833a39dfb73376feb13f61c3d198dc0c891bc25f14abb17cab9c9"
+    },
+    {
+      "name": "context-menu",
+      "originalPath": "registry/default/ui/context-menu.tsx",
+      "lines": 200,
+      "sha256": "5fdb15afc484917cbb12f3c1095854383e40396057ef9314fc20243f2d5798ac"
+    },
+    {
+      "name": "data-table",
+      "originalPath": "registry/default/ui/data-table.tsx",
+      "lines": 80,
+      "sha256": "676c727c9c1b9448f872b0b61ac33a93ff97b55f851e987518efb474a0778962"
+    },
+    {
+      "name": "dialog",
+      "originalPath": "registry/default/ui/dialog.tsx",
+      "lines": 122,
+      "sha256": "a6a12f28cdeabe21041d72fb6a625322b47630e04536ad35561e5671642e71c0"
+    },
+    {
+      "name": "drawer",
+      "originalPath": "registry/default/ui/drawer.tsx",
+      "lines": 118,
+      "sha256": "8a14d9534f5ea8699d67d3ddf7fd40038889f5d890e6c6a4c5fc243e9045b3d1"
+    },
+    {
+      "name": "dropdown-menu",
+      "originalPath": "registry/default/ui/dropdown-menu.tsx",
+      "lines": 200,
+      "sha256": "607df1fbff77c0b024c0cfd840e011958e9baab1f7fb7c1f407defefc11ba3c9"
+    },
+    {
+      "name": "form",
+      "originalPath": "registry/default/ui/form.tsx",
+      "lines": 179,
+      "sha256": "917e5af028255742b950c696b82d58a60227c1ef51fbf64127504fb7ee1346e0"
+    },
+    {
+      "name": "hover-card",
+      "originalPath": "registry/default/ui/hover-card.tsx",
+      "lines": 29,
+      "sha256": "3e4073255dfdd10036c02fa361caa7bdfdf19e516e32bb15068e98aef567b2ec"
+    },
+    {
+      "name": "input-otp",
+      "originalPath": "registry/default/ui/input-otp.tsx",
+      "lines": 71,
+      "sha256": "c36a1e8d573639356f3acfd12da5c8798ce366a1c269572e42d8895e93d487ee"
+    },
+    {
+      "name": "input",
+      "originalPath": "registry/default/ui/input.tsx",
+      "lines": 22,
+      "sha256": "439a7c7e643457cc96270abe461564286941e1c9dfde670779a57a69f2617781"
+    },
+    {
+      "name": "label",
+      "originalPath": "registry/default/ui/label.tsx",
+      "lines": 26,
+      "sha256": "bcb204f2b3a5c96c5c303403ba58329153e222e6168312455ec853552ab3cc62"
+    },
+    {
+      "name": "menubar",
+      "originalPath": "registry/default/ui/menubar.tsx",
+      "lines": 236,
+      "sha256": "e499cdae27ccd6fcd112d527289f9f067f37890a9f856bf9ad2a26f909b1f96e"
+    },
+    {
+      "name": "navigation-menu",
+      "originalPath": "registry/default/ui/navigation-menu.tsx",
+      "lines": 128,
+      "sha256": "d4103d2cdcad5eec3f3e42045e49108bce977246c18dfdf6a70d497eb2fab8de"
+    },
+    {
+      "name": "pagination",
+      "originalPath": "registry/default/ui/pagination.tsx",
+      "lines": 117,
+      "sha256": "e5cc4bc51e7832babcb6ec5f40f83d0f8908449cd637dfc2e6de2b0f60a3f08e"
+    },
+    {
+      "name": "popover",
+      "originalPath": "registry/default/ui/popover.tsx",
+      "lines": 31,
+      "sha256": "0bb1c6e1c15874748d1530a2ff02ac564e162ec802cd818e78131bf6add4421c"
+    },
+    {
+      "name": "progress",
+      "originalPath": "registry/default/ui/progress.tsx",
+      "lines": 28,
+      "sha256": "94f89724c671cd509a53eda6f467191c2e26c678b4f0a2e41315f17226dbde86"
+    },
+    {
+      "name": "radio-group",
+      "originalPath": "registry/default/ui/radio-group.tsx",
+      "lines": 44,
+      "sha256": "57d05d61c7e401f36d881488a49a4a059a86b15b56c1dcce6d453b3bcadc70a8"
+    },
+    {
+      "name": "resizable",
+      "originalPath": "registry/default/ui/resizable.tsx",
+      "lines": 45,
+      "sha256": "2e1962f44bf03ab169be1e08666c38f4082ca7c0e24c779d36099a0492e4c1bf"
+    },
+    {
+      "name": "scroll-area",
+      "originalPath": "registry/default/ui/scroll-area.tsx",
+      "lines": 48,
+      "sha256": "43c8165fb38892a501c01d21aa2256608eecef01430856f67b70a3a972f1b64e"
+    },
+    {
+      "name": "select",
+      "originalPath": "registry/default/ui/select.tsx",
+      "lines": 160,
+      "sha256": "cb618d3a47e3a0e632430cecdf24ab5d922aa5d1123a97972636555f1691f506"
+    },
+    {
+      "name": "separator",
+      "originalPath": "registry/default/ui/separator.tsx",
+      "lines": 31,
+      "sha256": "02319f9e4f66a8925597d86c5cd36aaef1e237fd7ec808d09c71831c6c54ece9"
+    },
+    {
+      "name": "sheet",
+      "originalPath": "registry/default/ui/sheet.tsx",
+      "lines": 140,
+      "sha256": "804d7de97d0fc66a457a7f5bf1544a300eb9d12ed19de6f87ce5011c711394ca"
+    },
+    {
+      "name": "sidebar",
+      "originalPath": "registry/default/ui/sidebar.tsx",
+      "lines": 767,
+      "sha256": "3a2eb4c5ecd3ebec17e0e1f9db13d0207e08cd23b2adc8415ead8debce1c8f79"
+    },
+    {
+      "name": "skeleton",
+      "originalPath": "registry/default/ui/skeleton.tsx",
+      "lines": 15,
+      "sha256": "546186074cda81cf8b06f9e6a3f21587d94ee803fba947a2feae33ea30896b5e"
+    },
+    {
+      "name": "slider",
+      "originalPath": "registry/default/ui/slider.tsx",
+      "lines": 28,
+      "sha256": "fe9bb6d1c2fae5f8453c6567193ee3745924cfc8e5dba4e82dd50a13be2630a1"
+    },
+    {
+      "name": "sonner",
+      "originalPath": "registry/default/ui/sonner.tsx",
+      "lines": 32,
+      "sha256": "533e8e5c1d28eb05c8026bf462e775957c51af7eede394694c0f11f4cec6d0d5"
+    },
+    {
+      "name": "switch",
+      "originalPath": "registry/default/ui/switch.tsx",
+      "lines": 29,
+      "sha256": "825fd2ed7caa5f90661bd30dae32a9b5dd3c56c718335193f285afd9c9833d4b"
+    },
+    {
+      "name": "table",
+      "originalPath": "registry/default/ui/table.tsx",
+      "lines": 121,
+      "sha256": "0b134a6e6994102fc91cb6a663528c64aed91b1e9c498998aae47ca402b4fce0"
+    },
+    {
+      "name": "tabs",
+      "originalPath": "registry/default/ui/tabs.tsx",
+      "lines": 55,
+      "sha256": "61059e632e63e54240d219905cb107f07785105dce9f6da12fa026b2981ac520"
+    },
+    {
+      "name": "textarea",
+      "originalPath": "registry/default/ui/textarea.tsx",
+      "lines": 22,
+      "sha256": "224e4662fd98f97c84eb620de6add3926a91569d4e61996e4e6ea62a39cb6df1"
+    },
+    {
+      "name": "toggle-group",
+      "originalPath": "registry/default/ui/toggle-group.tsx",
+      "lines": 61,
+      "sha256": "4e741bfcbf12578238229a3185d8c9bdcfd2c99a6530af16db9dd7548c0a4c19"
+    },
+    {
+      "name": "toggle",
+      "originalPath": "registry/default/ui/toggle.tsx",
+      "lines": 45,
+      "sha256": "3bf6bea13820290b353f27209fa688d5e65be2fa952422ffee500e96c7f976a1"
+    },
+    {
+      "name": "tooltip",
+      "originalPath": "registry/default/ui/tooltip.tsx",
+      "lines": 30,
+      "sha256": "bc2994f7c9c080789e9c6a2c42124639e17926587011d62f0fc68b980bdbb48c"
+    },
+    {
+      "name": "typography",
+      "originalPath": "registry/default/ui/typography.tsx",
+      "lines": 138,
+      "sha256": "1a01025945df45cd7d70b7bee6b4ec0143078fa0a6f86dc5230ef48d9aa37f34"
+    }
+  ],
+  "contextFiles": [
+    "context/package.json",
+    "context/pnpm-lock.yaml",
+    "context/tailwind.config.ts",
+    "context/tsconfig.json",
+    "context/components.json",
+    "context/globals.css",
+    "context/themes.css",
+    "context/fonts.ts",
+    "context/utils.ts"
+  ],
+  "tokenFiles": [
+    "context/globals.css",
+    "context/themes.css",
+    "tailwind.config.ts (see context/)"
+  ],
+  "counts": {
+    "components": 48,
+    "docs": 48
+  }
+}

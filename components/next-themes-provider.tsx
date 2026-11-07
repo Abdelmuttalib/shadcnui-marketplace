@@ -9,10 +9,11 @@ export function NextThemesProvider({
 }) {
   return (
     <NextThemeProvider
-      enableSystem
-      // defaultTheme="system"
       attribute="class"
+      enableSystem
+      defaultTheme="system"
       themes={["light", "dark"]}
+      disableTransitionOnChange
     >
       {children}
     </NextThemeProvider>

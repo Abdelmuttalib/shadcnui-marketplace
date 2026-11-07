@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "name": "font-heading-dm-sans",
+  "title": "DM Sans (Heading)",
+  "type": "registry:font",
+  "font": {
+    "family": "'DM Sans Variable', sans-serif",
+    "provider": "google",
+    "import": "DM_Sans",
+    "variable": "--font-heading",
+    "subsets": ["latin"],
+    "dependency": "@fontsource-variable/dm-sans"
+  },
+  "files": []
+}

@@ -7,11 +7,8 @@ export function PageTitle({ className, ...props }: TypographyProps) {
   return (
     <Typography
       as="h1"
-      variant="5xl/semibold"
-      className={cn(
-        "bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text font-[490] tracking-tighter text-transparent dark:to-foreground/50",
-        className
-      )}
+      variant="5xl/medium"
+      className={cn("text-foreground font-[490] tracking-tighter", className)}
       {...props}
     />
   );
@@ -22,7 +19,7 @@ export function PageSubTitle({ className, ...props }: TypographyProps) {
     <Typography
       as="p"
       variant="lg/normal"
-      className={cn("max-w-4xl text-muted-foreground", className)}
+      className={cn("text-muted-foreground max-w-4xl", className)}
       {...props}
     />
   );
@@ -44,7 +41,7 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <div className="relative flex flex-col gap-4 py-16 pt-0">
-      {/* <div className="absolute inset-0 h-32 w-full bg-gradient-to-b from-accent/40 to-background"></div> */}
+      {/* <div className="absolute inset-0 h-32 w-full bg-linear-to-b from-accent/40 to-background"></div> */}
       <div>
         <PageBreadcrumb />
       </div>
@@ -58,7 +55,7 @@ export function PageHeader({
 
       {description && (
         <div>
-          <PageSubTitle className="max-w-2xl text-muted-foreground">
+          <PageSubTitle className="text-muted-foreground max-w-2xl">
             {description}
           </PageSubTitle>
         </div>

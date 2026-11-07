@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "name": "font-heading-instrument-serif",
+  "title": "Instrument Serif (Heading)",
+  "type": "registry:font",
+  "font": {
+    "family": "'Instrument Serif', serif",
+    "provider": "google",
+    "import": "Instrument_Serif",
+    "variable": "--font-heading",
+    "weight": ["400"],
+    "subsets": ["latin"],
+    "dependency": "@fontsource/instrument-serif"
+  },
+  "files": []
+}
