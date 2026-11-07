@@ -7,17 +7,15 @@ import * as Components from "@/registry/bases/base/styles/carbon/components";
 import {
   DesignSystemProvider,
   type DesignSystemComponents,
-} from "@/registry/bases/base/shared/components/design-system-provider";
+} from "../components/design-system-provider";
+
 import { DesignSystemEnvironment } from "../design-system/design-system-environment";
+
+const style = "carbon";
 
 export function CarbonAdapter({ children }: { children: React.ReactNode }) {
   return (
-    <DesignSystemEnvironment
-      style="carbon"
-      palette=""
-      radius="0rem"
-      theme="dark"
-    >
+    <DesignSystemEnvironment style={style}>
       <DesignSystemProvider
         components={Components as unknown as DesignSystemComponents}
       >

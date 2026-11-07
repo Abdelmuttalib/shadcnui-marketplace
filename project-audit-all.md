@@ -1,45 +1,45 @@
-
 ================================================================================
 FILE: docs/project-audit/AUDIT_PROGRESS.md
 ================================================================================
+
 # AUDIT_PROGRESS
 
 Status legend: Not started / In progress / Complete / Blocked / Needs verification / Not applicable.
 
 ## Stage 1 — Repository discovery (Complete)
 
-| Area | Status | Notes |
-|---|---|---|
-| Root configs, versions, scripts | Complete | package.json, tailwind.config.ts, next.config.mjs, components.json, registry.json read |
-| Registry + style-selection logic | Complete | registry/styles.tsx, hooks/use-style-store.tsx, registry/registry-styles.ts, registry-ui.ts |
-| Default + carbon + neon button | Complete | Baseline + 2 spot-checks read; other 9 styles' buttons not yet read |
-| Global CSS + tokens (skim) | Complete | globals.css (1903 lines) skimmed; full token extraction pending Stage 4 |
-| Fonts + tailwind mapping | Complete | lib/fonts.ts, font switch, tailwind fontFamily; unverified loaders noted |
-| Routing + page examples (index) | Complete | Route groups + renderStylePageExample fallback quirks recorded |
-| Git history (read-only) | Complete | 15-commit skim; no changes made |
-| Initial docs (6 files) | Complete | README, PROJECT_OVERVIEW, REPOSITORY_STRUCTURE, STYLE_INVENTORY, COMPONENT_INVENTORY, this file |
+| Area                             | Status   | Notes                                                                                           |
+| -------------------------------- | -------- | ----------------------------------------------------------------------------------------------- |
+| Root configs, versions, scripts  | Complete | package.json, tailwind.config.ts, next.config.mjs, components.json, registry.json read          |
+| Registry + style-selection logic | Complete | registry/styles.tsx, hooks/use-style-store.tsx, registry/registry-styles.ts, registry-ui.ts     |
+| Default + carbon + neon button   | Complete | Baseline + 2 spot-checks read; other 9 styles' buttons not yet read                             |
+| Global CSS + tokens (skim)       | Complete | globals.css (1903 lines) skimmed; full token extraction pending Stage 4                         |
+| Fonts + tailwind mapping         | Complete | lib/fonts.ts, font switch, tailwind fontFamily; unverified loaders noted                        |
+| Routing + page examples (index)  | Complete | Route groups + renderStylePageExample fallback quirks recorded                                  |
+| Git history (read-only)          | Complete | 15-commit skim; no changes made                                                                 |
+| Initial docs (6 files)           | Complete | README, PROJECT_OVERVIEW, REPOSITORY_STRUCTURE, STYLE_INVENTORY, COMPONENT_INVENTORY, this file |
 
 ## Per-style / per-component auditing
 
-| Area | Style | Component | Status | Notes |
-|---|---|---|---|---|
-| Baseline | default | button | Complete | registry/default/ui/button.tsx:1-106 read; ButtonLink API noted |
-| Pilot audit | carbon | button | Complete | components/carbon/button-vs-default.md; inset/halo focus, bordered secondary, ButtonLink absent (drift) |
-| Pilot audit | linear | button | Complete | components/linear/button-vs-default.md; compact sizes, shadowed outline, offset-1 |
-| Pilot audit | material | button | Complete | components/material/button-vs-default.md; pill shape, wide padding, secondary ghost |
-| Pilot audit | catalyst | button | Complete | components/catalyst/button-vs-default.md; semibold, legacy-token link (convention), cn("") quirk |
-| Pilot audit | spectrum | button | Complete | components/spectrum/button-vs-default.md; densest pill, vestigial next/link import |
-| Pilot audit | wedges | button | Complete | components/wedges/button-vs-default.md; /50 translucent hovers, offset-1 |
-| Pilot audit | moon | button | Complete | components/moon/button-vs-default.md; token-swap only, full ButtonLink parity |
-| Pilot audit | lucid | button | Complete | components/lucid/button-vs-default.md; universal border system, ButtonLink parity |
-| Pilot audit | snow | button | Needs verification | components/snow/button-vs-default.md; offset-width absence + radius mismatch unresolved |
-| Pilot audit | neon | button | Complete | components/neon/button-vs-default.md; compact sizes, token swap |
-| Pilot audit | libelle | button | Needs verification | components/libelle/button-vs-default.md; text-base, tinted destructive; unprefixed border token unresolved |
-| Pilot matrix + index | all | button | Complete | components/button-MATRIX.md, COMPONENT_COMPARISON_INDEX.md |
-| Component audit | all styles | other 46 components | Not started | — |
-| Token audit | all | global tokens | Not started | STYLING_ARCHITECTURE, DESIGN_TOKEN_INVENTORY, STYLE_TOKEN_COMPARISON, TYPOGRAPHY_COMPARISON pending |
-| Registry/routing audit | all | pages/showcases | Not started | STYLE_REGISTRY_AND_ROUTING, PAGE_EXAMPLES_AND_SHOWCASES pending |
-| Index + upgrade guide | all | all | Not started | COMPONENT_COMPARISON_INDEX, UPGRADE_PRESERVATION_GUIDE, KNOWN_ISSUES pending |
+| Area                   | Style      | Component           | Status             | Notes                                                                                                      |
+| ---------------------- | ---------- | ------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------- |
+| Baseline               | default    | button              | Complete           | registry/default/ui/button.tsx:1-106 read; ButtonLink API noted                                            |
+| Pilot audit            | carbon     | button              | Complete           | components/carbon/button-vs-default.md; inset/halo focus, bordered secondary, ButtonLink absent (drift)    |
+| Pilot audit            | linear     | button              | Complete           | components/linear/button-vs-default.md; compact sizes, shadowed outline, offset-1                          |
+| Pilot audit            | material   | button              | Complete           | components/material/button-vs-default.md; pill shape, wide padding, secondary ghost                        |
+| Pilot audit            | catalyst   | button              | Complete           | components/catalyst/button-vs-default.md; semibold, legacy-token link (convention), cn("") quirk           |
+| Pilot audit            | spectrum   | button              | Complete           | components/spectrum/button-vs-default.md; densest pill, vestigial next/link import                         |
+| Pilot audit            | wedges     | button              | Complete           | components/wedges/button-vs-default.md; /50 translucent hovers, offset-1                                   |
+| Pilot audit            | moon       | button              | Complete           | components/moon/button-vs-default.md; token-swap only, full ButtonLink parity                              |
+| Pilot audit            | lucid      | button              | Complete           | components/lucid/button-vs-default.md; universal border system, ButtonLink parity                          |
+| Pilot audit            | snow       | button              | Needs verification | components/snow/button-vs-default.md; offset-width absence + radius mismatch unresolved                    |
+| Pilot audit            | neon       | button              | Complete           | components/neon/button-vs-default.md; compact sizes, token swap                                            |
+| Pilot audit            | libelle    | button              | Needs verification | components/libelle/button-vs-default.md; text-base, tinted destructive; unprefixed border token unresolved |
+| Pilot matrix + index   | all        | button              | Complete           | components/button-MATRIX.md, COMPONENT_COMPARISON_INDEX.md                                                 |
+| Component audit        | all styles | other 46 components | Not started        | —                                                                                                          |
+| Token audit            | all        | global tokens       | Not started        | STYLING_ARCHITECTURE, DESIGN_TOKEN_INVENTORY, STYLE_TOKEN_COMPARISON, TYPOGRAPHY_COMPARISON pending        |
+| Registry/routing audit | all        | pages/showcases     | Not started        | STYLE_REGISTRY_AND_ROUTING, PAGE_EXAMPLES_AND_SHOWCASES pending                                            |
+| Index + upgrade guide  | all        | all                 | Not started        | COMPONENT_COMPARISON_INDEX, UPGRADE_PRESERVATION_GUIDE, KNOWN_ISSUES pending                               |
 
 ## Blockers / open questions
 
@@ -58,46 +58,46 @@ Unresolved from pilot: snow focus-offset width + snow radius canonical value; li
 Next: Stage 4 token/typography/styling docs, then remaining 46 components. No application
 files modified (verified via `git status` — only `docs/project-audit/` changed).
 
-
 ================================================================================
 FILE: docs/project-audit/COMPONENT_COMPARISON_INDEX.md
 ================================================================================
+
 # COMPONENT_COMPARISON_INDEX
 
 ## Button (Complete — 11/11 styles audited 2026-10-09)
 
-| Style | Compared Against | Main Difference Categories | Documentation | Status |
-|---|---|---|---|---|
-| Carbon | Default Button | FOCUS, BORDER, TOKEN_VALUE, MISSING_IMPLEMENTATION | `components/carbon/button-vs-default.md` | Complete |
-| Linear | Default Button | DIMENSION, FOCUS, COLOR, SHADOW | `components/linear/button-vs-default.md` | Complete |
-| Material | Default Button | SHAPE, DIMENSION, COLOR, FOCUS | `components/material/button-vs-default.md` | Complete |
-| Catalyst | Default Button | TYPOGRAPHY, DIMENSION, COLOR, SHADOW, GLOBAL_STYLE | `components/catalyst/button-vs-default.md` | Complete |
-| Spectrum | Default Button | SHAPE, DIMENSION, COLOR, TECHNICAL | `components/spectrum/button-vs-default.md` | Complete |
-| Wedges | Default Button | FOCUS, COLOR, INTERACTION, DIMENSION | `components/wedges/button-vs-default.md` | Complete |
-| Moon | Default Button | TOKEN_REFERENCE only (no component-level visual diff) | `components/moon/button-vs-default.md` | Complete |
-| Lucid | Default Button | BORDER, DIMENSION | `components/lucid/button-vs-default.md` | Complete |
-| Snow | Default Button | DIMENSION, SHAPE, FOCUS (unresolved offset) | `components/snow/button-vs-default.md` | Complete* |
-| Neon | Default Button | DIMENSION, TOKEN_VALUE | `components/neon/button-vs-default.md` | Complete |
-| Libelle | Default Button | TYPOGRAPHY, COLOR | `components/libelle/button-vs-default.md` | Complete* |
+| Style    | Compared Against | Main Difference Categories                            | Documentation                              | Status    |
+| -------- | ---------------- | ----------------------------------------------------- | ------------------------------------------ | --------- |
+| Carbon   | Default Button   | FOCUS, BORDER, TOKEN_VALUE, MISSING_IMPLEMENTATION    | `components/carbon/button-vs-default.md`   | Complete  |
+| Linear   | Default Button   | DIMENSION, FOCUS, COLOR, SHADOW                       | `components/linear/button-vs-default.md`   | Complete  |
+| Material | Default Button   | SHAPE, DIMENSION, COLOR, FOCUS                        | `components/material/button-vs-default.md` | Complete  |
+| Catalyst | Default Button   | TYPOGRAPHY, DIMENSION, COLOR, SHADOW, GLOBAL_STYLE    | `components/catalyst/button-vs-default.md` | Complete  |
+| Spectrum | Default Button   | SHAPE, DIMENSION, COLOR, TECHNICAL                    | `components/spectrum/button-vs-default.md` | Complete  |
+| Wedges   | Default Button   | FOCUS, COLOR, INTERACTION, DIMENSION                  | `components/wedges/button-vs-default.md`   | Complete  |
+| Moon     | Default Button   | TOKEN_REFERENCE only (no component-level visual diff) | `components/moon/button-vs-default.md`     | Complete  |
+| Lucid    | Default Button   | BORDER, DIMENSION                                     | `components/lucid/button-vs-default.md`    | Complete  |
+| Snow     | Default Button   | DIMENSION, SHAPE, FOCUS (unresolved offset)           | `components/snow/button-vs-default.md`     | Complete* |
+| Neon     | Default Button   | DIMENSION, TOKEN_VALUE                                | `components/neon/button-vs-default.md`     | Complete  |
+| Libelle  | Default Button   | TYPOGRAPHY, COLOR                                     | `components/libelle/button-vs-default.md`  | Complete* |
 
 `*` Complete with flagged unresolved items (snow offset width + radius mismatch; libelle
 unprefixed destructive border token). Consolidated view: `components/button-MATRIX.md`.
 
 ## Style-centric view (Button only)
 
-| Style | Button identity in one line | Status |
-|---|---|---|
-| Moon | Default with moon tokens | Complete |
-| Carbon | Inset/halo focus, bordered secondary, square | Complete |
-| Linear | Compact, shadowed outline, offset-1 | Complete |
-| Material | Pill, wide, secondary ghost | Complete |
-| Catalyst | Semibold, compact, legacy-token link | Complete |
-| Spectrum | Densest pill, fg-text outline | Complete |
-| Wedges | Translucent hovers, offset-1 | Complete |
-| Lucid | Universal border system | Complete |
-| Snow | Compact, sm/lg radius steps, offset? | Complete* |
-| Neon | Compact square token swap | Complete |
-| Libelle | text-base, tinted destructive, primary outline | Complete* |
+| Style    | Button identity in one line                    | Status    |
+| -------- | ---------------------------------------------- | --------- |
+| Moon     | Default with moon tokens                       | Complete  |
+| Carbon   | Inset/halo focus, bordered secondary, square   | Complete  |
+| Linear   | Compact, shadowed outline, offset-1            | Complete  |
+| Material | Pill, wide, secondary ghost                    | Complete  |
+| Catalyst | Semibold, compact, legacy-token link           | Complete  |
+| Spectrum | Densest pill, fg-text outline                  | Complete  |
+| Wedges   | Translucent hovers, offset-1                   | Complete  |
+| Lucid    | Universal border system                        | Complete  |
+| Snow     | Compact, sm/lg radius steps, offset?           | Complete* |
+| Neon     | Compact square token swap                      | Complete  |
+| Libelle  | text-base, tinted destructive, primary outline | Complete* |
 
 ## All other components (Not audited)
 
@@ -109,10 +109,10 @@ sheet, sidebar, skeleton, slider, sonner, switch, table, tabs, textarea, toggle,
 toggle-group, tooltip, typography — **Not audited** for any style. Presence-only inventory
 in `COMPONENT_INVENTORY.md`; do not treat as identical to default.
 
-
 ================================================================================
 FILE: docs/project-audit/COMPONENT_INVENTORY.md
 ================================================================================
+
 # COMPONENT_INVENTORY
 
 Verified 2026-10-09 by listing `registry/<style>/ui/` for all 12 styles.
@@ -124,56 +124,56 @@ Status legend: `Present` = file exists, content unaudited; `Audited` = full vs-d
 comparison doc exists (button only). Filename presence and audit status are tracked
 separately — all other components remain `Present`/unaudited.
 
-| Component (file) | Default | Carbon | Linear | Material | Catalyst | Spectrum | Wedges | Moon | Lucid | Snow | Neon | Libelle | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| accordion | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Radix accordion |
-| alert | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| alert-dialog | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Radix alert-dialog |
-| aspect-ratio | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| avatar | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| badge | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| breadcrumb | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| button | Present (baseline) | Audited | Audited | Audited | Audited | Audited | Audited | Audited | Audited | Audited (offset?) | Audited | Audited | All 12 read; 11 docs in `components/<style>/button-vs-default.md` + `components/button-MATRIX.md`; ButtonLink kept in moon/lucid/libelle only; snow offset + libelle border-token unresolved |
-| calendar | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | day-picker + date-fns |
-| card | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| carousel | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | embla |
-| chart | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | recharts |
-| checkbox | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| collapsible | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| command | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | cmdk |
-| context-menu | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| data-table | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | tanstack table |
-| dialog | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| drawer | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | vaul |
-| dropdown-menu | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| form | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | RHF + zod |
-| hover-card | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| input | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| input-otp | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | input-otp lib |
-| label | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| menubar | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| navigation-menu | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| pagination | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| popover | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| progress | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| radio-group | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| resizable | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | react-resizable-panels |
-| scroll-area | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| select | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| separator | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| sheet | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| sidebar | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| skeleton | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| slider | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| sonner | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | next-themes |
-| switch | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| table | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| tabs | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| textarea | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| toggle | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| toggle-group | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | HEAD commit touched import path |
-| tooltip | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | — |
-| typography | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Present | Non-standard shadcn item |
+| Component (file) | Default            | Carbon  | Linear  | Material | Catalyst | Spectrum | Wedges  | Moon    | Lucid   | Snow              | Neon    | Libelle | Notes                                                                                                                                                                                        |
+| ---------------- | ------------------ | ------- | ------- | -------- | -------- | -------- | ------- | ------- | ------- | ----------------- | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| accordion        | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | Radix accordion                                                                                                                                                                              |
+| alert            | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| alert-dialog     | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | Radix alert-dialog                                                                                                                                                                           |
+| aspect-ratio     | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| avatar           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| badge            | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| breadcrumb       | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| button           | Present (baseline) | Audited | Audited | Audited  | Audited  | Audited  | Audited | Audited | Audited | Audited (offset?) | Audited | Audited | All 12 read; 11 docs in `components/<style>/button-vs-default.md` + `components/button-MATRIX.md`; ButtonLink kept in moon/lucid/libelle only; snow offset + libelle border-token unresolved |
+| calendar         | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | day-picker + date-fns                                                                                                                                                                        |
+| card             | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| carousel         | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | embla                                                                                                                                                                                        |
+| chart            | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | recharts                                                                                                                                                                                     |
+| checkbox         | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| collapsible      | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| command          | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | cmdk                                                                                                                                                                                         |
+| context-menu     | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| data-table       | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | tanstack table                                                                                                                                                                               |
+| dialog           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| drawer           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | vaul                                                                                                                                                                                         |
+| dropdown-menu    | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| form             | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | RHF + zod                                                                                                                                                                                    |
+| hover-card       | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| input            | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| input-otp        | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | input-otp lib                                                                                                                                                                                |
+| label            | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| menubar          | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| navigation-menu  | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| pagination       | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| popover          | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| progress         | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| radio-group      | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| resizable        | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | react-resizable-panels                                                                                                                                                                       |
+| scroll-area      | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| select           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| separator        | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| sheet            | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| sidebar          | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| skeleton         | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| slider           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| sonner           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | next-themes                                                                                                                                                                                  |
+| switch           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| table            | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| tabs             | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| textarea         | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| toggle           | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| toggle-group     | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | HEAD commit touched import path                                                                                                                                                              |
+| tooltip          | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | —                                                                                                                                                                                            |
+| typography       | Present            | Present | Present | Present  | Present  | Present  | Present | Present | Present | Present           | Present | Present | Non-standard shadcn item                                                                                                                                                                     |
 
 ## Non-`ui/` component layers (inventory only, diffs pending)
 
@@ -187,29 +187,29 @@ separately — all other components remain `Present`/unaudited.
 - `registry/registry-ui.ts` defines the same 47 items (incl. `typography`, `data-table`) with
   npm/registry dependencies — the authoritative item list for generation.
 
-
 ================================================================================
 FILE: docs/project-audit/components/button-MATRIX.md
 ================================================================================
+
 # Button — Cross-Style Matrix (vs Default)
 
 All 12 implementations read 2026-10-09. Baseline `registry/default/ui/button.tsx`
 (base `rounded-dft-md text-sm font-medium offset-2`; sizes `h-10/9/11`; exports
 `Button, ButtonLink, buttonVariants`). Effects inferred from source.
 
-| Style | Shape | Type | Density (default/sm/lg) | Focus | Outline | Secondary / Ghost | Destructive | ButtonLink | Doc |
-|---|---|---|---|---|---|---|---|---|---|
-| moon | token (`--moon-radius 0.6rem`) | = | = `h-10/9/11` | = | token swap | token swap | token swap | ✅ kept | `moon/button-vs-default.md` |
-| carbon | square (0rem) | = | = `h-10/9/11` | **inset 1px ring, transparent ring + offset halo, dark offsets** | border-only, svg-hover | **bordered secondary** | token swap | ❌ absent (drift) | `carbon/button-vs-default.md` |
-| linear | token (0.5rem) | = | compact `h-9/8/10` | offset-1 | **shadow + muted hover + dark fill** (+dup `shadow-sm`) | token swap | token swap | ❌ | `linear/button-vs-default.md` |
-| material | **pill** | = | same heights, wider px | offset moved to `default` variant only | secondary-tone hover + svg-hover | **ghost hovers secondary** | token swap | ❌ | `material/button-vs-default.md` |
-| catalyst | token (0.6rem) | **semibold** | compact, tight `px-2` sm | offset-1 | **shadow + secondary hover** | token swap | token swap | ❌ (+`cn(,"")` quirk) | `catalyst/button-vs-default.md` |
-| spectrum | **pill** | = | **densest `h-8/7/9`**, `py-1.5` | = | asserts fg text | token swap | token swap | ❌ (**vestigial `next/link` import**) | `spectrum/button-vs-default.md` |
-| wedges | token (0.5rem) | = | mild compact `h-9/9/10` | offset-1 | **`/50` translucent hover** | **ghost `/50` hover** | token swap | ❌ | `wedges/button-vs-default.md` |
-| lucid | token (0.5rem) | = | compact, tightest `px-2` sm | = | token swap | **universal base `border` + per-variant tints; ghost/link `border-transparent`** | tinted border | ✅ kept | `lucid/button-vs-default.md` |
-| snow | token (0.75rem CSS ⚠️) | = | compact `h-9/8/10` | **offset width missing (?)** | token swap | token swap | token swap | ❌ | `snow/button-vs-default.md` |
-| neon | square (0rem) | = | compact `h-9/8/10` | = | token swap | token swap | token swap | ❌ | `neon/button-vs-default.md` |
-| libelle | square (0rem) | **`text-base`** | = `h-10/9/11` | = | **primary-colored** | token swap | **tint (`/15`→`/35`)** | ✅ kept | `libelle/button-vs-default.md` |
+| Style    | Shape                          | Type            | Density (default/sm/lg)         | Focus                                                            | Outline                                                 | Secondary / Ghost                                                                | Destructive            | ButtonLink                            | Doc                             |
+| -------- | ------------------------------ | --------------- | ------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------- | ------------------------------------- | ------------------------------- |
+| moon     | token (`--moon-radius 0.6rem`) | =               | = `h-10/9/11`                   | =                                                                | token swap                                              | token swap                                                                       | token swap             | ✅ kept                               | `moon/button-vs-default.md`     |
+| carbon   | square (0rem)                  | =               | = `h-10/9/11`                   | **inset 1px ring, transparent ring + offset halo, dark offsets** | border-only, svg-hover                                  | **bordered secondary**                                                           | token swap             | ❌ absent (drift)                     | `carbon/button-vs-default.md`   |
+| linear   | token (0.5rem)                 | =               | compact `h-9/8/10`              | offset-1                                                         | **shadow + muted hover + dark fill** (+dup `shadow-sm`) | token swap                                                                       | token swap             | ❌                                    | `linear/button-vs-default.md`   |
+| material | **pill**                       | =               | same heights, wider px          | offset moved to `default` variant only                           | secondary-tone hover + svg-hover                        | **ghost hovers secondary**                                                       | token swap             | ❌                                    | `material/button-vs-default.md` |
+| catalyst | token (0.6rem)                 | **semibold**    | compact, tight `px-2` sm        | offset-1                                                         | **shadow + secondary hover**                            | token swap                                                                       | token swap             | ❌ (+`cn(,"")` quirk)                 | `catalyst/button-vs-default.md` |
+| spectrum | **pill**                       | =               | **densest `h-8/7/9`**, `py-1.5` | =                                                                | asserts fg text                                         | token swap                                                                       | token swap             | ❌ (**vestigial `next/link` import**) | `spectrum/button-vs-default.md` |
+| wedges   | token (0.5rem)                 | =               | mild compact `h-9/9/10`         | offset-1                                                         | **`/50` translucent hover**                             | **ghost `/50` hover**                                                            | token swap             | ❌                                    | `wedges/button-vs-default.md`   |
+| lucid    | token (0.5rem)                 | =               | compact, tightest `px-2` sm     | =                                                                | token swap                                              | **universal base `border` + per-variant tints; ghost/link `border-transparent`** | tinted border          | ✅ kept                               | `lucid/button-vs-default.md`    |
+| snow     | token (0.75rem CSS ⚠️)         | =               | compact `h-9/8/10`              | **offset width missing (?)**                                     | token swap                                              | token swap                                                                       | token swap             | ❌                                    | `snow/button-vs-default.md`     |
+| neon     | square (0rem)                  | =               | compact `h-9/8/10`              | =                                                                | token swap                                              | token swap                                                                       | token swap             | ❌                                    | `neon/button-vs-default.md`     |
+| libelle  | square (0rem)                  | **`text-base`** | = `h-10/9/11`                   | =                                                                | **primary-colored**                                     | token swap                                                                       | **tint (`/15`→`/35`)** | ✅ kept                               | `libelle/button-vs-default.md`  |
 
 ## Patterns
 
@@ -221,10 +221,10 @@ All 12 implementations read 2026-10-09. Baseline `registry/default/ui/button.tsx
   (all consumers use local demo components) — drift, not design.
 - **Icon sizing**: `size-4` universal; sole exception spectrum `icon-sm` (`size-3.5`).
 
-
 ================================================================================
 FILE: docs/project-audit/components/carbon/button-vs-default.md
 ================================================================================
+
 # Carbon Button vs Default
 
 ## 1. Audit Metadata
@@ -243,6 +243,7 @@ export. Font is IBM Plex Sans (inherited). Radius resolves to square (0rem).
 ## 3. Visual Differences
 
 **Base** (`carbon:8` vs `default:9`): prefix `dft` → `cb` throughout, plus —
+
 - Added `ring-inset`: focus ring renders inside the button edge rather than outside.
   [FOCUS, intentional]
 - Added `transition-all duration-100 ease-in-out` alongside retained `transition-colors`
@@ -260,6 +261,7 @@ export. Font is IBM Plex Sans (inherited). Radius resolves to square (0rem).
 - Removed `next/link` import; no other base class removed.
 
 **Variants** (lines 12-21):
+
 - `outline`: `border-dft-input bg-dft-background` → `border-cb-border` (no background
   assertion — transparent until hover) + added `[&_svg]:hover:text-cb-accent-foreground`
   (icon follows text color on hover). Flatter, edge-only resting state. [BORDER, COLOR,
@@ -284,7 +286,7 @@ migration. [TOKEN_REFERENCE, TOKEN_VALUE]
 
 ## 5. Typography
 
-Inherited `font-carbon` (IBM Plex Sans) via `registry/styles.tsx:229-230`. No
+Inherited `font-ibm-plex-sans` (IBM Plex Sans) via `registry/styles.tsx:229-230`. No
 component-level type change. [GLOBAL_STYLE]
 
 ## 6. API / Structural Exceptions
@@ -311,10 +313,10 @@ absence blindly — decide whether to restore it for parity.
 Both files read fully; consumer grep for `ButtonLink` across `registry/` and
 `components/` performed. Visual effects inferred from source. No unresolved items.
 
-
 ================================================================================
 FILE: docs/project-audit/components/catalyst/button-vs-default.md
 ================================================================================
+
 # Catalyst Button vs Default
 
 ## 1. Audit Metadata
@@ -336,8 +338,9 @@ Catalyst pairs **semibold type + compact density** with a **secondary-toned outl
 `ring-offset-2` → `ring-offset-1`. [TYPOGRAPHY, FOCUS, intentional]
 
 **Variants** (lines 12-21):
+
 - `outline`: `border-catalyst-input` (no background assertion) + `hover:bg-catalyst-secondary
-  hover:text-catalyst-secondary-foreground` + `shadow-sm` — shadowed, secondary-filled
+hover:text-catalyst-secondary-foreground` + `shadow-sm` — shadowed, secondary-filled
   hover. [COLOR, SHADOW, intentional]
 - `link`: `text-foreground` — the legacy unprefixed token, not `text-catalyst-primary`.
   Verified as convention: unprefixed `text-foreground` recurs across catalyst components
@@ -380,10 +383,10 @@ sign-off), `catalyst` namespace. Drop the `""` arg.
 Both files read fully; `text-foreground` convention verified by grep across catalyst `ui/`;
 consumer grep done. No unresolved items.
 
-
 ================================================================================
 FILE: docs/project-audit/components/libelle/button-vs-default.md
 ================================================================================
+
 # Libelle Button vs Default
 
 ## 1. Audit Metadata
@@ -406,8 +409,9 @@ text + border. Outfit inherited. Square corners.
 prefix swap otherwise. [TYPOGRAPHY, intentional]
 
 **Variants** (lines 12-22):
+
 - `destructive`: `border border-destructive/30 bg-libelle-destructive/15
-  text-libelle-destructive hover:bg-libelle-destructive/35` — translucent tint instead of
+text-libelle-destructive hover:bg-libelle-destructive/35` — translucent tint instead of
   solid fill; note `border-destructive/30` references the **unprefixed legacy**
   `--destructive` token while everything else is `libelle-*`. Inferred: soft
   pink/red tint button. [COLOR, intentional design; the unprefixed border token is
@@ -449,10 +453,10 @@ confirm prefix intent), primary outline, `libelle` namespace. Keep `ButtonLink`.
 Both files read fully. **Unresolved**: whether `border-destructive/30` (unprefixed) is a
 deliberate cross-token reference or should be `border-libelle-destructive/30`.
 
-
 ================================================================================
 FILE: docs/project-audit/components/linear/button-vs-default.md
 ================================================================================
+
 # Linear Button vs Default
 
 ## 1. Audit Metadata
@@ -473,8 +477,9 @@ Linear combines **compact density** (same reduced size table as neon) with a res
 (tighter focus halo). [FOCUS, intentional]
 
 **Variants** (lines 12-21):
+
 - `outline`: `border-linear-input bg-linear-background hover:bg-linear-muted
-  hover:text-linear-accent-foreground shadow-sm dark:bg-linear-accent/70 shadow-sm`
+hover:text-linear-accent-foreground shadow-sm dark:bg-linear-accent/70 shadow-sm`
   (`linear:17`). Differences: hover fill is `muted` (not `accent`) with accent-foreground
   text; added `shadow-sm` (written twice — duplicate class, single rendered effect);
   `dark:bg-linear-accent/70` gives the outline a filled dark-mode resting state.
@@ -515,10 +520,10 @@ Re-apply: compact sizes, `offset-1` focus, outline shadow + muted-hover + dark f
 Both files read fully; consumer grep done. Unresolved: none material (duplicate-shadow
 verdict is minor and recorded).
 
-
 ================================================================================
 FILE: docs/project-audit/components/lucid/button-vs-default.md
 ================================================================================
+
 # Lucid Button vs Default
 
 ## 1. Audit Metadata
@@ -541,6 +546,7 @@ inherited.
 edge on all variants until overridden). [BORDER, intentional — the style's signature]
 
 **Variants** (lines 12-23):
+
 - `default`: appends `border-lucid-primary/30` (tinted edge on the solid button).
 - `destructive`: appends `border-lucid-destructive/20`.
 - `secondary`: `border border-lucid-input` added (bordered secondary, cf. carbon).
@@ -548,7 +554,7 @@ edge on all variants until overridden). [BORDER, intentional — the style's sig
   layout — layout-stability detail).
 - `link`: `border-transparent` added (same stability rationale).
 - `outline`: prefix swap only (`border border-lucid-border`).
-[All BORDER/COLOR, intentional as a set]
+  [All BORDER/COLOR, intentional as a set]
 
 **Sizes** (lines 26-31): `default h-9 px-2.5 py-2`, `sm h-8 px-2` (tightest horizontal
 padding in the system), `lg h-10 px-8`, icons `h-9/8/10`. [DIMENSION, intentional]
@@ -579,10 +585,10 @@ whole variant system.
 
 Both files read fully. Effects inferred from source. No unresolved items.
 
-
 ================================================================================
 FILE: docs/project-audit/components/material/button-vs-default.md
 ================================================================================
+
 # Material Button vs Default
 
 ## 1. Audit Metadata
@@ -605,13 +611,14 @@ utilities removed everywhere). `focus-visible:ring-offset-2` removed from base.
 [SHAPE, intentional — strongest material marker]
 
 **Variants** (lines 12-22):
+
 - `default`: appends `ring-offset-1 ring-offset-material-background` — only the primary
   variant carries an explicit offset width; all other variants render the offset color
   with default (0) width. Inferred effect: visible focus offset primarily on primary
   buttons. [FOCUS, intentional-or-quirk — recorded as intentional placement with
   unresolved generality; see §8]
 - `outline`: `… hover:bg-material-secondary hover:text-material-secondary-foreground
-  [&_svg]:hover:text-material-secondary-foreground` — secondary-toned hover instead of
+[&_svg]:hover:text-material-secondary-foreground` — secondary-toned hover instead of
   accent; icon follows text. [COLOR, intentional]
 - `ghost`: `hover:bg-material-secondary hover:text-material-secondary-foreground`
   (default ghost hovers `accent`). [COLOR, intentional]
@@ -630,7 +637,7 @@ superseded by `rounded-full` at component level) (`app/globals.css:969-991`).
 
 ## 5. Typography
 
-Inherited `font-material` (Roboto) via `registry/styles.tsx:233-234`. No component-level
+Inherited `font-roboto` (Roboto) via `registry/styles.tsx:233-234`. No component-level
 change. [GLOBAL_STYLE]
 
 ## 6. API / Structural Exceptions
@@ -652,10 +659,10 @@ Both files read fully; consumer grep done. Unresolved: whether variant-scoped
 `ring-offset-1` (vs base-level) is deliberate Material behavior or an editing slip —
 recorded as intentional placement, generality unresolved.
 
-
 ================================================================================
 FILE: docs/project-audit/components/moon/button-vs-default.md
 ================================================================================
+
 # Moon Button vs Default
 
 ## 1. Audit Metadata
@@ -708,10 +715,10 @@ migration risk of all styles.
 Both files read in full. No unresolved questions. All visual consequences inferred from
 source (no browser check).
 
-
 ================================================================================
 FILE: docs/project-audit/components/neon/button-vs-default.md
 ================================================================================
+
 # Neon Button vs Default
 
 ## 1. Audit Metadata
@@ -737,12 +744,12 @@ disabled, icon sizing (`size-4`) unchanged.
 
 **Sizes** (lines 24-29 vs default lines 25-30):
 
-| Size | Default | Neon | Effect |
-|---|---|---|---|
-| default | `h-10 px-4 py-2` | `h-9 px-3.5 py-2` | shorter, narrower |
-| sm | `h-9 rounded-dft-md px-3` | `h-8 px-2.5` | shorter, narrower, no explicit radius class |
-| lg | `h-11 rounded-dft-md px-8` | `h-10 px-6` | shorter, narrower, no explicit radius class |
-| icon / icon-sm / icon-lg | `h-10 w-10` / `h-9 w-9` / `h-11 w-11` | `h-9 w-9` / `h-8 w-8` / `h-10 w-10` | each one step smaller |
+| Size                     | Default                               | Neon                                | Effect                                      |
+| ------------------------ | ------------------------------------- | ----------------------------------- | ------------------------------------------- |
+| default                  | `h-10 px-4 py-2`                      | `h-9 px-3.5 py-2`                   | shorter, narrower                           |
+| sm                       | `h-9 rounded-dft-md px-3`             | `h-8 px-2.5`                        | shorter, narrower, no explicit radius class |
+| lg                       | `h-11 rounded-dft-md px-8`            | `h-10 px-6`                         | shorter, narrower, no explicit radius class |
+| icon / icon-sm / icon-lg | `h-10 w-10` / `h-9 w-9` / `h-11 w-11` | `h-9 w-9` / `h-8 w-8` / `h-10 w-10` | each one step smaller                       |
 
 [DIMENSION, intentional — the style's compact density identity. Note sm/lg rely on the
 base `rounded-neon-md` (square) rather than restating radius.]
@@ -775,10 +782,10 @@ Re-apply: compact size table (all six sizes), `neon` namespace, square radius. D
 
 Both files read fully; consumer grep done. Effects inferred from source. No unresolved items.
 
-
 ================================================================================
 FILE: docs/project-audit/components/snow/button-vs-default.md
 ================================================================================
+
 # Snow Button vs Default
 
 ## 1. Audit Metadata
@@ -836,10 +843,10 @@ record offset-less focus as intended.
 Both files read fully; consumer grep done. **Unresolved**: (1) missing offset width —
 intent vs slip; (2) which snow radius (0.75 CSS vs 0.4 registry) is canonical.
 
-
 ================================================================================
 FILE: docs/project-audit/components/spectrum/button-vs-default.md
 ================================================================================
+
 # Spectrum Button vs Default
 
 ## 1. Audit Metadata
@@ -861,6 +868,7 @@ a vestigial import. Ubuntu inherited.
 [SHAPE, intentional]
 
 **Variants** (lines 12-22):
+
 - `outline`: `border-spctm-input` + added `text-spctm-foreground` (only style asserting
   resting text color on outline) + accent hover. [COLOR, intentional]
 - Others: prefix swap only.
@@ -878,7 +886,7 @@ intentional]
 
 ## 5. Typography
 
-Inherited `font-spectrum` (Ubuntu) via `registry/styles.tsx:237-238`. No component-level
+Inherited `font-ubuntu` (Ubuntu) via `registry/styles.tsx:237-238`. No component-level
 change. [GLOBAL_STYLE]
 
 ## 6. API / Structural Exceptions
@@ -899,10 +907,10 @@ import (or restore `ButtonLink` for parity — designer call).
 
 Both files read fully; consumer grep done. Effects inferred from source. No unresolved items.
 
-
 ================================================================================
 FILE: docs/project-audit/components/wedges/button-vs-default.md
 ================================================================================
+
 # Wedges Button vs Default
 
 ## 1. Audit Metadata
@@ -924,6 +932,7 @@ space in the string — cosmetic only). Net effect: tighter focus halo. [FOCUS, 
 double space TECHNICAL/harmless]
 
 **Variants** (lines 12-21):
+
 - `outline`: `border-wedges-border` (no bg) + `hover:bg-wedges-accent/50` (translucent
   hover — unique opacity among styles). [COLOR, INTERACTION, intentional]
 - `ghost`: `hover:bg-wedges-accent/50` (same translucency). [COLOR, intentional]
@@ -957,10 +966,10 @@ Re-apply: `/50` translucent outline/ghost hovers, `offset-1` focus, mildly compa
 
 Both files read fully; consumer grep done. No unresolved items.
 
-
 ================================================================================
 FILE: docs/project-audit/PROJECT_OVERVIEW.md
 ================================================================================
+
 # PROJECT_OVERVIEW — Shadcn Marketplace
 
 Audit date: 2026-10-09. Method: source inspection only (no runtime verification).
@@ -1001,20 +1010,20 @@ Vercel deploy URLs in `hooks/use-style-store.tsx:58-71`.
 
 ## 4. Technology stack (actual versions from `package.json`)
 
-| Layer | Version (verified) |
-|---|---|
-| Next.js | 14.2.5 (App Router; `eslint-config-next` 15.1.6 — mismatch, see debt) |
-| React / ReactDOM | 18.3.1 |
-| Tailwind CSS | 3.4.1 (+ `tailwindcss-animate` 1.0.7, `@tailwindcss/forms` 0.5.7); **not** Tailwind v4 |
-| shadcn CLI | 2.4.0-canary.20 |
-| Radix UI | ~20 packages (accordion 1.1.2 … tooltip 1.0.6) |
-| cva / clsx / tailwind-merge | 0.7.0 / 2.1.1 / 2.4.0 |
-| State | zustand 5.0.3 (style store), jotai 2.9.2, @tanstack/react-query 4.28.0 |
-| Forms/data | react-hook-form 7.52.2, zod 3.23.8, @tanstack/react-table 8.9.1, recharts 2.15.1 |
-| Misc UI | cmdk 0.2.0, vaul 1.1.2, sonner 0.3.5, embla-carousel 8.5.2, input-otp 1.4.2, next-themes 0.2.1 |
-| Backend | @supabase/ssr 0.5.2, @supabase/supabase-js 2.45.4 |
-| Registry tooling | ts-morph 26.0.0, tsx 4.20.2, shiki 1.26.1, rimraf 6.0.1 |
-| Package manager | pnpm (`pnpm-lock.yaml` present) |
+| Layer                       | Version (verified)                                                                             |
+| --------------------------- | ---------------------------------------------------------------------------------------------- |
+| Next.js                     | 14.2.5 (App Router; `eslint-config-next` 15.1.6 — mismatch, see debt)                          |
+| React / ReactDOM            | 18.3.1                                                                                         |
+| Tailwind CSS                | 3.4.1 (+ `tailwindcss-animate` 1.0.7, `@tailwindcss/forms` 0.5.7); **not** Tailwind v4         |
+| shadcn CLI                  | 2.4.0-canary.20                                                                                |
+| Radix UI                    | ~20 packages (accordion 1.1.2 … tooltip 1.0.6)                                                 |
+| cva / clsx / tailwind-merge | 0.7.0 / 2.1.1 / 2.4.0                                                                          |
+| State                       | zustand 5.0.3 (style store), jotai 2.9.2, @tanstack/react-query 4.28.0                         |
+| Forms/data                  | react-hook-form 7.52.2, zod 3.23.8, @tanstack/react-table 8.9.1, recharts 2.15.1               |
+| Misc UI                     | cmdk 0.2.0, vaul 1.1.2, sonner 0.3.5, embla-carousel 8.5.2, input-otp 1.4.2, next-themes 0.2.1 |
+| Backend                     | @supabase/ssr 0.5.2, @supabase/supabase-js 2.45.4                                              |
+| Registry tooling            | ts-morph 26.0.0, tsx 4.20.2, shiki 1.26.1, rimraf 6.0.1                                        |
+| Package manager             | pnpm (`pnpm-lock.yaml` present)                                                                |
 
 ## 5. Overall architecture
 
@@ -1108,11 +1117,11 @@ Per-style dirs: `ui/`, `example/`, `examples/`, `blocks/`, `components/`, `hooks
 ## 12. Font loading system
 
 `lib/fonts.ts`: `next/font/google` — Inter (`--font-inter`), IBM Plex Mono
-(`--font-ibm-plex-mono`), IBM Plex Sans (`--font-carbon`), Roboto (`--font-roboto`),
-Ubuntu (`--font-spectrum`), Poppins (`--font-poppins`), Outfit (`--font-outfit`);
+(`--font-ibm-plex-mono`), IBM Plex Sans (`--font-ibm-plex-sans`), Roboto (`--font-roboto`),
+Ubuntu (`--font-ubuntu`), Poppins (`--font-poppins`), Outfit (`--font-outfit`);
 combined into `fontVariables`, applied on `<body>` in both layouts.
-`getStyleFontClassname` (`registry/styles.tsx:225-254`, verified): carbon→`font-carbon`,
-material→`font-material`, spectrum→`font-spectrum`, neon→`font-poppins`,
+`getStyleFontClassname` (`registry/styles.tsx:225-254`, verified): carbon→`font-ibm-plex-sans`,
+material→`font-roboto`, spectrum→`font-ubuntu`, neon→`font-poppins`,
 libelle→`font-outfit`; default/linear/catalyst/wedges/moon/lucid/snow→`font-sans` (Inter).
 `general-sans/public-sans/dm-sans/work-sans/dm-serif-display` font families exist in
 tailwind config with no verified loader — needs investigation (Stage 4).
@@ -1190,10 +1199,10 @@ tsx 4.20.2, tsconfig.scripts.json for scripts.
 8. Default store value `STYLES[7]` = moon only when catalyst is counted — fragile implicit indexing.
 9. `eslint-config-next 15.1.6` vs `next 14.2.5` version skew.
 
-
 ================================================================================
 FILE: docs/project-audit/README.md
 ================================================================================
+
 # Project Audit — Shadcn Marketplace
 
 Investigation + documentation task. **Do not modify application source files.**
@@ -1201,13 +1210,13 @@ Only files under `docs/project-audit/` may be created/updated by this audit.
 
 ## Entry point
 
-| Document | Contents |
-|---|---|
-| `PROJECT_OVERVIEW.md` | What the app does, stack, architecture, routing, state, styling, registry, fonts, themes, build workflow, constraints, debt |
-| `REPOSITORY_STRUCTURE.md` | Annotated directory/file map with source references |
-| `STYLE_INVENTORY.md` | All 12 verified styles: prefix, font, radius, dirs, status |
-| `COMPONENT_INVENTORY.md` | 47-component × 12-style coverage matrix (Stage 1: presence verified, diffs not yet audited) |
-| `AUDIT_PROGRESS.md` | Stage tracker; resume point for the next pass |
+| Document                  | Contents                                                                                                                    |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `PROJECT_OVERVIEW.md`     | What the app does, stack, architecture, routing, state, styling, registry, fonts, themes, build workflow, constraints, debt |
+| `REPOSITORY_STRUCTURE.md` | Annotated directory/file map with source references                                                                         |
+| `STYLE_INVENTORY.md`      | All 12 verified styles: prefix, font, radius, dirs, status                                                                  |
+| `COMPONENT_INVENTORY.md`  | 47-component × 12-style coverage matrix (Stage 1: presence verified, diffs not yet audited)                                 |
+| `AUDIT_PROGRESS.md`       | Stage tracker; resume point for the next pass                                                                               |
 
 ## Later stages (not yet written)
 
@@ -1226,10 +1235,10 @@ Only files under `docs/project-audit/` may be created/updated by this audit.
 4. Record small differences exactly (class-level), classify per §19 categories.
 5. Never mark "identical" without reading both files.
 
-
 ================================================================================
 FILE: docs/project-audit/REPOSITORY_STRUCTURE.md
 ================================================================================
+
 # REPOSITORY_STRUCTURE
 
 Verified 2026-10-09 by directory listing + targeted file reads. Paths repository-relative.
@@ -1320,10 +1329,10 @@ style registry commands, import fixing (`9abce6e`), internal sink components (`7
 and the HEAD fix `0fb3bdb` (toggle-group import path + card paddings across registries).
 No changes made by this audit.
 
-
 ================================================================================
 FILE: docs/project-audit/STYLE_INVENTORY.md
 ================================================================================
+
 # STYLE_INVENTORY
 
 Verified 2026-10-09. Sources: `hooks/use-style-store.tsx:31-287` (STYLES, STYLES_DATA),
@@ -1331,29 +1340,29 @@ Verified 2026-10-09. Sources: `hooks/use-style-store.tsx:31-287` (STYLES, STYLES
 `registry/registry-styles.ts:17-78` (radii), `tailwind.config.ts`, `app/globals.css`.
 The 12-style list in the task prompt is **confirmed complete** — no additional styles found.
 
-| Style | Variable Prefix | Font (verified `getStyleFontClassname`) | Registry radius (`registry-styles.ts`) | CSS radius (`globals.css`) | Component Directory | Special Implementations | Audit Status |
-|---|---|---|---|---|---|---|---|
-| default | `dft` | `font-sans` (Inter) | 0.5rem | `--dft-radius: 0.4rem` ⚠️ mismatch | `registry/default/` | `ButtonLink` export in button; `libelle/board` n/a; full 8 page examples | Stage 1 done; diffs pending |
-| carbon | `cb` | `font-carbon` (IBM Plex Sans) | 0rem | `--cb-radius: 0rem` ✓ | `registry/carbon/` | `hello-world/` sample; own 8 page examples | Stage 1 done; button spot-checked |
-| linear | `linear` | `font-sans` (Inter) | 0.5rem | `--linear-radius: 0.5rem` ✓ | `registry/linear/` | Own 8 page examples | Stage 1 done; diffs pending |
-| material | `material` | `font-material` (Roboto) | 0.75rem | `--material-radius: 0.75rem` ✓ | `registry/material/` | Own 8 pages **+ board** (`MaterialBoardPage`); `material-color-primary-50…950` scale in tailwind config | Stage 1 done; diffs pending |
-| catalyst | `catalyst` | `font-sans` (Inter) | 0.6rem | `--catalyst-radius: 0.6rem` ✓ | `registry/catalyst/` | Own 8 page examples; `themes.css` palettes (`theme-catalyst-palette1`, `theme-catalyst-rose`, …) | Stage 1 done; diffs pending |
-| spectrum | `spctm` (truncated) | `font-spectrum` (Ubuntu) | 0.4rem | `--spctm-radius: 0.4rem` ✓ | `registry/spectrum/` | Own 8 page examples; `spctm-color-*` palettes | Stage 1 done; diffs pending |
-| wedges | `wedges` | `font-sans` (Inter) | 0.5rem | `--wedges-radius: 0.5rem` ✓ | `registry/wedges/` | Own 8 page examples; `wedges-coolgray/gray/primary` + destructive hex scales | Stage 1 done; diffs pending |
-| moon | `moon` | `font-sans` (Inter) | 0.6rem | `--moon-radius: 0.6rem` ✓ | `registry/moon/` | Own 8 pages **+ charts** (`MoonChartsPage`, `charts/`); custom tokens piccolo/jiren/hit/heles/beerus/goku/gohan/zeno/bulma/trunks/goten/popo | Stage 1 done; diffs pending |
-| lucid | `lucid` | `font-sans` (Inter) | 0.5rem | `--lucid-radius: 0.5rem` ✓ | `registry/lucid/` | Own 8 page examples | Stage 1 done; diffs pending |
-| snow | `snow` | `font-sans` (Inter) | 0.4rem | `--snow-radius: 0.75rem` ⚠️ mismatch | `registry/snow/` | Own 8 page examples | Stage 1 done; diffs pending |
-| neon | `neon` | `font-poppins` (Poppins) | 0rem | `--neon-radius: 0rem` ✓ | `registry/neon/` | Own 8 pages **+ board** (`NeonBoardPage` — also the fallback for styles without one) | Stage 1 done; button spot-checked |
-| libelle | `libelle` | `font-outfit` (Outfit) | 0rem | `--libelle-radius: 0rem` ✓ | `registry/libelle/` | Own 8 pages **+ board** (`LibelleBoardPage`) | Stage 1 done; diffs pending |
+| Style    | Variable Prefix     | Font (verified `getStyleFontClassname`) | Registry radius (`registry-styles.ts`) | CSS radius (`globals.css`)           | Component Directory  | Special Implementations                                                                                                                      | Audit Status                      |
+| -------- | ------------------- | --------------------------------------- | -------------------------------------- | ------------------------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| default  | `dft`               | `font-sans` (Inter)                     | 0.5rem                                 | `--dft-radius: 0.4rem` ⚠️ mismatch   | `registry/default/`  | `ButtonLink` export in button; `libelle/board` n/a; full 8 page examples                                                                     | Stage 1 done; diffs pending       |
+| carbon   | `cb`                | `font-ibm-plex-sans` (IBM Plex Sans)    | 0rem                                   | `--cb-radius: 0rem` ✓                | `registry/carbon/`   | `hello-world/` sample; own 8 page examples                                                                                                   | Stage 1 done; button spot-checked |
+| linear   | `linear`            | `font-sans` (Inter)                     | 0.5rem                                 | `--linear-radius: 0.5rem` ✓          | `registry/linear/`   | Own 8 page examples                                                                                                                          | Stage 1 done; diffs pending       |
+| material | `material`          | `font-roboto` (Roboto)                  | 0.75rem                                | `--material-radius: 0.75rem` ✓       | `registry/material/` | Own 8 pages **+ board** (`MaterialBoardPage`); `material-color-primary-50…950` scale in tailwind config                                      | Stage 1 done; diffs pending       |
+| catalyst | `catalyst`          | `font-sans` (Inter)                     | 0.6rem                                 | `--catalyst-radius: 0.6rem` ✓        | `registry/catalyst/` | Own 8 page examples; `themes.css` palettes (`theme-catalyst-palette1`, `theme-catalyst-rose`, …)                                             | Stage 1 done; diffs pending       |
+| spectrum | `spctm` (truncated) | `font-ubuntu` (Ubuntu)                  | 0.4rem                                 | `--spctm-radius: 0.4rem` ✓           | `registry/spectrum/` | Own 8 page examples; `spctm-color-*` palettes                                                                                                | Stage 1 done; diffs pending       |
+| wedges   | `wedges`            | `font-sans` (Inter)                     | 0.5rem                                 | `--wedges-radius: 0.5rem` ✓          | `registry/wedges/`   | Own 8 page examples; `wedges-coolgray/gray/primary` + destructive hex scales                                                                 | Stage 1 done; diffs pending       |
+| moon     | `moon`              | `font-sans` (Inter)                     | 0.6rem                                 | `--moon-radius: 0.6rem` ✓            | `registry/moon/`     | Own 8 pages **+ charts** (`MoonChartsPage`, `charts/`); custom tokens piccolo/jiren/hit/heles/beerus/goku/gohan/zeno/bulma/trunks/goten/popo | Stage 1 done; diffs pending       |
+| lucid    | `lucid`             | `font-sans` (Inter)                     | 0.5rem                                 | `--lucid-radius: 0.5rem` ✓           | `registry/lucid/`    | Own 8 page examples                                                                                                                          | Stage 1 done; diffs pending       |
+| snow     | `snow`              | `font-sans` (Inter)                     | 0.4rem                                 | `--snow-radius: 0.75rem` ⚠️ mismatch | `registry/snow/`     | Own 8 page examples                                                                                                                          | Stage 1 done; diffs pending       |
+| neon     | `neon`              | `font-poppins` (Poppins)                | 0rem                                   | `--neon-radius: 0rem` ✓              | `registry/neon/`     | Own 8 pages **+ board** (`NeonBoardPage` — also the fallback for styles without one)                                                         | Stage 1 done; button spot-checked |
+| libelle  | `libelle`           | `font-outfit` (Outfit)                  | 0rem                                   | `--libelle-radius: 0rem` ✓           | `registry/libelle/`  | Own 8 pages **+ board** (`LibelleBoardPage`)                                                                                                 | Stage 1 done; diffs pending       |
 
 ## Notes
 
 - Only 5 styles have dedicated fonts (carbon, material, spectrum, neon, libelle); the other 7
   inherit Inter via `font-sans`. Verified fact — do not describe linear/catalyst/wedges/moon/
   lucid/snow as having custom typefaces.
-- `font-carbon` = IBM Plex **Sans** (`lib/fonts.ts:29-33`), not IBM Plex Mono; `font-spectrum` =
+- `font-ibm-plex-sans` = IBM Plex **Sans** (`lib/fonts.ts:29-33`), not IBM Plex Mono; `font-ubuntu` =
   Ubuntu (`lib/fonts.ts:41-46`). Tailwind's `general-sans/public-sans/dm-sans/work-sans/
-  dm-serif-display` families have no verified loader — open question for Stage 4.
+dm-serif-display` families have no verified loader — open question for Stage 4.
 - Radius mismatches (default 0.5 vs 0.4; snow 0.4 vs 0.75) are unresolved facts, not typos to fix.
 - Moon custom token names (`--moon-piccolo` etc.) are verified present (`globals.css:1019-1034`);
   their semantic roles must be traced by usage in Stage 4, not inferred from names.
@@ -1361,4 +1370,3 @@ The 12-style list in the task prompt is **confirmed complete** — no additional
   contains no upstream implementation — describe as "inspired" only.
 - All styles share the same 47 `ui/` filenames (see COMPONENT_INVENTORY.md); every style has
   hero + showcase + card-showcase + page-examples modules.
-

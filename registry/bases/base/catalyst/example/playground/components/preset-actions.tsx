@@ -32,7 +32,7 @@ import {
 import { Label } from "@/registry/bases/base/catalyst/ui/label";
 import { Switch } from "@/registry/bases/base/catalyst/ui/switch";
 
-export function PresetActions() {
+export function StyleActions() {
   const [open, setIsOpen] = React.useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = React.useState(false);
 

@@ -541,13 +541,14 @@
   --radius-libelle-sm: calc(var(--libelle-radius) - 4px);
   --radius-libelle-lg: calc(var(--libelle-radius));
 
-  --font-inter: "Inter", sans-serif;
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --font-inter: var(--font-inter);
   --font-heading: var(--font-sans);
-  --font-mono: var(--font-ibm-plex-mono);
-  --font-carbon: var(--font-carbon);
-  --font-material: var(--font-roboto);
-  --font-spectrum: var(--font-spectrum);
+  --font-ibm-plex-sans: var(--font-ibm-plex-sans);
+  --font-roboto: var(--font-roboto);
+  --font-ubuntu: var(--font-ubuntu);
   --font-poppins: var(--font-poppins);
   --font-outfit: var(--font-outfit);
 }

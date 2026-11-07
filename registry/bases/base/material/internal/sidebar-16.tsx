@@ -279,7 +279,7 @@ export default function Page() {
           </Button>
 
           <div className="mx-auto flex items-center gap-2">
-            <div className="bg-material-sidebar-primary text-sidebar-primary-foreground size-8 flex aspect-square items-center justify-center rounded-lg">
+            <div className="bg-material-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
               <Command className="size-4" />
             </div>
             <Separator orientation="vertical" className="ml-4 h-4" />
@@ -294,11 +294,11 @@ export default function Page() {
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <a
-                            className="rounded-material-md bg-linear-to-b from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end p-6 no-underline outline-none focus:shadow-md"
+                            className="rounded-material-md from-muted/50 to-muted flex h-full w-full flex-col justify-end bg-linear-to-b p-6 no-underline outline-none select-none focus:shadow-md"
                             href="/"
                           >
                             <Icons.logo className="h-6 w-6" />
-                            <div className="mb-2 mt-4 text-lg font-medium">
+                            <div className="mt-4 mb-2 text-lg font-medium">
                               shadcn/ui
                             </div>
                             <p className="text-material-muted-foreground text-sm leading-tight">
@@ -311,8 +311,8 @@ export default function Page() {
 
                       <li>
                         <NavigationMenuLink asChild>
-                          <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
-                            <div className="text-sm font-medium leading-none">
+                          <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none">
+                            <div className="text-sm leading-none font-medium">
                               Introduction
                             </div>
                             <p className="text-material-muted-foreground line-clamp-2 text-sm leading-snug">
@@ -325,8 +325,8 @@ export default function Page() {
 
                       <li>
                         <NavigationMenuLink asChild>
-                          <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
-                            <div className="text-sm font-medium leading-none">
+                          <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none">
+                            <div className="text-sm leading-none font-medium">
                               Installation
                             </div>
                             <p className="text-material-muted-foreground line-clamp-2 text-sm leading-snug">
@@ -339,8 +339,8 @@ export default function Page() {
 
                       <li>
                         <NavigationMenuLink asChild>
-                          <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
-                            <div className="text-sm font-medium leading-none">
+                          <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none">
+                            <div className="text-sm leading-none font-medium">
                               Typography
                             </div>
                             <p className="text-material-muted-foreground line-clamp-2 text-sm leading-snug">
@@ -357,12 +357,12 @@ export default function Page() {
                     Components
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {components.map((component) => (
                         <li>
                           <NavigationMenuLink key={component.title} asChild>
-                            <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors">
-                              <div className="text-sm font-medium leading-none">
+                            <a className="rounded-material-md hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none">
+                              <div className="text-sm leading-none font-medium">
                                 {component.title}
                               </div>
                               <p className="text-material-muted-foreground line-clamp-2 text-sm leading-snug">
@@ -402,7 +402,7 @@ export default function Page() {
               <SidebarMenuItem>
                 <SidebarMenuButton size="lg" asChild>
                   <a href="#">
-                    <div className="bg-material-sidebar-primary text-sidebar-primary-foreground size-8 flex aspect-square items-center justify-center rounded-lg">
+                    <div className="bg-material-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                       <Command className="size-4" />
                     </div>
                     <div className="grid flex-1 text-left text-sm leading-tight">
@@ -550,11 +550,11 @@ export default function Page() {
                           {data.user.email}
                         </span>
                       </div>
-                      <ChevronsUpDown className="size-4 ml-auto" />
+                      <ChevronsUpDown className="ml-auto size-4" />
                     </SidebarMenuButton>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
-                    className="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
+                    className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
                     side={isMobile ? "bottom" : "right"}
                     align="end"
                     sideOffset={4}
@@ -615,7 +615,7 @@ export default function Page() {
         </Sidebar>
 
         <SidebarInset>
-          <header className=" flex shrink-0 items-center gap-2 border-b py-2">
+          <header className="flex shrink-0 items-center gap-2 border-b py-2">
             <div className="flex items-center gap-2 px-4 py-2">
               <div className="flex items-center gap-2 md:hidden">
                 <SidebarTrigger />

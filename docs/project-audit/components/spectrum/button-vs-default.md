@@ -25,21 +25,21 @@ TOKEN_DEPENDENCY, Corroborated.
 
 ## 4. Variants
 
-| Variant | Default | Alternative (`spectrum:12-22`) | Change | Classification |
-|---|---|---|---|---|
-| default / destructive / secondary / ghost / link | baseline | `spctm` equivalents | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
-| outline | `border border-dft-input bg-dft-background hover:bg-dft-accent …` (no resting text color) | `border border-spctm-input text-spctm-foreground hover:bg-spctm-accent hover:text-spctm-accent-foreground` (no background assertion) | Resting text color asserted (only style doing so on outline); background transparent until hover | UNVERIFIED, Needs-designer (concern COLOR) |
+| Variant                                          | Default                                                                                   | Alternative (`spectrum:12-22`)                                                                                                       | Change                                                                                           | Classification                             |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| default / destructive / secondary / ghost / link | baseline                                                                                  | `spctm` equivalents                                                                                                                  | Prefix swap                                                                                      | TOKEN_DEPENDENCY, Corroborated             |
+| outline                                          | `border border-dft-input bg-dft-background hover:bg-dft-accent …` (no resting text color) | `border border-spctm-input text-spctm-foreground hover:bg-spctm-accent hover:text-spctm-accent-foreground` (no background assertion) | Resting text color asserted (only style doing so on outline); background transparent until hover | UNVERIFIED, Needs-designer (concern COLOR) |
 
 ## 5. Sizes
 
-| Size | Default | Alternative (`spectrum:25-30`) | Change |
-|---|---|---|---|
-| default | `h-10 px-4 py-2` | `h-8 px-4 py-1.5` | Much shorter; only `py` change in the system |
-| sm | `h-9 rounded-dft-md px-3` | `h-7 px-2.5` | Shortest sm in the system, no radius utility |
-| lg | `h-11 rounded-dft-md px-8` | `h-9 px-6` | Shortest lg, no radius utility |
-| icon | `h-10 w-10` | `h-8 w-8` | Smaller |
-| icon-sm | `h-9 w-9` | `h-7 w-7 [&_svg]:size-3.5` | Smaller + icon override to `size-3.5` (only icon-size override in the system; base `size-4` retained elsewhere) |
-| icon-lg | `h-11 w-11` | `h-9 w-9` | Smaller |
+| Size    | Default                    | Alternative (`spectrum:25-30`) | Change                                                                                                          |
+| ------- | -------------------------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| default | `h-10 px-4 py-2`           | `h-8 px-4 py-1.5`              | Much shorter; only `py` change in the system                                                                    |
+| sm      | `h-9 rounded-dft-md px-3`  | `h-7 px-2.5`                   | Shortest sm in the system, no radius utility                                                                    |
+| lg      | `h-11 rounded-dft-md px-8` | `h-9 px-6`                     | Shortest lg, no radius utility                                                                                  |
+| icon    | `h-10 w-10`                | `h-8 w-8`                      | Smaller                                                                                                         |
+| icon-sm | `h-9 w-9`                  | `h-7 w-7 [&_svg]:size-3.5`     | Smaller + icon override to `size-3.5` (only icon-size override in the system; base `size-4` retained elsewhere) |
+| icon-lg | `h-11 w-11`                | `h-9 w-9`                      | Smaller                                                                                                         |
 
 Density + icon override: UNVERIFIED, Needs-designer (concern DIMENSION).
 
@@ -78,7 +78,7 @@ Vestigial `next/link` import (§8). Otherwise identical. No dependency changes.
 
 ## 12. Typography and Global Styling
 
-No component-level change. Family Ubuntu via inherited `font-spectrum`
+No component-level change. Family Ubuntu via inherited `font-ubuntu`
 (`registry/styles.tsx:237-238`; `lib/fonts.ts:41-46`).
 
 ## 13. Findings and Upgrade Preservation

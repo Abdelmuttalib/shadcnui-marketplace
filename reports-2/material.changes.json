@@ -572,10 +572,7 @@
           "py-3",
           "text-material-accent-foreground"
         ],
-        "removed": [
-          "py-4",
-          "underline"
-        ]
+        "removed": ["py-4", "underline"]
       }
     },
     {
@@ -619,9 +616,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
+        "added": ["px-3"],
         "removed": []
       }
     },
@@ -676,12 +671,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -775,10 +766,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -838,12 +826,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -927,10 +911,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-lg",
-          "text-material-foreground"
-        ],
+        "added": ["rounded-material-lg", "text-material-foreground"],
         "removed": [
           "border-dft-border",
           "rounded-dft-lg",
@@ -1009,14 +990,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "text-dft-foreground"
-        ]
+        "added": ["bg-material-background", "text-material-foreground"],
+        "removed": ["bg-dft-background", "text-dft-foreground"]
       }
     },
     {
@@ -1106,14 +1081,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-destructive",
-          "text-material-destructive"
-        ],
-        "removed": [
-          "border-dft-destructive",
-          "text-dft-destructive"
-        ]
+        "added": ["border-material-destructive", "text-material-destructive"],
+        "removed": ["border-dft-destructive", "text-dft-destructive"]
       }
     },
     {
@@ -1187,14 +1156,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-9",
-          "w-9"
-        ],
-        "removed": [
-          "h-10",
-          "w-10"
-        ]
+        "added": ["h-9", "w-9"],
+        "removed": ["h-10", "w-10"]
       }
     },
     {
@@ -1248,12 +1211,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       }
     },
     {
@@ -1563,10 +1522,7 @@
           "text-material-primary",
           "text-material-primary-foreground"
         ],
-        "removed": [
-          "bg-dft-primary",
-          "text-dft-primary-foreground"
-        ]
+        "removed": ["bg-dft-primary", "text-dft-primary-foreground"]
       }
     },
     {
@@ -1674,10 +1630,7 @@
           "bg-material-secondary",
           "text-material-secondary-foreground"
         ],
-        "removed": [
-          "bg-dft-secondary",
-          "text-dft-secondary-foreground"
-        ]
+        "removed": ["bg-dft-secondary", "text-dft-secondary-foreground"]
       }
     },
     {
@@ -1905,12 +1858,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -1976,12 +1925,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       }
     },
     {
@@ -2035,12 +1980,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       }
     },
     {
@@ -2284,10 +2225,7 @@
           "ring-offset-material-background",
           "text-material-primary-foreground"
         ],
-        "removed": [
-          "bg-dft-primary",
-          "text-dft-primary-foreground"
-        ]
+        "removed": ["bg-dft-primary", "text-dft-primary-foreground"]
       }
     },
     {
@@ -2373,10 +2311,7 @@
           "bg-material-destructive",
           "text-material-destructive-foreground"
         ],
-        "removed": [
-          "bg-dft-destructive",
-          "text-dft-destructive-foreground"
-        ]
+        "removed": ["bg-dft-destructive", "text-dft-destructive-foreground"]
       }
     },
     {
@@ -2809,13 +2744,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-5"
-        ],
-        "removed": [
-          "px-3",
-          "rounded-dft-md"
-        ]
+        "added": ["px-5"],
+        "removed": ["px-3", "rounded-dft-md"]
       }
     },
     {
@@ -2895,12 +2825,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -2928,25 +2854,23 @@
       "addedLines": [
         {
           "lineNumber": 21,
-          "content": "      className={cn(\"font-material p-3\", className)}"
+          "content": "      className={cn(\"font-roboto p-3\", className)}"
         }
       ],
       "tokens": [
         {
           "type": "ADDED",
-          "token": "font-material",
+          "token": "font-roboto",
           "occurrences": [
             {
               "lineNumber": 21,
-              "content": "      className={cn(\"font-material p-3\", className)}"
+              "content": "      className={cn(\"font-roboto p-3\", className)}"
             }
           ]
         }
       ],
       "tokenSummary": {
-        "added": [
-          "font-material"
-        ],
+        "added": ["font-roboto"],
         "removed": []
       }
     },
@@ -3021,14 +2945,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "rounded-dft-md",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["rounded-material-md", "text-material-muted-foreground"],
+        "removed": ["rounded-dft-md", "text-dft-muted-foreground"]
       }
     },
     {
@@ -3417,14 +3335,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-accent",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "bg-dft-accent",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["bg-material-accent", "text-material-muted-foreground"],
+        "removed": ["bg-dft-accent", "text-dft-muted-foreground"]
       }
     },
     {
@@ -3498,14 +3410,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-accent",
-          "text-material-accent-foreground"
-        ],
-        "removed": [
-          "bg-dft-accent",
-          "text-dft-accent-foreground"
-        ]
+        "added": ["bg-material-accent", "text-material-accent-foreground"],
+        "removed": ["bg-dft-accent", "text-dft-accent-foreground"]
       }
     },
     {
@@ -3684,12 +3590,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -3743,12 +3645,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -3992,11 +3890,7 @@
           "border-material-border",
           "rounded-material-lg"
         ],
-        "removed": [
-          "bg-dft-background",
-          "border-dft-border",
-          "rounded-dft-lg"
-        ]
+        "removed": ["bg-dft-background", "border-dft-border", "rounded-dft-lg"]
       }
     },
     {
@@ -4050,12 +3944,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -4109,12 +3999,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -4168,12 +4054,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       }
     },
     {
@@ -4227,12 +4109,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -4952,13 +4830,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          ",",
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": [",", "material"],
+        "removed": ["default"]
       }
     },
     {
@@ -5151,14 +5024,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "px-2",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["px-3", "text-material-muted-foreground"],
+        "removed": ["px-2", "text-dft-muted-foreground"]
       }
     },
     {
@@ -5212,12 +5079,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-b-material-border"
-        ],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "added": ["border-b-material-border"],
+        "removed": ["border-b-dft-border"]
       }
     },
     {
@@ -5291,14 +5154,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "rounded-dft-md",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["rounded-material-md", "text-material-muted-foreground"],
+        "removed": ["rounded-dft-md", "text-dft-muted-foreground"]
       }
     },
     {
@@ -5488,12 +5345,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       }
     },
     {
@@ -5839,13 +5692,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -6771,16 +6619,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-foreground"
-        ],
-        "removed": [
-          ".",
-          "5",
-          "px-2",
-          "text-dft-foreground"
-        ]
+        "added": ["px-3", "text-material-foreground"],
+        "removed": [".", "5", "px-2", "text-dft-foreground"]
       }
     },
     {
@@ -6834,12 +6674,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       }
     },
     {
@@ -6903,13 +6739,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -6963,12 +6794,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -7042,14 +6869,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border",
-          "rounded-material-md"
-        ],
-        "removed": [
-          "border-dft-border",
-          "rounded-dft-md"
-        ]
+        "added": ["border-material-border", "rounded-material-md"],
+        "removed": ["border-dft-border", "rounded-dft-md"]
       }
     },
     {
@@ -7143,10 +6964,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -7353,12 +7171,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -7422,13 +7236,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "border-dft-border"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background", "border-dft-border"]
       }
     },
     {
@@ -7482,12 +7291,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       }
     },
     {
@@ -7541,12 +7346,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -7658,17 +7459,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-accent",
-          "px-3",
-          "py-2"
-        ],
-        "removed": [
-          "bg-dft-accent",
-          "px-2",
-          "py-1",
-          "rounded-dft-sm"
-        ]
+        "added": ["bg-material-accent", "px-3", "py-2"],
+        "removed": ["bg-dft-accent", "px-2", "py-1", "rounded-dft-sm"]
       }
     },
     {
@@ -8402,12 +8194,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       }
     },
     {
@@ -8461,12 +8249,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       }
     },
     {
@@ -8522,9 +8306,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
+        "added": ["text-material-muted-foreground"],
         "removed": []
       }
     },
@@ -8579,12 +8361,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -8638,12 +8416,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-destructive"
-        ],
-        "removed": [
-          "text-dft-destructive"
-        ]
+        "added": ["text-material-destructive"],
+        "removed": ["text-dft-destructive"]
       }
     },
     {
@@ -8697,12 +8471,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -8756,12 +8526,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-destructive"
-        ],
-        "removed": [
-          "text-dft-destructive"
-        ]
+        "added": ["text-material-destructive"],
+        "removed": ["text-dft-destructive"]
       }
     },
     {
@@ -9121,12 +8887,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-foreground"
-        ],
-        "removed": [
-          "bg-dft-foreground"
-        ]
+        "added": ["bg-foreground"],
+        "removed": ["bg-dft-foreground"]
       }
     },
     {
@@ -9739,10 +9501,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "const"
-        ]
+        "removed": ["=", "const"]
       }
     },
     {
@@ -10057,10 +9816,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "const"
-        ]
+        "removed": ["=", "const"]
       }
     },
     {
@@ -10375,10 +10131,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "const"
-        ]
+        "removed": ["=", "const"]
       }
     },
     {
@@ -10728,12 +10481,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "MenubarSub",
-          "Sub",
-          "const"
-        ]
+        "removed": ["=", "MenubarSub", "Sub", "const"]
       }
     },
     {
@@ -11110,11 +10858,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "MenubarRadioGroup",
-          "RadioGroup",
-          "const"
-        ]
+        "removed": ["MenubarRadioGroup", "RadioGroup", "const"]
       }
     },
     {
@@ -12098,9 +11842,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-current"
-        ],
+        "added": ["text-current"],
         "removed": []
       }
     },
@@ -12291,12 +12033,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       }
     },
     {
@@ -12350,12 +12088,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       }
     },
     {
@@ -12419,13 +12153,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -12792,14 +12521,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-tl-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "rounded-tl-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-tl-sm"],
+        "removed": ["bg-dft-border", "rounded-tl-dft-sm"]
       }
     },
     {
@@ -12853,12 +12576,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -13057,14 +12776,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "h-2"
-        ],
-        "removed": [
-          "bg-dft-secondary",
-          "h-4"
-        ]
+        "added": ["bg-material-muted", "h-2"],
+        "removed": ["bg-dft-secondary", "h-4"]
       }
     },
     {
@@ -13118,12 +12831,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-primary"
-        ],
-        "removed": [
-          "bg-dft-primary"
-        ]
+        "added": ["bg-material-primary"],
+        "removed": ["bg-dft-primary"]
       }
     },
     {
@@ -13883,14 +13592,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "ring-material-ring"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "ring-dft-ring"
-        ]
+        "added": ["bg-border", "ring-material-ring"],
+        "removed": ["bg-dft-border", "ring-dft-ring"]
       }
     },
     {
@@ -13974,15 +13677,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-material-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "border-dft-border",
-          "rounded-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-material-sm"],
+        "removed": ["bg-dft-border", "border-dft-border", "rounded-dft-sm"]
       }
     },
     {
@@ -14036,12 +13732,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-border"],
+        "removed": ["bg-dft-border"]
       }
     },
     {
@@ -14468,9 +14160,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "/"
-        ],
+        "added": ["/"],
         "removed": []
       }
     },
@@ -14672,12 +14362,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       }
     },
     {
@@ -14731,12 +14417,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       }
     },
     {
@@ -14790,12 +14472,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       }
     },
     {
@@ -14840,9 +14518,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "removed": ["border-b-dft-border"]
       }
     },
     {
@@ -14905,10 +14581,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-r-dft-border",
-          "border-t-dft-border"
-        ]
+        "removed": ["border-r-dft-border", "border-t-dft-border"]
       }
     },
     {
@@ -14953,9 +14626,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-l-dft-border"
-        ]
+        "removed": ["border-l-dft-border"]
       }
     },
     {
@@ -15134,12 +14805,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       }
     },
     {
@@ -15193,12 +14860,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -15316,12 +14979,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -15375,12 +15034,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -15434,12 +15089,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar"
-        ],
-        "removed": [
-          "bg-dft-sidebar"
-        ]
+        "added": ["bg-material-sidebar"],
+        "removed": ["bg-dft-sidebar"]
       }
     },
     {
@@ -15513,14 +15164,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       }
     },
     {
@@ -15594,14 +15239,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       }
     },
     {
@@ -15655,12 +15294,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["text-material-sidebar-foreground"],
+        "removed": ["text-dft-sidebar-foreground"]
       }
     },
     {
@@ -15704,9 +15339,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border"
-        ],
+        "added": ["border-material-border"],
         "removed": []
       }
     },
@@ -15854,9 +15487,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
+        "added": ["rounded-material-md"],
         "removed": []
       }
     },
@@ -15911,12 +15542,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar-border"
-        ],
-        "removed": [
-          "bg-dft-sidebar-border"
-        ]
+        "added": ["bg-material-sidebar-border"],
+        "removed": ["bg-dft-sidebar-border"]
       }
     },
     {
@@ -15970,12 +15597,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar"
-        ],
-        "removed": [
-          "bg-dft-sidebar"
-        ]
+        "added": ["bg-material-sidebar"],
+        "removed": ["bg-dft-sidebar"]
       }
     },
     {
@@ -16029,12 +15652,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       }
     },
     {
@@ -16108,14 +15727,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "ring-material-sidebar-ring"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "ring-dft-sidebar-ring"
-        ]
+        "added": ["bg-material-background", "ring-material-sidebar-ring"],
+        "removed": ["bg-dft-background", "ring-dft-sidebar-ring"]
       }
     },
     {
@@ -16169,12 +15782,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar-border"
-        ],
-        "removed": [
-          "bg-dft-sidebar-border"
-        ]
+        "added": ["bg-material-sidebar-border"],
+        "removed": ["bg-dft-sidebar-border"]
       }
     },
     {
@@ -17028,15 +16637,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-11",
-          "h-9"
-        ],
-        "removed": [
-          "h-12",
-          "h-7",
-          "h-8"
-        ]
+        "added": ["h-11", "h-9"],
+        "removed": ["h-12", "h-7", "h-8"]
       }
     },
     {
@@ -17245,12 +16847,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-sidebar-accent-foreground"
-        ],
-        "removed": [
-          "text-dft-sidebar-accent-foreground"
-        ]
+        "added": ["text-material-sidebar-accent-foreground"],
+        "removed": ["text-dft-sidebar-accent-foreground"]
       }
     },
     {
@@ -17423,12 +17021,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       }
     },
     {
@@ -17482,12 +17076,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       }
     },
     {
@@ -17541,12 +17131,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-sidebar-border"
-        ],
-        "removed": [
-          "border-dft-sidebar-border"
-        ]
+        "added": ["border-material-sidebar-border"],
+        "removed": ["border-dft-sidebar-border"]
       }
     },
     {
@@ -17827,14 +17413,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "rounded-material-md"
-        ],
-        "removed": [
-          "bg-dft-muted",
-          "rounded-dft-md"
-        ]
+        "added": ["bg-material-muted", "rounded-material-md"],
+        "removed": ["bg-dft-muted", "rounded-dft-md"]
       }
     },
     {
@@ -17936,16 +17516,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "bg-material-primary",
-          "h-1"
-        ],
-        "removed": [
-          "bg-dft-primary",
-          "bg-dft-secondary",
-          "h-2"
-        ]
+        "added": ["bg-material-muted", "bg-material-primary", "h-1"],
+        "removed": ["bg-dft-primary", "bg-dft-secondary", "h-2"]
       }
     },
     {
@@ -18630,14 +18202,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-primary",
-          "text-material-primary-foreground"
-        ],
-        "removed": [
-          "bg-dft-primary",
-          "text-dft-primary-foreground"
-        ]
+        "added": ["bg-material-primary", "text-material-primary-foreground"],
+        "removed": ["bg-dft-primary", "text-dft-primary-foreground"]
       }
     },
     {
@@ -18711,14 +18277,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "bg-dft-muted",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["bg-material-muted", "text-material-muted-foreground"],
+        "removed": ["bg-dft-muted", "text-dft-muted-foreground"]
       }
     },
     {
@@ -19218,11 +18778,7 @@
           "translate-x-3",
           "z-10"
         ],
-        "removed": [
-          "bg-dft-background",
-          "translate-x-0",
-          "translate-x-5"
-        ]
+        "removed": ["bg-dft-background", "translate-x-0", "translate-x-5"]
       }
     },
     {
@@ -19587,12 +19143,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-b-material-border"
-        ],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "added": ["border-b-material-border"],
+        "removed": ["border-b-dft-border"]
       }
     },
     {
@@ -19656,13 +19208,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted",
-          "border-t-dft-border"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted", "border-t-dft-border"]
       }
     },
     {
@@ -19755,10 +19302,7 @@
           "bg-material-muted",
           "border-b-material-border"
         ],
-        "removed": [
-          "bg-dft-muted",
-          "border-b-dft-border"
-        ]
+        "removed": ["bg-dft-muted", "border-b-dft-border"]
       }
     },
     {
@@ -19832,14 +19376,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-14",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "h-12",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["h-14", "text-material-foreground"],
+        "removed": ["h-12", "text-dft-muted-foreground"]
       }
     },
     {
@@ -19893,12 +19431,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -20595,14 +20129,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "ring-material-ring",
-          "ring-offset-material-background"
-        ],
-        "removed": [
-          "ring-dft-ring",
-          "ring-offset-dft-background"
-        ]
+        "added": ["ring-material-ring", "ring-offset-material-background"],
+        "removed": ["ring-dft-ring", "ring-offset-dft-background"]
       }
     },
     {
@@ -20932,12 +20460,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       }
     },
     {
@@ -21425,20 +20949,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-10",
-          "h-8",
-          "min-w-10",
-          "min-w-8",
-          "px-1"
-        ],
-        "removed": [
-          "h-11",
-          "h-9",
-          "min-w-11",
-          "min-w-9",
-          "px-5"
-        ]
+        "added": ["h-10", "h-8", "min-w-10", "min-w-8", "px-1"],
+        "removed": ["h-11", "h-9", "min-w-11", "min-w-9", "px-5"]
       }
     },
     {
@@ -21617,12 +21129,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       }
     }
   ],
@@ -22074,10 +21582,7 @@
           "py-3",
           "text-material-accent-foreground"
         ],
-        "removed": [
-          "py-4",
-          "underline"
-        ]
+        "removed": ["py-4", "underline"]
       },
       "tokenChanges": [
         {
@@ -22765,9 +22270,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
+        "added": ["px-3"],
         "removed": []
       },
       "tokenChanges": [
@@ -23062,12 +22565,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -23927,10 +23426,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -24360,12 +23856,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -24613,10 +24105,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-lg",
-          "text-material-foreground"
-        ],
+        "added": ["rounded-material-lg", "text-material-foreground"],
         "removed": [
           "border-dft-border",
           "rounded-dft-lg",
@@ -24891,14 +24380,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "text-dft-foreground"
-        ]
+        "added": ["bg-material-background", "text-material-foreground"],
+        "removed": ["bg-dft-background", "text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -25190,14 +24673,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-destructive",
-          "text-material-destructive"
-        ],
-        "removed": [
-          "border-dft-destructive",
-          "text-dft-destructive"
-        ]
+        "added": ["border-material-destructive", "text-material-destructive"],
+        "removed": ["border-dft-destructive", "text-dft-destructive"]
       },
       "tokenChanges": [
         {
@@ -25777,14 +25254,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-9",
-          "w-9"
-        ],
-        "removed": [
-          "h-10",
-          "w-10"
-        ]
+        "added": ["h-9", "w-9"],
+        "removed": ["h-10", "w-10"]
       },
       "tokenChanges": [
         {
@@ -26028,12 +25499,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       },
       "tokenChanges": [
         {
@@ -26929,10 +26396,7 @@
           "text-material-primary",
           "text-material-primary-foreground"
         ],
-        "removed": [
-          "bg-dft-primary",
-          "text-dft-primary-foreground"
-        ]
+        "removed": ["bg-dft-primary", "text-dft-primary-foreground"]
       },
       "tokenChanges": [
         {
@@ -27304,10 +26768,7 @@
           "bg-material-secondary",
           "text-material-secondary-foreground"
         ],
-        "removed": [
-          "bg-dft-secondary",
-          "text-dft-secondary-foreground"
-        ]
+        "removed": ["bg-dft-secondary", "text-dft-secondary-foreground"]
       },
       "tokenChanges": [
         {
@@ -28137,12 +27598,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -28615,12 +28072,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -28940,12 +28393,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -30129,10 +29578,7 @@
           "ring-offset-material-background",
           "text-material-primary-foreground"
         ],
-        "removed": [
-          "bg-dft-primary",
-          "text-dft-primary-foreground"
-        ]
+        "removed": ["bg-dft-primary", "text-dft-primary-foreground"]
       },
       "tokenChanges": [
         {
@@ -30464,10 +29910,7 @@
           "bg-material-destructive",
           "text-material-destructive-foreground"
         ],
-        "removed": [
-          "bg-dft-destructive",
-          "text-dft-destructive-foreground"
-        ]
+        "removed": ["bg-dft-destructive", "text-dft-destructive-foreground"]
       },
       "tokenChanges": [
         {
@@ -32403,13 +31846,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-5"
-        ],
-        "removed": [
-          "px-3",
-          "rounded-dft-md"
-        ]
+        "added": ["px-5"],
+        "removed": ["px-3", "rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -32904,12 +32342,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -33065,7 +32499,7 @@
         },
         {
           "lineNumber": 21,
-          "content": "      className={cn(\"font-material p-3\", className)}",
+          "content": "      className={cn(\"font-roboto p-3\", className)}",
           "changed": true,
           "segments": [
             {
@@ -33074,7 +32508,7 @@
             },
             {
               "type": "CHANGED",
-              "text": "font-material"
+              "text": "font-roboto"
             },
             {
               "type": "UNCHANGED",
@@ -33185,19 +32619,17 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "font-material"
-        ],
+        "added": ["font-roboto"],
         "removed": []
       },
       "tokenChanges": [
         {
           "type": "ADDED",
-          "token": "font-material",
+          "token": "font-roboto",
           "occurrences": [
             {
               "lineNumber": 21,
-              "content": "      className={cn(\"font-material p-3\", className)}"
+              "content": "      className={cn(\"font-roboto p-3\", className)}"
             }
           ]
         }
@@ -33658,14 +33090,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "rounded-dft-md",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["rounded-material-md", "text-material-muted-foreground"],
+        "removed": ["rounded-dft-md", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -35224,14 +34650,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-accent",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "bg-dft-accent",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["bg-material-accent", "text-material-muted-foreground"],
+        "removed": ["bg-dft-accent", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -35507,14 +34927,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-accent",
-          "text-material-accent-foreground"
-        ],
-        "removed": [
-          "bg-dft-accent",
-          "text-dft-accent-foreground"
-        ]
+        "added": ["bg-material-accent", "text-material-accent-foreground"],
+        "removed": ["bg-dft-accent", "text-dft-accent-foreground"]
       },
       "tokenChanges": [
         {
@@ -36277,12 +35691,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -36586,12 +35996,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -38751,11 +38157,7 @@
           "border-material-border",
           "rounded-material-lg"
         ],
-        "removed": [
-          "bg-dft-background",
-          "border-dft-border",
-          "rounded-dft-lg"
-        ]
+        "removed": ["bg-dft-background", "border-dft-border", "rounded-dft-lg"]
       },
       "tokenChanges": [
         {
@@ -39023,12 +38425,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -39252,12 +38650,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -39481,12 +38875,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -39702,12 +39092,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -41489,13 +40875,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          ",",
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": [",", "material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -42986,14 +42367,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "px-2",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["px-3", "text-material-muted-foreground"],
+        "removed": ["px-2", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -43501,12 +42876,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-b-material-border"
-        ],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "added": ["border-b-material-border"],
+        "removed": ["border-b-dft-border"]
       },
       "tokenChanges": [
         {
@@ -44594,14 +43965,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "rounded-dft-md",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["rounded-material-md", "text-material-muted-foreground"],
+        "removed": ["rounded-dft-md", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -45967,12 +45332,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       },
       "tokenChanges": [
         {
@@ -47720,13 +47081,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -57448,16 +56804,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-foreground"
-        ],
-        "removed": [
-          ".",
-          "5",
-          "px-2",
-          "text-dft-foreground"
-        ]
+        "added": ["px-3", "text-material-foreground"],
+        "removed": [".", "5", "px-2", "text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -57817,12 +57165,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       },
       "tokenChanges": [
         {
@@ -58054,13 +57398,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -58366,12 +57705,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -58667,14 +58002,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border",
-          "rounded-material-md"
-        ],
-        "removed": [
-          "border-dft-border",
-          "rounded-dft-md"
-        ]
+        "added": ["border-material-border", "rounded-material-md"],
+        "removed": ["border-dft-border", "rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -58950,10 +58279,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -59700,12 +59026,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -59937,13 +59259,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "border-dft-border"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background", "border-dft-border"]
       },
       "tokenChanges": [
         {
@@ -60193,12 +59510,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       },
       "tokenChanges": [
         {
@@ -60518,12 +59831,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -61283,17 +60592,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-accent",
-          "px-3",
-          "py-2"
-        ],
-        "removed": [
-          "bg-dft-accent",
-          "px-2",
-          "py-1",
-          "rounded-dft-sm"
-        ]
+        "added": ["bg-material-accent", "px-3", "py-2"],
+        "removed": ["bg-dft-accent", "px-2", "py-1", "rounded-dft-sm"]
       },
       "tokenChanges": [
         {
@@ -71161,12 +70461,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       },
       "tokenChanges": [
         {
@@ -71486,12 +70782,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       },
       "tokenChanges": [
         {
@@ -71948,9 +71240,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
+        "added": ["text-material-muted-foreground"],
         "removed": []
       },
       "tokenChanges": [
@@ -72237,12 +71527,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -72562,12 +71848,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-destructive"
-        ],
-        "removed": [
-          "text-dft-destructive"
-        ]
+        "added": ["text-material-destructive"],
+        "removed": ["text-dft-destructive"]
       },
       "tokenChanges": [
         {
@@ -72951,12 +72233,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -73436,12 +72714,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-destructive"
-        ],
-        "removed": [
-          "text-dft-destructive"
-        ]
+        "added": ["text-material-destructive"],
+        "removed": ["text-dft-destructive"]
       },
       "tokenChanges": [
         {
@@ -77540,12 +76814,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-foreground"
-        ],
-        "removed": [
-          "bg-dft-foreground"
-        ]
+        "added": ["bg-foreground"],
+        "removed": ["bg-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -78864,10 +78134,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "const"
-        ]
+        "removed": ["=", "const"]
       },
       "tokenChanges": [
         {
@@ -79624,10 +78891,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "const"
-        ]
+        "removed": ["=", "const"]
       },
       "tokenChanges": [
         {
@@ -80388,10 +79652,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "const"
-        ]
+        "removed": ["=", "const"]
       },
       "tokenChanges": [
         {
@@ -81069,12 +80330,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "=",
-          "MenubarSub",
-          "Sub",
-          "const"
-        ]
+        "removed": ["=", "MenubarSub", "Sub", "const"]
       },
       "tokenChanges": [
         {
@@ -81805,11 +81061,7 @@
           "{",
           "}"
         ],
-        "removed": [
-          "MenubarRadioGroup",
-          "RadioGroup",
-          "const"
-        ]
+        "removed": ["MenubarRadioGroup", "RadioGroup", "const"]
       },
       "tokenChanges": [
         {
@@ -91099,9 +90351,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-current"
-        ],
+        "added": ["text-current"],
         "removed": []
       },
       "tokenChanges": [
@@ -92414,12 +91664,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       },
       "tokenChanges": [
         {
@@ -92739,12 +91985,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       },
       "tokenChanges": [
         {
@@ -92976,13 +92218,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -95609,14 +94846,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-tl-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "rounded-tl-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-tl-sm"],
+        "removed": ["bg-dft-border", "rounded-tl-dft-sm"]
       },
       "tokenChanges": [
         {
@@ -95940,12 +95171,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -99408,14 +98635,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "h-2"
-        ],
-        "removed": [
-          "bg-dft-secondary",
-          "h-4"
-        ]
+        "added": ["bg-material-muted", "h-2"],
+        "removed": ["bg-dft-secondary", "h-4"]
       },
       "tokenChanges": [
         {
@@ -99771,12 +98992,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-primary"
-        ],
-        "removed": [
-          "bg-dft-primary"
-        ]
+        "added": ["bg-material-primary"],
+        "removed": ["bg-dft-primary"]
       },
       "tokenChanges": [
         {
@@ -106559,14 +105776,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "ring-material-ring"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "ring-dft-ring"
-        ]
+        "added": ["bg-border", "ring-material-ring"],
+        "removed": ["bg-dft-border", "ring-dft-ring"]
       },
       "tokenChanges": [
         {
@@ -107258,15 +106469,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-material-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "border-dft-border",
-          "rounded-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-material-sm"],
+        "removed": ["bg-dft-border", "border-dft-border", "rounded-dft-sm"]
       },
       "tokenChanges": [
         {
@@ -107536,12 +106740,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-border"],
+        "removed": ["bg-dft-border"]
       },
       "tokenChanges": [
         {
@@ -111900,9 +111100,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "/"
-        ],
+        "added": ["/"],
         "removed": []
       },
       "tokenChanges": [
@@ -112874,12 +112072,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       },
       "tokenChanges": [
         {
@@ -113103,12 +112297,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       },
       "tokenChanges": [
         {
@@ -114628,12 +113818,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       },
       "tokenChanges": [
         {
@@ -115138,9 +114324,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "removed": ["border-b-dft-border"]
       },
       "tokenChanges": [
         {
@@ -116041,10 +115225,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-r-dft-border",
-          "border-t-dft-border"
-        ]
+        "removed": ["border-r-dft-border", "border-t-dft-border"]
       },
       "tokenChanges": [
         {
@@ -116613,9 +115794,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-l-dft-border"
-        ]
+        "removed": ["border-l-dft-border"]
       },
       "tokenChanges": [
         {
@@ -117268,12 +116447,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -117593,12 +116768,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -118430,12 +117601,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -118779,12 +117946,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -119104,12 +118267,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar"
-        ],
-        "removed": [
-          "bg-dft-sidebar"
-        ]
+        "added": ["bg-material-sidebar"],
+        "removed": ["bg-dft-sidebar"]
       },
       "tokenChanges": [
         {
@@ -119677,14 +118836,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       },
       "tokenChanges": [
         {
@@ -120272,14 +119425,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       },
       "tokenChanges": [
         {
@@ -120731,12 +119878,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["text-material-sidebar-foreground"],
+        "removed": ["text-dft-sidebar-foreground"]
       },
       "tokenChanges": [
         {
@@ -121428,9 +120571,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border"
-        ],
+        "added": ["border-material-border"],
         "removed": []
       },
       "tokenChanges": [
@@ -122826,9 +121967,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
+        "added": ["rounded-material-md"],
         "removed": []
       },
       "tokenChanges": [
@@ -124723,12 +123862,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar-border"
-        ],
-        "removed": [
-          "bg-dft-sidebar-border"
-        ]
+        "added": ["bg-material-sidebar-border"],
+        "removed": ["bg-dft-sidebar-border"]
       },
       "tokenChanges": [
         {
@@ -125752,12 +124887,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar"
-        ],
-        "removed": [
-          "bg-dft-sidebar"
-        ]
+        "added": ["bg-material-sidebar"],
+        "removed": ["bg-dft-sidebar"]
       },
       "tokenChanges": [
         {
@@ -126221,12 +125352,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       },
       "tokenChanges": [
         {
@@ -126818,14 +125945,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "ring-material-sidebar-ring"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "ring-dft-sidebar-ring"
-        ]
+        "added": ["bg-material-background", "ring-material-sidebar-ring"],
+        "removed": ["bg-dft-background", "ring-dft-sidebar-ring"]
       },
       "tokenChanges": [
         {
@@ -127261,12 +126382,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar-border"
-        ],
-        "removed": [
-          "bg-dft-sidebar-border"
-        ]
+        "added": ["bg-material-sidebar-border"],
+        "removed": ["bg-dft-sidebar-border"]
       },
       "tokenChanges": [
         {
@@ -133630,15 +132747,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-11",
-          "h-9"
-        ],
-        "removed": [
-          "h-12",
-          "h-7",
-          "h-8"
-        ]
+        "added": ["h-11", "h-9"],
+        "removed": ["h-12", "h-7", "h-8"]
       },
       "tokenChanges": [
         {
@@ -136581,12 +135691,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-sidebar-accent-foreground"
-        ],
-        "removed": [
-          "text-dft-sidebar-accent-foreground"
-        ]
+        "added": ["text-material-sidebar-accent-foreground"],
+        "removed": ["text-dft-sidebar-accent-foreground"]
       },
       "tokenChanges": [
         {
@@ -138425,12 +137531,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -138646,12 +137748,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -139459,12 +138557,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-sidebar-border"
-        ],
-        "removed": [
-          "border-dft-sidebar-border"
-        ]
+        "added": ["border-material-sidebar-border"],
+        "removed": ["border-dft-sidebar-border"]
       },
       "tokenChanges": [
         {
@@ -142572,14 +141666,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "rounded-material-md"
-        ],
-        "removed": [
-          "bg-dft-muted",
-          "rounded-dft-md"
-        ]
+        "added": ["bg-material-muted", "rounded-material-md"],
+        "removed": ["bg-dft-muted", "rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -142901,16 +141989,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "bg-material-primary",
-          "h-1"
-        ],
-        "removed": [
-          "bg-dft-primary",
-          "bg-dft-secondary",
-          "h-2"
-        ]
+        "added": ["bg-material-muted", "bg-material-primary", "h-1"],
+        "removed": ["bg-dft-primary", "bg-dft-secondary", "h-2"]
       },
       "tokenChanges": [
         {
@@ -144853,14 +143933,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-primary",
-          "text-material-primary-foreground"
-        ],
-        "removed": [
-          "bg-dft-primary",
-          "text-dft-primary-foreground"
-        ]
+        "added": ["bg-material-primary", "text-material-primary-foreground"],
+        "removed": ["bg-dft-primary", "text-dft-primary-foreground"]
       },
       "tokenChanges": [
         {
@@ -145120,14 +144194,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "bg-dft-muted",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["bg-material-muted", "text-material-muted-foreground"],
+        "removed": ["bg-dft-muted", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -146191,11 +145259,7 @@
           "translate-x-3",
           "z-10"
         ],
-        "removed": [
-          "bg-dft-background",
-          "translate-x-0",
-          "translate-x-5"
-        ]
+        "removed": ["bg-dft-background", "translate-x-0", "translate-x-5"]
       },
       "tokenChanges": [
         {
@@ -147259,12 +146323,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-b-material-border"
-        ],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "added": ["border-b-material-border"],
+        "removed": ["border-b-dft-border"]
       },
       "tokenChanges": [
         {
@@ -147800,13 +146860,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted",
-          "border-t-dft-border"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted", "border-t-dft-border"]
       },
       "tokenChanges": [
         {
@@ -148077,10 +147132,7 @@
           "bg-material-muted",
           "border-b-material-border"
         ],
-        "removed": [
-          "bg-dft-muted",
-          "border-b-dft-border"
-        ]
+        "removed": ["bg-dft-muted", "border-b-dft-border"]
       },
       "tokenChanges": [
         {
@@ -148594,14 +147646,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-14",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "h-12",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["h-14", "text-material-foreground"],
+        "removed": ["h-12", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -148941,12 +147987,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -150817,14 +149859,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "ring-material-ring",
-          "ring-offset-material-background"
-        ],
-        "removed": [
-          "ring-dft-ring",
-          "ring-offset-dft-background"
-        ]
+        "added": ["ring-material-ring", "ring-offset-material-background"],
+        "removed": ["ring-dft-ring", "ring-offset-dft-background"]
       },
       "tokenChanges": [
         {
@@ -152158,12 +151194,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "material"
-        ],
-        "removed": [
-          "default"
-        ]
+        "added": ["material"],
+        "removed": ["default"]
       },
       "tokenChanges": [
         {
@@ -153909,20 +152941,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-10",
-          "h-8",
-          "min-w-10",
-          "min-w-8",
-          "px-1"
-        ],
-        "removed": [
-          "h-11",
-          "h-9",
-          "min-w-11",
-          "min-w-9",
-          "px-5"
-        ]
+        "added": ["h-10", "h-8", "min-w-10", "min-w-8", "px-1"],
+        "removed": ["h-11", "h-9", "min-w-11", "min-w-9", "px-5"]
       },
       "tokenChanges": [
         {
@@ -156929,12 +155949,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       },
       "tokenChanges": [
         {

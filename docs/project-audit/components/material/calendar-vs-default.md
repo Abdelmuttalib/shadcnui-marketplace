@@ -13,13 +13,13 @@
 
 ## 2. Executive Summary
 
-Material pins the root font (`font-material` — second root-font instance after
+Material pins the root font (`font-roboto` — second root-font instance after
 libelle's `font-outfit`) and resolves the typo to `rounded-r-material-md`.
 Nav stays `outline`. All else is a prefix swap. Own-style import verified.
 
 ## 3. Base Classes
 
-Root (`material:21`, verified): `cn("p-3")` → `cn("p-3 font-material")`
+Root (`material:21`, verified): `cn("p-3")` → `cn("p-3 font-roboto")`
 (UNVERIFIED, TYPOGRAPHY — component-level family pin, as libelle; redundant
 with the page font unless rendered outside it). Nav `outline` retained. Cell
 typo line: all `material-md` (verified fixed). Day states/icons: prefix swaps
@@ -61,7 +61,7 @@ Own-style import `…/material/ui/button` verified; rest identical. PARITY_EXPEC
 
 ## 12. Typography and Global Styling
 
-Root `font-material` is component-level (§3); day text sizes retained. Family
+Root `font-roboto` is component-level (§3); day text sizes retained. Family
 Roboto matches the inherited page font — the pin matters only if rendered
 outside it.
 

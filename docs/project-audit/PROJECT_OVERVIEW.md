@@ -38,20 +38,20 @@ Vercel deploy URLs in `hooks/use-style-store.tsx:58-71`.
 
 ## 4. Technology stack (actual versions from `package.json`)
 
-| Layer | Version (verified) |
-|---|---|
-| Next.js | 14.2.5 (App Router; `eslint-config-next` 15.1.6 — mismatch, see debt) |
-| React / ReactDOM | 18.3.1 |
-| Tailwind CSS | 3.4.1 (+ `tailwindcss-animate` 1.0.7, `@tailwindcss/forms` 0.5.7); **not** Tailwind v4 |
-| shadcn CLI | 2.4.0-canary.20 |
-| Radix UI | ~20 packages (accordion 1.1.2 … tooltip 1.0.6) |
-| cva / clsx / tailwind-merge | 0.7.0 / 2.1.1 / 2.4.0 |
-| State | zustand 5.0.3 (style store), jotai 2.9.2, @tanstack/react-query 4.28.0 |
-| Forms/data | react-hook-form 7.52.2, zod 3.23.8, @tanstack/react-table 8.9.1, recharts 2.15.1 |
-| Misc UI | cmdk 0.2.0, vaul 1.1.2, sonner 0.3.5, embla-carousel 8.5.2, input-otp 1.4.2, next-themes 0.2.1 |
-| Backend | @supabase/ssr 0.5.2, @supabase/supabase-js 2.45.4 |
-| Registry tooling | ts-morph 26.0.0, tsx 4.20.2, shiki 1.26.1, rimraf 6.0.1 |
-| Package manager | pnpm (`pnpm-lock.yaml` present) |
+| Layer                       | Version (verified)                                                                             |
+| --------------------------- | ---------------------------------------------------------------------------------------------- |
+| Next.js                     | 14.2.5 (App Router; `eslint-config-next` 15.1.6 — mismatch, see debt)                          |
+| React / ReactDOM            | 18.3.1                                                                                         |
+| Tailwind CSS                | 3.4.1 (+ `tailwindcss-animate` 1.0.7, `@tailwindcss/forms` 0.5.7); **not** Tailwind v4         |
+| shadcn CLI                  | 2.4.0-canary.20                                                                                |
+| Radix UI                    | ~20 packages (accordion 1.1.2 … tooltip 1.0.6)                                                 |
+| cva / clsx / tailwind-merge | 0.7.0 / 2.1.1 / 2.4.0                                                                          |
+| State                       | zustand 5.0.3 (style store), jotai 2.9.2, @tanstack/react-query 4.28.0                         |
+| Forms/data                  | react-hook-form 7.52.2, zod 3.23.8, @tanstack/react-table 8.9.1, recharts 2.15.1               |
+| Misc UI                     | cmdk 0.2.0, vaul 1.1.2, sonner 0.3.5, embla-carousel 8.5.2, input-otp 1.4.2, next-themes 0.2.1 |
+| Backend                     | @supabase/ssr 0.5.2, @supabase/supabase-js 2.45.4                                              |
+| Registry tooling            | ts-morph 26.0.0, tsx 4.20.2, shiki 1.26.1, rimraf 6.0.1                                        |
+| Package manager             | pnpm (`pnpm-lock.yaml` present)                                                                |
 
 ## 5. Overall architecture
 
@@ -145,11 +145,11 @@ Per-style dirs: `ui/`, `example/`, `examples/`, `blocks/`, `components/`, `hooks
 ## 12. Font loading system
 
 `lib/fonts.ts`: `next/font/google` — Inter (`--font-inter`), IBM Plex Mono
-(`--font-ibm-plex-mono`), IBM Plex Sans (`--font-carbon`), Roboto (`--font-roboto`),
-Ubuntu (`--font-spectrum`), Poppins (`--font-poppins`), Outfit (`--font-outfit`);
+(`--font-ibm-plex-mono`), IBM Plex Sans (`--font-ibm-plex-sans`), Roboto (`--font-roboto`),
+Ubuntu (`--font-ubuntu`), Poppins (`--font-poppins`), Outfit (`--font-outfit`);
 combined into `fontVariables`, applied on `<body>` in both layouts.
-`getStyleFontClassname` (`registry/styles.tsx:225-254`, verified): carbon→`font-carbon`,
-material→`font-material`, spectrum→`font-spectrum`, neon→`font-poppins`,
+`getStyleFontClassname` (`registry/styles.tsx:225-254`, verified): carbon→`font-ibm-plex-sans`,
+material→`font-roboto`, spectrum→`font-ubuntu`, neon→`font-poppins`,
 libelle→`font-outfit`; default/linear/catalyst/wedges/moon/lucid/snow→`font-sans` (Inter).
 `general-sans/public-sans/dm-sans/work-sans/dm-serif-display` font families exist in
 tailwind config with no verified loader — needs investigation (Stage 4).

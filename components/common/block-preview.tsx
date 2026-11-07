@@ -133,42 +133,28 @@ export function BlockPreview({
     >
       <div className="mb-4 space-y-3">
         <div className="flex items-center gap-2">
-          <Typography as="h2" variant="xl/medium" className="tracking-tight">
+          <Typography
+            as="h2"
+            variant="sm/medium"
+            className="font-mono tracking-tight"
+          >
             {/* {title} */}
             {formatString(title)}
           </Typography>
-
-          <RichBadge variant={getPlanBadge()} className="capitalize">
-            {plan}
-          </RichBadge>
-          {/* <Typography
-            as="h2"
-            variant="md/normal"
-            className="text-foreground-secondary"
-          >
-            {description}
-          </Typography> */}
         </div>
       </div>
       <div
-        className={cn(
-          "relative mb-6",
-          "overflow-hidden",
-          {
-            "fixed inset-0 z-50 h-screen w-screen bg-background": isFullScreen,
-          }
-          // "shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)]",
-          // "relative overflow-hidden",
-          // "h-full w-full rounded-xl shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:pointer-events-none dark:before:absolute dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline"
-        )}
+        className={cn("relative mb-6", "overflow-hidden", {
+          "bg-background fixed inset-0 z-50 h-screen w-screen": isFullScreen,
+        })}
       >
         <div className="relative z-10 flex max-w-full flex-col justify-between gap-1 overflow-hidden">
-          <div className="flex justify-between overflow-x-auto px-1 pb-1 pt-1">
+          <div className="flex justify-between overflow-x-auto pt-1 pb-1">
             <div className="flex w-full items-center justify-between gap-2">
-              <div className="flex gap-0.5 rounded-lg outline-none">
+              <div className="flex gap-0.5 outline-none">
                 <Button
-                  className={cn("bg-transparent", {
-                    "border-none text-muted-foreground": !preview,
+                  className={cn("rounded-none bg-transparent", {
+                    "text-muted-foreground border-transparent": !preview,
                   })}
                   variant={preview ? "outline" : "ghost"}
                   onClick={() => setPreview(true)}
@@ -178,8 +164,8 @@ export function BlockPreview({
                   Preview
                 </Button>
                 <Button
-                  className={cn("bg-transparent", {
-                    "border-none text-muted-foreground": preview,
+                  className={cn("rounded-none bg-transparent", {
+                    "text-muted-foreground border-transparent": preview,
                   })}
                   variant={!preview ? "outline" : "ghost"}
                   onClick={() => setPreview(false)}
@@ -204,16 +190,17 @@ export function BlockPreview({
                 </Button>
               </div>
               <div className="flex items-center gap-2">
-                <div className="hidden h-10 gap-0.5 rounded-md border border-input px-0.5 md:flex md:items-center">
+                <div className="border-input hidden gap-0.5 md:flex md:items-center">
                   {breakpoints.map((bp) => (
                     <Button
                       key={bp.label}
                       variant={breakpoint === bp.label ? "outline" : "ghost"}
                       size="icon-sm"
                       onClick={() => setBreakpoint(bp.label)}
-                      className={cn("", {
-                        " border-input bg-input/40": breakpoint === bp.label,
+                      className={cn("rounded-none", {
+                        "border-input bg-input/40": breakpoint === bp.label,
                       })}
+                      disabled={!preview}
                     >
                       {bp.icon}
                     </Button>
@@ -226,14 +213,11 @@ export function BlockPreview({
           <div className="flex h-full w-full gap-2 overflow-hidden">
             {preview ? (
               <div
-                className={cn(
-                  "h-fit w-full overflow-hidden rounded-lg border",
-                  {
-                    "max-w-md": breakpoint === "sm",
-                    "max-w-screen-md": breakpoint === "md",
-                    "max-w-full": breakpoint === "lg",
-                  }
-                )}
+                className={cn("h-fit w-full overflow-hidden border", {
+                  "max-w-md": breakpoint === "sm",
+                  "max-w-screen-md": breakpoint === "md",
+                  "max-w-full": breakpoint === "lg",
+                })}
               >
                 <iframe
                   loading="lazy"
@@ -249,14 +233,14 @@ export function BlockPreview({
               <div className="w-full max-w-full overflow-x-auto">
                 {children}
                 {/* {plan === BlockPlan.Pro ? (
-                  <div className="hide-scrollbar relative flex h-[45rem] max-h-[45rem] items-center justify-center overflow-hidden rounded-lg bg-card text-sm">
+                  <div className="hide-scrollbar relative flex h-[45rem] max-h-[45rem] items-center justify-center overflow-hidden bg-card text-sm">
                     <Image
                       src="/images/code-placeholder.png"
                       alt="Pro Badge"
                       layout="fill"
                       className="mx-auto h-full w-full"
                     />
-                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 overflow-hidden rounded-lg bg-background/40 p-4 backdrop-blur-sm">
+                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 overflow-hidden bg-background/40 p-4 backdrop-blur-sm">
                       <Typography
                         as="p"
                         variant="lg/medium"

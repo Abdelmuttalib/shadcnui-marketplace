@@ -25,14 +25,14 @@ Stack: **Next.js 14.2.5 (App Router) + React 18 + TypeScript + Tailwind 3.4 + Ra
 
 ## 2. Product purpose and target users
 
-| Item | Detail |
-|---|---|
-| Primary purpose | Sell/distribute drop-in visual replacements for default shadcn/ui styling ("shadcn, your way"). FAQ in `config/site-config.tsx` promises premium style variations, dark-mode support, docs, updates, 14-day refunds — but **no purchase flow exists in code**. |
-| Target users | (a) Developers already using shadcn/ui who want a different look without rewriting components; (b) evaluators browsing previews; (c) consumers of free copy-paste blocks. |
-| Problems solved | Default/New-York shadcn looks samey; theming from scratch is expensive; blocks speed up landing/marketing pages. |
-| Core features | Style gallery, live style×example×palette×mode preview, CLI install command, palette/radius customization + CSS export, blocks gallery, per-style detail pages, colors/typography reference pages. |
-| Secondary features | Waitlist subscribe, isolated dashboard demos per style (`/dashboard/<style>`), external full-app demos via iframes (`https://shadcn-<style>.vercel.app`), sitemap/robots/OG metadata, static account/billing mock. |
-| Non-features (verified absent) | Cart, checkout, Stripe/Paddle, licenses enforcement, user accounts/sessions, CMS, search backend, comments/reviews, API for styles. `payment\|checkout\|stripe` hits are mock strings in `components/demo/*` and `components/showcase.tsx`. |
+| Item                           | Detail                                                                                                                                                                                                                                                         |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Primary purpose                | Sell/distribute drop-in visual replacements for default shadcn/ui styling ("shadcn, your way"). FAQ in `config/site-config.tsx` promises premium style variations, dark-mode support, docs, updates, 14-day refunds — but **no purchase flow exists in code**. |
+| Target users                   | (a) Developers already using shadcn/ui who want a different look without rewriting components; (b) evaluators browsing previews; (c) consumers of free copy-paste blocks.                                                                                      |
+| Problems solved                | Default/New-York shadcn looks samey; theming from scratch is expensive; blocks speed up landing/marketing pages.                                                                                                                                               |
+| Core features                  | Style gallery, live style×example×palette×mode preview, CLI install command, palette/radius customization + CSS export, blocks gallery, per-style detail pages, colors/typography reference pages.                                                             |
+| Secondary features             | Waitlist subscribe, isolated dashboard demos per style (`/dashboard/<style>`), external full-app demos via iframes (`https://shadcn-<style>.vercel.app`), sitemap/robots/OG metadata, static account/billing mock.                                             |
+| Non-features (verified absent) | Cart, checkout, Stripe/Paddle, licenses enforcement, user accounts/sessions, CMS, search backend, comments/reviews, API for styles. `payment\|checkout\|stripe` hits are mock strings in `components/demo/*` and `components/showcase.tsx`.                    |
 
 ---
 
@@ -63,7 +63,7 @@ Step-by-step with symbols:
 2. `StyleSelect`: Radix `Select`, `defaultValue={style}`, `onValueChange={e => setStyle(e)}` over `stylesDataList` (from `STYLES_DATA`). No URL change, no persistence (Zustand without persist).
 3. `PageExampleSelect` / `ThemePaletteSelect`: same pattern; palette swatches render `oklch(palette[resolvedTheme][key])` for `mainPaletteColorsKeys = [primary, secondary, background, card, accent]`.
 4. `ShowcaseStylePageExamplePreview` reads `{style, pageExampleType}` and renders `StylePageExamplePreview` with `key={style}` (forces remount on style change) + a blurred `oklch(var(--<prefix>-primary))` glow div.
-5. `StylePageExamplePreview({styleProp, pageExampleTypeProp})` applies `getStyleFontClassname(styleProp)` + `getStyleBackgroundClassname(styleProp)` (e.g. `font-carbon bg-cb-background`) and calls `renderStylePageExample(styleProp, pageExampleTypeProp || pageExampleType)` — a large if/else switch in `registry/styles.tsx` returning e.g. `<CarbonMailPage/>`, `<DefaultCardsPage/>`.
+5. `StylePageExamplePreview({styleProp, pageExampleTypeProp})` applies `getStyleFontClassname(styleProp)` + `getStyleBackgroundClassname(styleProp)` (e.g. `font-ibm-plex-sans bg-cb-background`) and calls `renderStylePageExample(styleProp, pageExampleTypeProp || pageExampleType)` — a large if/else switch in `registry/styles.tsx` returning e.g. `<CarbonMailPage/>`, `<DefaultCardsPage/>`.
 6. Palette/mode effect: `ThemeCustomizerWrapper` (mounted once in `app/layout.tsx` **outside `<body>`**, wrapping it) has `useEffect[theme, style, activePalette, activeRadius, resolvedTheme]`: clears all inline `--*` on `<html>`, then writes `--<prefix>-<var>` for every key in `themePalettes[activePalette][light|dark]` + `--<prefix>-radius`. System theme resolves via `next-themes` `resolvedTheme`. Because each style uses its own CSS-variable namespace, switching style changes which prefixed variables components read — **no class swap needed for style, only for light/dark**.
 7. `StylePaletteCommand` composes `pnpm dlx shadcn add "<registryUrl>/r/styles/<style>/index.json" --overwrite [&& pnpm dlx shadcn add "<registryUrl>/r/themes/<palette>.json"]` where `getRegistryUrl()` returns `BASE_SITE_URL (https://shadcnmarketplace.com)` in production else `http://localhost:3000`. Rendered via `ClientStringCode` (shiki-highlighted, copy button).
 8. Failure modes: no error boundaries on this path except generic `ComponentWrapper/ErrorBoundary` in some previews; invalid style falls back to `Default*` in `renderStylePageExample`; empty `activePalette` (`DEFAULT_THEME_PALETTE = ""`) means step 6 writes nothing and static `globals.css` tokens apply; CLI 404 if `public/r` wasn't generated (build script `pnpm generate:registry-prod` runs before `next build`).
@@ -97,29 +97,29 @@ Step-by-step with symbols:
 
 ## 4. Actual technology stack
 
-| Technology | Version / location | Used for | Central? |
-|---|---|---|---|
-| Next.js App Router | `14.2.5` (`package.json`, `app/layout.tsx`, `app/(www)`, `app/(styles)`, `app/(preview)`) | Routing, SSR/RSC, metadata/sitemap/robots | **Central** |
-| React | `^18.3.1` | All UI; `"use client"` for interactive islands, RSC for `StringCode` | Central |
-| TypeScript | `^5`, `strict:true`, `@/* -> ./*`, `jsx:preserve` | Type safety; `tsc --noEmit` clean | Central |
-| Tailwind CSS | `^3.4.1`, `tailwind.config.ts` (875 lines), `postcss.config.mjs` | Styling; namespaced color system + per-style radius + fonts | Central |
-| tailwindcss-animate | `^1.0.7` | Accordion animations | Limited |
-| shadcn/ui pattern + Radix | `components.json {style:default, rsc:false, baseColor:gray}`, ~30 `@radix-ui/*`, `cva`, `clsx`+`tailwind-merge` (`lib/utils.ts:cn`, `utils/cn.ts`) | Accessible primitives; every `registry/<style>/ui/*.tsx` follows `buttonVariants = cva(...)` pattern | Central |
-| shadcn CLI registry protocol | `shadcn@2.4.0-canary.20`, `scripts/generate-registry.mts`, `public/r/` | Distribution (`registry:ui|style|theme|block|...` JSON) | Central |
-| next-themes | `^0.2.1` (`components/next-themes-provider.tsx`: `attribute="class"`, `themes=[light,dark]`, `enableSystem`) | Light/dark | Central |
-| Zustand | `^5.0.3` (`hooks/use-style-store.tsx:useStyleStore`, `lib/use-theme-palette-store.tsx`) | Style/example + palette/radius global UI state (no persist) | Central |
-| Jotai | `^2.9.2` (`hooks/use-config.ts:configAtom atomWithStorage`, `hooks/use-theme-color.ts`, per-example `use-mail.ts`) | Legacy config + per-demo local state | Limited/legacy |
-| Supabase JS | `^2.45.4` (only `pages/api/subscribe.ts`); `@supabase/ssr ^0.5.2` installed **never imported** | Waitlist insert only | Marginal |
-| Vercel Analytics | `^1.3.1` (`app/layout.tsx:<Analytics/>`) | Page analytics | Marginal |
-| TanStack Table | `^8.9.1` (`components/ui/data-table.tsx`, `registry/*/example/tasks/*`) | Presentational demo tables | Demo-only |
-| TanStack Query | `^4.28.0` in deps, **0 imports** | Unused | Dead dep |
-| react-hook-form + zod + @hookform/resolvers | deps | Demo forms | Demo-only |
-| shiki + hast-util-to-jsx-runtime | (`lib/highlight-code.tsx:codeToHast tsx/dark-plus`) | Code highlighting for `ClientStringCode`/`StringCode` | Supporting |
-| copy-to-clipboard, cmdk, sonner, vaul, embla, recharts, date-fns, lucide | deps | Copy buttons, command palette, toasts, carousels, charts | Supporting |
-| next-sitemap | (`next-sitemap.config.js`, `postbuild`) + `app/sitemap.ts`, `app/robots.ts` | SEO | Supporting |
-| ts-morph, tsx, rimraf | devDeps + scripts | Registry generation | Build-only |
-| pnpm workspaces | `pnpm-lock.yaml`, `pnpm-workspace.yaml` | Package management | Tooling |
-| nextjs-progressbar, react-beautiful-dnd, react-resizable-panels, input-otp, etc. | deps | Demo page-examples | Demo-only |
+| Technology                                                                       | Version / location                                                                                                                                 | Used for                                                                                             | Central?       |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | -------------- |
+| Next.js App Router                                                               | `14.2.5` (`package.json`, `app/layout.tsx`, `app/(www)`, `app/(styles)`, `app/(preview)`)                                                          | Routing, SSR/RSC, metadata/sitemap/robots                                                            | **Central**    |
+| React                                                                            | `^18.3.1`                                                                                                                                          | All UI; `"use client"` for interactive islands, RSC for `StringCode`                                 | Central        |
+| TypeScript                                                                       | `^5`, `strict:true`, `@/* -> ./*`, `jsx:preserve`                                                                                                  | Type safety; `tsc --noEmit` clean                                                                    | Central        |
+| Tailwind CSS                                                                     | `^3.4.1`, `tailwind.config.ts` (875 lines), `postcss.config.mjs`                                                                                   | Styling; namespaced color system + per-style radius + fonts                                          | Central        |
+| tailwindcss-animate                                                              | `^1.0.7`                                                                                                                                           | Accordion animations                                                                                 | Limited        |
+| shadcn/ui pattern + Radix                                                        | `components.json {style:default, rsc:false, baseColor:gray}`, ~30 `@radix-ui/*`, `cva`, `clsx`+`tailwind-merge` (`lib/utils.ts:cn`, `utils/cn.ts`) | Accessible primitives; every `registry/<style>/ui/*.tsx` follows `buttonVariants = cva(...)` pattern | Central        |
+| shadcn CLI registry protocol                                                     | `shadcn@2.4.0-canary.20`, `scripts/generate-registry.mts`, `public/r/`                                                                             | Distribution (`registry:ui                                                                           | style          | theme | block | ...` JSON) | Central |
+| next-themes                                                                      | `^0.2.1` (`components/next-themes-provider.tsx`: `attribute="class"`, `themes=[light,dark]`, `enableSystem`)                                       | Light/dark                                                                                           | Central        |
+| Zustand                                                                          | `^5.0.3` (`hooks/use-style-store.tsx:useStyleStore`, `lib/use-theme-palette-store.tsx`)                                                            | Style/example + palette/radius global UI state (no persist)                                          | Central        |
+| Jotai                                                                            | `^2.9.2` (`hooks/use-config.ts:configAtom atomWithStorage`, `hooks/use-theme-color.ts`, per-example `use-mail.ts`)                                 | Legacy config + per-demo local state                                                                 | Limited/legacy |
+| Supabase JS                                                                      | `^2.45.4` (only `pages/api/subscribe.ts`); `@supabase/ssr ^0.5.2` installed **never imported**                                                     | Waitlist insert only                                                                                 | Marginal       |
+| Vercel Analytics                                                                 | `^1.3.1` (`app/layout.tsx:<Analytics/>`)                                                                                                           | Page analytics                                                                                       | Marginal       |
+| TanStack Table                                                                   | `^8.9.1` (`components/ui/data-table.tsx`, `registry/*/example/tasks/*`)                                                                            | Presentational demo tables                                                                           | Demo-only      |
+| TanStack Query                                                                   | `^4.28.0` in deps, **0 imports**                                                                                                                   | Unused                                                                                               | Dead dep       |
+| react-hook-form + zod + @hookform/resolvers                                      | deps                                                                                                                                               | Demo forms                                                                                           | Demo-only      |
+| shiki + hast-util-to-jsx-runtime                                                 | (`lib/highlight-code.tsx:codeToHast tsx/dark-plus`)                                                                                                | Code highlighting for `ClientStringCode`/`StringCode`                                                | Supporting     |
+| copy-to-clipboard, cmdk, sonner, vaul, embla, recharts, date-fns, lucide         | deps                                                                                                                                               | Copy buttons, command palette, toasts, carousels, charts                                             | Supporting     |
+| next-sitemap                                                                     | (`next-sitemap.config.js`, `postbuild`) + `app/sitemap.ts`, `app/robots.ts`                                                                        | SEO                                                                                                  | Supporting     |
+| ts-morph, tsx, rimraf                                                            | devDeps + scripts                                                                                                                                  | Registry generation                                                                                  | Build-only     |
+| pnpm workspaces                                                                  | `pnpm-lock.yaml`, `pnpm-workspace.yaml`                                                                                                            | Package management                                                                                   | Tooling        |
+| nextjs-progressbar, react-beautiful-dnd, react-resizable-panels, input-otp, etc. | deps                                                                                                                                               | Demo page-examples                                                                                   | Demo-only      |
 
 Explicitly **not** used (verified): Prisma/Drizzle, any App-Router API routes, Server Actions (`"use server"` appears once, commented), Supabase Auth (commented), Stripe/payments, CMS, i18n, PWA.
 
@@ -213,24 +213,24 @@ Counts: `tailwind.config.ts` 875 lines (11 namespaced palettes + base); `registr
 
 ## 7. Important files and their responsibilities
 
-| File | Responsibility | Caution |
-|---|---|---|
-| `app/layout.tsx` | Root composition: css imports, `NextThemesProvider > ThemeCustomizerWrapper + body(DevTools, Toaster, Analytics, children)`, SEO metadata | High impact; wrapper sits outside `<body>` |
-| `app/globals.css` | Static design tokens: `:root` + `--<prefix>-*` for all styles, gray scale, radius | High impact; editing shifts every preview |
-| `tailwind.config.ts` | Maps `oklch(var(--<prefix>-*))` to `bg-<prefix>-*` etc., per-style radius, fonts | High impact |
-| `hooks/use-style-store.tsx` | `STYLES`, `STYLES_DATA` (prefix/radius/hero/showcase per style), `useStyleStore{style,setStyle,pageExampleType,setPageExampleType}`, `PROD_STYLES_PATH`, `getStylesPath2` | High impact |
-| `lib/use-theme-palette-store.tsx` | `useThemePaletteStore{activePalette,setActivePalette,activeRadius,setActiveRadius,onReset*}` | High impact |
-| `registry/styles.tsx` | `getStyleVariablesPrefix`, `getStyleBackground/Foreground/FontClassname`, `renderStylePageExample/Hero/ShowcaseComponents/CardShowcase` | High impact; giant switch must stay in sync when adding styles |
-| `registry/registry-styles.ts` | Canonical 12-style list + `defaultRadius` consumed by generator | High impact |
-| `registry/registry-palettes.tsx` | 19 palettes, `DEFAULT_THEME_PALETTE=""`, `DEFAULT_RADIUS=""`, key types | High impact |
-| `components/theme-customizer.tsx` | `ThemeCustomizerWrapper` effect writing inline vars to `<html>` | High impact |
-| `scripts/generate-registry.mts` | `buildRegistry` (`__registry__/index.tsx` + `public/r/index.json`), `buildStyles` (per-component JSON with import rewrite), `buildStylesIndex` (style index), `buildThemes` (palette JSON) | Build-critical |
-| `config/site-config.tsx` | `BASE_SITE_URL`, nav, FAQ | Medium |
-| `lib/fonts.ts` | `next/font/google` vars (`--font-inter/carbon/roboto/spectrum/poppins/outfit/...`) → `fontVariables` | Medium |
-| `lib/registry.ts` | Runtime `getRegistryComponent/Item`, `fixImport`, ts-morph file-tree (mostly used by legacy/dynamic loaders) | Medium |
-| `components/style-palette-command.tsx` | CLI command composer | Medium |
-| `pages/api/subscribe.ts` | Waitlist endpoint | Low but only backend |
-| `components.json` | shadcn config (`style:default`, `rsc:false`, `baseColor:gray`) — note `css` points to non-existent `src/styles/globals.css` (stale) | Stale; don't trust path |
+| File                                   | Responsibility                                                                                                                                                                             | Caution                                                        |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| `app/layout.tsx`                       | Root composition: css imports, `NextThemesProvider > ThemeCustomizerWrapper + body(DevTools, Toaster, Analytics, children)`, SEO metadata                                                  | High impact; wrapper sits outside `<body>`                     |
+| `app/globals.css`                      | Static design tokens: `:root` + `--<prefix>-*` for all styles, gray scale, radius                                                                                                          | High impact; editing shifts every preview                      |
+| `tailwind.config.ts`                   | Maps `oklch(var(--<prefix>-*))` to `bg-<prefix>-*` etc., per-style radius, fonts                                                                                                           | High impact                                                    |
+| `hooks/use-style-store.tsx`            | `STYLES`, `STYLES_DATA` (prefix/radius/hero/showcase per style), `useStyleStore{style,setStyle,pageExampleType,setPageExampleType}`, `PROD_STYLES_PATH`, `getStylesPath2`                  | High impact                                                    |
+| `lib/use-theme-palette-store.tsx`      | `useThemePaletteStore{activePalette,setActivePalette,activeRadius,setActiveRadius,onReset*}`                                                                                               | High impact                                                    |
+| `registry/styles.tsx`                  | `getStyleVariablesPrefix`, `getStyleBackground/Foreground/FontClassname`, `renderStylePageExample/Hero/ShowcaseComponents/CardShowcase`                                                    | High impact; giant switch must stay in sync when adding styles |
+| `registry/registry-styles.ts`          | Canonical 12-style list + `defaultRadius` consumed by generator                                                                                                                            | High impact                                                    |
+| `registry/registry-palettes.tsx`       | 19 palettes, `DEFAULT_THEME_PALETTE=""`, `DEFAULT_RADIUS=""`, key types                                                                                                                    | High impact                                                    |
+| `components/theme-customizer.tsx`      | `ThemeCustomizerWrapper` effect writing inline vars to `<html>`                                                                                                                            | High impact                                                    |
+| `scripts/generate-registry.mts`        | `buildRegistry` (`__registry__/index.tsx` + `public/r/index.json`), `buildStyles` (per-component JSON with import rewrite), `buildStylesIndex` (style index), `buildThemes` (palette JSON) | Build-critical                                                 |
+| `config/site-config.tsx`               | `BASE_SITE_URL`, nav, FAQ                                                                                                                                                                  | Medium                                                         |
+| `lib/fonts.ts`                         | `next/font/google` vars (`--font-inter/carbon/roboto/spectrum/poppins/outfit/...`) → `fontVariables`                                                                                       | Medium                                                         |
+| `lib/registry.ts`                      | Runtime `getRegistryComponent/Item`, `fixImport`, ts-morph file-tree (mostly used by legacy/dynamic loaders)                                                                               | Medium                                                         |
+| `components/style-palette-command.tsx` | CLI command composer                                                                                                                                                                       | Medium                                                         |
+| `pages/api/subscribe.ts`               | Waitlist endpoint                                                                                                                                                                          | Low but only backend                                           |
+| `components.json`                      | shadcn config (`style:default`, `rsc:false`, `baseColor:gray`) — note `css` points to non-existent `src/styles/globals.css` (stale)                                                        | Stale; don't trust path                                        |
 
 ---
 
@@ -239,7 +239,7 @@ Counts: `tailwind.config.ts` 875 lines (11 namespaced palettes + base); `registr
 1. `app/layout.tsx:RootLayout` — imports `./globals.css` + `./themes.css`; wraps `<html lang="en">` in `NextThemesProvider` (`attribute="class"`, `themes=[light,dark]`, `enableSystem`); mounts `<ThemeCustomizerWrapper/>` (no children — pure effect), then `<body class="${fontVariables} font-sans antialiased">` with `DevTools`, `Toaster`, `Analytics`, `{children}`.
 2. Route groups (parentheses stripped from URL): `(www)` adds `Navbar/main/Footer` (`app/(www)/layout.tsx`); `(styles)` renders own `<html><body>` without providers for isolation (`app/(styles)/layout.tsx`); `(preview)` chromeless block pages; `(internal)/sink` + `(test)/test` internal. No `middleware.ts`, no `loading/error` boundaries (only `app/not-found.tsx` + `app/(www)/error/page.tsx` as a plain route).
 3. Metadata: root `metadataBase https://shadcnmarketplace.com` + OG image; `(www)/layout.tsx` duplicates metadata with alternate domain `https://shadcn-ui-marketplace.com` (inconsistency, §19). `sitemap.ts` enumerates `/`, `/blocks`, `/blocks/<slug>`; `robots.ts` allows `/ /blocks /styles /typography`.
-4. Fonts: `lib/fonts.ts` loads Inter, IBM Plex Mono/Sans (`--font-carbon`), Roboto (`--font-roboto`), Ubuntu (`--font-spectrum`), Poppins, Outfit; `fontVariables` injected in every layout's `<body>`/`className`.
+4. Fonts: `lib/fonts.ts` loads Inter, IBM Plex Mono/Sans (`--font-ibm-plex-sans`), Roboto (`--font-roboto`), Ubuntu (`--font-ubuntu`), Poppins, Outfit; `fontVariables` injected in every layout's `<body>`/`className`.
 5. `DevTools` (`components/dev-tools.tsx`) renders only when `NODE_ENV development`-ish; `Toaster` (sonner) for copy toasts.
 
 ---
@@ -254,7 +254,7 @@ Three layers:
 
 Mode handling: `next-themes` toggles `.dark` on `<html>`; palette writer respects `theme === "system" ? resolvedTheme : theme`. Default `activePalette = ""` and `activeRadius = ""` mean **no override until user picks** — static CSS wins initially. `ThemePaletteReset` restores `""`.
 
-Per-style fonts: `getStyleFontClassname` maps carbon→`font-carbon`, material→`font-material`, spectrum→`font-spectrum`, neon→`font-poppins`, libelle→`font-outfit`, rest→`font-sans`.
+Per-style fonts: `getStyleFontClassname` maps carbon→`font-ibm-plex-sans`, material→`font-roboto`, spectrum→`font-ubuntu`, neon→`font-poppins`, libelle→`font-outfit`, rest→`font-sans`.
 
 ---
 
@@ -294,15 +294,15 @@ Switching styles does **not** reset palette/radius (stores are independent) — 
 
 ## 13. Backend and external integrations
 
-| Integration | Evidence | Status |
-|---|---|---|
-| Supabase waitlist | `pages/api/subscribe.ts:createClient(...).from("waitlist").insert` | **Live** (sole mutation) |
-| Supabase Auth | `components/login-page.tsx:login/signup/signInWithGitHub` (all commented), `user-menu.tsx`, `user-card.tsx` | Disabled scaffold |
-| Vercel Analytics | `app/layout.tsx:<Analytics/>` | Live |
-| Unsplash images | `next.config.mjs:images.domains=[images.unsplash.com]` | Config only |
-| External style deployments | `PROD_STYLES_PATH` 12× `https://shadcn-<style>.vercel.app` | Referenced by iframes; availability unverified |
-| Sitemap | `next-sitemap` postbuild + `app/sitemap.ts` | Build-time |
-| Env vars (names only) | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_APP_URL`, `NEXT_PUBLIC_NODE_ENV`, `NODE_ENV` | No secrets exposed |
+| Integration                | Evidence                                                                                                               | Status                                         |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Supabase waitlist          | `pages/api/subscribe.ts:createClient(...).from("waitlist").insert`                                                     | **Live** (sole mutation)                       |
+| Supabase Auth              | `components/login-page.tsx:login/signup/signInWithGitHub` (all commented), `user-menu.tsx`, `user-card.tsx`            | Disabled scaffold                              |
+| Vercel Analytics           | `app/layout.tsx:<Analytics/>`                                                                                          | Live                                           |
+| Unsplash images            | `next.config.mjs:images.domains=[images.unsplash.com]`                                                                 | Config only                                    |
+| External style deployments | `PROD_STYLES_PATH` 12× `https://shadcn-<style>.vercel.app`                                                             | Referenced by iframes; availability unverified |
+| Sitemap                    | `next-sitemap` postbuild + `app/sitemap.ts`                                                                            | Build-time                                     |
+| Env vars (names only)      | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_APP_URL`, `NEXT_PUBLIC_NODE_ENV`, `NODE_ENV` | No secrets exposed                             |
 
 Frontend↔backend communication is limited to `POST /api/subscribe`. Everything else is static render + client state + CLI download of static JSON.
 
@@ -334,18 +334,23 @@ Details:
 ## 15. Important execution paths
 
 ### P1. Homepage style switch (traced, §3.1)
+
 `Select.onValueChange → useStyleStore.setStyle → ShowcaseStylePageExamplePreview re-render (key remount) → renderStylePageExample → per-style page component`. Palette effect runs independently via `ThemeCustomizerWrapper`.
 
 ### P2. Palette + mode apply (traced)
+
 `ThemePaletteSelect.onValueChange → setActivePalette → ThemeCustomizerWrapper.useEffect → html.style.setProperty(--<prefix>-<k>, v) (+radius) → CSS var cascade repaints preview`. `ThemeModeSelect → next-themes setTheme → .dark class + resolvedTheme → effect re-runs picking other palette side`.
 
 ### P3. Install (traced)
+
 `StylePaletteCommand reads stores → ClientStringCode renders command → user copies (CopyButton → copy-to-clipboard → toast) → runs in terminal → shadcn CLI GETs public/r JSON → files written to consumer project`.
 
 ### P4. Blocks browse (verified by reading pages)
+
 `/blocks client filter over blocksRegistry → Link localHref /block/<cat>/<id> → (preview) page renders wedges-based demo + StringCode source → copy`.
 
 ### P5. Subscribe (verified)
+
 `form → fetch POST /api/subscribe → regex check → supabase insert waitlist → 200/400/500/405 JSON`.
 
 ---
@@ -364,15 +369,15 @@ Details:
 
 ## 17. Testing and build setup
 
-| Command | `package.json` | Result in this investigation |
-|---|---|---|
-| `pnpm dev` / `tdev` | `next dev [--turbo]` | Not run (investigation-only, no installs) |
-| `pnpm build` | `pnpm generate:registry-prod && next build` | Not run (would write `public/r`, `__registry__`) |
-| `pnpm lint` | `next lint` | Not run |
-| `npx tsc --noEmit` | (tsc directly) | **Ran 2026-10-12: clean, exit 0** |
-| `generate:registry-local/prod` | `tsx … generate-registry.mts --env=*` | Not run (writes files) |
-| Unit tests | None configured (no vitest/jest/playwright in deps or scripts) | Absent — no test suite to run |
-| `postbuild` | `next-sitemap` | Not run |
+| Command                        | `package.json`                                                 | Result in this investigation                     |
+| ------------------------------ | -------------------------------------------------------------- | ------------------------------------------------ |
+| `pnpm dev` / `tdev`            | `next dev [--turbo]`                                           | Not run (investigation-only, no installs)        |
+| `pnpm build`                   | `pnpm generate:registry-prod && next build`                    | Not run (would write `public/r`, `__registry__`) |
+| `pnpm lint`                    | `next lint`                                                    | Not run                                          |
+| `npx tsc --noEmit`             | (tsc directly)                                                 | **Ran 2026-10-12: clean, exit 0**                |
+| `generate:registry-local/prod` | `tsx … generate-registry.mts --env=*`                          | Not run (writes files)                           |
+| Unit tests                     | None configured (no vitest/jest/playwright in deps or scripts) | Absent — no test suite to run                    |
+| `postbuild`                    | `next-sitemap`                                                 | Not run                                          |
 
 ESLint (`eslint-config-next`), Prettier + `prettier-plugin-tailwindcss`, `eslint-plugin-simple-import-sort` configured but not executed here.
 
@@ -419,36 +424,36 @@ ESLint (`eslint-config-next`), Prettier + `prettier-plugin-tailwindcss`, `eslint
 
 ## 21. Glossary of project-specific concepts
 
-| Term | Meaning |
-|---|---|
-| Style / Style kit | One of 12 named forks (`default…libelle`), each with own CSS-var prefix, radius, font, full `ui/` + page examples. |
-| Prefix | Short token namespace per style (`dft`, `cb`, `spctm`, …) via `getStyleVariablesPrefix`. |
-| Palette | One of 19 `palette-N` color sets (`registry-palettes.tsx`), each with `light`+`dark` OKLCH maps applied under the active style's prefix. |
-| Page example | Full demo app page (`mail|dashboard|cards|tasks|playground|forms|music|authentication[+charts|board]`) rendered per style. |
-| Block | Marketing copy-paste section (`hero-sections`, `pricings`, `features`, `blog-sections`, `footers`, `portfolios`, `landing-pages`). |
-| Plan (`free\|basic\|pro`) | Display-only block metadata; not enforced. |
-| Registry JSON | shadcn-CLI-compatible artifacts under `public/r/` (`styles/<style>/*.json`, `themes/*.json`). |
-| `StylePaletteCommand` | Rendered CLI string installing current style + palette. |
-| `ThemeCustomizerWrapper` | Mount-once effect writing palette/radius vars onto `<html>`. |
-| `(www)/(styles)/(preview)` | Route groups: public chrome / isolated dashboards / chromeless block demos (groups don't affect URLs). |
+| Term                       | Meaning                                                                                                                                  |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Style / Style kit          | One of 12 named forks (`default…libelle`), each with own CSS-var prefix, radius, font, full `ui/` + page examples.                       |
+| Prefix                     | Short token namespace per style (`dft`, `cb`, `spctm`, …) via `getStyleVariablesPrefix`.                                                 |
+| Palette                    | One of 19 `palette-N` color sets (`registry-palettes.tsx`), each with `light`+`dark` OKLCH maps applied under the active style's prefix. |
+| Page example               | Full demo app page (`mail                                                                                                                | dashboard | cards | tasks | playground | forms | music | authentication[+charts | board]`) rendered per style. |
+| Block                      | Marketing copy-paste section (`hero-sections`, `pricings`, `features`, `blog-sections`, `footers`, `portfolios`, `landing-pages`).       |
+| Plan (`free\|basic\|pro`)  | Display-only block metadata; not enforced.                                                                                               |
+| Registry JSON              | shadcn-CLI-compatible artifacts under `public/r/` (`styles/<style>/*.json`, `themes/*.json`).                                            |
+| `StylePaletteCommand`      | Rendered CLI string installing current style + palette.                                                                                  |
+| `ThemeCustomizerWrapper`   | Mount-once effect writing palette/radius vars onto `<html>`.                                                                             |
+| `(www)/(styles)/(preview)` | Route groups: public chrome / isolated dashboards / chromeless block demos (groups don't affect URLs).                                   |
 
 ---
 
 ## Appendix A — Development guide (where to change what)
 
-| Task | Location | Notes |
-|---|---|---|
-| Add a new page | `app/(www)/<name>/page.tsx` (public chrome) or `app/(preview)/…` (chromeless) | Add nav link in `config/site-config.tsx:mainLinks`; add to `app/sitemap.ts` + `robots.ts` if public. |
-| Add a reusable site component | `components/common/*` (shared) or `components/ui/*` (chrome primitives) | Never import from `registry/<style>/` into chrome except via resolvers. |
-| Modify the design system | `app/globals.css` (tokens) + `tailwind.config.ts` (mappings) | Highest blast radius; verify all 12 prefixes. |
-| Add/modify a theme (style) | `registry/registry-styles.ts` + `registry/<style>/` fork + `hooks/use-style-store.tsx:STYLES_DATA` + `registry/styles.tsx` switches + `tailwind.config.ts` + `globals.css` + generator regex in `scripts/generate-registry.mts` | Keep all seven in sync. |
-| Add/modify a palette | `registry/registry-palettes.tsx` (`themePalettes`, types) | Regenerate registry to refresh `public/r/themes/*`. |
-| Modify preview behavior | Same-process: `components/views/styles/style-page-example-preview.tsx`, `components/common/showcase-*.tsx`; iframe: `components/common/style-preview.tsx`, `app/(www)/styles/components/*` | Preserve `key={style}` remount + namespaced classes. |
-| Modify state/data flow | `hooks/use-style-store.tsx`, `lib/use-theme-palette-store.tsx`, `components/theme-customizer.tsx` | Stores are ephemeral; add persist/URL sync deliberately. |
-| Integrate new API/backend | Prefer `app/api/*` (App Router) for new endpoints; existing `pages/api/subscribe.ts` is legacy Pages Router | Add env names to this doc; never commit secrets. |
-| Modify export/distribution | `scripts/generate-registry.mts` + `components/style-palette-command.tsx` + `components/common/theme-css-generator.tsx` | Run `pnpm generate:registry-local`, diff `public/r`, then build. |
-| Shared files requiring caution | `app/globals.css`, `tailwind.config.ts`, `registry/styles.tsx`, `hooks/use-style-store.tsx`, `registry/registry-palettes.tsx`, `components/theme-customizer.tsx`, `config/site-config.tsx` | See §16 blast radius. |
-| Validate changes | `npx tsc --noEmit` (clean at baseline) + `pnpm lint` + `pnpm generate:registry-local` + `pnpm build` | No unit-test suite exists; add manual preview checks per style × palette × mode. |
+| Task                           | Location                                                                                                                                                                                                                        | Notes                                                                                                |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Add a new page                 | `app/(www)/<name>/page.tsx` (public chrome) or `app/(preview)/…` (chromeless)                                                                                                                                                   | Add nav link in `config/site-config.tsx:mainLinks`; add to `app/sitemap.ts` + `robots.ts` if public. |
+| Add a reusable site component  | `components/common/*` (shared) or `components/ui/*` (chrome primitives)                                                                                                                                                         | Never import from `registry/<style>/` into chrome except via resolvers.                              |
+| Modify the design system       | `app/globals.css` (tokens) + `tailwind.config.ts` (mappings)                                                                                                                                                                    | Highest blast radius; verify all 12 prefixes.                                                        |
+| Add/modify a theme (style)     | `registry/registry-styles.ts` + `registry/<style>/` fork + `hooks/use-style-store.tsx:STYLES_DATA` + `registry/styles.tsx` switches + `tailwind.config.ts` + `globals.css` + generator regex in `scripts/generate-registry.mts` | Keep all seven in sync.                                                                              |
+| Add/modify a palette           | `registry/registry-palettes.tsx` (`themePalettes`, types)                                                                                                                                                                       | Regenerate registry to refresh `public/r/themes/*`.                                                  |
+| Modify preview behavior        | Same-process: `components/views/styles/style-page-example-preview.tsx`, `components/common/showcase-*.tsx`; iframe: `components/common/style-preview.tsx`, `app/(www)/styles/components/*`                                      | Preserve `key={style}` remount + namespaced classes.                                                 |
+| Modify state/data flow         | `hooks/use-style-store.tsx`, `lib/use-theme-palette-store.tsx`, `components/theme-customizer.tsx`                                                                                                                               | Stores are ephemeral; add persist/URL sync deliberately.                                             |
+| Integrate new API/backend      | Prefer `app/api/*` (App Router) for new endpoints; existing `pages/api/subscribe.ts` is legacy Pages Router                                                                                                                     | Add env names to this doc; never commit secrets.                                                     |
+| Modify export/distribution     | `scripts/generate-registry.mts` + `components/style-palette-command.tsx` + `components/common/theme-css-generator.tsx`                                                                                                          | Run `pnpm generate:registry-local`, diff `public/r`, then build.                                     |
+| Shared files requiring caution | `app/globals.css`, `tailwind.config.ts`, `registry/styles.tsx`, `hooks/use-style-store.tsx`, `registry/registry-palettes.tsx`, `components/theme-customizer.tsx`, `config/site-config.tsx`                                      | See §16 blast radius.                                                                                |
+| Validate changes               | `npx tsc --noEmit` (clean at baseline) + `pnpm lint` + `pnpm generate:registry-local` + `pnpm build`                                                                                                                            | No unit-test suite exists; add manual preview checks per style × palette × mode.                     |
 
 ---
 

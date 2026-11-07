@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 export function PreviewFontVariables({ className }: { className: string }) {
   React.useLayoutEffect(() => {
-    const classNames = className.split(/\s+/).filter(Boolean)
+    const classNames = className.split(/\s+/).filter(Boolean);
 
     if (!classNames.length) {
-      return
+      return;
     }
 
-    document.documentElement.classList.add(...classNames)
+    document.documentElement.classList.add(...classNames);
 
     return () => {
-      document.documentElement.classList.remove(...classNames)
-    }
-  }, [className])
+      document.documentElement.classList.remove(...classNames);
+    };
+  }, [className]);
 
-  return null
+  return null;
 }

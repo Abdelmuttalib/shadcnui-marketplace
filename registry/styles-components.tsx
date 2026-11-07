@@ -172,98 +172,31 @@ import {
 import { WedgesCardShowcase } from "@/registry/bases/base/wedges/wedges-card-showcase";
 import { WedgesUI } from "@/registry/bases/base/wedges/wedges-hero";
 import { WedgesShowcaseComponents } from "@/registry/bases/base/wedges/wedges-showcase-components";
+import { getStyleByName } from "@/lib/services/presets";
+import { DEFAULT_STYLE, StyleName } from "./styles";
 
-export function getStyleBackgroundClassname(style: Style) {
-  switch (style) {
-    case "default":
-      return "bg-dft-background";
-    case "carbon":
-      return "bg-cb-background";
-    case "linear":
-      return "bg-linear-background";
-    case "material":
-      return "bg-material-background";
-    case "catalyst":
-      return "bg-catalyst-background";
-    case "spectrum":
-      return "bg-spctm-background";
-    case "wedges":
-      return "bg-wedges-background";
-    case "moon":
-      return "bg-moon-background";
-    case "lucid":
-      return "bg-lucid-background";
-    case "snow":
-      return "bg-snow-background";
-    case "neon":
-      return "bg-neon-background";
-    case "libelle":
-      return "bg-libelle-background";
-    default:
-      return "bg-linear-background";
-  }
+export function getStyleBackgroundClassname(styleName: StyleName) {
+  const style = getStyleByName(styleName);
+
+  if (!style) return `bg-${DEFAULT_STYLE.cssPrefix}-background`;
+
+  return `bg-${style.cssPrefix}-background`;
 }
 
-export function getStyleForegroundClassname(style: Style) {
-  switch (style) {
-    case "default":
-      return "text-dft-foreground";
-    case "carbon":
-      return "text-cb-foreground";
-    case "linear":
-      return "text-linear-foreground";
-    case "material":
-      return "text-material-foreground";
-    case "catalyst":
-      return "text-catalyst-foreground";
-    case "spectrum":
-      return "text-spctm-foreground";
-    case "wedges":
-      return "text-wedges-foreground";
-    case "moon":
-      return "text-moon-foreground";
-    case "lucid":
-      return "text-lucid-foreground";
-    case "snow":
-      return "text-snow-foreground";
-    case "neon":
-      return "text-neon-foreground";
-    case "libelle":
-      return "text-libelle-foreground";
-    default:
-      return "text-linear-foreground";
-  }
+export function getStyleForegroundClassname(styleName: StyleName) {
+  const style = getStyleByName(styleName);
+
+  if (!style) return `text-${DEFAULT_STYLE.cssPrefix}-foreground`;
+
+  return `text-${style.cssPrefix}-foreground`;
 }
 
-export function getStyleFontClassname(style: Style) {
-  switch (style) {
-    case "default":
-      return "font-sans";
-    case "carbon":
-      return "font-carbon";
-    case "linear":
-      return "font-sans";
-    case "material":
-      return "font-material";
-    case "catalyst":
-      return "font-sans";
-    case "spectrum":
-      return "font-spectrum";
-    case "wedges":
-      return "font-sans";
-    case "snow":
-      return "font-sans";
-    case "moon":
-      return "font-sans";
-    case "lucid":
-      return "font-sans";
-    case "neon":
-      return "font-poppins";
-    case "libelle":
-      return "font-outfit";
-    default:
-      return "font-sans";
-  }
+export function getStyleFontClassname(styleName: Style) {
+  const style = getStyleByName(styleName);
+
+  if (!style) return `font-${DEFAULT_STYLE.font}`;
+
+  return `font-${style.font}`;
 }
 
 export function renderStyleCardShowcase(style: Style) {
@@ -297,37 +230,12 @@ export function renderStyleCardShowcase(style: Style) {
   }
 }
 
-export function getStyleVariablesPrefix(style: Style) {
-  switch (style) {
-    case "default":
-      return "dft";
-    case "carbon":
-      return "cb";
-    case "carbon":
-      return "cb";
-    case "linear":
-      return "linear";
-    case "material":
-      return "material";
-    case "catalyst":
-      return "catalyst";
-    case "spectrum":
-      return "spctm";
-    case "wedges":
-      return "wedges";
-    case "moon":
-      return "moon";
-    case "lucid":
-      return "lucid";
-    case "snow":
-      return "snow";
-    case "neon":
-      return "neon";
-    case "libelle":
-      return "libelle";
-    default:
-      return "dft";
-  }
+export function getStyleVariablesPrefix(styleName: Style) {
+  const style = getStyleByName(styleName);
+
+  if (!style) return DEFAULT_STYLE.cssPrefix;
+
+  return style.cssPrefix;
 }
 
 export function prefixCssVariable(cssVariable: string, prefix: string) {

@@ -64,11 +64,11 @@ export default function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="bg-linear-to-b from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md"
+                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-none select-none focus:shadow-md"
                     href="/"
                   >
                     <Icons.logo className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mt-4 mb-2 text-lg font-medium">
                       shadcn/ui
                     </div>
                     <p className="text-muted-foreground text-sm leading-tight">
@@ -94,7 +94,7 @@ export default function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Components</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -129,12 +129,12 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            "hover:bg-material-accent hover:text-material-accent-foreground focus:bg-material-accent focus:text-material-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>

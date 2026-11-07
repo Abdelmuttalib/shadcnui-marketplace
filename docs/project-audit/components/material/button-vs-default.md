@@ -21,30 +21,30 @@ moved from base into the `default` variant only — generality unresolved.
 
 `material:8` vs `default:9`; prefix swap plus:
 
-| Default | Alternative | Exact change | Inferred effect | Classification |
-|---|---|---|---|---|
-| `rounded-dft-md` | `rounded-full` | Radius utility → pill; per-size radius utilities removed everywhere (§5) | Inferred: fully rounded buttons at all sizes | UNVERIFIED, Needs-designer (concern SHAPE) — visually dominant but still single-component evidence |
-| `focus-visible:ring-offset-2` | (absent from base) | Offset width removed from base; `ring-offset-1 ring-offset-material-background` appears in `default` variant only (`material:13`) | Inferred: visible focus offset primarily on primary buttons; other variants render offset color at default (0) width | UNVERIFIED, Needs-designer (concern FOCUS) — placement recorded; generality unresolved |
+| Default                       | Alternative        | Exact change                                                                                                                      | Inferred effect                                                                                                      | Classification                                                                                     |
+| ----------------------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `rounded-dft-md`              | `rounded-full`     | Radius utility → pill; per-size radius utilities removed everywhere (§5)                                                          | Inferred: fully rounded buttons at all sizes                                                                         | UNVERIFIED, Needs-designer (concern SHAPE) — visually dominant but still single-component evidence |
+| `focus-visible:ring-offset-2` | (absent from base) | Offset width removed from base; `ring-offset-1 ring-offset-material-background` appears in `default` variant only (`material:13`) | Inferred: visible focus offset primarily on primary buttons; other variants render offset color at default (0) width | UNVERIFIED, Needs-designer (concern FOCUS) — placement recorded; generality unresolved             |
 
 ## 4. Variants
 
-| Variant | Default | Alternative (`material:12-22`) | Change | Classification |
-|---|---|---|---|---|
-| default | `bg-dft-primary …` | `bg-material-primary …` + `ring-offset-1 ring-offset-material-background` | Prefix swap + variant-scoped offset (see §3) | Offset: UNVERIFIED (above); rest TOKEN_DEPENDENCY |
-| destructive | baseline | `material` equivalents | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
-| outline | `… hover:bg-dft-accent hover:text-dft-accent-foreground` | `border border-material-border hover:bg-material-secondary hover:text-material-secondary-foreground [&_svg]:hover:text-material-secondary-foreground` | Hover accent → secondary; svg-hover follows text | UNVERIFIED, Needs-designer (concern COLOR) |
-| secondary | baseline | `material` equivalents | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
-| ghost | `hover:bg-dft-accent …` | `hover:bg-material-secondary hover:text-material-secondary-foreground` | Hover accent → secondary | UNVERIFIED, Needs-designer (concern COLOR) |
-| link | baseline | `material` equivalents | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
+| Variant     | Default                                                  | Alternative (`material:12-22`)                                                                                                                        | Change                                           | Classification                                    |
+| ----------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------- |
+| default     | `bg-dft-primary …`                                       | `bg-material-primary …` + `ring-offset-1 ring-offset-material-background`                                                                             | Prefix swap + variant-scoped offset (see §3)     | Offset: UNVERIFIED (above); rest TOKEN_DEPENDENCY |
+| destructive | baseline                                                 | `material` equivalents                                                                                                                                | Prefix swap                                      | TOKEN_DEPENDENCY, Corroborated                    |
+| outline     | `… hover:bg-dft-accent hover:text-dft-accent-foreground` | `border border-material-border hover:bg-material-secondary hover:text-material-secondary-foreground [&_svg]:hover:text-material-secondary-foreground` | Hover accent → secondary; svg-hover follows text | UNVERIFIED, Needs-designer (concern COLOR)        |
+| secondary   | baseline                                                 | `material` equivalents                                                                                                                                | Prefix swap                                      | TOKEN_DEPENDENCY, Corroborated                    |
+| ghost       | `hover:bg-dft-accent …`                                  | `hover:bg-material-secondary hover:text-material-secondary-foreground`                                                                                | Hover accent → secondary                         | UNVERIFIED, Needs-designer (concern COLOR)        |
+| link        | baseline                                                 | `material` equivalents                                                                                                                                | Prefix swap                                      | TOKEN_DEPENDENCY, Corroborated                    |
 
 ## 5. Sizes
 
-| Size | Default | Alternative (`material:25-30`) | Change |
-|---|---|---|---|
-| default | `h-10 px-4 py-2` | `h-10 px-5 py-2` | Same height, wider |
-| sm | `h-9 rounded-dft-md px-3` | `h-9 px-4` | Same height, wider, no radius utility |
-| lg | `h-11 rounded-dft-md px-8` | `h-11 px-8` | Same height/padding, no radius utility |
-| icon / icon-sm / icon-lg | `h-10/9/11` squares | Same dimensions | NO_DIFFERENCE (modulo pill shape) |
+| Size                     | Default                    | Alternative (`material:25-30`) | Change                                 |
+| ------------------------ | -------------------------- | ------------------------------ | -------------------------------------- |
+| default                  | `h-10 px-4 py-2`           | `h-10 px-5 py-2`               | Same height, wider                     |
+| sm                       | `h-9 rounded-dft-md px-3`  | `h-9 px-4`                     | Same height, wider, no radius utility  |
+| lg                       | `h-11 rounded-dft-md px-8` | `h-11 px-8`                    | Same height/padding, no radius utility |
+| icon / icon-sm / icon-lg | `h-10/9/11` squares        | Same dimensions                | NO_DIFFERENCE (modulo pill shape)      |
 
 Padding: UNVERIFIED, Needs-designer (concern DIMENSION).
 
@@ -80,7 +80,7 @@ superseded by `rounded-full` at component level) (`app/globals.css:969-991`).
 
 ## 12. Typography and Global Styling
 
-No component-level change. Family Roboto via inherited `font-material`
+No component-level change. Family Roboto via inherited `font-roboto`
 (`registry/styles.tsx:233-234`; `lib/fonts.ts:35-39`).
 
 ## 13. Findings and Upgrade Preservation

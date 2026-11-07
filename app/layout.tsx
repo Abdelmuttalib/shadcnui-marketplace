@@ -3,7 +3,6 @@ import "./style-vega.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import { DevTools } from "@/components/dev-tools";
@@ -11,8 +10,7 @@ import { fontVariables } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
 import { AppProviders } from "./app-providers";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+import { StaggeredNavFiles } from "@/components/landing/staggered-nav-files";
 
 export const metadata: Metadata = {
   title: {
@@ -48,17 +46,30 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("font-sans antialiased", inter.variable, fontVariables)}
+      className={cn("font-sans antialiased", fontVariables)}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                    try {
+                      if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                        document.querySelector('meta[name="theme-color"]').setAttribute('content')
+                      }
+                    } catch (_) {}
+                  `,
+          }}
+        />
+      </head>
+      <body suppressHydrationWarning>
         <AppProviders>
           <NuqsAdapter>
-            <DevTools />
-            <Analytics />
-            {children}
+            <div className="relative min-h-dvh">{children}</div>
           </NuqsAdapter>
         </AppProviders>
+        <Analytics />
       </body>
     </html>
   );

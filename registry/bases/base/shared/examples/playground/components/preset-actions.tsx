@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 import { useDesignSystem } from "../../../components/design-system-provider";
 
-export function PresetActions() {
+export function StyleActions() {
   const [open, setIsOpen] = React.useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = React.useState(false);
 

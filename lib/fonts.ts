@@ -1,5 +1,7 @@
 import { cn } from "cn";
 import {
+  Geist,
+  Geist_Mono,
   IBM_Plex_Mono,
   IBM_Plex_Sans,
   Inter,
@@ -11,9 +13,26 @@ import {
   Ubuntu,
 } from "next/font/google";
 
-const fontSans = Inter({
+import localFont from "next/font/local";
+
+const fontSans = Geist({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-geist-sans",
+});
+
+const fontMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+// Only the Square variant is used. Importing from `geist/font/pixel` would
+// declare (and preload) all five Geist Pixel fonts on every page.
+const GeistPixelSquare = localFont({
+  src: "../assets/GeistPixel-Square.woff2",
+  variable: "--font-geist-pixel-square",
+  weight: "500",
+  fallback: ["Geist Mono", "ui-monospace", "monospace"],
+  adjustFontFallback: false,
 });
 
 const fontHeading = Inter({
@@ -21,11 +40,11 @@ const fontHeading = Inter({
   variable: "--font-heading",
 });
 
-const fontMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400"],
-});
+// const fontMono = IBM_Plex_Mono({
+//   subsets: ["latin"],
+//   variable: "--font-mono",
+//   weight: ["400"],
+// });
 
 const fontNotoSansArabic = FontNotoSansArabic({
   subsets: ["arabic"],
@@ -56,7 +75,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-carbon",
+  variable: "--font-ibm-plex-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -68,9 +87,8 @@ const roboto = Roboto({
 });
 
 const ubuntu = Ubuntu({
-  variable: "--font-spectrum",
+  variable: "--font-ubuntu",
   subsets: ["latin"],
-  // weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   weight: ["300", "400", "500", "700"],
 });
 
@@ -81,6 +99,8 @@ const outfit = Outfit({
 });
 
 export const fontVariables = cn(
+  GeistPixelSquare.variable,
+
   fontSans.variable,
   fontHeading.variable,
   fontMono.variable,

@@ -8,9 +8,9 @@
   :root {
     /* oklch(20.97% 0.005 270.41) */
 
-    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-      sans-serif;
+    --font-sans:
+      "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
     /* #030101 */
     /* #0300d6 */
@@ -1767,7 +1767,7 @@
   } */
 
   pre {
-    @apply hide-scrollbar max-h-[45rem] max-w-[95vw] overflow-auto overflow-x-auto rounded-lg bg-card p-4 font-mono text-sm leading-relaxed;
+    @apply hide-scrollbar bg-card max-h-[45rem] max-w-[95vw] overflow-auto overflow-x-auto rounded-none p-4 font-mono text-xs leading-relaxed;
     white-space: pre;
   }
 

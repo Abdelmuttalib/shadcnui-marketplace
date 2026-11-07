@@ -63,13 +63,11 @@ export function ExampleRenderer({ style, name }: ExampleRendererProps) {
 
   return (
     <React.Suspense fallback={null}>
-      <div>
-        <DesignSystemTheme style={style}>
-          <Adapter>
-            <Example />
-          </Adapter>
-        </DesignSystemTheme>
-      </div>
+      <DesignSystemTheme style={style}>
+        <Adapter>
+          <Example />
+        </Adapter>
+      </DesignSystemTheme>
     </React.Suspense>
   );
 }

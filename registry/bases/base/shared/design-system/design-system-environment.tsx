@@ -9,6 +9,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { useTheme } from "next-themes";
 
 import { getDesignSystemClasses } from "./design-system-utils";
 
@@ -71,9 +72,15 @@ export function DesignSystemEnvironment({
   style,
   palette,
   radius,
-  theme = "light",
+  theme: themeProp,
   className,
 }: DesignSystemEnvironmentProps) {
+  const { resolvedTheme } = useTheme();
+
+  // Explicit theme prop takes priority.
+  // Otherwise, use next-themes resolvedTheme.
+  const theme: ThemeMode = themeProp ?? (resolvedTheme as ThemeMode) ?? "light";
+
   const [portalContainer, setPortalContainer] = useState<HTMLElement | null>(
     null
   );
@@ -115,6 +122,7 @@ export function DesignSystemEnvironment({
     };
   }, []);
 
+  // Keep portal root classes synchronized with the design system.
   useEffect(() => {
     const element = portalContainerRef.current;
 

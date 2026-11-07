@@ -7,16 +7,22 @@ import * as Components from "@/registry/bases/base/styles/linear/components";
 import {
   DesignSystemProvider,
   type DesignSystemComponents,
-} from "@/registry/bases/base/shared/components/design-system-provider";
+} from "../components/design-system-provider";
+
+import { DesignSystemEnvironment } from "../design-system/design-system-environment";
+
+const style = "linear";
 
 export function LinearAdapter({ children }: { children: React.ReactNode }) {
   return (
-    <DesignSystemProvider
-      components={Components as unknown as DesignSystemComponents}
-    >
-      <div className="linear-style" data-design-system="linear">
-        {children}
-      </div>
-    </DesignSystemProvider>
+    <DesignSystemEnvironment style={style}>
+      <DesignSystemProvider
+        components={Components as unknown as DesignSystemComponents}
+      >
+        <div className="linear-style" data-design-system="linear">
+          {children}
+        </div>
+      </DesignSystemProvider>
+    </DesignSystemEnvironment>
   );
 }

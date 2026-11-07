@@ -249,7 +249,7 @@ export function BoardPage() {
   return (
     <div className="relative isolate flex min-h-screen w-full">
       <SidebarProvider>
-        <Sidebar className="absolute left-0 top-0">
+        <Sidebar className="absolute top-0 left-0">
           <SidebarHeader>
             <TeamSwitcher teams={data.teams} />
           </SidebarHeader>
@@ -320,7 +320,7 @@ export function BoardPage() {
                     <Typography
                       as={"h1"}
                       variant="3xl/semibold"
-                      className="capitalize tracking-tighter"
+                      className="tracking-tighter capitalize"
                     >
                       Board
                     </Typography>
@@ -373,7 +373,7 @@ export function BoardPage() {
                   </div>
                   <div className="flex gap-2">
                     <div className="relative">
-                      <Search className="size-4 text-neon-muted-foreground absolute left-2.5 top-4 -translate-y-1/2" />
+                      <Search className="text-neon-muted-foreground absolute top-4 left-2.5 size-4 -translate-y-1/2" />
                       <Input
                         type="search"
                         placeholder="Search..."

@@ -7,12 +7,15 @@ import * as Components from "@/registry/bases/base/styles/wedges/components";
 import {
   DesignSystemProvider,
   type DesignSystemComponents,
-} from "@/registry/bases/base/shared/components/design-system-provider";
+} from "../components/design-system-provider";
+
 import { DesignSystemEnvironment } from "../design-system/design-system-environment";
+
+const style = "wedges";
 
 export function WedgesAdapter({ children }: { children: React.ReactNode }) {
   return (
-    <DesignSystemEnvironment style="wedges" palette="" radius="" theme="">
+    <DesignSystemEnvironment style={style}>
       <DesignSystemProvider
         components={Components as unknown as DesignSystemComponents}
       >

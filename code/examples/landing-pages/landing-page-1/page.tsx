@@ -30,7 +30,6 @@ function Container({
 export default function Landing1() {
   return (
     <div className="flex min-h-screen w-full flex-col">
-      {/* <UICustomizer /> */}
       <header className="bg-background flex h-full w-full justify-between">
         <Container>
           <div className="flex h-20 items-center justify-between">
@@ -121,7 +120,7 @@ export default function Landing1() {
                     key={item.title}
                     className={cn(
                       "flex flex-col gap-y-4 rounded-lg p-4 lg:p-9",
-                      "bg-linear-to-b from-muted/40 to-background border"
+                      "from-muted/40 to-background border bg-linear-to-b"
                     )}
                   >
                     <div className="size-fit rounded-lg p-1 shadow lg:p-2">
@@ -390,7 +389,7 @@ export default function Landing1() {
           <div>
             <Container>
               <>
-                <div className="bg-muted/40 mb-16 mt-36 rounded-lg p-16">
+                <div className="bg-muted/40 mt-36 mb-16 rounded-lg p-16">
                   <div className="flex flex-col gap-5 text-center">
                     <div>
                       <Typography
@@ -543,7 +542,7 @@ export default function Landing1() {
                     </div>
                   </div>
                   <Separator />
-                  <div className="text-muted-foreground flex w-full justify-center pb-4 pt-10 text-center text-sm">
+                  <div className="text-muted-foreground flex w-full justify-center pt-10 pb-4 text-center text-sm">
                     <div className="flex gap-6">
                       <div>© 2024 &nbsp;All Rights Reserved</div>
                     </div>

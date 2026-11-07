@@ -20,19 +20,11 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/bases/base/styles/moon/ui/sidebar";
 import { NavDocuments } from "./nav-documents";
 import { NavMain } from "./nav-main";
 import { NavSecondary } from "./nav-secondary";
 import { NavUser } from "./nav-user";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const data = {
   user: {
@@ -152,6 +144,16 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const {
+    Sidebar,
+    SidebarContent,
+    SidebarFooter,
+    SidebarHeader,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+  } = useDesignSystem();
+
   return (
     <Sidebar collapsible="none" className="h-auto border-r" {...props}>
       <SidebarHeader className="border-b">

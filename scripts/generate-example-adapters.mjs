@@ -89,7 +89,7 @@ const sharedAdapters = path.join(ROOT, "shared/adapters");
 
 fs.mkdirSync(sharedAdapters, { recursive: true });
 
-for (const style of styles) {
+function createStyleComponentsExport(style) {
   const uiDirectory = path.join(ROOT, `styles/${style}/ui`);
 
   const exports = components
@@ -103,7 +103,9 @@ for (const style of styles) {
     path.join(ROOT, `styles/${style}/components.ts`),
     `${exports}\n`
   );
+}
 
+function createStyleComponentsAdapter(style) {
   const styleCapitalized = style.charAt(0).toUpperCase() + style.slice(1);
 
   const adapter = `"use client";
@@ -117,27 +119,32 @@ import {
   type DesignSystemComponents,
 } from "../components/design-system-provider";
 
-export function ${styleCapitalized}Adapter({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import { DesignSystemEnvironment } from "../design-system/design-system-environment";
+
+const style = "${style}";
+
+export function ${styleCapitalized}Adapter({ children }: { children: React.ReactNode }) {
   return (
-    <DesignSystemProvider
-      components={Components as unknown as DesignSystemComponents}
-    >
-      <div
-        className="${style}-style"
-        data-design-system="${style}"
+    <DesignSystemEnvironment style={style}>
+      <DesignSystemProvider
+        components={Components as unknown as DesignSystemComponents}
       >
-        {children}
-      </div>
-    </DesignSystemProvider>
+        <div className="${style}-style" data-design-system="${style}">
+          {children}
+        </div>
+      </DesignSystemProvider>
+    </DesignSystemEnvironment>
   );
 }
 `;
 
   fs.writeFileSync(path.join(sharedAdapters, `${style}.tsx`), adapter);
+}
+
+for (const style of styles) {
+  // createStyleComponentsExport(style);
+
+  createStyleComponentsAdapter(style);
 }
 
 console.log("Generated component barrels and design-system adapters.");

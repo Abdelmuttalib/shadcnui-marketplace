@@ -4,6 +4,7 @@ import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
 import { designSystemTokens } from "./design-system-tokens";
 import { StyleName } from "@/registry/styles";
+import { getDefaultStyle, getStyleByName } from "@/lib/services/presets";
 
 export type DesignSystemTheme = "light" | "dark";
 
@@ -49,21 +50,11 @@ export function getDesignSystemVariables({
   return variables;
 }
 
-export function getDesignSystemClasses(style: StyleName) {
-  const classes: Record<StyleName, string> = {
-    default: "font-sans",
-    carbon: "font-carbon",
-    neon: "font-poppins",
-    libelle: "font-outfit",
-    linear: "font-sans",
-    catalyst: "font-sans",
-    material: "font-material",
-    spectrum: "font-spectrum",
-    wedges: "font-sans",
-    moon: "font-sans",
-    snow: "font-sans",
-    lucid: "font-sans",
-  };
+export function getDesignSystemClasses(styleName: StyleName) {
+  const style = getStyleByName(styleName);
+  const fontClass = "font-";
 
-  return classes[style] ?? "";
+  if (!style) return fontClass + getDefaultStyle().font;
+
+  return fontClass + style.font;
 }

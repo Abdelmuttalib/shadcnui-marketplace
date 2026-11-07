@@ -550,10 +550,7 @@
           "px-3",
           "py-3"
         ],
-        "removed": [
-          "hover:underline",
-          "py-4"
-        ]
+        "removed": ["hover:underline", "py-4"]
       }
     },
     {
@@ -597,9 +594,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
+        "added": ["px-3"],
         "removed": []
       }
     },
@@ -654,12 +649,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -753,10 +744,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "sm:rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "sm:rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -816,12 +804,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-material-muted-foreground text-sm\", className)"
-        ],
-        "removed": [
-          "cn(\"text-dft-muted-foreground text-sm\", className)"
-        ]
+        "added": ["cn(\"text-material-muted-foreground text-sm\", className)"],
+        "removed": ["cn(\"text-dft-muted-foreground text-sm\", className)"]
       }
     },
     {
@@ -905,10 +889,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "[&>svg]:text-material-foreground",
-          "rounded-material-lg"
-        ],
+        "added": ["[&>svg]:text-material-foreground", "rounded-material-lg"],
         "removed": [
           "[&>svg]:text-dft-foreground",
           "border-dft-border",
@@ -987,14 +968,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "text-dft-foreground"
-        ]
+        "added": ["bg-material-background", "text-material-foreground"],
+        "removed": ["bg-dft-background", "text-dft-foreground"]
       }
     },
     {
@@ -1193,14 +1168,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-9",
-          "w-9"
-        ],
-        "removed": [
-          "h-10",
-          "w-10"
-        ]
+        "added": ["h-9", "w-9"],
+        "removed": ["h-10", "w-10"]
       }
     },
     {
@@ -1254,12 +1223,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       }
     },
     {
@@ -1821,12 +1786,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -1912,11 +1873,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn",
-          "hover:text-material-foreground",
-          "transition-colors"
-        ],
+        "added": ["cn", "hover:text-material-foreground", "transition-colors"],
         "removed": [
           "cn(\"transition-colors hover:text-dft-foreground\", className)"
         ]
@@ -1973,12 +1930,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"font-normal text-material-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"font-normal text-dft-foreground\", className)"
-        ]
+        "added": ["cn(\"font-normal text-material-foreground\", className)"],
+        "removed": ["cn(\"font-normal text-dft-foreground\", className)"]
       }
     },
     {
@@ -2718,13 +2671,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-5"
-        ],
-        "removed": [
-          "px-3",
-          "rounded-dft-md"
-        ]
+        "added": ["px-5"],
+        "removed": ["px-3", "rounded-dft-md"]
       }
     },
     {
@@ -2804,12 +2752,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -2837,7 +2781,7 @@
       "addedLines": [
         {
           "lineNumber": 21,
-          "content": "      className={cn(\"font-material p-3\", className)}"
+          "content": "      className={cn(\"font-roboto p-3\", className)}"
         }
       ],
       "tokens": [
@@ -2853,22 +2797,18 @@
         },
         {
           "type": "ADDED",
-          "token": "cn(\"font-material p-3\", className)",
+          "token": "cn(\"font-roboto p-3\", className)",
           "occurrences": [
             {
               "lineNumber": 21,
-              "content": "      className={cn(\"font-material p-3\", className)}"
+              "content": "      className={cn(\"font-roboto p-3\", className)}"
             }
           ]
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"font-material p-3\", className)"
-        ],
-        "removed": [
-          "cn(\"p-3\", className)"
-        ]
+        "added": ["cn(\"font-roboto p-3\", className)"],
+        "removed": ["cn(\"p-3\", className)"]
       }
     },
     {
@@ -2942,14 +2882,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "rounded-dft-md",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["rounded-material-md", "text-material-muted-foreground"],
+        "removed": ["rounded-dft-md", "text-dft-muted-foreground"]
       }
     },
     {
@@ -3685,12 +3619,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       }
     },
     {
@@ -3744,12 +3674,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -4053,12 +3979,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "[&>svg]:text-material-muted-foreground"
-        ],
-        "removed": [
-          "[&>svg]:text-dft-muted-foreground"
-        ]
+        "added": ["[&>svg]:text-material-muted-foreground"],
+        "removed": ["[&>svg]:text-dft-muted-foreground"]
       }
     },
     {
@@ -4112,12 +4034,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -4171,12 +4089,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       }
     },
     {
@@ -4230,12 +4144,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "[&>svg]:text-material-muted-foreground"
-        ],
-        "removed": [
-          "[&>svg]:text-dft-muted-foreground"
-        ]
+        "added": ["[&>svg]:text-material-muted-foreground"],
+        "removed": ["[&>svg]:text-dft-muted-foreground"]
       }
     },
     {
@@ -4718,12 +4628,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -4900,14 +4806,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "px-2",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["px-3", "text-material-muted-foreground"],
+        "removed": ["px-2", "text-dft-muted-foreground"]
       }
     },
     {
@@ -4961,12 +4861,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-b-material-border"
-        ],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "added": ["border-b-material-border"],
+        "removed": ["border-b-dft-border"]
       }
     },
     {
@@ -5044,10 +4940,7 @@
           "placeholder:text-material-muted-foreground",
           "rounded-material-md"
         ],
-        "removed": [
-          "placeholder:text-dft-muted-foreground",
-          "rounded-dft-md"
-        ]
+        "removed": ["placeholder:text-dft-muted-foreground", "rounded-dft-md"]
       }
     },
     {
@@ -5237,12 +5130,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"bg-material-border -mx-1 h-px\", className)"
-        ],
-        "removed": [
-          "cn(\"bg-dft-border -mx-1 h-px\", className)"
-        ]
+        "added": ["cn(\"bg-material-border -mx-1 h-px\", className)"],
+        "removed": ["cn(\"bg-dft-border -mx-1 h-px\", className)"]
       }
     },
     {
@@ -5475,13 +5364,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -6425,15 +6309,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "5",
-          "px-2",
-          "text-dft-foreground"
-        ]
+        "added": ["px-3", "text-material-foreground"],
+        "removed": ["5", "px-2", "text-dft-foreground"]
       }
     },
     {
@@ -6487,12 +6364,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-border\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-border\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-border\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-border\", className)"]
       }
     },
     {
@@ -6556,13 +6429,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -6616,12 +6484,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -6695,14 +6559,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border",
-          "rounded-material-md"
-        ],
-        "removed": [
-          "border-dft-border",
-          "rounded-dft-md"
-        ]
+        "added": ["border-material-border", "rounded-material-md"],
+        "removed": ["border-dft-border", "rounded-dft-md"]
       }
     },
     {
@@ -6796,10 +6654,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "sm:rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "sm:rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -7006,12 +6861,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       }
     },
     {
@@ -7075,13 +6926,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "border-dft-border"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background", "border-dft-border"]
       }
     },
     {
@@ -7135,12 +6981,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       }
     },
     {
@@ -7194,12 +7036,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       }
     },
     {
@@ -8069,12 +7907,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       }
     },
     {
@@ -8128,12 +7962,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"]
       }
     },
     {
@@ -8313,12 +8143,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -8372,12 +8198,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(error && \"text-material-destructive\", className)"
-        ],
-        "removed": [
-          "cn(error && \"text-dft-destructive\", className)"
-        ]
+        "added": ["cn(error && \"text-material-destructive\", className)"],
+        "removed": ["cn(error && \"text-dft-destructive\", className)"]
       }
     },
     {
@@ -8431,12 +8253,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-material-muted-foreground text-sm\", className)"
-        ],
-        "removed": [
-          "cn(\"text-dft-muted-foreground text-sm\", className)"
-        ]
+        "added": ["cn(\"text-material-muted-foreground text-sm\", className)"],
+        "removed": ["cn(\"text-dft-muted-foreground text-sm\", className)"]
       }
     },
     {
@@ -8833,12 +8651,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-foreground"
-        ],
-        "removed": [
-          "bg-dft-foreground"
-        ]
+        "added": ["bg-foreground"],
+        "removed": ["bg-dft-foreground"]
       }
     },
     {
@@ -9216,9 +9030,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const"
-        ]
+        "removed": ["const"]
       }
     },
     {
@@ -9350,9 +9162,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const"
-        ]
+        "removed": ["const"]
       }
     },
     {
@@ -9484,9 +9294,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const"
-        ]
+        "removed": ["const"]
       }
     },
     {
@@ -9664,11 +9472,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const",
-          "MenubarSub",
-          "Sub"
-        ]
+        "removed": ["const", "MenubarSub", "Sub"]
       }
     },
     {
@@ -9868,11 +9672,7 @@
           "Sub",
           "typeof"
         ],
-        "removed": [
-          "const",
-          "MenubarRadioGroup",
-          "RadioGroup"
-        ]
+        "removed": ["const", "MenubarRadioGroup", "RadioGroup"]
       }
     },
     {
@@ -10890,9 +10690,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-current"
-        ],
+        "added": ["text-current"],
         "removed": []
       }
     },
@@ -11083,12 +10881,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       }
     },
     {
@@ -11142,12 +10936,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"]
       }
     },
     {
@@ -11211,13 +11001,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       }
     },
     {
@@ -11640,14 +11425,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-tl-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "rounded-tl-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-tl-sm"],
+        "removed": ["bg-dft-border", "rounded-tl-dft-sm"]
       }
     },
     {
@@ -11701,12 +11480,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -11905,14 +11680,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "h-2"
-        ],
-        "removed": [
-          "bg-dft-secondary",
-          "h-4"
-        ]
+        "added": ["bg-material-muted", "h-2"],
+        "removed": ["bg-dft-secondary", "h-4"]
       }
     },
     {
@@ -11966,12 +11735,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-primary"
-        ],
-        "removed": [
-          "bg-dft-primary"
-        ]
+        "added": ["bg-material-primary"],
+        "removed": ["bg-dft-primary"]
       }
     },
     {
@@ -12451,14 +12216,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "focus-visible:ring-material-ring"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "focus-visible:ring-dft-ring"
-        ]
+        "added": ["bg-border", "focus-visible:ring-material-ring"],
+        "removed": ["bg-dft-border", "focus-visible:ring-dft-ring"]
       }
     },
     {
@@ -12542,15 +12301,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-material-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "border-dft-border",
-          "rounded-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-material-sm"],
+        "removed": ["bg-dft-border", "border-dft-border", "rounded-dft-sm"]
       }
     },
     {
@@ -12604,12 +12356,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-border"],
+        "removed": ["bg-dft-border"]
       }
     },
     {
@@ -13149,12 +12897,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"]
       }
     },
     {
@@ -13208,12 +12952,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       }
     },
     {
@@ -13267,12 +13007,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       }
     },
     {
@@ -13317,9 +13053,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "removed": ["border-b-dft-border"]
       }
     },
     {
@@ -13382,10 +13116,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-r-dft-border",
-          "border-t-dft-border"
-        ]
+        "removed": ["border-r-dft-border", "border-t-dft-border"]
       }
     },
     {
@@ -13430,9 +13161,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-l-dft-border"
-        ]
+        "removed": ["border-l-dft-border"]
       }
     },
     {
@@ -13670,12 +13399,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       }
     },
     {
@@ -13793,12 +13518,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -13852,12 +13573,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -13911,12 +13628,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar"
-        ],
-        "removed": [
-          "bg-dft-sidebar"
-        ]
+        "added": ["bg-material-sidebar"],
+        "removed": ["bg-dft-sidebar"]
       }
     },
     {
@@ -13990,14 +13703,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       }
     },
     {
@@ -14071,14 +13778,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       }
     },
     {
@@ -14132,12 +13833,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["text-material-sidebar-foreground"],
+        "removed": ["text-dft-sidebar-foreground"]
       }
     },
     {
@@ -14181,9 +13878,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border"
-        ],
+        "added": ["border-material-border"],
         "removed": []
       }
     },
@@ -14341,12 +14036,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"rounded-material-md h-7 w-7\", className)"
-        ],
-        "removed": [
-          "cn(\"h-7 w-7\", className)"
-        ]
+        "added": ["cn(\"rounded-material-md h-7 w-7\", className)"],
+        "removed": ["cn(\"h-7 w-7\", className)"]
       }
     },
     {
@@ -14400,12 +14091,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "hover:after:bg-material-sidebar-border"
-        ],
-        "removed": [
-          "hover:after:bg-dft-sidebar-border"
-        ]
+        "added": ["hover:after:bg-material-sidebar-border"],
+        "removed": ["hover:after:bg-dft-sidebar-border"]
       }
     },
     {
@@ -14462,9 +14149,7 @@
         "added": [
           "group-data-[collapsible=offcanvas]:hover:bg-material-sidebar"
         ],
-        "removed": [
-          "group-data-[collapsible=offcanvas]:hover:bg-dft-sidebar"
-        ]
+        "removed": ["group-data-[collapsible=offcanvas]:hover:bg-dft-sidebar"]
       }
     },
     {
@@ -14518,12 +14203,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       }
     },
     {
@@ -14601,10 +14282,7 @@
           "bg-material-background",
           "focus-visible:ring-material-sidebar-ring"
         ],
-        "removed": [
-          "bg-dft-background",
-          "focus-visible:ring-dft-sidebar-ring"
-        ]
+        "removed": ["bg-dft-background", "focus-visible:ring-dft-sidebar-ring"]
       }
     },
     {
@@ -14658,12 +14336,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"bg-material-sidebar-border mx-2 w-auto\", className)"
-        ],
-        "removed": [
-          "cn(\"bg-dft-sidebar-border mx-2 w-auto\", className)"
-        ]
+        "added": ["cn(\"bg-material-sidebar-border mx-2 w-auto\", className)"],
+        "removed": ["cn(\"bg-dft-sidebar-border mx-2 w-auto\", className)"]
       }
     },
     {
@@ -15513,15 +15187,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-11",
-          "h-9"
-        ],
-        "removed": [
-          "h-12",
-          "h-7",
-          "h-8"
-        ]
+        "added": ["h-11", "h-9"],
+        "removed": ["h-12", "h-7", "h-8"]
       }
     },
     {
@@ -15936,12 +15603,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       }
     },
     {
@@ -15995,12 +15658,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       }
     },
     {
@@ -16054,12 +15713,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-sidebar-border"
-        ],
-        "removed": [
-          "border-dft-sidebar-border"
-        ]
+        "added": ["border-material-sidebar-border"],
+        "removed": ["border-dft-sidebar-border"]
       }
     },
     {
@@ -16530,16 +16185,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "bg-material-primary",
-          "h-1"
-        ],
-        "removed": [
-          "bg-dft-primary",
-          "bg-dft-secondary",
-          "h-2"
-        ]
+        "added": ["bg-material-muted", "bg-material-primary", "h-1"],
+        "removed": ["bg-dft-primary", "bg-dft-secondary", "h-2"]
       }
     },
     {
@@ -17776,13 +17423,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted/50"
-        ],
-        "removed": [
-          "bg-dft-muted/50",
-          "border-t-dft-border"
-        ]
+        "added": ["bg-material-muted/50"],
+        "removed": ["bg-dft-muted/50", "border-t-dft-border"]
       }
     },
     {
@@ -17959,14 +17601,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-14",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "h-12",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["h-14", "text-material-foreground"],
+        "removed": ["h-12", "text-dft-muted-foreground"]
       }
     },
     {
@@ -18023,9 +17659,7 @@
         "added": [
           "cn(\"mt-4 text-sm text-material-muted-foreground\", className)"
         ],
-        "removed": [
-          "cn(\"mt-4 text-sm text-dft-muted-foreground\", className)"
-        ]
+        "removed": ["cn(\"mt-4 text-sm text-dft-muted-foreground\", className)"]
       }
     },
     {
@@ -18518,10 +18152,7 @@
           "focus-visible:ring-material-ring",
           "ring-offset-material-background"
         ],
-        "removed": [
-          "focus-visible:ring-dft-ring",
-          "ring-offset-dft-background"
-        ]
+        "removed": ["focus-visible:ring-dft-ring", "ring-offset-dft-background"]
       }
     },
     {
@@ -18799,12 +18430,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       }
     },
     {
@@ -19250,18 +18877,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-8",
-          "min-w-8",
-          "px-1"
-        ],
-        "removed": [
-          "h-11",
-          "h-9",
-          "min-w-11",
-          "min-w-9",
-          "px-5"
-        ]
+        "added": ["h-8", "min-w-8", "px-1"],
+        "removed": ["h-11", "h-9", "min-w-11", "min-w-9", "px-5"]
       }
     },
     {
@@ -19440,12 +19057,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       }
     }
   ],
@@ -19931,10 +19544,7 @@
           "px-3",
           "py-3"
         ],
-        "removed": [
-          "hover:underline",
-          "py-4"
-        ]
+        "removed": ["hover:underline", "py-4"]
       },
       "tokenChanges": [
         {
@@ -20558,9 +20168,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
+        "added": ["px-3"],
         "removed": []
       },
       "tokenChanges": [
@@ -20811,12 +20419,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -21632,10 +21236,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "sm:rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "sm:rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -21853,12 +21454,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-material-muted-foreground text-sm\", className)"
-        ],
-        "removed": [
-          "cn(\"text-dft-muted-foreground text-sm\", className)"
-        ]
+        "added": ["cn(\"text-material-muted-foreground text-sm\", className)"],
+        "removed": ["cn(\"text-dft-muted-foreground text-sm\", className)"]
       },
       "tokenChanges": [
         {
@@ -22062,10 +21659,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "[&>svg]:text-material-foreground",
-          "rounded-material-lg"
-        ],
+        "added": ["[&>svg]:text-material-foreground", "rounded-material-lg"],
         "removed": [
           "[&>svg]:text-dft-foreground",
           "border-dft-border",
@@ -22296,14 +21890,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "text-dft-foreground"
-        ]
+        "added": ["bg-material-background", "text-material-foreground"],
+        "removed": ["bg-dft-background", "text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -23122,14 +22710,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-9",
-          "w-9"
-        ],
-        "removed": [
-          "h-10",
-          "w-10"
-        ]
+        "added": ["h-9", "w-9"],
+        "removed": ["h-10", "w-10"]
       },
       "tokenChanges": [
         {
@@ -23329,12 +22911,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       },
       "tokenChanges": [
         {
@@ -24988,12 +24566,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -25310,11 +24884,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn",
-          "hover:text-material-foreground",
-          "transition-colors"
-        ],
+        "added": ["cn", "hover:text-material-foreground", "transition-colors"],
         "removed": [
           "cn(\"transition-colors hover:text-dft-foreground\", className)"
         ]
@@ -25509,12 +25079,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"font-normal text-material-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"font-normal text-dft-foreground\", className)"
-        ]
+        "added": ["cn(\"font-normal text-material-foreground\", className)"],
+        "removed": ["cn(\"font-normal text-dft-foreground\", className)"]
       },
       "tokenChanges": [
         {
@@ -28899,13 +28465,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-5"
-        ],
-        "removed": [
-          "px-3",
-          "rounded-dft-md"
-        ]
+        "added": ["px-5"],
+        "removed": ["px-3", "rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -29312,12 +28873,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -29448,7 +29005,7 @@
         },
         {
           "lineNumber": 21,
-          "content": "      className={cn(\"font-material p-3\", className)}",
+          "content": "      className={cn(\"font-roboto p-3\", className)}",
           "changed": true,
           "segments": [
             {
@@ -29457,7 +29014,7 @@
             },
             {
               "type": "CHANGED",
-              "text": "cn(\"font-material p-3\", className)"
+              "text": "cn(\"font-roboto p-3\", className)"
             },
             {
               "type": "UNCHANGED",
@@ -29489,12 +29046,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"font-material p-3\", className)"
-        ],
-        "removed": [
-          "cn(\"p-3\", className)"
-        ]
+        "added": ["cn(\"font-roboto p-3\", className)"],
+        "removed": ["cn(\"p-3\", className)"]
       },
       "tokenChanges": [
         {
@@ -29509,11 +29062,11 @@
         },
         {
           "type": "ADDED",
-          "token": "cn(\"font-material p-3\", className)",
+          "token": "cn(\"font-roboto p-3\", className)",
           "occurrences": [
             {
               "lineNumber": 21,
-              "content": "      className={cn(\"font-material p-3\", className)}"
+              "content": "      className={cn(\"font-roboto p-3\", className)}"
             }
           ]
         }
@@ -29930,14 +29483,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "rounded-dft-md",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["rounded-material-md", "text-material-muted-foreground"],
+        "removed": ["rounded-dft-md", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -32261,12 +31808,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       },
       "tokenChanges": [
         {
@@ -32526,12 +32069,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -35029,12 +34568,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "[&>svg]:text-material-muted-foreground"
-        ],
-        "removed": [
-          "[&>svg]:text-dft-muted-foreground"
-        ]
+        "added": ["[&>svg]:text-material-muted-foreground"],
+        "removed": ["[&>svg]:text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -35214,12 +34749,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -35399,12 +34930,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -35576,12 +35103,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "[&>svg]:text-material-muted-foreground"
-        ],
-        "removed": [
-          "[&>svg]:text-dft-muted-foreground"
-        ]
+        "added": ["[&>svg]:text-material-muted-foreground"],
+        "removed": ["[&>svg]:text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -36892,12 +36415,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -38290,14 +37809,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "px-2",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["px-3", "text-material-muted-foreground"],
+        "removed": ["px-2", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -38745,12 +38258,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-b-material-border"
-        ],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "added": ["border-b-material-border"],
+        "removed": ["border-b-dft-border"]
       },
       "tokenChanges": [
         {
@@ -39798,10 +39307,7 @@
           "placeholder:text-material-muted-foreground",
           "rounded-material-md"
         ],
-        "removed": [
-          "placeholder:text-dft-muted-foreground",
-          "rounded-dft-md"
-        ]
+        "removed": ["placeholder:text-dft-muted-foreground", "rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -40887,12 +40393,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"bg-material-border -mx-1 h-px\", className)"
-        ],
-        "removed": [
-          "cn(\"bg-dft-border -mx-1 h-px\", className)"
-        ]
+        "added": ["cn(\"bg-material-border -mx-1 h-px\", className)"],
+        "removed": ["cn(\"bg-dft-border -mx-1 h-px\", className)"]
       },
       "tokenChanges": [
         {
@@ -42707,13 +42209,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -52151,15 +51648,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "5",
-          "px-2",
-          "text-dft-foreground"
-        ]
+        "added": ["px-3", "text-material-foreground"],
+        "removed": ["5", "px-2", "text-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -52361,12 +51851,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-border\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-border\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-border\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-border\", className)"]
       },
       "tokenChanges": [
         {
@@ -52554,13 +52040,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -52822,12 +52303,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -53079,14 +52556,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border",
-          "rounded-material-md"
-        ],
-        "removed": [
-          "border-dft-border",
-          "rounded-dft-md"
-        ]
+        "added": ["border-material-border", "rounded-material-md"],
+        "removed": ["border-dft-border", "rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -53318,10 +52789,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background",
-          "sm:rounded-material-lg"
-        ],
+        "added": ["bg-material-background", "sm:rounded-material-lg"],
         "removed": [
           "bg-dft-background",
           "border",
@@ -53876,12 +53344,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       },
       "tokenChanges": [
         {
@@ -54069,13 +53533,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background",
-          "border-dft-border"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background", "border-dft-border"]
       },
       "tokenChanges": [
         {
@@ -54281,12 +53740,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted"
-        ],
-        "removed": [
-          "bg-dft-muted"
-        ]
+        "added": ["bg-material-muted"],
+        "removed": ["bg-dft-muted"]
       },
       "tokenChanges": [
         {
@@ -54458,12 +53913,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       },
       "tokenChanges": [
         {
@@ -64807,12 +64258,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       },
       "tokenChanges": [
         {
@@ -64984,12 +64431,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"]
       },
       "tokenChanges": [
         {
@@ -65642,12 +65085,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -65819,12 +65258,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(error && \"text-material-destructive\", className)"
-        ],
-        "removed": [
-          "cn(error && \"text-dft-destructive\", className)"
-        ]
+        "added": ["cn(error && \"text-material-destructive\", className)"],
+        "removed": ["cn(error && \"text-dft-destructive\", className)"]
       },
       "tokenChanges": [
         {
@@ -65996,12 +65431,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-material-muted-foreground text-sm\", className)"
-        ],
-        "removed": [
-          "cn(\"text-dft-muted-foreground text-sm\", className)"
-        ]
+        "added": ["cn(\"text-material-muted-foreground text-sm\", className)"],
+        "removed": ["cn(\"text-dft-muted-foreground text-sm\", className)"]
       },
       "tokenChanges": [
         {
@@ -70115,12 +69546,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-foreground"
-        ],
-        "removed": [
-          "bg-dft-foreground"
-        ]
+        "added": ["bg-foreground"],
+        "removed": ["bg-dft-foreground"]
       },
       "tokenChanges": [
         {
@@ -71296,9 +70723,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const"
-        ]
+        "removed": ["const"]
       },
       "tokenChanges": [
         {
@@ -71940,9 +71365,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const"
-        ]
+        "removed": ["const"]
       },
       "tokenChanges": [
         {
@@ -72600,9 +72023,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const"
-        ]
+        "removed": ["const"]
       },
       "tokenChanges": [
         {
@@ -72990,11 +72411,7 @@
           "return",
           "typeof"
         ],
-        "removed": [
-          "const",
-          "MenubarSub",
-          "Sub"
-        ]
+        "removed": ["const", "MenubarSub", "Sub"]
       },
       "tokenChanges": [
         {
@@ -73444,11 +72861,7 @@
           "Sub",
           "typeof"
         ],
-        "removed": [
-          "const",
-          "MenubarRadioGroup",
-          "RadioGroup"
-        ]
+        "removed": ["const", "MenubarRadioGroup", "RadioGroup"]
       },
       "tokenChanges": [
         {
@@ -82222,9 +81635,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-current"
-        ],
+        "added": ["text-current"],
         "removed": []
       },
       "tokenChanges": [
@@ -83449,12 +82860,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "px-3"
-        ],
-        "removed": [
-          "px-2"
-        ]
+        "added": ["px-3"],
+        "removed": ["px-2"]
       },
       "tokenChanges": [
         {
@@ -83626,12 +83033,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"]
       },
       "tokenChanges": [
         {
@@ -83819,13 +83222,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "opacity-60",
-          "text-material-muted-foreground"
-        ],
-        "removed": [
-          "text-dft-muted-foreground"
-        ]
+        "added": ["opacity-60", "text-material-muted-foreground"],
+        "removed": ["text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -86352,14 +85750,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-tl-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "rounded-tl-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-tl-sm"],
+        "removed": ["bg-dft-border", "rounded-tl-dft-sm"]
       },
       "tokenChanges": [
         {
@@ -86639,12 +86031,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -90019,14 +89407,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "h-2"
-        ],
-        "removed": [
-          "bg-dft-secondary",
-          "h-4"
-        ]
+        "added": ["bg-material-muted", "h-2"],
+        "removed": ["bg-dft-secondary", "h-4"]
       },
       "tokenChanges": [
         {
@@ -90338,12 +89720,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-primary"
-        ],
-        "removed": [
-          "bg-dft-primary"
-        ]
+        "added": ["bg-material-primary"],
+        "removed": ["bg-dft-primary"]
       },
       "tokenChanges": [
         {
@@ -95146,14 +94524,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "focus-visible:ring-material-ring"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "focus-visible:ring-dft-ring"
-        ]
+        "added": ["bg-border", "focus-visible:ring-material-ring"],
+        "removed": ["bg-dft-border", "focus-visible:ring-dft-ring"]
       },
       "tokenChanges": [
         {
@@ -95377,15 +94749,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border",
-          "rounded-material-sm"
-        ],
-        "removed": [
-          "bg-dft-border",
-          "border-dft-border",
-          "rounded-dft-sm"
-        ]
+        "added": ["bg-border", "rounded-material-sm"],
+        "removed": ["bg-dft-border", "border-dft-border", "rounded-dft-sm"]
       },
       "tokenChanges": [
         {
@@ -95611,12 +94976,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-border"],
+        "removed": ["bg-dft-border"]
       },
       "tokenChanges": [
         {
@@ -100618,12 +99979,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"
-        ],
-        "removed": [
-          "cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"
-        ]
+        "added": ["cn(\"-mx-1 my-1 h-px bg-material-muted\", className)"],
+        "removed": ["cn(\"-mx-1 my-1 h-px bg-dft-muted\", className)"]
       },
       "tokenChanges": [
         {
@@ -100803,12 +100160,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-border"
-        ],
-        "removed": [
-          "bg-dft-border"
-        ]
+        "added": ["bg-material-border"],
+        "removed": ["bg-dft-border"]
       },
       "tokenChanges": [
         {
@@ -102284,12 +101637,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       },
       "tokenChanges": [
         {
@@ -102750,9 +102099,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-b-dft-border"
-        ]
+        "removed": ["border-b-dft-border"]
       },
       "tokenChanges": [
         {
@@ -103609,10 +102956,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-r-dft-border",
-          "border-t-dft-border"
-        ]
+        "removed": ["border-r-dft-border", "border-t-dft-border"]
       },
       "tokenChanges": [
         {
@@ -104137,9 +103481,7 @@
       ],
       "tokenSummary": {
         "added": [],
-        "removed": [
-          "border-l-dft-border"
-        ]
+        "removed": ["border-l-dft-border"]
       },
       "tokenChanges": [
         {
@@ -104777,12 +104119,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"text-sm text-material-muted-foreground\", className)"
-        ],
-        "removed": [
-          "cn(\"text-sm text-dft-muted-foreground\", className)"
-        ]
+        "added": ["cn(\"text-sm text-material-muted-foreground\", className)"],
+        "removed": ["cn(\"text-sm text-dft-muted-foreground\", className)"]
       },
       "tokenChanges": [
         {
@@ -105570,12 +104908,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -105875,12 +105209,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -106156,12 +105486,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar"
-        ],
-        "removed": [
-          "bg-dft-sidebar"
-        ]
+        "added": ["bg-material-sidebar"],
+        "removed": ["bg-dft-sidebar"]
       },
       "tokenChanges": [
         {
@@ -106685,14 +106011,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       },
       "tokenChanges": [
         {
@@ -107236,14 +106556,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-sidebar",
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "bg-dft-sidebar",
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["bg-material-sidebar", "text-material-sidebar-foreground"],
+        "removed": ["bg-dft-sidebar", "text-dft-sidebar-foreground"]
       },
       "tokenChanges": [
         {
@@ -107651,12 +106965,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-sidebar-foreground"
-        ],
-        "removed": [
-          "text-dft-sidebar-foreground"
-        ]
+        "added": ["text-material-sidebar-foreground"],
+        "removed": ["text-dft-sidebar-foreground"]
       },
       "tokenChanges": [
         {
@@ -108304,9 +107614,7 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-border"
-        ],
+        "added": ["border-material-border"],
         "removed": []
       },
       "tokenChanges": [
@@ -109538,12 +108846,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"rounded-material-md h-7 w-7\", className)"
-        ],
-        "removed": [
-          "cn(\"h-7 w-7\", className)"
-        ]
+        "added": ["cn(\"rounded-material-md h-7 w-7\", className)"],
+        "removed": ["cn(\"h-7 w-7\", className)"]
       },
       "tokenChanges": [
         {
@@ -111403,12 +110707,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "hover:after:bg-material-sidebar-border"
-        ],
-        "removed": [
-          "hover:after:bg-dft-sidebar-border"
-        ]
+        "added": ["hover:after:bg-material-sidebar-border"],
+        "removed": ["hover:after:bg-dft-sidebar-border"]
       },
       "tokenChanges": [
         {
@@ -112391,9 +111691,7 @@
         "added": [
           "group-data-[collapsible=offcanvas]:hover:bg-material-sidebar"
         ],
-        "removed": [
-          "group-data-[collapsible=offcanvas]:hover:bg-dft-sidebar"
-        ]
+        "removed": ["group-data-[collapsible=offcanvas]:hover:bg-dft-sidebar"]
       },
       "tokenChanges": [
         {
@@ -112813,12 +112111,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-background"
-        ],
-        "removed": [
-          "bg-dft-background"
-        ]
+        "added": ["bg-material-background"],
+        "removed": ["bg-dft-background"]
       },
       "tokenChanges": [
         {
@@ -113370,10 +112664,7 @@
           "bg-material-background",
           "focus-visible:ring-material-sidebar-ring"
         ],
-        "removed": [
-          "bg-dft-background",
-          "focus-visible:ring-dft-sidebar-ring"
-        ]
+        "removed": ["bg-dft-background", "focus-visible:ring-dft-sidebar-ring"]
       },
       "tokenChanges": [
         {
@@ -113565,12 +112856,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "cn(\"bg-material-sidebar-border mx-2 w-auto\", className)"
-        ],
-        "removed": [
-          "cn(\"bg-dft-sidebar-border mx-2 w-auto\", className)"
-        ]
+        "added": ["cn(\"bg-material-sidebar-border mx-2 w-auto\", className)"],
+        "removed": ["cn(\"bg-dft-sidebar-border mx-2 w-auto\", className)"]
       },
       "tokenChanges": [
         {
@@ -119274,15 +118561,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-11",
-          "h-9"
-        ],
-        "removed": [
-          "h-12",
-          "h-7",
-          "h-8"
-        ]
+        "added": ["h-11", "h-9"],
+        "removed": ["h-12", "h-7", "h-8"]
       },
       "tokenChanges": [
         {
@@ -123921,12 +123201,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -124098,12 +123374,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "rounded-material-md"
-        ],
-        "removed": [
-          "rounded-dft-md"
-        ]
+        "added": ["rounded-material-md"],
+        "removed": ["rounded-dft-md"]
       },
       "tokenChanges": [
         {
@@ -124867,12 +124139,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "border-material-sidebar-border"
-        ],
-        "removed": [
-          "border-dft-sidebar-border"
-        ]
+        "added": ["border-material-sidebar-border"],
+        "removed": ["border-dft-sidebar-border"]
       },
       "tokenChanges": [
         {
@@ -128138,16 +127406,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted",
-          "bg-material-primary",
-          "h-1"
-        ],
-        "removed": [
-          "bg-dft-primary",
-          "bg-dft-secondary",
-          "h-2"
-        ]
+        "added": ["bg-material-muted", "bg-material-primary", "h-1"],
+        "removed": ["bg-dft-primary", "bg-dft-secondary", "h-2"]
       },
       "tokenChanges": [
         {
@@ -131907,13 +131167,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "bg-material-muted/50"
-        ],
-        "removed": [
-          "bg-dft-muted/50",
-          "border-t-dft-border"
-        ]
+        "added": ["bg-material-muted/50"],
+        "removed": ["bg-dft-muted/50", "border-t-dft-border"]
       },
       "tokenChanges": [
         {
@@ -132620,14 +131875,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-14",
-          "text-material-foreground"
-        ],
-        "removed": [
-          "h-12",
-          "text-dft-muted-foreground"
-        ]
+        "added": ["h-14", "text-material-foreground"],
+        "removed": ["h-12", "text-dft-muted-foreground"]
       },
       "tokenChanges": [
         {
@@ -132822,9 +132071,7 @@
         "added": [
           "cn(\"mt-4 text-sm text-material-muted-foreground\", className)"
         ],
-        "removed": [
-          "cn(\"mt-4 text-sm text-dft-muted-foreground\", className)"
-        ]
+        "removed": ["cn(\"mt-4 text-sm text-dft-muted-foreground\", className)"]
       },
       "tokenChanges": [
         {
@@ -134139,10 +133386,7 @@
           "focus-visible:ring-material-ring",
           "ring-offset-material-background"
         ],
-        "removed": [
-          "focus-visible:ring-dft-ring",
-          "ring-offset-dft-background"
-        ]
+        "removed": ["focus-visible:ring-dft-ring", "ring-offset-dft-background"]
       },
       "tokenChanges": [
         {
@@ -135472,12 +134716,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "base/material"
-        ],
-        "removed": [
-          "base/default"
-        ]
+        "added": ["base/material"],
+        "removed": ["base/default"]
       },
       "tokenChanges": [
         {
@@ -137417,18 +136657,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "h-8",
-          "min-w-8",
-          "px-1"
-        ],
-        "removed": [
-          "h-11",
-          "h-9",
-          "min-w-11",
-          "min-w-9",
-          "px-5"
-        ]
+        "added": ["h-8", "min-w-8", "px-1"],
+        "removed": ["h-11", "h-9", "min-w-11", "min-w-9", "px-5"]
       },
       "tokenChanges": [
         {
@@ -140327,12 +139557,8 @@
         }
       ],
       "tokenSummary": {
-        "added": [
-          "text-material-foreground"
-        ],
-        "removed": [
-          "text-dft-foreground"
-        ]
+        "added": ["text-material-foreground"],
+        "removed": ["text-dft-foreground"]
       },
       "tokenChanges": [
         {

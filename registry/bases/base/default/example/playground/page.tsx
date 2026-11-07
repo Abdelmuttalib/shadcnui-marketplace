@@ -21,7 +21,7 @@ import { Textarea } from "@/registry/bases/base/default/ui/textarea";
 import { CodeViewer } from "./components/code-viewer";
 import { MaxLengthSelector } from "./components/maxlength-selector";
 import { ModelSelector } from "./components/model-selector";
-import { PresetActions } from "./components/preset-actions";
+import { StyleActions } from "./components/preset-actions";
 import { PresetSave } from "./components/preset-save";
 import { PresetSelector } from "./components/preset-selector";
 import { PresetShare } from "./components/preset-share";
@@ -48,7 +48,7 @@ export function PlaygroundPage() {
               <CodeViewer />
               <PresetShare />
             </div>
-            <PresetActions />
+            <StyleActions />
           </div>
         </div>
         <Separator />
@@ -59,7 +59,7 @@ export function PlaygroundPage() {
                 <div className="grid gap-2">
                   <HoverCard openDelay={200}>
                     <HoverCardTrigger asChild>
-                      <span className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      <span className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                         Mode
                       </span>
                     </HoverCardTrigger>

@@ -4,6 +4,7 @@ import { DevTools } from "@/components/dev-tools";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { fontVariables } from "@/lib/fonts";
+import { StaggeredNavFiles } from "@/components/landing/staggered-nav-files";
 
 export const metadata: Metadata = {
   title: {
@@ -37,18 +38,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <div
-        className={`relative flex min-h-screen flex-col font-sans antialiased ${fontVariables}`}
-      >
+    <div
+      className={`relative flex flex-col font-sans antialiased ${fontVariables}`}
+    >
+      <main className="relative">
+        <StaggeredNavFiles />
+        {children}
         <DevTools />
-        <Navbar />
-        <main className="relative grid h-full flex-1 gap-72 pb-24 md:pb-40">
-          {/* <div className="absolute bottom-0 h-32 w-full bg-linear-to-b from-transparent to-accent/40"></div> */}
-          {children}
-        </main>
-        <Footer />
-      </div>
+      </main>
     </div>
   );
 }

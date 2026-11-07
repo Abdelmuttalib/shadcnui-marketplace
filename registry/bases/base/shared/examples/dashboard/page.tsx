@@ -1,9 +1,3 @@
-import Image from "next/image";
-
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/registry/bases/base/styles/moon/ui/sidebar";
 import { AppSidebar } from "./components/app-sidebar";
 import { ChartAreaInteractive } from "./components/chart-area-interactive";
 import { DataTable } from "./components/data-table";
@@ -11,30 +5,14 @@ import { SectionCards } from "./components/section-cards";
 import { SiteHeader } from "./components/site-header";
 
 import data from "./data.json";
+import { useDesignSystem } from "../../components/design-system-provider";
 
 export default function Page() {
+  const { SidebarInset, SidebarProvider } = useDesignSystem();
   return (
     <>
-      <div className="md:hidden">
-        <Image
-          src="/examples/dashboard-light.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="block dark:hidden"
-          priority
-        />
-        <Image
-          src="/examples/dashboard-dark.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="hidden dark:block"
-          priority
-        />
-      </div>
       <SidebarProvider
-        className="hidden md:flex"
+        className="flex"
         style={
           {
             "--sidebar-width": "calc(var(--spacing) * 64)",

@@ -21,7 +21,7 @@ export function CopyButton({ code }: { code: string }) {
       variant="outline"
       size="sm"
       onClick={onCopyCode}
-      className="absolute right-2 top-2 bg-background transition-transform duration-300 ease-in-out [&_svg]:size-4 [&_svg]:transition-transform"
+      className="bg-background absolute top-2 right-2 rounded-none transition-transform duration-300 ease-in-out [&_svg]:size-4 [&_svg]:transition-transform"
     >
       {copied ? <CheckIcon /> : <CopyIcon />} {copied ? "Copied" : "Copy"}
     </Button>

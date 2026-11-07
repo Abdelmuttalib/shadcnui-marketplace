@@ -123,22 +123,6 @@ export function StylePageExamplePreview({
                 pageExampleTypeProp || pageExampleType
               )}
             </div>
-            {/* {preview ? (
-              <div
-                className={cn(
-                  "h-fit w-full overflow-hidden rounded-lg border dark:shadow dark:shadow-gray-950",
-                  {
-                    "max-w-md": breakpoint === "sm",
-                    "max-w-screen-md": breakpoint === "md",
-                    "max-w-full": breakpoint === "lg",
-                  }
-                )}
-              >
-                {renderStylePageExample(styleProp, pageExampleType)}
-              </div>
-            ) : (
-              <div className="w-full">{children}</div>
-            )} */}
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-carbon",
+  variable: "--font-ibm-plex-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -39,7 +39,7 @@ const roboto = Roboto({
 });
 
 const ubuntu = Ubuntu({
-  variable: "--font-spectrum",
+  variable: "--font-ubuntu",
   subsets: ["latin"],
   // weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   weight: ["300", "400", "500", "700"],

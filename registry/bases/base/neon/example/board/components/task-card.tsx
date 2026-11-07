@@ -64,19 +64,19 @@ function TaskLabelIcon({ label }: { label: Task["label"] }) {
   switch (label) {
     case "bug":
       return (
-        <span className="size-1.5 rounded-neon-sm block bg-red-400"></span>
+        <span className="rounded-neon-sm block size-1.5 bg-red-400"></span>
       );
     case "improvement":
       return (
-        <span className="size-1.5 rounded-neon-sm block bg-green-400"></span>
+        <span className="rounded-neon-sm block size-1.5 bg-green-400"></span>
       );
     case "feature":
       return (
-        <span className="size-1.5 rounded-neon-sm block bg-blue-400"></span>
+        <span className="rounded-neon-sm block size-1.5 bg-blue-400"></span>
       );
     case "design":
       return (
-        <span className="size-1.5 rounded-neon-sm block bg-purple-400"></span>
+        <span className="rounded-neon-sm block size-1.5 bg-purple-400"></span>
       );
   }
 }
@@ -92,7 +92,7 @@ export function TaskCard({ task }: { task: Task }) {
           <span className="text-neon-muted-foreground text-xs">INI-{id}</span>
 
           {/* Progress Circle */}
-          <div className="size-5 text-neon-muted-foreground relative">
+          <div className="text-neon-muted-foreground relative size-5">
             {assignee ? (
               <>
                 <Avatar className="size-5">
@@ -112,7 +112,7 @@ export function TaskCard({ task }: { task: Task }) {
 
                 <span
                   aria-hidden="true"
-                  className="size-2 absolute bottom-0 right-0 inline-block rounded-full border bg-green-500"
+                  className="absolute right-0 bottom-0 inline-block size-2 rounded-full border bg-green-500"
                 ></span>
               </>
             ) : (
@@ -206,7 +206,7 @@ export function TaskCardDialog({ task }: { task: Task }) {
               <Textarea
                 id="task"
                 placeholder="task title"
-                className="w-full resize-none border-transparent px-0 text-lg focus-visible:outline-none focus-visible:ring-0 md:text-lg"
+                className="w-full resize-none border-transparent px-0 text-lg focus-visible:ring-0 focus-visible:outline-none md:text-lg"
                 inputMode="text"
               />
 
@@ -217,7 +217,7 @@ export function TaskCardDialog({ task }: { task: Task }) {
               <Textarea
                 id="description"
                 placeholder="description title"
-                className="w-full resize-none border-transparent px-0 focus-visible:outline-none focus-visible:ring-0"
+                className="w-full resize-none border-transparent px-0 focus-visible:ring-0 focus-visible:outline-none"
                 inputMode="text"
               />
             </div>

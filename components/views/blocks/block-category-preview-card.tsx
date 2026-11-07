@@ -6,12 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 
-function GradientEffect() {
-  return (
-    <div className="absolute -bottom-4 -left-4 flex h-16 w-16 flex-col gap-y-4 opacity-80 blur-3xl dark:bg-gray-500"></div>
-  );
-}
-
 type BlockCategoryPreviewCardProps = {
   block: {
     name: string;
@@ -27,10 +21,9 @@ export function BlockCategoryPreviewCard({
 }: BlockCategoryPreviewCardProps) {
   return (
     <Card
-      className={`bg-background hover:shadow-foreground/5 overflow-hidden transition-all duration-300`}
+      className={`bg-background hover:bg-accent/70 overflow-hidden rounded-none py-3 transition-all duration-200`}
     >
-      <CardContent className="relative p-0">
-        <GradientEffect />
+      <CardContent className="relative p-0 pl-3">
         <div className="bg-accent/50 relative aspect-video overflow-hidden dark:bg-inherit">
           <Image
             src={`${block.image}-light.png`}
@@ -38,7 +31,7 @@ export function BlockCategoryPreviewCard({
             height={963 / 2}
             quality={100}
             alt={block.name}
-            className="group-hover:scale-103 ml-4 mt-11 block rounded-md border shadow-2xl transition-all duration-300 dark:hidden"
+            className="mt-10 ml-4 block rounded-lg border shadow-2xl transition-all duration-200 group-hover:scale-101 dark:hidden"
           />
           <Image
             src={`${block.image}-dark.png`}
@@ -46,25 +39,28 @@ export function BlockCategoryPreviewCard({
             height={963 / 2}
             quality={100}
             alt={block.name}
-            className="group-hover:scale-103 ml-4 mt-11 hidden rounded-md border shadow-2xl transition-all duration-300 dark:block"
+            className="mt-10 ml-4 hidden rounded-lg border shadow-2xl transition-all duration-200 group-hover:scale-101 dark:block"
           />
-          <div className="absolute left-4 right-4 top-2 flex items-center justify-between gap-2">
+          <div className="absolute top-0 right-4 left-4 flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <Typography
                 as="h3"
                 variant="lg/medium"
-                className="text-foreground capitalize tracking-tight"
+                className="text-foreground capitalize"
               >
                 {block.name}
               </Typography>
-              <Badge className="rounded-md px-1.5 font-normal">
+              <Badge
+                variant="secondary"
+                className="rounded-none px-1.5 font-normal"
+              >
                 {block.count > 1
                   ? `${block.count} Blocks`
                   : `${block.count} Block`}
               </Badge>
             </div>
-            <div className="bg-accent -mr-1 -mt-1 hidden rounded-md border p-0.5 group-hover:block">
-              <ArrowRight className="text-muted-foreground size-4 -rotate-45" />
+            <div className="bg-accent -mt-1 -mr-1 hidden border p-0.5 group-hover:block">
+              <ArrowRight className="text-foreground size-4.5 -rotate-45" />
             </div>
           </div>
         </div>

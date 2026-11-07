@@ -11,7 +11,6 @@ export function PreviewContainer({ children, className }: PageContainerProps) {
         className
       )}
     >
-      {/* <div className="absolute inset-0 h-full w-full bg-background/50"></div> */}
       {children}
     </div>
   );

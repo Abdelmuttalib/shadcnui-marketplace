@@ -24,24 +24,24 @@ in-repo consumer needs it but no design justification exists.
 Default base (`default:9`) vs carbon base (`carbon:8`); prefix `dft` → `cb`
 throughout plus:
 
-| Default | Alternative | Exact change | Inferred effect | Classification |
-|---|---|---|---|---|
-| (none) | `ring-inset` | Added | Focus ring renders inside the edge | UNVERIFIED, Needs-designer (concern FOCUS; single-instance coherence — suspected intentional, not corroborated) |
-| `transition-colors` (retained) | + `transition-all duration-100 ease-in-out` | Added alongside retained class | Inferred: both classes reach `cn()`/`twMerge` at render (`carbon:50`), which treats the transition-property utilities as conflicting and keeps the later one — effectively a fast all-property transition. Mechanism inferred from source, not runtime-verified | UNVERIFIED, Needs-designer (concern TRANSITION) |
-| `focus-visible:ring-dft-ring` | `focus-visible:ring-transparent` + `focus:ring-cb-background` / `focus-visible:ring-cb-background` + `focus:ring-offset-cb-ring` / `focus-visible:ring-offset-cb-ring` | Replaced solid ring color with transparent ring; color moved to ring + offset | Inferred: "offset halo" instead of solid ring | UNVERIFIED, Needs-designer (concern FOCUS/COLOR) |
-| (ring-2 only) | + `focus:ring-1` / `focus-visible:ring-1` | Added 1px widths | Inferred: thinner focus ring than default 2px | UNVERIFIED, Needs-designer (concern FOCUS) |
-| (none) | `dark:focus:ring-offset-1` / `dark:focus-visible:ring-offset-1` | Added | Inferred: tighter dark-mode offset | UNVERIFIED, Needs-designer (concern FOCUS) |
+| Default                        | Alternative                                                                                                                                                            | Exact change                                                                  | Inferred effect                                                                                                                                                                                                                                                 | Classification                                                                                                  |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| (none)                         | `ring-inset`                                                                                                                                                           | Added                                                                         | Focus ring renders inside the edge                                                                                                                                                                                                                              | UNVERIFIED, Needs-designer (concern FOCUS; single-instance coherence — suspected intentional, not corroborated) |
+| `transition-colors` (retained) | + `transition-all duration-100 ease-in-out`                                                                                                                            | Added alongside retained class                                                | Inferred: both classes reach `cn()`/`twMerge` at render (`carbon:50`), which treats the transition-property utilities as conflicting and keeps the later one — effectively a fast all-property transition. Mechanism inferred from source, not runtime-verified | UNVERIFIED, Needs-designer (concern TRANSITION)                                                                 |
+| `focus-visible:ring-dft-ring`  | `focus-visible:ring-transparent` + `focus:ring-cb-background` / `focus-visible:ring-cb-background` + `focus:ring-offset-cb-ring` / `focus-visible:ring-offset-cb-ring` | Replaced solid ring color with transparent ring; color moved to ring + offset | Inferred: "offset halo" instead of solid ring                                                                                                                                                                                                                   | UNVERIFIED, Needs-designer (concern FOCUS/COLOR)                                                                |
+| (ring-2 only)                  | + `focus:ring-1` / `focus-visible:ring-1`                                                                                                                              | Added 1px widths                                                              | Inferred: thinner focus ring than default 2px                                                                                                                                                                                                                   | UNVERIFIED, Needs-designer (concern FOCUS)                                                                      |
+| (none)                         | `dark:focus:ring-offset-1` / `dark:focus-visible:ring-offset-1`                                                                                                        | Added                                                                         | Inferred: tighter dark-mode offset                                                                                                                                                                                                                              | UNVERIFIED, Needs-designer (concern FOCUS)                                                                      |
 
 ## 4. Variants
 
-| Variant | Default (`default:13-22`) | Alternative (`carbon:12-21`) | Change | Classification |
-|---|---|---|---|---|
-| default | `bg-dft-primary …` | `bg-cb-primary …` | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
-| destructive | `bg-dft-destructive …` | `bg-cb-destructive …` | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
-| outline | `border border-dft-input bg-dft-background hover:bg-dft-accent hover:text-dft-accent-foreground` | `border border-cb-border hover:bg-cb-accent hover:text-cb-accent-foreground [&_svg]:hover:text-cb-accent-foreground` | Background assertion dropped (transparent until hover); border token `input` → `border`; svg-hover color added. Inferred: flatter edge-only resting state, icon follows text on hover | UNVERIFIED, Needs-designer (concern BORDER/COLOR) |
-| secondary | `bg-dft-secondary …` (borderless) | `border border-cb-border bg-cb-secondary …` | Border added | UNVERIFIED, Needs-designer (concern BORDER) |
-| ghost | hover accent | hover accent | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
-| link | `text-dft-primary …` | `text-cb-primary …` | Prefix swap | TOKEN_DEPENDENCY, Corroborated |
+| Variant     | Default (`default:13-22`)                                                                        | Alternative (`carbon:12-21`)                                                                                         | Change                                                                                                                                                                                | Classification                                    |
+| ----------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| default     | `bg-dft-primary …`                                                                               | `bg-cb-primary …`                                                                                                    | Prefix swap                                                                                                                                                                           | TOKEN_DEPENDENCY, Corroborated                    |
+| destructive | `bg-dft-destructive …`                                                                           | `bg-cb-destructive …`                                                                                                | Prefix swap                                                                                                                                                                           | TOKEN_DEPENDENCY, Corroborated                    |
+| outline     | `border border-dft-input bg-dft-background hover:bg-dft-accent hover:text-dft-accent-foreground` | `border border-cb-border hover:bg-cb-accent hover:text-cb-accent-foreground [&_svg]:hover:text-cb-accent-foreground` | Background assertion dropped (transparent until hover); border token `input` → `border`; svg-hover color added. Inferred: flatter edge-only resting state, icon follows text on hover | UNVERIFIED, Needs-designer (concern BORDER/COLOR) |
+| secondary   | `bg-dft-secondary …` (borderless)                                                                | `border border-cb-border bg-cb-secondary …`                                                                          | Border added                                                                                                                                                                          | UNVERIFIED, Needs-designer (concern BORDER)       |
+| ghost       | hover accent                                                                                     | hover accent                                                                                                         | Prefix swap                                                                                                                                                                           | TOKEN_DEPENDENCY, Corroborated                    |
+| link        | `text-dft-primary …`                                                                             | `text-cb-primary …`                                                                                                  | Prefix swap                                                                                                                                                                           | TOKEN_DEPENDENCY, Corroborated                    |
 
 ## 5. Sizes
 
@@ -66,10 +66,11 @@ Missing vs baseline: `ButtonLink`, `ButtonLinkProps`, `iconLeft`/`iconRight`.
 Consumer evidence: no file imports `ButtonLink` from any style's `ui/button`;
 `registry/carbon/internal/sink/components/button-link.tsx:1-5` and
 `registry/carbon/examples/button-link.tsx:1-5` define local demos using `Button`
-+ `link` variant only. No in-repo breakage. Classification: PARITY_DIVERGENCE,
-Open (concern API) — likely copy drift; a link-with-icons helper is not
-Carbon-specific, and no exception is justified. External registry consumers
-expecting `ButtonLink` from carbon would break.
+
+- `link` variant only. No in-repo breakage. Classification: PARITY_DIVERGENCE,
+  Open (concern API) — likely copy drift; a link-with-icons helper is not
+  Carbon-specific, and no exception is justified. External registry consumers
+  expecting `ButtonLink` from carbon would break.
 
 ## 9. Behavior and Accessibility
 
@@ -93,7 +94,7 @@ interplay — both must survive migration.
 ## 12. Typography and Global Styling
 
 No component-level type change (`text-sm font-medium` retained). Family IBM Plex
-Sans via inherited `font-carbon` (`registry/styles.tsx:229-230`; `lib/fonts.ts:29-33`).
+Sans via inherited `font-ibm-plex-sans` (`registry/styles.tsx:229-230`; `lib/fonts.ts:29-33`).
 
 ## 13. Findings and Upgrade Preservation
 

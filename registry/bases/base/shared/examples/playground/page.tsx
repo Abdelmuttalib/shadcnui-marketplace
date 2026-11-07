@@ -4,7 +4,7 @@ import { RotateCcw } from "lucide-react";
 import { CodeViewer } from "./components/code-viewer";
 import { MaxLengthSelector } from "./components/maxlength-selector";
 import { ModelSelector } from "./components/model-selector";
-import { PresetActions } from "./components/preset-actions";
+import { StyleActions } from "./components/preset-actions";
 import { PresetSave } from "./components/preset-save";
 import { PresetSelector } from "./components/preset-selector";
 import { PresetShare } from "./components/preset-share";
@@ -45,7 +45,7 @@ export default function PlaygroundPage() {
               <CodeViewer />
               <PresetShare />
             </div>
-            <PresetActions />
+            <StyleActions />
           </div>
         </div>
         <Separator />
