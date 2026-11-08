@@ -22,6 +22,19 @@ import {
 } from "./framework-sections";
 import { TrustedBy } from "./trusted-by";
 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { stylesDataList, useStyleStore } from "@/hooks/use-style-store";
+import { getStyleVariablesPrefix } from "@/registry/styles-components";
+import { ThemePaletteSelect } from "../common/theme-palette-select";
+import { Button } from "../ui/button";
+
 const mcpCommands = [
   { name: "Cursor", command: "npx auth mcp --cursor" },
   { name: "Claude Code", command: "npx auth mcp --claude-code" },
@@ -107,7 +120,7 @@ function CredentialFields() {
 
   return (
     <div className="mt-3 flex items-center gap-1.5" onMouseEnter={startTyping}>
-      <div className="border-foreground/[0.08] bg-foreground/[0.02] flex h-5 min-w-0 flex-1 items-center border px-2">
+      <div className="border-foreground/8 bg-foreground/2 flex h-5 min-w-0 flex-1 items-center border px-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="8"
@@ -127,7 +140,7 @@ function CredentialFields() {
           )}
         </span>
       </div>
-      <div className="border-foreground/[0.08] bg-foreground/[0.02] flex h-5 min-w-0 flex-1 items-center border px-2">
+      <div className="border-foreground/8 bg-foreground/2 flex h-5 min-w-0 flex-1 items-center border px-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="8"
@@ -1147,10 +1160,13 @@ export function HeroReadMe({
   contributors: ContributorInfo[];
   stats: CommunityHeroStats;
 }) {
-  const [socialHovered, setSocialHovered] = useState(false);
-  const [frameworkTab, setFrameworkTab] = useState<
-    "declarative" | "database" | "oauth" | "integrations"
-  >("declarative");
+  const { style, setStyle } = useStyleStore();
+
+  function onStyleChange(e: any) {
+    setStyle(e);
+  }
+
+  const defaultStyle = "carbon";
 
   return (
     <motion.div
@@ -1174,767 +1190,12 @@ export function HeroReadMe({
             </h1>
 
             <p className="text-foreground/80 mb-6 text-sm leading-relaxed sm:mb-8 sm:text-[15px]">
-              Auth that lives{" "}
+              Explore multiple interpretations of{" "}
               <span className="text-foreground/90 dark:text-foreground/80 font-medium">
-                inside your app
+                shadcn/ui
               </span>
-              . Composable, plugin-based, and built to scale — powering from
-              weekend projects to the biggest{" "}
-              <span className="text-foreground/90 dark:text-foreground/80 font-medium">
-                consumer and enterprise apps
-              </span>{" "}
-              on the planet.
+              , inspired by established design systems.
             </p>
-
-            <InstallBlock />
-
-            {/* <div className="my-4 flex items-center gap-3">
-              <div className="border-foreground/6 flex-1 border-t"></div>
-              <span className="text-foreground/50 dark:text-foreground/50 shrink-0 font-mono text-[11px] tracking-wider uppercase sm:text-xs">
-                Trusted By
-              </span>
-            </div>
-
-            <TrustedBy /> */}
-
-            <div className="my-4 flex items-center gap-4">
-              <span className="text-foreground/90 dark:text-foreground/80 shrink-0 text-lg font-medium tracking-tight">
-                Features
-              </span>
-              <div className="border-foreground/10 flex-1 border-t" />
-            </div>
-
-            <div className="border-foreground/[0.08] relative mb-2 grid grid-cols-1 overflow-hidden border sm:grid-cols-2 md:grid-cols-3">
-              {[
-                {
-                  label: "Framework Agnostic",
-                  headline: "Works with your stack.",
-                  desc: "Next.js, Nuxt, SvelteKit, Astro, Hono, and 20+ more.",
-                  logos: true,
-                  href: "/docs",
-                },
-                {
-                  label: "Email & Password",
-                  headline: "Built-in credential auth.",
-                  desc: "Sessions, email verification, and password reset included.",
-                  credential: true,
-                  href: "/docs",
-                },
-                {
-                  label: "Social Sign-on",
-                  headline: "Social sign-on.",
-                  desc: "Google, GitHub, Apple, Discord, and more.",
-                  social: true,
-                  href: "/docs",
-                },
-                {
-                  label: "Organizations",
-                  headline: "Multi-tenancy built in.",
-                  desc: "Teams, roles, invitations, and access control.",
-                  org: true,
-                  href: "/docs",
-                },
-                {
-                  label: "Enterprise",
-                  headline: "Enterprise ready.",
-                  desc: "SSO, SAML 2.0, SCIM, and directory sync.",
-                  enterprise: true,
-                  href: "/docs",
-                },
-                {
-                  label: "Plugins",
-                  headline: "50+ and growing.",
-                  desc: "Passkeys, magic links, API keys, JWTs, and more.",
-                  plugins: true,
-                  href: "/docs",
-                },
-                {
-                  label: "Agent Auth",
-                  headline: "Auth for AI agents.",
-                  desc: "MCP auth, token exchange, and agent delegation.",
-                  agent: true,
-                  href: "/docs",
-                },
-                {
-                  label: "Infrastructure",
-                  headline: "Security & observability.",
-                  desc: "Bot detection, IP blocking, and email validation.",
-                  security: true,
-                  href: "/pricing",
-                  managed: true,
-                },
-                {
-                  label: "Dashboard",
-                  headline: "User management.",
-                  desc: "Manage users, sessions, and organizations.",
-                  dashboard: true,
-                  href: "/pricing",
-                  managed: true,
-                },
-              ].map((feature, i) => (
-                <Link
-                  key={feature.label}
-                  href={"href" in feature ? feature.href : "#"}
-                  className="contents"
-                >
-                  <motion.div
-                    whileHover={{
-                      y: -2,
-                      transition: { duration: 0.2, ease: "easeOut" },
-                    }}
-                    onMouseEnter={() => {
-                      if ("social" in feature && feature.social) {
-                        setSocialHovered(true);
-                      }
-                    }}
-                    onMouseLeave={() => {
-                      if ("social" in feature && feature.social) {
-                        setSocialHovered(false);
-                      }
-                    }}
-                    className={cn(
-                      "group/card border-foreground/[0.08] hover:bg-foreground/[0.02] relative min-h-[100px] p-4 transition-all duration-200 hover:z-10 hover:shadow-[inset_0_1px_0_0_rgba(128,128,128,0.1)] lg:p-5",
-                      // Bottom border: all except last; 3-col last row starts at 6
-                      i < 8 && "border-b",
-                      i >= 6 && "md:border-b-0",
-                      // Right border: none on mobile
-                      // 2-col: left column (even indices) gets right border
-                      i % 2 === 0 && i < 8 && "sm:border-r",
-                      // 3-col: remove right border on 3rd column, add on odd indices that need it
-                      i % 3 === 2 && "md:border-r-0",
-                      i % 2 !== 0 && i % 3 !== 2 && "md:border-r"
-                    )}
-                  >
-                    {/* Arrow icon — top right, visible on hover */}
-                    <span className="absolute top-3 right-3 -translate-y-0.5 opacity-0 transition-all duration-200 group-hover/card:translate-y-0 group-hover/card:opacity-100 lg:top-4 lg:right-4">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-foreground/40 dark:text-foreground/50"
-                      >
-                        <line x1="7" y1="17" x2="17" y2="7" />
-                        <polyline points="7 7 17 7 17 17" />
-                      </svg>
-                    </span>
-                    <div className="mb-1">
-                      <div className="text-foreground/45 dark:text-foreground/30 group-hover/card:text-foreground/60 dark:group-hover/card:text-foreground/40 font-mono text-[11px] tracking-wider transition-colors duration-200">
-                        {String(i + 1).padStart(2, "0")}
-                      </div>
-                      <div className="text-foreground/80 text-[13px] font-medium transition-colors duration-200 dark:text-neutral-100">
-                        {feature.headline}
-                      </div>
-                    </div>
-                    <div className="text-[13px] leading-relaxed text-neutral-500 transition-colors duration-200 group-hover/card:text-neutral-400 dark:text-neutral-400 dark:group-hover/card:text-neutral-300">
-                      {feature.desc}
-                    </div>
-                    {"logos" in feature && feature.logos && (
-                      <div className="mt-3 flex items-center gap-3.5">
-                        {/* Next.js */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 24 24"
-                          className="text-neutral-800 opacity-90 transition-all duration-300 group-hover/card:animate-[icon-bounce_0.4s_ease-out_0s] group-hover/card:opacity-100 dark:text-neutral-200"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m4-14h-1.35v4H16zM9.346 9.71l6.059 7.828l1.054-.809L9.683 8H8v7.997h1.346z"
-                          />
-                        </svg>
-                        {/* Nuxt */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 24 24"
-                          className="text-[#00DC82] opacity-90 transition-all duration-300 group-hover/card:animate-[icon-bounce_0.4s_ease-out_0.05s] group-hover/card:opacity-100"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.2 18.666h7.4c.236 0 .462-.083.667-.2c.204-.117.415-.264.533-.466c.118-.203.2-.433.2-.667s-.082-.464-.2-.667l-5-8.6a1.2 1.2 0 0 0-.467-.466a1.6 1.6 0 0 0-.733-.2c-.236 0-.462.083-.667.2a1.2 1.2 0 0 0-.466.466l-1.267 2.2L10.667 6c-.118-.203-.262-.417-.467-.534s-.43-.133-.667-.133c-.236 0-.462.016-.666.133s-.416.33-.534.534l-6.2 10.666c-.118.203-.133.433-.133.667s.015.464.133.667c.118.202.33.35.534.466s.43.2.666.2H8c1.85 0 3.195-.83 4.133-2.4l2.267-3.933l1.2-2.067l3.667 6.267H14.4zm-5.267-2.133H4.667l4.866-8.4l2.467 4.2l-1.634 2.848c-.623 1.02-1.333 1.352-2.433 1.352"
-                          />
-                        </svg>
-                        {/* SvelteKit */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13"
-                          height="15"
-                          viewBox="0 0 426 512"
-                          className="text-[#FF3E00] opacity-90 transition-all duration-300 group-hover/card:animate-[icon-bounce_0.4s_ease-out_0.1s] group-hover/card:opacity-100"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M403.508 229.23C491.235 87.7 315.378-58.105 190.392 23.555L71.528 99.337c-57.559 37.487-82.55 109.513-47.45 183.53c-87.761 133.132 83.005 289.03 213.116 205.762l118.864-75.782c64.673-42.583 79.512-116.018 47.45-183.616m-297.592-80.886l118.69-75.739c77.973-46.679 167.756 34.942 135.388 110.992c-19.225-15.274-40.65-24.665-56.923-28.894c6.186-24.57-22.335-42.796-42.174-30.106l-118.95 75.48c-29.411 20.328 1.946 62.138 31.014 44.596l45.33-28.895c101.725-57.403 198 80.425 103.38 147.975l-118.692 75.739C131.455 485.225 34.11 411.96 67.592 328.5c17.786 13.463 36.677 23.363 56.923 28.894c-4.47 28.222 24.006 41.943 42.476 30.365L285.64 312.02c29.28-21.955-2.149-61.692-30.97-44.595l-45.504 28.894c-100.56 58.77-199.076-80.42-103.25-147.975"
-                          />
-                        </svg>
-                        {/* Solid Start */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 128 128"
-                          className="text-[#2C4F7C] opacity-90 transition-all duration-300 group-hover/card:animate-[icon-bounce_0.4s_ease-out_0.2s] group-hover/card:opacity-100 dark:text-[#66AAEE]"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M61.832 4.744c-3.205.058-6.37.395-9.45 1.07l-2.402.803c-4.806 1.603-8.813 4.005-11.216 7.21l-1.602 2.404l-12.017 20.828l.166.031c-4.785 5.823-5.007 14.07-.166 21.6c1.804 2.345 4.073 4.431 6.634 6.234l-15.445 4.982L.311 97.946s42.46 32.044 75.306 24.033l2.403-.801c5.322-1.565 9.292-4.48 11.683-8.068l.334.056l16.022-28.84c3.204-5.608 2.404-12.016-1.602-18.425a36 36 0 0 0-7.059-6.643l15.872-5.375l14.42-24.033S92.817 4.19 61.831 4.744z"
-                          />
-                        </svg>
-                        {/* TanStack Start */}
-                        <svg
-                          height="15"
-                          viewBox="0 0 64.04 83.84"
-                          width="12"
-                          className="text-neutral-800 opacity-90 transition-all duration-300 group-hover/card:animate-[icon-bounce_0.4s_ease-out_0.15s] group-hover/card:opacity-100 dark:text-neutral-200"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M32.02,0c23.15,0,32.02,14.33,32.02,41.92s-8.87,41.92-32.02,41.92S0,69.53,0,41.92C0,14.33,8.87,0,32.02,0ZM42.61,61.08c-3.01,0-4.65.82-5.97,1.48-1.14.57-2.03,1.02-4.01,1.02s-2.87-.45-4.01-1.02c-1.32-.66-2.96-1.48-5.97-1.48s-4.65.82-5.97,1.48c-1.14.57-2.03,1.02-4.01,1.02v4.37c3.01,0,4.65-.82,5.97-1.48,1.14-.57,2.03-1.02,4.01-1.02s2.87.45,4.01,1.02c1.32.66,2.96,1.48,5.97,1.48s4.65-.82,5.97-1.48c1.14-.57,2.03-1.02,4.01-1.02s2.87.45,4.01,1.02c1.32.66,2.96,1.48,5.97,1.48v-4.37c-1.97,0-2.87-.45-4.01-1.02-1.32-.66-2.96-1.48-5.97-1.48ZM44.04,17.29c2.27-2.05,0-5.76-2.84-4.64-1.57.63-3.05,1.53-4.37,2.72-2.06,1.87-3.45,4.22-4.2,6.78-.75-2.56-2.14-4.91-4.2-6.78-1.32-1.18-2.8-2.09-4.37-2.72-2.84-1.12-5.11,2.59-2.84,4.64l8.33,7.52c-2.72-1.84-6-2.93-9.54-2.93-1.93,0-3.78.31-5.52.91-2.92.99-2.11,5.35.96,5.35h11.62c-2.56.49-4.99,1.63-7.03,3.45-1.32,1.18-2.36,2.56-3.14,4.07-1.41,2.71,2.05,5.34,4.32,3.31l9.38-8.45-.7,23.25c0,.28-.16.55-.37.78-.3-.13-.58-.27-.9-.43-1.32-.66-2.96-1.48-5.97-1.48s-4.65.82-5.97,1.48c-1.14.57-2.03,1.02-4.01,1.02v4.37c3.01,0,4.65-.82,5.97-1.48,1.14-.57,2.03-1.02,4.01-1.02s2.87.45,4.01,1.02c1.32.66,2.96,1.48,5.97,1.48s4.65-.82,5.97-1.48c1.14-.57,2.03-1.02,4.01-1.02s2.87.45,4.01,1.02c1.32.66,2.96,1.48,5.97,1.48v-4.37c-1.97,0-2.87-.45-4.01-1.02v-.02c-1.32-.66-2.96-1.48-5.97-1.48s-4.65.82-5.97,1.48c-.34.16-.66.33-.99.46-.25-.22-.4-.51-.42-.81l-.7-23.37,9.51,8.58c2.27,2.05,5.73-.58,4.32-3.31-.78-1.5-1.82-2.89-3.14-4.07-2.03-1.84-4.46-2.96-7.03-3.45h11.62c3.08,0,3.87-4.35.96-5.35-1.73-.58-3.59-.91-5.52-.91-3.53,0-6.8,1.09-9.54,2.93l8.33-7.52Z"
-                          />
-                        </svg>
-                        {/* Expo */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 32 32"
-                          className="text-neutral-800 opacity-90 transition-all duration-300 group-hover/card:animate-[icon-bounce_0.4s_ease-out_0.25s] group-hover/card:opacity-100 dark:text-neutral-200"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M24.292 15.547a3.93 3.93 0 0 0 4.115-3.145a2.57 2.57 0 0 0-2.161-1.177c-2.272-.052-3.491 2.651-1.953 4.323zm-9.177-10.85l5.359-3.104L18.766.63l-7.391 4.281l.589.328l1.119.629l2.032-1.176zm6.046-3.39c.089.027.161.1.188.188l2.484 7.593a.285.285 0 0 1-.125.344a5.06 5.06 0 0 0-2.317 5.693a5.066 5.066 0 0 0 5.401 3.703a.3.3 0 0 1 .307.203l2.563 7.803a.3.3 0 0 1-.125.344l-7.859 4.771a.3.3 0 0 1-.131.036a.26.26 0 0 1-.203-.041l-2.765-1.797a.3.3 0 0 1-.109-.129l-5.396-12.896l-8.219 4.875c-.016.011-.037.021-.052.032a.3.3 0 0 1-.261-.021l-1.859-1.093a.283.283 0 0 1-.115-.381l7.953-15.749a.27.27 0 0 1 .135-.131L18.615.045a.29.29 0 0 1 .292-.005zm-8.322 5.1l-1.932-1.089l-7.693 15.229l1.396.823l6.631-9.015a.28.28 0 0 1 .271-.12a.29.29 0 0 1 .235.177l7.228 17.296l1.933 1.251l-8.063-24.552zm13.406 10.557c-2.256 0-3.787-2.292-2.923-4.376c.86-2.083 3.563-2.619 5.156-1.025c.595.593.928 1.396.928 2.235a3.16 3.16 0 0 1-3.161 3.167z"
-                          />
-                        </svg>
-                        {/* +14 more */}
-                        <div className="border-foreground/[0.1] text-foreground/35 dark:text-foreground/20 group-hover/card:text-foreground/60 dark:group-hover/card:text-foreground/40 group-hover/card:border-foreground/20 flex size-[20px] items-center justify-center border border-dashed transition-all duration-300 group-hover/card:animate-[icon-bounce_0.4s_ease-out_0.3s]">
-                          <span className="font-mono text-[7px] leading-none">
-                            +14
-                          </span>
-                        </div>
-                      </div>
-                    )}
-                    {"social" in feature && feature.social && (
-                      <div className="relative mt-3 overflow-hidden">
-                        <div className="flex items-center gap-2.5">
-                          <div className="relative flex items-center gap-2.5">
-                            <div className="bg-foreground/[0.08] absolute top-1/2 right-3 left-3 h-px -translate-y-1/2" />
-                            {/* Google — stretches to "Sign in with Google" on hover */}
-                            <motion.div
-                              animate={{ width: socialHovered ? 120 : 24 }}
-                              transition={{
-                                duration: 0.3,
-                                ease: [0.4, 0, 0.2, 1],
-                              }}
-                              className="border-foreground/8 bg-background relative flex h-6 shrink-0 items-center overflow-hidden border opacity-60 transition-opacity duration-300 group-hover/card:opacity-100"
-                            >
-                              <div className="flex items-center gap-1.5 px-[7px]">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="10"
-                                  height="10"
-                                  viewBox="0 0 48 48"
-                                  className="shrink-0"
-                                >
-                                  <path
-                                    fill="#FFC107"
-                                    d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917"
-                                  />
-                                  <path
-                                    fill="#FF3D00"
-                                    d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691"
-                                  />
-                                  <path
-                                    fill="#4CAF50"
-                                    d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.9 11.9 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44"
-                                  />
-                                  <path
-                                    fill="#1976D2"
-                                    d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917"
-                                  />
-                                </svg>
-                                <motion.span
-                                  animate={{ opacity: socialHovered ? 1 : 0 }}
-                                  transition={{
-                                    duration: 0.2,
-                                    delay: socialHovered ? 0.1 : 0,
-                                  }}
-                                  className="text-foreground/60 dark:text-foreground/40 font-mono text-[8px] whitespace-nowrap"
-                                >
-                                  Sign in with Google
-                                </motion.span>
-                              </div>
-                            </motion.div>
-                            {/* GitHub */}
-                            <div className="border-foreground/[0.08] bg-background relative flex size-6 shrink-0 items-center justify-center border text-neutral-800 opacity-60 transition-opacity duration-300 group-hover/card:opacity-100 dark:text-neutral-200">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="10"
-                                height="10"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                                />
-                              </svg>
-                            </div>
-                            {/* Apple */}
-                            <div className="border-foreground/[0.08] bg-background relative flex size-6 shrink-0 items-center justify-center border text-neutral-800 opacity-60 transition-opacity duration-300 group-hover/card:opacity-100 dark:text-neutral-200">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="10"
-                                height="10"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"
-                                />
-                              </svg>
-                            </div>
-                            {/* Discord */}
-                            <div className="border-foreground/[0.08] bg-background relative flex size-6 shrink-0 items-center justify-center border text-[#5865F2] opacity-60 transition-opacity duration-300 group-hover/card:opacity-100">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="10"
-                                height="10"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515.07.07 0 0 0-.073.036c-.21.375-.444.864-.608 1.25a18.3 18.3 0 0 0-5.487 0 13 13 0 0 0-.617-1.25.07.07 0 0 0-.073-.036A19.7 19.7 0 0 0 3.69 4.37a.06.06 0 0 0-.032.025C.533 9.046-.32 13.58.099 18.057a.08.08 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.08.08 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.08.08 0 0 0-.041-.106 13 13 0 0 1-1.872-.892.08.08 0 0 1-.008-.128q.188-.141.372-.287a.08.08 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.08.08 0 0 1 .079.01q.183.149.372.288a.08.08 0 0 1-.006.127c-.598.35-1.22.645-1.873.892a.08.08 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.08.08 0 0 0 .084.029 19.8 19.8 0 0 0 6.002-3.03.08.08 0 0 0 .032-.056c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.026M8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419s.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418m7.975 0c-1.183 0-2.157-1.085-2.157-2.419s.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418"
-                                />
-                              </svg>
-                            </div>
-                            {/* Microsoft */}
-                            <div className="border-foreground/[0.08] bg-background relative flex size-6 shrink-0 items-center justify-center border opacity-60 transition-opacity duration-300 group-hover/card:opacity-100">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="9"
-                                height="9"
-                                viewBox="0 0 256 256"
-                              >
-                                <path
-                                  fill="#F1511B"
-                                  d="M121.666 121.666H0V0h121.666z"
-                                />
-                                <path
-                                  fill="#80CC28"
-                                  d="M256 121.666H134.335V0H256z"
-                                />
-                                <path
-                                  fill="#00ADEF"
-                                  d="M121.663 256.002H0V134.336h121.663z"
-                                />
-                                <path
-                                  fill="#FBBC09"
-                                  d="M256 256.002H134.335V134.336H256z"
-                                />
-                              </svg>
-                            </div>
-                            {/* X/Twitter */}
-                            <div className="border-foreground/[0.08] bg-background relative flex size-6 shrink-0 items-center justify-center border text-neutral-800 opacity-60 transition-opacity duration-300 group-hover/card:opacity-100 dark:text-neutral-200">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="9"
-                                height="9"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                                />
-                              </svg>
-                            </div>
-                          </div>
-                          {/* +34 */}
-                          <div className="border-foreground/[0.1] text-foreground/35 dark:text-foreground/20 flex size-6 shrink-0 items-center justify-center border border-dashed">
-                            <span className="font-mono text-[8px] leading-none">
-                              +34
-                            </span>
-                          </div>
-                        </div>
-                        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l to-transparent" />
-                      </div>
-                    )}
-                    {"credential" in feature && feature.credential && (
-                      <CredentialFields />
-                    )}
-                    {"org" in feature && feature.org && (
-                      <div className="mt-3 flex items-center gap-2.5">
-                        {/* Overlapping member avatars */}
-                        <div className="flex -space-x-1.5">
-                          <div className="border-foreground/[0.08] relative z-[3] flex size-5 items-center justify-center rounded-full border bg-neutral-100 dark:bg-neutral-900">
-                            <span className="text-foreground/55 dark:text-foreground/35 font-mono text-[8px] leading-none">
-                              A
-                            </span>
-                          </div>
-                          <div className="border-foreground/[0.08] relative z-[2] flex size-5 items-center justify-center rounded-full border bg-neutral-100 dark:bg-neutral-900">
-                            <span className="text-foreground/50 dark:text-foreground/30 font-mono text-[8px] leading-none">
-                              B
-                            </span>
-                          </div>
-                          <div className="border-foreground/[0.08] relative z-[1] flex size-5 items-center justify-center rounded-full border bg-neutral-100 dark:bg-neutral-900">
-                            <span className="text-foreground/40 dark:text-foreground/50 font-mono text-[8px] leading-none">
-                              C
-                            </span>
-                          </div>
-                          <div className="border-foreground/[0.1] bg-background relative z-[0] flex size-5 items-center justify-center rounded-full border border-dashed">
-                            <span className="text-foreground/35 dark:text-foreground/20 font-mono text-[8px] leading-none">
-                              +
-                            </span>
-                          </div>
-                        </div>
-                        {/* Role badges */}
-                        <div className="flex items-center gap-1">
-                          <span className="text-foreground/50 dark:text-foreground/30 border-foreground/[0.08] bg-foreground/[0.015] border px-1.5 py-0.5 font-mono text-[8px]">
-                            owner
-                          </span>
-                          <span className="text-foreground/35 dark:text-foreground/20 border-foreground/[0.06] bg-foreground/[0.015] border px-1.5 py-0.5 font-mono text-[8px]">
-                            admin
-                          </span>
-                          <span className="text-foreground/30 border-foreground/[0.08] border border-dashed px-1.5 py-0.5 font-mono text-[8px]">
-                            member
-                          </span>
-                        </div>
-                      </div>
-                    )}
-                    {"plugins" in feature && feature.plugins && (
-                      <div className="relative mt-3 overflow-hidden">
-                        <div className="flex items-center gap-1 overflow-hidden">
-                          {[
-                            "passkeys",
-                            "2fa",
-                            "magic-link",
-                            "jwt",
-                            "api-keys",
-                            "anonymous",
-                            "oidc",
-                            "otp",
-                            "bearer",
-                            "multi-session",
-                          ].map((plugin, i) => (
-                            <span
-                              key={plugin}
-                              className={`shrink-0 border px-1.5 py-0.5 font-mono text-[8px] whitespace-nowrap ${i < 2 ? "text-foreground/50 dark:text-foreground/30 border-foreground/[0.08] bg-foreground/[0.02]" : i < 4 ? "text-foreground/40 dark:text-foreground/22 border-foreground/[0.06] bg-foreground/[0.015]" : "text-foreground/30 border-foreground/[0.05]"}`}
-                            >
-                              {plugin}
-                            </span>
-                          ))}
-                        </div>
-                        {/* Fade-out gradient on the right to imply "there's more" */}
-                        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l to-transparent" />
-                      </div>
-                    )}
-                    {"enterprise" in feature && feature.enterprise && (
-                      <div className="mt-3 flex items-center gap-2.5">
-                        <div className="relative flex items-center gap-2.5">
-                          <div className="bg-foreground/[0.08] absolute top-1/2 right-3 left-3 h-px -translate-y-1/2" />
-                          {/* Okta */}
-                          <div className="border-foreground/[0.08] bg-background relative flex size-6 items-center justify-center border text-neutral-800 opacity-60 transition-opacity duration-300 group-hover/card:opacity-100 dark:text-neutral-200">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="10"
-                              height="10"
-                              viewBox="0 0 256 256"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="m140.844 1.778l-5.266 64.853a66 66 0 0 0-7.542-.427c-3.203 0-6.334.214-9.393.712l-2.99-31.432a1.72 1.72 0 0 1 1.709-1.848h5.337l-2.562-31.787C120.066.853 120.848 0 121.774 0h17.434c.996 0 1.779.853 1.636 1.849zm-43.976 3.2c-.285-.925-1.281-1.494-2.206-1.138L78.295 9.813c-.925.356-1.352 1.423-.925 2.276l13.307 29.013l-5.052 1.85c-.926.355-1.352 1.421-.926 2.275l13.592 28.515a61 61 0 0 1 15.868-6.044L96.94 4.978zM56.734 23.04l37.643 53.049c-4.768 3.129-9.108 6.827-12.809 11.093L59.011 64.996a1.72 1.72 0 0 1 .071-2.49l4.127-3.413L40.794 36.41c-.711-.711-.64-1.849.142-2.489l13.307-11.164c.783-.64 1.85-.498 2.42.284zM25.139 53.76c-.783-.569-1.921-.284-2.42.569l-8.68 15.075c-.499.854-.143 1.92.71 2.347L43.64 85.404l-2.704 4.623c-.498.853-.142 1.99.783 2.346l28.749 13.156a60.2 60.2 0 0 1 8.254-14.791zM3.862 94.72c.143-.996 1.139-1.564 2.064-1.351l62.976 16.427a62.3 62.3 0 0 0-2.704 16.782l-31.524-2.56a1.642 1.642 0 0 1-1.494-1.991l.925-5.263l-31.808-2.986c-.996-.071-1.637-.996-1.495-1.991l2.99-17.138zm-2.348 42.524c-.996.072-1.637.996-1.494 1.992l3.06 17.137c.142.996 1.138 1.565 2.063 1.351l30.883-8.035l.925 5.262c.143.996 1.139 1.565 2.064 1.351l30.456-8.39c-1.779-5.263-2.917-10.88-3.202-16.64l-64.826 5.972zM11.62 182.33c-.498-.853-.143-1.92.711-2.347l58.778-27.875c2.206 5.262 5.195 10.169 8.753 14.577L54.1 185.031c-.783.569-1.921.356-2.42-.498l-2.704-4.693l-26.257 18.133c-.783.57-1.922.285-2.42-.569l-8.752-15.075zm71.23-12.231L37.094 216.39c-.712.711-.64 1.849.142 2.489l13.378 11.164c.783.64 1.85.498 2.42-.284l18.501-26.027l4.127 3.485c.783.64 1.922.498 2.49-.356l17.933-26.026c-4.839-2.987-9.322-6.614-13.165-10.738zm-9.037 74.31c-.925-.355-1.352-1.421-.925-2.275L100 182.97c4.98 2.56 10.389 4.48 16.01 5.547l-7.97 30.577c-.213.925-1.28 1.494-2.205 1.138l-5.052-1.849l-8.468 30.791c-.285.925-1.281 1.494-2.206 1.138l-16.367-5.973zm46.68-55.11l-5.265 64.853c-.071.996.711 1.849 1.637 1.849h17.434c.996 0 1.779-.853 1.636-1.849l-2.561-31.787h5.336a1.72 1.72 0 0 0 1.708-1.848l-2.988-31.432c-3.06.498-6.191.712-9.393.712c-2.562 0-5.053-.143-7.543-.498m62.763-175.574c.427-.924 0-1.92-.925-2.275l-16.366-5.973c-.926-.356-1.922.213-2.206 1.137l-8.468 30.791l-5.053-1.848c-.925-.356-1.921.213-2.206 1.137l-7.97 30.578c5.693 1.138 11.03 3.058 16.011 5.547zm35.722 25.814L173.222 85.83a62 62 0 0 0-13.165-10.738l17.933-26.026c.569-.783 1.707-.996 2.49-.356l4.127 3.485l18.502-26.027c.57-.782 1.708-.925 2.42-.285l13.377 11.165c.783.64.783 1.778.143 2.489zm24.764 36.409c.925-.427 1.21-1.494.711-2.347L235.7 58.524c-.498-.853-1.637-1.066-2.42-.568l-26.257 18.133l-2.704-4.622c-.499-.854-1.637-1.138-2.42-.498l-25.76 18.347c3.558 4.408 6.476 9.315 8.753 14.577l58.778-27.875zm9.25 23.609l2.99 17.137c.142.996-.499 1.85-1.495 1.991l-64.826 6.045c-.285-5.831-1.424-11.378-3.203-16.64l30.457-8.391c.925-.285 1.921.355 2.063 1.35l.925 5.263l30.884-8.035c.925-.214 1.92.355 2.063 1.35zm-2.917 62.933c.925.213 1.921-.356 2.064-1.351L255.126 144c.143-.996-.498-1.849-1.494-1.991l-31.808-2.987l.925-5.262c.142-.996-.498-1.849-1.495-1.991l-31.523-2.56a62.3 62.3 0 0 1-2.704 16.782l62.976 16.427zM233.28 201.6c-.498.853-1.636 1.067-2.419.569l-53.583-36.978a60.2 60.2 0 0 0 8.254-14.791l28.749 13.156c.925.426 1.28 1.493.783 2.346l-2.704 4.622l28.89 13.654c.854.426 1.21 1.493.712 2.346zm-71.657-21.831l37.643 53.049c.57.782 1.708.924 2.42.284l13.306-11.164c.783-.64.783-1.778.143-2.49l-22.415-22.684l4.127-3.413c.783-.64.783-1.778.07-2.489l-22.557-22.186c-3.771 4.266-8.04 8.035-12.808 11.093zm-.356 72.249c-.925.355-1.921-.214-2.206-1.138l-17.22-62.72a61 61 0 0 0 15.868-6.044l13.592 28.515c.426.925 0 1.991-.926 2.276l-5.052 1.849l13.307 29.013c.427.924 0 1.92-.925 2.275l-16.367 5.974z"
-                              />
-                            </svg>
-                          </div>
-                          {/* Microsoft Entra / Azure AD */}
-                          <div className="border-foreground/[0.08] bg-background relative flex size-6 shrink-0 items-center justify-center border opacity-60 transition-opacity duration-300 group-hover/card:opacity-100">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="10"
-                              height="10"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="#0078D4"
-                                d="M13.05 4.24L6.56 18.05L2 18l5.09-8.76zm.7 1.09L22 19.76H6.74l9.3-1.66l-4.87-5.79z"
-                              />
-                            </svg>
-                          </div>
-                          {/* SCIM / Directory Sync */}
-                          <div className="border-foreground/[0.08] bg-background relative flex size-6 shrink-0 items-center justify-center border text-[#10B981] opacity-60 transition-opacity duration-300 group-hover/card:opacity-100">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="10"
-                              height="10"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                              <circle cx="9" cy="7" r="4" />
-                              <polyline points="16 11 18 13 22 9" />
-                            </svg>
-                          </div>
-                          {/* Generic IdP / Building */}
-                          <div className="border-foreground/[0.08] bg-background relative flex size-6 items-center justify-center border text-neutral-800 opacity-60 transition-opacity duration-300 group-hover/card:opacity-100 dark:text-neutral-200">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="10"
-                              height="10"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M12 7V3H2v18h20V7zM6 19H4v-2h2zm0-4H4v-2h2zm0-4H4V9h2zm0-4H4V5h2zm4 12H8v-2h2zm0-4H8v-2h2zm0-4H8V9h2zm0-4H8V5h2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8zm-2-8h-2v2h2zm0 4h-2v2h2z"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        {/* +more */}
-                        <div className="border-foreground/[0.1] text-foreground/35 dark:text-foreground/20 flex size-6 items-center justify-center border border-dashed">
-                          <span className="font-mono text-[8px] leading-none">
-                            +
-                          </span>
-                        </div>
-                      </div>
-                    )}
-                    {"agent" in feature && feature.agent && (
-                      <div className="border-foreground/[0.06] bg-foreground/[0.015] mt-3 flex h-5 items-center gap-1 border px-2.5 font-mono text-[8px]">
-                        <span className="text-foreground/30">$</span>
-                        <span className="text-foreground/50 dark:text-foreground/30">
-                          agent
-                          <span className="text-foreground/30">.</span>
-                          auth
-                          <span className="text-foreground/30">()</span>
-                        </span>
-                        <span className="text-foreground/50 dark:text-foreground/10 mx-0.5">
-                          →
-                        </span>
-                        <span className="text-foreground/35 dark:text-foreground/20">
-                          sk-<span className="tracking-[0.08em]">••••</span>
-                        </span>
-                        <span className="text-foreground/40 dark:text-foreground/50">
-                          ✓
-                        </span>
-                        <span className="bg-foreground/30 inline-block h-2.5 w-px animate-[blink_1s_steps(2)_infinite]" />
-                      </div>
-                    )}
-                    {"security" in feature && feature.security && (
-                      <div className="relative mt-3 overflow-hidden">
-                        <div className="flex items-center gap-1.5 font-mono text-[8px]">
-                          {/* Shield icon */}
-                          <div className="border-foreground/[0.08] bg-foreground/[0.02] flex size-5 shrink-0 items-center justify-center border">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="10"
-                              height="10"
-                              viewBox="0 0 24 24"
-                              className="text-foreground/50 dark:text-foreground/30"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11z"
-                              />
-                            </svg>
-                          </div>
-                          {/* Blocked */}
-                          <div className="flex shrink-0 items-center gap-1 border border-red-500/15 bg-red-500/[0.03] px-1.5 py-0.5">
-                            <span className="inline-block size-1 rounded-full bg-red-500/40" />
-                            <span className="text-red-500/40">blocked</span>
-                          </div>
-                          {/* Challenged */}
-                          <div className="flex shrink-0 items-center gap-1 border border-yellow-600/15 bg-yellow-600/[0.03] px-1.5 py-0.5">
-                            <span className="inline-block size-1 rounded-full bg-yellow-600/40" />
-                            <span className="text-yellow-600/40">
-                              challenged
-                            </span>
-                          </div>
-                          {/* Allowed */}
-                          <div className="flex shrink-0 items-center gap-1 border border-green-500/15 bg-green-500/[0.03] px-1.5 py-0.5">
-                            <span className="inline-block size-1 rounded-full bg-green-500/50" />
-                            <span className="text-green-500/50">allowed</span>
-                          </div>
-                        </div>
-                        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l to-transparent" />
-                      </div>
-                    )}
-                    {"dashboard" in feature && feature.dashboard && (
-                      <div className="relative mt-3 h-5 overflow-hidden">
-                        <div className="flex animate-[marquee_20s_linear_infinite] gap-4">
-                          {[...Array(2)].map((_, setIdx) => (
-                            <div key={setIdx} className="flex shrink-0 gap-4">
-                              {[
-                                {
-                                  time: "10:50 AM",
-                                  user: "John",
-                                  action: "created a session",
-                                },
-                                {
-                                  time: "10:48 AM",
-                                  user: "Sarah",
-                                  action: "updated profile",
-                                },
-                                {
-                                  time: "10:45 AM",
-                                  user: "Alex",
-                                  action: "joined organization",
-                                },
-                                {
-                                  time: "10:42 AM",
-                                  user: "Emma",
-                                  action: "revoked token",
-                                },
-                                {
-                                  time: "10:38 AM",
-                                  user: "Mike",
-                                  action: "enabled 2FA",
-                                },
-                              ].map((event) => (
-                                <div
-                                  key={`${setIdx}-${event.time}-${event.user}`}
-                                  className="flex h-5 shrink-0 items-center gap-1.5 whitespace-nowrap"
-                                >
-                                  <span className="text-foreground/30 font-mono text-[8px]">
-                                    {event.time}
-                                  </span>
-                                  <span className="text-foreground/50 dark:text-foreground/30 border-foreground/20 border-b border-dashed font-mono text-[8px]">
-                                    {event.user}
-                                  </span>
-                                  <span className="text-foreground/35 dark:text-foreground/20 font-mono text-[8px]">
-                                    {event.action}
-                                  </span>
-                                </div>
-                              ))}
-                            </div>
-                          ))}
-                        </div>
-                        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l to-transparent" />
-                      </div>
-                    )}
-                  </motion.div>
-                </Link>
-              ))}
-              {/* + marks at grid intersections */}
-              <span className="text-foreground/35 dark:text-foreground/20 absolute top-1/3 left-1/3 z-10 -mt-[1px] -ml-[.5px] hidden -translate-x-1/2 -translate-y-1/2 font-mono text-[10px] select-none md:block">
-                +
-              </span>
-              <span className="text-foreground/35 dark:text-foreground/20 absolute top-1/3 left-2/3 z-10 -mt-[1px] -ml-[.5px] hidden -translate-x-1/2 -translate-y-1/2 font-mono text-[10px] select-none md:block">
-                +
-              </span>
-              <span className="text-foreground/35 dark:text-foreground/20 absolute top-2/3 left-1/3 z-10 -mt-[1px] -ml-[.5px] hidden -translate-x-1/2 -translate-y-1/2 font-mono text-[10px] select-none md:block">
-                +
-              </span>
-              <span className="text-foreground/35 dark:text-foreground/20 absolute top-2/3 left-2/3 z-10 -mt-[1px] -ml-[.5px] hidden -translate-x-1/2 -translate-y-1/2 font-mono text-[10px] select-none md:block">
-                +
-              </span>
-            </div>
-
-            <div className="my-4">
-              <div className="flex items-center gap-4">
-                <span className="text-foreground/90 dark:text-foreground/80 shrink-0 text-lg font-medium tracking-tight">
-                  Framework
-                </span>
-                <div className="border-foreground/10 flex-1 border-t"></div>
-              </div>
-              <p className="text-foreground/50 mt-1 text-[15px] sm:text-base">
-                The most comprehensive authentication framework for TypeScript.
-              </p>
-            </div>
-
-            <div className="mt-8 mb-10">
-              <div className="border-foreground/[0.1] bg-foreground/[0.01] overflow-hidden border-r">
-                <div className="flex flex-col lg:flex-row">
-                  <div className="min-h-[320px] min-w-0 flex-1 overflow-hidden sm:min-h-[360px] lg:h-[400px]">
-                    <AnimatePresence mode="wait" initial={false}>
-                      <motion.div
-                        key={frameworkTab}
-                        initial={{ opacity: 0, y: 6 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -4 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="h-full pr-3 pb-5 sm:pr-5"
-                      >
-                        {frameworkTab === "declarative" && <ServerClientTabs />}
-                        {frameworkTab === "database" && <DatabaseSection />}
-                        {frameworkTab === "oauth" && <SocialProvidersSection />}
-                        {frameworkTab === "integrations" && (
-                          <IntegrationsSection />
-                        )}
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
-
-                  <div className="border-foreground/[0.1] flex flex-row overflow-x-auto border-t bg-neutral-50 lg:w-56 lg:shrink-0 lg:flex-col lg:overflow-visible lg:border-t-0 lg:border-l dark:bg-black">
-                    {[
-                      { id: "declarative", label: "Declarative Config" },
-                      { id: "database", label: "Bring Your Own Database" },
-                      { id: "oauth", label: "OAuth Providers" },
-                      { id: "integrations", label: "Integrations" },
-                    ].map((tab) => (
-                      <button
-                        key={tab.id}
-                        type="button"
-                        onClick={() =>
-                          setFrameworkTab(
-                            tab.id as
-                              | "declarative"
-                              | "database"
-                              | "oauth"
-                              | "integrations"
-                          )
-                        }
-                        className={cn(
-                          "border-foreground/[0.08] relative flex-1 border-r px-3 py-2.5 text-left font-mono text-[10px] tracking-wider whitespace-nowrap uppercase transition-colors last:border-r-0 sm:px-4 sm:py-3 sm:text-[11px] lg:flex-none lg:border-r-0 lg:border-b lg:text-xs lg:whitespace-normal lg:last:border-b-0",
-                          frameworkTab === tab.id
-                            ? "text-foreground/85 bg-foreground/[0.04]"
-                            : "text-foreground/45 hover:text-foreground/70"
-                        )}
-                      >
-                        {tab.id === "database" ? (
-                          <>
-                            Bring Your Own{" "}
-                            <span className="text-amber-600 dark:text-amber-400">
-                              Database
-                            </span>
-                          </>
-                        ) : (
-                          tab.label
-                        )}
-                        {frameworkTab === tab.id && (
-                          <span className="bg-foreground/65 absolute inset-y-0 right-0 hidden w-[1.5px] lg:block" />
-                        )}
-                      </button>
-                    ))}
-                    <div className="hidden flex-1 items-end p-4 lg:flex">
-                      <p className="text-foreground/60 dark:text-foreground/50 text-[13px] leading-relaxed">
-                        {frameworkTab === "declarative" &&
-                          "No dashboard clicks. Your auth lives in code — version controlled, type-safe, and reviewable in PRs."}
-                        {frameworkTab === "database" &&
-                          "Use any database. Connect with a connection string or your favorite ORM. Your data stays yours."}
-                        {frameworkTab === "oauth" &&
-                          "40+ preconfigured providers. Add Google, GitHub, Apple, and more in seconds."}
-                        {frameworkTab === "integrations" &&
-                          "Works with every major framework. First-class support for 20+ integrations."}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <PluginEcosystem />
-              </div>
-            </div>
 
             {/* Infrastructure */}
             <div className="relative mt-8 pt-6 pb-2">
@@ -1973,30 +1234,71 @@ export function HeroReadMe({
               </div>
 
               <div className="relative z-10 mb-6">
-                <div className="mb-2 flex items-center gap-4">
-                  <span className="text-foreground/90 dark:text-foreground/80 shrink-0 text-lg font-medium tracking-tight">
-                    Infrastructure
-                  </span>
-                  <div className="border-foreground/10 flex-1 border-t" />
+                <div className="grid grid-cols-2 gap-4 xl:grid-cols-9">
+                  <div className="xl:col-span-4">
+                    <Select
+                      defaultValue={style || defaultStyle}
+                      onValueChange={onStyleChange}
+                    >
+                      <SelectTrigger
+                        aria-label="Select style"
+                        className={cn("w-full rounded-none")}
+                      >
+                        <SelectValue
+                          placeholder="select a style"
+                          className="text-muted-foreground"
+                        >
+                          <span className="text-muted-foreground">style:</span>{" "}
+                          <span className="mr-2 font-medium capitalize">
+                            {style || defaultStyle}
+                          </span>
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent className={"rounded-none"}>
+                        <SelectGroup>
+                          {stylesDataList.map((style) => {
+                            const hoverBgColor = `hover:bg-${getStyleVariablesPrefix(
+                              style.name
+                            )}-primary`;
+                            const hoverTextColor = `hover:text-${getStyleVariablesPrefix(
+                              style.name
+                            )}-primary-foreground`;
+
+                            const focusBgColor = `focus:bg-${getStyleVariablesPrefix(
+                              style.name
+                            )}-primary`;
+                            const focusTextColor = `focus:text-${getStyleVariablesPrefix(
+                              style.name
+                            )}-primary-foreground`;
+
+                            return (
+                              <SelectItem
+                                value={style.name}
+                                key={style.name}
+                                className={`${hoverBgColor} ${hoverTextColor} ${focusBgColor} ${focusTextColor} rounded-none capitalize`}
+                              >
+                                {style.title}
+                              </SelectItem>
+                            );
+                          })}
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="xl:col-span-4">
+                    <ThemePaletteSelect />
+                  </div>
+                  <div className="xl:col-span-1">
+                    <Button className="w-full rounded-none font-mono font-normal uppercase">
+                      Get Code
+                    </Button>
+                  </div>
                 </div>
-                <p className="text-foreground/75 dark:text-foreground/65 text-[15px] leading-relaxed sm:text-base">
-                  Connect to our infrastructure and power your self-hosted
-                  Better Auth with a dashboard, audit logs, security detection,
-                  enterprise features, and more.
-                </p>
               </div>
 
               {/* Dashboard video */}
-              <div
-                className="border-foreground/[0.08] relative z-10 overflow-hidden border"
-                style={{
-                  maskImage:
-                    "linear-gradient(to bottom, black 60%, transparent 100%)",
-                  WebkitMaskImage:
-                    "linear-gradient(to bottom, black 60%, transparent 100%)",
-                }}
-              >
-                <div className="bg-foreground/[0.02] border-foreground/[0.06] flex items-center justify-between border-b px-4 py-2">
+              <div className="border-foreground/8 relative z-10 overflow-hidden border">
+                <div className="bg-foreground/2 border-foreground/6 flex items-center justify-between border-b px-4 py-2">
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1.5">
                       <span className="bg-foreground/10 size-2 rounded-full" />
@@ -2004,10 +1306,10 @@ export function HeroReadMe({
                       <span className="bg-foreground/10 size-2 rounded-full" />
                     </div>
                     <span className="text-foreground/30 ml-2 font-mono text-[10px]">
-                      dash.better-auth.com
+                      dash.shadcnmarketplace.com
                     </span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  {/* <div className="flex items-center gap-3">
                     {["Overview", "Users", "Orgs", "Events"].map((tab, i) => (
                       <span
                         key={tab}
@@ -2019,303 +1321,16 @@ export function HeroReadMe({
                         {tab}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="overflow-hidden" suppressHydrationWarning>
                   <iframe
-                    src="/example/spectrum/music"
+                    src={`/example/${style || defaultStyle}/music`}
                     // className="h-full w-full"
                     className="-mt-[2px] aspect-[2528/1440] h-auto w-full bg-cover"
                   />
                   {/* <DemoVideo /> */}
                 </div>
-              </div>
-
-              {/* Feature grid — 3 columns */}
-              <div className="relative z-10 -mx-px mt-4 grid grid-cols-1 sm:grid-cols-3">
-                {[
-                  {
-                    title: "Dashboard",
-                    features: [
-                      "User management",
-                      "Session monitoring",
-                      "Organization oversight",
-                      "User analytics",
-                    ],
-                  },
-                  {
-                    title: "Audit Logs",
-                    features: [
-                      "Auto-captured events",
-                      "Filter & search",
-                      "Configurable retention",
-                      "Log drain to SIEM",
-                    ],
-                  },
-                  {
-                    title: "Enterprise",
-                    features: [
-                      "Self-service SSO",
-                      "SCIM provisioning",
-                      "Directory sync",
-                      "RBAC",
-                    ],
-                  },
-                ].map((group) => (
-                  <div
-                    key={group.title}
-                    className="border-foreground/[0.06] relative -mt-px overflow-hidden border-t border-r border-b border-dashed p-4 first:border-l"
-                  >
-                    {group.title === "Dashboard" && (
-                      <div
-                        className="pointer-events-none absolute inset-0"
-                        style={{
-                          backgroundImage:
-                            "radial-gradient(circle, rgb(180 160 130 / 0.3) 1.2px, transparent 1.2px)",
-                          backgroundSize: "6px 6px",
-                          maskImage:
-                            "linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 45%)",
-                          WebkitMaskImage:
-                            "linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 45%)",
-                        }}
-                      />
-                    )}
-                    <h4 className="text-foreground/90 dark:text-foreground/75 relative mb-3 font-mono text-[11px] font-semibold tracking-widest uppercase sm:text-xs">
-                      {group.title}
-                    </h4>
-                    <ul className="space-y-1.5">
-                      {group.features.map((f) => (
-                        <li
-                          key={f}
-                          className="text-foreground/70 dark:text-foreground/55 flex items-start gap-2 text-[13px] sm:text-[14px]"
-                        >
-                          <span className="text-foreground/35 mt-0.5 shrink-0 font-mono text-[11px] leading-none select-none">
-                            +
-                          </span>
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    {/* Enterprise half-circle with provider icons */}
-                    {group.title === "Enterprise" && (
-                      <div className="pointer-events-none absolute top-1/2 right-0 h-[160px] w-[160px] translate-x-1/2 -translate-y-1/2">
-                        {/* Half-circle arcs */}
-                        <svg
-                          className="absolute inset-0 h-full w-full"
-                          viewBox="0 0 160 160"
-                        >
-                          <circle
-                            cx="80"
-                            cy="80"
-                            r="68"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="0.75"
-                            className="text-foreground/20"
-                            strokeDasharray="3 3"
-                          />
-                          <circle
-                            cx="80"
-                            cy="80"
-                            r="44"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="0.75"
-                            className="text-foreground/12"
-                            strokeDasharray="2 4"
-                          />
-                        </svg>
-                        {/* Okta — 270° top of outer arc */}
-                        <div className="absolute top-0 left-[68px] flex size-6 items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            viewBox="0 0 256 256"
-                            className="text-foreground/60"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="m140.844 1.778l-5.266 64.853a66 66 0 0 0-7.542-.427c-3.203 0-6.334.214-9.393.712l-2.99-31.432a1.72 1.72 0 0 1 1.709-1.848h5.337l-2.562-31.787C120.066.853 120.848 0 121.774 0h17.434c.996 0 1.779.853 1.636 1.849zm-43.976 3.2c-.285-.925-1.281-1.494-2.206-1.138L78.295 9.813c-.925.356-1.352 1.423-.925 2.276l13.307 29.013l-5.052 1.85c-.926.355-1.352 1.421-.926 2.275l13.592 28.515a61 61 0 0 1 15.868-6.044L96.94 4.978zM56.734 23.04l37.643 53.049c-4.768 3.129-9.108 6.827-12.809 11.093L59.011 64.996a1.72 1.72 0 0 1 .071-2.49l4.127-3.413L40.794 36.41c-.711-.711-.64-1.849.142-2.489l13.307-11.164c.783-.64 1.85-.498 2.42.284zM25.139 53.76c-.783-.569-1.921-.284-2.42.569l-8.68 15.075c-.499.854-.143 1.92.71 2.347L43.64 85.404l-2.704 4.623c-.498.853-.142 1.99.783 2.346l28.749 13.156a60.2 60.2 0 0 1 8.254-14.791zM3.862 94.72c.143-.996 1.139-1.564 2.064-1.351l62.976 16.427a62.3 62.3 0 0 0-2.704 16.782l-31.524-2.56a1.642 1.642 0 0 1-1.494-1.991l.925-5.263l-31.808-2.986c-.996-.071-1.637-.996-1.495-1.991l2.99-17.138zm-2.348 42.524c-.996.072-1.637.996-1.494 1.992l3.06 17.137c.142.996 1.138 1.565 2.063 1.351l30.883-8.035l.925 5.262c.143.996 1.139 1.565 2.064 1.351l30.456-8.39c-1.779-5.263-2.917-10.88-3.202-16.64l-64.826 5.972zM11.62 182.33c-.498-.853-.143-1.92.711-2.347l58.778-27.875c2.206 5.262 5.195 10.169 8.753 14.577L54.1 185.031c-.783.569-1.921.356-2.42-.498l-2.704-4.693l-26.257 18.133c-.783.57-1.922.285-2.42-.569l-8.752-15.075zm71.23-12.231L37.094 216.39c-.712.711-.64 1.849.142 2.489l13.378 11.164c.783.64 1.85.498 2.42-.284l18.501-26.027l4.127 3.485c.783.64 1.922.498 2.49-.356l17.933-26.026c-4.839-2.987-9.322-6.614-13.165-10.738zm-9.037 74.31c-.925-.355-1.352-1.421-.925-2.275L100 182.97c4.98 2.56 10.389 4.48 16.01 5.547l-7.97 30.577c-.213.925-1.28 1.494-2.205 1.138l-5.052-1.849l-8.468 30.791c-.285.925-1.281 1.494-2.206 1.138l-16.367-5.973zm46.68-55.11l-5.265 64.853c-.071.996.711 1.849 1.637 1.849h17.434c.996 0 1.779-.853 1.636-1.849l-2.561-31.787h5.336a1.72 1.72 0 0 0 1.708-1.848l-2.988-31.432c-3.06.498-6.191.712-9.393.712c-2.562 0-5.053-.143-7.543-.498m62.763-175.574c.427-.924 0-1.92-.925-2.275l-16.366-5.973c-.926-.356-1.922.213-2.206 1.137l-8.468 30.791l-5.053-1.848c-.925-.356-1.921.213-2.206 1.137l-7.97 30.578c5.693 1.138 11.03 3.058 16.011 5.547zm35.722 25.814L173.222 85.83a62 62 0 0 0-13.165-10.738l17.933-26.026c.569-.783 1.707-.996 2.49-.356l4.127 3.485l18.502-26.027c.57-.782 1.708-.925 2.42-.285l13.377 11.165c.783.64.783 1.778.143 2.489zm24.764 36.409c.925-.427 1.21-1.494.711-2.347L235.7 58.524c-.498-.853-1.637-1.066-2.42-.568l-26.257 18.133l-2.704-4.622c-.499-.854-1.637-1.138-2.42-.498l-25.76 18.347c3.558 4.408 6.476 9.315 8.753 14.577l58.778-27.875zm9.25 23.609l2.99 17.137c.142.996-.499 1.85-1.495 1.991l-64.826 6.045c-.285-5.831-1.424-11.378-3.203-16.64l30.457-8.391c.925-.285 1.921.355 2.063 1.35l.925 5.263l30.884-8.035c.925-.214 1.92.355 2.063 1.35zm-2.917 62.933c.925.213 1.921-.356 2.064-1.351L255.126 144c.143-.996-.498-1.849-1.494-1.991l-31.808-2.987l.925-5.262c.142-.996-.498-1.849-1.495-1.991l-31.523-2.56a62.3 62.3 0 0 1-2.704 16.782l62.976 16.427zM233.28 201.6c-.498.853-1.636 1.067-2.419.569l-53.583-36.978a60.2 60.2 0 0 0 8.254-14.791l28.749 13.156c.925.426 1.28 1.493.783 2.346l-2.704 4.622l28.89 13.654c.854.426 1.21 1.493.712 2.346zm-71.657-21.831l37.643 53.049c.57.782 1.708.924 2.42.284l13.306-11.164c.783-.64.783-1.778.143-2.49l-22.415-22.684l4.127-3.413c.783-.64.783-1.778.07-2.489l-22.557-22.186c-3.771 4.266-8.04 8.035-12.808 11.093zm-.356 72.249c-.925.355-1.921-.214-2.206-1.138l-17.22-62.72a61 61 0 0 0 15.868-6.044l13.592 28.515c.426.925 0 1.991-.926 2.276l-5.052 1.849l13.307 29.013c.427.924 0 1.92-.925 2.275l-16.367 5.974z"
-                            />
-                          </svg>
-                        </div>
-                        {/* Microsoft — 225° upper-left of outer arc */}
-                        <div className="absolute top-[20px] left-[20px] flex size-6 items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="13"
-                            height="13"
-                            viewBox="0 0 256 256"
-                          >
-                            <path
-                              fill="#F1511B"
-                              d="M121.666 121.666H0V0h121.666z"
-                            />
-                            <path
-                              fill="#80CC28"
-                              d="M256 121.666H134.335V0H256z"
-                            />
-                            <path
-                              fill="#00ADEF"
-                              d="M121.663 256.002H0V134.336h121.663z"
-                            />
-                            <path
-                              fill="#FBBC09"
-                              d="M256 256.002H134.335V134.336H256z"
-                            />
-                          </svg>
-                        </div>
-                        {/* Google — 180° leftmost of outer arc */}
-                        <div className="absolute top-[68px] left-0 flex size-6 items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="13"
-                            height="13"
-                            viewBox="0 0 16 16"
-                          >
-                            <g
-                              fill="none"
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                            >
-                              <path
-                                fill="#f44336"
-                                d="M7.209 1.061c.725-.081 1.154-.081 1.933 0a6.57 6.57 0 0 1 3.65 1.82a100 100 0 0 0-1.986 1.93q-1.876-1.59-4.188-.734q-1.696.78-2.362 2.528a78 78 0 0 1-2.148-1.658a.26.26 0 0 0-.16-.027q1.683-3.245 5.26-3.86"
-                                opacity=".987"
-                              />
-                              <path
-                                fill="#ffc107"
-                                d="M1.946 4.92q.085-.013.161.027a78 78 0 0 0 2.148 1.658A7.6 7.6 0 0 0 4.04 7.99q.037.678.215 1.331L2 11.116Q.527 8.038 1.946 4.92"
-                                opacity=".997"
-                              />
-                              <path
-                                fill="#448aff"
-                                d="M12.685 13.29a26 26 0 0 0-2.202-1.74q1.15-.812 1.396-2.228H8.122V6.713q3.25-.027 6.497.055q.616 3.345-1.423 6.032a7 7 0 0 1-.51.49"
-                                opacity=".999"
-                              />
-                              <path
-                                fill="#43a047"
-                                d="M4.255 9.322q1.23 3.057 4.51 2.854a3.94 3.94 0 0 0 1.718-.626q1.148.812 2.202 1.74a6.62 6.62 0 0 1-4.027 1.684a6.4 6.4 0 0 1-1.02 0Q3.82 14.524 2 11.116z"
-                                opacity=".993"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                        {/* Keycloak — 135° lower-left of outer arc */}
-                        <div className="absolute top-[116px] left-[20px] flex size-6 items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="13"
-                            height="13"
-                            viewBox="0 0 24 24"
-                            className="text-foreground/60"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="m18.742 1.182l-12.493.002C4.155 4.784 2.079 8.393 0 12.002c2.071 3.612 4.162 7.214 6.252 10.816l12.49-.004l3.089-5.404h2.158v-.002H24L23.996 6.59h-2.168zM8.327 4.792h2.081l1.04 1.8l-3.12 5.413l3.117 5.403l-1.035 1.81H8.327a2048 2048 0 0 0-4.168-7.204zm6.241 0l2.086.003q2.088 3.608 4.166 7.222l-4.167 7.2h-2.08c-.382-.562-1.038-1.808-1.038-1.808l3.123-5.405l-3.124-5.413z"
-                            />
-                          </svg>
-                        </div>
-                        {/* Ping Identity — 90° bottom of outer arc */}
-                        <div className="absolute top-[136px] left-[68px] flex size-6 items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="12"
-                            height="12"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M23.7476 0H0V23.3473H23.7476V0Z"
-                              fill="#D20E0F"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {/* Sentinel row */}
-              <div className="border-foreground/[0.06] relative z-10 -mx-px -mt-px border border-dashed p-4">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                  <div className="sm:w-1/3">
-                    <div className="mb-1 flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-foreground/70"
-                      >
-                        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-                      </svg>
-                      <h4 className="text-foreground/90 dark:text-foreground/75 font-mono text-[11px] font-semibold tracking-widest uppercase sm:text-xs">
-                        Sentinel
-                      </h4>
-                    </div>
-                    <p className="text-foreground/60 dark:text-foreground/50 text-[13px] leading-relaxed sm:text-[14px]">
-                      Real-time threat detection before it reaches your users.
-                    </p>
-                  </div>
-                  <div className="flex flex-1 flex-wrap gap-1.5">
-                    {[
-                      "Bot Detection",
-                      "Brute Force",
-                      "Breached Passwords",
-                      "Impossible Travel",
-                      "Rate Limiting",
-                      "Geo Blocking",
-                      "Suspicious IPs",
-                      "Disposable Emails",
-                      "Email Abuse",
-                      "Free Trial Abuse",
-                    ].map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-foreground/70 dark:text-foreground/55 border-foreground/[0.12] bg-foreground/[0.03] hover:bg-foreground/[0.06] hover:text-foreground/80 dark:hover:text-foreground/65 inline-flex items-center border px-2 py-1 font-mono text-[10px] tracking-wider uppercase transition-colors sm:text-[11px]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA */}
-              <div className="border-foreground/[0.08] bg-foreground/[0.01] relative z-10 mt-4 flex items-center justify-between border border-dashed px-6 py-5">
-                <div className="flex flex-col gap-0.5">
-                  <span className="text-foreground/90 dark:text-foreground/85 text-[13px] font-medium sm:text-[14px]">
-                    Explore plans
-                  </span>
-                  <span className="text-foreground/75 dark:text-foreground/60 text-[11px] sm:text-[12px]">
-                    Dashboard, audit logs, security detection, transactional
-                    comms, and more.
-                  </span>
-                </div>
-                <Link
-                  href="/pricing"
-                  className="bg-foreground text-background group ml-4 inline-flex shrink-0 items-center gap-1.5 px-4 py-2.5 font-mono text-[11px] tracking-widest uppercase transition-all hover:opacity-90"
-                >
-                  View Plans
-                  <svg
-                    className="h-2.5 w-2.5 opacity-70 transition-transform group-hover:translate-x-0.5"
-                    viewBox="0 0 10 10"
-                    fill="none"
-                  >
-                    <path
-                      d="M1 5H9M9 5L5 1M9 5L5 9"
-                      stroke="currentColor"
-                      strokeWidth="1.2"
-                    />
-                  </svg>
-                </Link>
               </div>
             </div>
 

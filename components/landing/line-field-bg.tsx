@@ -18,6 +18,7 @@ precision highp float;
 uniform float u_time;
 uniform vec2 u_resolution;
 uniform vec2 u_center;
+uniform vec3 u_color;
 
 void main() {
   vec2 uv = gl_FragCoord.xy / u_resolution.xy;
@@ -116,7 +117,7 @@ void main() {
   brightness *= 0.9;
   brightness = clamp(brightness, 0.0, 1.0);
 
-  gl_FragColor = vec4(vec3(brightness), 1.0);
+  gl_FragColor = vec4(u_color * brightness, 1.0);
 }`;
 
 export function LineFieldBackground() {
@@ -165,6 +166,7 @@ export function LineFieldBackground() {
     const uTime = gl.getUniformLocation(program, "u_time");
     const uResolution = gl.getUniformLocation(program, "u_resolution");
     const uCenter = gl.getUniformLocation(program, "u_center");
+    const uColor = gl.getUniformLocation(program, "u_color");
 
     const startTime = performance.now();
 
@@ -179,6 +181,23 @@ export function LineFieldBackground() {
     resize();
     window.addEventListener("resize", resize);
 
+    const updateColor = () => {
+      const color = getComputedStyle(canvas)
+        .getPropertyValue("--line-color")
+        .trim();
+
+      // Convert CSS color to RGB.
+      const rgb = document.createElement("canvas").getContext("2d")!;
+      rgb.fillStyle = color;
+      const hex = rgb.fillStyle;
+
+      const r = parseInt(hex.slice(1, 3), 16) / 255;
+      const g = parseInt(hex.slice(3, 5), 16) / 255;
+      const b = parseInt(hex.slice(5, 7), 16) / 255;
+
+      gl.uniform3f(uColor, r, g, b);
+    };
+
     const draw = () => {
       const elapsed = (performance.now() - startTime) / 1000;
 
@@ -190,6 +209,10 @@ export function LineFieldBackground() {
       gl.uniform1f(uTime, elapsed);
       gl.uniform2f(uResolution, canvas.width, canvas.height);
       gl.uniform2f(uCenter, 0.5, centerY);
+      // gl.uniform3f(uColor, 0.4, 0.6, 1.0);
+
+      updateColor();
+
       gl.drawArrays(gl.TRIANGLES, 0, 6);
 
       frameRef.current = requestAnimationFrame(draw);
@@ -209,12 +232,12 @@ export function LineFieldBackground() {
 
   return (
     <div
-      className="bg-background pointer-events-none absolute inset-0 hidden overflow-hidden lg:block"
+      className="bg-background pointer-events-none absolute inset-0 hidden overflow-hidden [--line-color:var(--color-indigo-500)] lg:block dark:[--line-color:var(--color-indigo-400)]"
       aria-hidden="true"
     >
       <canvas
         ref={canvasRef}
-        className="h-full w-full opacity-60 invert dark:opacity-70 dark:invert-0"
+        className="h-full w-full opacity-80 invert dark:opacity-70 dark:invert-0"
       />
     </div>
   );

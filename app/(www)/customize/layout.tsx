@@ -6,7 +6,7 @@ import { PresetSidebar } from "@/components/preset-sidebar";
 import { listStylesWithColors } from "@/lib/services/presets";
 import { PreviewSurface } from "@/components/preview-surface";
 
-export default async function FeedLayout({
+export default async function CustomizeLayout({
   children,
 }: {
   children: React.ReactNode;

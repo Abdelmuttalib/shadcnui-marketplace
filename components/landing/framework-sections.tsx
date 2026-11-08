@@ -843,7 +843,7 @@ export const authClient = createAuthClient({
 export function ServerClientTabs() {
   return (
     <div className="relative">
-      <div className="from-foreground/[0.02] to-foreground/[0.02] dark:from-foreground/[0.03] dark:to-foreground/[0.03] pointer-events-none absolute -inset-4 rounded-2xl bg-gradient-to-br via-transparent blur-xl" />
+      <div className="from-foreground/2 to-foreground/2 dark:from-foreground/[0.03] dark:to-foreground/[0.03] pointer-events-none absolute -inset-4 rounded-2xl bg-gradient-to-br via-transparent blur-xl" />
 
       <div className="relative overflow-hidden bg-neutral-50 dark:bg-black">
         <div className="px-3 py-1.5">
@@ -901,7 +901,7 @@ export function DatabaseSection() {
       <div className="mx-auto w-full max-w-[920px]">
         <div className="grid grid-cols-4 gap-0 sm:grid-cols-6">
           {/* PostgreSQL — intentionally larger feature tile */}
-          <div className="border-foreground/[0.06] hover:bg-foreground/[0.02] relative col-span-2 row-span-2 min-h-[200px] cursor-default overflow-hidden border-r border-b border-dashed p-3 transition-colors sm:col-span-3 sm:min-h-[240px] sm:p-4">
+          <div className="border-foreground/6 hover:bg-foreground/2 relative col-span-2 row-span-2 min-h-[200px] cursor-default overflow-hidden border-r border-b border-dashed p-3 transition-colors sm:col-span-3 sm:min-h-[240px] sm:p-4">
             <div className="mb-2 flex items-center gap-2">
               <span className="text-foreground/80 dark:text-foreground/70 [&_svg]:h-5 [&_svg]:w-5 [&_svg]:opacity-100 [&_svg]:grayscale-0">
                 {pg.icon()}
@@ -927,7 +927,7 @@ export function DatabaseSection() {
           {others.map((db) => (
             <div
               key={db.name}
-              className="border-foreground/[0.06] hover:bg-foreground/[0.02] flex cursor-default flex-col items-center justify-center gap-2 border-r border-b border-dashed py-4 transition-colors sm:py-5"
+              className="border-foreground/6 hover:bg-foreground/2 flex cursor-default flex-col items-center justify-center gap-2 border-r border-b border-dashed py-4 transition-colors sm:py-5"
             >
               <span className="text-foreground/80 dark:text-foreground/70 [&_svg]:h-6 [&_svg]:w-6">
                 {db.icon()}
@@ -970,7 +970,7 @@ export function SocialProvidersSection() {
               return (
                 <span
                   key={provider}
-                  className="group text-foreground/80 dark:text-foreground/70 border-foreground/[0.06] hover:bg-foreground/[0.03] inline-flex cursor-default flex-col items-center justify-center gap-1.5 border-b border-dashed bg-transparent py-2 transition-colors"
+                  className="group text-foreground/80 dark:text-foreground/70 border-foreground/6 hover:bg-foreground/[0.03] inline-flex cursor-default flex-col items-center justify-center gap-1.5 border-b border-dashed bg-transparent py-2 transition-colors"
                 >
                   <span className="text-foreground/85 dark:text-foreground/75 inline-flex size-7 shrink-0 items-center justify-center [&_svg]:h-5 [&_svg]:w-5">
                     {Icon ? (
@@ -1132,7 +1132,7 @@ export function IntegrationsSection() {
             <Link
               key={fw.name}
               href={fw.href}
-              className="group border-foreground/[0.06] hover:bg-foreground/[0.02] -mx-2 flex items-center gap-3 border-b border-dashed px-2 py-2.5 transition-colors last:border-b-0"
+              className="group border-foreground/6 hover:bg-foreground/2 -mx-2 flex items-center gap-3 border-b border-dashed px-2 py-2.5 transition-colors last:border-b-0"
             >
               <span className="text-foreground/80 dark:text-foreground/70 group-hover:text-foreground/95 shrink-0 transition-colors [&_svg]:h-5 [&_svg]:w-5">
                 {Icon && <Icon />}
@@ -1197,7 +1197,7 @@ export function PluginEcosystem() {
     <div>
       <Link
         href="/docs/plugins"
-        className="text-foreground/35 dark:text-foreground/50 hover:text-foreground/55 border-foreground/[0.1] bg-foreground/[0.02] hover:bg-foreground/[0.04] mb-4 flex w-full items-center justify-between border-b border-dashed px-3 py-1.5 font-mono text-[10px] tracking-wider uppercase transition-colors"
+        className="text-foreground/35 dark:text-foreground/50 hover:text-foreground/55 border-foreground/[0.1] bg-foreground/2 hover:bg-foreground/[0.04] mb-4 flex w-full items-center justify-between border-b border-dashed px-3 py-1.5 font-mono text-[10px] tracking-wider uppercase transition-colors"
       >
         <span className="text-foreground/85 dark:text-foreground/75 text-xs">
           Plugin Ecosystem
@@ -1211,7 +1211,7 @@ export function PluginEcosystem() {
           {[...row1, ...row1].map((plugin, i) => (
             <span
               key={`${plugin.name}-${i}`}
-              className="text-foreground dark:text-foreground/90 border-foreground/[0.06] mr-1.5 inline-flex shrink-0 cursor-default items-center gap-1.5 rounded-sm border px-3 py-1.5 text-[11px] whitespace-nowrap"
+              className="text-foreground dark:text-foreground/90 border-foreground/6 mr-1.5 inline-flex shrink-0 cursor-default items-center gap-1.5 rounded-sm border px-3 py-1.5 text-[11px] whitespace-nowrap"
             >
               {plugin.name}
               <span className="text-foreground/50 font-mono text-[7px] tracking-wider uppercase">
@@ -1226,7 +1226,7 @@ export function PluginEcosystem() {
           {[...row2, ...row2].map((plugin, i) => (
             <span
               key={`${plugin.name}-${i}`}
-              className="text-foreground dark:text-foreground/90 border-foreground/[0.06] mr-1.5 inline-flex shrink-0 cursor-default items-center gap-1.5 rounded-sm border px-3 py-1.5 text-[11px] whitespace-nowrap"
+              className="text-foreground dark:text-foreground/90 border-foreground/6 mr-1.5 inline-flex shrink-0 cursor-default items-center gap-1.5 rounded-sm border px-3 py-1.5 text-[11px] whitespace-nowrap"
             >
               {plugin.name}
               <span className="text-foreground/50 font-mono text-[7px] tracking-wider uppercase">
@@ -1339,9 +1339,9 @@ export function AiNativeSection() {
         .
       </p>
 
-      <div className="border-foreground/[0.08] overflow-hidden border border-dashed">
+      <div className="border-foreground/8 overflow-hidden border border-dashed">
         {/* Prompt line */}
-        <div className="border-foreground/[0.06] bg-foreground/[0.015] flex items-center gap-2 border-b px-3 py-2">
+        <div className="border-foreground/6 bg-foreground/[0.015] flex items-center gap-2 border-b px-3 py-2">
           <span className="text-foreground/50 font-mono text-xs select-none">
             &rsaquo;
           </span>
@@ -1388,7 +1388,7 @@ export function AiNativeSection() {
         </div>
 
         {/* MCP clients */}
-        <div className="border-foreground/[0.06] bg-foreground/[0.015] border-t">
+        <div className="border-foreground/6 bg-foreground/[0.015] border-t">
           <div className="divide-foreground/[0.06] flex divide-x">
             {mcpClients.map((mc) => (
               <div key={mc.name} className="flex-1 px-3 py-2">

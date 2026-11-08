@@ -199,6 +199,22 @@ export function getStyleFontClassname(styleName: Style) {
   return `font-${style.font}`;
 }
 
+export function getStyleRadiusClassname(styleName: Style) {
+  const style = getStyleByName(styleName);
+
+  if (!style) return `rounded-[${DEFAULT_STYLE.defaultRadius}]`;
+
+  return `rounded-[${style.defaultRadius}]`;
+}
+
+export function getStyleRadius(styleName: Style) {
+  const style = getStyleByName(styleName);
+
+  if (!style) return DEFAULT_STYLE.defaultRadius;
+
+  return style.defaultRadius;
+}
+
 export function renderStyleCardShowcase(style: Style) {
   switch (style) {
     case "carbon":

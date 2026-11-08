@@ -13,6 +13,7 @@ import { blockCategories, BlockCategory } from "@/registry/registry-blocks";
 import { HalftoneBackground } from "@/components/landing/halftone-bg";
 import { SignatureMark } from "@/components/landing/signature-mark";
 import Footer from "@/components/landing/footer";
+import { LineFieldBackground } from "@/components/landing/line-field-bg";
 
 interface Props {
   params: { slug: string };
@@ -121,9 +122,9 @@ export default async function ComponentPage({ params }: Props) {
         <div className="text-foreground relative">
           <div className="flex flex-col lg:flex-row">
             {/* Left side — Community hero */}
-            <div className="border-foreground/6 relative hidden w-full shrink-0 overflow-clip border-b px-5 sm:px-6 lg:sticky lg:top-0 lg:block lg:h-dvh lg:w-[30%] lg:border-r lg:border-b-0 lg:px-10">
+            <div className="border-foreground/6 relative hidden w-full shrink-0 overflow-clip border-b px-5 sm:px-6 lg:sticky lg:top-0 lg:block lg:h-dvh lg:w-[30%] lg:border-r lg:border-b-0 lg:px-10 xl:w-[25%]">
               <div className="hidden lg:block">
-                <HalftoneBackground />
+                <LineFieldBackground />
               </div>
 
               <h2 className="mb-4 flex items-center gap-3 font-mono text-sm text-neutral-900 sm:mb-5 sm:text-[15px] dark:text-neutral-100">
@@ -135,17 +136,17 @@ export default async function ComponentPage({ params }: Props) {
                 title={blockPageTitle}
                 description={`${blockPageTitle} crafted with shadcn ui and tailwindcss. Copy & paste blocks directly to your project.`}
               />
-              <div className="absolute right-6 bottom-4 left-10 z-[3]">
+              <div className="absolute right-6 bottom-4 left-10 z-3">
                 <SignatureMark compact />
               </div>
             </div>
 
             {/* Right side — Stats & platforms */}
-            <div className="no-scrollbar relative w-full overflow-x-hidden lg:w-[70%]">
+            <div className="no-scrollbar relative w-full overflow-x-hidden lg:w-[70%] xl:w-[75%]">
               <div className="space-y-8 px-5 lg:p-8 lg:pt-20">
                 {/* Mobile header */}
                 <div className="border-foreground/6 relative -mx-5 mb-5 overflow-hidden border-b px-5 sm:-mx-6 sm:px-6 lg:hidden">
-                  <HalftoneBackground />
+                  <LineFieldBackground />
                   <div className="relative space-y-2 py-16">
                     <div className="flex items-center gap-1.5">
                       {/* <UsersIcon className="text-foreground/60 h-4 w-4" /> */}

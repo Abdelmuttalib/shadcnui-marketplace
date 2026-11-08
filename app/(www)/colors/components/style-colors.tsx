@@ -5,18 +5,27 @@ import { useState } from "react";
 import { Typography } from "@/components/ui/typography";
 import { Style, STYLES } from "@/hooks/use-style-store";
 import { getStyleVariablesPrefix } from "@/registry/styles-components";
+import { StyleFontWrapper } from "@/components/style-font-wrapper";
 
-export function StylesColors() {
+import { converter, formatCss, parse } from "culori";
+
+export function StylesColors({ hideVariables }: { hideVariables?: boolean }) {
   return (
     <>
       {STYLES.map((style) => (
-        <StyleColors key={style} style={style} />
+        <StyleColors key={style} style={style} hideVariables={hideVariables} />
       ))}
     </>
   );
 }
 
-function StyleColors({ style }: { style: Style }) {
+function StyleColors({
+  style,
+  hideVariables,
+}: {
+  style: Style;
+  hideVariables?: boolean;
+}) {
   const cssVariablesKeys = [
     "background",
     "foreground",
@@ -63,6 +72,8 @@ function StyleColors({ style }: { style: Style }) {
 
   const [copiedVariable, setCopiedVariable] = useState<string | null>(null);
 
+  const toOklch = converter("oklch");
+
   const copyColor = async (variable: string) => {
     const color = getComputedStyle(document.documentElement)
       .getPropertyValue(variable)
@@ -71,7 +82,21 @@ function StyleColors({ style }: { style: Style }) {
     if (!color) return;
 
     try {
-      await navigator.clipboard.writeText(color);
+      const parsedColor = parse(color);
+
+      if (!parsedColor) return;
+
+      const oklchColor = toOklch(parsedColor);
+
+      if (!oklchColor) return;
+
+      const formattedColor = `oklch(${Number(oklchColor.l.toFixed(4))} ${Number(oklchColor.c.toFixed(4))} ${Number(oklchColor.h.toFixed(2))})`;
+
+      // const formattedColor = `oklch(${oklchColor.l.toFixed(4)} ${oklchColor.c.toFixed(4)} ${oklchColor.h.toFixed(2)})`;
+
+      // const formattedColor = formatCss(oklchColor);
+
+      await navigator.clipboard.writeText(formattedColor);
 
       setCopiedVariable(variable);
 
@@ -96,17 +121,19 @@ function StyleColors({ style }: { style: Style }) {
   return (
     <div className="grid scroll-mt-16 gap-6" id={`${style}-colors`}>
       <div>
-        <Typography
-          as={"h2"}
-          variant="3xl/medium"
-          className="font-[490] tracking-tight"
-        >
-          <span className="capitalize">{style}</span> colors
-        </Typography>
+        <StyleFontWrapper sStyle={style}>
+          <Typography as={"h2"} variant="2xl/medium" className="tracking-tight">
+            <span className="capitalize">{style}</span> colors
+          </Typography>
+        </StyleFontWrapper>
       </div>
       <div className="grid grid-cols-1 gap-2 gap-y-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {styleSpecificVariables.map((variable) => {
           const isCopied = copiedVariable === variable;
+
+          const v = hideVariables
+            ? variable.replace(`-${stylePrefix}`, "")
+            : variable;
 
           return (
             <button
@@ -117,17 +144,17 @@ function StyleColors({ style }: { style: Style }) {
               title="Click to copy color"
             >
               <div
-                className="h-20 w-full rounded-md border transition-opacity group-hover:opacity-80"
+                className="group-hover:border-foreground h-20 w-full border transition-opacity group-hover:opacity-80"
                 style={{
                   backgroundColor: `var(${variable})`,
                 }}
               />
 
               <div className="flex flex-col gap-1">
-                <p className="font-mono text-sm font-medium">{variable}</p>
+                <p className="font-mono text-sm font-medium">{v}</p>
 
                 <p className="text-muted-foreground text-xs">
-                  {isCopied ? "Copied!" : `var(${variable})`}
+                  {isCopied ? "Copied!" : `var(${v})`}
                 </p>
               </div>
             </button>

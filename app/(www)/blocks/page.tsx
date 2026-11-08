@@ -15,6 +15,7 @@ import Image from "next/image";
 import { SearchIcon } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
+import { LineFieldBackground } from "@/components/landing/line-field-bg";
 
 // Icons - using text-foreground for theme support
 const GitHubIcon = ({ className }: { className?: string }) => (
@@ -261,10 +262,10 @@ export default function BlocksPageClient({ stats }: { stats: CommunityStats }) {
           {/* Left side — Community hero */}
           <div className="border-foreground/6 relative hidden w-full shrink-0 overflow-clip border-b px-5 sm:px-6 lg:sticky lg:top-0 lg:block lg:h-dvh lg:w-[30%] lg:border-r lg:border-b-0 lg:px-10">
             <div className="hidden lg:block">
-              <HalftoneBackground />
+              <LineFieldBackground />
             </div>
             <CommunityHero />
-            <div className="absolute right-6 bottom-4 left-10 z-[3]">
+            <div className="absolute right-6 bottom-4 left-10 z-3">
               <SignatureMark compact />
             </div>
           </div>

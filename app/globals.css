@@ -658,30 +658,30 @@
     */
 
   --neon-background: oklch(1 0 0);
-  --neon-foreground: oklch(18.08% 0.0139 258.36);
+  --neon-foreground: oklch(0.1808 0.0139 258.36);
   --neon-card: oklch(1 0 0);
-  --neon-card-foreground: oklch(18.08% 0.0139 258.36);
+  --neon-card-foreground: oklch(0.1808 0.0139 258.36);
   --neon-popover: oklch(1 0 0);
-  --neon-popover-foreground: oklch(18.08% 0.0139 258.36);
-  --neon-primary: oklch(63.01% 0.1238 162.83);
+  --neon-popover-foreground: oklch(0.1808 0.0139 258.36);
+  --neon-primary: oklch(0.6301 0.1238 162.83);
   --neon-primary-foreground: oklch(1 0 0);
-  --neon-secondary: oklch(18.08% 0.0139 258.36);
+  --neon-secondary: oklch(0.1808 0.0139 258.36);
   --neon-secondary-foreground: oklch(1 0 0);
-  --neon-muted: oklch(93% 0.0099 267.36);
-  --neon-muted-foreground: oklch(67% 0.0366 255);
-  --neon-accent: oklch(96% 0.0099 267.36);
-  --neon-accent-foreground: oklch(18.08% 0.0139 258.36);
-  --neon-destructive: oklch(58.37% 0.18361 3.33);
+  --neon-muted: oklch(0.93 0.0099 267.36);
+  --neon-muted-foreground: oklch(0.67 0.0366 255);
+  --neon-accent: oklch(0.96 0.0099 267.36);
+  --neon-accent-foreground: oklch(0.1808 0.0139 258.36);
+  --neon-destructive: oklch(0.5837 0.18361 3.33);
   --neon-destructive-foreground: oklch(1 0 0);
-  --neon-border: oklch(90% 0.0139 258.36);
-  --neon-input: oklch(90% 0.0139 258.36);
-  --neon-ring: oklch(75.01% 0.1238 162.83);
+  --neon-border: oklch(0.9 0.0139 258.36);
+  --neon-input: oklch(0.9 0.0139 258.36);
+  --neon-ring: oklch(0.7501 0.1238 162.83);
 
-  --neon-chart-1: oklch(73.81% 0.1275 282.83);
-  --neon-chart-2: oklch(85.98% 0.0772 183.48);
-  --neon-chart-3: oklch(18.08% 0.0139 258.36);
-  --neon-chart-4: oklch(79.68% 0.103455 257.2023);
-  --neon-chart-5: oklch(82.38% 0.0602 13.35);
+  --neon-chart-1: oklch(0.7381 0.1275 282.83);
+  --neon-chart-2: oklch(0.8598 0.0772 183.48);
+  --neon-chart-3: oklch(0.1808 0.0139 258.36);
+  --neon-chart-4: oklch(0.7968 0.103455 257.2023);
+  --neon-chart-5: oklch(0.8238 0.0602 13.35);
 
   --neon-radius: 0rem;
   --radius-neon-md: calc(var(--neon-radius) - 2px);
@@ -689,7 +689,7 @@
   --radius-neon-lg: calc(var(--neon-radius));
 
   --neon-sidebar-background: oklch(1 0 0);
-  --neon-sidebar-foreground: oklch(18.08% 0.0139 258.36);
+  --neon-sidebar-foreground: oklch(0.1808 0.0139 258.36);
   --neon-sidebar-primary: var(--neon-primary);
   --neon-sidebar-primary-foreground: var(--neon-primary-foreground);
   --neon-sidebar-accent: var(--neon-accent);

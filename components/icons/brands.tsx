@@ -30,6 +30,151 @@ export const brandIcons = {
       </svg>
     );
   },
+  shadcnMarketplaceWordmark: ({
+    className,
+    ...props
+  }: {
+    className?: string;
+  }) => {
+    return (
+      <>
+        <svg
+          width="200"
+          height="200"
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cn("stroke-background text-foreground", className)}
+          {...props}
+        >
+          <g transform="translate(15, 30) scale(0.7)">
+            <rect
+              x="30"
+              y="50"
+              width="140"
+              height="140"
+              fill="currentColor"
+            ></rect>
+            <circle
+              cx="100"
+              cy="50"
+              r="35"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="12"
+            ></circle>
+            <line
+              x1="55"
+              y1="150"
+              x2="130"
+              y2="80"
+              stroke="currentColor"
+              strokeWidth="12"
+              className="stroke-background dark:stroke-black"
+            ></line>
+            <line
+              x1="90"
+              y1="165"
+              x2="138"
+              y2="120"
+              stroke="currentColor"
+              strokeWidth="12"
+              className="stroke-background dark:stroke-black"
+            ></line>
+          </g>
+        </svg>
+        {/* <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 420 200"
+          className={cn("text-foreground h-auto w-35", className)}
+          aria-label="shadcn marketplace"
+          {...props}
+        >
+          <g transform="translate(15, 30) scale(0.7)">
+            <rect x="30" y="50" width="140" height="140" fill="currentColor" />
+
+            <circle
+              cx="100"
+              cy="50"
+              r="35"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="12"
+            />
+
+            <line
+              x1="55"
+              y1="150"
+              x2="130"
+              y2="80"
+              stroke="var(--background)"
+              strokeWidth="12"
+            />
+
+            <line
+              x1="90"
+              y1="165"
+              x2="138"
+              y2="120"
+              stroke="var(--background)"
+              strokeWidth="12"
+            />
+          </g>
+
+          <text
+            x="165"
+            y="112"
+            fill="currentColor"
+            fontSize="24"
+            fontWeight="700"
+            fontFamily="Arial, sans-serif"
+            letterSpacing="-1"
+          >
+            shadcn marketplace
+          </text>
+        </svg> */}
+      </>
+    );
+  },
+  shadcnMarketplaceMark: ({ className, ...props }: { className?: string }) => {
+    return (
+      <svg
+        width="200"
+        height="200"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        className={cn("stroke-background text-foreground", className)}
+        {...props}
+      >
+        <rect x="30" y="50" width="140" height="140" fill="currentColor"></rect>
+        <circle
+          cx="100"
+          cy="50"
+          r="35"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="12"
+        ></circle>
+        <line
+          x1="55"
+          y1="150"
+          x2="130"
+          y2="80"
+          stroke="currentColor"
+          strokeWidth="12"
+          className="stroke-background dark:stroke-black"
+        ></line>
+        <line
+          x1="90"
+          y1="165"
+          x2="138"
+          y2="120"
+          stroke="currentColor"
+          strokeWidth="12"
+          className="stroke-background dark:stroke-black"
+        ></line>
+      </svg>
+    );
+  },
   nextJS: (props?: SVGProps<SVGSVGElement>) => (
     <svg
       className={props?.className}

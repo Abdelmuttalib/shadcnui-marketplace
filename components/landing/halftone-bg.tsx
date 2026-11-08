@@ -14,6 +14,7 @@ precision highp float;
 
 uniform float u_time;
 uniform vec2 u_resolution;
+uniform vec3 u_color;
 
 //
 // Simplex 2D noise (Ashima Arts)
@@ -100,106 +101,148 @@ void main() {
   float vignette = 1.0 - dot(vc, vc) * 0.8;
   brightness *= vignette;
 
-  gl_FragColor = vec4(vec3(brightness), 1.0);
+	gl_FragColor = vec4(u_color * brightness, 1.0);
 }`;
 
 export function HalftoneBackground() {
-	const canvasRef = useRef<HTMLCanvasElement>(null);
-	const frameRef = useRef<number>(0);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const frameRef = useRef<number>(0);
 
-	useLayoutEffect(() => {
-		const canvas = canvasRef.current;
-		if (!canvas) return;
+  useLayoutEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-		const gl = canvas.getContext("webgl", {
-			alpha: false,
-			antialias: false,
-			preserveDrawingBuffer: false,
-		});
-		if (!gl) return;
+    const gl = canvas.getContext("webgl", {
+      alpha: false,
+      antialias: false,
+      preserveDrawingBuffer: false,
+    });
+    if (!gl) return;
 
-		// Compile shaders
-		function createShader(type: number, source: string) {
-			const shader = gl!.createShader(type)!;
-			gl!.shaderSource(shader, source);
-			gl!.compileShader(shader);
-			return shader;
-		}
+    // Compile shaders
+    function createShader(type: number, source: string) {
+      const shader = gl!.createShader(type)!;
+      gl!.shaderSource(shader, source);
+      gl!.compileShader(shader);
+      return shader;
+    }
 
-		const vs = createShader(gl.VERTEX_SHADER, VERTEX_SHADER);
-		const fs = createShader(gl.FRAGMENT_SHADER, FRAGMENT_SHADER);
+    const vs = createShader(gl.VERTEX_SHADER, VERTEX_SHADER);
+    const fs = createShader(gl.FRAGMENT_SHADER, FRAGMENT_SHADER);
 
-		const program = gl.createProgram()!;
-		gl.attachShader(program, vs);
-		gl.attachShader(program, fs);
-		gl.linkProgram(program);
-		gl.useProgram(program);
+    const program = gl.createProgram()!;
+    gl.attachShader(program, vs);
+    gl.attachShader(program, fs);
+    gl.linkProgram(program);
+    gl.useProgram(program);
 
-		// Fullscreen quad
-		const buffer = gl.createBuffer();
-		gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-		gl.bufferData(
-			gl.ARRAY_BUFFER,
-			new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]),
-			gl.STATIC_DRAW,
-		);
+    // Fullscreen quad
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(
+      gl.ARRAY_BUFFER,
+      new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]),
+      gl.STATIC_DRAW
+    );
 
-		const aPosition = gl.getAttribLocation(program, "a_position");
-		gl.enableVertexAttribArray(aPosition);
-		gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
+    const aPosition = gl.getAttribLocation(program, "a_position");
+    gl.enableVertexAttribArray(aPosition);
+    gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
 
-		const uTime = gl.getUniformLocation(program, "u_time");
-		const uResolution = gl.getUniformLocation(program, "u_resolution");
+    const uTime = gl.getUniformLocation(program, "u_time");
+    const uResolution = gl.getUniformLocation(program, "u_resolution");
+    const uColor = gl.getUniformLocation(program, "u_color");
 
-		const startTime = performance.now();
+    const startTime = performance.now();
 
-		const resize = () => {
-			const dpr = Math.min(window.devicePixelRatio || 1, 2);
-			const scale = 0.5 * dpr;
-			canvas.width = canvas.offsetWidth * scale;
-			canvas.height = canvas.offsetHeight * scale;
-			gl.viewport(0, 0, canvas.width, canvas.height);
-		};
+    const resize = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const scale = 0.5 * dpr;
+      canvas.width = canvas.offsetWidth * scale;
+      canvas.height = canvas.offsetHeight * scale;
+      gl.viewport(0, 0, canvas.width, canvas.height);
+    };
 
-		resize();
-		window.addEventListener("resize", resize);
+    resize();
+    window.addEventListener("resize", resize);
 
-		const draw = () => {
-			const elapsed = (performance.now() - startTime) / 1000;
+    const colorCanvas = document.createElement("canvas");
+    const colorCtx = colorCanvas.getContext("2d", {
+      willReadFrequently: true,
+    });
 
-			gl.uniform1f(uTime, elapsed);
-			gl.uniform2f(uResolution, canvas.width, canvas.height);
-			gl.drawArrays(gl.TRIANGLES, 0, 6);
+    const updateColor = () => {
+      if (!colorCtx) return;
 
-			frameRef.current = requestAnimationFrame(draw);
-		};
+      const color = getComputedStyle(canvas)
+        .getPropertyValue("--halftone-color")
+        .trim();
 
-		// Draw the first frame synchronously so the canvas has content before paint
-		gl.uniform1f(uTime, 0);
-		gl.uniform2f(uResolution, canvas.width, canvas.height);
-		gl.drawArrays(gl.TRIANGLES, 0, 6);
+      if (!color) return;
 
-		frameRef.current = requestAnimationFrame(draw);
+      colorCtx.clearRect(0, 0, 1, 1);
+      colorCtx.fillStyle = color;
+      colorCtx.fillRect(0, 0, 1, 1);
 
-		return () => {
-			cancelAnimationFrame(frameRef.current);
-			window.removeEventListener("resize", resize);
-			gl.deleteProgram(program);
-			gl.deleteShader(vs);
-			gl.deleteShader(fs);
-			gl.deleteBuffer(buffer);
-		};
-	}, []);
+      const [r, g, b] = colorCtx.getImageData(0, 0, 1, 1).data;
 
-	return (
-		<div
-			className="absolute inset-0 overflow-hidden bg-background pointer-events-none"
-			aria-hidden="true"
-		>
-			<canvas
-				ref={canvasRef}
-				className="w-full h-full invert opacity-50 dark:invert-0 dark:opacity-100"
-			/>
-		</div>
-	);
+      gl.uniform3f(uColor, r / 255, g / 255, b / 255);
+    };
+
+    const themeObserver = new MutationObserver(() => {
+      updateColor();
+
+      // Redraw immediately with the new color.
+      gl.uniform1f(uTime, (performance.now() - startTime) / 1000);
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+    });
+
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class", "style"],
+    });
+
+    const draw = () => {
+      const elapsed = (performance.now() - startTime) / 1000;
+
+      gl.uniform1f(uTime, elapsed);
+      gl.uniform2f(uResolution, canvas.width, canvas.height);
+
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+      frameRef.current = requestAnimationFrame(draw);
+    };
+
+    // Initialize the color.
+    updateColor();
+
+    // Draw the first frame synchronously so the canvas has content before paint
+    gl.uniform1f(uTime, 0);
+    gl.uniform2f(uResolution, canvas.width, canvas.height);
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+    frameRef.current = requestAnimationFrame(draw);
+
+    return () => {
+      cancelAnimationFrame(frameRef.current);
+      window.removeEventListener("resize", resize);
+      gl.deleteProgram(program);
+      gl.deleteShader(vs);
+      gl.deleteShader(fs);
+      gl.deleteBuffer(buffer);
+      themeObserver.disconnect();
+    };
+  }, []);
+
+  return (
+    <div
+      className="bg-background pointer-events-none absolute inset-0 overflow-hidden"
+      aria-hidden="true"
+    >
+      <canvas
+        ref={canvasRef}
+        className="h-full w-full opacity-50 [--halftone-color:var(--color-indigo-500)] dark:opacity-100 dark:[--halftone-color:var(--color-indigo-400)]"
+      />
+    </div>
+  );
 }

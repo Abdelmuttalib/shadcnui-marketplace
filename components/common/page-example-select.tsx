@@ -31,7 +31,7 @@ export function PageExampleSelect({
 
   return (
     <Select defaultValue={pageExampleType} onValueChange={onPageExampleChange}>
-      <SelectTrigger aria-label="Select example" className="">
+      <SelectTrigger aria-label="Select example" className="rounded-none">
         <SelectValue
           placeholder="select an example"
           className="text-muted-foreground"
@@ -40,13 +40,13 @@ export function PageExampleSelect({
           <span className="mr-2 font-medium capitalize">{pageExampleType}</span>
         </SelectValue>
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="rounded-none">
         <SelectGroup>
           {pageExampleTypes.map((pageExampleType) => (
             <SelectItem
               value={pageExampleType}
               key={pageExampleType}
-              className="capitalize"
+              className="rounded-none capitalize"
             >
               {pageExampleType}
             </SelectItem>

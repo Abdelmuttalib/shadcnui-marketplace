@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Icons } from "@/components/icons";
-import { ThemeToggle, ThemeToggleHeadless } from "@/components/theme-toggle";
+import { ThemeToggleHeadless } from "@/components/theme-toggle";
 import { siteConfig } from "@/config/site-config";
 
 export function SignatureMark({ compact = false }: { compact?: boolean }) {

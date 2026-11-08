@@ -17,7 +17,7 @@ export default async function HomePage() {
           <div className="border-foreground/6 bg-background relative z-10 w-full border-b px-5 sm:px-6 lg:sticky lg:top-0 lg:h-dvh lg:w-[40%] lg:overflow-clip lg:border-r lg:border-b-0 lg:px-7">
             <LineFieldBackground />
             <HeroTitle />
-            <div className="absolute right-5 bottom-4 left-5 z-[3] hidden lg:right-3 lg:left-7 lg:block">
+            <div className="absolute right-5 bottom-4 left-5 z-3 hidden lg:right-3 lg:left-7 lg:block">
               <SignatureMark />
             </div>
           </div>

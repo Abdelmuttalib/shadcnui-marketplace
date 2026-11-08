@@ -229,8 +229,8 @@ function CommunityHero({ stats }: { stats: CommunityStats }) {
         </div>
 
         {/* Quick stats summary */}
-        <div className="border-foreground/[0.08] flex items-stretch gap-0 border">
-          <div className="border-foreground/[0.08] flex-1 border-r px-3 py-2.5 text-center">
+        <div className="border-foreground/8 flex items-stretch gap-0 border">
+          <div className="border-foreground/8 flex-1 border-r px-3 py-2.5 text-center">
             <p className="text-foreground/50 dark:text-foreground/45 mb-1 font-mono text-[9px] tracking-widest uppercase">
               NPM
             </p>
@@ -241,7 +241,7 @@ function CommunityHero({ stats }: { stats: CommunityStats }) {
               </span>
             </p>
           </div>
-          <div className="border-foreground/[0.08] bg-foreground/[0.03] flex-1 border-r px-3 py-2.5 text-center">
+          <div className="border-foreground/8 bg-foreground/[0.03] flex-1 border-r px-3 py-2.5 text-center">
             <p className="text-foreground/50 dark:text-foreground/45 mb-1 font-mono text-[9px] tracking-widest uppercase">
               Stars
             </p>
@@ -275,7 +275,7 @@ function CommunityHero({ stats }: { stats: CommunityStats }) {
                 delay: 0.3 + i * 0.06,
                 ease: "easeOut",
               }}
-              className="border-foreground/[0.06] flex items-baseline justify-between border-b border-dashed py-1.5 last:border-0"
+              className="border-foreground/6 flex items-baseline justify-between border-b border-dashed py-1.5 last:border-0"
             >
               <span className="text-foreground/70 dark:text-foreground/50 text-xs tracking-wider uppercase">
                 {item.label}
@@ -309,7 +309,7 @@ function StatCard({
       initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.1 + index * 0.06, ease: "easeOut" }}
-      className="border-foreground/[0.08] hover:border-foreground/[0.14] group relative border border-dashed transition-all duration-300"
+      className="border-foreground/8 hover:border-foreground/[0.14] group relative border border-dashed transition-all duration-300"
     >
       <div className="p-5">
         <div className="mb-3 flex items-center gap-2">
@@ -345,12 +345,12 @@ function PlatformCard({
       initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.2 + index * 0.06, ease: "easeOut" }}
-      className="border-foreground/[0.08] hover:border-foreground/[0.14] group relative border border-dashed transition-all duration-300"
+      className="border-foreground/8 hover:border-foreground/[0.14] group relative border border-dashed transition-all duration-300"
     >
       <div className="flex h-full flex-col p-5">
         {/* Header */}
         <div className="mb-3 flex flex-col items-center gap-2">
-          <div className="bg-muted/20 border-foreground/[0.06] rounded-full border p-2">
+          <div className="bg-muted/20 border-foreground/6 rounded-full border p-2">
             <Icon className="text-foreground/50 size-8" />
           </div>
           <h3 className="text-foreground/40 font-mono text-base tracking-widest uppercase">
@@ -359,7 +359,7 @@ function PlatformCard({
         </div>
 
         {/* Stats */}
-        <div className="border-foreground/[0.06] mb-4 border-t border-dashed pt-3">
+        <div className="border-foreground/6 mb-4 border-t border-dashed pt-3">
           <div className="flex items-baseline justify-between">
             <span className="text-foreground/30 font-mono text-[9px] tracking-widest uppercase">
               {platform.label}
@@ -394,12 +394,12 @@ export function CommunityPageClient({ stats }: { stats: CommunityStats }) {
       <div className="text-foreground relative">
         <div className="flex flex-col lg:flex-row">
           {/* Left side — Community hero */}
-          <div className="border-foreground/[0.06] relative hidden w-full shrink-0 overflow-clip border-b px-5 sm:px-6 lg:sticky lg:top-0 lg:block lg:h-dvh lg:w-[30%] lg:border-r lg:border-b-0 lg:px-10">
+          <div className="border-foreground/6 relative hidden w-full shrink-0 overflow-clip border-b px-5 sm:px-6 lg:sticky lg:top-0 lg:block lg:h-dvh lg:w-[30%] lg:border-r lg:border-b-0 lg:px-10">
             <div className="hidden lg:block">
               <HalftoneBackground />
             </div>
             <CommunityHero stats={stats} />
-            <div className="absolute right-6 bottom-4 left-10 z-[3]">
+            <div className="absolute right-6 bottom-4 left-10 z-3">
               <SignatureMark compact />
             </div>
           </div>
@@ -408,7 +408,7 @@ export function CommunityPageClient({ stats }: { stats: CommunityStats }) {
           <div className="no-scrollbar relative w-full overflow-x-hidden lg:w-[70%]">
             <div className="space-y-8 px-5 lg:p-8 lg:pt-20">
               {/* Mobile header */}
-              <div className="border-foreground/[0.06] relative -mx-5 mb-5 overflow-hidden border-b px-5 sm:-mx-6 sm:px-6 lg:hidden">
+              <div className="border-foreground/6 relative -mx-5 mb-5 overflow-hidden border-b px-5 sm:-mx-6 sm:px-6 lg:hidden">
                 <HalftoneBackground />
                 <div className="relative space-y-2 py-16">
                   <div className="flex items-center gap-1.5">

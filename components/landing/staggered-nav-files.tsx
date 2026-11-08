@@ -419,17 +419,17 @@ export function StaggeredNavFiles() {
     ? "w-[22vw] max-w-[300px]"
     : isPricingPage || isResourcePage
       ? "w-[30%]"
-      : "w-[40%]";
+      : "w-[30%]";
   const navBottomBorderClass = isNarrowLeft ? "border-foreground/5" : "";
   const tabDividerClass = isNarrowLeft
     ? "border-foreground/4"
-    : "border-foreground/[0.06]";
+    : "border-foreground/6";
   const activeTabBorderClass = isNarrowLeft
     ? "border-b-foreground/50"
     : "border-b-foreground/60";
   const dropdownBorderClass = isNarrowLeft
     ? "border-foreground/6"
-    : "border-foreground/[0.08]";
+    : "border-foreground/8";
   return (
     <>
       <div className="pointer-events-none fixed top-0 right-0 left-0 z-[99] flex items-start">
@@ -442,12 +442,15 @@ export function StaggeredNavFiles() {
         >
           <Link
             href="/"
-            className="flex h-full items-center gap-1 px-4 py-3 transition-colors duration-150"
+            className="flex h-full items-center gap-1 px-4 py-2 transition-colors duration-150 lg:px-7"
           >
-            <div className="flex w-full flex-col gap-2">
+            <div className="flex w-full items-center gap-1">
               <LogoContextMenu
-                logo={<Icons.betterAuthWordmark className="h-auto w-35" />}
+                logo={
+                  <Icons.shadcnMarketplaceWordmark className="h-auto w-8" />
+                }
               />
+              <span>shadcn marketplace</span>
             </div>
           </Link>
         </motion.div>
@@ -457,13 +460,13 @@ export function StaggeredNavFiles() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.28, ease: "easeOut" }}
-          className="bg-background border-foreground/[0.06] pointer-events-auto flex h-(--landing-topbar-height) w-full items-center justify-between border-b lg:hidden"
+          className="bg-background border-foreground/6 pointer-events-auto flex h-(--landing-topbar-height) w-full items-center justify-between border-b lg:hidden"
         >
           <Link
             href="/"
             className="flex h-full items-center gap-1 px-4 transition-colors duration-150"
           >
-            <Icons.betterAuthWordmark className="h-auto w-35" />
+            <Icons.shadcnMarketplaceWordmark className="h-auto w-7" />
           </Link>
           <div className="flex items-center gap-1 pr-2">
             {isDocs && (
@@ -544,11 +547,14 @@ export function StaggeredNavFiles() {
           {!isKnownPage && (
             <Link
               href="/"
-              className={`flex h-full shrink-0 items-center gap-1 border-r px-4 py-3 lg:px-7 ${tabDividerClass} transition-colors duration-150`}
+              className={`flex h-full shrink-0 items-center gap-1 border-r px-4 py-2 lg:px-7 ${tabDividerClass} transition-colors duration-150`}
             >
               <LogoContextMenu
-                logo={<Icons.betterAuthWordmark className="h-auto w-35" />}
+                logo={
+                  <Icons.shadcnMarketplaceWordmark className="h-auto w-8" />
+                }
               />
+              <span>shadcn marketplace</span>
             </Link>
           )}
           {/* File tabs */}
@@ -830,7 +836,7 @@ export function StaggeredNavFiles() {
                       </Link>
                     ))}
                   </div>
-                  <div className="divide-foreground/[0.06] border-foreground/[0.06] grid grid-cols-3 divide-x border-t">
+                  <div className="divide-foreground/[0.06] border-foreground/6 grid grid-cols-3 divide-x border-t">
                     {linkResources.map((r) => (
                       <Link
                         key={r.title}
@@ -845,7 +851,7 @@ export function StaggeredNavFiles() {
                       </Link>
                     ))}
                   </div>
-                  <div className="border-foreground/[0.06] grid w-full grid-cols-[repeat(auto-fit,minmax(1.75rem,1fr))] items-center justify-items-center gap-y-0.5 border-t px-2 py-2">
+                  <div className="border-foreground/6 grid w-full grid-cols-[repeat(auto-fit,minmax(1.75rem,1fr))] items-center justify-items-center gap-y-0.5 border-t px-2 py-2">
                     <a
                       href="https://github.com/better-auth/better-auth"
                       target="_blank"
@@ -946,11 +952,11 @@ export function StaggeredNavFiles() {
             className="flex shrink-0 items-stretch"
           >
             <a
-              href="https://dash.better-auth.com/sign-in"
+              href="/customize"
               className="bg-foreground text-background flex cursor-pointer items-center gap-1.5 px-5 py-3 transition-colors duration-150 hover:opacity-90"
             >
               <span className="font-mono text-xs tracking-wider uppercase">
-                sign-in
+                customize your ui
               </span>
               <svg
                 className="h-2.5 w-2.5 opacity-50"
@@ -1019,7 +1025,7 @@ export function StaggeredNavFiles() {
                 ))}
 
                 <Accordion
-                  type="multiple"
+                  // type="multiple"
                   defaultValue={mobileMenuSections
                     .filter((section) =>
                       section.children?.some((item) =>
@@ -1081,7 +1087,7 @@ export function StaggeredNavFiles() {
                 </Accordion>
               </div>
 
-              <div className="border-foreground/[0.06] bg-background shrink-0 border-t px-5 py-4">
+              <div className="border-foreground/6 bg-background shrink-0 border-t px-5 py-4">
                 <a
                   href="https://dash.better-auth.com/sign-in"
                   onClick={() => setMobileNavigationView("closed")}

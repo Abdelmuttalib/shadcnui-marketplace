@@ -273,7 +273,7 @@ export const PAGE_EXAMPLE_TYPES: PageExampleType[] = [
   "mail",
   "dashboard",
   "cards",
-  "tasks",
+  // "tasks",
   "playground",
   "forms",
   "music",
