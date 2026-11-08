@@ -52,13 +52,13 @@ export default function CreatePage() {
     <div className="section-soft relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden [--customizer-width:--spacing(48)] [--gap:--spacing(4)] md:[--gap:--spacing(6)] 2xl:[--customizer-width:--spacing(56)]">
       <div
         data-slot="designer"
-        className="gap-(--gap) p-(--gap) flex min-h-0 flex-1 flex-col pt-[calc(var(--gap)*0.25)] md:flex-row-reverse"
+        className="flex min-h-0 flex-1 flex-col gap-(--gap) p-(--gap) pt-[calc(var(--gap)*0.25)] md:flex-row-reverse"
       >
         <>
           <Preview />
           <Suspense
             fallback={
-              <Skeleton className="md:w-(--customizer-width) isolate min-h-[151px] w-full self-start rounded-2xl md:h-full md:max-h-full md:min-h-0" />
+              <Skeleton className="isolate min-h-[151px] w-full self-start rounded-2xl md:h-full md:max-h-full md:min-h-0 md:w-(--customizer-width)" />
             }
           >
             <CustomizerLoader />
