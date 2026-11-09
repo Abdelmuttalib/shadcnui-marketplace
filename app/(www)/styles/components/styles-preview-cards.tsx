@@ -17,6 +17,29 @@ import {
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 
+export function StylePreview({
+  className,
+  s,
+  ...props
+}: {
+  className?: string;
+  s: string;
+}) {
+  const { pageExampleType } = useStyleStore();
+
+  return (
+    <StylePageExamplePreview
+      id={pageExampleType || "dashboard"}
+      styleProp={s}
+      pageExampleTypeProp={pageExampleType || "dashboard"}
+      hideBadge={true}
+      className="overflow-auto"
+      screenWidth
+      {...props}
+    />
+  );
+}
+
 export function StylesPreviews({ className }: { className?: string }) {
   const { pageExampleType } = useStyleStore();
 
