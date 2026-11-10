@@ -203,6 +203,15 @@
     position: static;
     color: var(--foreground);
   }
+
+  .design-system-environment,
+  .design-system-environment * {
+    transition:
+      background-color 250ms ease,
+      color 250ms ease,
+      border-color 250ms ease,
+      box-shadow 250ms ease;
+  }
 }
 
 @utility hide-scrollbar {

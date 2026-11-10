@@ -23,7 +23,10 @@ import {
   getDesignSystemVariables,
 } from "./design-system-utils";
 
+import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
+
 import { DesignSystemPortalContext } from "./design-system-context";
+import { getStylePaletteVariables } from "@/registry/styles-palette";
 
 interface DesignSystemEnvironmentProps {
   children: ReactNode;
@@ -77,9 +80,25 @@ export function DesignSystemEnvironment({
 }: DesignSystemEnvironmentProps) {
   const { resolvedTheme } = useTheme();
 
+  const { activePalette, activeRadius } = useThemePaletteStore();
+
+  const [previewPalette, setPreviewPalette] = useState<
+    DesignSystemPalette | undefined
+  >(palette);
+
+  const [previewRadius, setPreviewRadius] = useState<string | undefined>(
+    radius
+  );
+
+  const [previewTheme, setPreviewTheme] = useState<ThemeMode | undefined>();
+
   // Explicit theme prop takes priority.
   // Otherwise, use next-themes resolvedTheme.
-  const theme: ThemeMode = themeProp ?? (resolvedTheme as ThemeMode) ?? "light";
+  // const theme: ThemeMode = themeProp ?? (resolvedTheme as ThemeMode) ?? "light";
+  // const theme: ThemeMode =
+  //   themeProp ?? previewTheme ?? (resolvedTheme as ThemeMode) ?? "light";
+  const theme: ThemeMode =
+    themeProp ?? previewTheme ?? (resolvedTheme as ThemeMode) ?? "light";
 
   const [portalContainer, setPortalContainer] = useState<HTMLElement | null>(
     null
@@ -134,19 +153,143 @@ export function DesignSystemEnvironment({
     );
   }, [style]);
 
+  // const environmentVariables = useMemo(
+  //   () => ({
+  //     ...variables,
+  //     ...paletteVariables,
+  //     ...(activeRadius
+  //       ? {
+  //           [`--${getStyleVariablesPrefix(style)}-radius`]: activeRadius,
+  //         }
+  //       : {}),
+  //   }),
+  //   [variables, paletteVariables, activeRadius, style]
+  // );
+
+  // const environmentVariables = useMemo(() => {
+  //   return {
+  //     ...variables,
+  //     ...getStylePaletteVariables({
+  //       style,
+  //       palette: palette ?? activePalette,
+  //       theme,
+  //       radius: radius ?? activeRadius ?? undefined,
+  //     }),
+  //   };
+  // }, [variables, style, palette, activePalette, theme, radius, activeRadius]);
+
+  const selectedPalette = previewPalette ?? palette ?? activePalette;
+
+  const selectedRadius = previewRadius ?? radius ?? activeRadius ?? undefined;
+
+  const paletteVariables = useMemo(() => {
+    if (!selectedPalette) return {};
+
+    return getStylePaletteVariables({
+      style,
+      palette: selectedPalette,
+      theme,
+      radius: selectedRadius,
+    });
+  }, [style, selectedPalette, theme, selectedRadius]);
+
+  const environmentVariables = useMemo(
+    () => ({
+      ...variables,
+      ...paletteVariables,
+    }),
+    [variables, paletteVariables]
+  );
+
+  // useEffect(() => {
+  //   function handleMessage(event: MessageEvent) {
+  //     if (event.origin !== window.location.origin) return;
+
+  //     if (event.data?.type !== "THEME_UPDATE") return;
+
+  //     const { palette, radius } = event.data;
+
+  //     // Update your palette store here.
+  //     // Or directly update the environment CSS variables.
+  //   }
+
+  //   window.addEventListener("message", handleMessage);
+
+  //   return () => {
+  //     window.removeEventListener("message", handleMessage);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   function handleMessage(event: MessageEvent) {
+  //     if (event.origin !== window.location.origin) return;
+
+  //     if (event.data?.type !== "THEME_UPDATE") return;
+
+  //     const { palette, radius, theme } = event.data;
+
+  //     if (palette !== undefined) {
+  //       setPreviewPalette(palette);
+  //     }
+
+  //     if (radius !== undefined) {
+  //       setPreviewRadius(radius);
+  //     }
+
+  //     // Inside handleMessage:
+  //     if (theme) {
+  //       setPreviewTheme(theme);
+  //     }
+  //   }
+
+  //   window.addEventListener("message", handleMessage);
+
+  //   return () => {
+  //     window.removeEventListener("message", handleMessage);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    function handleMessage(event: MessageEvent) {
+      if (event.origin !== window.location.origin) return;
+
+      if (event.data?.type !== "THEME_UPDATE") return;
+
+      const { palette, radius, theme } = event.data;
+
+      if (palette !== undefined) {
+        setPreviewPalette(palette);
+      }
+
+      if (radius !== undefined) {
+        setPreviewRadius(radius);
+      }
+
+      if (theme !== undefined) {
+        setPreviewTheme(theme);
+      }
+    }
+
+    window.addEventListener("message", handleMessage);
+
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    };
+  }, []);
+
   // Keep the portal root synchronized with the environment.
   useLayoutEffect(() => {
     const element = portalContainerRef.current;
 
     if (!element) return;
 
-    applyEnvironmentAttributes(element, style, theme, variables);
+    applyEnvironmentAttributes(element, style, theme, environmentVariables);
 
     element.style.colorScheme = theme;
-  }, [style, theme, variables]);
+  }, [style, theme, environmentVariables]);
 
   const environmentStyle = {
-    ...variables,
+    ...environmentVariables,
     colorScheme: theme,
   } as CSSProperties;
 

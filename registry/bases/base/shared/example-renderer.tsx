@@ -55,16 +55,21 @@ export type ExampleName = keyof typeof examples;
 interface ExampleRendererProps {
   style: ExampleStyle;
   name: ExampleName;
+  palette?: string;
 }
 
-export function ExampleRenderer({ style, name }: ExampleRendererProps) {
+export function ExampleRenderer({
+  style,
+  name,
+  palette,
+}: ExampleRendererProps) {
   const Adapter = adapters[style];
   const Example = examples[name];
 
   return (
     <React.Suspense fallback={null}>
       <DesignSystemTheme style={style}>
-        <Adapter>
+        <Adapter palette={palette}>
           <Example />
         </Adapter>
       </DesignSystemTheme>

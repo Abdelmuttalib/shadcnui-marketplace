@@ -1,11 +1,9 @@
 import { type Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { cn } from "cn";
 
-import { buttonVariants } from "@/registry/bases/base/styles/moon/ui/button";
-import { FieldDescription } from "@/registry/bases/base/styles/moon/ui/field";
 import { UserAuthForm } from "./components/user-auth-form";
+import { useDesignSystem } from "../../components/design-system-provider";
 
 export const metadata: Metadata = {
   title: "Authentication",
@@ -13,30 +11,14 @@ export const metadata: Metadata = {
 };
 
 export default function AuthenticationPage() {
+  const { buttonVariants, FieldDescription } = useDesignSystem();
   return (
     <>
-      <div className="md:hidden">
-        <Image
-          src="/examples/authentication-light.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="block dark:hidden"
-          priority
-        />
-        <Image
-          src="/examples/authentication-dark.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="hidden dark:block"
-          priority
-        />
-      </div>
-      <div className="relative container hidden flex-1 shrink-0 items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="relative container grid flex-1 shrink-0 items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
         <Link
           href="/examples/authentication"
           className={cn(
+            // @ts-expect-error: dynamic import module export
             buttonVariants({ variant: "ghost" }),
             "absolute top-4 right-4 md:top-8 md:right-8"
           )}

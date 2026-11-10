@@ -13,9 +13,9 @@ import { DesignSystemEnvironment } from "../design-system/design-system-environm
 
 const style = "wedges";
 
-export function WedgesAdapter({ children }: { children: React.ReactNode }) {
+export function WedgesAdapter({ children, palette }: { children: React.ReactNode; palette?: string; }) {
   return (
-    <DesignSystemEnvironment style={style}>
+    <DesignSystemEnvironment style={style} palette={palette as any}>
       <DesignSystemProvider
         components={Components as unknown as DesignSystemComponents}
       >

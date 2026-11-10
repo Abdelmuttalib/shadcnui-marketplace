@@ -37,10 +37,17 @@ interface PageProps {
     style: string;
     name: string;
   }>;
+
+  searchParams: Promise<{
+    palette?: string;
+  }>;
 }
 
-export default async function ExamplePage({ params }: PageProps) {
-  const { style, name } = await params;
+export default async function ExamplePage({ params, searchParams }: PageProps) {
+  const [{ style, name }, { palette }] = await Promise.all([
+    params,
+    searchParams,
+  ]);
 
   if (
     !STYLES.includes(style as (typeof STYLES)[number]) ||
@@ -50,6 +57,10 @@ export default async function ExamplePage({ params }: PageProps) {
   }
 
   return (
-    <ExampleRenderer style={style as ExampleStyle} name={name as ExampleName} />
+    <ExampleRenderer
+      style={style as ExampleStyle}
+      name={name as ExampleName}
+      palette={palette}
+    />
   );
 }

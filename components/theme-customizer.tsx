@@ -21,6 +21,8 @@ export function ThemeCustomizerWrapper({ children }: ThemeWrapperProps) {
   const { theme, resolvedTheme } = useTheme();
   const { style } = useStyleStore();
 
+  const appliedVariablesRef = React.useRef<string[]>([]);
+
   function prefixCssVariableWithStyle(style: Style, variable: string) {
     return `--${getStyleVariablesPrefix(style)}-${variable}`;
   }
@@ -40,10 +42,11 @@ export function ThemeCustomizerWrapper({ children }: ThemeWrapperProps) {
     if (!cssVars || cssVars.length === 0) return;
 
     cssVars.forEach(([key, value]) => {
-      element.style.setProperty(
-        prefixCssVariableWithStyle(style, key),
-        `oklch(${value})`
-      );
+      const variable = prefixCssVariableWithStyle(style, key);
+
+      element.style.setProperty(variable, `oklch(${value})`);
+
+      appliedVariablesRef.current.push(variable);
     });
   }
 
@@ -54,16 +57,22 @@ export function ThemeCustomizerWrapper({ children }: ThemeWrapperProps) {
     if (typeof document !== "undefined") {
       const htmlElement = document.documentElement;
 
-      const existingVariables = Array.from(htmlElement.style).filter(
-        (varName) => varName.startsWith(`--`)
-      );
+      appliedVariablesRef.current.forEach((variable) => {
+        htmlElement.style.removeProperty(variable);
+      });
 
-      if (existingVariables) {
-        // remove existing variables
-        existingVariables.forEach((varName) => {
-          htmlElement.style.removeProperty(varName);
-        });
-      }
+      appliedVariablesRef.current = [];
+
+      // const existingVariables = Array.from(htmlElement.style).filter(
+      //   (varName) => varName.startsWith(`--`)
+      // );
+
+      // if (existingVariables) {
+      //   // remove existing variables
+      //   existingVariables.forEach((varName) => {
+      //     htmlElement.style.removeProperty(varName);
+      //   });
+      // }
 
       if (activePalette) {
         // const themePaletteVars = themePalettes[selectedPalette][theme];

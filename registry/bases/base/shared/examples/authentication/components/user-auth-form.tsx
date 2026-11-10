@@ -4,15 +4,8 @@ import * as React from "react";
 import { cn } from "cn";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
-} from "@/registry/bases/base/styles/moon/ui/field";
-import { Input } from "@/registry/bases/base/styles/moon/ui/input";
-import { Spinner } from "@/registry/bases/base/styles/moon/ui/spinner";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function UserAuthForm({
   className,
@@ -28,6 +21,16 @@ export function UserAuthForm({
       setIsLoading(false);
     }, 3000);
   }
+
+  const {
+    Button,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    FieldSeparator,
+    Input,
+    Spinner,
+  } = useDesignSystem();
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>

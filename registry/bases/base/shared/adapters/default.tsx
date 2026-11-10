@@ -13,9 +13,9 @@ import { DesignSystemEnvironment } from "../design-system/design-system-environm
 
 const style = "default";
 
-export function DefaultAdapter({ children }: { children: React.ReactNode }) {
+export function DefaultAdapter({ children, palette }: { children: React.ReactNode; palette?: string; }) {
   return (
-    <DesignSystemEnvironment style={style}>
+    <DesignSystemEnvironment style={style} palette={palette as any}>
       <DesignSystemProvider
         components={Components as unknown as DesignSystemComponents}
       >

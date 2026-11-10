@@ -3,14 +3,11 @@
 import React from "react";
 
 import { RichBadge } from "@/components/ui/rich-badge";
-import { BlockPlan } from "@/config/types";
 import { PageExampleType, Style, useStyleStore } from "@/hooks/use-style-store";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
   getStyleRadius,
-  getStyleRadiusClassname,
-  getStyleVariablesPrefix,
   renderStylePageExample,
 } from "@/registry/styles-components";
 import { cn } from "@/utils/cn";
