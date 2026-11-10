@@ -1,14 +1,11 @@
 import { BellIcon, EyeNoneIcon, PersonIcon } from "@radix-ui/react-icons";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/moon/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoNotifications() {
+  const { Card, CardContent, CardDescription, CardHeader, CardTitle } =
+    useDesignSystem();
+
   return (
     <Card>
       <CardHeader className="pb-3">
@@ -18,29 +15,29 @@ export function DemoNotifications() {
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-1">
-        <div className="rounded-moon-md hover:bg-moon-accent hover:text-moon-accent-foreground -mx-2 flex items-start space-x-4 p-2 transition-all">
+        <div className="hover:bg-accent hover:text-accent-foreground -mx-2 flex items-start space-x-4 rounded-md p-2 transition-all">
           <BellIcon className="mt-px h-5 w-5" />
           <div className="space-y-1">
-            <p className="text-sm font-medium leading-none">Everything</p>
-            <p className="text-moon-muted-foreground text-sm">
+            <p className="text-sm leading-none font-medium">Everything</p>
+            <p className="text-muted-foreground text-sm">
               Email digest, mentions & all activity.
             </p>
           </div>
         </div>
-        <div className="rounded-moon-md bg-moon-accent text-moon-accent-foreground -mx-2 flex items-start space-x-4 p-2 transition-all">
+        <div className="bg-accent text-accent-foreground -mx-2 flex items-start space-x-4 rounded-md p-2 transition-all">
           <PersonIcon className="mt-px h-5 w-5" />
           <div className="space-y-1">
-            <p className="text-sm font-medium leading-none">Available</p>
-            <p className="text-moon-muted-foreground text-sm">
+            <p className="text-sm leading-none font-medium">Available</p>
+            <p className="text-muted-foreground text-sm">
               Only mentions and comments.
             </p>
           </div>
         </div>
-        <div className="rounded-moon-md hover:bg-moon-accent hover:text-moon-accent-foreground -mx-2 flex items-start space-x-4 p-2 transition-all">
+        <div className="hover:bg-accent hover:text-accent-foreground -mx-2 flex items-start space-x-4 rounded-md p-2 transition-all">
           <EyeNoneIcon className="mt-px h-5 w-5" />
           <div className="space-y-1">
-            <p className="text-sm font-medium leading-none">Ignoring</p>
-            <p className="text-moon-muted-foreground text-sm">
+            <p className="text-sm leading-none font-medium">Ignoring</p>
+            <p className="text-muted-foreground text-sm">
               Turn off all notifications.
             </p>
           </div>

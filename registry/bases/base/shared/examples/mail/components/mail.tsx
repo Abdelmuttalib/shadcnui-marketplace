@@ -16,20 +16,6 @@ import {
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Input } from "@/registry/bases/base/moon/ui/input";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/registry/bases/base/moon/ui/resizable";
-import { Separator } from "@/registry/bases/base/moon/ui/separator";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/moon/ui/tabs";
-import { TooltipProvider } from "@/registry/bases/base/moon/ui/tooltip";
 
 import { type Mail } from "../data";
 import { useMail } from "../use-mail";
@@ -37,6 +23,7 @@ import { AccountSwitcher } from "./account-switcher";
 import { MailDisplay } from "./mail-display";
 import { MailList } from "./mail-list";
 import { Nav } from "./nav";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface MailProps {
   accounts: {
@@ -60,6 +47,22 @@ export function Mail({
   const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed);
   const [mail] = useMail();
 
+  const {
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+
+    ResizableHandle,
+    ResizablePanel,
+    ResizablePanelGroup,
+
+    Input,
+    Separator,
+
+    TooltipProvider,
+  } = useDesignSystem();
+
   return (
     <TooltipProvider delayDuration={0}>
       <ResizablePanelGroup
@@ -73,7 +76,7 @@ export function Mail({
           collapsible={true}
           minSize={"15%"}
           maxSize={"20%"}
-          onResize={(size) => {
+          onResize={(size: any) => {
             setIsCollapsed(size.asPercentage <= navCollapsedSize);
           }}
           className={cn(
@@ -179,10 +182,10 @@ export function Mail({
               </TabsList>
             </div>
             <Separator />
-            <div className="supports-backdrop-filter:bg-moon-background/60 bg-moon-background/95 p-4 backdrop-blur-sm">
+            <div className="supports-backdrop-filter:bg-background/60 bg-background/95 p-4 backdrop-blur-sm">
               <form>
                 <div className="relative">
-                  <Search className="text-moon-muted-foreground absolute top-2.5 left-2 h-4 w-4" />
+                  <Search className="text-muted-foreground absolute top-2.5 left-2 h-4 w-4" />
                   <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>

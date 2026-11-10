@@ -46,6 +46,8 @@ const examples = {
   music: dynamic(() => import("./examples/music/page")),
   playground: dynamic(() => import("./examples/playground/page")),
   tasks: dynamic(() => import("./examples/tasks/page")),
+  hero: dynamic(() => import("./hero")),
+  "card-showcase": dynamic(() => import("./card-showcase")),
 };
 
 export type ExampleStyle = keyof typeof adapters;

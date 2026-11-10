@@ -1,16 +1,18 @@
 import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react";
 
-import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/moon/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SectionCards() {
+  const {
+    Badge,
+    Card,
+    CardAction,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } = useDesignSystem();
+
   return (
     <div className="grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       <Card className="@container/card">

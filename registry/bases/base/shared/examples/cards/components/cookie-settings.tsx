@@ -1,18 +1,22 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/moon/ui/card";
-import { Label } from "@/registry/bases/base/moon/ui/label";
-import { Switch } from "@/registry/bases/base/moon/ui/switch";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoCookieSettings() {
+  const {
+    Button,
+
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    Label,
+    Switch,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>
@@ -23,7 +27,7 @@ export function DemoCookieSettings() {
         <div className="flex items-center justify-between space-x-2">
           <Label htmlFor="necessary" className="flex flex-col space-y-1">
             <span>Strictly Necessary</span>
-            <span className="text-moon-muted-foreground font-normal leading-snug">
+            <span className="text-muted-foreground leading-snug font-normal">
               These cookies are essential in order to use the website and use
               its features.
             </span>
@@ -33,7 +37,7 @@ export function DemoCookieSettings() {
         <div className="flex items-center justify-between space-x-2">
           <Label htmlFor="functional" className="flex flex-col space-y-1">
             <span>Functional Cookies</span>
-            <span className="text-moon-muted-foreground font-normal leading-snug">
+            <span className="text-muted-foreground leading-snug font-normal">
               These cookies allow the website to provide personalized
               functionality.
             </span>
@@ -43,7 +47,7 @@ export function DemoCookieSettings() {
         <div className="flex items-center justify-between space-x-2">
           <Label htmlFor="performance" className="flex flex-col space-y-1">
             <span>Performance Cookies</span>
-            <span className="text-moon-muted-foreground font-normal leading-snug">
+            <span className="text-muted-foreground leading-snug font-normal">
               These cookies help to improve the performance of the website.
             </span>
           </Label>

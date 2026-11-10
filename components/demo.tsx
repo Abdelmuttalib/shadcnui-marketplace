@@ -18,7 +18,7 @@ import {
 import React from "react";
 
 import CustomDialog from "@/components/ui/animated-dialog";
-import { Button, ButtonLink } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
@@ -40,9 +40,9 @@ import { Label } from "@/components/ui/label";
 export function DropdownMenuDemo() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Options</Button>
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger
+        render={<Button variant="outline">Options</Button>}
+      ></DropdownMenuTrigger>
       <DropdownMenuContent className="w-52">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -130,9 +130,9 @@ export function DropdownMenuDemo() {
 export function SuccessBadge() {
   return (
     <>
-      <div className="bg-linear-to-b flex h-9 w-9 items-center justify-center rounded-full from-emerald-200 to-emerald-50">
-        <div className="bg-linear-to-b flex h-7 w-7 items-center justify-center rounded-full from-emerald-400 to-emerald-200">
-          <div className="bg-linear-to-b flex h-5 w-5 items-center justify-center rounded-full from-emerald-500 to-emerald-300">
+      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-linear-to-b from-emerald-200 to-emerald-50">
+        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-linear-to-b from-emerald-400 to-emerald-200">
+          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-linear-to-b from-emerald-500 to-emerald-300">
             <CheckIcon className="w-4 text-white" />
           </div>
         </div>
@@ -443,7 +443,7 @@ function Notification({
     >
       {/* not read notification indicator  */}
       {!notification.isRead && (
-        <div className="dark:bg-primary-400 bg-primary absolute right-4 top-3 h-2.5 w-2.5 rounded-full"></div>
+        <div className="dark:bg-primary-400 bg-primary absolute top-3 right-4 h-2.5 w-2.5 rounded-full"></div>
       )}
       <div className="h-fit w-fit">
         <div className="relative">
@@ -454,7 +454,7 @@ function Notification({
           />
           {/* online indicator  */}
           {notification.id % 2 === 0 && (
-            <div className="absolute -right-0.5 -top-0.5 flex items-center gap-x-1.5">
+            <div className="absolute -top-0.5 -right-0.5 flex items-center gap-x-1.5">
               <div className="flex-none rounded-full bg-emerald-500/20 p-[3px]">
                 <div className="h-2 w-2 rounded-full bg-emerald-500" />
               </div>
@@ -673,7 +673,7 @@ export function DemoShowcase() {
         <ScreenContainer>
           <div className="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/publichttps://tailwindui.com/plus/img/avatar-1.jpg')] bg-[length:1000px_700px] bg-[position:calc(50%_+_190px)_-50px] bg-no-repeat lg:block"></div>
           <div className="max-w-container mx-auto flex flex-col px-4 pt-4 sm:px-6 lg:flex-row lg:px-8">
-            <div className="relative z-20 mx-auto max-w-[40rem] pb-16 pt-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
+            <div className="relative z-20 mx-auto max-w-[40rem] pt-16 pb-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pt-20 lg:pr-4 lg:pb-24">
               <h1 className="text-primary text-base/7 font-semibold">
                 Powered by shadcn ui
               </h1>
@@ -769,37 +769,14 @@ export function DemoShowcase() {
                 <WaitlistForm />
                 <div className="space-y-2">
                   <UICustomizer2 />
-
-                  <ButtonLink
-                    href="#examples"
-                    className="text-foreground-secondary"
-                    variant="outline"
-                    size="sm"
-                  >
-                    <ArrowRightIcon className="rotate-45" />
-                    examples
-                  </ButtonLink>
                 </div>
-                {/* <ButtonLink
-                  href="/preview"
-                  iconRight={<ArrowRightIcon className="w-4 h-4" />}
-                >
-                  Live preview
-                </ButtonLink>
-                <ButtonLink
-                  href="/documentation"
-                  variant="ghost"
-                  iconRight={<ArrowRightIcon className="w-4 h-4" />}
-                >
-                  Documentation
-                </ButtonLink> */}
               </div>
             </div>
             <div className="relative z-10 mt-12 select-none lg:flex">
               <div className="z-20 flex flex-col">
                 <div className="relative p-4">
-                  <div className="absolute bottom-0 left-11 right-0 top-8 bg-slate-900/[0.03]"></div>
-                  <div className="text-foreground-secondary bg-card pointer-events-auto relative z-10 w-full rounded-lg text-[0.8125rem]/5 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
+                  <div className="absolute top-8 right-0 bottom-0 left-11 bg-slate-900/[0.03]"></div>
+                  <div className="text-foreground-secondary bg-card pointer-events-auto relative z-10 w-full rounded-lg text-[0.8125rem]/5 shadow-xl ring-1 shadow-black/5 ring-slate-700/10">
                     <div>
                       <div className="text-foreground-secondary flex items-center px-3.5 py-2.5">
                         <svg
@@ -924,8 +901,8 @@ export function DemoShowcase() {
                     </Button>
 
                     <div className="z-0">
-                      <div className="absolute -bottom-8 -top-12 right-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                      <div className="absolute -bottom-8 -top-12 left-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                      <div className="absolute -top-12 right-0 -bottom-8 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                      <div className="absolute -top-12 -bottom-8 left-0 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                     </div>
                   </div>
                 </div>

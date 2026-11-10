@@ -64,7 +64,7 @@ export default function StylesPageClient() {
           </div>
 
           {/* Right side — Stats & platforms */}
-          <div className="no-scrollbar relative w-full overflow-x-hidden lg:w-[70%]">
+          <div className="no-scrollbar bg-accent/60 dark:bg-background relative w-full overflow-x-hidden lg:w-[70%]">
             <div className="space-y-8 px-5 lg:p-8 lg:pt-20">
               {/* Mobile header */}
               <div className="border-foreground/6 relative -mx-5 mb-5 overflow-hidden border-b px-5 sm:-mx-6 sm:px-6 lg:hidden">

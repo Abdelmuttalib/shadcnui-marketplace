@@ -5,26 +5,29 @@ import {
   StarIcon,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/moon/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/moon/ui/dropdown-menu";
-import { Separator } from "@/registry/bases/base/moon/ui/separator";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoGithub() {
+  const {
+    Button,
+
+    Separator,
+
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
@@ -35,7 +38,7 @@ export function DemoGithub() {
             your apps. Accessible. Customizable. Open Source.
           </CardDescription>
         </div>
-        <div className="rounded-moon-md bg-moon-secondary text-moon-secondary-foreground flex items-center space-x-1">
+        <div className="bg-secondary text-secondary-foreground flex items-center space-x-1 rounded-md">
           <Button variant="secondary" className="px-2 shadow-none">
             <StarIcon className="mr-2 h-4 w-4" />
             Star
@@ -44,7 +47,7 @@ export function DemoGithub() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" className="px-2 shadow-none">
-                <ChevronDownIcon className="text-moon-secondary-foreground h-4 w-4" />
+                <ChevronDownIcon className="text-secondary-foreground h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -69,7 +72,7 @@ export function DemoGithub() {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="text-moon-muted-foreground flex space-x-4 text-sm">
+        <div className="text-muted-foreground flex space-x-4 text-sm">
           <div className="flex items-center">
             <CircleIcon className="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
             TypeScript

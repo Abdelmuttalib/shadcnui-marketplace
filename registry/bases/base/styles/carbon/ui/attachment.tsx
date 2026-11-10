@@ -4,7 +4,7 @@ import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Button } from "@/registry/bases/base/styles/carbon/ui/button";
 
 const attachmentVariants = cva(
   "group/attachment relative flex w-fit max-w-full min-w-0 shrink-0 flex-wrap rounded-cb-xl border border-cb-border bg-cb-card text-cb-card-foreground transition-colors focus-within:ring-1 focus-within:ring-cb-ring/50 has-[>a,>button]:hover:bg-cb-muted/50 data-[state=error]:border-cb-destructive/30 data-[state=idle]:border-dashed",

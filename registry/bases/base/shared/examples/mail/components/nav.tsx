@@ -4,12 +4,7 @@ import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/registry/bases/base/moon/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/moon/ui/tooltip";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface NavProps {
   isCollapsed: boolean;
@@ -22,6 +17,9 @@ interface NavProps {
 }
 
 export function Nav({ links, isCollapsed }: NavProps) {
+  const { Tooltip, TooltipContent, TooltipTrigger, buttonVariants } =
+    useDesignSystem();
+
   return (
     <div
       data-collapsed={isCollapsed}
@@ -35,10 +33,11 @@ export function Nav({ links, isCollapsed }: NavProps) {
                 <Link
                   href="#"
                   className={cn(
+                    // @ts-expect-error: dynamic module export
                     buttonVariants({ variant: link.variant, size: "icon" }),
                     "h-9 w-9",
                     link.variant === "default" &&
-                      "dark:bg-moon-muted dark:text-moon-muted-foreground dark:hover:bg-moon-muted dark:hover:text-white"
+                      "dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white"
                   )}
                 >
                   <link.icon className="h-4 w-4" />
@@ -48,7 +47,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               <TooltipContent side="right" className="flex items-center gap-4">
                 {link.title}
                 {link.label && (
-                  <span className="text-moon-muted-foreground ml-auto">
+                  <span className="text-muted-foreground ml-auto">
                     {link.label}
                   </span>
                 )}
@@ -59,9 +58,10 @@ export function Nav({ links, isCollapsed }: NavProps) {
               key={index}
               href="#"
               className={cn(
+                // @ts-expect-error: dynamic module export
                 buttonVariants({ variant: link.variant, size: "sm" }),
                 link.variant === "default" &&
-                  "dark:bg-moon-muted dark:hover:bg-moon-muted dark:text-white dark:hover:text-white",
+                  "dark:bg-muted dark:hover:bg-muted dark:text-white dark:hover:text-white",
                 "justify-start"
               )}
             >
@@ -72,7 +72,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                   className={cn(
                     "ml-auto",
                     link.variant === "default" &&
-                      "text-moon-background dark:text-white"
+                      "text-background dark:text-white"
                   )}
                 >
                   {link.label}

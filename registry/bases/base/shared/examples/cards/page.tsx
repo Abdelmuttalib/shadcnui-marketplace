@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -36,7 +35,7 @@ function DemoContainer({
 export default function CardsPage() {
   return (
     <>
-      <div className="rounded-moon-lg grid grid-cols-7 items-start justify-center gap-6 p-4 md:p-6 lg:grid-cols-3 lg:p-8 xl:grid-cols-3">
+      <div className="grid grid-cols-7 items-start justify-center gap-6 rounded-lg p-4 md:p-6 lg:grid-cols-3 lg:p-8 xl:grid-cols-3">
         <div className="col-span-2 grid items-start gap-6 lg:col-span-1">
           <DemoContainer>
             <DemoCreateAccount />

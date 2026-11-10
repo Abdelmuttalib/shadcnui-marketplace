@@ -37,6 +37,7 @@ import { ThemePaletteSelect } from "../common/theme-palette-select";
 import { Button } from "../ui/button";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { ExamplePreview } from "../common/example-preview";
+import { siteConfig } from "@/config/site-config";
 
 const EMPTY_CONTRIBUTORS: ContributorInfo[] = [];
 
@@ -92,7 +93,8 @@ function isSlowConnection() {
   return (navigation?.loadEventStart || performance.now()) > 4000;
 }
 
-function ReadmeFooter({ stats }: { stats: CommunityHeroStats }) {
+function ReadmeFooter() {
+  const githubStars = 2;
   return (
     <div className="relative mt-10 overflow-hidden pt-8 pb-16">
       {/* Watermark logo */}
@@ -134,24 +136,10 @@ function ReadmeFooter({ stats }: { stats: CommunityHeroStats }) {
           Roll your own auth with confidence in minutes.
         </p> */}
 
-        {/* <div className="flex items-center justify-center gap-2">
-          {stats.npmDownloads > 0 && (
+        <div className="flex items-center justify-center gap-2">
+          {githubStars > 0 && (
             <a
-              href="https://www.npmjs.com/package/better-auth"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="hover:bg-foreground/4 text-foreground/50 dark:text-foreground/50 flex items-center gap-1.5 rounded-sm px-2.5 transition-colors">
-                <Icons.npm className="size-[11px] -translate-y-px" />
-                <span className="font-mono text-xs">
-                  {formatCount(stats.npmDownloads)} / week
-                </span>
-              </div>
-            </a>
-          )}
-          {stats.githubStars > 0 && (
-            <a
-              href="https://github.com/better-auth/better-auth"
+              href={siteConfig.githubLink}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -170,23 +158,21 @@ function ReadmeFooter({ stats }: { stats: CommunityHeroStats }) {
                 >
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                 </svg>
-                <span className="font-mono text-xs">
-                  {formatCount(stats.githubStars)} stars
-                </span>
+                <span className="font-mono text-xs">{githubStars} stars</span>
               </div>
             </a>
           )}
-        </div> */}
+        </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-1">
           <Link
-            href="/docs/installation"
+            href="/styles"
             className="inline-flex items-center gap-1.5 bg-neutral-900 px-4 py-2 text-xs font-medium text-neutral-100 transition-colors hover:opacity-90 sm:px-5 sm:text-sm dark:bg-neutral-100 dark:text-neutral-900"
           >
-            Get Started
+            Explore Styles
           </Link>
           <Link
-            href="https://dash.better-auth.com/sign-in"
+            href="/customize"
             className="group relative inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-neutral-600 transition-colors sm:px-5 sm:text-sm dark:text-neutral-300"
           >
             <span
@@ -208,7 +194,7 @@ function ReadmeFooter({ stats }: { stats: CommunityHeroStats }) {
             <span className="text-foreground/40 dark:text-foreground/50 absolute -right-[6px] -bottom-[6px] translate-x-1/2 translate-y-1/2 font-mono text-[8px] leading-none select-none">
               +
             </span>
-            <span className="relative">Sign In </span>
+            <span className="relative">Customize Your UI</span>
           </Link>
         </div>
       </div>
@@ -216,13 +202,7 @@ function ReadmeFooter({ stats }: { stats: CommunityHeroStats }) {
   );
 }
 
-export function HeroReadMe({
-  contributors,
-  stats,
-}: {
-  contributors: ContributorInfo[];
-  stats: CommunityHeroStats;
-}) {
+export function HeroReadMe({ stats }: { stats: CommunityHeroStats }) {
   const { resolvedTheme } = useTheme();
   const { style, setStyle } = useStyleStore();
 
@@ -400,32 +380,11 @@ export function HeroReadMe({
                     name="mail"
                     aspectRatio="2528 / 1440"
                   />
-                  <iframe
-                    ref={iframeRef}
-                    src={`/example/${style || defaultStyle}/music`}
-                    // className="h-full w-full"
-                    className="-mt-[2px] aspect-[2528/1440] h-auto w-full bg-cover"
-                    onLoad={() => {
-                      iframeRef.current?.contentWindow?.postMessage(
-                        {
-                          type: "THEME_UPDATE",
-                          palette: activePalette,
-                          radius: activeRadius,
-                        },
-                        window.location.origin
-                      );
-                    }}
-                  />
                 </div>
               </div>
             </div>
 
-            {/* <ContributorsSection
-              contributors={contributors}
-              contributorCount={stats.contributors}
-            /> */}
-
-            <ReadmeFooter stats={stats} />
+            <ReadmeFooter />
           </motion.article>
         </div>
       </div>

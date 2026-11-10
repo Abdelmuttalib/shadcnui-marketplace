@@ -2,12 +2,11 @@ import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
 import { ComponentProps } from "react";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/bases/base/moon/ui/badge";
-import { ScrollArea } from "@/registry/bases/base/moon/ui/scroll-area";
-import { Separator } from "@/registry/bases/base/moon/ui/separator";
 
 import { Mail } from "../data";
 import { useMail } from "../use-mail";
+import { useDesignSystem } from "../../../components/design-system-provider";
+import { Badge } from "@/components/ui/badge";
 
 interface MailListProps {
   items: Mail[];
@@ -16,6 +15,8 @@ interface MailListProps {
 export function MailList({ items }: MailListProps) {
   const [mail, setMail] = useMail();
 
+  const { Badge, ScrollArea } = useDesignSystem();
+
   return (
     <ScrollArea className="h-screen">
       <div className="flex flex-col gap-2 p-4 pt-0">
@@ -23,8 +24,8 @@ export function MailList({ items }: MailListProps) {
           <button
             key={item.id}
             className={cn(
-              "rounded-moon-lg border-moon-border hover:bg-moon-accent flex flex-col items-start gap-2 border p-3 text-left text-sm transition-all",
-              mail.selected === item.id && "bg-moon-muted"
+              "border-border hover:bg-accent flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all",
+              mail.selected === item.id && "bg-muted"
             )}
             onClick={() =>
               setMail({
@@ -45,8 +46,8 @@ export function MailList({ items }: MailListProps) {
                   className={cn(
                     "ml-auto text-xs",
                     mail.selected === item.id
-                      ? "text-moon-foreground"
-                      : "text-moon-muted-foreground"
+                      ? "text-foreground"
+                      : "text-muted-foreground"
                   )}
                 >
                   {formatDistanceToNow(new Date(item.date), {
@@ -56,7 +57,7 @@ export function MailList({ items }: MailListProps) {
               </div>
               <div className="text-xs font-medium">{item.subject}</div>
             </div>
-            <div className="text-moon-muted-foreground line-clamp-2 text-xs">
+            <div className="text-muted-foreground line-clamp-2 text-xs">
               {item.text.substring(0, 300)}
             </div>
             {item.labels.length ? (

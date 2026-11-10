@@ -116,7 +116,7 @@ export function AccountForm() {
                       variant={"outline"}
                       className={cn(
                         "w-[240px] pl-3 text-left font-normal",
-                        !field.value && "text-moon-muted-foreground"
+                        !field.value && "text-muted-foreground"
                       )}
                     >
                       {field.value ? (
@@ -161,7 +161,7 @@ export function AccountForm() {
                       role="combobox"
                       className={cn(
                         "w-[200px] justify-between",
-                        !field.value && "text-moon-muted-foreground"
+                        !field.value && "text-muted-foreground"
                       )}
                     >
                       {field.value

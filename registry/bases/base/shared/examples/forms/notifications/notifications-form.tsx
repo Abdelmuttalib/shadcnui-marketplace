@@ -71,7 +71,7 @@ export function NotificationsForm() {
                   defaultValue={field.value}
                   className="flex flex-col space-y-1"
                 >
-                  <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormItem className="flex items-center space-y-0 space-x-3">
                     <FormControl>
                       <RadioGroupItem value="all" />
                     </FormControl>
@@ -79,7 +79,7 @@ export function NotificationsForm() {
                       All new messages
                     </FormLabel>
                   </FormItem>
-                  <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormItem className="flex items-center space-y-0 space-x-3">
                     <FormControl>
                       <RadioGroupItem value="mentions" />
                     </FormControl>
@@ -87,7 +87,7 @@ export function NotificationsForm() {
                       Direct messages and mentions
                     </FormLabel>
                   </FormItem>
-                  <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormItem className="flex items-center space-y-0 space-x-3">
                     <FormControl>
                       <RadioGroupItem value="none" />
                     </FormControl>
@@ -106,7 +106,7 @@ export function NotificationsForm() {
               control={form.control}
               name="communication_emails"
               render={({ field }) => (
-                <FormItem className="rounded-moon-lg flex flex-row items-center justify-between border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
                       Communication emails
@@ -128,7 +128,7 @@ export function NotificationsForm() {
               control={form.control}
               name="marketing_emails"
               render={({ field }) => (
-                <FormItem className="rounded-moon-lg flex flex-row items-center justify-between border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
                       Marketing emails
@@ -150,7 +150,7 @@ export function NotificationsForm() {
               control={form.control}
               name="social_emails"
               render={({ field }) => (
-                <FormItem className="rounded-moon-lg flex flex-row items-center justify-between border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Social emails</FormLabel>
                     <FormDescription>
@@ -170,7 +170,7 @@ export function NotificationsForm() {
               control={form.control}
               name="security_emails"
               render={({ field }) => (
-                <FormItem className="rounded-moon-lg flex flex-row items-center justify-between border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Security emails</FormLabel>
                     <FormDescription>
@@ -194,7 +194,7 @@ export function NotificationsForm() {
           control={form.control}
           name="mobile"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+            <FormItem className="flex flex-row items-start space-y-0 space-x-3">
               <FormControl>
                 <Checkbox
                   checked={field.value}

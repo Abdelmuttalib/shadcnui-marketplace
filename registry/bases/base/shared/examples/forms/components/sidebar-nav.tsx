@@ -4,7 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/registry/bases/base/moon/ui/button";
+import {} from "@/registry/bases/base/moon/ui/button";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
@@ -16,10 +17,12 @@ interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
 export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
   const pathname = usePathname();
 
+  const { buttonVariants } = useDesignSystem();
+
   return (
     <nav
       className={cn(
-        "flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1",
+        "flex space-x-2 lg:flex-col lg:space-y-1 lg:space-x-0",
         className
       )}
       {...props}
@@ -29,11 +32,12 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
           key={item.href}
           href={item.href}
           className={cn(
+            // @ts-expect-error: dynamic module export
             buttonVariants({ variant: "ghost" }),
-            "justify-start border-t-2 border-transparent lg:border-l-2 lg:border-t-0",
+            "justify-start border-t-2 border-transparent lg:border-t-0 lg:border-l-2",
             pathname === item.href
-              ? "border-moon-ring bg-moon-muted/50 hover:bg-moon-muted"
-              : "hover:bg-moon-accent"
+              ? "border-ring bg-muted/50 hover:bg-muted"
+              : "hover:bg-accent"
           )}
         >
           {item.title}

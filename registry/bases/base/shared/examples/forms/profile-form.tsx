@@ -7,25 +7,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/registry/bases/base/moon/ui/form";
-import { Input } from "@/registry/bases/base/moon/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/moon/ui/select";
-import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
+import { useDesignSystem } from "../../components/design-system-provider";
 
 const profileFormSchema = z.object({
   username: z
@@ -80,13 +62,31 @@ export function ProfileForm() {
     });
   }
 
+  const {
+    Button,
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+    Input,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Textarea,
+  } = useDesignSystem();
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
           name="username"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
@@ -103,7 +103,7 @@ export function ProfileForm() {
         <FormField
           control={form.control}
           name="email"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Email</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -129,7 +129,7 @@ export function ProfileForm() {
         <FormField
           control={form.control}
           name="bio"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Bio</FormLabel>
               <FormControl>
@@ -153,7 +153,7 @@ export function ProfileForm() {
               control={form.control}
               key={field.id}
               name={`urls.${index}.value`}
-              render={({ field }) => (
+              render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel className={cn(index !== 0 && "sr-only")}>
                     URLs

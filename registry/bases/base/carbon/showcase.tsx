@@ -298,7 +298,7 @@ export function CheckboxDemo() {
       <Checkbox id="terms" />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -516,7 +516,7 @@ import {
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="rounded-cb-md border-cb-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
+      <ContextMenuTrigger className="rounded-dft-md border-dft-border flex h-[150px] w-[300px] items-center justify-center border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
@@ -1091,11 +1091,11 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="rounded-cb-md bg-linear-to-b from-accent/50 to-accent flex h-full w-full select-none flex-col justify-end p-6 no-underline outline-none focus:shadow-md"
+                    className="rounded-cb-md from-accent/50 to-accent flex h-full w-full flex-col justify-end bg-linear-to-b p-6 no-underline outline-none select-none focus:shadow-md"
                     href="/"
                   >
                     <CalendarIcon className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mt-4 mb-2 text-lg font-medium">
                       shadcn/ui
                     </div>
                     <p className="text-cb-muted-foreground text-sm leading-tight">
@@ -1155,12 +1155,12 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "rounded-cb-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors",
+            "rounded-cb-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-cb-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
@@ -1219,7 +1219,7 @@ export function PopoverDemo() {
       <PopoverContent className="w-80">
         <div className="grid gap-4">
           <div className="space-y-2">
-            <h4 className="font-medium leading-none">Dimensions</h4>
+            <h4 className="leading-none font-medium">Dimensions</h4>
             <p className="text-cb-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
@@ -1349,7 +1349,7 @@ export function ScrollAreaDemo() {
   return (
     <ScrollArea className="rounded-cb-md h-72 w-48 border">
       <div className="p-4">
-        <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+        <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
         {tags.map((tag) => (
           <div key={tag}>
             <div className="text-sm">{tag}</div>
@@ -1392,7 +1392,7 @@ export function SeparatorDemo() {
   return (
     <div>
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
+        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
         <p className="text-cb-muted-foreground text-sm">
           An open-source UI component library.
         </p>
@@ -1686,7 +1686,7 @@ function getPaymentStatusBadgeVariant(status: Payment["status"]) {
   }
 }
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Payment, any, any>[] = [
   {
     accessorKey: "id",
     header: "ID",
@@ -1971,7 +1971,7 @@ export function Chart4() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
             <div className="text-cb-muted-foreground flex items-center gap-2 leading-none">
@@ -2080,7 +2080,7 @@ export function Chart5() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
+            <div className="flex items-center gap-2 leading-none font-medium">
               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
             </div>
             <div className="text-cb-muted-foreground flex items-center gap-2 leading-none">
@@ -2147,7 +2147,7 @@ export function Chart6() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
+        <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-cb-muted-foreground leading-none">
@@ -2229,7 +2229,7 @@ export function Chart7() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
+        <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-cb-muted-foreground leading-none">

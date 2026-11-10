@@ -1,23 +1,27 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/moon/ui/card";
-import { Input } from "@/registry/bases/base/moon/ui/input";
-import { Label } from "@/registry/bases/base/moon/ui/label";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoCreateAccount() {
+  const {
+    Button,
+
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    Input,
+    Label,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl">Create an account</CardTitle>
+        <CardTitle>Create an account</CardTitle>
         <CardDescription>
           Enter your email below to create your account
         </CardDescription>
@@ -35,10 +39,10 @@ export function DemoCreateAccount() {
         </div>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <span className="border-t-moon-border w-full border-t" />
+            <span className="border-t-border w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-moon-background text-moon-muted-foreground px-2">
+            <span className="bg-background text-muted-foreground px-2">
               Or continue with
             </span>
           </div>

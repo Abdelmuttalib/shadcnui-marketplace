@@ -1,26 +1,30 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/moon/ui/card";
-import { Input } from "@/registry/bases/base/moon/ui/input";
-import { Label } from "@/registry/bases/base/moon/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/moon/ui/select";
-import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoReportAnIssue() {
+  const {
+    Button,
+
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    Textarea,
+
+    Input,
+    Label,
+
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>
@@ -34,7 +38,7 @@ export function DemoReportAnIssue() {
           <div className="grid gap-2">
             <Label htmlFor="area">Area</Label>
             <Select defaultValue="billing">
-              <SelectTrigger id="area">
+              <SelectTrigger id="area" className="w-full">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
@@ -49,7 +53,7 @@ export function DemoReportAnIssue() {
           <div className="grid gap-2">
             <Label htmlFor="security-level">Security Level</Label>
             <Select defaultValue="2">
-              <SelectTrigger id="security-level" className="w-[160px] truncate">
+              <SelectTrigger id="security-level" className="w-full truncate">
                 <SelectValue placeholder="Select level" />
               </SelectTrigger>
               <SelectContent>

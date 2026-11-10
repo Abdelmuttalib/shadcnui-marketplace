@@ -1,28 +1,30 @@
 import { Icons } from "@/components/icons";
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/moon/ui/card";
-import { Input } from "@/registry/bases/base/moon/ui/input";
-import { Label } from "@/registry/bases/base/moon/ui/label";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/bases/base/moon/ui/radio-group";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/moon/ui/select";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoPaymentMethod() {
+  const {
+    Button,
+
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    RadioGroup,
+    RadioGroupItem,
+
+    Input,
+    Label,
+
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>
@@ -37,7 +39,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="card" id="card" className="peer sr-only" />
             <Label
               htmlFor="card"
-              className="rounded-moon-md border-moon-muted bg-moon-popover hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary flex flex-col items-center justify-between border-2 p-4"
+              className="border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 p-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +65,7 @@ export function DemoPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="rounded-moon-md border-moon-muted bg-moon-popover hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary flex flex-col items-center justify-between border-2 p-4"
+              className="border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 p-4"
             >
               <Icons.paypal className="mb-3 h-6 w-6" />
               Paypal
@@ -73,7 +75,7 @@ export function DemoPaymentMethod() {
             <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
             <Label
               htmlFor="apple"
-              className="rounded-moon-md border-moon-muted bg-moon-popover hover:bg-moon-accent hover:text-moon-accent-foreground peer-data-[state=checked]:border-moon-primary [&:has([data-state=checked])]:border-moon-primary flex flex-col items-center justify-between border-2 p-4"
+              className="border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 p-4"
             >
               <Icons.apple className="mb-3 h-6 w-6" />
               Apple
@@ -92,7 +94,7 @@ export function DemoPaymentMethod() {
           <div className="grid gap-2">
             <Label htmlFor="month">Expires</Label>
             <Select>
-              <SelectTrigger id="month">
+              <SelectTrigger id="month" className="w-full">
                 <SelectValue placeholder="Month" />
               </SelectTrigger>
               <SelectContent>
@@ -114,7 +116,7 @@ export function DemoPaymentMethod() {
           <div className="grid gap-2">
             <Label htmlFor="year">Year</Label>
             <Select>
-              <SelectTrigger id="year">
+              <SelectTrigger id="year" className="w-full">
                 <SelectValue placeholder="Year" />
               </SelectTrigger>
               <SelectContent>

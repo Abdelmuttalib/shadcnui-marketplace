@@ -56,6 +56,7 @@ export function StylesPreviews({ className }: { className?: string }) {
           const c = `--${getStyleVariablesPrefix(style)}`;
           return (
             <StyleFontWrapper
+              key={style + s + c + index}
               sStyle={style}
               className="group relative"
               style={{

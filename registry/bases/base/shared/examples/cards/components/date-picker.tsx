@@ -1,8 +1,14 @@
-import DatePickerWithRange from "@/registry/bases/base/moon/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/bases/base/moon/ui/card";
-import { Label } from "@/registry/bases/base/moon/ui/label";
+import DatePickerWithRange from "@/registry/bases/base/shared/components/date-picker-with-range";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoDatePicker() {
+  const {
+    Card,
+    CardContent,
+
+    Label,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent className="pt-6">

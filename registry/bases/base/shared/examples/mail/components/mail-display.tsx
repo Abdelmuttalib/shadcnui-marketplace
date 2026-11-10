@@ -13,37 +13,8 @@ import {
   Trash2,
 } from "lucide-react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/moon/ui/avatar";
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import { Calendar } from "@/registry/bases/base/moon/ui/calendar";
-import {
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/registry/bases/base/moon/ui/dropdown-menu";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/moon/ui/dropdown-menu";
-import { Label } from "@/registry/bases/base/moon/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/bases/base/moon/ui/popover";
-import { Separator } from "@/registry/bases/base/moon/ui/separator";
-import { Switch } from "@/registry/bases/base/moon/ui/switch";
-import { Textarea } from "@/registry/bases/base/moon/ui/textarea";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/moon/ui/tooltip";
-
 import { Mail } from "../data";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface MailDisplayProps {
   mail: Mail | null;
@@ -51,6 +22,28 @@ interface MailDisplayProps {
 
 export function MailDisplay({ mail }: MailDisplayProps) {
   const today = new Date();
+
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Button,
+    Calendar,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenu,
+    DropdownMenuTrigger,
+    Label,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    Separator,
+    Switch,
+    Textarea,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+  } = useDesignSystem();
 
   return (
     <div className="flex h-full flex-col">
@@ -83,7 +76,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
             </TooltipTrigger>
             <TooltipContent>Move to trash</TooltipContent>
           </Tooltip>
-          <Separator orientation="vertical" className="mx-1 h-6" />
+          <Separator orientation="vertical" className="mx-1 h-10" />
           <Tooltip>
             <Popover>
               <PopoverTrigger asChild>
@@ -95,7 +88,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 </TooltipTrigger>
               </PopoverTrigger>
               <PopoverContent className="flex w-[535px] p-0">
-                <div className="border-r-moon-border flex flex-col gap-2 border-r px-2 py-4">
+                <div className="border-r-border flex flex-col gap-2 border-r px-2 py-4">
                   <div className="px-4 text-sm font-medium">Snooze until</div>
                   <div className="grid min-w-[250px] gap-1">
                     <Button
@@ -103,7 +96,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Later today{" "}
-                      <span className="text-moon-muted-foreground ml-auto">
+                      <span className="text-muted-foreground ml-auto">
                         {format(addHours(today, 4), "E, h:m b")}
                       </span>
                     </Button>
@@ -112,7 +105,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Tomorrow
-                      <span className="text-moon-muted-foreground ml-auto">
+                      <span className="text-muted-foreground ml-auto">
                         {format(addDays(today, 1), "E, h:m b")}
                       </span>
                     </Button>
@@ -121,7 +114,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       This weekend
-                      <span className="text-moon-muted-foreground ml-auto">
+                      <span className="text-muted-foreground ml-auto">
                         {format(nextSaturday(today), "E, h:m b")}
                       </span>
                     </Button>
@@ -130,7 +123,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       className="justify-start font-normal"
                     >
                       Next week
-                      <span className="text-moon-muted-foreground ml-auto">
+                      <span className="text-muted-foreground ml-auto">
                         {format(addDays(today, 7), "E, h:m b")}
                       </span>
                     </Button>
@@ -173,7 +166,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
             <TooltipContent>Forward</TooltipContent>
           </Tooltip>
         </div>
-        <Separator orientation="vertical" className="mx-2 h-6" />
+        <Separator orientation="vertical" className="mx-2 h-full" />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" disabled={!mail}>
@@ -212,13 +205,13 @@ export function MailDisplay({ mail }: MailDisplayProps) {
               </div>
             </div>
             {mail.date && (
-              <div className="text-moon-muted-foreground ml-auto text-xs">
+              <div className="text-muted-foreground ml-auto text-xs">
                 {format(new Date(mail.date), "PPpp")}
               </div>
             )}
           </div>
           <Separator />
-          <div className="flex-1 whitespace-pre-wrap p-4 text-sm">
+          <div className="flex-1 p-4 text-sm whitespace-pre-wrap">
             {mail.text}
           </div>
           <Separator className="mt-auto" />
@@ -238,7 +231,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                     thread
                   </Label>
                   <Button
-                    onClick={(e) => e.preventDefault()}
+                    onClick={(e: any) => e.preventDefault()}
                     size="sm"
                     className="ml-auto"
                   >
@@ -250,7 +243,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </div>
         </div>
       ) : (
-        <div className="text-moon-muted-foreground p-8 text-center">
+        <div className="text-muted-foreground p-8 text-center">
           No message selected
         </div>
       )}

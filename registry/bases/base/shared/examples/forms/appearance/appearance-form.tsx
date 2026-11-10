@@ -65,31 +65,25 @@ export function AppearanceForm() {
                   <select
                     className={cn(
                       buttonVariants({ variant: "outline" }),
-                      "bg-input hover:bg-input hover:text-moon-foreground w-[200px] appearance-none border-b border-b-gray-500 font-normal"
+                      "bg-input hover:bg-input hover:text-foreground w-[200px] appearance-none border-b border-b-gray-500 font-normal"
                     )}
                     {...field}
                   >
-                    <option
-                      value="inter"
-                      className="bg-input text-moon-foreground"
-                    >
+                    <option value="inter" className="bg-input text-foreground">
                       Inter
                     </option>
                     <option
                       value="manrope"
-                      className="bg-input text-moon-foreground"
+                      className="bg-input text-foreground"
                     >
                       Manrope
                     </option>
-                    <option
-                      value="system"
-                      className="bg-input text-moon-foreground"
-                    >
+                    <option value="system" className="bg-input text-foreground">
                       System
                     </option>
                   </select>
                 </FormControl>
-                <ChevronDownIcon className="absolute right-3 top-2.5 h-4 w-4 opacity-50" />
+                <ChevronDownIcon className="absolute top-2.5 right-3 h-4 w-4 opacity-50" />
               </div>
               <FormDescription>
                 Set the font you want to use in the dashboard.
@@ -114,23 +108,23 @@ export function AppearanceForm() {
                 className="grid max-w-md grid-cols-2 gap-8 pt-2"
               >
                 <FormItem>
-                  <FormLabel className="[&:has([data-state=checked])>div]:border-moon-primary">
+                  <FormLabel className="[&:has([data-state=checked])>div]:border-primary">
                     <FormControl>
                       <RadioGroupItem value="light" className="sr-only" />
                     </FormControl>
-                    <div className="rounded-moon-md border-muted hover:border-accent items-center border-2 p-1">
+                    <div className="border-muted hover:border-accent items-center rounded-md border-2 p-1">
                       <div className="space-y-2 rounded-sm bg-[#ecedef] p-2">
-                        <div className="shadow-xs rounded-moon-md space-y-2 bg-white p-2">
-                          <div className="rounded-moon-lg h-2 w-[80px] bg-[#ecedef]" />
-                          <div className="rounded-moon-lg h-2 w-[100px] bg-[#ecedef]" />
+                        <div className="space-y-2 rounded-md bg-white p-2 shadow-xs">
+                          <div className="h-2 w-[80px] rounded-lg bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-lg bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs rounded-moon-md flex items-center space-x-2 bg-white p-2">
+                        <div className="flex items-center space-x-2 rounded-md bg-white p-2 shadow-xs">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="rounded-moon-lg h-2 w-[100px] bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-lg bg-[#ecedef]" />
                         </div>
-                        <div className="shadow-xs rounded-moon-md flex items-center space-x-2 bg-white p-2">
+                        <div className="flex items-center space-x-2 rounded-md bg-white p-2 shadow-xs">
                           <div className="h-4 w-4 rounded-full bg-[#ecedef]" />
-                          <div className="rounded-moon-lg h-2 w-[100px] bg-[#ecedef]" />
+                          <div className="h-2 w-[100px] rounded-lg bg-[#ecedef]" />
                         </div>
                       </div>
                     </div>
@@ -140,23 +134,23 @@ export function AppearanceForm() {
                   </FormLabel>
                 </FormItem>
                 <FormItem>
-                  <FormLabel className="[&:has([data-state=checked])>div]:border-moon-primary">
+                  <FormLabel className="[&:has([data-state=checked])>div]:border-primary">
                     <FormControl>
                       <RadioGroupItem value="dark" className="sr-only" />
                     </FormControl>
-                    <div className="rounded-moon-md border-muted bg-popover hover:bg-moon-accent hover:text-moon-accent-foreground items-center border-2 p-1">
+                    <div className="border-muted bg-popover hover:bg-accent hover:text-accent-foreground items-center rounded-md border-2 p-1">
                       <div className="space-y-2 rounded-sm bg-slate-950 p-2">
-                        <div className="shadow-xs rounded-moon-md space-y-2 bg-slate-800 p-2">
-                          <div className="rounded-moon-lg h-2 w-[80px] bg-slate-400" />
-                          <div className="rounded-moon-lg h-2 w-[100px] bg-slate-400" />
+                        <div className="space-y-2 rounded-md bg-slate-800 p-2 shadow-xs">
+                          <div className="h-2 w-[80px] rounded-lg bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-lg bg-slate-400" />
                         </div>
-                        <div className="shadow-xs rounded-moon-md flex items-center space-x-2 bg-slate-800 p-2">
+                        <div className="flex items-center space-x-2 rounded-md bg-slate-800 p-2 shadow-xs">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="rounded-moon-lg h-2 w-[100px] bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-lg bg-slate-400" />
                         </div>
-                        <div className="shadow-xs rounded-moon-md flex items-center space-x-2 bg-slate-800 p-2">
+                        <div className="flex items-center space-x-2 rounded-md bg-slate-800 p-2 shadow-xs">
                           <div className="h-4 w-4 rounded-full bg-slate-400" />
-                          <div className="rounded-moon-lg h-2 w-[100px] bg-slate-400" />
+                          <div className="h-2 w-[100px] rounded-lg bg-slate-400" />
                         </div>
                       </div>
                     </div>

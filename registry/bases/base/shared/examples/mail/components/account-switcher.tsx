@@ -3,13 +3,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/moon/ui/select";
+import { useDesignSystem } from "@/registry/bases/base/shared/components/design-system-provider";
 
 interface AccountSwitcherProps {
   isCollapsed: boolean;
@@ -28,11 +22,14 @@ export function AccountSwitcher({
     accounts[0].email
   );
 
+  const { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } =
+    useDesignSystem();
+
   return (
     <Select defaultValue={selectedAccount} onValueChange={setSelectedAccount}>
       <SelectTrigger
         className={cn(
-          "flex items-center gap-2 [&>span]:line-clamp-1 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:gap-1 [&>span]:truncate [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0",
+          "flex w-full items-center gap-2 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0 [&>span]:line-clamp-1 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:gap-1 [&>span]:truncate",
           isCollapsed &&
             "flex h-9 w-9 shrink-0 items-center justify-center p-0 [&>span]:w-auto [&>svg]:hidden"
         )}
@@ -48,10 +45,10 @@ export function AccountSwitcher({
           </span>
         </SelectValue>
       </SelectTrigger>
-      <SelectContent className="bg-moon-popover">
+      <SelectContent className="bg-popover">
         {accounts.map((account) => (
           <SelectItem key={account.email} value={account.email}>
-            <div className="[&_svg]:text-moon-foreground flex items-center gap-3 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0">
+            <div className="[&_svg]:text-foreground flex items-center gap-3 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0">
               {account.icon}
               {account.email}
             </div>

@@ -1,29 +1,31 @@
 "use client";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/moon/ui/avatar";
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/moon/ui/card";
-import { Input } from "@/registry/bases/base/moon/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/moon/ui/select";
-import { Separator } from "@/registry/bases/base/moon/ui/separator";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DemoShareDocument() {
+  const {
+    Button,
+
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+
+    Input,
+    Separator,
+
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>
@@ -50,12 +52,10 @@ export function DemoShareDocument() {
                   <AvatarFallback>OM</AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="text-sm font-medium leading-none">
+                  <p className="text-sm leading-none font-medium">
                     Olivia Martin
                   </p>
-                  <p className="text-moon-muted-foreground text-sm">
-                    m@example.com
-                  </p>
+                  <p className="text-muted-foreground text-sm">m@example.com</p>
                 </div>
               </div>
               <Select defaultValue="edit">
@@ -75,12 +75,10 @@ export function DemoShareDocument() {
                   <AvatarFallback>IN</AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="text-sm font-medium leading-none">
+                  <p className="text-sm leading-none font-medium">
                     Isabella Nguyen
                   </p>
-                  <p className="text-moon-muted-foreground text-sm">
-                    b@example.com
-                  </p>
+                  <p className="text-muted-foreground text-sm">b@example.com</p>
                 </div>
               </div>
               <Select defaultValue="view">
@@ -100,12 +98,10 @@ export function DemoShareDocument() {
                   <AvatarFallback>SD</AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="text-sm font-medium leading-none">
+                  <p className="text-sm leading-none font-medium">
                     Sofia Davis
                   </p>
-                  <p className="text-moon-muted-foreground text-sm">
-                    p@example.com
-                  </p>
+                  <p className="text-muted-foreground text-sm">p@example.com</p>
                 </div>
               </div>
               <Select defaultValue="view">

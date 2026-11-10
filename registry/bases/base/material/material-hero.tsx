@@ -15,7 +15,7 @@ import {
   TabsTrigger,
 } from "@/registry/bases/base/material/ui/tabs";
 import { Toggle } from "@/registry/bases/base/material/ui/toggle";
-import { DemoDatePicker } from "@/registry/bases/base/material/example/cards/components/date-picker";
+import { DemoDatePicker } from "@/registry/bases/base/shared/components/date-picker";
 import {
   ComboboxDemo,
   ContextMenuDemo,
@@ -38,14 +38,14 @@ export function MaterialUI() {
     <>
       {/* pointer-events-none  */}
       {/* <div className="col-start-1 row-start-5 flex md:row-span-3 md:row-start-3 lg:row-span-4 lg:row-start-2 xl:row-span-5 xl:row-start-1 xl:justify-end"> */}
-      <div className="-ml-[32rem] h-[46.375rem] origin-top select-none sm:-ml-[24rem] sm:-mt-16 sm:h-auto md:-ml-64  lg:-ml-16 lg:mt-0 xl:-mr-4 xl:ml-0">
+      <div className="-ml-[32rem] h-[46.375rem] origin-top select-none sm:-mt-16 sm:-ml-[24rem] sm:h-auto md:-ml-64 lg:mt-0 lg:-ml-16 xl:-mr-4 xl:ml-0">
         <div className="flex justify-end">
           <div className="relative flex items-end">
             <div className="bg-material-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            <div className="absolute left-16 top-full -mt-px h-8 overflow-hidden">
+            <div className="absolute top-full left-16 -mt-px h-8 overflow-hidden">
               <div className="-mt-px flex h-[2px] w-56">
-                <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
-                <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
+                <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
               </div>
             </div>
             <div>
@@ -114,8 +114,8 @@ export function MaterialUI() {
               <div className="bg-material-foreground/10 absolute -inset-x-8 top-0 h-px [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
               <div className="absolute bottom-full left-40 -mb-px flex h-8 items-end overflow-hidden">
                 <div className="-mb-px flex h-[2px] w-56">
-                  <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,oklch(var(--material-primary))_67.19%,rgba(236,72,153,0)_100%)]"></div>
-                  <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                  <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,oklch(var(--material-primary))_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
+                  <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
                 </div>
               </div>
               <div className="divide-muted-foreground/20 rounded-material-lg border-material-input bg-material-card text-material-foreground w-[24.5rem] divide-y border text-[0.8125rem]/5 shadow-xl shadow-black/5">
@@ -246,8 +246,8 @@ export function MaterialUI() {
                   <div className="bg-material-foreground/10 absolute -inset-y-8 right-0 w-px [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                   <div className="absolute bottom-full left-16 -mb-px flex h-8 items-end overflow-hidden">
                     <div className="-mb-px flex h-[2px] w-56">
-                      <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,oklch(var(--material-primary))_67.19%,rgba(236,72,153,0)_100%)]"></div>
-                      <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,oklch(var(--material-primary))_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                      <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,oklch(var(--material-primary))_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
+                      <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,oklch(var(--material-primary))_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
                     </div>
                   </div>
                   <div className="flex w-[23.5625rem] items-center">
@@ -271,7 +271,7 @@ export function MaterialUI() {
                       <Checkbox id="terms" />
                       <label
                         htmlFor="terms"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
                         Accept terms
                       </label>
@@ -303,8 +303,8 @@ export function MaterialUI() {
                 <div className="bg-material-foreground/10 absolute -inset-x-8 bottom-0 h-px [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 <div className="absolute -top-px right-16 h-8 overflow-hidden">
                   <div className="-mt-px flex h-[2px] w-56 -scale-x-100">
-                    <div className="blur-xs w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
-                    <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
+                    <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-xs"></div>
+                    <div className="-ml-[100%] w-full flex-none [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)] blur-[1px]"></div>
                   </div>
                 </div>
                 {/* <DemoCreateAccount /> */}

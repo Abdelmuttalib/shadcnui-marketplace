@@ -16,37 +16,38 @@ import {
   Star,
 } from "lucide-react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/carbon/ui/avatar";
-import { Badge } from "@/registry/bases/base/carbon/ui/badge";
-import { Button } from "@/registry/bases/base/carbon/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/carbon/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/carbon/ui/dropdown-menu";
-import { Separator } from "@/registry/bases/base/carbon/ui/separator";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/registry/bases/base/carbon/ui/tooltip";
+import { useDesignSystem } from "../shared/components/design-system-provider";
 
-export function CarbonCardShowcase() {
+export function CardShowcase() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+
+    Badge,
+    Button,
+
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+
+    Separator,
+  } = useDesignSystem();
+
   return (
     <div>
       <Card>
