@@ -1,10 +1,7 @@
 "use client";
 
-import { Menu, Transition } from "@headlessui/react";
-import { CheckIcon } from "@heroicons/react/20/solid";
-import { ChevronDownIcon, MoonIcon, Pencil, SunIcon } from "lucide-react";
+import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Fragment } from "react";
 
 import {
   Select,
@@ -159,20 +156,6 @@ export default function ThemeSwitcher({
 }
 
 import { Button, ButtonProps, buttonVariants } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 import { Icons } from "./icons";
 
@@ -210,90 +193,5 @@ export function ThemeColorSelect() {
         )
       )}
     </div>
-  );
-}
-
-export function ThemeColorSelect2() {
-  const [themeColor, setThemeColor] = useThemeColor();
-
-  const themeColors = PRIMARY_THEME_COLORS.filter(
-    ({ name }) => name === themeColor.colorName
-  );
-
-  return (
-    <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button
-          as="button"
-          className={cn(
-            buttonVariants({
-              variant: "outline",
-              size: "sm",
-            }),
-            "mx-2 flex border capitalize"
-          )}
-        >
-          <span
-            className={cn("h-3.5 w-3.5 rounded")}
-            style={{
-              backgroundColor: themeColors?.[0]?.color,
-            }}
-          ></span>
-          <>{themeColor.colorName}</>
-          <ChevronDownIcon className="text-foreground-secondary ml-2 h-3.5 w-3.5" />
-          {/* {name == themeColor.colorName && (
-                      <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
-                    )} */}
-          {/* <p className="w-5 text-foreground-light">i</p> */}
-        </Menu.Button>
-      </div>
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="bg-popover text-foreground ring-border absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md p-1 shadow-lg ring-1 focus:outline-none">
-          <div className="relative">
-            {PRIMARY_THEME_COLORS?.map(
-              ({ name, color }: { name: ThemeColorType; color: string }) => (
-                <Menu.Item key={`${name}`}>
-                  <button
-                    onClick={() => {
-                      setThemeColor({
-                        colorName: name,
-                      });
-                    }}
-                    className={cn(
-                      "text-foreground flex w-full items-center rounded px-3 py-2.5 capitalize",
-                      {
-                        "bg-primary-100 text-foreground dark:bg-muted-foreground/20":
-                          name === themeColor.colorName,
-                        "hover:bg-muted dark:hover:bg-muted-foreground/10":
-                          name !== themeColor.colorName,
-                      }
-                    )}
-                  >
-                    <span
-                      style={{
-                        backgroundColor: color,
-                      }}
-                      className={cn("mr-2 h-3.5 w-3.5 rounded")}
-                    ></span>
-                    <>{name}</>
-                    {name == themeColor.colorName && (
-                      <CheckIcon className="absolute right-2 h-4 w-4 text-current" />
-                    )}
-                  </button>
-                </Menu.Item>
-              )
-            )}
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
   );
 }
