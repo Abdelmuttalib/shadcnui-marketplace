@@ -38,14 +38,14 @@ const adapters = {
 };
 
 const examples = {
-  authentication: dynamic(() => import("./examples/authentication/page")),
-  cards: dynamic(() => import("./examples/cards/page")),
-  dashboard: dynamic(() => import("./examples/dashboard/page")),
-  forms: dynamic(() => import("./examples/forms/page")),
-  mail: dynamic(() => import("./examples/mail/page")),
-  music: dynamic(() => import("./examples/music/page")),
-  playground: dynamic(() => import("./examples/playground/page")),
-  tasks: dynamic(() => import("./examples/tasks/page")),
+  authentication: dynamic(() => import("./views/authentication/page")),
+  cards: dynamic(() => import("./views/cards/page")),
+  dashboard: dynamic(() => import("./views/dashboard/page")),
+  forms: dynamic(() => import("./views/forms/page")),
+  mail: dynamic(() => import("./views/mail/page")),
+  music: dynamic(() => import("./views/music/page")),
+  playground: dynamic(() => import("./views/playground/page")),
+  tasks: dynamic(() => import("./views/tasks/page")),
   hero: dynamic(() => import("./hero")),
   "card-showcase": dynamic(() => import("./card-showcase")),
 };
