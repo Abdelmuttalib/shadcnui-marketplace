@@ -46,23 +46,27 @@ const ColorPicker = forwardRef<
 
     return (
       <Popover onOpenChange={setOpen} open={open}>
-        <PopoverTrigger asChild disabled={disabled} onBlur={onBlur}>
-          <Button
-            {...props}
-            className={cn("block", className)}
-            name={name}
-            onClick={() => {
-              setOpen(true);
-            }}
-            size="icon"
-            style={{
-              backgroundColor: parsedValue,
-            }}
-            variant="outline"
-          >
-            <div />
-          </Button>
-        </PopoverTrigger>
+        <PopoverTrigger
+          render={
+            <Button
+              {...props}
+              className={cn("block", className)}
+              name={name}
+              onClick={() => {
+                setOpen(true);
+              }}
+              size="icon"
+              style={{
+                backgroundColor: parsedValue,
+              }}
+              variant="outline"
+            >
+              <div />
+            </Button>
+          }
+          disabled={disabled}
+          onBlur={onBlur}
+        ></PopoverTrigger>
         <PopoverContent className="flex w-full flex-col gap-4">
           <HexColorPicker color={parsedValue} onChange={onChange} />
           <Input

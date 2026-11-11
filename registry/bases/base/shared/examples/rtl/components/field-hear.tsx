@@ -1,17 +1,7 @@
-"use client"
+"use client";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Card, CardContent } from "@/styles/base-nova/ui-rtl/card"
-import { Checkbox } from "@/styles/base-nova/ui-rtl/checkbox"
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldLegend,
-  FieldSet,
-  FieldTitle,
-} from "@/styles/base-nova/ui-rtl/field"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -32,19 +22,32 @@ const translations = {
     referral: "הפניה",
     other: "אחר",
   },
-}
+};
 
 export function FieldHear() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
 
   const options = [
     { label: t.socialMedia, value: "social-media" },
     { label: t.searchEngine, value: "search-engine" },
     { label: t.referral, value: "referral" },
     { label: t.other, value: "other" },
-  ]
+  ];
+
+  const {
+    Card,
+    CardContent,
+    Checkbox,
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldLegend,
+    FieldSet,
+    FieldTitle,
+  } = useDesignSystem();
 
   return (
     <div dir={t.dir}>
@@ -85,5 +88,5 @@ export function FieldHear() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

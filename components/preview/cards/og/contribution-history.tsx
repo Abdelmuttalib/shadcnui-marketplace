@@ -1,4 +1,4 @@
-import { Button } from "@/registry/bases/base/styles/default/ui/og/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardContent,
@@ -6,12 +6,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/base/styles/default/ui/og/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Item,
   ItemContent,
   ItemDescription,
-} from "@/registry/bases/base/styles/default/ui/og/item";
+} from "@/registry/bases/base/styles/default/ui/item";
 
 const chartData = [
   { month: "Dec", amount: 800 },

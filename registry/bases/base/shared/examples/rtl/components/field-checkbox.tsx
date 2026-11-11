@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Checkbox } from "@/styles/base-nova/ui-rtl/checkbox"
-import { Field, FieldLabel } from "@/styles/base-nova/ui-rtl/field"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -13,12 +12,14 @@ const translations = {
     dir: "rtl" as const,
     terms: "אני מסכים לתנאים וההגבלות",
   },
-}
+};
 
 export function FieldCheckbox() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const { dir, terms } = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const { dir, terms } = translations[lang];
+
+  const { Checkbox, Field, FieldLabel } = useDesignSystem();
 
   return (
     <div dir={dir}>
@@ -31,5 +32,5 @@ export function FieldCheckbox() {
         </Field>
       </FieldLabel>
     </div>
-  )
+  );
 }

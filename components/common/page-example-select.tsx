@@ -30,7 +30,10 @@ export function PageExampleSelect({
   }
 
   return (
-    <Select defaultValue={pageExampleType} onValueChange={onPageExampleChange}>
+    <Select
+      defaultValue={pageExampleType}
+      onValueChange={onPageExampleChange as any}
+    >
       <SelectTrigger aria-label="Select example" className="rounded-none">
         <SelectValue
           placeholder="select an example"

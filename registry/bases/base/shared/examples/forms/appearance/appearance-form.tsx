@@ -7,20 +7,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "@/registry/bases/base/moon/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/registry/bases/base/moon/ui/form";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/bases/base/moon/ui/radio-group";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const appearanceFormSchema = z.object({
   theme: z.enum(["light", "dark"], {
@@ -51,19 +39,34 @@ export function AppearanceForm() {
     });
   }
 
+  const {
+    Button,
+    buttonVariants,
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+    RadioGroup,
+    RadioGroupItem,
+  } = useDesignSystem();
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
           name="font"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Font</FormLabel>
               <div className="relative w-max">
                 <FormControl>
                   <select
                     className={cn(
+                      // @ts-expect-error: dynamic module export
                       buttonVariants({ variant: "outline" }),
                       "bg-input hover:bg-input hover:text-foreground w-[200px] appearance-none border-b border-b-gray-500 font-normal"
                     )}
@@ -95,7 +98,7 @@ export function AppearanceForm() {
         <FormField
           control={form.control}
           name="theme"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem className="space-y-1">
               <FormLabel>Theme</FormLabel>
               <FormDescription>

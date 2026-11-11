@@ -1,15 +1,13 @@
-import type { BuiltTheme } from "@/lib/domain/preset-css";
-
 // Satori's CSS parser doesn't accept oklch(); convert to hex.
 export function oklchToHex(
   input: string | undefined,
-  fallback = "#000000",
+  fallback = "#000000"
 ): string {
   if (!input) return fallback;
   const trimmed = input.trim();
   if (trimmed.startsWith("#")) return trimmed;
   const m = trimmed.match(
-    /^oklch\(\s*([\d.]+%?)\s+([\d.]+%?)\s+([\d.]+)(?:deg)?\s*(?:\/\s*[\d.]+%?)?\s*\)$/i,
+    /^oklch\(\s*([\d.]+%?)\s+([\d.]+%?)\s+([\d.]+)(?:deg)?\s*(?:\/\s*[\d.]+%?)?\s*\)$/i
   );
   if (!m) return fallback;
   const L = m[1].endsWith("%")
@@ -50,9 +48,7 @@ export function oklchToHex(
   return `#${toHex(r)}${toHex(g)}${toHex(bl)}`;
 }
 
-function convertGroup(
-  group: Record<string, string>,
-): Record<string, string> {
+function convertGroup(group: Record<string, string>): Record<string, string> {
   const out: Record<string, string> = {};
   for (const [key, value] of Object.entries(group)) {
     if (!value) continue;
@@ -62,11 +58,13 @@ function convertGroup(
 }
 
 // Clones BuiltTheme with all OKLCH values converted to hex.
-export function buildHexTheme(theme: BuiltTheme): BuiltTheme {
+export function buildHexTheme(theme: any): any {
   return {
     ...theme,
     cssVars: {
-      theme: theme.cssVars.theme ? convertGroup(theme.cssVars.theme) : undefined,
+      theme: theme.cssVars.theme
+        ? convertGroup(theme.cssVars.theme)
+        : undefined,
       light: convertGroup(theme.cssVars.light),
       dark: convertGroup(theme.cssVars.dark),
     },
@@ -75,7 +73,7 @@ export function buildHexTheme(theme: BuiltTheme): BuiltTheme {
 
 // Flattened map of CSS var name → hex color, merging theme+light (dark is not
 // applied for OG since there's no system preference in a static image).
-export function flattenHexVars(theme: BuiltTheme): Record<string, string> {
+export function flattenHexVars(theme: any): Record<string, string> {
   return {
     ...(theme.cssVars.theme ? convertGroup(theme.cssVars.theme) : {}),
     ...convertGroup(theme.cssVars.light),

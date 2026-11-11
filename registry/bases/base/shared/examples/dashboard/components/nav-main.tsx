@@ -2,14 +2,7 @@
 
 import { type Icon } from "@tabler/icons-react";
 
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/bases/base/styles/moon/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function NavMain({
   items,
@@ -20,6 +13,15 @@ export function NavMain({
     icon?: Icon;
   }[];
 }) {
+  const {
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+  } = useDesignSystem();
+
   return (
     <SidebarGroup>
       <SidebarGroupContent>

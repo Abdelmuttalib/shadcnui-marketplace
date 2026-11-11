@@ -27,6 +27,8 @@ export function PreviewStyleSwitcher() {
 
   const [open, setOpen] = React.useState(false);
 
+  if (!pathname) return;
+
   // Only show this switcher on /preview/[base]/[style]/[name].
   const segments = pathname.split("/").filter(Boolean);
 
@@ -94,9 +96,9 @@ export function PreviewStyleSwitcher() {
                     onSelect={() => handleStyleChange(style.name)}
                     className="gap-2"
                   >
-                    <span className="flex size-5 shrink-0 items-center justify-center">
+                    {/* <span className="flex size-5 shrink-0 items-center justify-center">
                       {style.icon}
-                    </span>
+                    </span> */}
 
                     <span className="flex-1 truncate">{style.label}</span>
 

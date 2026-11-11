@@ -10,18 +10,10 @@ import {
   type SortingState,
 } from "@tanstack/react-table";
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/bases/base/styles/moon/ui/table";
-
 import { features, type TasksTableFeatures } from "./data-table-features";
 import { DataTablePagination } from "./data-table-pagination";
 import { DataTableToolbar } from "./data-table-toolbar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface DataTableProps<TData extends RowData> {
   columns: ColumnDef<TasksTableFeatures, TData>[];
@@ -62,6 +54,9 @@ export function DataTable<TData extends RowData>({
     onColumnFiltersChange: setColumnFilters,
     onColumnVisibilityChange: setColumnVisibility,
   });
+
+  const { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } =
+    useDesignSystem();
 
   return (
     <div className="flex flex-col gap-4">

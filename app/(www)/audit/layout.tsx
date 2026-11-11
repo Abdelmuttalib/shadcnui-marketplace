@@ -203,7 +203,7 @@ export default function AuditLayout({
                       <Link
                         key={item.href}
                         href={item.href}
-                        title={item.description}
+                        title={item.label}
                         className="group text-muted-foreground hover:bg-accent hover:text-accent-foreground flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors"
                       >
                         <Icon className="size-4 shrink-0" />

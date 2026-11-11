@@ -1,22 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { AudioLinesIcon, PlusIcon } from "lucide-react"
+import * as React from "react";
+import { AudioLinesIcon, PlusIcon } from "lucide-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { ButtonGroup } from "@/styles/base-nova/ui-rtl/button-group"
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-} from "@/styles/base-nova/ui-rtl/input-group"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/styles/base-nova/ui-rtl/tooltip"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -33,13 +21,26 @@ const translations = {
     messagePlaceholder: "שלח הודעה...",
     voiceMode: "מצב קולי",
   },
-}
+};
 
 export function ButtonGroupInputGroup() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
-  const [voiceEnabled, setVoiceEnabled] = React.useState(false)
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+  const [voiceEnabled, setVoiceEnabled] = React.useState(false);
+
+  const {
+    Button,
+    ButtonGroup,
+
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+  } = useDesignSystem();
 
   return (
     <ButtonGroup dir={t.dir}>
@@ -78,5 +79,5 @@ export function ButtonGroupInputGroup() {
         </InputGroup>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

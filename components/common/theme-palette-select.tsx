@@ -27,7 +27,7 @@ export function ThemePaletteSelect() {
   const { activePalette, setActivePalette } = useThemePaletteStore();
 
   return (
-    <Select value={activePalette} onValueChange={setActivePalette}>
+    <Select value={activePalette} onValueChange={setActivePalette as any}>
       <SelectTrigger
         aria-label="Select color palette"
         className="flex w-full gap-2 rounded-none"

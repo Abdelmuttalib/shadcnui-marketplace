@@ -1,14 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import {
-  Field,
-  FieldDescription,
-  FieldTitle,
-} from "@/styles/base-nova/ui-rtl/field"
-import { Slider } from "@/styles/base-nova/ui-rtl/slider"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -27,17 +22,25 @@ const translations = {
     ariaLabel: "טווח מחירים",
     currency: "₪",
   },
-}
+};
 
 function formatNumber(value: number, locale: string) {
-  return new Intl.NumberFormat(locale).format(value)
+  return new Intl.NumberFormat(locale).format(value);
 }
 
 export function FieldSlider() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
-  const [value, setValue] = useState([200, 800])
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+  const [value, setValue] = useState([200, 800]);
+
+  const {
+    Slider,
+
+    Field,
+    FieldDescription,
+    FieldTitle,
+  } = useDesignSystem();
 
   return (
     <Field dir={t.dir}>
@@ -55,7 +58,7 @@ export function FieldSlider() {
       </FieldDescription>
       <Slider
         value={value}
-        onValueChange={(value) => setValue(value as [number, number])}
+        onValueChange={(value: any) => setValue(value as [number, number])}
         max={1000}
         min={0}
         step={10}
@@ -63,5 +66,5 @@ export function FieldSlider() {
         aria-label={t.ariaLabel}
       />
     </Field>
-  )
+  );
 }

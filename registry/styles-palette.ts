@@ -29,10 +29,12 @@ export function getStylePaletteVariables({
   style,
   palette,
   theme,
+  radius,
 }: {
   style: string;
   palette: StylePalette;
   theme: PaletteTheme;
+  radius: string;
 }): PaletteVariables {
   const paletteDefinition = themePalettes[palette];
 

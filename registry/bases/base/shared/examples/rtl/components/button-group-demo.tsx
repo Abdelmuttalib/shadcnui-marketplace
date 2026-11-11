@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   ArchiveIcon,
   ArrowLeftIcon,
@@ -11,25 +11,10 @@ import {
   MoreHorizontalIcon,
   TagIcon,
   Trash2Icon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { ButtonGroup } from "@/styles/base-nova/ui-rtl/button-group"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuPortal,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/dropdown-menu"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -64,13 +49,31 @@ const translations = {
     other: "אחר",
     trash: "מחק",
   },
-}
+};
 
 export function ButtonGroupDemo() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
-  const [label, setLabel] = React.useState("personal")
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+  const [label, setLabel] = React.useState("personal");
+
+  const {
+    Button,
+    ButtonGroup,
+
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuPortal,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+    DropdownMenuSeparator,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
 
   return (
     <div dir={t.dir}>
@@ -175,5 +178,5 @@ export function ButtonGroupDemo() {
         </ButtonGroup>
       </ButtonGroup>
     </div>
-  )
+  );
 }

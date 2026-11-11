@@ -2,16 +2,8 @@ import { type Column, type RowData } from "@tanstack/react-table";
 import { cn } from "cn";
 import { ArrowDown, ArrowUp, ChevronsUpDown, EyeOff } from "lucide-react";
 
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/moon/ui/dropdown-menu";
-
 import { type TasksTableFeatures } from "./data-table-features";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface DataTableColumnHeaderProps<
   TData extends RowData,
@@ -26,6 +18,15 @@ export function DataTableColumnHeader<TData extends RowData, TValue>({
   title,
   className,
 }: DataTableColumnHeaderProps<TData, TValue>) {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   if (!column.getCanSort()) {
     return <div className={cn(className)}>{title}</div>;
   }
@@ -33,22 +34,24 @@ export function DataTableColumnHeader<TData extends RowData, TValue>({
   return (
     <div className={cn("flex items-center gap-2", className)}>
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="data-[state=open]:bg-accent -ml-3 h-8"
-          >
-            <span>{title}</span>
-            {column.getIsSorted() === "desc" ? (
-              <ArrowDown />
-            ) : column.getIsSorted() === "asc" ? (
-              <ArrowUp />
-            ) : (
-              <ChevronsUpDown />
-            )}
-          </Button>
-        </DropdownMenuTrigger>
+        <DropdownMenuTrigger
+          render={
+            <Button
+              variant="ghost"
+              size="sm"
+              className="data-[state=open]:bg-accent -ml-3 h-8"
+            >
+              <span>{title}</span>
+              {column.getIsSorted() === "desc" ? (
+                <ArrowDown />
+              ) : column.getIsSorted() === "asc" ? (
+                <ArrowUp />
+              ) : (
+                <ChevronsUpDown />
+              )}
+            </Button>
+          }
+        ></DropdownMenuTrigger>
         <DropdownMenuContent align="start">
           <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
             <ArrowUp />

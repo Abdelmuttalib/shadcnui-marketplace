@@ -21,7 +21,7 @@ export const columns = columnHelper.columns([
       <Checkbox
         checked={
           table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
+          ((table.getIsSomePageRowsSelected() && "indeterminate") as any)
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"

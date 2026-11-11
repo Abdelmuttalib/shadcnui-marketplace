@@ -6,22 +6,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/registry/bases/base/moon/ui/form";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/bases/base/moon/ui/radio-group";
-import { Switch } from "@/registry/bases/base/moon/ui/switch";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const notificationsFormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
@@ -56,13 +41,28 @@ export function NotificationsForm() {
     });
   }
 
+  const {
+    Button,
+    Checkbox,
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+    RadioGroup,
+    RadioGroupItem,
+    Switch,
+  } = useDesignSystem();
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
           name="type"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem className="space-y-3">
               <FormLabel>Notify me about...</FormLabel>
               <FormControl>
@@ -105,7 +105,7 @@ export function NotificationsForm() {
             <FormField
               control={form.control}
               name="communication_emails"
-              render={({ field }) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
@@ -127,7 +127,7 @@ export function NotificationsForm() {
             <FormField
               control={form.control}
               name="marketing_emails"
-              render={({ field }) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
@@ -149,7 +149,7 @@ export function NotificationsForm() {
             <FormField
               control={form.control}
               name="social_emails"
-              render={({ field }) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Social emails</FormLabel>
@@ -169,7 +169,7 @@ export function NotificationsForm() {
             <FormField
               control={form.control}
               name="security_emails"
-              render={({ field }) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Security emails</FormLabel>
@@ -193,7 +193,7 @@ export function NotificationsForm() {
         <FormField
           control={form.control}
           name="mobile"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem className="flex flex-row items-start space-y-0 space-x-3">
               <FormControl>
                 <Checkbox

@@ -271,7 +271,7 @@ export function buildPresetUrlUpdate(
 // Next.js server navigation. This prevents the customizer panel from flickering
 // or resetting while the URL update propagates (#10910, #11060).
 export function useDesignSystemSearchParams(options: Options = {}) {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() as any;
   const [rawParams, rawSetParams] = useQueryStates(designSystemSearchParams, {
     shallow: true,
     history: "push",

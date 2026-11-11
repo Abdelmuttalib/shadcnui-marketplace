@@ -71,15 +71,13 @@ const steps = [
 ];
 
 function getSubagentMessage(done: number, report?: string): SubagentMessage {
-  const parts = steps.slice(0, done).map(
-    (step, index): SubagentPart => ({
-      type: "tool-runCommand",
-      toolCallId: `step-${index}`,
-      state: "output-available",
-      input: { command: step.command },
-      output: { stdout: step.stdout },
-    })
-  );
+  const parts = steps.slice(0, done).map((step, index): SubagentPart => ({
+    type: "tool-runCommand",
+    toolCallId: `step-${index}`,
+    state: "output-available",
+    input: { command: step.command },
+    output: { stdout: step.stdout },
+  }));
 
   if (done < steps.length) {
     parts.push({
@@ -108,9 +106,7 @@ const chat = createChat<ChatMessage>()
       })
       .sleep(600);
     steps.forEach((_, index) => {
-      subagent
-        .output(getSubagentMessage(index), { preliminary: true })
-        .sleep(1000);
+      subagent.output(getSubagentMessage(index)).sleep(1000);
     });
     subagent
       .output(
@@ -241,7 +237,7 @@ export function SubagentDemo() {
   const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (

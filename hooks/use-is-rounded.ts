@@ -5,5 +5,5 @@ export const useIsRounded = () => {
 
   if (!preset) return true;
 
-  return !["lyra", "sera"].includes(preset?.style);
+  return !["lyra", "sera"].includes(preset);
 };

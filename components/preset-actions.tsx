@@ -23,22 +23,25 @@ export function StyleActions({
   code: string;
   likeSlot: ReactNode;
 }) {
-  const { state, copy } = useCopyToClipboard({});
+  const { copyToClipboard, isCopied } = useCopyToClipboard({});
 
   const trigger = useAtomValue(copyTriggerAtom);
   const lastTrigger = useRef(trigger);
   useEffect(() => {
     if (trigger === lastTrigger.current) return;
     lastTrigger.current = trigger;
-    copy(code);
-  }, [trigger, code, copy]);
+    copyToClipboard(code);
+  }, [trigger, code, copyToClipboard]);
 
   const shadcnCreateUrl = useMemo(
     () => `https://ui.shadcn.com/create?preset=${encodeURIComponent(code)}`,
     [code]
   );
 
-  const onCopy = useCallback(() => copy(code), [copy, code]);
+  const onCopy = useCallback(
+    () => copyToClipboard(code),
+    [copyToClipboard, code]
+  );
 
   const shareOnX = useCallback(() => {
     const origin = typeof window !== "undefined" ? window.location.origin : "";
@@ -60,7 +63,7 @@ export function StyleActions({
         title="Copy preset code"
       >
         <CopyStateIcon
-          state={state}
+          state={isCopied}
           idleIcon={<HugeiconsIcon icon={Copy01Icon} size={16} />}
           doneIcon={
             <HugeiconsIcon icon={Tick02Icon} size={16} strokeWidth={2} />

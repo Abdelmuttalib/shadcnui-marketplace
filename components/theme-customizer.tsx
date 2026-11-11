@@ -3,10 +3,11 @@
 import { useTheme } from "next-themes";
 import React, { ReactNode } from "react";
 
-import { Style, useStyleStore } from "@/hooks/use-style-store";
+import { useStyleStore } from "@/hooks/use-style-store";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { themePalettes } from "@/registry/registry-palettes";
 import { getStyleVariablesPrefix } from "@/registry/styles-components";
+import { StyleName } from "@/registry/styles";
 
 // Theme Wrapper Component
 type ThemeWrapperProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -23,13 +24,13 @@ export function ThemeCustomizerWrapper({ children }: ThemeWrapperProps) {
 
   const appliedVariablesRef = React.useRef<string[]>([]);
 
-  function prefixCssVariableWithStyle(style: Style, variable: string) {
+  function prefixCssVariableWithStyle(style: StyleName, variable: string) {
     return `--${getStyleVariablesPrefix(style)}-${variable}`;
   }
 
   function onAddInlineStylesToHtmlElement(
     vars: Record<string, string>,
-    style: Style,
+    style: StyleName,
     element: HTMLElement
   ) {
     if (typeof document === "undefined") return;

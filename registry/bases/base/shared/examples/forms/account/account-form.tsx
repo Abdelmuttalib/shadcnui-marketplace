@@ -8,31 +8,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import { Calendar } from "@/registry/bases/base/moon/ui/calendar";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/registry/bases/base/moon/ui/command";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/registry/bases/base/moon/ui/form";
-import { Input } from "@/registry/bases/base/moon/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/bases/base/moon/ui/popover";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const languages = [
   { label: "English", value: "en" },
@@ -83,13 +59,35 @@ export function AccountForm() {
     });
   }
 
+  const {
+    Button,
+    Calendar,
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+    Input,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } = useDesignSystem();
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
           name="name"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
@@ -106,7 +104,7 @@ export function AccountForm() {
         <FormField
           control={form.control}
           name="dob"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Date of birth</FormLabel>
               <Popover>
@@ -133,7 +131,7 @@ export function AccountForm() {
                     mode="single"
                     selected={field.value}
                     onSelect={field.onChange}
-                    disabled={(date) =>
+                    disabled={(date: any) =>
                       date > new Date() || date < new Date("1900-01-01")
                     }
                     initialFocus
@@ -150,7 +148,7 @@ export function AccountForm() {
         <FormField
           control={form.control}
           name="language"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Language</FormLabel>
               <Popover>

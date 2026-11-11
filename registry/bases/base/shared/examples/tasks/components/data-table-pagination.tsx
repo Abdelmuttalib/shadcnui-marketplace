@@ -6,16 +6,8 @@ import {
   ChevronsRight,
 } from "lucide-react";
 
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/moon/ui/select";
-
 import { type TasksTableFeatures } from "./data-table-features";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 interface DataTablePaginationProps<TData extends RowData> {
   table: ReactTable<TasksTableFeatures, TData>;
@@ -24,6 +16,15 @@ interface DataTablePaginationProps<TData extends RowData> {
 export function DataTablePagination<TData extends RowData>({
   table,
 }: DataTablePaginationProps<TData>) {
+  const {
+    Button,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <div className="flex items-center justify-between px-2">
       <div className="text-muted-foreground flex-1 text-sm">
@@ -35,7 +36,7 @@ export function DataTablePagination<TData extends RowData>({
           <p className="text-sm font-medium">Rows per page</p>
           <Select
             value={`${table.state.pagination.pageSize}`}
-            onValueChange={(value) => {
+            onValueChange={(value: any) => {
               table.setPageSize(Number(value));
             }}
           >

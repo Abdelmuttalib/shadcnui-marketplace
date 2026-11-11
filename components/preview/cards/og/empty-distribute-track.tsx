@@ -1,8 +1,8 @@
-import { Button } from "@/registry/bases/base/styles/default/ui/og/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardContent,
-} from "@/registry/bases/base/styles/default/ui/og/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Empty,
   EmptyContent,
@@ -10,8 +10,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/base/styles/default/ui/og/empty";
-import { IconPlaceholder } from "@/registry/bases/base/styles/default/ui/og/icon-placeholder";
+} from "@/registry/bases/base/styles/default/ui/empty";
+import { IconPlaceholder } from "@tabler/icons-react";
 
 export function EmptyDistributeTrack() {
   return (

@@ -1,23 +1,9 @@
-"use client"
+"use client";
 
-import { PlusIcon } from "lucide-react"
+import { PlusIcon } from "lucide-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarImage,
-} from "@/styles/base-nova/ui-rtl/avatar"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/styles/base-nova/ui-rtl/empty"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -32,12 +18,27 @@ const translations = {
     description: "הזמן את הצוות שלך לשתף פעולה בפרויקט זה.",
     invite: "הזמן חברים",
   },
-}
+};
 
 export function EmptyAvatarGroup() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+
+  const {
+    Button,
+
+    Avatar,
+    AvatarFallback,
+    AvatarGroup,
+    AvatarImage,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+  } = useDesignSystem();
 
   return (
     <Empty className="flex-none border py-10" dir={t.dir}>
@@ -74,5 +75,5 @@ export function EmptyAvatarGroup() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

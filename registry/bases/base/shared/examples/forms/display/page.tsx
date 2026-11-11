@@ -1,8 +1,8 @@
-import { Separator } from "@/registry/bases/base/moon/ui/separator";
-
 import { DisplayForm } from "./display-form";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export default function SettingsDisplayPage() {
+  const { Separator } = useDesignSystem();
   return (
     <div className="space-y-6">
       <div>

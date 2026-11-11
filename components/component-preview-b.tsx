@@ -15,7 +15,7 @@ import { Typography } from "./ui/typography";
 
 function GradientEffect() {
   return (
-    <div className="absolute left-0 right-0 top-0 -z-10 flex h-10 w-full flex-col gap-y-4 opacity-60 blur-3xl dark:bg-gray-500"></div>
+    <div className="absolute top-0 right-0 left-0 -z-10 flex h-10 w-full flex-col gap-y-4 opacity-60 blur-3xl dark:bg-gray-500"></div>
   );
 }
 
@@ -158,7 +158,7 @@ export function ComponentPreview({
           "relative mb-6",
           "overflow-hidden rounded-2xl",
           {
-            "fixed inset-0 z-50 h-screen w-screen bg-background": isFullScreen,
+            "bg-background fixed inset-0 z-50 h-screen w-screen": isFullScreen,
           }
           // "shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)]",
           // "relative overflow-hidden",
@@ -167,12 +167,12 @@ export function ComponentPreview({
       >
         {/* <GradientEffect /> */}
         <div className="relative z-10 flex flex-col justify-between gap-1 overflow-x-auto">
-          <div className="flex justify-between overflow-x-auto px-1 pb-1 pt-1">
+          <div className="flex justify-between overflow-x-auto px-1 pt-1 pb-1">
             <div className="flex w-full items-center justify-between gap-2">
               <div className="flex gap-0.5 rounded-lg outline-none">
                 <Button
                   className={cn("bg-transparent", {
-                    "border-none text-muted-foreground": !preview,
+                    "text-muted-foreground border-none": !preview,
                   })}
                   variant={preview ? "outline" : "ghost"}
                   onClick={() => setPreview(true)}
@@ -183,7 +183,7 @@ export function ComponentPreview({
                 </Button>
                 <Button
                   className={cn("bg-transparent", {
-                    "border-none text-muted-foreground": preview,
+                    "text-muted-foreground border-none": preview,
                   })}
                   variant={!preview ? "outline" : "ghost"}
                   onClick={() => setPreview(false)}
@@ -211,7 +211,7 @@ export function ComponentPreview({
                 <div className="hidden gap-0.5 rounded-md outline-none sm:flex">
                   <StyleSelect />
                 </div>
-                <div className="hidden h-10 gap-0.5 rounded-md border border-input px-0.5 md:flex md:items-center">
+                <div className="border-input hidden h-10 gap-0.5 rounded-md border px-0.5 md:flex md:items-center">
                   {breakpoints.map((bp) => (
                     <Button
                       key={bp.label}
@@ -219,7 +219,7 @@ export function ComponentPreview({
                       size="icon-sm"
                       onClick={() => setBreakpoint(bp.label)}
                       className={cn("", {
-                        " border-input bg-input/40": breakpoint === bp.label,
+                        "border-input bg-input/40": breakpoint === bp.label,
                       })}
                     >
                       {bp.icon}
@@ -264,24 +264,24 @@ export function ComponentPreview({
               <div className="w-full">
                 {/* {children} */}
                 {plan === BlockPlan.Pro ? (
-                  <div className="hide-scrollbar relative flex h-[45rem] max-h-[45rem] items-center justify-center overflow-hidden rounded-lg bg-card text-sm">
+                  <div className="hide-scrollbar bg-card relative flex h-[45rem] max-h-[45rem] items-center justify-center overflow-hidden rounded-lg text-sm">
                     <Image
                       src="/images/code-placeholder.png"
                       alt="Pro Badge"
                       layout="fill"
                       className="mx-auto h-full w-full"
                     />
-                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 overflow-hidden rounded-lg bg-background/40 p-4 backdrop-blur-sm">
+                    <div className="bg-background/40 absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 overflow-hidden rounded-lg p-4 backdrop-blur-sm">
                       <Typography
                         as="p"
                         variant="lg/medium"
-                        className="bg-card p-2 font-mono text-muted-foreground"
+                        className="bg-card text-muted-foreground p-2 font-mono"
                       >
                         This block is only available for Pro users.
                       </Typography>
-                      <Button asChild>
-                        <Link href={"/pricing"}>Upgrade to Pro</Link>
-                      </Button>
+                      <Button
+                        render={<Link href={"/pricing"}>Upgrade to Pro</Link>}
+                      ></Button>
                     </div>
                   </div>
                 ) : (

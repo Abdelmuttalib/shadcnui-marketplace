@@ -1,28 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { IconMinus, IconPlus } from "@tabler/icons-react"
+import * as React from "react";
+import { IconMinus, IconPlus } from "@tabler/icons-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { ButtonGroup } from "@/styles/base-nova/ui-rtl/button-group"
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldLegend,
-  FieldSeparator,
-  FieldSet,
-  FieldTitle,
-} from "@/styles/base-nova/ui-rtl/field"
-import { Input } from "@/styles/base-nova/ui-rtl/input"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/styles/base-nova/ui-rtl/radio-group"
-import { Switch } from "@/styles/base-nova/ui-rtl/switch"
+import { useLanguageContext } from "@/components/language-selector";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -57,29 +40,47 @@ const translations = {
     wallpaperTinting: "צביעת טפט",
     wallpaperDescription: "אפשר לטפט להיצבע.",
   },
-}
+};
 
 export function AppearanceSettings() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
-  const [gpuCount, setGpuCount] = React.useState(8)
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+  const [gpuCount, setGpuCount] = React.useState(8);
 
   const handleGpuAdjustment = React.useCallback((adjustment: number) => {
     setGpuCount((prevCount) =>
       Math.max(1, Math.min(99, prevCount + adjustment))
-    )
-  }, [])
+    );
+  }, []);
 
   const handleGpuInputChange = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      const value = parseInt(e.target.value, 10)
+      const value = parseInt(e.target.value, 10);
       if (!isNaN(value) && value >= 1 && value <= 99) {
-        setGpuCount(value)
+        setGpuCount(value);
       }
     },
     []
-  )
+  );
+
+  const {
+    Button,
+    ButtonGroup,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldLegend,
+    FieldSeparator,
+    FieldSet,
+    FieldTitle,
+    Input,
+    RadioGroup,
+    RadioGroupItem,
+    Switch,
+  } = useDesignSystem();
 
   return (
     <div dir={t.dir}>
@@ -169,5 +170,5 @@ export function AppearanceSettings() {
         </FieldGroup>
       </FieldSet>
     </div>
-  )
+  );
 }

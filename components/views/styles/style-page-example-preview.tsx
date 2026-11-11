@@ -3,7 +3,7 @@
 import React from "react";
 
 import { RichBadge } from "@/components/ui/rich-badge";
-import { PageExampleType, Style, useStyleStore } from "@/hooks/use-style-store";
+import { PageExampleType, useStyleStore } from "@/hooks/use-style-store";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,

@@ -15,8 +15,6 @@ import { getDesignSystemClasses } from "./design-system-utils";
 
 import { cn } from "cn";
 
-import { Style } from "@/hooks/use-style-store";
-
 import {
   DesignSystemPalette,
   DesignSystemTheme as ThemeMode,
@@ -27,11 +25,12 @@ import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 
 import { DesignSystemPortalContext } from "./design-system-context";
 import { getStylePaletteVariables } from "@/registry/styles-palette";
+import { StyleName } from "@/registry/styles";
 
 interface DesignSystemEnvironmentProps {
   children: ReactNode;
 
-  style: Style;
+  style: StyleName;
 
   palette?: DesignSystemPalette;
 
@@ -44,7 +43,7 @@ interface DesignSystemEnvironmentProps {
 
 function applyEnvironmentAttributes(
   element: HTMLElement,
-  style: Style,
+  style: StyleName,
   theme: ThemeMode,
   variables: Record<string, string>
 ) {

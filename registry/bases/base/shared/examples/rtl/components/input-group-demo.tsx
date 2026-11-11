@@ -1,34 +1,15 @@
-"use client"
+"use client";
 
 import {
   IconCheck,
   IconChevronDown,
   IconInfoCircle,
   IconPlus,
-} from "@tabler/icons-react"
-import { ArrowUpIcon, Search } from "lucide-react"
+} from "@tabler/icons-react";
+import { ArrowUpIcon, Search } from "lucide-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/styles/base-nova/ui-rtl/dropdown-menu"
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-  InputGroupText,
-  InputGroupTextarea,
-} from "@/styles/base-nova/ui-rtl/input-group"
-import { Separator } from "@/styles/base-nova/ui-rtl/separator"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/styles/base-nova/ui-rtl/tooltip"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -59,12 +40,29 @@ const translations = {
     used: "52% בשימוש",
     send: "שלח",
   },
-}
+};
 
 export function InputGroupDemo() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+
+  const {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+    InputGroupText,
+    InputGroupTextarea,
+    Separator,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+  } = useDesignSystem();
 
   return (
     <div dir={t.dir} className="grid w-full max-w-sm gap-6">
@@ -130,11 +128,11 @@ export function InputGroupDemo() {
       <InputGroup>
         <InputGroupInput placeholder="shadcn" />
         <InputGroupAddon align="inline-end">
-          <div className="flex size-4 items-center justify-center rounded-full bg-primary text-foreground">
+          <div className="bg-primary text-foreground flex size-4 items-center justify-center rounded-full">
             <IconCheck className="size-3 text-white" />
           </div>
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

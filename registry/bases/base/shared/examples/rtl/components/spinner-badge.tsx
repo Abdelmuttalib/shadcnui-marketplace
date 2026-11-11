@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Badge } from "@/styles/base-nova/ui-rtl/badge"
-import { Spinner } from "@/styles/base-nova/ui-rtl/spinner"
-
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 const translations = {
   ar: {
     dir: "rtl" as const,
@@ -17,12 +15,14 @@ const translations = {
     updating: "מעדכן",
     loading: "טוען",
   },
-}
+};
 
 export function SpinnerBadge() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+
+  const { Spinner, Badge } = useDesignSystem();
 
   return (
     <div dir={t.dir} className="flex items-center gap-2">
@@ -39,5 +39,5 @@ export function SpinnerBadge() {
         {t.loading}
       </Badge>
     </div>
-  )
+  );
 }

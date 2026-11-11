@@ -22,7 +22,7 @@ export function ThemeModeSelect() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Select value={theme} onValueChange={setTheme}>
+    <Select value={theme} onValueChange={setTheme as any}>
       <SelectTrigger className="max-w-28 capitalize">
         <SelectValue placeholder="Theme" />
       </SelectTrigger>

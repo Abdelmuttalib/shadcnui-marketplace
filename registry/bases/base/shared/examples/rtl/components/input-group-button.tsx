@@ -1,21 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { IconInfoCircle, IconStar } from "@tabler/icons-react"
+import * as React from "react";
+import { IconInfoCircle, IconStar } from "@tabler/icons-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-} from "@/styles/base-nova/ui-rtl/input-group"
-import { Label } from "@/styles/base-nova/ui-rtl/label"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/styles/base-nova/ui-rtl/popover"
+import { useLanguageContext } from "@/components/language-selector";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -36,13 +26,24 @@ const translations = {
     favorite: "מועדף",
     currency: "₪",
   },
-}
+};
 
 export function InputGroupButtonExample() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
-  const [isFavorite, setIsFavorite] = React.useState(false)
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+  const [isFavorite, setIsFavorite] = React.useState(false);
+
+  const {
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+    Label,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } = useDesignSystem();
 
   return (
     <div dir={t.dir} className="grid w-full max-w-sm gap-6">
@@ -93,5 +94,5 @@ export function InputGroupButtonExample() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

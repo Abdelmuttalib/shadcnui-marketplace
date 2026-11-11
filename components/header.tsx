@@ -37,6 +37,9 @@ export function Header() {
   const openSubmit = useSetAtom(submitModalOpenAtom);
   const setHelpOpen = useSetAtom(helpOpenAtom);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  if (!pathname) return;
+
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
 

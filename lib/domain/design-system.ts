@@ -14,7 +14,7 @@ import {
 import { RADII, RadiusValue } from "./radius";
 
 export const designSystemConfigSchema = z.object({
-  base: "base",
+  base: "base" as any,
   style: z.enum(STYLES).default("nova"),
   iconLibrary: z.enum(
     Object.keys(iconLibraries) as [IconLibraryName, ...IconLibraryName[]]

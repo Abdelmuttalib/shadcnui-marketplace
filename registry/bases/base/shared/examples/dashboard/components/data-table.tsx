@@ -59,23 +59,9 @@ import { z } from "zod";
 import { useIsMobile } from "@/registry/bases/base/styles/moon/hooks/use-mobile";
 import { Badge } from "@/registry/bases/base/styles/moon/ui/badge";
 import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-  type ChartConfig,
-} from "@/registry/bases/base/styles/moon/ui/chart";
+import { type ChartConfig } from "@/registry/bases/base/styles/moon/ui/chart";
 import { Checkbox } from "@/registry/bases/base/styles/moon/ui/checkbox";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/registry/bases/base/styles/moon/ui/drawer";
+
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -93,21 +79,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/bases/base/styles/moon/ui/select";
-import { Separator } from "@/registry/bases/base/styles/moon/ui/separator";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/bases/base/styles/moon/ui/table";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/styles/moon/ui/tabs";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // New in v9: declare the features this table uses — anything you don't
 // register is tree-shaken out of the bundle.
@@ -143,6 +116,8 @@ function DragHandle({ id }: { id: number }) {
     id,
   });
 
+  const { Button } = useDesignSystem();
+
   return (
     <Button
       {...attributes}
@@ -170,7 +145,7 @@ const columns = columnHelper.columns([
         <Checkbox
           checked={
             table.getIsAllPageRowsSelected() ||
-            (table.getIsSomePageRowsSelected() && "indeterminate")
+            ((table.getIsSomePageRowsSelected() && "indeterminate") as any)
           }
           onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
           aria-label="Select all"
@@ -337,6 +312,12 @@ function DraggableRow({
     id: row.original.id,
   });
 
+  const {
+    TableCell,
+
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <TableRow
       data-state={row.getIsSelected() && "selected"}
@@ -417,6 +398,32 @@ export function DataTable({
     }
   }
 
+  const {
+    Badge,
+    Button,
+
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuTrigger,
+    Label,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } = useDesignSystem();
+
   return (
     <Tabs
       defaultValue="outline"
@@ -477,7 +484,7 @@ export function DataTable({
                       key={column.id}
                       className="capitalize"
                       checked={column.getIsVisible()}
-                      onCheckedChange={(value) =>
+                      onCheckedChange={(value: any) =>
                         column.toggleVisibility(!!value)
                       }
                     >
@@ -557,7 +564,7 @@ export function DataTable({
               </Label>
               <Select
                 value={`${table.state.pagination.pageSize}`}
-                onValueChange={(value) => {
+                onValueChange={(value: any) => {
                   table.setPageSize(Number(value));
                 }}
               >
@@ -663,8 +670,33 @@ const chartConfig = {
 function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
   const isMobile = useIsMobile();
 
+  const {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+
+    Button,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+
+    Input,
+    Label,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Separator,
+  } = useDesignSystem();
+
   return (
-    <Drawer direction={isMobile ? "bottom" : "right"}>
+    <Drawer swipeDirection={isMobile ? "down" : "right"}>
       <DrawerTrigger
         render={
           <Button

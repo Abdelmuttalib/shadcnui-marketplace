@@ -3,14 +3,13 @@
 import clsx from "clsx";
 import * as React from "react";
 import type { PresetConfig } from "shadcn/preset";
-import { type BuiltTheme, buildScopedCssText } from "@/lib/domain/preset-css";
 import { FONTS } from "@/lib/fonts-meta";
 
 const PREVIEW_CONTAINER_SELECTOR = "[data-preview-container]";
 
 type Props = {
   preset: PresetConfig;
-  theme: BuiltTheme;
+  theme: any;
   children: React.ReactNode;
 };
 
@@ -30,13 +29,13 @@ export function DesignSystemProvider({ preset, theme, children }: Props) {
   }, [font, fontHeading, selectedFont]);
 
   const containerRef = React.useRef<HTMLDivElement>(null);
-  const scopedCss = React.useMemo(
-    () =>
-      theme?.cssVars
-        ? buildScopedCssText(theme.cssVars, PREVIEW_CONTAINER_SELECTOR)
-        : "",
-    [theme]
-  );
+  // const scopedCss = React.useMemo(
+  //   () =>
+  //     theme?.cssVars
+  //       ? buildScopedCssText(theme.cssVars, PREVIEW_CONTAINER_SELECTOR)
+  //       : "",
+  //   [theme]
+  // );
 
   const inlineStyle: React.CSSProperties = {};
   if (selectedFont) {
@@ -60,7 +59,7 @@ export function DesignSystemProvider({ preset, theme, children }: Props) {
       style={inlineStyle}
     >
       {/* biome-ignore lint/security/noDangerouslySetInnerHtml: scoped preset CSS contains no user input */}
-      <style dangerouslySetInnerHTML={{ __html: scopedCss }} />
+      {/* <style dangerouslySetInnerHTML={{ __html: scopedCss }} /> */}
       {children}
     </div>
   );

@@ -3,35 +3,38 @@
 import { type ReactTable, type RowData } from "@tanstack/react-table";
 import { Settings2 } from "lucide-react";
 
-import { Button } from "@/registry/bases/base/styles/moon/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/moon/ui/dropdown-menu";
-
 import { type TasksTableFeatures } from "./data-table-features";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DataTableViewOptions<TData extends RowData>({
   table,
 }: {
   table: ReactTable<TasksTableFeatures, TData>;
 }) {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          size="sm"
-          className="ml-auto hidden h-8 lg:flex"
-        >
-          <Settings2 />
-          View
-        </Button>
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger
+        render={
+          <Button
+            variant="outline"
+            size="sm"
+            className="ml-auto hidden h-8 lg:flex"
+          >
+            <Settings2 />
+            View
+          </Button>
+        }
+      ></DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">
         <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -47,7 +50,9 @@ export function DataTableViewOptions<TData extends RowData>({
                 key={column.id}
                 className="capitalize"
                 checked={column.getIsVisible()}
-                onCheckedChange={(value) => column.toggleVisibility(!!value)}
+                onCheckedChange={(value: any) =>
+                  column.toggleVisibility(!!value)
+                }
               >
                 {column.id}
               </DropdownMenuCheckboxItem>

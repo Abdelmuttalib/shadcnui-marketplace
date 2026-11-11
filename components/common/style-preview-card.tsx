@@ -4,10 +4,11 @@ import Link from "next/link";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
 import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
-import { Style, useStyleStore } from "@/hooks/use-style-store";
+import { useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
 import { getStyleVariablesPrefix } from "@/registry/styles-components";
+import { StyleName } from "@/registry/styles";
 
 export function StylePreviewCard({
   title,
@@ -15,7 +16,7 @@ export function StylePreviewCard({
   link,
 }: {
   title: string;
-  style: Style;
+  style: StyleName;
   link?: {
     href: string;
     newTab?: boolean;

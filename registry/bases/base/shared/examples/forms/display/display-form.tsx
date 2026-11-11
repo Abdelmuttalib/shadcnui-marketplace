@@ -5,17 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/registry/bases/base/moon/ui/button";
-import { Checkbox } from "@/registry/bases/base/moon/ui/checkbox";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/registry/bases/base/moon/ui/form";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const items = [
   {
@@ -69,6 +59,18 @@ export function DisplayForm() {
     });
   }
 
+  const {
+    Button,
+    Checkbox,
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+  } = useDesignSystem();
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -88,21 +90,21 @@ export function DisplayForm() {
                   key={item.id}
                   control={form.control}
                   name="items"
-                  render={({ field }) => {
+                  render={({ field }: { field: any }) => {
                     return (
                       <FormItem
                         key={item.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
+                        className="flex flex-row items-start space-y-0 space-x-3"
                       >
                         <FormControl>
                           <Checkbox
                             checked={field.value?.includes(item.id)}
-                            onCheckedChange={(checked) => {
+                            onCheckedChange={(checked: any) => {
                               return checked
                                 ? field.onChange([...field.value, item.id])
                                 : field.onChange(
                                     field.value?.filter(
-                                      (value) => value !== item.id
+                                      (value: any) => value !== item.id
                                     )
                                   );
                             }}

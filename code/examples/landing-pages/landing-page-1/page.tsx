@@ -59,12 +59,8 @@ export default function Landing1() {
                 </a>
                 <Button
                   variant="default"
-                  // size="lg"
-                  // className="text-base"
-                  asChild
-                >
-                  <a href="#">Get Started</a>
-                </Button>
+                  render={<a href="#">Get Started</a>}
+                ></Button>
               </nav>
             </div>
           </div>
@@ -272,9 +268,10 @@ export default function Landing1() {
                         ))}
                       </div>
                       <div className="mt-2">
-                        <Button className="button w-inline-block" asChild>
-                          <a href="#">Get started</a>
-                        </Button>
+                        <Button
+                          className="button w-inline-block"
+                          render={<a href="#">Get started</a>}
+                        ></Button>
                       </div>
                     </div>
                     <div

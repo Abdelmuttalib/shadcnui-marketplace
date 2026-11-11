@@ -1,17 +1,9 @@
-"use client"
+"use client";
 
-import { BotIcon, ChevronDownIcon } from "lucide-react"
+import { BotIcon, ChevronDownIcon } from "lucide-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import { ButtonGroup } from "@/styles/base-nova/ui-rtl/button-group"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/styles/base-nova/ui-rtl/popover"
-import { Separator } from "@/styles/base-nova/ui-rtl/separator"
-import { Textarea } from "@/styles/base-nova/ui-rtl/textarea"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -34,12 +26,23 @@ const translations = {
     description:
       "תאר את המשימה שלך בשפה טבעית. העוזר יעבוד ברקע ויפתח בקשת משיכה לבדיקתך.",
   },
-}
+};
 
 export function ButtonGroupPopover() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+
+  const {
+    Button,
+    ButtonGroup,
+
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    Separator,
+    Textarea,
+  } = useDesignSystem();
 
   return (
     <ButtonGroup dir={t.dir}>
@@ -79,5 +82,5 @@ export function ButtonGroupPopover() {
         </PopoverContent>
       </Popover>
     </ButtonGroup>
-  )
+  );
 }

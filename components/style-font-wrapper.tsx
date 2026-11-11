@@ -1,14 +1,15 @@
 "use client";
 
-import { Style, useStyleStore } from "@/hooks/use-style-store";
+import { useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
+import { StyleName } from "@/registry/styles";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
 } from "@/registry/styles-components";
 
 type StyleFontWrapperProps = React.ComponentPropsWithoutRef<"div"> & {
-  sStyle?: Style;
+  sStyle?: StyleName;
 };
 
 export function StyleFontWrapper({
@@ -36,7 +37,7 @@ export function StyleCssWrapper({
 }: Readonly<{
   children: React.ReactNode;
   className?: string;
-  style?: Style;
+  style?: StyleName;
 }>) {
   const { style: _style } = useStyleStore();
 

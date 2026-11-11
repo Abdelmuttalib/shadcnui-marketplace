@@ -1,17 +1,9 @@
-"use client"
+"use client";
 
-import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react"
+import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemMedia,
-  ItemTitle,
-} from "@/styles/base-nova/ui-rtl/item"
+import { useLanguageContext } from "@/components/language-selector";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -28,12 +20,22 @@ const translations = {
     enable: "הפעל",
     verified: "הפרופיל שלך אומת.",
   },
-}
+};
 
 export function ItemDemo() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
 
   return (
     <div dir={t.dir} className="flex w-full max-w-md flex-col gap-6">
@@ -60,5 +62,5 @@ export function ItemDemo() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }

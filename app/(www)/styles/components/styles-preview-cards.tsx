@@ -58,7 +58,7 @@ export function StylesPreviews({ className }: { className?: string }) {
           return (
             <StyleFontWrapper
               key={style + s + c + index}
-              sStyle={style}
+              sStyle={style.name}
               className="group relative"
               style={{
                 borderRadius: getStyleRadius(style.name),
@@ -162,7 +162,7 @@ export function StylesPreviewCards({ className }: { className?: string }) {
           const c = `--${getStyleVariablesPrefix(style.name)}`;
           return (
             <StyleCssWrapper key={style.name + index} className="reltative">
-              <StyleFontWrapper sStyle={style}>
+              <StyleFontWrapper sStyle={style.name}>
                 <div className="to-accent group relative flex max-h-120 min-h-120 w-full flex-col gap-2 overflow-hidden border bg-linear-to-r from-transparent p-6">
                   <div className="z-20 flex w-full items-center justify-between">
                     <div className="flex items-center gap-4">

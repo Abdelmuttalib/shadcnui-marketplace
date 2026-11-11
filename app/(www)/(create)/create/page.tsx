@@ -73,5 +73,6 @@ export default function CreatePage() {
 
 async function CustomizerLoader() {
   const itemsByBase = await getAllItems();
-  return <Customizer itemsByBase={itemsByBase} />;
+  return <>custmizer</>;
+  // return <Customizer itemsByBase={itemsByBase} />;
 }

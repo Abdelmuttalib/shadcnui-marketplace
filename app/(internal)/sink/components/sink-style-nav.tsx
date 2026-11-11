@@ -8,6 +8,8 @@ import { styles } from "../lib/styles";
 export function SinkStyleNav() {
   const pathname = usePathname();
 
+  if (!pathname) return;
+
   const segments = pathname.split("/").filter(Boolean);
 
   const currentStyle = segments[1] ?? "";

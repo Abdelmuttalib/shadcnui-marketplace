@@ -1,4 +1,3 @@
-import { Style } from "@/hooks/use-style-store";
 import { themePalettes } from "@/registry/registry-palettes";
 import { getStyleVariablesPrefix } from "@/registry/styles-components";
 
@@ -16,7 +15,7 @@ export function getDesignSystemVariables({
   radius,
   theme,
 }: {
-  style: Style;
+  style: StyleName;
   palette?: DesignSystemPalette;
   radius?: string;
   theme: DesignSystemTheme;

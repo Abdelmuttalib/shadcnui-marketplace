@@ -1,38 +1,39 @@
-"use client"
+"use client";
 
 import {
   LanguageProvider,
   LanguageSelector,
   useLanguageContext,
-} from "@/components/language-selector"
-import { DirectionProvider } from "@/styles/base-nova/ui-rtl/direction"
-import { FieldSeparator } from "@/styles/base-nova/ui-rtl/field"
+} from "@/components/language-selector";
 
-import { AppearanceSettings } from "./appearance-settings"
-import { ButtonGroupDemo } from "./button-group-demo"
-import { ButtonGroupInputGroup } from "./button-group-input-group"
-import { ButtonGroupNested } from "./button-group-nested"
-import { ButtonGroupPopover } from "./button-group-popover"
-import { EmptyAvatarGroup } from "./empty-avatar-group"
-import { FieldCheckbox } from "./field-checkbox"
-import { FieldDemo } from "./field-demo"
-import { FieldHear } from "./field-hear"
-import { FieldSlider } from "./field-slider"
-import { InputGroupButtonExample } from "./input-group-button"
-import { InputGroupDemo } from "./input-group-demo"
-import { ItemDemo } from "./item-demo"
-import { NotionPromptForm } from "./notion-prompt-form"
-import { SpinnerBadge } from "./spinner-badge"
-import { SpinnerEmpty } from "./spinner-empty"
+import { AppearanceSettings } from "./appearance-settings";
+import { ButtonGroupDemo } from "./button-group-demo";
+import { ButtonGroupInputGroup } from "./button-group-input-group";
+import { ButtonGroupNested } from "./button-group-nested";
+import { ButtonGroupPopover } from "./button-group-popover";
+import { EmptyAvatarGroup } from "./empty-avatar-group";
+import { FieldCheckbox } from "./field-checkbox";
+import { FieldDemo } from "./field-demo";
+import { FieldHear } from "./field-hear";
+import { FieldSlider } from "./field-slider";
+import { InputGroupButtonExample } from "./input-group-button";
+import { InputGroupDemo } from "./input-group-demo";
+import { ItemDemo } from "./item-demo";
+import { NotionPromptForm } from "./notion-prompt-form";
+import { SpinnerBadge } from "./spinner-badge";
+import { SpinnerEmpty } from "./spinner-empty";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 function RtlComponentsContent() {
-  const context = useLanguageContext()
+  const context = useLanguageContext();
+
+  const { FieldSeparator } = useDesignSystem();
 
   if (!context) {
-    return null
+    return null;
   }
 
-  const { language } = context
+  const { language } = context;
 
   return (
     <div
@@ -77,15 +78,17 @@ function RtlComponentsContent() {
         <SpinnerEmpty />
       </div>
     </div>
-  )
+  );
 }
 
 export function RtlComponents() {
+  const { DirectionProvider } = useDesignSystem();
+
   return (
     <LanguageProvider defaultLanguage="ar">
       <DirectionProvider direction="rtl">
         <RtlComponentsContent />
       </DirectionProvider>
     </LanguageProvider>
-  )
+  );
 }

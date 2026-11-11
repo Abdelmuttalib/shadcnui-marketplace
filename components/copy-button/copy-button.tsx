@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "motion/react";
 import type { ComponentProps } from "react";
 
 import { Button } from "@/components/ui/button";
-import type { CopyState } from "@/hooks/use-copy-to-clipboard";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 
 export const motionIconVariants: Variants = {
@@ -24,7 +23,7 @@ export const motionIconProps: HTMLMotionProps<"span"> = {
 };
 
 export type CopyStateIconProps = {
-  state: CopyState;
+  state: any;
   /**
    * Custom icon for idle state.
    * @defaultValue CopyIcon
@@ -88,23 +87,20 @@ export function CopyButton({
   onCopyError,
   ...props
 }: CopyButtonProps) {
-  const { state, copy } = useCopyToClipboard({
-    onCopySuccess,
-    onCopyError,
-  });
+  const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   return (
     <Button
       size={size}
       onClick={(e) => {
-        copy(text);
+        copyToClipboard(text as string);
         onClick?.(e);
       }}
       aria-label="Copy"
       {...props}
     >
       <CopyStateIcon
-        state={state}
+        state={isCopied}
         idleIcon={idleIcon}
         doneIcon={doneIcon}
         errorIcon={errorIcon}

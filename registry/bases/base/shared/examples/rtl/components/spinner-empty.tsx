@@ -1,16 +1,8 @@
-"use client"
+"use client";
 
-import { useLanguageContext } from "@/components/language-selector"
-import { Button } from "@/styles/base-nova/ui-rtl/button"
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/styles/base-nova/ui-rtl/empty"
-import { Spinner } from "@/styles/base-nova/ui-rtl/spinner"
+import { useLanguageContext } from "@/components/language-selector";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const translations = {
   ar: {
@@ -25,12 +17,23 @@ const translations = {
     description: "אנא המתן בזמן שאנו מעבדים את בקשתך. אל תרענן את הדף.",
     cancel: "ביטול",
   },
-}
+};
 
 export function SpinnerEmpty() {
-  const context = useLanguageContext()
-  const lang = context?.language === "he" ? "he" : "ar"
-  const t = translations[lang]
+  const context = useLanguageContext();
+  const lang = context?.language === "he" ? "he" : "ar";
+  const t = translations[lang];
+
+  const {
+    Spinner,
+    Button,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+  } = useDesignSystem();
 
   return (
     <Empty className="w-full border md:p-6" dir={t.dir}>
@@ -47,5 +50,5 @@ export function SpinnerEmpty() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }
