@@ -1,4 +1,4 @@
-import type { RegistryMonitorEntryState } from "./schema"
+import type { RegistryMonitorEntryState } from "./schema";
 
 function createRegistryMonitorEntryState(now: Date) {
   return {
@@ -17,7 +17,7 @@ function createRegistryMonitorEntryState(now: Date) {
       noDuplicateNames: null,
       nameMatches: null,
     },
-  } satisfies RegistryMonitorEntryState
+  } satisfies RegistryMonitorEntryState;
 }
 
-export { createRegistryMonitorEntryState }
+export { createRegistryMonitorEntryState };
