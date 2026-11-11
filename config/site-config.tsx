@@ -15,10 +15,10 @@ const mainLinks = [
     label: "Colors",
     href: "/colors",
   },
-  // {
-  //   label: "Customize",
-  //   href: "/customize",
-  // },
+  {
+    label: "Customize",
+    href: "/customize",
+  },
   {
     label: "Typography",
     href: "/typography",
