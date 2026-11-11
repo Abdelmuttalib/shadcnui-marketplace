@@ -7,7 +7,7 @@ import {
   registryItemSchema,
   registryItemTypeSchema,
   registrySchema,
-} from "shadcn/registry";
+} from "shadcn/schema";
 import { Project, ScriptKind } from "ts-morph";
 import { z } from "zod";
 
@@ -421,7 +421,7 @@ export const Index: Record<string, any> = {
     // Build style index.
     for (const item of registry.items) {
       const resolveFiles = item.files?.map(
-        (file) =>
+        (file: any) =>
           `registry/${style.name}/${
             typeof file === "string" ? file : file.path
           }`
@@ -433,7 +433,8 @@ export const Index: Record<string, any> = {
       // Validate categories.
       if (item.categories) {
         const invalidCategories = item.categories.filter(
-          (category) => !registryCategories.some((c) => c.slug === category)
+          (category: any) =>
+            !registryCategories.some((c) => c.slug === category)
         );
 
         if (invalidCategories.length > 0) {
@@ -493,7 +494,7 @@ export const Index: Record<string, any> = {
         sourceFilename = `__registry__/${style.name}/${type}/${item.name}.tsx`;
 
         if (item.files) {
-          const files = item.files.map((file) =>
+          const files = item.files.map((file: any) =>
             typeof file === "string"
               ? { type: "registry:page", path: file }
               : file
@@ -515,7 +516,7 @@ export const Index: Record<string, any> = {
       let componentPath = `@/registry/${style.name}/${type}/${item.name}`;
 
       if (item.files) {
-        const files = item.files.map((file) =>
+        const files = item.files.map((file: any) =>
           typeof file === "string"
             ? { type: "registry:page", path: file }
             : file
@@ -531,7 +532,7 @@ export const Index: Record<string, any> = {
       description: "${item.description ?? ""}",
       type: "${item.type}",
       registryDependencies: ${JSON.stringify(item.registryDependencies)},
-      files: [${item.files?.map((file) => {
+      files: [${item.files?.map((file: any) => {
         const filePath = `registry/${style.name}/${
           typeof file === "string" ? file : file.path
         }`;
@@ -563,11 +564,11 @@ export const Index: Record<string, any> = {
   // Build registry/index.json.
   // ----------------------------------------------------------------------------
   const items = registry.items
-    .filter((item) => ["registry:ui"].includes(item.type))
-    .map((item) => {
+    .filter((item: any) => ["registry:ui"].includes(item.type))
+    .map((item: any) => {
       return {
         ...item,
-        files: item.files?.map((_file) => {
+        files: item.files?.map((_file: any) => {
           const file =
             typeof _file === "string"
               ? {
@@ -617,7 +618,7 @@ async function buildStyles(registry: Registry) {
       let files;
       if (item.files) {
         files = await Promise.all(
-          item.files.map(async (_file) => {
+          item.files.map(async (_file: any) => {
             const file =
               typeof _file === "string"
                 ? {
@@ -740,12 +741,12 @@ async function buildStylesIndex(siteRegistryUrl: string) {
     const targetPath = path.join(REGISTRY_PATH, "styles", style.name);
     const targetUIPath = path.join("registry", style.name, "ui");
     const styleFiles = await fs.readdir(targetUIPath).then((files) => {
-      return files.map((file) => file.replace(/\.[^/.]+$/, ""));
+      return files.map((file: any) => file.replace(/\.[^/.]+$/, ""));
       // get filename without extension
-      // file = file.map((file) => file.replace(/\.[^/.]+$/, ""););
+      // file = file.map((file: any) => file.replace(/\.[^/.]+$/, ""););
       // return file.replace(/\.[^/.]+$/, "");
     });
-    // const styleFiles = await fs.readdir(targetPath).then((file) => file);
+    // const styleFiles = await fs.readdir(targetPath).then((file: any) => file);
     // console.log("files", styleFiles);
 
     const payload: z.infer<typeof registryItemSchema> = {
@@ -759,7 +760,8 @@ async function buildStylesIndex(siteRegistryUrl: string) {
       registryDependencies: [
         "utils",
         ...styleFiles.map(
-          (file) => `${siteRegistryUrl}/r/styles/${style.name}/${file}.json`
+          (file: any) =>
+            `${siteRegistryUrl}/r/styles/${style.name}/${file}.json`
         ),
       ],
       tailwind: {

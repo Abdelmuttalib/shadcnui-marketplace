@@ -19,7 +19,7 @@ import { cn } from "@/utils/cn";
 import { PRIMARY_THEME_COLORS } from "@/utils/theme-colors";
 
 export function ThemeModeSelect() {
-  const { theme, setTheme, themes } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
     <Select value={theme} onValueChange={setTheme}>
@@ -41,13 +41,6 @@ export function ThemeModeSelect() {
         >
           dark
         </SelectItem>
-        {/* {themes.map((theme) => (
-          <SelectItem key={theme} value={theme} className="capitalize">
-            {theme}
-          </SelectItem>
-        ))} */}
-        {/* <SelectItem value="light">Light</SelectItem>
-        <SelectItem value="dark">Dark</SelectItem> */}
       </SelectContent>
     </Select>
   );

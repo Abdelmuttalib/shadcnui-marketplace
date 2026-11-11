@@ -6,13 +6,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/wedges/ui/avatar";
-import { Badge } from "@/registry/bases/base/wedges/ui/badge";
-import { Card } from "@/registry/bases/base/wedges/ui/card";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Badge } from "@/registry/bases/base/linear/ui/badge";
+import { Card } from "@/registry/bases/base/linear/ui/card";
 import {
   Typography,
   typographyVariants,
-} from "@/registry/bases/base/wedges/ui/typography";
+} from "@/registry/bases/base/linear/ui/typography";
 
 function formatDate(dateString: string): string {
   const options: Intl.DateTimeFormatOptions = {

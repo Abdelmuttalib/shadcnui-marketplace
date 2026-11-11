@@ -11,6 +11,7 @@ import {
   renderStylePageExample,
 } from "@/registry/styles-components";
 import { cn } from "@/utils/cn";
+import { StyleName } from "@/registry/styles";
 
 export function StylePageExamplePreview({
   id,
@@ -23,7 +24,7 @@ export function StylePageExamplePreview({
   screenWidth,
 }: {
   id: string;
-  styleProp?: Style;
+  styleProp?: StyleName;
   className?: string;
   coloredEdge?: boolean;
   pageExampleTypeProp?: PageExampleType;

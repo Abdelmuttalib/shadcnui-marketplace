@@ -10,10 +10,10 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/wedges/ui/avatar";
-import { Button } from "@/registry/bases/base/wedges/ui/button";
-import { Card, CardContent } from "@/registry/bases/base/wedges/ui/card";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Card, CardContent } from "@/registry/bases/base/linear/ui/card";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 const blogPosts = [
   {
@@ -197,7 +197,7 @@ function BlogCard({
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           ) : (
-            <div className="bg-linear-to-b absolute inset-0 from-transparent to-black/60" />
+            <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/60" />
           )}
 
           <span className="bg-wedges-card text-wedges-foreground absolute bottom-4 left-4 rounded-full px-3 py-1 text-sm font-medium">

@@ -16,7 +16,6 @@ function getRegistryUrl(env: string) {
 
 export function StylePaletteCommand() {
   const NODE_ENV = process.env.NODE_ENV;
-  const isProd = NODE_ENV === "production";
 
   const { style } = useStyleStore();
   const { activePalette } = useThemePaletteStore();

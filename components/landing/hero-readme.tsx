@@ -38,6 +38,8 @@ import { Button } from "../ui/button";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { ExamplePreview } from "../common/example-preview";
 import { siteConfig } from "@/config/site-config";
+import { StylePaletteCommand } from "../style-palette-command";
+import { Braces, Code, CodeXml } from "lucide-react";
 
 const EMPTY_CONTRIBUTORS: ContributorInfo[] = [];
 
@@ -202,7 +204,7 @@ function ReadmeFooter() {
   );
 }
 
-export function HeroReadMe({ stats }: { stats: CommunityHeroStats }) {
+export function HeroReadMe() {
   const { resolvedTheme } = useTheme();
   const { style, setStyle } = useStyleStore();
 
@@ -248,21 +250,20 @@ export function HeroReadMe({ stats }: { stats: CommunityHeroStats }) {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="no-scrollbar pb-0"
           >
-            <h1 className="mb-4 flex items-center gap-3 font-mono text-sm text-neutral-900 sm:mb-5 sm:text-[15px] dark:text-neutral-100">
+            {/* <h1 className="mb-4 flex items-center gap-3 font-mono text-sm text-neutral-900 sm:mb-5 sm:text-[15px] dark:text-neutral-100">
               README
               <span className="bg-foreground/15 h-px flex-1" />
             </h1>
 
-            <p className="text-foreground/80 mb-6 text-sm leading-relaxed sm:mb-8 sm:text-[15px]">
+            <p className="text-foreground/80 mb-4 text-sm leading-relaxed sm:mb-4 sm:text-[15px]">
               Explore multiple interpretations of{" "}
               <span className="text-foreground/90 dark:text-foreground/80 font-medium">
                 shadcn/ui
               </span>
               , inspired by established design systems.
-            </p>
+            </p> */}
 
-            {/* Infrastructure */}
-            <div className="relative mt-8 pt-6 pb-2">
+            <div className="relative mt-2 pt-6 pb-2">
               {/* Grain noise background — full bleed with fade edges */}
               <div
                 className="pointer-events-none absolute top-0 bottom-0 z-0"
@@ -276,7 +277,6 @@ export function HeroReadMe({ stats }: { stats: CommunityHeroStats }) {
                     "linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)",
                 }}
               >
-                <div className="absolute inset-0 bg-neutral-200/20 dark:bg-black/30" />
                 <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.07]">
                   <svg className="h-full w-full">
                     <filter id="infra-grain">
@@ -297,7 +297,7 @@ export function HeroReadMe({ stats }: { stats: CommunityHeroStats }) {
                 </div>
               </div>
 
-              <div className="relative z-10 mb-6">
+              <div className="relative z-10 mb-6 flex flex-col gap-4">
                 <div className="grid grid-cols-2 gap-4 xl:grid-cols-9">
                   <div className="xl:col-span-4">
                     <Select
@@ -353,10 +353,18 @@ export function HeroReadMe({ stats }: { stats: CommunityHeroStats }) {
                     <ThemePaletteSelect />
                   </div>
                   <div className="xl:col-span-1">
-                    <Button className="w-full rounded-none font-mono font-normal uppercase">
+                    <Button
+                      variant="outline"
+                      className="w-full rounded-none font-mono font-normal uppercase"
+                    >
+                      <Code />
                       Get Code
                     </Button>
                   </div>
+                </div>
+
+                <div className="">
+                  <StylePaletteCommand />
                 </div>
               </div>
 

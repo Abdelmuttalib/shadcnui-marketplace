@@ -8,14 +8,14 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/base/wedges/ui/avatar";
-import { Button } from "@/registry/bases/base/wedges/ui/button";
+} from "@/registry/bases/base/linear/ui/avatar";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
-} from "@/registry/bases/base/wedges/ui/card";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+} from "@/registry/bases/base/linear/ui/card";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 function formatDate(dateString: string): string {
   const options: Intl.DateTimeFormatOptions = {
@@ -183,7 +183,7 @@ function BlogCard({
             fill
             className="object-cover transition-transform duration-300 hover:scale-105"
           /> */}
-          <div className="bg-linear-to-t absolute inset-0 from-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
           <span className="bg-card text-wedges-foreground absolute bottom-4 left-4 rounded-full border px-3 py-1 text-sm font-medium">
             {category}
           </span>

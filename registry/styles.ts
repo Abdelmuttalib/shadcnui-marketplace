@@ -1,3 +1,18 @@
+// carbon: "0rem",
+// catalyst: "0.6rem",
+// wedges: "0.5rem",
+// snow: "0.4rem",
+// neon: "0rem",
+// material: "0.4rem",
+// spectrum: "0.4rem",
+// lucid: "0.5rem",
+// moon: "0.6rem",
+// default: "0.5rem",
+// linear: "0.5rem",
+// libelle: "0rem",
+
+const stylesPath = "/styles";
+
 export const styles = [
   {
     name: "default",
@@ -10,6 +25,8 @@ export const styles = [
     cssPrefix: "dft",
     font: "inter",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/default`,
   },
   {
     name: "carbon",
@@ -21,6 +38,8 @@ export const styles = [
     cssPrefix: "cb",
     font: "ibm-plex-sans",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/carbon`,
   },
   {
     name: "linear",
@@ -32,6 +51,8 @@ export const styles = [
     cssPrefix: "linear",
     font: "inter",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/linear`,
   },
   {
     name: "catalyst",
@@ -43,6 +64,8 @@ export const styles = [
     cssPrefix: "catalyst",
     font: "inter",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/catalyst`,
   },
   {
     name: "material",
@@ -54,6 +77,8 @@ export const styles = [
     cssPrefix: "material",
     font: "roboto",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/material`,
   },
   {
     name: "spectrum",
@@ -65,6 +90,8 @@ export const styles = [
     cssPrefix: "spctm",
     font: "ubuntu",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/spectrum`,
   },
   {
     name: "wedges",
@@ -76,6 +103,8 @@ export const styles = [
     cssPrefix: "wedges",
     font: "inter",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/wedges`,
   },
   {
     name: "moon",
@@ -87,6 +116,8 @@ export const styles = [
     cssPrefix: "moon",
     font: "inter",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/moon`,
   },
   {
     name: "lucid",
@@ -98,6 +129,8 @@ export const styles = [
     cssPrefix: "lucid",
     font: "inter",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/lucid`,
   },
   {
     name: "snow",
@@ -109,6 +142,8 @@ export const styles = [
     cssPrefix: "snow",
     font: "inter",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/snow`,
   },
   {
     name: "neon",
@@ -120,6 +155,8 @@ export const styles = [
     cssPrefix: "neon",
     font: "poppins",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/neon`,
   },
   {
     name: "libelle",
@@ -131,12 +168,18 @@ export const styles = [
     cssPrefix: "libelle",
     font: "outfit",
     fontHeading: "inherit",
+    defaultPalette: "",
+    styleSitePath: stylesPath + `/libelle`,
   },
 ];
 
 export const DEFAULT_STYLE = styles[2];
 
 export const STYLES = styles;
+
+export const stylesData = Object.fromEntries(
+  styles.map((style) => [style.name, style])
+);
 
 export type StyleRegistry = (typeof styles)[number];
 export type Style = StyleRegistry;

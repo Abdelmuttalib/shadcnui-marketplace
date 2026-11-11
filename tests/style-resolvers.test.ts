@@ -1,17 +1,17 @@
 import { describe, expect, it } from "vitest";
 
-import type { Style } from "@/hooks/use-style-store";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
   getStyleForegroundClassname,
   getStyleVariablesPrefix,
 } from "@/registry/styles-components";
+import { StyleName } from "@/registry/styles";
 
 // Contract tables derived from the product's namespaced design system
 // (globals.css tokens + tailwind.config.ts mappings). Values below are the
 // contract — they must be updated deliberately, never to match a regression.
-const PREFIX_BY_STYLE: Array<[Style, string]> = [
+const PREFIX_BY_STYLE: Array<[StyleName, string]> = [
   ["default", "dft"],
   ["default-v4", "dft"],
   ["carbon", "cb"],
@@ -27,7 +27,7 @@ const PREFIX_BY_STYLE: Array<[Style, string]> = [
   ["libelle", "libelle"],
 ];
 
-const BACKGROUND_BY_STYLE: Array<[Style, string]> = [
+const BACKGROUND_BY_STYLE: Array<[StyleName, string]> = [
   ["default", "bg-dft-background"],
   ["default-v4", "bg-dft-background"],
   ["carbon", "bg-cb-background"],
@@ -43,7 +43,7 @@ const BACKGROUND_BY_STYLE: Array<[Style, string]> = [
   ["libelle", "bg-libelle-background"],
 ];
 
-const FOREGROUND_BY_STYLE: Array<[Style, string]> = [
+const FOREGROUND_BY_STYLE: Array<[StyleName, string]> = [
   ["default", "text-dft-foreground"],
   ["default-v4", "text-dft-foreground"],
   ["carbon", "text-cb-foreground"],
@@ -59,7 +59,7 @@ const FOREGROUND_BY_STYLE: Array<[Style, string]> = [
   ["libelle", "text-libelle-foreground"],
 ];
 
-const FONT_BY_STYLE: Array<[Style, string]> = [
+const FONT_BY_STYLE: Array<[StyleName, string]> = [
   ["default", "font-sans"],
   ["default-v4", "font-sans"],
   ["carbon", "font-ibm-plex-sans"],
@@ -81,7 +81,7 @@ describe("style variable prefixes", () => {
   });
 
   it("falls back to the default prefix for unknown styles", () => {
-    expect(getStyleVariablesPrefix("unknown-style" as Style)).toBe("dft");
+    expect(getStyleVariablesPrefix("unknown-style" as StyleName)).toBe("dft");
   });
 });
 
@@ -91,7 +91,7 @@ describe("style background classnames", () => {
   });
 
   it("falls back to the linear background for unknown styles", () => {
-    expect(getStyleBackgroundClassname("unknown-style" as Style)).toBe(
+    expect(getStyleBackgroundClassname("unknown-style" as StyleName)).toBe(
       "bg-linear-background"
     );
   });
@@ -103,7 +103,7 @@ describe("style foreground classnames", () => {
   });
 
   it("falls back to the linear foreground for unknown styles", () => {
-    expect(getStyleForegroundClassname("unknown-style" as Style)).toBe(
+    expect(getStyleForegroundClassname("unknown-style" as StyleName)).toBe(
       "text-linear-foreground"
     );
   });
@@ -115,6 +115,8 @@ describe("style font classnames", () => {
   });
 
   it("falls back to the sans font for unknown styles", () => {
-    expect(getStyleFontClassname("unknown-style" as Style)).toBe("font-sans");
+    expect(getStyleFontClassname("unknown-style" as StyleName)).toBe(
+      "font-sans"
+    );
   });
 });

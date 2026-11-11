@@ -2,12 +2,8 @@ import { HeroReadMe } from "@/components/landing/hero-readme";
 import { HeroTitle } from "@/components/landing/hero-title";
 import { LineFieldBackground } from "@/components/landing/line-field-bg";
 import { SignatureMark } from "@/components/landing/signature-mark";
-import { getCommunityStats, getContributors } from "@/lib/community-stats";
 
 export default async function HomePage() {
-  const contributors = getContributors();
-  const communityStats = await getCommunityStats();
-
   return (
     <div id="hero" className="relative pt-[45px] lg:pt-0">
       <div className="text-foreground relative" data-v="1">
@@ -24,15 +20,7 @@ export default async function HomePage() {
           {/* Right side — Sign in */}
           <div className="relative z-0 w-full overflow-x-hidden lg:w-[70%]">
             <div className="flex items-start justify-center lg:items-center">
-              <HeroReadMe
-                contributors={contributors}
-                stats={{
-                  npmDownloads: communityStats.npmDownloads,
-                  npmWeeklyHistory: communityStats.npmWeeklyHistory,
-                  githubStars: communityStats.githubStars,
-                  contributors: communityStats.contributors,
-                }}
-              />
+              <HeroReadMe />
             </div>
           </div>
         </div>

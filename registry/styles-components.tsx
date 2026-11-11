@@ -1,18 +1,5 @@
-import { Style } from "@/hooks/use-style-store";
-import { CarbonShowcaseComponents } from "@/registry/bases/base/carbon/carbon-showcase-components";
-import { CatalystShowcaseComponents } from "@/registry/bases/base/catalyst/catalyst-showcase-components";
-import { DefaultShowcaseComponents } from "@/registry/bases/base/default/default-showcase-components";
-import { LibelleShowcaseComponents } from "@/registry/bases/base/libelle/libelle-showcase-components";
-import { LinearShowcaseComponents } from "@/registry/bases/base/linear/linear-showcase-components";
-import { LucidShowcaseComponents } from "@/registry/bases/base/lucid/lucid-showcase-components";
-import { MaterialShowcaseComponents } from "@/registry/bases/base/material/material-showcase-components";
-import { MoonShowcaseComponents } from "@/registry/bases/base/moon/moon-showcase-components";
-import { NeonShowcaseComponents } from "@/registry/bases/base/neon/neon-showcase-components";
-import { SnowShowcaseComponents } from "@/registry/bases/base/snow/snow-showcase-components";
-import { SpectrumShowcaseComponents } from "@/registry/bases/base/spectrum/spectrum-showcase-components";
-import { WedgesShowcaseComponents } from "@/registry/bases/base/wedges/wedges-showcase-components";
 import { getStyleByName } from "@/lib/services/presets";
-import { DEFAULT_STYLE, StyleName } from "./styles";
+import { DEFAULT_STYLE, StyleName } from "@/registry/styles";
 
 import {
   ExampleRenderer,
@@ -36,7 +23,7 @@ export function getStyleForegroundClassname(styleName: StyleName) {
   return `text-${style.cssPrefix}-foreground`;
 }
 
-export function getStyleFontClassname(styleName: Style) {
+export function getStyleFontClassname(styleName: StyleName) {
   const style = getStyleByName(styleName);
 
   if (!style) return `font-${DEFAULT_STYLE.font}`;
@@ -44,7 +31,7 @@ export function getStyleFontClassname(styleName: Style) {
   return `font-${style.font}`;
 }
 
-export function getStyleRadiusClassname(styleName: Style) {
+export function getStyleRadiusClassname(styleName: StyleName) {
   const style = getStyleByName(styleName);
 
   if (!style) return `rounded-[${DEFAULT_STYLE.defaultRadius}]`;
@@ -52,7 +39,7 @@ export function getStyleRadiusClassname(styleName: Style) {
   return `rounded-[${style.defaultRadius}]`;
 }
 
-export function getStyleRadius(styleName: Style) {
+export function getStyleRadius(styleName: StyleName) {
   const style = getStyleByName(styleName);
 
   if (!style) return DEFAULT_STYLE.defaultRadius;
@@ -60,13 +47,13 @@ export function getStyleRadius(styleName: Style) {
   return style.defaultRadius;
 }
 
-export function renderStyleCardShowcase(style: Style) {
+export function renderStyleCardShowcase(style: StyleName) {
   return (
     <ExampleRenderer style={style as ExampleStyle} name={"card-showcase"} />
   );
 }
 
-export function getStyleVariablesPrefix(styleName: Style) {
+export function getStyleVariablesPrefix(styleName: StyleName) {
   const style = getStyleByName(styleName);
 
   if (!style) return DEFAULT_STYLE.cssPrefix;
@@ -95,7 +82,7 @@ const PAGE_EXAMPLES: Record<string, ExampleName> = {
   tasks: "tasks",
 };
 
-export function renderStylePageExample(style: Style, page: string) {
+export function renderStylePageExample(style: StyleName, page: string) {
   const example = PAGE_EXAMPLES[page];
 
   if (!example) {
@@ -105,37 +92,10 @@ export function renderStylePageExample(style: Style, page: string) {
   return <ExampleRenderer style={style as ExampleStyle} name={example} />;
 }
 
-export function renderStyleHero(style: Style) {
+export function renderStyleHero(style: StyleName) {
   return <ExampleRenderer style={style as any} name={"hero"} />;
 }
 
-export function renderStyleShowcaseComponents(style: Style) {
-  switch (style) {
-    case "carbon":
-      return <CarbonShowcaseComponents />;
-    case "linear":
-      return <LinearShowcaseComponents />;
-    case "material":
-      return <MaterialShowcaseComponents />;
-    case "catalyst":
-      return <CatalystShowcaseComponents />;
-    case "default":
-      return <DefaultShowcaseComponents />;
-    case "spectrum":
-      return <SpectrumShowcaseComponents />;
-    case "wedges":
-      return <WedgesShowcaseComponents />;
-    case "moon":
-      return <MoonShowcaseComponents />;
-    case "lucid":
-      return <LucidShowcaseComponents />;
-    case "snow":
-      return <SnowShowcaseComponents />;
-    case "neon":
-      return <NeonShowcaseComponents />;
-    case "libelle":
-      return <LibelleShowcaseComponents />;
-    default:
-      return <DefaultShowcaseComponents />;
-  }
+export function renderStyleShowcaseComponents(style: StyleName) {
+  return <ExampleRenderer style={style as any} name={"card-showcase"} />;
 }

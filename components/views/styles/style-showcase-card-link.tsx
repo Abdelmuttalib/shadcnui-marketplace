@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Typography } from "@/components/ui/typography";
-import { Style } from "@/hooks/use-style-store";
+import { StyleName } from "@/registry/styles";
 import { loadComponentDemo } from "@/lib/component-loader";
 import { cn } from "@/lib/utils";
 import { getStyleBackgroundClassname } from "@/registry/styles-components";
@@ -20,7 +20,7 @@ type Components = {
   Checkbox: React.ComponentType;
 };
 
-export function StyleShowcaseCardLink({ style }: { style: Style }) {
+export function StyleShowcaseCardLink({ style }: { style: StyleName }) {
   const [components, setComponents] = useState<Components | {} | any>({});
 
   const [isLoading, setIsLoading] = useState(true);
@@ -90,18 +90,22 @@ export function StyleShowcaseCardLink({ style }: { style: Style }) {
           <Typography
             as="h3"
             variant="xl/semibold"
-            className="max-w-xl capitalize tracking-tight"
+            className="max-w-xl tracking-tight capitalize"
           >
             {style}
           </Typography>
         </div>
         <div>
-          <Button size={"sm"} variant={"outline"} asChild>
-            <Link href={`/styles/${style}`}>
-              Live Preview
-              <ArrowRightIcon className="-rotate-45" />
-            </Link>
-          </Button>
+          <Button
+            size={"sm"}
+            variant={"outline"}
+            render={
+              <Link href={`/styles/${style}`}>
+                Live Preview
+                <ArrowRightIcon className="-rotate-45" />
+              </Link>
+            }
+          ></Button>
         </div>
       </div>
       <div className="bg-accent flex flex-col gap-2 rounded-xl border p-2 dark:bg-inherit">
@@ -140,7 +144,7 @@ export function StyleShowcaseCardLink({ style }: { style: Style }) {
   );
 }
 
-export function StyleShowcaseCardPlain({ style }: { style: Style }) {
+export function StyleShowcaseCardPlain({ style }: { style: StyleName }) {
   const [components, setComponents] = useState<Components | {} | any>({});
 
   const [isLoading, setIsLoading] = useState(true);

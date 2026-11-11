@@ -5,13 +5,9 @@ import { ExamplesTabsNav } from "@/components/draft";
 import { StylesPreviews } from "./components/styles-preview-cards";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 import Footer from "@/components/landing/footer";
 import { HalftoneBackground } from "@/components/landing/halftone-bg";
 import { SignatureMark } from "@/components/landing/signature-mark";
-import type { CommunityStats } from "@/lib/community-stats";
-import { blocksRegistry } from "@/config/blocks-registry";
-import { BlockCategory } from "@/registry/registry-blocks";
 
 import { LineFieldBackground } from "@/components/landing/line-field-bg";
 import { PageExampleSelect } from "@/components/common/page-example-select";

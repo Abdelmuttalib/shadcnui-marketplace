@@ -1,11 +1,8 @@
 import { afterEach, describe, expect, it } from "vitest";
 
-import {
-  STYLES,
-  STYLES_DATA,
-  useStyleStore,
-} from "@/hooks/use-style-store";
+import { useStyleStore } from "@/hooks/use-style-store";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
+import { STYLES, stylesData } from "@/registry/styles";
 
 // Canonical style registry. Must match registry/registry-styles.ts and the
 // tailwind/globals namespaces. Deliberate additions belong here first.
@@ -28,9 +25,14 @@ const EXPECTED_STYLES = [
 const initialStyleState = useStyleStore.getState();
 const initialPaletteState = useThemePaletteStore.getState();
 
+const STYLES_DATA = stylesData;
+
 afterEach(() => {
   useStyleStore.setState(
-    { style: initialStyleState.style, pageExampleType: initialStyleState.pageExampleType },
+    {
+      style: initialStyleState.style,
+      pageExampleType: initialStyleState.pageExampleType,
+    },
     false
   );
   useThemePaletteStore.setState(
@@ -99,8 +101,7 @@ describe("useThemePaletteStore", () => {
   });
 
   it("sets and resets the active radius", () => {
-    const { setActiveRadius, onResetRadius } =
-      useThemePaletteStore.getState();
+    const { setActiveRadius, onResetRadius } = useThemePaletteStore.getState();
     setActiveRadius("0.5rem");
     expect(useThemePaletteStore.getState().activeRadius).toBe("0.5rem");
     onResetRadius();

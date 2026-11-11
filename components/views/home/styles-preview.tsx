@@ -12,7 +12,7 @@ export function StylesPreview() {
           <StylePreviewCard
             key={style.name}
             title={style.title}
-            style={style.name}
+            style={style.name as any}
             // link={{
             //   href: `/styles/${style.name}`,
             // }}

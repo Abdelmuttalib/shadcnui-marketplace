@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Style } from "@/hooks/use-style-store";
+import { StyleName } from "@/registry/styles";
 import { cn } from "@/lib/utils";
 import {
   getStyleBackgroundClassname,
@@ -21,7 +21,7 @@ export function ComponentWrapper({
         id={name}
         data-name={name.toLowerCase()}
         className={cn(
-          "min-w-96 flex h-fit scroll-mt-16 flex-col rounded-lg border",
+          "flex h-fit min-w-96 scroll-mt-16 flex-col rounded-lg border",
           className
         )}
         {...props}
@@ -76,14 +76,14 @@ export function ComponentShowcaseWrapper({
   style,
   children,
   ...props
-}: React.ComponentPropsWithoutRef<"div"> & { name: string; style: Style }) {
+}: React.ComponentPropsWithoutRef<"div"> & { name: string; style: StyleName }) {
   return (
     <ComponentErrorBoundary name={name}>
       <div
         id={name}
         data-name={name.toLowerCase()}
         className={cn(
-          "min-h-72 flex max-h-72 scroll-mt-16 flex-col overflow-hidden rounded-lg border",
+          "flex max-h-72 min-h-72 scroll-mt-16 flex-col overflow-hidden rounded-lg border",
           //  bg-accent
           getStyleBackgroundClassname(style),
           className

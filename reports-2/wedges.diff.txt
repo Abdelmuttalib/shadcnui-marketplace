@@ -102,13 +102,13 @@ DETAILED DIFFS
 +++ wedges/ui/alert-dialog.tsx	wedges
 @@ -4,7 +4,7 @@
  import * as React from "react";
- 
+
  import { cn } from "@/lib/utils";
 -import { buttonVariants } from "@/registry/bases/base/default/ui/button";
-+import { buttonVariants } from "@/registry/bases/base/wedges/ui/button";
- 
++import { buttonVariants } from "@/registry/bases/base/linear/ui/button";
+
  const AlertDialog = AlertDialogPrimitive.Root;
- 
+
 @@ -36,7 +36,7 @@
      <AlertDialogPrimitive.Content
        ref={ref}
@@ -136,7 +136,7 @@ DETAILED DIFFS
 +++ wedges/ui/alert.tsx	wedges
 @@ -4,13 +4,13 @@
  import { cn } from "@/lib/utils";
- 
+
  const alertVariants = cva(
 -  "relative w-full rounded-dft-lg border border-dft-border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-dft-foreground",
 +  "relative w-full rounded-wedges-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-wedges-foreground",
@@ -185,7 +185,7 @@ DETAILED DIFFS
 +++ wedges/ui/badge.tsx	wedges
 @@ -4,17 +4,18 @@
  import { cn } from "@/lib/utils";
- 
+
  const badgeVariants = cva(
 -  "inline-flex items-center rounded-full border border-dft-border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-dft-ring focus:ring-offset-2",
 +  "inline-flex items-center rounded-wedges-md px-2.5 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-wedges-ring focus:ring-offset-2",
@@ -253,7 +253,7 @@ DETAILED DIFFS
 +++ wedges/ui/button.tsx	wedges
 @@ -5,28 +5,28 @@
  import { cn } from "@/lib/utils";
- 
+
  const buttonVariants = cva(
 -  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-dft-md text-sm font-medium ring-offset-dft-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dft-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
 +  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-wedges-md text-sm font-medium transition-colors ring-offset-1 ring-offset-wedges-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wedges-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
@@ -299,7 +299,7 @@ DETAILED DIFFS
  );
 -
  Button.displayName = "Button";
- 
+
  export { Button, buttonVariants };
 
 
@@ -310,13 +310,13 @@ DETAILED DIFFS
 +++ wedges/ui/calendar.tsx	wedges
 @@ -5,7 +5,7 @@
  import { DayPicker } from "react-day-picker";
- 
+
  import { cn } from "@/lib/utils";
 -import { buttonVariants } from "@/registry/bases/base/default/ui/button";
-+import { buttonVariants } from "@/registry/bases/base/wedges/ui/button";
- 
++import { buttonVariants } from "@/registry/bases/base/linear/ui/button";
+
  export type CalendarProps = React.ComponentProps<typeof DayPicker>;
- 
+
 @@ -34,22 +34,22 @@
          table: "w-full border-collapse space-y-1",
          head_row: "flex",
@@ -381,11 +381,11 @@ DETAILED DIFFS
 +++ wedges/ui/carousel.tsx	wedges
 @@ -7,7 +7,7 @@
  import * as React from "react";
- 
+
  import { cn } from "@/lib/utils";
 -import { Button } from "@/registry/bases/base/default/ui/button";
-+import { Button } from "@/registry/bases/base/wedges/ui/button";
- 
++import { Button } from "@/registry/bases/base/linear/ui/button";
+
  type CarouselApi = UseEmblaCarouselType[1];
  type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 
@@ -469,7 +469,7 @@ DETAILED DIFFS
 +  // </div>
  ));
  Checkbox.displayName = CheckboxPrimitive.Root.displayName;
- 
+
 
 
 ### command.tsx [MODIFIED]
@@ -479,11 +479,11 @@ DETAILED DIFFS
 +++ wedges/ui/command.tsx	wedges
 @@ -6,7 +6,7 @@
  import * as React from "react";
- 
+
  import { cn } from "@/lib/utils";
 -import { Dialog, DialogContent } from "@/registry/bases/base/default/ui/dialog";
-+import { Dialog, DialogContent } from "@/registry/bases/base/wedges/ui/dialog";
- 
++import { Dialog, DialogContent } from "@/registry/bases/base/linear/ui/dialog";
+
  const Command = React.forwardRef<
    React.ElementRef<typeof CommandPrimitive>,
 @@ -15,7 +15,7 @@
@@ -657,13 +657,13 @@ DETAILED DIFFS
    TableHeader,
    TableRow,
 -} from "@/registry/bases/base/default/ui/table";
-+} from "@/registry/bases/base/wedges/ui/table";
- 
++} from "@/registry/bases/base/linear/ui/table";
+
  interface DataTableProps<TData extends RowData> {
    columns: any[];
 @@ -38,7 +38,7 @@
    });
- 
+
    return (
 -    <div className="rounded-dft-md border-dft-border border">
 +    <div className="rounded-wedges-md border-wedges-border border">
@@ -833,13 +833,13 @@ DETAILED DIFFS
 +++ wedges/ui/form.tsx	wedges
 @@ -13,7 +13,7 @@
  } from "react-hook-form";
- 
+
  import { cn } from "@/lib/utils";
 -import { Label } from "@/registry/bases/base/default/ui/label";
-+import { Label } from "@/registry/bases/base/wedges/ui/label";
- 
++import { Label } from "@/registry/bases/base/linear/ui/label";
+
  const Form = FormProvider;
- 
+
 @@ -95,7 +95,7 @@
    return (
      <Label
@@ -935,44 +935,44 @@ DETAILED DIFFS
 --- default/ui/menubar.tsx	default
 +++ wedges/ui/menubar.tsx	wedges
 @@ -6,15 +6,35 @@
- 
+
  import { cn } from "@/lib/utils";
- 
+
 -const MenubarMenu = MenubarPrimitive.Menu;
 +function MenubarMenu({
 +  ...props
 +}: React.ComponentProps<typeof MenubarPrimitive.Menu>) {
 +  return <MenubarPrimitive.Menu {...props} />;
 +}
- 
+
 -const MenubarGroup = MenubarPrimitive.Group;
 +function MenubarGroup({
 +  ...props
 +}: React.ComponentProps<typeof MenubarPrimitive.Group>) {
 +  return <MenubarPrimitive.Group {...props} />;
 +}
- 
+
 -const MenubarPortal = MenubarPrimitive.Portal;
 +function MenubarPortal({
 +  ...props
 +}: React.ComponentProps<typeof MenubarPrimitive.Portal>) {
 +  return <MenubarPrimitive.Portal {...props} />;
 +}
- 
+
 -const MenubarSub = MenubarPrimitive.Sub;
 +function MenubarRadioGroup({
 +  ...props
 +}: React.ComponentProps<typeof MenubarPrimitive.RadioGroup>) {
 +  return <MenubarPrimitive.RadioGroup {...props} />;
 +}
- 
+
 -const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
 +function MenubarSub({
 +  ...props
 +}: React.ComponentProps<typeof MenubarPrimitive.Sub>) {
 +  return <MenubarPrimitive.Sub data-slot="menubar-sub" {...props} />;
 +}
- 
+
  const Menubar = React.forwardRef<
    React.ElementRef<typeof MenubarPrimitive.Root>,
 @@ -23,7 +43,7 @@
@@ -1090,12 +1090,12 @@ DETAILED DIFFS
 +++ wedges/ui/navigation-menu.tsx	wedges
 @@ -41,7 +41,7 @@
  const NavigationMenuItem = NavigationMenuPrimitive.Item;
- 
+
  const navigationMenuTriggerStyle = cva(
 -  "group inline-flex h-10 w-max items-center justify-center rounded-dft-md bg-dft-background px-4 py-2 text-sm font-medium transition-colors hover:bg-dft-accent hover:text-dft-accent-foreground focus:bg-dft-accent focus:text-dft-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-dft-accent/50 data-[state=open]:bg-dft-accent/50"
 +  "group inline-flex h-9 w-max items-center justify-center rounded-wedges-md bg-wedges-background px-4 py-2 text-sm font-medium transition-colors hover:bg-wedges-accent hover:text-wedges-accent-foreground focus:bg-wedges-accent focus:text-wedges-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-wedges-accent/50 data-[state=open]:bg-wedges-accent/50"
  );
- 
+
  const NavigationMenuTrigger = React.forwardRef<
 @@ -86,7 +86,7 @@
    <div className={cn("absolute left-0 top-full flex justify-center")}>
@@ -1127,8 +1127,8 @@ DETAILED DIFFS
    ButtonProps,
    buttonVariants,
 -} from "@/registry/bases/base/default/ui/button";
-+} from "@/registry/bases/base/wedges/ui/button";
- 
++} from "@/registry/bases/base/linear/ui/button";
+
  const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
    <nav
 
@@ -1313,7 +1313,7 @@ DETAILED DIFFS
 +++ wedges/ui/sheet.tsx	wedges
 @@ -31,16 +31,16 @@
  SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
- 
+
  const sheetVariants = cva(
 -  "fixed z-50 gap-4 bg-dft-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
 +  "fixed z-50 gap-4 bg-wedges-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
@@ -1368,7 +1368,7 @@ DETAILED DIFFS
 --- default/ui/sidebar.tsx	default
 +++ wedges/ui/sidebar.tsx	wedges
 @@ -7,17 +7,17 @@
- 
+
  import { useIsMobile } from "@/hooks/use-mobile";
  import { cn } from "@/lib/utils";
 -import { Button } from "@/registry/bases/base/default/ui/button";
@@ -1376,19 +1376,19 @@ DETAILED DIFFS
 -import { Separator } from "@/registry/bases/base/default/ui/separator";
 -import { Sheet, SheetContent } from "@/registry/bases/base/default/ui/sheet";
 -import { Skeleton } from "@/registry/bases/base/default/ui/skeleton";
-+import { Button } from "@/registry/bases/base/wedges/ui/button";
-+import { Input } from "@/registry/bases/base/wedges/ui/input";
-+import { Separator } from "@/registry/bases/base/wedges/ui/separator";
-+import { Sheet, SheetContent } from "@/registry/bases/base/wedges/ui/sheet";
-+import { Skeleton } from "@/registry/bases/base/wedges/ui/skeleton";
++import { Button } from "@/registry/bases/base/linear/ui/button";
++import { Input } from "@/registry/bases/base/linear/ui/input";
++import { Separator } from "@/registry/bases/base/linear/ui/separator";
++import { Sheet, SheetContent } from "@/registry/bases/base/linear/ui/sheet";
++import { Skeleton } from "@/registry/bases/base/linear/ui/skeleton";
  import {
    Tooltip,
    TooltipContent,
    TooltipProvider,
    TooltipTrigger,
 -} from "@/registry/bases/base/default/ui/tooltip";
-+} from "@/registry/bases/base/wedges/ui/tooltip";
- 
++} from "@/registry/bases/base/linear/ui/tooltip";
+
  const SIDEBAR_COOKIE_NAME = "sidebar:state";
  const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 @@ -141,7 +141,7 @@
@@ -1496,7 +1496,7 @@ DETAILED DIFFS
          "group-data-[collapsible=icon]:hidden",
 @@ -512,19 +512,19 @@
  SidebarMenuItem.displayName = "SidebarMenuItem";
- 
+
  const sidebarMenuButtonVariants = cva(
 -  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-dft-md p-2 text-left text-sm outline-none ring-dft-sidebar-ring transition-[width,height,padding] hover:bg-dft-sidebar-accent hover:text-dft-sidebar-accent-foreground focus-visible:ring-2 active:bg-dft-sidebar-accent active:text-dft-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-dft-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-dft-sidebar-accent-foreground data-[state=open]:hover:bg-dft-sidebar-accent data-[state=open]:hover:text-dft-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
 +  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-wedges-md p-2 text-left text-sm outline-none ring-wedges-sidebar-ring transition-[width,height,padding] hover:bg-wedges-sidebar-accent hover:text-wedges-sidebar-accent-foreground focus-visible:ring-2 active:bg-wedges-sidebar-accent active:text-wedges-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-wedges-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-wedges-sidebar-accent-foreground data-[state=open]:hover:bg-wedges-sidebar-accent data-[state=open]:hover:text-wedges-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-wedges-muted-foreground",
@@ -1786,11 +1786,11 @@ DETAILED DIFFS
 +++ wedges/ui/toggle-group.tsx	wedges
 @@ -5,7 +5,7 @@
  import * as React from "react";
- 
+
  import { cn } from "@/lib/utils";
 -import { toggleVariants } from "@/registry/bases/base/default/ui/toggle";
-+import { toggleVariants } from "@/registry/bases/base/wedges/ui/toggle";
- 
++import { toggleVariants } from "@/registry/bases/base/linear/ui/toggle";
+
  const ToggleGroupContext = React.createContext<
    VariantProps<typeof toggleVariants>
 
@@ -1802,7 +1802,7 @@ DETAILED DIFFS
 +++ wedges/ui/toggle.tsx	wedges
 @@ -7,18 +7,18 @@
  import { cn } from "@/lib/utils";
- 
+
  const toggleVariants = cva(
 -  "inline-flex items-center justify-center rounded-dft-md text-sm font-medium ring-offset-dft-background transition-colors hover:bg-dft-muted hover:text-dft-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dft-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-dft-accent data-[state=on]:text-dft-accent-foreground [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 gap-2",
 +  "inline-flex items-center justify-center rounded-wedges-md text-sm font-medium ring-offset-wedges-background transition-colors hover:bg-wedges-muted hover:text-wedges-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wedges-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-wedges-accent data-[state=on]:text-wedges-accent-foreground [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 gap-2",
@@ -1850,7 +1850,7 @@ DETAILED DIFFS
 @@ -26,7 +26,7 @@
    variant?: `${FontSize}/${FontWeight}`;
  }
- 
+
 -const typographyVariants = cva("font-normal  text-dft-foreground", {
 +const typographyVariants = cva("font-normal  text-wedges-foreground", {
    variants: {
@@ -1928,21 +1928,21 @@ Change #1: MODIFIED
 
   Baseline context:
        4 | import * as React from "react";
-       5 | 
+       5 |
        6 | import { cn } from "@/lib/utils";
   -    7 | import { buttonVariants } from "@/registry/bases/base/default/ui/button";
-       8 | 
+       8 |
        9 | const AlertDialog = AlertDialogPrimitive.Root;
-      10 | 
+      10 |
 
   Styled context:
        4 | import * as React from "react";
-       5 | 
+       5 |
        6 | import { cn } from "@/lib/utils";
-  +    7 | import { buttonVariants } from "@/registry/bases/base/wedges/ui/button";
-       8 | 
+  +    7 | import { buttonVariants } from "@/registry/bases/base/linear/ui/button";
+       8 |
        9 | const AlertDialog = AlertDialogPrimitive.Root;
-      10 | 
+      10 |
 
   Token summary:
     REMOVED default
@@ -2012,7 +2012,7 @@ Change #1: MODIFIED
 
   Baseline context:
        4 | import { cn } from "@/lib/utils";
-       5 | 
+       5 |
        6 | const alertVariants = cva(
   -    7 |   "relative w-full rounded-dft-lg border border-dft-border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-dft-foreground",
        8 |   {
@@ -2021,7 +2021,7 @@ Change #1: MODIFIED
 
   Styled context:
        4 | import { cn } from "@/lib/utils";
-       5 | 
+       5 |
        6 | const alertVariants = cva(
   +    7 |   "relative w-full rounded-wedges-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-wedges-foreground",
        8 |   {
@@ -2155,7 +2155,7 @@ Change #1: MODIFIED
 
   Baseline context:
        4 | import { cn } from "@/lib/utils";
-       5 | 
+       5 |
        6 | const badgeVariants = cva(
   -    7 |   "inline-flex items-center rounded-full border border-dft-border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-dft-ring focus:ring-offset-2",
        8 |   {
@@ -2164,7 +2164,7 @@ Change #1: MODIFIED
 
   Styled context:
        4 | import { cn } from "@/lib/utils";
-       5 | 
+       5 |
        6 | const badgeVariants = cva(
   +    7 |   "inline-flex items-center rounded-wedges-md px-2.5 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-wedges-ring focus:ring-offset-2",
        8 |   {
@@ -2383,7 +2383,7 @@ Change #1: MODIFIED
 
   Baseline context:
        5 | import { cn } from "@/lib/utils";
-       6 | 
+       6 |
        7 | const buttonVariants = cva(
   -    8 |   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-dft-md text-sm font-medium ring-offset-dft-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dft-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
        9 |   {
@@ -2392,7 +2392,7 @@ Change #1: MODIFIED
 
   Styled context:
        5 | import { cn } from "@/lib/utils";
-       6 | 
+       6 |
        7 | const buttonVariants = cva(
   +    8 |   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-wedges-md text-sm font-medium transition-colors ring-offset-1 ring-offset-wedges-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wedges-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
        9 |   {
@@ -2589,9 +2589,9 @@ Change #7: REMOVED
       54 |     );
       55 |   }
       56 | );
-  -   57 | 
+  -   57 |
       58 | Button.displayName = "Button";
-      59 | 
+      59 |
       60 | export { Button, buttonVariants };
 
   Styled context:
@@ -2600,7 +2600,7 @@ Change #7: REMOVED
       55 |   }
   +   56 | );
       57 | Button.displayName = "Button";
-      58 | 
+      58 |
       59 | export { Button, buttonVariants };
 
   Token summary:
@@ -2613,21 +2613,21 @@ Change #1: MODIFIED
 
   Baseline context:
        5 | import { DayPicker } from "react-day-picker";
-       6 | 
+       6 |
        7 | import { cn } from "@/lib/utils";
   -    8 | import { buttonVariants } from "@/registry/bases/base/default/ui/button";
-       9 | 
+       9 |
       10 | export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-      11 | 
+      11 |
 
   Styled context:
        5 | import { DayPicker } from "react-day-picker";
-       6 | 
+       6 |
        7 | import { cn } from "@/lib/utils";
-  +    8 | import { buttonVariants } from "@/registry/bases/base/wedges/ui/button";
-       9 | 
+  +    8 | import { buttonVariants } from "@/registry/bases/base/linear/ui/button";
+       9 |
       10 | export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-      11 | 
+      11 |
 
   Token summary:
     REMOVED default
@@ -2852,19 +2852,19 @@ Change #1: MODIFIED
 
   Baseline context:
        7 | import * as React from "react";
-       8 | 
+       8 |
        9 | import { cn } from "@/lib/utils";
   -   10 | import { Button } from "@/registry/bases/base/default/ui/button";
-      11 | 
+      11 |
       12 | type CarouselApi = UseEmblaCarouselType[1];
       13 | type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 
   Styled context:
        7 | import * as React from "react";
-       8 | 
+       8 |
        9 | import { cn } from "@/lib/utils";
-  +   10 | import { Button } from "@/registry/bases/base/wedges/ui/button";
-      11 | 
+  +   10 | import { Button } from "@/registry/bases/base/linear/ui/button";
+      11 |
       12 | type CarouselApi = UseEmblaCarouselType[1];
       13 | type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 
@@ -3108,7 +3108,7 @@ Change #2: ADDED
   -   26 |   </CheckboxPrimitive.Root>
       27 | ));
       28 | Checkbox.displayName = CheckboxPrimitive.Root.displayName;
-      29 | 
+      29 |
 
   Styled context:
       24 |       <Check className="h-4 w-4" />
@@ -3117,7 +3117,7 @@ Change #2: ADDED
   +   27 |   // </div>
       28 | ));
       29 | Checkbox.displayName = CheckboxPrimitive.Root.displayName;
-      30 | 
+      30 |
 
   Token summary:
     ADDED   /
@@ -3133,19 +3133,19 @@ Change #1: MODIFIED
 
   Baseline context:
        6 | import * as React from "react";
-       7 | 
+       7 |
        8 | import { cn } from "@/lib/utils";
   -    9 | import { Dialog, DialogContent } from "@/registry/bases/base/default/ui/dialog";
-      10 | 
+      10 |
       11 | const Command = React.forwardRef<
       12 |   React.ElementRef<typeof CommandPrimitive>,
 
   Styled context:
        6 | import * as React from "react";
-       7 | 
+       7 |
        8 | import { cn } from "@/lib/utils";
-  +    9 | import { Dialog, DialogContent } from "@/registry/bases/base/wedges/ui/dialog";
-      10 | 
+  +    9 | import { Dialog, DialogContent } from "@/registry/bases/base/linear/ui/dialog";
+      10 |
       11 | const Command = React.forwardRef<
       12 |   React.ElementRef<typeof CommandPrimitive>,
 
@@ -3678,7 +3678,7 @@ Change #1: MODIFIED
       17 |   TableHeader,
       18 |   TableRow,
   -   19 | } from "@/registry/bases/base/default/ui/table";
-      20 | 
+      20 |
       21 | interface DataTableProps<TData extends RowData> {
       22 |   columns: any[];
 
@@ -3686,8 +3686,8 @@ Change #1: MODIFIED
       16 |   TableHead,
       17 |   TableHeader,
       18 |   TableRow,
-  +   19 | } from "@/registry/bases/base/wedges/ui/table";
-      20 | 
+  +   19 | } from "@/registry/bases/base/linear/ui/table";
+      20 |
       21 | interface DataTableProps<TData extends RowData> {
       22 |   columns: any[];
 
@@ -3701,7 +3701,7 @@ Change #2: MODIFIED
 
   Baseline context:
       38 |   });
-      39 | 
+      39 |
       40 |   return (
   -   41 |     <div className="rounded-dft-md border-dft-border border">
       42 |       <Table>
@@ -3710,7 +3710,7 @@ Change #2: MODIFIED
 
   Styled context:
       38 |   });
-      39 | 
+      39 |
       40 |   return (
   +   41 |     <div className="rounded-wedges-md border-wedges-border border">
       42 |       <Table>
@@ -4184,21 +4184,21 @@ Change #1: MODIFIED
 
   Baseline context:
       13 | } from "react-hook-form";
-      14 | 
+      14 |
       15 | import { cn } from "@/lib/utils";
   -   16 | import { Label } from "@/registry/bases/base/default/ui/label";
-      17 | 
+      17 |
       18 | const Form = FormProvider;
-      19 | 
+      19 |
 
   Styled context:
       13 | } from "react-hook-form";
-      14 | 
+      14 |
       15 | import { cn } from "@/lib/utils";
-  +   16 | import { Label } from "@/registry/bases/base/wedges/ui/label";
-      17 | 
+  +   16 | import { Label } from "@/registry/bases/base/linear/ui/label";
+      17 |
       18 | const Form = FormProvider;
-      19 | 
+      19 |
 
   Token summary:
     REMOVED default
@@ -4441,24 +4441,24 @@ Change #1: MODIFIED
   Styled lines:   9–13
 
   Baseline context:
-       6 | 
+       6 |
        7 | import { cn } from "@/lib/utils";
-       8 | 
+       8 |
   -    9 | const MenubarMenu = MenubarPrimitive.Menu;
-      10 | 
+      10 |
       11 | const MenubarGroup = MenubarPrimitive.Group;
-      12 | 
+      12 |
 
   Styled context:
-       6 | 
+       6 |
        7 | import { cn } from "@/lib/utils";
-       8 | 
+       8 |
   +    9 | function MenubarMenu({
   +   10 |   ...props
   +   11 | }: React.ComponentProps<typeof MenubarPrimitive.Menu>) {
   +   12 |   return <MenubarPrimitive.Menu {...props} />;
   +   13 | }
-      14 | 
+      14 |
       15 | function MenubarGroup({
       16 |   ...props
 
@@ -4488,24 +4488,24 @@ Change #2: MODIFIED
   Styled lines:   15–19
 
   Baseline context:
-       8 | 
+       8 |
        9 | const MenubarMenu = MenubarPrimitive.Menu;
-      10 | 
+      10 |
   -   11 | const MenubarGroup = MenubarPrimitive.Group;
-      12 | 
+      12 |
       13 | const MenubarPortal = MenubarPrimitive.Portal;
-      14 | 
+      14 |
 
   Styled context:
       12 |   return <MenubarPrimitive.Menu {...props} />;
       13 | }
-      14 | 
+      14 |
   +   15 | function MenubarGroup({
   +   16 |   ...props
   +   17 | }: React.ComponentProps<typeof MenubarPrimitive.Group>) {
   +   18 |   return <MenubarPrimitive.Group {...props} />;
   +   19 | }
-      20 | 
+      20 |
       21 | function MenubarPortal({
       22 |   ...props
 
@@ -4535,24 +4535,24 @@ Change #3: MODIFIED
   Styled lines:   21–25
 
   Baseline context:
-      10 | 
+      10 |
       11 | const MenubarGroup = MenubarPrimitive.Group;
-      12 | 
+      12 |
   -   13 | const MenubarPortal = MenubarPrimitive.Portal;
-      14 | 
+      14 |
       15 | const MenubarSub = MenubarPrimitive.Sub;
-      16 | 
+      16 |
 
   Styled context:
       18 |   return <MenubarPrimitive.Group {...props} />;
       19 | }
-      20 | 
+      20 |
   +   21 | function MenubarPortal({
   +   22 |   ...props
   +   23 | }: React.ComponentProps<typeof MenubarPrimitive.Portal>) {
   +   24 |   return <MenubarPrimitive.Portal {...props} />;
   +   25 | }
-      26 | 
+      26 |
       27 | function MenubarRadioGroup({
       28 |   ...props
 
@@ -4582,24 +4582,24 @@ Change #4: MODIFIED
   Styled lines:   27–31
 
   Baseline context:
-      12 | 
+      12 |
       13 | const MenubarPortal = MenubarPrimitive.Portal;
-      14 | 
+      14 |
   -   15 | const MenubarSub = MenubarPrimitive.Sub;
-      16 | 
+      16 |
       17 | const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
-      18 | 
+      18 |
 
   Styled context:
       24 |   return <MenubarPrimitive.Portal {...props} />;
       25 | }
-      26 | 
+      26 |
   +   27 | function MenubarRadioGroup({
   +   28 |   ...props
   +   29 | }: React.ComponentProps<typeof MenubarPrimitive.RadioGroup>) {
   +   30 |   return <MenubarPrimitive.RadioGroup {...props} />;
   +   31 | }
-      32 | 
+      32 |
       33 | function MenubarSub({
       34 |   ...props
 
@@ -4632,24 +4632,24 @@ Change #5: MODIFIED
   Styled lines:   33–37
 
   Baseline context:
-      14 | 
+      14 |
       15 | const MenubarSub = MenubarPrimitive.Sub;
-      16 | 
+      16 |
   -   17 | const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
-      18 | 
+      18 |
       19 | const Menubar = React.forwardRef<
       20 |   React.ElementRef<typeof MenubarPrimitive.Root>,
 
   Styled context:
       30 |   return <MenubarPrimitive.RadioGroup {...props} />;
       31 | }
-      32 | 
+      32 |
   +   33 | function MenubarSub({
   +   34 |   ...props
   +   35 | }: React.ComponentProps<typeof MenubarPrimitive.Sub>) {
   +   36 |   return <MenubarPrimitive.Sub data-slot="menubar-sub" {...props} />;
   +   37 | }
-      38 | 
+      38 |
       39 | const Menubar = React.forwardRef<
       40 |   React.ElementRef<typeof MenubarPrimitive.Root>,
 
@@ -5047,20 +5047,20 @@ Change #1: MODIFIED
 
   Baseline context:
       41 | const NavigationMenuItem = NavigationMenuPrimitive.Item;
-      42 | 
+      42 |
       43 | const navigationMenuTriggerStyle = cva(
   -   44 |   "group inline-flex h-10 w-max items-center justify-center rounded-dft-md bg-dft-background px-4 py-2 text-sm font-medium transition-colors hover:bg-dft-accent hover:text-dft-accent-foreground focus:bg-dft-accent focus:text-dft-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-dft-accent/50 data-[state=open]:bg-dft-accent/50"
       45 | );
-      46 | 
+      46 |
       47 | const NavigationMenuTrigger = React.forwardRef<
 
   Styled context:
       41 | const NavigationMenuItem = NavigationMenuPrimitive.Item;
-      42 | 
+      42 |
       43 | const navigationMenuTriggerStyle = cva(
   +   44 |   "group inline-flex h-9 w-max items-center justify-center rounded-wedges-md bg-wedges-background px-4 py-2 text-sm font-medium transition-colors hover:bg-wedges-accent hover:text-wedges-accent-foreground focus:bg-wedges-accent focus:text-wedges-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-wedges-accent/50 data-[state=open]:bg-wedges-accent/50"
       45 | );
-      46 | 
+      46 |
       47 | const NavigationMenuTrigger = React.forwardRef<
 
   Token summary:
@@ -5145,7 +5145,7 @@ Change #1: MODIFIED
        6 |   ButtonProps,
        7 |   buttonVariants,
   -    8 | } from "@/registry/bases/base/default/ui/button";
-       9 | 
+       9 |
       10 | const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
       11 |   <nav
 
@@ -5153,8 +5153,8 @@ Change #1: MODIFIED
        5 | import {
        6 |   ButtonProps,
        7 |   buttonVariants,
-  +    8 | } from "@/registry/bases/base/wedges/ui/button";
-       9 | 
+  +    8 | } from "@/registry/bases/base/linear/ui/button";
+       9 |
       10 | const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
       11 |   <nav
 
@@ -5355,7 +5355,7 @@ Change #3: ADDED
   -   40 |   );
       41 | });
       42 | RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName;
-      43 | 
+      43 |
 
   Styled context:
       38 |         <Circle className="h-2 w-2 fill-current text-current" />
@@ -5656,7 +5656,7 @@ Change #1: MODIFIED
 
   Baseline context:
       31 | SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
-      32 | 
+      32 |
       33 | const sheetVariants = cva(
   -   34 |   "fixed z-50 gap-4 bg-dft-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
       35 |   {
@@ -5665,7 +5665,7 @@ Change #1: MODIFIED
 
   Styled context:
       31 | SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
-      32 | 
+      32 |
       33 | const sheetVariants = cva(
   +   34 |   "fixed z-50 gap-4 bg-wedges-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
       35 |   {
@@ -5845,7 +5845,7 @@ Change #1: MODIFIED
   Styled lines:   10–14
 
   Baseline context:
-       7 | 
+       7 |
        8 | import { useIsMobile } from "@/hooks/use-mobile";
        9 | import { cn } from "@/lib/utils";
   -   10 | import { Button } from "@/registry/bases/base/default/ui/button";
@@ -5858,14 +5858,14 @@ Change #1: MODIFIED
       17 |   TooltipContent,
 
   Styled context:
-       7 | 
+       7 |
        8 | import { useIsMobile } from "@/hooks/use-mobile";
        9 | import { cn } from "@/lib/utils";
-  +   10 | import { Button } from "@/registry/bases/base/wedges/ui/button";
-  +   11 | import { Input } from "@/registry/bases/base/wedges/ui/input";
-  +   12 | import { Separator } from "@/registry/bases/base/wedges/ui/separator";
-  +   13 | import { Sheet, SheetContent } from "@/registry/bases/base/wedges/ui/sheet";
-  +   14 | import { Skeleton } from "@/registry/bases/base/wedges/ui/skeleton";
+  +   10 | import { Button } from "@/registry/bases/base/linear/ui/button";
+  +   11 | import { Input } from "@/registry/bases/base/linear/ui/input";
+  +   12 | import { Separator } from "@/registry/bases/base/linear/ui/separator";
+  +   13 | import { Sheet, SheetContent } from "@/registry/bases/base/linear/ui/sheet";
+  +   14 | import { Skeleton } from "@/registry/bases/base/linear/ui/skeleton";
       15 | import {
       16 |   Tooltip,
       17 |   TooltipContent,
@@ -5883,7 +5883,7 @@ Change #2: MODIFIED
       18 |   TooltipProvider,
       19 |   TooltipTrigger,
   -   20 | } from "@/registry/bases/base/default/ui/tooltip";
-      21 | 
+      21 |
       22 | const SIDEBAR_COOKIE_NAME = "sidebar:state";
       23 | const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 
@@ -5891,8 +5891,8 @@ Change #2: MODIFIED
       17 |   TooltipContent,
       18 |   TooltipProvider,
       19 |   TooltipTrigger,
-  +   20 | } from "@/registry/bases/base/wedges/ui/tooltip";
-      21 | 
+  +   20 | } from "@/registry/bases/base/linear/ui/tooltip";
+      21 |
       22 | const SIDEBAR_COOKIE_NAME = "sidebar:state";
       23 | const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 
@@ -6240,7 +6240,7 @@ Change #15: MODIFIED
 
   Baseline context:
      512 | SidebarMenuItem.displayName = "SidebarMenuItem";
-     513 | 
+     513 |
      514 | const sidebarMenuButtonVariants = cva(
   -  515 |   "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-dft-md p-2 text-left text-sm outline-none ring-dft-sidebar-ring transition-[width,height,padding] hover:bg-dft-sidebar-accent hover:text-dft-sidebar-accent-foreground focus-visible:ring-2 active:bg-dft-sidebar-accent active:text-dft-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-dft-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-dft-sidebar-accent-foreground data-[state=open]:hover:bg-dft-sidebar-accent data-[state=open]:hover:text-dft-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
      516 |   {
@@ -6249,7 +6249,7 @@ Change #15: MODIFIED
 
   Styled context:
      512 | SidebarMenuItem.displayName = "SidebarMenuItem";
-     513 | 
+     513 |
      514 | const sidebarMenuButtonVariants = cva(
   +  515 |   "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-wedges-md p-2 text-left text-sm outline-none ring-wedges-sidebar-ring transition-[width,height,padding] hover:bg-wedges-sidebar-accent hover:text-wedges-sidebar-accent-foreground focus-visible:ring-2 active:bg-wedges-sidebar-accent active:text-wedges-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-wedges-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-wedges-sidebar-accent-foreground data-[state=open]:hover:bg-wedges-sidebar-accent data-[state=open]:hover:text-wedges-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-wedges-muted-foreground",
      516 |   {
@@ -7153,19 +7153,19 @@ Change #1: MODIFIED
 
   Baseline context:
        5 | import * as React from "react";
-       6 | 
+       6 |
        7 | import { cn } from "@/lib/utils";
   -    8 | import { toggleVariants } from "@/registry/bases/base/default/ui/toggle";
-       9 | 
+       9 |
       10 | const ToggleGroupContext = React.createContext<
       11 |   VariantProps<typeof toggleVariants>
 
   Styled context:
        5 | import * as React from "react";
-       6 | 
+       6 |
        7 | import { cn } from "@/lib/utils";
-  +    8 | import { toggleVariants } from "@/registry/bases/base/wedges/ui/toggle";
-       9 | 
+  +    8 | import { toggleVariants } from "@/registry/bases/base/linear/ui/toggle";
+       9 |
       10 | const ToggleGroupContext = React.createContext<
       11 |   VariantProps<typeof toggleVariants>
 
@@ -7181,7 +7181,7 @@ Change #1: MODIFIED
 
   Baseline context:
        7 | import { cn } from "@/lib/utils";
-       8 | 
+       8 |
        9 | const toggleVariants = cva(
   -   10 |   "inline-flex items-center justify-center rounded-dft-md text-sm font-medium ring-offset-dft-background transition-colors hover:bg-dft-muted hover:text-dft-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dft-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-dft-accent data-[state=on]:text-dft-accent-foreground [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 gap-2",
       11 |   {
@@ -7190,7 +7190,7 @@ Change #1: MODIFIED
 
   Styled context:
        7 | import { cn } from "@/lib/utils";
-       8 | 
+       8 |
        9 | const toggleVariants = cva(
   +   10 |   "inline-flex items-center justify-center rounded-wedges-md text-sm font-medium ring-offset-wedges-background transition-colors hover:bg-wedges-muted hover:text-wedges-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wedges-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-wedges-accent data-[state=on]:text-wedges-accent-foreground [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 gap-2",
       11 |   {
@@ -7323,7 +7323,7 @@ Change #1: MODIFIED
   Baseline context:
       26 |   variant?: `${FontSize}/${FontWeight}`;
       27 | }
-      28 | 
+      28 |
   -   29 | const typographyVariants = cva("font-normal  text-dft-foreground", {
       30 |   variants: {
       31 |     variant: {
@@ -7332,7 +7332,7 @@ Change #1: MODIFIED
   Styled context:
       26 |   variant?: `${FontSize}/${FontWeight}`;
       27 | }
-      28 | 
+      28 |
   +   29 | const typographyVariants = cva("font-normal  text-wedges-foreground", {
       30 |   variants: {
       31 |     variant: {
@@ -7390,7 +7390,7 @@ Change #1: MODIFIED
   - [7] import { buttonVariants } from "@/registry/bases/base/default/ui/button";
 
   Updated lines:
-  + [7] import { buttonVariants } from "@/registry/bases/base/wedges/ui/button";
+  + [7] import { buttonVariants } from "@/registry/bases/base/linear/ui/button";
 
   Token changes:
   - default (line 7)
@@ -7794,7 +7794,7 @@ Change #7: REMOVED
   Styled lines:   —
 
   Original lines:
-  - [57] 
+  - [57]
 
   Updated lines:
   (none)
@@ -7812,7 +7812,7 @@ Change #1: MODIFIED
   - [8] import { buttonVariants } from "@/registry/bases/base/default/ui/button";
 
   Updated lines:
-  + [8] import { buttonVariants } from "@/registry/bases/base/wedges/ui/button";
+  + [8] import { buttonVariants } from "@/registry/bases/base/linear/ui/button";
 
   Token changes:
   - default (line 8)
@@ -7955,7 +7955,7 @@ Change #1: MODIFIED
   - [10] import { Button } from "@/registry/bases/base/default/ui/button";
 
   Updated lines:
-  + [10] import { Button } from "@/registry/bases/base/wedges/ui/button";
+  + [10] import { Button } from "@/registry/bases/base/linear/ui/button";
 
   Token changes:
   - default (line 10)
@@ -8128,7 +8128,7 @@ Change #1: MODIFIED
   - [9] import { Dialog, DialogContent } from "@/registry/bases/base/default/ui/dialog";
 
   Updated lines:
-  + [9] import { Dialog, DialogContent } from "@/registry/bases/base/wedges/ui/dialog";
+  + [9] import { Dialog, DialogContent } from "@/registry/bases/base/linear/ui/dialog";
 
   Token changes:
   - default (line 9)
@@ -8454,7 +8454,7 @@ Change #1: MODIFIED
   - [19] } from "@/registry/bases/base/default/ui/table";
 
   Updated lines:
-  + [19] } from "@/registry/bases/base/wedges/ui/table";
+  + [19] } from "@/registry/bases/base/linear/ui/table";
 
   Token changes:
   - default (line 19)
@@ -8759,7 +8759,7 @@ Change #1: MODIFIED
   - [16] import { Label } from "@/registry/bases/base/default/ui/label";
 
   Updated lines:
-  + [16] import { Label } from "@/registry/bases/base/wedges/ui/label";
+  + [16] import { Label } from "@/registry/bases/base/linear/ui/label";
 
   Token changes:
   - default (line 16)
@@ -9381,7 +9381,7 @@ Change #1: MODIFIED
   - [8] } from "@/registry/bases/base/default/ui/button";
 
   Updated lines:
-  + [8] } from "@/registry/bases/base/wedges/ui/button";
+  + [8] } from "@/registry/bases/base/linear/ui/button";
 
   Token changes:
   - default (line 8)
@@ -9813,11 +9813,11 @@ Change #1: MODIFIED
   - [14] import { Skeleton } from "@/registry/bases/base/default/ui/skeleton";
 
   Updated lines:
-  + [10] import { Button } from "@/registry/bases/base/wedges/ui/button";
-  + [11] import { Input } from "@/registry/bases/base/wedges/ui/input";
-  + [12] import { Separator } from "@/registry/bases/base/wedges/ui/separator";
-  + [13] import { Sheet, SheetContent } from "@/registry/bases/base/wedges/ui/sheet";
-  + [14] import { Skeleton } from "@/registry/bases/base/wedges/ui/skeleton";
+  + [10] import { Button } from "@/registry/bases/base/linear/ui/button";
+  + [11] import { Input } from "@/registry/bases/base/linear/ui/input";
+  + [12] import { Separator } from "@/registry/bases/base/linear/ui/separator";
+  + [13] import { Sheet, SheetContent } from "@/registry/bases/base/linear/ui/sheet";
+  + [14] import { Skeleton } from "@/registry/bases/base/linear/ui/skeleton";
 
   Token changes:
   - default (line 10, line 11, line 12, line 13, line 14)
@@ -9831,7 +9831,7 @@ Change #2: MODIFIED
   - [20] } from "@/registry/bases/base/default/ui/tooltip";
 
   Updated lines:
-  + [20] } from "@/registry/bases/base/wedges/ui/tooltip";
+  + [20] } from "@/registry/bases/base/linear/ui/tooltip";
 
   Token changes:
   - default (line 20)
@@ -10612,7 +10612,7 @@ Change #1: MODIFIED
   - [8] import { toggleVariants } from "@/registry/bases/base/default/ui/toggle";
 
   Updated lines:
-  + [8] import { toggleVariants } from "@/registry/bases/base/wedges/ui/toggle";
+  + [8] import { toggleVariants } from "@/registry/bases/base/linear/ui/toggle";
 
   Token changes:
   - default (line 8)

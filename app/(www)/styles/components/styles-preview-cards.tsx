@@ -7,7 +7,7 @@ import {
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Typography } from "@/components/ui/typography";
 import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
-import { STYLES, stylesDataList, useStyleStore } from "@/hooks/use-style-store";
+import { stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
 import { mainPaletteColorsKeys } from "@/registry/registry-palettes";
 import {
@@ -16,6 +16,7 @@ import {
 } from "@/registry/styles-components";
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
+import { STYLES } from "@/registry/styles";
 
 export function StylePreview({
   className,
@@ -50,17 +51,17 @@ export function StylesPreviews({ className }: { className?: string }) {
         className
       )}
     >
-      {STYLES.filter((s) => s !== "default" && s !== "material").map(
+      {STYLES.filter((s) => s.name !== "default" && s.name !== "material").map(
         (style, index) => {
-          const s = `--${getStyleVariablesPrefix(style)}-primary`;
-          const c = `--${getStyleVariablesPrefix(style)}`;
+          const s = `--${getStyleVariablesPrefix(style.name)}-primary`;
+          const c = `--${getStyleVariablesPrefix(style.name)}`;
           return (
             <StyleFontWrapper
               key={style + s + c + index}
               sStyle={style}
               className="group relative"
               style={{
-                borderRadius: getStyleRadius(style),
+                borderRadius: getStyleRadius(style.name),
               }}
             >
               {/* <div
@@ -76,11 +77,11 @@ export function StylesPreviews({ className }: { className?: string }) {
                       variant="3xl/medium"
                       className="tracking-tight capitalize"
                     >
-                      {style}{" "}
+                      {style.name}{" "}
                       <span className="text-2xl font-normal italic">Style</span>
                     </Typography>{" "}
                     <Link
-                      href={`/styles/${style}`}
+                      href={`/styles/${style.name}`}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`View ${style} style`}
@@ -94,7 +95,7 @@ export function StylesPreviews({ className }: { className?: string }) {
                   <div className="flex items-center gap-2">
                     <div className="inline-flex items-center gap-2">
                       <StyleCssWrapper
-                        key={style + index}
+                        key={style.name + index}
                         className="inline-flex"
                       >
                         <RichBadge
@@ -128,7 +129,7 @@ export function StylesPreviews({ className }: { className?: string }) {
                 <div className="relative">
                   <StylePageExamplePreview
                     id={pageExampleType || "dashboard"}
-                    styleProp={style}
+                    styleProp={style.name}
                     pageExampleTypeProp={pageExampleType || "dashboard"}
                     hideBadge={true}
                     className="overflow-auto"
@@ -155,12 +156,12 @@ export function StylesPreviewCards({ className }: { className?: string }) {
         className
       )}
     >
-      {STYLES.filter((s) => s !== "default" && s !== "material").map(
+      {STYLES.filter((s) => s.name !== "default" && s.name !== "material").map(
         (style, index) => {
-          const s = `--${getStyleVariablesPrefix(style)}-primary`;
-          const c = `--${getStyleVariablesPrefix(style)}`;
+          const s = `--${getStyleVariablesPrefix(style.name)}-primary`;
+          const c = `--${getStyleVariablesPrefix(style.name)}`;
           return (
-            <StyleCssWrapper key={style + index} className="reltative">
+            <StyleCssWrapper key={style.name + index} className="reltative">
               <StyleFontWrapper sStyle={style}>
                 <div className="to-accent group relative flex max-h-120 min-h-120 w-full flex-col gap-2 overflow-hidden border bg-linear-to-r from-transparent p-6">
                   <div className="z-20 flex w-full items-center justify-between">
@@ -169,7 +170,7 @@ export function StylesPreviewCards({ className }: { className?: string }) {
                         variant="3xl/medium"
                         className="tracking-tight capitalize"
                       >
-                        {style}{" "}
+                        {style.name}{" "}
                         <span className="text-2xl font-normal italic">
                           Style
                         </span>
@@ -189,7 +190,7 @@ export function StylesPreviewCards({ className }: { className?: string }) {
                     <div className="flex items-center gap-2">
                       <div className="inline-flex items-center gap-2">
                         <StyleCssWrapper
-                          key={style + index}
+                          key={style.name + index}
                           className="inline-flex"
                         >
                           <RichBadge
@@ -229,7 +230,7 @@ export function StylesPreviewCards({ className }: { className?: string }) {
                     ></div>
                     <StylePageExamplePreview
                       id={pageExampleType || "dashboard"}
-                      styleProp={style}
+                      styleProp={style.name}
                       pageExampleTypeProp={pageExampleType || "dashboard"}
                       hideBadge={true}
                       className="absolute top-0 left-0 z-20 rounded-none"
@@ -253,7 +254,7 @@ export function StylePreviewCard({ style }: { style: string }) {
 
   return (
     <StyleCssWrapper key={style} className="reltative rounded-xl">
-      <StyleFontWrapper sStyle={style}>
+      <StyleFontWrapper sStyle={style as any}>
         <div className="to-accent group relative flex max-h-120 min-h-120 w-full flex-col gap-2 overflow-hidden rounded-xl border bg-linear-to-r from-transparent p-6">
           <div className="z-20 flex w-full items-center justify-between">
             <div className="flex items-center gap-4">
@@ -391,7 +392,7 @@ export function StylesPagesExamplesPreviews() {
                 <div className="grid overflow-scroll p-4 py-0 lg:py-4 xl:col-span-5">
                   <StylePageExamplePreview
                     id="dashboard"
-                    styleProp={styleData.name}
+                    styleProp={styleData.name as any}
                     pageExampleTypeProp={pageExampleType || "dashboard"}
                     hideBadge={true}
                     className="overflow-auto"
@@ -415,18 +416,11 @@ export function StylesExamples() {
       {stylesDataList
         .filter((_styleData) => _styleData.name !== "default")
         .map((styleData, index) => {
-          // const baseTopSpace = 128;
-          // const baseDiffSpace = 96;
-          // const topStickySpace =
-          //   index === 0
-          //     ? baseTopSpace
-          //     : index * baseDiffSpace + baseTopSpace;
-          // const tClass = `top-[${topStickySpace}px]`;
           return (
             <StylePageExamplePreview
               key={styleData.title + styleData.name + index}
-              id="dashboard"
-              styleProp={styleData.name}
+              id={pageExampleType + styleData.title + styleData.name + index}
+              styleProp={styleData.name as any}
               pageExampleTypeProp={pageExampleType || "dashboard"}
               hideBadge={true}
               className={`sticky top-32 overflow-auto`}

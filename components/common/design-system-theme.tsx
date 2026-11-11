@@ -3,7 +3,7 @@
 import React, { ReactNode, useMemo } from "react";
 import { useTheme } from "next-themes";
 
-import { Style } from "@/hooks/use-style-store";
+import { StyleName } from "@/registry/styles";
 import { themePalettes } from "@/registry/registry-palettes";
 import { designSystemTokens } from "@/registry/bases/base/shared/design-system/design-system-tokens";
 import {
@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
 interface DesignSystemThemeProps {
   children: ReactNode;
-  style: Style;
+  style: StyleName;
   palette?: keyof typeof themePalettes;
   radius?: string;
   theme?: "light" | "dark";
