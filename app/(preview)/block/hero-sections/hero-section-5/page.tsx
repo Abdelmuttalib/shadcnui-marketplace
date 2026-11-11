@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/registry/bases/base/wedges/ui/button";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 export default function HeroSectionPage() {
   const appName = "Acme";

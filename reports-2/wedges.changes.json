@@ -650,7 +650,7 @@
       "addedLines": [
         {
           "lineNumber": 7,
-          "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";"
+          "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";"
         }
       ],
       "tokens": [
@@ -670,7 +670,7 @@
           "occurrences": [
             {
               "lineNumber": 7,
-              "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -2992,7 +2992,7 @@
       "addedLines": [
         {
           "lineNumber": 8,
-          "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";"
+          "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";"
         }
       ],
       "tokens": [
@@ -3012,7 +3012,7 @@
           "occurrences": [
             {
               "lineNumber": 8,
-              "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -3793,7 +3793,7 @@
       "addedLines": [
         {
           "lineNumber": 10,
-          "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";"
+          "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";"
         }
       ],
       "tokens": [
@@ -3813,7 +3813,7 @@
           "occurrences": [
             {
               "lineNumber": 10,
-              "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -4846,7 +4846,7 @@
       "addedLines": [
         {
           "lineNumber": 9,
-          "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/wedges/ui/dialog\";"
+          "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/linear/ui/dialog\";"
         }
       ],
       "tokens": [
@@ -4866,7 +4866,7 @@
           "occurrences": [
             {
               "lineNumber": 9,
-              "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/wedges/ui/dialog\";"
+              "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/linear/ui/dialog\";"
             }
           ]
         }
@@ -6746,7 +6746,7 @@
       "addedLines": [
         {
           "lineNumber": 19,
-          "content": "} from \"@/registry/bases/base/wedges/ui/table\";"
+          "content": "} from \"@/registry/bases/base/linear/ui/table\";"
         }
       ],
       "tokens": [
@@ -6766,7 +6766,7 @@
           "occurrences": [
             {
               "lineNumber": 19,
-              "content": "} from \"@/registry/bases/base/wedges/ui/table\";"
+              "content": "} from \"@/registry/bases/base/linear/ui/table\";"
             }
           ]
         }
@@ -8384,7 +8384,7 @@
       "addedLines": [
         {
           "lineNumber": 16,
-          "content": "import { Label } from \"@/registry/bases/base/wedges/ui/label\";"
+          "content": "import { Label } from \"@/registry/bases/base/linear/ui/label\";"
         }
       ],
       "tokens": [
@@ -8404,7 +8404,7 @@
           "occurrences": [
             {
               "lineNumber": 16,
-              "content": "import { Label } from \"@/registry/bases/base/wedges/ui/label\";"
+              "content": "import { Label } from \"@/registry/bases/base/linear/ui/label\";"
             }
           ]
         }
@@ -12644,7 +12644,7 @@
       "addedLines": [
         {
           "lineNumber": 8,
-          "content": "} from \"@/registry/bases/base/wedges/ui/button\";"
+          "content": "} from \"@/registry/bases/base/linear/ui/button\";"
         }
       ],
       "tokens": [
@@ -12664,7 +12664,7 @@
           "occurrences": [
             {
               "lineNumber": 8,
-              "content": "} from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "} from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -15062,23 +15062,23 @@
       "addedLines": [
         {
           "lineNumber": 10,
-          "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";"
+          "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";"
         },
         {
           "lineNumber": 11,
-          "content": "import { Input } from \"@/registry/bases/base/wedges/ui/input\";"
+          "content": "import { Input } from \"@/registry/bases/base/linear/ui/input\";"
         },
         {
           "lineNumber": 12,
-          "content": "import { Separator } from \"@/registry/bases/base/wedges/ui/separator\";"
+          "content": "import { Separator } from \"@/registry/bases/base/linear/ui/separator\";"
         },
         {
           "lineNumber": 13,
-          "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/wedges/ui/sheet\";"
+          "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/linear/ui/sheet\";"
         },
         {
           "lineNumber": 14,
-          "content": "import { Skeleton } from \"@/registry/bases/base/wedges/ui/skeleton\";"
+          "content": "import { Skeleton } from \"@/registry/bases/base/linear/ui/skeleton\";"
         }
       ],
       "tokens": [
@@ -15114,23 +15114,23 @@
           "occurrences": [
             {
               "lineNumber": 10,
-              "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";"
             },
             {
               "lineNumber": 11,
-              "content": "import { Input } from \"@/registry/bases/base/wedges/ui/input\";"
+              "content": "import { Input } from \"@/registry/bases/base/linear/ui/input\";"
             },
             {
               "lineNumber": 12,
-              "content": "import { Separator } from \"@/registry/bases/base/wedges/ui/separator\";"
+              "content": "import { Separator } from \"@/registry/bases/base/linear/ui/separator\";"
             },
             {
               "lineNumber": 13,
-              "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/wedges/ui/sheet\";"
+              "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/linear/ui/sheet\";"
             },
             {
               "lineNumber": 14,
-              "content": "import { Skeleton } from \"@/registry/bases/base/wedges/ui/skeleton\";"
+              "content": "import { Skeleton } from \"@/registry/bases/base/linear/ui/skeleton\";"
             }
           ]
         }
@@ -15169,7 +15169,7 @@
       "addedLines": [
         {
           "lineNumber": 20,
-          "content": "} from \"@/registry/bases/base/wedges/ui/tooltip\";"
+          "content": "} from \"@/registry/bases/base/linear/ui/tooltip\";"
         }
       ],
       "tokens": [
@@ -15189,7 +15189,7 @@
           "occurrences": [
             {
               "lineNumber": 20,
-              "content": "} from \"@/registry/bases/base/wedges/ui/tooltip\";"
+              "content": "} from \"@/registry/bases/base/linear/ui/tooltip\";"
             }
           ]
         }
@@ -19720,7 +19720,7 @@
       "addedLines": [
         {
           "lineNumber": 8,
-          "content": "import { toggleVariants } from \"@/registry/bases/base/wedges/ui/toggle\";"
+          "content": "import { toggleVariants } from \"@/registry/bases/base/linear/ui/toggle\";"
         }
       ],
       "tokens": [
@@ -19740,7 +19740,7 @@
           "occurrences": [
             {
               "lineNumber": 8,
-              "content": "import { toggleVariants } from \"@/registry/bases/base/wedges/ui/toggle\";"
+              "content": "import { toggleVariants } from \"@/registry/bases/base/linear/ui/toggle\";"
             }
           ]
         }
@@ -21725,7 +21725,7 @@
         },
         {
           "lineNumber": 7,
-          "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";",
+          "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";",
           "changed": true,
           "segments": [
             {
@@ -21845,7 +21845,7 @@
           "occurrences": [
             {
               "lineNumber": 7,
-              "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -32032,7 +32032,7 @@
         },
         {
           "lineNumber": 8,
-          "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";",
+          "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";",
           "changed": true,
           "segments": [
             {
@@ -32152,7 +32152,7 @@
           "occurrences": [
             {
               "lineNumber": 8,
-              "content": "import { buttonVariants } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { buttonVariants } from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -35445,7 +35445,7 @@
         },
         {
           "lineNumber": 10,
-          "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";",
+          "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";",
           "changed": true,
           "segments": [
             {
@@ -35565,7 +35565,7 @@
           "occurrences": [
             {
               "lineNumber": 10,
-              "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -40081,7 +40081,7 @@
         },
         {
           "lineNumber": 9,
-          "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/wedges/ui/dialog\";",
+          "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/linear/ui/dialog\";",
           "changed": true,
           "segments": [
             {
@@ -40201,7 +40201,7 @@
           "occurrences": [
             {
               "lineNumber": 9,
-              "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/wedges/ui/dialog\";"
+              "content": "import { Dialog, DialogContent } from \"@/registry/bases/base/linear/ui/dialog\";"
             }
           ]
         }
@@ -56941,7 +56941,7 @@
         },
         {
           "lineNumber": 19,
-          "content": "} from \"@/registry/bases/base/wedges/ui/table\";",
+          "content": "} from \"@/registry/bases/base/linear/ui/table\";",
           "changed": true,
           "segments": [
             {
@@ -57057,7 +57057,7 @@
           "occurrences": [
             {
               "lineNumber": 19,
-              "content": "} from \"@/registry/bases/base/wedges/ui/table\";"
+              "content": "} from \"@/registry/bases/base/linear/ui/table\";"
             }
           ]
         }
@@ -70790,7 +70790,7 @@
         },
         {
           "lineNumber": 16,
-          "content": "import { Label } from \"@/registry/bases/base/wedges/ui/label\";",
+          "content": "import { Label } from \"@/registry/bases/base/linear/ui/label\";",
           "changed": true,
           "segments": [
             {
@@ -70906,7 +70906,7 @@
           "occurrences": [
             {
               "lineNumber": 16,
-              "content": "import { Label } from \"@/registry/bases/base/wedges/ui/label\";"
+              "content": "import { Label } from \"@/registry/bases/base/linear/ui/label\";"
             }
           ]
         }
@@ -94447,7 +94447,7 @@
         },
         {
           "lineNumber": 8,
-          "content": "} from \"@/registry/bases/base/wedges/ui/button\";",
+          "content": "} from \"@/registry/bases/base/linear/ui/button\";",
           "changed": true,
           "segments": [
             {
@@ -94567,7 +94567,7 @@
           "occurrences": [
             {
               "lineNumber": 8,
-              "content": "} from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "} from \"@/registry/bases/base/linear/ui/button\";"
             }
           ]
         }
@@ -117065,7 +117065,7 @@
         },
         {
           "lineNumber": 10,
-          "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";",
+          "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";",
           "changed": true,
           "segments": [
             {
@@ -117128,7 +117128,7 @@
         },
         {
           "lineNumber": 11,
-          "content": "import { Input } from \"@/registry/bases/base/wedges/ui/input\";",
+          "content": "import { Input } from \"@/registry/bases/base/linear/ui/input\";",
           "changed": true,
           "segments": [
             {
@@ -117187,7 +117187,7 @@
         },
         {
           "lineNumber": 12,
-          "content": "import { Separator } from \"@/registry/bases/base/wedges/ui/separator\";",
+          "content": "import { Separator } from \"@/registry/bases/base/linear/ui/separator\";",
           "changed": true,
           "segments": [
             {
@@ -117262,7 +117262,7 @@
         },
         {
           "lineNumber": 13,
-          "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/wedges/ui/sheet\";",
+          "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/linear/ui/sheet\";",
           "changed": true,
           "segments": [
             {
@@ -117321,7 +117321,7 @@
         },
         {
           "lineNumber": 14,
-          "content": "import { Skeleton } from \"@/registry/bases/base/wedges/ui/skeleton\";",
+          "content": "import { Skeleton } from \"@/registry/bases/base/linear/ui/skeleton\";",
           "changed": true,
           "segments": [
             {
@@ -117465,23 +117465,23 @@
           "occurrences": [
             {
               "lineNumber": 10,
-              "content": "import { Button } from \"@/registry/bases/base/wedges/ui/button\";"
+              "content": "import { Button } from \"@/registry/bases/base/linear/ui/button\";"
             },
             {
               "lineNumber": 11,
-              "content": "import { Input } from \"@/registry/bases/base/wedges/ui/input\";"
+              "content": "import { Input } from \"@/registry/bases/base/linear/ui/input\";"
             },
             {
               "lineNumber": 12,
-              "content": "import { Separator } from \"@/registry/bases/base/wedges/ui/separator\";"
+              "content": "import { Separator } from \"@/registry/bases/base/linear/ui/separator\";"
             },
             {
               "lineNumber": 13,
-              "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/wedges/ui/sheet\";"
+              "content": "import { Sheet, SheetContent } from \"@/registry/bases/base/linear/ui/sheet\";"
             },
             {
               "lineNumber": 14,
-              "content": "import { Skeleton } from \"@/registry/bases/base/wedges/ui/skeleton\";"
+              "content": "import { Skeleton } from \"@/registry/bases/base/linear/ui/skeleton\";"
             }
           ]
         }
@@ -117674,7 +117674,7 @@
         },
         {
           "lineNumber": 20,
-          "content": "} from \"@/registry/bases/base/wedges/ui/tooltip\";",
+          "content": "} from \"@/registry/bases/base/linear/ui/tooltip\";",
           "changed": true,
           "segments": [
             {
@@ -117798,7 +117798,7 @@
           "occurrences": [
             {
               "lineNumber": 20,
-              "content": "} from \"@/registry/bases/base/wedges/ui/tooltip\";"
+              "content": "} from \"@/registry/bases/base/linear/ui/tooltip\";"
             }
           ]
         }
@@ -148700,7 +148700,7 @@
         },
         {
           "lineNumber": 8,
-          "content": "import { toggleVariants } from \"@/registry/bases/base/wedges/ui/toggle\";",
+          "content": "import { toggleVariants } from \"@/registry/bases/base/linear/ui/toggle\";",
           "changed": true,
           "segments": [
             {
@@ -148820,7 +148820,7 @@
           "occurrences": [
             {
               "lineNumber": 8,
-              "content": "import { toggleVariants } from \"@/registry/bases/base/wedges/ui/toggle\";"
+              "content": "import { toggleVariants } from \"@/registry/bases/base/linear/ui/toggle\";"
             }
           ]
         }

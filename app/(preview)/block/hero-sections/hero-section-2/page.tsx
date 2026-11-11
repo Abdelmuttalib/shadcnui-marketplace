@@ -1,8 +1,8 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import type React from "react";
 
-import { Button } from "@/registry/bases/base/wedges/ui/button";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 export default function HeroSection() {
   return (

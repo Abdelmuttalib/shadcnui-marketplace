@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 const footerSections = [
   {

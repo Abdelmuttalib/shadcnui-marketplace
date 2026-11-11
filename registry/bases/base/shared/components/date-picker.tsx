@@ -1,6 +1,6 @@
 import DatePickerWithRange from "@/registry/bases/base/wedges/components/date-picker-with-range";
-import { Card, CardContent } from "@/registry/bases/base/wedges/ui/card";
-import { Label } from "@/registry/bases/base/wedges/ui/label";
+import { Card, CardContent } from "@/registry/bases/base/linear/ui/card";
+import { Label } from "@/registry/bases/base/linear/ui/label";
 
 export function DemoDatePicker() {
   return (

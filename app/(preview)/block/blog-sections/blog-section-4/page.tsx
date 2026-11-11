@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-import { Badge } from "@/registry/bases/base/wedges/ui/badge";
-import { Card, CardContent } from "@/registry/bases/base/wedges/ui/card";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+import { Badge } from "@/registry/bases/base/linear/ui/badge";
+import { Card, CardContent } from "@/registry/bases/base/linear/ui/card";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 const blogPosts = [
   {

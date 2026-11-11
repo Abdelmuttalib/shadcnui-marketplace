@@ -4,9 +4,9 @@ import { Check, CheckCircle2 } from "lucide-react";
 import { ReactElement } from "react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/bases/base/wedges/ui/button";
-import { Separator } from "@/registry/bases/base/wedges/ui/separator";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Separator } from "@/registry/bases/base/linear/ui/separator";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 function Container({
   children,

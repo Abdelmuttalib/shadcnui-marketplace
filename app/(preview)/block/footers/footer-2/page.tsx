@@ -8,9 +8,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/registry/bases/base/wedges/ui/button";
-import { Input } from "@/registry/bases/base/wedges/ui/input";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+import { Button } from "@/registry/bases/base/linear/ui/button";
+import { Input } from "@/registry/bases/base/linear/ui/input";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 export default function FooterWithNewsletter() {
   return (

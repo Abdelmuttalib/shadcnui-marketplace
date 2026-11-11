@@ -3,13 +3,13 @@
 import { Check, MessageSquare, Sparkles, Users } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/bases/base/wedges/ui/button";
+import { Button } from "@/registry/bases/base/linear/ui/button";
 import {
   Card,
   CardContent,
   CardHeader,
-} from "@/registry/bases/base/wedges/ui/card";
-import { Typography } from "@/registry/bases/base/wedges/ui/typography";
+} from "@/registry/bases/base/linear/ui/card";
+import { Typography } from "@/registry/bases/base/linear/ui/typography";
 
 const pricingTiers = [
   {
