@@ -3,23 +3,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Avatar,
-  AvatarBadge,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarGroupCount,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/registry/bases/base/styles/default/ui/empty";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function AvatarExample() {
   return (
@@ -36,6 +21,7 @@ export default function AvatarExample() {
 }
 
 function AvatarSizes() {
+  const { Avatar, AvatarFallback, AvatarImage } = useDesignSystem();
   return (
     <Example title="Sizes">
       <div className="flex flex-wrap items-center gap-2">
@@ -68,6 +54,9 @@ function AvatarSizes() {
 }
 
 function AvatarWithBadge() {
+  const { Avatar, AvatarBadge, AvatarFallback, AvatarImage } =
+    useDesignSystem();
+
   return (
     <Example title="Badge">
       <div className="flex flex-wrap items-center gap-2">
@@ -115,6 +104,9 @@ function AvatarWithBadge() {
 }
 
 function AvatarWithBadgeIcon() {
+  const { Avatar, AvatarBadge, AvatarFallback, AvatarImage } =
+    useDesignSystem();
+
   return (
     <Example title="Badge with Icon">
       <div className="flex flex-wrap items-center gap-2">
@@ -210,6 +202,9 @@ function AvatarWithBadgeIcon() {
 }
 
 function AvatarGroupExample() {
+  const { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } =
+    useDesignSystem();
+
   return (
     <Example title="Group">
       <AvatarGroup>
@@ -277,6 +272,9 @@ function AvatarGroupExample() {
 }
 
 function AvatarGroupWithCount() {
+  const { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } =
+    useDesignSystem();
+
   return (
     <Example title="Group with Count">
       <AvatarGroup>
@@ -347,6 +345,9 @@ function AvatarGroupWithCount() {
 }
 
 function AvatarGroupWithIconCount() {
+  const { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } =
+    useDesignSystem();
+
   return (
     <Example title="Group with Icon Count">
       <AvatarGroup>
@@ -447,6 +448,21 @@ function AvatarGroupWithIconCount() {
 }
 
 function AvatarInEmpty() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarGroup,
+    AvatarGroupCount,
+    AvatarImage,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="In Empty">
       <Empty className="w-full flex-none border">

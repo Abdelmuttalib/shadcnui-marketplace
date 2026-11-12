@@ -7,11 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/registry/bases/base/styles/default/ui/resizable";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ResizableExample() {
   return (
@@ -26,6 +23,9 @@ export default function ResizableExample() {
 }
 
 function ResizableHorizontal() {
+  const { ResizableHandle, ResizablePanel, ResizablePanelGroup } =
+    useDesignSystem();
+
   return (
     <Example title="Horizontal">
       <ResizablePanelGroup
@@ -49,6 +49,9 @@ function ResizableHorizontal() {
 }
 
 function ResizableVertical() {
+  const { ResizableHandle, ResizablePanel, ResizablePanelGroup } =
+    useDesignSystem();
+
   return (
     <Example title="Vertical">
       <ResizablePanelGroup
@@ -72,6 +75,9 @@ function ResizableVertical() {
 }
 
 function ResizableWithHandle() {
+  const { ResizableHandle, ResizablePanel, ResizablePanelGroup } =
+    useDesignSystem();
+
   return (
     <Example title="With Handle">
       <ResizablePanelGroup
@@ -95,6 +101,9 @@ function ResizableWithHandle() {
 }
 
 function ResizableNested() {
+  const { ResizableHandle, ResizablePanel, ResizablePanelGroup } =
+    useDesignSystem();
+
   return (
     <Example title="Nested">
       <ResizablePanelGroup
@@ -129,6 +138,9 @@ function ResizableNested() {
 
 function ResizableControlled() {
   const [layout, setLayout] = React.useState<Layout>({});
+
+  const { ResizableHandle, ResizablePanel, ResizablePanelGroup } =
+    useDesignSystem();
 
   return (
     <Example title="Controlled">

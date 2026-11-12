@@ -8,21 +8,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Bubble,
-  BubbleContent,
-  BubbleGroup,
-  BubbleReactions,
-} from "@/registry/bases/base/styles/default/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Collapsible,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  Marker,
-  MarkerContent,
-} from "@/registry/bases/base/styles/default/ui/marker";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function BubbleExample() {
   return (
@@ -40,6 +27,8 @@ export default function BubbleExample() {
 }
 
 function BubbleVariants() {
+  const { Bubble, BubbleContent } = useDesignSystem();
+
   return (
     <Example title="Variants">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -96,6 +85,8 @@ Ghost bubbles are full width and can take the full width of the container.
 }
 
 function BubbleSizes() {
+  const { Bubble, BubbleContent } = useDesignSystem();
+
   return (
     <Example title="Sizes">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -124,6 +115,8 @@ function BubbleSizes() {
 }
 
 function BubbleGrouped() {
+  const { Bubble, BubbleContent, BubbleGroup } = useDesignSystem();
+
   return (
     <Example title="Grouped">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -167,6 +160,9 @@ function BubbleCollapsible() {
   const [open, setOpen] = React.useState(false);
   const isLong = text.length > previewLength;
   const preview = `${text.slice(0, previewLength)}...`;
+
+  const { Bubble, BubbleContent, Button, Collapsible, CollapsibleTrigger } =
+    useDesignSystem();
 
   return (
     <Example title="Collapsible">
@@ -216,6 +212,9 @@ Use this for content that needs the whole row.`}
 }
 
 function BubbleWithReactions() {
+  const { Bubble, BubbleContent, BubbleReactions, Marker, MarkerContent } =
+    useDesignSystem();
+
   return (
     <Example title="Reaction Placement">
       <div className="flex w-full max-w-md flex-col gap-12">
@@ -365,6 +364,8 @@ function BubbleWithReactions() {
 }
 
 function BubbleReactionsButtons() {
+  const { Bubble, BubbleContent, BubbleReactions, Button } = useDesignSystem();
+
   return (
     <Example title="Reactions Buttons">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -435,6 +436,8 @@ function BubbleReactionsButtons() {
 }
 
 function BubbleAlignment() {
+  const { Bubble, BubbleContent } = useDesignSystem();
+
   return (
     <Example title="Alignment">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -479,6 +482,9 @@ const quickReplies = [
 ];
 
 function BubbleButtonLinks() {
+  const { Bubble, BubbleContent, BubbleGroup, Marker, MarkerContent } =
+    useDesignSystem();
+
   return (
     <Example title="Button & Links">
       <div className="flex w-full max-w-md flex-col gap-8">

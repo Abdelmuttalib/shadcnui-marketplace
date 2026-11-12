@@ -6,7 +6,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SonnerExample() {
   return (
@@ -18,6 +18,8 @@ export default function SonnerExample() {
 }
 
 function SonnerBasic() {
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Basic" className="items-center justify-center">
       <Button
@@ -32,6 +34,8 @@ function SonnerBasic() {
 }
 
 function SonnerWithDescription() {
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="With Description" className="items-center justify-center">
       <Button

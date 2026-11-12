@@ -5,43 +5,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  ButtonGroup,
-  ButtonGroupText,
-} from "@/registry/bases/base/styles/default/ui/button-group";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import {
-  Field,
-  FieldGroup,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/styles/default/ui/tooltip";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ButtonGroupExample() {
   return (
@@ -68,6 +33,8 @@ export default function ButtonGroupExample() {
 }
 
 function ButtonGroupBasic() {
+  const { ButtonGroup, Button } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <div className="flex flex-col gap-4">
@@ -81,6 +48,8 @@ function ButtonGroupBasic() {
 }
 
 function ButtonGroupWithInput() {
+  const { ButtonGroup, Button, Input } = useDesignSystem();
+
   return (
     <Example title="With Input">
       <div className="flex flex-col gap-4">
@@ -98,6 +67,9 @@ function ButtonGroupWithInput() {
 }
 
 function ButtonGroupWithText() {
+  const { ButtonGroup, Button, ButtonGroupText, Input, Label } =
+    useDesignSystem();
+
   return (
     <Example title="With Text">
       <div className="flex flex-col gap-4">
@@ -121,6 +93,17 @@ function ButtonGroupWithText() {
 }
 
 function ButtonGroupWithDropdown() {
+  const {
+    Button,
+    ButtonGroup,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Dropdown">
       <div className="flex flex-col gap-4">
@@ -251,6 +234,20 @@ const currencyItems = [
 ];
 
 function ButtonGroupWithSelect() {
+  const {
+    Button,
+    ButtonGroup,
+    Field,
+    Input,
+    Label,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Select">
       <Field>
@@ -287,6 +284,8 @@ function ButtonGroupWithSelect() {
 }
 
 function ButtonGroupWithIcons() {
+  const { Button, ButtonGroup } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <div className="flex flex-col gap-4">
@@ -325,6 +324,8 @@ function ButtonGroupWithIcons() {
 }
 
 function ButtonGroupWithInputGroup() {
+  const { InputGroup, InputGroupAddon, InputGroupInput } = useDesignSystem();
+
   return (
     <Example title="With Input Group">
       <div className="flex flex-col gap-4">
@@ -349,6 +350,17 @@ function ButtonGroupWithInputGroup() {
 }
 
 function ButtonGroupWithFields() {
+  const {
+    Button,
+    ButtonGroup,
+    Field,
+    FieldGroup,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Label,
+  } = useDesignSystem();
+
   return (
     <Example title="With Fields">
       <FieldGroup className="grid grid-cols-3 gap-4">
@@ -393,6 +405,8 @@ function ButtonGroupWithFields() {
 }
 
 function ButtonGroupWithLike() {
+  const { Button, ButtonGroup } = useDesignSystem();
+
   return (
     <Example title="With Like">
       <ButtonGroup>
@@ -428,6 +442,17 @@ const durationItems = [
 ];
 
 function ButtonGroupWithSelectAndInput() {
+  const {
+    ButtonGroup,
+    Input,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Select and Input">
       <ButtonGroup>
@@ -452,6 +477,17 @@ function ButtonGroupWithSelectAndInput() {
 }
 
 function ButtonGroupNested() {
+  const {
+    Button,
+    ButtonGroup,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Nested">
       <ButtonGroup>
@@ -489,6 +525,8 @@ function ButtonGroupNested() {
 }
 
 function ButtonGroupPagination() {
+  const { Button, ButtonGroup } = useDesignSystem();
+
   return (
     <Example title="Pagination">
       <ButtonGroup>
@@ -535,6 +573,8 @@ function ButtonGroupPagination() {
 }
 
 function ButtonGroupPaginationSplit() {
+  const { Button, ButtonGroup } = useDesignSystem();
+
   return (
     <Example title="Pagination Split">
       <ButtonGroup>
@@ -581,6 +621,8 @@ function ButtonGroupPaginationSplit() {
 }
 
 function ButtonGroupNavigation() {
+  const { Button, ButtonGroup } = useDesignSystem();
+
   return (
     <Example title="Navigation">
       <ButtonGroup>
@@ -621,6 +663,8 @@ function ButtonGroupNavigation() {
 }
 
 function ButtonGroupTextAlignment() {
+  const { Button, ButtonGroup, Field, Label } = useDesignSystem();
+
   return (
     <Example title="Text Alignment">
       <Field>
@@ -645,6 +689,8 @@ function ButtonGroupTextAlignment() {
 }
 
 function ButtonGroupVertical() {
+  const { Button, ButtonGroup } = useDesignSystem();
+
   return (
     <Example title="Vertical">
       <div className="flex gap-6">
@@ -678,6 +724,8 @@ function ButtonGroupVertical() {
 }
 
 function ButtonGroupVerticalNested() {
+  const { Button, ButtonGroup } = useDesignSystem();
+
   return (
     <Example title="Vertical Nested">
       <ButtonGroup orientation="vertical" aria-label="Design tools palette">

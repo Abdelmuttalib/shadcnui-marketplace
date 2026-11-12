@@ -4,27 +4,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Field,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/registry/bases/base/styles/default/ui/pagination";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function PaginationExample() {
   return (
@@ -37,6 +18,16 @@ export default function PaginationExample() {
 }
 
 function PaginationBasic() {
+  const {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Pagination>
@@ -68,6 +59,9 @@ function PaginationBasic() {
 }
 
 function PaginationSimple() {
+  const { Pagination, PaginationContent, PaginationItem, PaginationLink } =
+    useDesignSystem();
+
   return (
     <Example title="Simple">
       <Pagination>
@@ -96,6 +90,22 @@ function PaginationSimple() {
 }
 
 function PaginationIconsOnly() {
+  const {
+    Field,
+    FieldLabel,
+    Pagination,
+    PaginationContent,
+    PaginationItem,
+    PaginationNext,
+    PaginationPrevious,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Select">
       <div className="flex items-center justify-between gap-4">

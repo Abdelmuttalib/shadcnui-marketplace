@@ -27,20 +27,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
+import { type ChartConfig } from "@/registry/bases/base/styles/default/ui/chart";
+import { useDesignSystem } from "../components/design-system-provider";
 
 const areaChartData = [
   { month: "January", desktop: 186 },
@@ -72,6 +60,18 @@ export default function ChartExample() {
 }
 
 function ChartAreaExample() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Area Chart">
       <Card className="w-full">
@@ -158,6 +158,18 @@ const barChartConfig = {
   },
 } satisfies ChartConfig;
 
+const {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} = useDesignSystem();
+
 function ChartBarExample() {
   return (
     <Example title="Bar Chart">
@@ -228,6 +240,18 @@ const lineChartConfig = {
 } satisfies ChartConfig;
 
 function ChartLineExample() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Line Chart">
       <Card className="w-full">
@@ -335,6 +359,18 @@ function ChartPieExample() {
     return pieChartData.reduce((acc, curr) => acc + curr.visitors, 0);
   }, []);
 
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Pie Chart">
       <Card className="w-full">
@@ -434,6 +470,18 @@ const radarChartConfig = {
 } satisfies ChartConfig;
 
 function ChartRadarExample() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Radar Chart">
       <Card className="w-full">
@@ -500,6 +548,16 @@ const radialChartConfig = {
 } satisfies ChartConfig;
 
 function ChartRadialExample() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+  } = useDesignSystem();
+
   return (
     <Example title="Radial Chart">
       <Card className="w-full">

@@ -8,15 +8,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/registry/bases/base/styles/default/ui/navigation-menu";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -65,6 +58,16 @@ export default function NavigationMenuExample() {
 }
 
 function NavigationMenuBasic() {
+  const {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <NavigationMenu>
@@ -155,6 +158,7 @@ function NavigationMenuBasic() {
           <NavigationMenuItem>
             <NavigationMenuLink
               render={<Link href="/docs" />}
+              // @ts-expect-error: dynamic module export
               className={navigationMenuTriggerStyle()}
             >
               Documentation
@@ -172,6 +176,7 @@ function ListItem({
   href,
   ...props
 }: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+  const { NavigationMenuLink } = useDesignSystem();
   return (
     <li {...props}>
       <NavigationMenuLink render={<Link href={href} />}>

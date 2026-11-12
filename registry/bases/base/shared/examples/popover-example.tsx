@@ -2,29 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
-  PopoverTrigger,
-} from "@/registry/bases/base/styles/default/ui/popover";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function PopoverExample() {
   return (
@@ -39,6 +18,16 @@ export default function PopoverExample() {
 }
 
 function PopoverBasic() {
+  const {
+    Button,
+    Popover,
+    PopoverContent,
+    PopoverDescription,
+    PopoverHeader,
+    PopoverTitle,
+    PopoverTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Popover>
@@ -59,6 +48,14 @@ function PopoverBasic() {
 }
 
 function PopoverSides() {
+  const {
+    Button,
+
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Sides">
       <div className="flex flex-col gap-2">
@@ -100,6 +97,20 @@ function PopoverSides() {
 }
 
 function PopoverWithForm() {
+  const {
+    Button,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Popover,
+    PopoverContent,
+    PopoverDescription,
+    PopoverHeader,
+    PopoverTitle,
+    PopoverTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Form">
       <Popover>
@@ -134,6 +145,8 @@ function PopoverWithForm() {
 }
 
 function PopoverAlignments() {
+  const { Button, Popover, PopoverContent, PopoverTrigger } = useDesignSystem();
+
   return (
     <Example title="Alignments">
       <div className="flex gap-6">
@@ -167,6 +180,23 @@ function PopoverAlignments() {
 }
 
 function PopoverInDialog() {
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+
+    Popover,
+    PopoverContent,
+    PopoverDescription,
+    PopoverHeader,
+    PopoverTitle,
+    PopoverTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="In Dialog">
       <Dialog>

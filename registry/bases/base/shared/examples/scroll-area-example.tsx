@@ -5,11 +5,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  ScrollArea,
-  ScrollBar,
-} from "@/registry/bases/base/styles/default/ui/scroll-area";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
@@ -40,6 +37,8 @@ export default function ScrollAreaExample() {
 }
 
 function ScrollAreaVertical() {
+  const { ScrollArea, ScrollBar, Separator } = useDesignSystem();
+
   return (
     <Example title="Vertical">
       <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl mx-auto h-72 w-48 rounded-md border">
@@ -58,6 +57,8 @@ function ScrollAreaVertical() {
 }
 
 function ScrollAreaHorizontal() {
+  const { ScrollArea, ScrollBar } = useDesignSystem();
+
   return (
     <Example title="Horizontal">
       <ScrollArea className="style-luma:rounded-2xl style-rhea:rounded-2xl mx-auto w-full max-w-96 rounded-md border p-4">

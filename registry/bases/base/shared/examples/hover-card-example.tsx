@@ -2,20 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/registry/bases/base/styles/default/ui/hover-card";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function HoverCardExample() {
   return (
@@ -36,6 +24,9 @@ const HOVER_CARD_SIDES = [
 ] as const;
 
 function HoverCardSides() {
+  const { Button, HoverCard, HoverCardContent, HoverCardTrigger } =
+    useDesignSystem();
+
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap items-center justify-center gap-2">
@@ -65,6 +56,19 @@ function HoverCardSides() {
 }
 
 function HoverCardInDialog() {
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="In Dialog">
       <Dialog>

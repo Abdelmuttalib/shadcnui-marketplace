@@ -4,8 +4,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import { toast } from "@/registry/bases/base/styles/default/ui/toast";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ToastExample() {
   return (
@@ -18,6 +17,8 @@ export default function ToastExample() {
 }
 
 function ToastBasic() {
+  const { Button, toast }: any = useDesignSystem();
+
   return (
     <Example title="Basic" className="items-center justify-center">
       <Button
@@ -37,6 +38,8 @@ function ToastBasic() {
 }
 
 function ToastWithAction() {
+  const { Button, toast }: any = useDesignSystem();
+
   function showToast() {
     const id = toast.add({
       title: "Event created",
@@ -63,6 +66,8 @@ function ToastWithAction() {
 }
 
 function ToastPromise() {
+  const { Button, toast }: any = useDesignSystem();
+
   function showToast() {
     toast.promise(
       new Promise<{ name: string }>((resolve) => {
@@ -70,7 +75,7 @@ function ToastPromise() {
       }),
       {
         loading: "Creating event…",
-        success: (data) => `${data.name} created.`,
+        success: (data: any) => `${data.name} created.`,
         error: "Could not create event.",
       }
     );

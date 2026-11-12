@@ -8,66 +8,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Combobox,
-  ComboboxChip,
-  ComboboxChips,
-  ComboboxChipsInput,
-  ComboboxCollection,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxGroup,
-  ComboboxInput,
-  ComboboxItem,
-  ComboboxLabel,
-  ComboboxList,
-  ComboboxSeparator,
-  ComboboxTrigger,
-  ComboboxValue,
-  useComboboxAnchor,
-} from "@/registry/bases/base/styles/default/ui/combobox";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Field,
-  FieldDescription,
-  FieldError,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ComboboxExample() {
   return (
@@ -552,6 +493,15 @@ const timezones = [
 ] as const;
 
 function ComboboxBasic() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Combobox items={frameworks}>
@@ -559,7 +509,7 @@ function ComboboxBasic() {
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -572,6 +522,15 @@ function ComboboxBasic() {
 }
 
 function ComboboxSides() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -593,7 +552,7 @@ function ComboboxSides() {
             <ComboboxContent side={side}>
               <ComboboxEmpty>No items found.</ComboboxEmpty>
               <ComboboxList>
-                {(item) => (
+                {(item: any) => (
                   <ComboboxItem key={item} value={item}>
                     {item}
                   </ComboboxItem>
@@ -608,6 +567,15 @@ function ComboboxSides() {
 }
 
 function ComboboxDisabled() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Combobox items={frameworks}>
@@ -615,7 +583,7 @@ function ComboboxDisabled() {
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -630,6 +598,15 @@ function ComboboxDisabled() {
 const disabledFrameworks = ["Nuxt.js", "Remix"];
 
 function ComboboxDisabledItems() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="Disabled Items">
       <Combobox items={frameworks}>
@@ -637,7 +614,7 @@ function ComboboxDisabledItems() {
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem
                 key={item}
                 value={item}
@@ -654,6 +631,19 @@ function ComboboxDisabledItems() {
 }
 
 function ComboboxInvalid() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+    Field,
+    FieldDescription,
+    FieldError,
+    FieldLabel,
+  } = useDesignSystem();
+
   return (
     <Example title="Invalid">
       <div className="flex flex-col gap-4">
@@ -662,7 +652,7 @@ function ComboboxInvalid() {
           <ComboboxContent>
             <ComboboxEmpty>No items found.</ComboboxEmpty>
             <ComboboxList>
-              {(item) => (
+              {(item: any) => (
                 <ComboboxItem key={item} value={item}>
                   {item}
                 </ComboboxItem>
@@ -683,7 +673,7 @@ function ComboboxInvalid() {
             <ComboboxContent>
               <ComboboxEmpty>No items found.</ComboboxEmpty>
               <ComboboxList>
-                {(item) => (
+                {(item: any) => (
                   <ComboboxItem key={item} value={item}>
                     {item}
                   </ComboboxItem>
@@ -700,6 +690,15 @@ function ComboboxInvalid() {
 }
 
 function ComboboxWithClear() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="With Clear Button">
       <Combobox items={frameworks} defaultValue={frameworks[0]}>
@@ -707,7 +706,7 @@ function ComboboxWithClear() {
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -720,6 +719,18 @@ function ComboboxWithClear() {
 }
 
 function ComboboxWithGroups() {
+  const {
+    Combobox,
+    ComboboxCollection,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxGroup,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxLabel,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="With Groups">
       <Combobox items={timezones}>
@@ -727,11 +738,11 @@ function ComboboxWithGroups() {
         <ComboboxContent>
           <ComboboxEmpty>No timezones found.</ComboboxEmpty>
           <ComboboxList>
-            {(group) => (
+            {(group: any) => (
               <ComboboxGroup key={group.value} items={group.items}>
                 <ComboboxLabel>{group.value}</ComboboxLabel>
                 <ComboboxCollection>
-                  {(item) => (
+                  {(item: any) => (
                     <ComboboxItem key={item} value={item}>
                       {item}
                     </ComboboxItem>
@@ -747,6 +758,19 @@ function ComboboxWithGroups() {
 }
 
 function ComboboxWithGroupsAndSeparator() {
+  const {
+    Combobox,
+    ComboboxCollection,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxGroup,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxLabel,
+    ComboboxList,
+    ComboboxSeparator,
+  } = useDesignSystem();
+
   return (
     <Example title="With Groups and Separator">
       <Combobox items={timezones}>
@@ -754,11 +778,11 @@ function ComboboxWithGroupsAndSeparator() {
         <ComboboxContent>
           <ComboboxEmpty>No timezones found.</ComboboxEmpty>
           <ComboboxList>
-            {(group) => (
+            {(group: any) => (
               <ComboboxGroup key={group.value} items={group.items}>
                 <ComboboxLabel>{group.value}</ComboboxLabel>
                 <ComboboxCollection>
-                  {(item) => (
+                  {(item: any) => (
                     <ComboboxItem key={item} value={item}>
                       {item}
                     </ComboboxItem>
@@ -782,6 +806,55 @@ function ComboboxWithForm() {
     toast(`You selected ${framework} as your framework.`);
   };
 
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardFooter,
+    Combobox,
+    ComboboxChip,
+    ComboboxChips,
+    ComboboxChipsInput,
+    ComboboxCollection,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxGroup,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxLabel,
+    ComboboxList,
+    ComboboxSeparator,
+    ComboboxTrigger,
+    ComboboxValue,
+    useComboboxAnchor,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Field,
+    FieldDescription,
+    FieldError,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemTitle,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Form with Combobox">
       <Card className="w-full max-w-sm" size="sm">
@@ -804,7 +877,7 @@ function ComboboxWithForm() {
                   <ComboboxContent>
                     <ComboboxEmpty>No items found.</ComboboxEmpty>
                     <ComboboxList>
-                      {(item) => (
+                      {(item: any) => (
                         <ComboboxItem key={item} value={item}>
                           {item}
                         </ComboboxItem>
@@ -829,6 +902,15 @@ function ComboboxWithForm() {
 const largeListItems = Array.from({ length: 100 }, (_, i) => `Item ${i + 1}`);
 
 function ComboboxLargeList() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="Large List (100 items)">
       <Combobox items={largeListItems}>
@@ -836,7 +918,7 @@ function ComboboxLargeList() {
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -849,6 +931,15 @@ function ComboboxLargeList() {
 }
 
 function ComboboxAutoHighlight() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+  } = useDesignSystem();
+
   return (
     <Example title="With Auto Highlight">
       <Combobox items={frameworks} autoHighlight>
@@ -856,7 +947,7 @@ function ComboboxAutoHighlight() {
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -869,6 +960,19 @@ function ComboboxAutoHighlight() {
 }
 
 function ComboxboxInputAddon() {
+  const {
+    Combobox,
+    ComboboxCollection,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxGroup,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxLabel,
+    ComboboxList,
+    InputGroupAddon,
+  } = useDesignSystem();
+
   return (
     <Example title="With Icon Addon">
       <Combobox items={timezones}>
@@ -886,11 +990,11 @@ function ComboxboxInputAddon() {
         <ComboboxContent alignOffset={-28} className="w-60">
           <ComboboxEmpty>No timezones found.</ComboboxEmpty>
           <ComboboxList>
-            {(group) => (
+            {(group: any) => (
               <ComboboxGroup key={group.value} items={group.items}>
                 <ComboboxLabel>{group.value}</ComboboxLabel>
                 <ComboboxCollection>
-                  {(item) => (
+                  {(item: any) => (
                     <ComboboxItem key={item} value={item}>
                       {item}
                     </ComboboxItem>
@@ -906,6 +1010,18 @@ function ComboxboxInputAddon() {
 }
 
 function ComboboxInPopup() {
+  const {
+    Button,
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+    ComboboxTrigger,
+    ComboboxValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Combobox in Popup">
       <Combobox items={countries} defaultValue={countries[0]}>
@@ -923,7 +1039,7 @@ function ComboboxInPopup() {
           <ComboboxInput showTrigger={false} placeholder="Search" />
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item.code} value={item}>
                 {item.label}
               </ComboboxItem>
@@ -936,6 +1052,20 @@ function ComboboxInPopup() {
 }
 
 function ComboboxMultiple() {
+  const {
+    Combobox,
+    ComboboxChip,
+    ComboboxChips,
+    ComboboxChipsInput,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxItem,
+    ComboboxList,
+    ComboboxValue,
+    useComboboxAnchor,
+  } = useDesignSystem();
+
+  // @ts-expect-error: dynamic module export
   const anchor = useComboboxAnchor();
 
   return (
@@ -948,7 +1078,7 @@ function ComboboxMultiple() {
       >
         <ComboboxChips ref={anchor}>
           <ComboboxValue>
-            {(values) => (
+            {(values: any) => (
               <React.Fragment>
                 {values.map((value: string) => (
                   <ComboboxChip key={value}>{value}</ComboboxChip>
@@ -961,7 +1091,7 @@ function ComboboxMultiple() {
         <ComboboxContent anchor={anchor}>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -974,6 +1104,20 @@ function ComboboxMultiple() {
 }
 
 function ComboboxMultipleDisabled() {
+  const {
+    Combobox,
+    ComboboxChip,
+    ComboboxChips,
+    ComboboxChipsInput,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxItem,
+    ComboboxList,
+    ComboboxValue,
+    useComboboxAnchor,
+  } = useDesignSystem();
+
+  // @ts-expect-error: dynamic module export
   const anchor = useComboboxAnchor();
 
   return (
@@ -987,7 +1131,7 @@ function ComboboxMultipleDisabled() {
       >
         <ComboboxChips ref={anchor}>
           <ComboboxValue>
-            {(values) => (
+            {(values: any) => (
               <React.Fragment>
                 {values.map((value: string) => (
                   <ComboboxChip key={value}>{value}</ComboboxChip>
@@ -1000,7 +1144,7 @@ function ComboboxMultipleDisabled() {
         <ComboboxContent anchor={anchor}>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -1013,7 +1157,27 @@ function ComboboxMultipleDisabled() {
 }
 
 function ComboboxMultipleInvalid() {
+  const {
+    Combobox,
+    ComboboxChip,
+    ComboboxChips,
+    ComboboxChipsInput,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxItem,
+    ComboboxList,
+    ComboboxValue,
+    useComboboxAnchor,
+    Field,
+    FieldDescription,
+    FieldError,
+
+    FieldLabel,
+  } = useDesignSystem();
+
+  // @ts-expect-error: dynamic module export
   const anchor1 = useComboboxAnchor();
+  // @ts-expect-error: dynamic module export
   const anchor2 = useComboboxAnchor();
 
   return (
@@ -1027,7 +1191,7 @@ function ComboboxMultipleInvalid() {
         >
           <ComboboxChips ref={anchor1}>
             <ComboboxValue>
-              {(values) => (
+              {(values: any) => (
                 <React.Fragment>
                   {values.map((value: string) => (
                     <ComboboxChip key={value}>{value}</ComboboxChip>
@@ -1040,7 +1204,7 @@ function ComboboxMultipleInvalid() {
           <ComboboxContent anchor={anchor1}>
             <ComboboxEmpty>No items found.</ComboboxEmpty>
             <ComboboxList>
-              {(item) => (
+              {(item: any) => (
                 <ComboboxItem key={item} value={item}>
                   {item}
                 </ComboboxItem>
@@ -1060,7 +1224,7 @@ function ComboboxMultipleInvalid() {
           >
             <ComboboxChips ref={anchor2}>
               <ComboboxValue>
-                {(values) => (
+                {(values: any) => (
                   <React.Fragment>
                     {values.map((value: string) => (
                       <ComboboxChip key={value}>{value}</ComboboxChip>
@@ -1076,7 +1240,7 @@ function ComboboxMultipleInvalid() {
             <ComboboxContent anchor={anchor2}>
               <ComboboxEmpty>No items found.</ComboboxEmpty>
               <ComboboxList>
-                {(item) => (
+                {(item: any) => (
                   <ComboboxItem key={item} value={item}>
                     {item}
                   </ComboboxItem>
@@ -1095,6 +1259,20 @@ function ComboboxMultipleInvalid() {
 }
 
 function ComboboxMultipleNoRemove() {
+  const {
+    Combobox,
+    ComboboxChip,
+    ComboboxChips,
+    ComboboxChipsInput,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxItem,
+    ComboboxList,
+    ComboboxValue,
+    useComboboxAnchor,
+  } = useDesignSystem();
+
+  // @ts-expect-error: dynamic module export
   const anchor = useComboboxAnchor();
 
   return (
@@ -1107,7 +1285,7 @@ function ComboboxMultipleNoRemove() {
       >
         <ComboboxChips ref={anchor}>
           <ComboboxValue>
-            {(values) => (
+            {(values: any) => (
               <React.Fragment>
                 {values.map((value: string) => (
                   <ComboboxChip key={value} showRemove={false}>
@@ -1122,7 +1300,7 @@ function ComboboxMultipleNoRemove() {
         <ComboboxContent anchor={anchor}>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -1135,6 +1313,20 @@ function ComboboxMultipleNoRemove() {
 }
 
 function ComboboxWithCustomItems() {
+  const {
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="With Custom Item Rendering">
       <Combobox
@@ -1147,7 +1339,7 @@ function ComboboxWithCustomItems() {
         <ComboboxContent>
           <ComboboxEmpty>No countries found.</ComboboxEmpty>
           <ComboboxList>
-            {(country) => (
+            {(country: any) => (
               <ComboboxItem key={country.code} value={country}>
                 <Item size="xs" className="p-0">
                   <ItemContent>
@@ -1170,6 +1362,25 @@ function ComboboxWithCustomItems() {
 
 function ComboboxInDialog() {
   const [open, setOpen] = React.useState(false);
+
+  const {
+    Button,
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Field,
+    FieldLabel,
+  } = useDesignSystem();
 
   return (
     <Example title="Combobox in Dialog">
@@ -1196,7 +1407,7 @@ function ComboboxInDialog() {
               <ComboboxContent>
                 <ComboboxEmpty>No items found.</ComboboxEmpty>
                 <ComboboxList>
-                  {(item) => (
+                  {(item: any) => (
                     <ComboboxItem key={item} value={item}>
                       {item}
                     </ComboboxItem>
@@ -1265,6 +1476,27 @@ const items = [
 ];
 
 function ComboboxWithOtherInputs() {
+  const {
+    Button,
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+
+    Input,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Other Inputs">
       <Combobox items={frameworks}>
@@ -1272,7 +1504,7 @@ function ComboboxWithOtherInputs() {
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {(item: any) => (
               <ComboboxItem key={item} value={item}>
                 {item}
               </ComboboxItem>
@@ -1286,7 +1518,7 @@ function ComboboxWithOtherInputs() {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            {items.map((item) => (
+            {items.map((item: any) => (
               <SelectItem key={item.value} value={item.value}>
                 {item.label}
               </SelectItem>

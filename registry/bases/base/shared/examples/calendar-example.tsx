@@ -10,31 +10,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Calendar,
-  CalendarDayButton,
-} from "@/registry/bases/base/styles/default/ui/calendar";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/bases/base/styles/default/ui/popover";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function CalendarExample() {
   return (
@@ -58,6 +35,8 @@ export default function CalendarExample() {
 }
 
 function CalendarInCard() {
+  const { Calendar, Card, CardContent } = useDesignSystem();
+
   return (
     <Example title="In Card">
       <Card className="mx-auto w-fit p-0">
@@ -70,6 +49,9 @@ function CalendarInCard() {
 }
 
 function CalendarInPopover() {
+  const { Button, Calendar, Popover, PopoverContent, PopoverTrigger } =
+    useDesignSystem();
+
   return (
     <Example title="In Popover">
       <Popover>
@@ -98,6 +80,9 @@ function CalendarSingle() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(new Date().getFullYear(), new Date().getMonth(), 12)
   );
+
+  const { Calendar, Card, CardContent } = useDesignSystem();
+
   return (
     <Example title="Single">
       <Card className="mx-auto w-fit p-0">
@@ -115,6 +100,8 @@ function CalendarSingle() {
 }
 
 function CalendarMultiple() {
+  const { Calendar, Card, CardContent } = useDesignSystem();
+
   return (
     <Example title="Multiple">
       <Card className="mx-auto w-fit p-0">
@@ -132,6 +119,8 @@ function CalendarRange() {
     to: addDays(new Date(new Date().getFullYear(), 0, 12), 30),
   });
 
+  const { Calendar, Card, CardContent } = useDesignSystem();
+
   return (
     <Example
       title="Range"
@@ -146,7 +135,7 @@ function CalendarRange() {
             selected={dateRange}
             onSelect={setDateRange}
             numberOfMonths={2}
-            disabled={(date) =>
+            disabled={(date: any) =>
               date > new Date() || date < new Date("1900-01-01")
             }
           />
@@ -161,6 +150,8 @@ function CalendarRangeMultipleMonths() {
     from: new Date(new Date().getFullYear(), 3, 12),
     to: addDays(new Date(new Date().getFullYear(), 3, 12), 60),
   });
+
+  const { Calendar, Card, CardContent } = useDesignSystem();
 
   return (
     <Example
@@ -194,6 +185,8 @@ function CalendarBookedDates() {
     (_, i) => new Date(new Date().getFullYear(), 1, 12 + i)
   );
 
+  const { Calendar, Card, CardContent } = useDesignSystem();
+
   return (
     <Example title="Booked Dates">
       <Card className="mx-auto w-fit p-0">
@@ -221,6 +214,19 @@ function CalendarWithTime() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(new Date().getFullYear(), new Date().getMonth(), 12)
   );
+
+  const {
+    Calendar,
+    Card,
+    CardContent,
+    CardFooter,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+  } = useDesignSystem();
 
   return (
     <Example title="With Time">
@@ -292,6 +298,8 @@ function CalendarCustomDays() {
     to: addDays(new Date(new Date().getFullYear(), 11, 8), 10),
   });
 
+  const { Calendar, CalendarDayButton, Card, CardContent } = useDesignSystem();
+
   return (
     <Example title="Custom Days">
       <Card className="mx-auto w-fit p-0">
@@ -305,12 +313,12 @@ function CalendarCustomDays() {
             captionLayout="dropdown"
             className="[--cell-size:--spacing(10)] md:[--cell-size:--spacing(12)]"
             formatters={{
-              formatMonthDropdown: (date) => {
+              formatMonthDropdown: (date: any) => {
                 return date.toLocaleString("default", { month: "long" });
               },
             }}
             components={{
-              DayButton: ({ children, modifiers, day, ...props }) => {
+              DayButton: ({ children, modifiers, day, ...props }: any) => {
                 const isWeekend =
                   day.date.getDay() === 0 || day.date.getDay() === 6;
 
@@ -338,6 +346,8 @@ function CalendarWithPresets() {
   const [currentMonth, setCurrentMonth] = React.useState<Date>(
     new Date(new Date().getFullYear(), new Date().getMonth(), 1)
   );
+
+  const { Button, Calendar, Card, CardContent, CardFooter } = useDesignSystem();
 
   return (
     <Example title="With Presets">
@@ -386,6 +396,16 @@ function CalendarWithPresets() {
 function DatePickerSimple() {
   const [date, setDate] = React.useState<Date>();
 
+  const {
+    Button,
+    Calendar,
+    Field,
+    FieldLabel,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Date Picker Simple">
       <Field className="mx-auto w-72">
@@ -424,6 +444,16 @@ function DatePickerWithRange() {
     from: new Date(new Date().getFullYear(), 0, 20),
     to: addDays(new Date(new Date().getFullYear(), 0, 20), 20),
   });
+
+  const {
+    Button,
+    Calendar,
+    Field,
+    FieldLabel,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } = useDesignSystem();
 
   return (
     <Example title="Date Picker Range">
@@ -478,6 +508,16 @@ function DatePickerWithRange() {
 function DataPickerWithDropdowns() {
   const [date, setDate] = React.useState<Date>();
   const [open, setOpen] = React.useState(false);
+
+  const {
+    Button,
+    Calendar,
+    Field,
+    FieldLabel,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } = useDesignSystem();
 
   return (
     <Example title="Date Picker with Dropdowns">
@@ -534,6 +574,8 @@ function CalendarWeekNumbers() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(new Date().getFullYear(), 1, 3)
   );
+
+  const { Calendar, Card, CardContent } = useDesignSystem();
 
   return (
     <Example title="Week Numbers" className="justify-center">

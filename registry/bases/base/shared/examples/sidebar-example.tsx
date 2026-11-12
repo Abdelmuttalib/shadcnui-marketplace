@@ -3,36 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarInput,
-  SidebarInset,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-  SidebarRail,
-  SidebarTrigger,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SidebarExample() {
   const data = {
@@ -169,6 +141,33 @@ export default function SidebarExample() {
   const [selectedVersion, setSelectedVersion] = React.useState(
     data.versions[0]
   );
+
+  const {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemTitle,
+    Label,
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarHeader,
+    SidebarInput,
+    SidebarInset,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarProvider,
+    SidebarRail,
+    SidebarTrigger,
+  } = useDesignSystem();
 
   return (
     <SidebarProvider>

@@ -2,16 +2,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Field,
-  FieldDescription,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  NativeSelect,
-  NativeSelectOptGroup,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function NativeSelectExample() {
   return (
@@ -27,6 +18,8 @@ export default function NativeSelectExample() {
 }
 
 function NativeSelectBasic() {
+  const { NativeSelect, NativeSelectOption } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <NativeSelect>
@@ -44,6 +37,9 @@ function NativeSelectBasic() {
 }
 
 function NativeSelectWithGroups() {
+  const { NativeSelect, NativeSelectOptGroup, NativeSelectOption } =
+    useDesignSystem();
+
   return (
     <Example title="With Groups">
       <NativeSelect>
@@ -64,6 +60,8 @@ function NativeSelectWithGroups() {
 }
 
 function NativeSelectSizes() {
+  const { NativeSelect, NativeSelectOption } = useDesignSystem();
+
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-4">
@@ -85,6 +83,14 @@ function NativeSelectSizes() {
 }
 
 function NativeSelectWithField() {
+  const {
+    Field,
+    FieldDescription,
+    FieldLabel,
+    NativeSelect,
+    NativeSelectOption,
+  } = useDesignSystem();
+
   return (
     <Example title="With Field">
       <Field>
@@ -103,6 +109,8 @@ function NativeSelectWithField() {
 }
 
 function NativeSelectDisabled() {
+  const { NativeSelect, NativeSelectOption } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <NativeSelect disabled>
@@ -116,6 +124,7 @@ function NativeSelectDisabled() {
 }
 
 function NativeSelectInvalid() {
+  const { NativeSelect, NativeSelectOption } = useDesignSystem();
   return (
     <Example title="Invalid">
       <NativeSelect aria-invalid="true">

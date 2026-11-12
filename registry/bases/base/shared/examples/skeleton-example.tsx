@@ -2,12 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Skeleton } from "@/registry/bases/base/styles/default/ui/skeleton";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SkeletonExample() {
   return (
@@ -22,6 +18,8 @@ export default function SkeletonExample() {
 }
 
 function SkeletonAvatar() {
+  const { Skeleton } = useDesignSystem();
+
   return (
     <Example title="Avatar">
       <div className="flex w-full items-center gap-4">
@@ -36,6 +34,8 @@ function SkeletonAvatar() {
 }
 
 function SkeletonCard() {
+  const { Card, CardContent, CardHeader, Skeleton } = useDesignSystem();
+
   return (
     <Example title="Card">
       <Card className="w-full">
@@ -52,6 +52,8 @@ function SkeletonCard() {
 }
 
 function SkeletonText() {
+  const { Skeleton } = useDesignSystem();
+
   return (
     <Example title="Text">
       <div className="flex w-full flex-col gap-2">
@@ -64,6 +66,8 @@ function SkeletonText() {
 }
 
 function SkeletonForm() {
+  const { Skeleton } = useDesignSystem();
+
   return (
     <Example title="Form">
       <div className="flex w-full flex-col gap-7">
@@ -82,6 +86,8 @@ function SkeletonForm() {
 }
 
 function SkeletonTable() {
+  const { Skeleton } = useDesignSystem();
+
   return (
     <Example title="Table">
       <div className="flex w-full flex-col gap-2">

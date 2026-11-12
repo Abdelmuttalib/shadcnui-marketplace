@@ -7,42 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Questionnaire,
-  QuestionnaireActions,
-  QuestionnaireChoice,
-  QuestionnaireChoiceDescription,
-  QuestionnaireChoices,
-  QuestionnaireDescription,
-  QuestionnaireError,
-  QuestionnaireInput,
-  QuestionnaireItem,
-  QuestionnaireNext,
-  QuestionnairePrevious,
-  QuestionnaireProgress,
-  QuestionnaireSkip,
-  QuestionnaireSubmit,
-  QuestionnaireTitle,
-} from "@/registry/bases/base/styles/default/ui/questionnaire";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 const questionnaireItems = [
   {
@@ -106,6 +72,17 @@ export default function QuestionnaireExample() {
 }
 
 function QuestionnaireDisabled() {
+  const {
+    Questionnaire,
+    QuestionnaireChoice,
+    QuestionnaireChoiceDescription,
+    QuestionnaireChoices,
+    QuestionnaireDescription,
+    QuestionnaireError,
+    QuestionnaireItem,
+    QuestionnaireTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Disabled" containerClassName="md:col-span-2">
       <Questionnaire
@@ -148,6 +125,16 @@ function QuestionnaireDisabled() {
 }
 
 function QuestionnaireNoDescription() {
+  const {
+    Questionnaire,
+    QuestionnaireChoice,
+    QuestionnaireChoices,
+    QuestionnaireError,
+    QuestionnaireItem,
+    QuestionnaireProgress,
+    QuestionnaireTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="No description" containerClassName="md:col-span-2">
       <Questionnaire
@@ -182,6 +169,8 @@ function QuestionnaireNoDescription() {
 }
 
 function QuestionnaireStandalone() {
+  const { Questionnaire, QuestionnaireProgress } = useDesignSystem();
+
   return (
     <Example title="Standalone" containerClassName="md:col-span-2">
       <Questionnaire
@@ -200,6 +189,8 @@ function QuestionnaireStandalone() {
 }
 
 function QuestionnaireCard() {
+  const { Questionnaire } = useDesignSystem();
+
   return (
     <Example title="Card" containerClassName="md:col-span-2">
       <Questionnaire
@@ -215,6 +206,19 @@ function QuestionnaireCard() {
 }
 
 function QuestionnaireDialog() {
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Questionnaire,
+    QuestionnaireProgress,
+  } = useDesignSystem();
+
   return (
     <Example
       title="Dialog"
@@ -240,7 +244,7 @@ function QuestionnaireDialog() {
               </DialogDescription>
               <QuestionnaireProgress
                 className="text-foreground font-semibold tracking-widest uppercase"
-                render={(props, state) => (
+                render={(props: any, state: any) => (
                   <span {...props}>
                     Question {state.current} of {state.total}
                   </span>
@@ -262,6 +266,25 @@ function QuestionnaireCardQuestions() {
   const directionTitleId = React.useId();
   const signalsTitleId = React.useId();
   const timingTitleId = React.useId();
+
+  const {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    QuestionnaireChoice,
+    QuestionnaireChoiceDescription,
+    QuestionnaireChoices,
+    QuestionnaireDescription,
+    QuestionnaireError,
+    QuestionnaireInput,
+    QuestionnaireItem,
+    QuestionnaireProgress,
+    QuestionnaireTitle,
+  } = useDesignSystem();
 
   return (
     <>
@@ -383,6 +406,17 @@ function QuestionnaireCardQuestions() {
 }
 
 function QuestionnaireQuestions() {
+  const {
+    QuestionnaireChoice,
+    QuestionnaireChoiceDescription,
+    QuestionnaireChoices,
+    QuestionnaireDescription,
+    QuestionnaireError,
+    QuestionnaireInput,
+    QuestionnaireItem,
+    QuestionnaireTitle,
+  } = useDesignSystem();
+
   return (
     <>
       <QuestionnaireItem name="direction" required>
@@ -447,6 +481,14 @@ function QuestionnaireQuestions() {
 }
 
 function QuestionnaireNavigation() {
+  const {
+    QuestionnaireActions,
+    QuestionnaireNext,
+    QuestionnairePrevious,
+    QuestionnaireSkip,
+    QuestionnaireSubmit,
+  } = useDesignSystem();
+
   return (
     <QuestionnaireActions className="w-full">
       <QuestionnairePrevious />

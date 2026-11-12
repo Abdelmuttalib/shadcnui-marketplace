@@ -7,32 +7,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Menubar,
-  MenubarCheckboxItem,
-  MenubarContent,
-  MenubarGroup,
-  MenubarItem,
-  MenubarLabel,
-  MenubarMenu,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarSub,
-  MenubarSubContent,
-  MenubarSubTrigger,
-  MenubarTrigger,
-} from "@/registry/bases/base/styles/default/ui/menubar";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function MenubarExample() {
   return (
@@ -54,6 +29,16 @@ export default function MenubarExample() {
 }
 
 function MenubarBasic() {
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Menubar>
@@ -94,6 +79,15 @@ function MenubarBasic() {
 }
 
 function MenubarSides() {
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarGroup,
+    MenubarItem,
+    MenubarMenu,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -128,6 +122,19 @@ function MenubarSides() {
 }
 
 function MenubarWithSubmenu() {
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarSub,
+    MenubarSubContent,
+    MenubarSubTrigger,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Submenu">
       <Menubar>
@@ -178,6 +185,17 @@ function MenubarWithSubmenu() {
 }
 
 function MenubarWithCheckboxes() {
+  const {
+    Menubar,
+    MenubarCheckboxItem,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Checkboxes">
       <Menubar>
@@ -214,6 +232,17 @@ function MenubarWithRadio() {
   const [user, setUser] = React.useState("benoit");
   const [theme, setTheme] = React.useState("system");
 
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarRadioGroup,
+    MenubarRadioItem,
+    MenubarSeparator,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Radio">
       <Menubar>
@@ -246,6 +275,17 @@ function MenubarWithRadio() {
 }
 
 function MenubarWithIcons() {
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarGroup,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <Menubar>
@@ -329,6 +369,16 @@ function MenubarWithIcons() {
 }
 
 function MenubarWithShortcuts() {
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Shortcuts">
       <Menubar>
@@ -373,6 +423,17 @@ function MenubarWithShortcuts() {
 }
 
 function MenubarFormat() {
+  const {
+    Menubar,
+    MenubarCheckboxItem,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Format">
       <Menubar>
@@ -430,6 +491,19 @@ function MenubarFormat() {
 }
 
 function MenubarInsert() {
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarSub,
+    MenubarSubContent,
+    MenubarSubTrigger,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Insert">
       <Menubar>
@@ -507,6 +581,16 @@ function MenubarInsert() {
 }
 
 function MenubarDestructive() {
+  const {
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Destructive">
       <Menubar>
@@ -599,6 +683,26 @@ function MenubarDestructive() {
 }
 
 function MenubarInDialog() {
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarSub,
+    MenubarSubContent,
+    MenubarSubTrigger,
+    MenubarTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="In Dialog">
       <Dialog>
@@ -692,6 +796,23 @@ function MenubarWithInset() {
   const [showBookmarks, setShowBookmarks] = React.useState(true);
   const [showUrls, setShowUrls] = React.useState(false);
   const [theme, setTheme] = React.useState("system");
+
+  const {
+    Menubar,
+    MenubarCheckboxItem,
+    MenubarContent,
+    MenubarGroup,
+    MenubarItem,
+    MenubarLabel,
+    MenubarMenu,
+    MenubarRadioGroup,
+    MenubarRadioItem,
+    MenubarSeparator,
+    MenubarSub,
+    MenubarSubContent,
+    MenubarSubTrigger,
+    MenubarTrigger,
+  } = useDesignSystem();
 
   return (
     <Example title="With Inset">

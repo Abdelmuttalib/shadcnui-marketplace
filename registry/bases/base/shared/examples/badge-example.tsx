@@ -3,8 +3,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function BadgeExample() {
   return (
@@ -21,6 +20,8 @@ export default function BadgeExample() {
 }
 
 function BadgeVariants() {
+  const { Badge } = useDesignSystem();
+
   return (
     <Example title="Variants">
       <div className="style-sera:gap-6 flex flex-wrap gap-2">
@@ -36,6 +37,8 @@ function BadgeVariants() {
 }
 
 function BadgeWithIconLeft() {
+  const { Badge } = useDesignSystem();
+
   return (
     <Example title="Icon Left" className="max-w-fit">
       <div className="style-sera:gap-6 flex flex-wrap gap-2">
@@ -111,6 +114,8 @@ function BadgeWithIconLeft() {
 }
 
 function BadgeWithIconRight() {
+  const { Badge } = useDesignSystem();
+
   return (
     <Example title="Icon Right" className="max-w-fit">
       <div className="style-sera:gap-6 flex flex-wrap gap-2">
@@ -186,6 +191,8 @@ function BadgeWithIconRight() {
 }
 
 function BadgeWithSpinner() {
+  const { Badge, Spinner } = useDesignSystem();
+
   return (
     <Example title="With Spinner" className="max-w-fit">
       <div className="style-sera:gap-6 flex flex-wrap gap-2">
@@ -219,6 +226,8 @@ function BadgeWithSpinner() {
 }
 
 function BadgeAsLink() {
+  const { Badge, Spinner } = useDesignSystem();
+
   return (
     <Example title="asChild">
       <div className="style-sera:gap-6 flex flex-wrap gap-2">
@@ -291,6 +300,8 @@ function BadgeAsLink() {
 }
 
 function BadgeLongText() {
+  const { Badge } = useDesignSystem();
+
   return (
     <Example title="Long Text">
       <div className="style-sera:gap-6 flex flex-wrap gap-2">
@@ -303,6 +314,8 @@ function BadgeLongText() {
 }
 
 function BadgeCustomColors() {
+  const { Badge } = useDesignSystem();
+
   return (
     <Example title="Custom Colors" className="max-w-fit">
       <div className="style-sera:gap-6 flex flex-wrap gap-2">

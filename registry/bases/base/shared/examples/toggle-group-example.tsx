@@ -7,24 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Field,
-  FieldDescription,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ToggleGroupExample() {
   return (
@@ -49,6 +33,8 @@ export default function ToggleGroupExample() {
 }
 
 function ToggleGroupBasic() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <ToggleGroup multiple spacing={1}>
@@ -85,6 +71,8 @@ function ToggleGroupBasic() {
 }
 
 function ToggleGroupOutline() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Outline">
       <ToggleGroup variant="outline" defaultValue={["all"]}>
@@ -100,6 +88,8 @@ function ToggleGroupOutline() {
 }
 
 function ToggleGroupOutlineWithIcons() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Outline With Icons">
       <ToggleGroup variant="outline" multiple size="sm">
@@ -136,6 +126,8 @@ function ToggleGroupOutlineWithIcons() {
 }
 
 function ToggleGroupSizes() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-4">
@@ -173,6 +165,8 @@ function ToggleGroupSizes() {
 }
 
 function ToggleGroupSpacing() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="With Spacing">
       <ToggleGroup size="sm" defaultValue={["top"]} spacing={2}>
@@ -194,6 +188,8 @@ function ToggleGroupSpacing() {
 }
 
 function ToggleGroupWithIcons() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <ToggleGroup multiple variant="outline" spacing={2} size="sm">
@@ -245,6 +241,8 @@ function ToggleGroupWithIcons() {
 }
 
 function ToggleGroupFilter() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Filter">
       <ToggleGroup defaultValue={["all"]} variant="outline" size="sm">
@@ -266,6 +264,8 @@ function ToggleGroupFilter() {
 }
 
 function ToggleGroupDateRange() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Date Range">
       <ToggleGroup
@@ -292,6 +292,8 @@ function ToggleGroupDateRange() {
 }
 
 function ToggleGroupSort() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Sort">
       <ToggleGroup defaultValue={["newest"]} variant="outline" size="sm">
@@ -336,6 +338,19 @@ function ToggleGroupWithInputAndSelect() {
     { label: "Active", value: "active" },
     { label: "Archived", value: "archived" },
   ];
+
+  const {
+    ToggleGroup,
+    ToggleGroupItem,
+    Input,
+    Select,
+    SelectTrigger,
+    SelectValue,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+  } = useDesignSystem();
+
   return (
     <Example title="With Input and Select">
       <div className="flex items-center gap-2">
@@ -368,6 +383,8 @@ function ToggleGroupWithInputAndSelect() {
 }
 
 function ToggleGroupVertical() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Vertical">
       <ToggleGroup multiple orientation="vertical" spacing={1}>
@@ -404,6 +421,8 @@ function ToggleGroupVertical() {
 }
 
 function ToggleGroupVerticalOutline() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Vertical Outline">
       <ToggleGroup
@@ -430,6 +449,8 @@ function ToggleGroupVerticalOutline() {
 }
 
 function ToggleGroupVerticalOutlineWithIcons() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Vertical Outline With Icons">
       <ToggleGroup variant="outline" multiple orientation="vertical" size="sm">
@@ -467,13 +488,17 @@ function ToggleGroupVerticalOutlineWithIcons() {
 
 function ToggleGroupFontWeightSelector() {
   const [fontWeight, setFontWeight] = React.useState("normal");
+
+  const { ToggleGroup, ToggleGroupItem, Field, FieldLabel, FieldDescription } =
+    useDesignSystem();
+
   return (
     <Example title="Font Weight Selector">
       <Field>
         <FieldLabel>Font Weight</FieldLabel>
         <ToggleGroup
           value={[fontWeight]}
-          onValueChange={(value) => setFontWeight(value[0])}
+          onValueChange={(value: any) => setFontWeight(value[0])}
           variant="outline"
           spacing={2}
           size="lg"
@@ -524,6 +549,8 @@ function ToggleGroupFontWeightSelector() {
 }
 
 function ToggleGroupVerticalWithSpacing() {
+  const { ToggleGroup, ToggleGroupItem } = useDesignSystem();
+
   return (
     <Example title="Vertical With Spacing">
       <ToggleGroup

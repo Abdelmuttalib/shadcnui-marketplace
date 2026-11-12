@@ -7,7 +7,6 @@ import {
 import { useDesignSystem } from "../components/design-system-provider";
 
 export default function AccordionExample() {
-
   return (
     <ExampleWrapper className="w-full max-w-4xl lg:grid-cols-1 2xl:max-w-4xl 2xl:grid-cols-1">
       <AccordionBasic />
@@ -20,14 +19,8 @@ export default function AccordionExample() {
 }
 
 function AccordionBasic() {
-
-    const {
-      Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-  } = useDesignSystem();
-
+  const { Accordion, AccordionContent, AccordionItem, AccordionTrigger } =
+    useDesignSystem();
 
   const items = [
     {
@@ -81,13 +74,8 @@ function AccordionMultiple() {
     },
   ];
 
-
-    const {
-      Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-  } = useDesignSystem();
+  const { Accordion, AccordionContent, AccordionItem, AccordionTrigger } =
+    useDesignSystem();
 
   return (
     <Example title="Multiple">
@@ -136,13 +124,8 @@ function AccordionWithBorders() {
     },
   ];
 
-
-    const {
-      Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-  } = useDesignSystem();
+  const { Accordion, AccordionContent, AccordionItem, AccordionTrigger } =
+    useDesignSystem();
 
   return (
     <Example title="With Borders">
@@ -167,24 +150,20 @@ function AccordionWithBorders() {
 }
 
 function AccordionInCard() {
-
-
-      const {
-      Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-
+  const {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
 
     Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
 
-  Button,
+    Button,
   } = useDesignSystem();
-
 
   const items = [
     {
@@ -292,10 +271,6 @@ function AccordionInCard() {
     },
   ];
 
-
-
-
-
   return (
     <Example title="In Card">
       <Card className="mx-auto w-full max-w-lg gap-4">
@@ -349,13 +324,8 @@ function AccordionWithDisabled() {
     },
   ];
 
-      const {
-      Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-  } = useDesignSystem();
-
+  const { Accordion, AccordionContent, AccordionItem, AccordionTrigger } =
+    useDesignSystem();
 
   return (
     <Example title="With Disabled">

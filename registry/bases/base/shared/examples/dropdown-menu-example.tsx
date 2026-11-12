@@ -7,37 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function DropdownMenuExample() {
   return (
@@ -61,6 +32,17 @@ export default function DropdownMenuExample() {
 }
 
 function DropdownMenuBasic() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <DropdownMenu>
@@ -87,6 +69,15 @@ function DropdownMenuBasic() {
 }
 
 function DropdownMenuSides() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuItem,
+  } = useDesignSystem();
+
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -121,6 +112,18 @@ function DropdownMenuSides() {
 }
 
 function DropdownMenuWithIcons() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+  } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <DropdownMenu>
@@ -178,6 +181,18 @@ function DropdownMenuWithIcons() {
 }
 
 function DropdownMenuWithShortcuts() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+  } = useDesignSystem();
+
   return (
     <Example title="With Shortcuts">
       <DropdownMenu>
@@ -218,6 +233,21 @@ function DropdownMenuWithShortcuts() {
 }
 
 function DropdownMenuWithSubmenu() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuItem,
+    DropdownMenuSub,
+    DropdownMenuSubTrigger,
+    DropdownMenuPortal,
+    DropdownMenuSubContent,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+  } = useDesignSystem();
+
   return (
     <Example title="With Submenu">
       <DropdownMenu>
@@ -255,6 +285,16 @@ function DropdownMenuWithCheckboxes() {
   const [showStatusBar, setShowStatusBar] = React.useState(true);
   const [showActivityBar, setShowActivityBar] = React.useState(false);
   const [showPanel, setShowPanel] = React.useState(false);
+
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuLabel,
+    DropdownMenuCheckboxItem,
+  } = useDesignSystem();
 
   return (
     <Example title="With Checkboxes">
@@ -317,6 +357,17 @@ function DropdownMenuWithCheckboxes() {
 function DropdownMenuWithRadio() {
   const [position, setPosition] = React.useState("bottom");
 
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuLabel,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+  } = useDesignSystem();
+
   return (
     <Example title="With Radio Group">
       <DropdownMenu>
@@ -377,6 +428,16 @@ function DropdownMenuWithCheckboxesIcons() {
     push: true,
   });
 
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuLabel,
+    DropdownMenuCheckboxItem,
+  } = useDesignSystem();
+
   return (
     <Example title="Checkboxes with Icons">
       <DropdownMenu>
@@ -390,7 +451,7 @@ function DropdownMenuWithCheckboxesIcons() {
             <DropdownMenuLabel>Notification Preferences</DropdownMenuLabel>
             <DropdownMenuCheckboxItem
               checked={notifications.email}
-              onCheckedChange={(checked) =>
+              onCheckedChange={(checked: any) =>
                 setNotifications({ ...notifications, email: checked === true })
               }
             >
@@ -405,7 +466,7 @@ function DropdownMenuWithCheckboxesIcons() {
             </DropdownMenuCheckboxItem>
             <DropdownMenuCheckboxItem
               checked={notifications.sms}
-              onCheckedChange={(checked) =>
+              onCheckedChange={(checked: any) =>
                 setNotifications({ ...notifications, sms: checked === true })
               }
             >
@@ -420,7 +481,7 @@ function DropdownMenuWithCheckboxesIcons() {
             </DropdownMenuCheckboxItem>
             <DropdownMenuCheckboxItem
               checked={notifications.push}
-              onCheckedChange={(checked) =>
+              onCheckedChange={(checked: any) =>
                 setNotifications({ ...notifications, push: checked === true })
               }
             >
@@ -442,6 +503,17 @@ function DropdownMenuWithCheckboxesIcons() {
 
 function DropdownMenuWithRadioIcons() {
   const [paymentMethod, setPaymentMethod] = React.useState("card");
+
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuTrigger,
+    DropdownMenuLabel,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+  } = useDesignSystem();
 
   return (
     <Example title="Radio with Icons">
@@ -497,6 +569,15 @@ function DropdownMenuWithRadioIcons() {
 }
 
 function DropdownMenuWithDestructive() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Destructive Items">
       <DropdownMenu>
@@ -554,6 +635,19 @@ function DropdownMenuWithDestructive() {
 }
 
 function DropdownMenuWithAvatar() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   const menuContent = (
     <>
       <DropdownMenuGroup>
@@ -658,6 +752,25 @@ function DropdownMenuWithAvatar() {
 }
 
 function DropdownMenuInDialog() {
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuPortal,
+    DropdownMenuSeparator,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="In Dialog">
       <Dialog>
@@ -744,6 +857,24 @@ function DropdownMenuWithInset() {
   const [showBookmarks, setShowBookmarks] = React.useState(true);
   const [showUrls, setShowUrls] = React.useState(false);
   const [theme, setTheme] = React.useState("system");
+
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuPortal,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+    DropdownMenuSeparator,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
 
   return (
     <Example title="With Inset">
@@ -832,6 +963,24 @@ function DropdownMenuWithInset() {
 function DropdownMenuComplex() {
   const [showSidebar, setShowSidebar] = React.useState(true);
   const [showStatusBar, setShowStatusBar] = React.useState(false);
+
+  const {
+    Button,
+
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuPortal,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
 
   return (
     <Example title="Complex">

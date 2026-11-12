@@ -3,29 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarInset,
-  SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
-  SidebarProvider,
-  SidebarRail,
-  SidebarTrigger,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SidebarInsetExample() {
   const data = {
@@ -196,6 +175,29 @@ export default function SidebarInsetExample() {
       },
     ],
   };
+
+  const {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+
+    Sidebar,
+    SidebarContent,
+    SidebarGroupContent,
+    SidebarGroup,
+    SidebarGroupLabel,
+    SidebarMenuAction,
+    SidebarInset,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarMenuSub,
+    SidebarMenuSubButton,
+    SidebarMenuSubItem,
+    SidebarProvider,
+    SidebarRail,
+    SidebarTrigger,
+  } = useDesignSystem();
 
   return (
     <SidebarProvider>

@@ -2,17 +2,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/registry/bases/base/styles/default/ui/carousel";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function CarouselExample() {
   return (
@@ -25,6 +15,15 @@ export default function CarouselExample() {
 }
 
 function CarouselBasic() {
+  const {
+    Card,
+    CardContent,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } = useDesignSystem();
   return (
     <Example title="Basic">
       <Carousel className="mx-auto max-w-xs sm:max-w-sm">
@@ -49,6 +48,16 @@ function CarouselBasic() {
 }
 
 function CarouselMultiple() {
+  const {
+    Card,
+    CardContent,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } = useDesignSystem();
+
   return (
     <Example title="Multiple">
       <Carousel
@@ -78,6 +87,16 @@ function CarouselMultiple() {
 }
 
 function CarouselWithGap() {
+  const {
+    Card,
+    CardContent,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } = useDesignSystem();
+
   return (
     <Example title="With Gap">
       <Carousel className="mx-auto max-w-xs sm:max-w-sm">

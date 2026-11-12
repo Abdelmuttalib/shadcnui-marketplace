@@ -13,55 +13,7 @@ import {
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
 import { useHighlightedCode } from "@/registry/bases/base/styles/default/hooks/use-highlighted-code";
-import {
-  Bubble,
-  BubbleContent,
-} from "@/registry/bases/base/styles/default/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Message,
-  MessageContent,
-} from "@/registry/bases/base/styles/default/ui/message";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/styles/default/ui/tabs";
-import {
-  CodeBlock,
-  CodeBlockActions,
-  CodeBlockContent,
-  CodeBlockCopyButton,
-  CodeBlockFooter,
-  CodeBlockHeader,
-  CodeBlockLine,
-  CodeBlockTitle,
-} from "@/registry/bases/base/styles/default/ui/code-block";
-import {
-  Trace,
-  TraceCollapsible,
-  TraceCollapsibleContent,
-  TraceCollapsibleTrigger,
-  TraceIcon,
-  TraceLine,
-  TraceTitle,
-} from "@/registry/bases/base/styles/default/ui/trace";
+import { useDesignSystem } from "../components/design-system-provider";
 
 const build = `$ pnpm build
 > next build
@@ -193,6 +145,8 @@ export default function CodeBlockExample() {
 }
 
 function CodeBlockPlain() {
+  const { CodeBlock, CodeBlockContent } = useDesignSystem();
+
   return (
     <Example title="Plain">
       <CodeBlock>
@@ -203,6 +157,8 @@ function CodeBlockPlain() {
 }
 
 function CodeBlockWrap() {
+  const { CodeBlock, CodeBlockContent } = useDesignSystem();
+
   return (
     <Example title="Wrap">
       <CodeBlock>
@@ -214,6 +170,8 @@ function CodeBlockWrap() {
 
 function CodeBlockLineNumbers() {
   const lines = useHighlightedCode(source, "ts");
+
+  const { CodeBlock, CodeBlockContent, CodeBlockLine } = useDesignSystem();
 
   return (
     <Example title="Line Numbers">
@@ -229,6 +187,15 @@ function CodeBlockLineNumbers() {
 }
 
 function CodeBlockWithHeader() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+  } = useDesignSystem();
+
   return (
     <Example title="Header">
       <CodeBlock>
@@ -254,6 +221,15 @@ function CodeBlockWithHeader() {
 }
 
 function CodeBlockDestructive() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+  } = useDesignSystem();
+
   return (
     <Example title="Destructive">
       <CodeBlock variant="destructive">
@@ -274,6 +250,15 @@ function CodeBlockDiff() {
     diff.map((line) => line.text).join("\n"),
     "tsx"
   );
+
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <Example title="Diff">
@@ -296,6 +281,13 @@ function CodeBlockDiff() {
 function CodeBlockHighlightedLines() {
   const lines = useHighlightedCode(source, "ts");
 
+  const {
+    CodeBlock,
+    CodeBlockContent,
+
+    CodeBlockLine,
+  } = useDesignSystem();
+
   return (
     <Example title="Highlighted Lines">
       <CodeBlock>
@@ -315,6 +307,15 @@ function CodeBlockHighlightedLines() {
 }
 
 function CodeBlockHeight() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+  } = useDesignSystem();
+
   return (
     <Example title="Height">
       <CodeBlock>
@@ -334,6 +335,17 @@ function CodeBlockHeight() {
 
 function CodeBlockHighlighted() {
   const lines = useHighlightedCode(source, "ts");
+
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <Example title="Syntax Highlighting">
@@ -364,6 +376,8 @@ function CodeBlockHighlighted() {
 }
 
 function CodeBlockEmpty() {
+  const { CodeBlock, CodeBlockContent } = useDesignSystem();
+
   return (
     <Example title="Empty">
       <CodeBlock>
@@ -374,6 +388,15 @@ function CodeBlockEmpty() {
 }
 
 function CodeBlockSmall() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+  } = useDesignSystem();
+
   return (
     <Example title="Small">
       <CodeBlock size="sm">
@@ -399,6 +422,8 @@ function CodeBlockSmall() {
 }
 
 function CodeBlockSmallDestructive() {
+  const { CodeBlock, CodeBlockContent } = useDesignSystem();
+
   return (
     <Example title="Small Destructive">
       <CodeBlock size="sm" variant="destructive">
@@ -409,6 +434,19 @@ function CodeBlockSmallDestructive() {
 }
 
 function CodeBlockTrace() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Trace">
       <Trace>
@@ -467,6 +505,17 @@ function CodeBlockTypeset() {
   const lines = useHighlightedCode(source, "ts");
   const command = useHighlightedCode("pnpm add ai @ai-sdk/react zod", "bash");
 
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    CodeBlockLine,
+  } = useDesignSystem();
+
   return (
     <Example title="Typeset">
       <div className="typeset max-w-2xl">
@@ -518,6 +567,19 @@ function CodeBlockTypeset() {
 function CodeBlockWithActions() {
   const [wrap, setWrap] = React.useState(false);
   const lines = useHighlightedCode(source, "ts");
+
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    Button,
+
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <Example title="Actions">
@@ -582,6 +644,20 @@ function CodeBlockShowMore() {
   const lines = useHighlightedCode(chat, "tsx");
   const id = React.useId();
 
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    Button,
+
+    CodeBlockFooter,
+    CodeBlockLine,
+  } = useDesignSystem();
+
   return (
     <Example title="Show More">
       <CodeBlock>
@@ -630,6 +706,20 @@ function CodeBlockShowMoreScroll() {
   const [expanded, setExpanded] = React.useState(false);
   const lines = useHighlightedCode(chat, "tsx");
   const id = React.useId();
+
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    Button,
+
+    CodeBlockFooter,
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <Example title="Show More with Max Height">
@@ -784,11 +874,17 @@ function Highlighted({
   code,
   language,
   ...props
-}: React.ComponentProps<typeof CodeBlockContent> & {
+}: React.ComponentProps<any> & {
   code: string;
   language: string;
 }) {
   const lines = useHighlightedCode(code, language);
+
+  const {
+    CodeBlockContent,
+
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <CodeBlockContent {...props}>
@@ -800,6 +896,8 @@ function Highlighted({
 }
 
 function CodeBlockWrapLineNumbers() {
+  const { CodeBlock, CodeBlockHeader, CodeBlockTitle } = useDesignSystem();
+
   return (
     <Example title="Wrap and Line Numbers">
       <CodeBlock>
@@ -813,6 +911,8 @@ function CodeBlockWrapLineNumbers() {
 }
 
 function CodeBlockStartLine() {
+  const { CodeBlock, CodeBlockHeader, CodeBlockTitle } = useDesignSystem();
+
   return (
     <Example title="Start Line">
       <CodeBlock>
@@ -830,6 +930,15 @@ function CodeBlockDiffWrap() {
     longDiff.map((line) => line.text).join("\n"),
     "ts"
   );
+
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <Example title="Diff, Wrap and Highlighting">
@@ -850,6 +959,15 @@ function CodeBlockDiffWrap() {
 }
 
 function CodeBlockHeaderEdges() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+  } = useDesignSystem();
+
   return (
     <Example title="Header Edges">
       <div className="flex flex-col gap-4">
@@ -893,6 +1011,15 @@ function CodeBlockHeaderEdges() {
 }
 
 function CodeBlockSmallest() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+  } = useDesignSystem();
+
   return (
     <Example title="Single Line and Empty">
       <div className="flex flex-col gap-4">
@@ -927,6 +1054,17 @@ function CodeBlockSmallCombinations() {
     diff.map((line) => line.text).join("\n"),
     "tsx"
   );
+
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <Example title="Small Combinations">
@@ -1012,6 +1150,17 @@ function StreamedBlock({
   const text = block.diff ? rows.map((row) => row.slice(1)).join("\n") : code;
   const lines = useHighlightedCode(text, block.language);
 
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    CodeBlockLine,
+  } = useDesignSystem();
+
   return (
     <CodeBlock>
       {block.title && (
@@ -1067,6 +1216,8 @@ function useStream(length: number) {
 function CodeBlockStreamed() {
   const [position, replay] = useStream(streamedLength);
 
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Streaming">
       <div className="flex flex-col gap-4">
@@ -1106,6 +1257,17 @@ function MarkdownCode({
   const language = /language-(\S+)/.exec(className ?? "")?.[1] ?? "";
   const lines = useHighlightedCode(block ? code : "", language);
 
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    CodeBlockLine,
+  } = useDesignSystem();
+
   if (!block) {
     return (
       <code className="bg-muted rounded-sm px-1 py-0.5 font-mono text-[0.9em]">
@@ -1136,6 +1298,8 @@ const markdownComponents = { code: MarkdownCode };
 function CodeBlockMarkdown() {
   const [position, replay] = useStream(answer.length);
 
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Markdown">
       <div className="flex flex-col gap-4 text-sm">
@@ -1162,6 +1326,15 @@ function CodeBlockMarkdown() {
 
 function CodeBlockLanguages() {
   const lines = useHighlightedCode(ansi, "ansi");
+
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    CodeBlockHeader,
+    CodeBlockTitle,
+
+    CodeBlockLine,
+  } = useDesignSystem();
 
   return (
     <Example title="Languages">
@@ -1190,6 +1363,27 @@ function CodeBlockLanguages() {
 }
 
 function CodeBlockInCard() {
+  const {
+    CodeBlock,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Card and Dialog">
       <div className="flex flex-col items-start gap-4">
@@ -1235,6 +1429,20 @@ function CodeBlockInCard() {
 }
 
 function CodeBlockInMessage() {
+  const {
+    CodeBlock,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    Bubble,
+    BubbleContent,
+
+    Message,
+    MessageContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Chat Answer">
       <div className="flex flex-col gap-4 text-sm">
@@ -1266,6 +1474,19 @@ function CodeBlockInMessage() {
 }
 
 function CodeBlockTabs() {
+  const {
+    CodeBlock,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Tabs">
       <Tabs defaultValue="route">
@@ -1299,6 +1520,14 @@ function CodeBlockTabs() {
 }
 
 function CodeBlockRtl() {
+  const {
+    CodeBlock,
+    CodeBlockHeader,
+    CodeBlockTitle,
+    CodeBlockActions,
+    CodeBlockCopyButton,
+  } = useDesignSystem();
+
   return (
     <Example title="RTL">
       <div dir="rtl" className="flex flex-col gap-3 text-sm">

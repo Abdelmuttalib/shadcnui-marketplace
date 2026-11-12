@@ -3,14 +3,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Alert,
-  AlertAction,
-  AlertDescription,
-  AlertTitle,
-} from "@/registry/bases/base/styles/default/ui/alert";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function AlertExample() {
   return (
@@ -24,6 +17,7 @@ export default function AlertExample() {
 }
 
 function AlertExample1() {
+  const { Alert, AlertDescription, AlertTitle } = useDesignSystem();
   return (
     <Example title="Basic">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
@@ -47,6 +41,8 @@ function AlertExample1() {
 }
 
 function AlertExample2() {
+  const { Alert, AlertDescription, AlertTitle } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
@@ -145,6 +141,8 @@ function AlertExample2() {
 }
 
 function AlertExample3() {
+  const { Alert, AlertDescription, AlertTitle } = useDesignSystem();
+
   return (
     <Example title="Destructive">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
@@ -188,6 +186,9 @@ function AlertExample3() {
 }
 
 function AlertExample4() {
+  const { Alert, AlertAction, AlertDescription, AlertTitle, Badge, Button } =
+    useDesignSystem();
+
   return (
     <Example title="With Actions">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">

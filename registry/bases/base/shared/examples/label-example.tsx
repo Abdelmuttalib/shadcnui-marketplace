@@ -2,11 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
-import { Field } from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function LabelExample() {
   return (
@@ -20,6 +17,8 @@ export default function LabelExample() {
 }
 
 function LabelWithCheckbox() {
+  const { Checkbox, Field, Label } = useDesignSystem();
+
   return (
     <Example title="With Checkbox">
       <Field orientation="horizontal">
@@ -31,6 +30,8 @@ function LabelWithCheckbox() {
 }
 
 function LabelWithInput() {
+  const { Field, Input, Label } = useDesignSystem();
+
   return (
     <Example title="With Input">
       <Field>
@@ -42,6 +43,8 @@ function LabelWithInput() {
 }
 
 function LabelDisabled() {
+  const { Field, Input, Label } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Field data-disabled={true}>
@@ -53,6 +56,8 @@ function LabelDisabled() {
 }
 
 function LabelWithTextarea() {
+  const { Field, Label, Textarea } = useDesignSystem();
+
   return (
     <Example title="With Textarea">
       <Field>

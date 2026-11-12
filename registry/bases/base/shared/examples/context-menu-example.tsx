@@ -7,31 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  ContextMenu,
-  ContextMenuCheckboxItem,
-  ContextMenuContent,
-  ContextMenuGroup,
-  ContextMenuItem,
-  ContextMenuLabel,
-  ContextMenuRadioGroup,
-  ContextMenuRadioItem,
-  ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
-  ContextMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/context-menu";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ContextMenuExample() {
   return (
@@ -52,6 +29,14 @@ export default function ContextMenuExample() {
 }
 
 function ContextMenuBasic() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <ContextMenu>
@@ -71,6 +56,15 @@ function ContextMenuBasic() {
 }
 
 function ContextMenuWithIcons() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+    ContextMenuSeparator,
+  } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <ContextMenu>
@@ -130,6 +124,16 @@ function ContextMenuWithIcons() {
 }
 
 function ContextMenuWithShortcuts() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+    ContextMenuSeparator,
+    ContextMenuShortcut,
+  } = useDesignSystem();
+
   return (
     <Example title="With Shortcuts">
       <ContextMenu>
@@ -169,6 +173,19 @@ function ContextMenuWithShortcuts() {
 }
 
 function ContextMenuWithSubmenu() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+    ContextMenuSeparator,
+    ContextMenuSub,
+    ContextMenuSubTrigger,
+    ContextMenuSubContent,
+    ContextMenuShortcut,
+  } = useDesignSystem();
+
   return (
     <Example title="With Submenu">
       <ContextMenu>
@@ -211,6 +228,17 @@ function ContextMenuWithSubmenu() {
 }
 
 function ContextMenuWithGroups() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+    ContextMenuSeparator,
+    ContextMenuLabel,
+    ContextMenuShortcut,
+  } = useDesignSystem();
+
   return (
     <Example title="With Groups, Labels & Separators">
       <ContextMenu>
@@ -274,6 +302,14 @@ function ContextMenuWithGroups() {
 }
 
 function ContextMenuWithCheckboxes() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuTrigger,
+    ContextMenuCheckboxItem,
+  } = useDesignSystem();
+
   return (
     <Example title="With Checkboxes">
       <ContextMenu>
@@ -299,6 +335,17 @@ function ContextMenuWithCheckboxes() {
 function ContextMenuWithRadio() {
   const [user, setUser] = React.useState("pedro");
   const [theme, setTheme] = React.useState("light");
+
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuTrigger,
+    ContextMenuSeparator,
+    ContextMenuLabel,
+    ContextMenuRadioGroup,
+    ContextMenuRadioItem,
+  } = useDesignSystem();
 
   return (
     <Example title="With Radio Group">
@@ -334,6 +381,15 @@ function ContextMenuWithRadio() {
 }
 
 function ContextMenuWithDestructive() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+    ContextMenuSeparator,
+  } = useDesignSystem();
+
   return (
     <Example title="With Destructive Items">
       <ContextMenu>
@@ -393,6 +449,14 @@ function ContextMenuWithDestructive() {
 }
 
 function ContextMenuWithSides() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -425,6 +489,25 @@ function ContextMenuWithSides() {
 }
 
 function ContextMenuInDialog() {
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+    ContextMenuSeparator,
+    ContextMenuSub,
+    ContextMenuSubTrigger,
+    ContextMenuSubContent,
+    Dialog,
+    DialogTrigger,
+    Button,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogDescription,
+  } = useDesignSystem();
+
   return (
     <Example title="In Dialog">
       <Dialog>
@@ -515,6 +598,22 @@ function ContextMenuWithInset() {
   const [showBookmarks, setShowBookmarks] = React.useState(true);
   const [showUrls, setShowUrls] = React.useState(false);
   const [theme, setTheme] = React.useState("system");
+
+  const {
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuTrigger,
+    ContextMenuLabel,
+    ContextMenuSeparator,
+    ContextMenuRadioGroup,
+    ContextMenuCheckboxItem,
+    ContextMenuRadioItem,
+    ContextMenuSub,
+    ContextMenuSubTrigger,
+    ContextMenuSubContent,
+  } = useDesignSystem();
 
   return (
     <Example title="With Inset">

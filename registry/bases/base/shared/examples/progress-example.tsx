@@ -7,20 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemGroup,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  Progress,
-  ProgressLabel,
-  ProgressValue,
-} from "@/registry/bases/base/styles/default/ui/progress";
-import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ProgressExample() {
   return (
@@ -34,6 +22,8 @@ export default function ProgressExample() {
 }
 
 function ProgressValues() {
+  const { Progress } = useDesignSystem();
+
   return (
     <Example title="Progress Bar">
       <div className="flex w-full flex-col gap-4">
@@ -48,6 +38,8 @@ function ProgressValues() {
 }
 
 function ProgressWithLabel() {
+  const { Progress, ProgressLabel, ProgressValue } = useDesignSystem();
+
   return (
     <Example title="With Label">
       <Progress value={56}>
@@ -61,13 +53,15 @@ function ProgressWithLabel() {
 function ProgressControlled() {
   const [value, setValue] = React.useState(50);
 
+  const { Progress, Slider } = useDesignSystem();
+
   return (
     <Example title="Controlled">
       <div className="flex w-full flex-col gap-4">
         <Progress value={value} className="w-full" />
         <Slider
           value={value}
-          onValueChange={(value) => setValue(value as number)}
+          onValueChange={(value: any) => setValue(value as number)}
           min={0}
           max={100}
           step={1}
@@ -107,6 +101,16 @@ function FileUploadList() {
     ],
     []
   );
+
+  const {
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+    Progress,
+  } = useDesignSystem();
 
   return (
     <Example title="File Upload List">

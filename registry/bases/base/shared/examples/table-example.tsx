@@ -5,33 +5,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/bases/base/styles/default/ui/table";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 const invoices = [
   {
@@ -93,6 +68,16 @@ export default function TableExample() {
 }
 
 function TableBasic() {
+  const {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Table>
@@ -123,6 +108,17 @@ function TableBasic() {
 }
 
 function TableWithFooter() {
+  const {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableFooter,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <Example title="With Footer">
       <Table>
@@ -159,6 +155,9 @@ function TableWithFooter() {
 }
 
 function TableSimple() {
+  const { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } =
+    useDesignSystem();
+
   return (
     <Example title="Simple">
       <Table>
@@ -192,6 +191,9 @@ function TableSimple() {
 }
 
 function TableWithBadges() {
+  const { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } =
+    useDesignSystem();
+
   return (
     <Example title="With Badges">
       <Table>
@@ -249,6 +251,21 @@ function TableWithBadges() {
 }
 
 function TableWithActions() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <Example title="With Actions">
       <Table>
@@ -382,6 +399,21 @@ const tasks = [
 ];
 
 function TableWithSelect() {
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <Example title="With Select">
       <Table>
@@ -402,7 +434,7 @@ function TableWithSelect() {
                   defaultValue={people.find(
                     (person) => person.value === item.assignee
                   )}
-                  itemToStringValue={(item) => {
+                  itemToStringValue={(item: any) => {
                     return item.value;
                   }}
                 >
@@ -430,6 +462,16 @@ function TableWithSelect() {
 }
 
 function TableWithInput() {
+  const {
+    Input,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <Example title="With Input">
       <Table>

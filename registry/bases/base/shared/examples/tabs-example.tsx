@@ -3,21 +3,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/styles/default/ui/tabs";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function TabsExample() {
   return (
@@ -40,6 +27,8 @@ export default function TabsExample() {
 }
 
 function TabsBasic() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Tabs defaultValue="home">
@@ -53,6 +42,8 @@ function TabsBasic() {
 }
 
 function TabsLine() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Line">
       <Tabs defaultValue="overview">
@@ -67,6 +58,8 @@ function TabsLine() {
 }
 
 function TabsVariantsComparison() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Variants Alignment">
       <div className="flex gap-4">
@@ -88,6 +81,8 @@ function TabsVariantsComparison() {
 }
 
 function TabsDisabled() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Tabs defaultValue="home">
@@ -103,6 +98,8 @@ function TabsDisabled() {
 }
 
 function TabsWithIcons() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <Tabs defaultValue="preview">
@@ -134,6 +131,8 @@ function TabsWithIcons() {
 }
 
 function TabsIconOnly() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Icon Only">
       <Tabs defaultValue="home">
@@ -172,6 +171,8 @@ function TabsIconOnly() {
 }
 
 function TabsMultiple() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Multiple">
       <Tabs defaultValue="overview">
@@ -187,6 +188,8 @@ function TabsMultiple() {
 }
 
 function TabsWithContent() {
+  const { Tabs, TabsContent, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="With Content">
       <Tabs defaultValue="account">
@@ -212,6 +215,8 @@ function TabsWithContent() {
 }
 
 function TabsLineWithContent() {
+  const { Tabs, TabsContent, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Line With Content">
       <Tabs defaultValue="account">
@@ -237,6 +242,8 @@ function TabsLineWithContent() {
 }
 
 function TabsLineDisabled() {
+  const { Tabs, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Line Disabled">
       <Tabs defaultValue="overview">
@@ -253,6 +260,19 @@ function TabsLineDisabled() {
 }
 
 function TabsWithDropdown() {
+  const {
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Dropdown">
       <Tabs defaultValue="overview">
@@ -301,6 +321,8 @@ function TabsWithDropdown() {
 }
 
 function TabsVertical() {
+  const { Tabs, TabsContent, TabsList, TabsTrigger } = useDesignSystem();
+
   return (
     <Example title="Vertical">
       <Tabs defaultValue="account" orientation="vertical">
@@ -329,6 +351,9 @@ function TabsVertical() {
 }
 
 function TabsWithInputAndButton() {
+  const { Button, Input, Tabs, TabsContent, TabsList, TabsTrigger } =
+    useDesignSystem();
+
   return (
     <Example title="With Input and Button" containerClassName="col-span-full">
       <Tabs defaultValue="overview" className="mx-auto w-full max-w-lg">

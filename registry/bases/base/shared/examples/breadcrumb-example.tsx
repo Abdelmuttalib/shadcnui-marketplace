@@ -4,22 +4,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Breadcrumb,
-  BreadcrumbEllipsis,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default/ui/breadcrumb";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function BreadcrumbExample() {
   return (
@@ -32,6 +18,15 @@ export default function BreadcrumbExample() {
 }
 
 function BreadcrumbBasic() {
+  const {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic" className="items-center justify-center">
       <Breadcrumb>
@@ -54,6 +49,21 @@ function BreadcrumbBasic() {
 }
 
 function BreadcrumbWithDropdown() {
+  const {
+    Breadcrumb,
+    BreadcrumbEllipsis,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+    Button,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Dropdown" className="items-center justify-center">
       <Breadcrumb>
@@ -92,6 +102,16 @@ function BreadcrumbWithDropdown() {
 }
 
 function BreadcrumbWithLink() {
+  const {
+    Breadcrumb,
+    BreadcrumbEllipsis,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  } = useDesignSystem();
+
   return (
     <Example title="With Link" className="items-center justify-center">
       <Breadcrumb>

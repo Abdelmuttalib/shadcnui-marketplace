@@ -5,10 +5,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Button,
-  buttonVariants,
-} from "@/registry/bases/base/styles/default/ui/button";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ButtonExample() {
   return (
@@ -24,6 +21,8 @@ export default function ButtonExample() {
 }
 
 function ButtonVariantsAndSizes() {
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Variants & Sizes">
       <div className="flex flex-wrap items-center gap-2">
@@ -93,6 +92,8 @@ function ButtonVariantsAndSizes() {
 }
 
 function ButtonIconRight() {
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Icon Right">
       <div className="flex flex-wrap items-center gap-2">
@@ -371,6 +372,8 @@ function ButtonIconRight() {
 }
 
 function ButtonIconLeft() {
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Icon Left">
       <div className="flex flex-wrap items-center gap-2">
@@ -650,6 +653,8 @@ function ButtonIconLeft() {
 }
 
 function ButtonIconOnly() {
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Icon Only">
       <div className="flex flex-wrap items-center gap-2">
@@ -881,6 +886,8 @@ function ButtonIconOnly() {
 }
 
 function ButtonExamples() {
+  const { Button, buttonVariants } = useDesignSystem();
+
   return (
     <Example title="Examples">
       <div className="flex flex-wrap items-center gap-4">
@@ -911,6 +918,7 @@ function ButtonExamples() {
             />
           </Button>
         </div>
+        {/* @ts-expect-error: dynamic module export */}
         <a href="#" className={buttonVariants()}>
           Link
         </a>
@@ -920,6 +928,8 @@ function ButtonExamples() {
 }
 
 function ButtonInvalidStates() {
+  const { Button } = useDesignSystem();
+
   return (
     <Example title="Invalid States">
       <div className="flex flex-wrap items-center gap-2">

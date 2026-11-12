@@ -2,12 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Field,
-  FieldDescription,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function TextareaExample() {
   return (
@@ -22,6 +18,8 @@ export default function TextareaExample() {
 }
 
 function TextareaBasic() {
+  const { Textarea } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Textarea placeholder="Type your message here." />
@@ -30,6 +28,8 @@ function TextareaBasic() {
 }
 
 function TextareaInvalid() {
+  const { Textarea } = useDesignSystem();
+
   return (
     <Example title="Invalid">
       <Textarea placeholder="Type your message here." aria-invalid="true" />
@@ -38,6 +38,8 @@ function TextareaInvalid() {
 }
 
 function TextareaWithLabel() {
+  const { Field, Textarea, FieldLabel } = useDesignSystem();
+
   return (
     <Example title="With Label">
       <Field>
@@ -53,6 +55,8 @@ function TextareaWithLabel() {
 }
 
 function TextareaWithDescription() {
+  const { Field, Textarea, FieldLabel, FieldDescription } = useDesignSystem();
+
   return (
     <Example title="With Description">
       <Field>
@@ -71,6 +75,8 @@ function TextareaWithDescription() {
 }
 
 function TextareaDisabled() {
+  const { Field, Textarea, FieldLabel } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Field>

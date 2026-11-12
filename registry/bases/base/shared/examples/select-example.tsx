@@ -5,42 +5,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Field,
-  FieldDescription,
-  FieldError,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectSeparator,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SelectExample() {
   return (
@@ -73,6 +38,16 @@ function SelectBasic() {
     { label: "Grapes", value: "grapes" },
     { label: "Pineapple", value: "pineapple" },
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Select items={items}>
@@ -100,6 +75,16 @@ function SelectSides() {
     { label: "Banana", value: "banana" },
     { label: "Blueberry", value: "blueberry" },
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -196,6 +181,16 @@ function SelectWithIcons() {
       value: "pie",
     },
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <div className="flex flex-col gap-4">
@@ -248,6 +243,18 @@ function SelectWithGroups() {
     ...fruits,
     ...vegetables,
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectSeparator,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Groups & Labels">
       <Select items={allItems}>
@@ -286,6 +293,16 @@ function SelectLargeList() {
       value: `item-${i}`,
     })),
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Large List">
       <Select items={items}>
@@ -313,6 +330,16 @@ function SelectSizes() {
     { label: "Banana", value: "banana" },
     { label: "Blueberry", value: "blueberry" },
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-4">
@@ -356,6 +383,17 @@ function SelectWithButton() {
     { label: "Banana", value: "banana" },
     { label: "Blueberry", value: "blueberry" },
   ];
+
+  const {
+    Button,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Button">
       <div className="flex flex-col gap-4">
@@ -409,6 +447,16 @@ function SelectItemAligned() {
     { label: "Grapes", value: "grapes", disabled: true },
     { label: "Pineapple", value: "pineapple" },
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Item Aligned">
       <Select items={items}>
@@ -442,6 +490,19 @@ function SelectWithField() {
     { label: "Grapes", value: "grapes" },
     { label: "Pineapple", value: "pineapple" },
   ];
+
+  const {
+    Field,
+    FieldDescription,
+    FieldLabel,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="With Field">
       <Field>
@@ -477,6 +538,19 @@ function SelectInvalid() {
     { label: "Grapes", value: "grapes" },
     { label: "Pineapple", value: "pineapple" },
   ];
+
+  const {
+    Field,
+    FieldError,
+    FieldLabel,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Invalid">
       <div className="flex flex-col gap-4">
@@ -524,6 +598,19 @@ function SelectInline() {
     { label: "Active", value: "active" },
     { label: "Inactive", value: "inactive" },
   ];
+
+  const {
+    Input,
+    NativeSelect,
+    NativeSelectOption,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Inline with Input & NativeSelect">
       <div className="flex items-center gap-2">
@@ -562,6 +649,16 @@ function SelectDisabled() {
     { label: "Grapes", value: "grapes", disabled: true },
     { label: "Pineapple", value: "pineapple" },
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Select items={items} disabled>
@@ -602,6 +699,15 @@ const plans = [
 ];
 
 function SelectPlan() {
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Subscription Plan">
       <Select
@@ -628,6 +734,8 @@ function SelectPlan() {
 }
 
 function SelectPlanItem({ plan }: { plan: (typeof plans)[number] }) {
+  const { Item, ItemContent, ItemDescription, ItemTitle } = useDesignSystem();
+
   return (
     <Item size="xs" className="w-full p-0">
       <ItemContent className="gap-0 normal-case">
@@ -650,6 +758,16 @@ function SelectMultiple() {
     { label: "Strawberry", value: "strawberry" },
     { label: "Watermelon", value: "watermelon" },
   ];
+
+  const {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Multiple Selection">
       <Select items={items} multiple defaultValue={[]}>
@@ -689,6 +807,23 @@ function SelectInDialog() {
     { label: "Grapes", value: "grapes" },
     { label: "Pineapple", value: "pineapple" },
   ];
+
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="In Dialog">
       <Dialog>

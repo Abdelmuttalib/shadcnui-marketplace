@@ -7,30 +7,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/styles/default/ui/tabs";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function CollapsibleExample() {
   return (
@@ -95,6 +72,20 @@ function CollapsibleFileTree() {
     { name: "README.md" },
     { name: ".gitignore" },
   ];
+
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardHeader,
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+
+    Tabs,
+    TabsList,
+    TabsTrigger,
+  } = useDesignSystem();
 
   const renderItem = (fileItem: FileTreeItem) => {
     if ("items" in fileItem) {
@@ -176,6 +167,22 @@ function CollapsibleFileTree() {
 
 function CollapsibleSettings() {
   const [isOpen, setIsOpen] = React.useState(false);
+
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+  } = useDesignSystem();
 
   return (
     <Example title="Settings" className="items-center">

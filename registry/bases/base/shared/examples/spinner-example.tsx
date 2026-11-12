@@ -3,26 +3,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/registry/bases/base/styles/default/ui/empty";
-import {
-  Field,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SpinnerExample() {
   return (
@@ -37,6 +19,8 @@ export default function SpinnerExample() {
 }
 
 function SpinnerBasic() {
+  const { Spinner } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <div className="flex items-center gap-6">
@@ -48,6 +32,8 @@ function SpinnerBasic() {
 }
 
 function SpinnerInButtons() {
+  const { Button, Spinner } = useDesignSystem();
+
   return (
     <Example title="In Buttons">
       <div className="flex flex-wrap items-center gap-4">
@@ -70,6 +56,8 @@ function SpinnerInButtons() {
 }
 
 function SpinnerInBadges() {
+  const { Badge, Spinner } = useDesignSystem();
+
   return (
     <Example title="In Badges" className="items-center justify-center">
       <div className="flex flex-wrap items-center justify-center gap-4">
@@ -95,6 +83,15 @@ function SpinnerInBadges() {
 }
 
 function SpinnerInInputGroup() {
+  const {
+    Field,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Spinner,
+  } = useDesignSystem();
+
   return (
     <Example title="In Input Group">
       <Field>
@@ -111,6 +108,17 @@ function SpinnerInInputGroup() {
 }
 
 function SpinnerInEmpty() {
+  const {
+    Button,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+    Spinner,
+  } = useDesignSystem();
+
   return (
     <Example title="In Empty State" containerClassName="lg:col-span-full">
       <Empty className="min-h-[300px]">

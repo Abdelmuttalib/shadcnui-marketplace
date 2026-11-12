@@ -4,17 +4,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/registry/bases/base/styles/default/ui/drawer";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 const PARAGRAPHS = [
   "Your changes are saved automatically as you type.",
@@ -47,6 +38,18 @@ export default function DrawerExample() {
 }
 
 function DrawerDemo() {
+  const {
+    Button,
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Demo">
       <div className="flex flex-wrap gap-2">
@@ -130,6 +133,16 @@ function DrawerDemo() {
 }
 
 function DrawerSwipeHandleExample() {
+  const {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Swipe Handle">
       <div className="flex flex-wrap gap-2">
@@ -159,6 +172,18 @@ function DrawerSwipeHandleExample() {
 }
 
 function DrawerCustomWidthAndHeight() {
+  const {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+    DrawerFooter,
+    DrawerClose,
+  } = useDesignSystem();
+
   return (
     <Example title="Custom Width and Height">
       <div className="flex flex-wrap gap-2">
@@ -278,6 +303,18 @@ function DrawerCustomWidthAndHeight() {
 const DRAWER_SIDES = ["up", "right", "down", "left"] as const;
 
 function DrawerPosition() {
+  const {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+    DrawerFooter,
+    DrawerClose,
+  } = useDesignSystem();
+
   return (
     <Example title="Position">
       <div className="flex flex-wrap gap-2">
@@ -313,6 +350,18 @@ function DrawerPosition() {
 }
 
 function DrawerScrollable() {
+  const {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+    DrawerFooter,
+    DrawerClose,
+  } = useDesignSystem();
+
   return (
     <Example title="Scrollable Content">
       <div className="flex flex-wrap gap-2">
@@ -357,6 +406,18 @@ function DrawerScrollable() {
 const SNAP_POINTS = ["31rem", 1];
 
 function DrawerSnapPoints() {
+  const {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+    DrawerFooter,
+    DrawerClose,
+  } = useDesignSystem();
+
   return (
     <Example title="Snap Points">
       <Drawer snapPoints={SNAP_POINTS} showSwipeHandle>
@@ -383,6 +444,18 @@ function DrawerSnapPoints() {
 }
 
 function DrawerNested() {
+  const {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+    DrawerFooter,
+    DrawerClose,
+  } = useDesignSystem();
+
   return (
     <Example title="Nested">
       <div className="flex flex-wrap gap-2">
@@ -459,6 +532,18 @@ function DrawerNested() {
 }
 
 function DrawerNonModal() {
+  const {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+    DrawerFooter,
+    DrawerClose,
+  } = useDesignSystem();
+
   return (
     <Example title="Non Modal">
       <Drawer modal={false} disablePointerDismissal swipeDirection="right">

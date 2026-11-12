@@ -7,45 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldLegend,
-  FieldSet,
-  FieldTitle,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from "@/registry/bases/base/styles/default/ui/input-otp";
-import {
-  NativeSelect,
-  NativeSelectOptGroup,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/bases/base/styles/default/ui/radio-group";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
-import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function FieldExample() {
   return (
@@ -65,6 +28,9 @@ export default function FieldExample() {
 }
 
 function InputFields() {
+  const { Badge, Field, FieldDescription, FieldGroup, FieldLabel, Input } =
+    useDesignSystem();
+
   return (
     <Example title="Input Fields">
       <FieldGroup>
@@ -139,6 +105,9 @@ function InputFields() {
 }
 
 function TextareaFields() {
+  const { Field, FieldDescription, FieldGroup, FieldLabel, Textarea } =
+    useDesignSystem();
+
   return (
     <Example title="Textarea Fields">
       <FieldGroup>
@@ -231,6 +200,19 @@ function SelectFields() {
     { label: "Option 2", value: "option2" },
     { label: "Option 3", value: "option3" },
   ];
+
+  const {
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
 
   return (
     <Example title="Select Fields">
@@ -338,6 +320,16 @@ function SelectFields() {
 }
 
 function NativeSelectFields() {
+  const {
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    NativeSelect,
+    NativeSelectOptGroup,
+    NativeSelectOption,
+  } = useDesignSystem();
+
   return (
     <Example title="Native Select Fields">
       <FieldGroup>
@@ -433,6 +425,18 @@ function NativeSelectFields() {
 }
 
 function CheckboxFields() {
+  const {
+    Checkbox,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldLegend,
+    FieldSet,
+    FieldTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Checkbox Fields">
       <FieldGroup>
@@ -508,6 +512,19 @@ function CheckboxFields() {
 }
 
 function RadioFields() {
+  const {
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldLegend,
+    FieldSet,
+    FieldTitle,
+    RadioGroup,
+    RadioGroupItem,
+  } = useDesignSystem();
+
   return (
     <Example title="Radio Fields">
       <FieldGroup>
@@ -628,6 +645,15 @@ function RadioFields() {
 }
 
 function SwitchFields() {
+  const {
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Switch,
+  } = useDesignSystem();
+
   return (
     <Example title="Switch Fields">
       <FieldGroup>
@@ -701,6 +727,9 @@ function SliderFields() {
   const [priceRange, setPriceRange] = useState([25, 75]);
   const [colorBalance, setColorBalance] = useState([10, 20, 70]);
 
+  const { Field, FieldDescription, FieldGroup, FieldLabel, Slider } =
+    useDesignSystem();
+
   return (
     <Example title="Slider Fields">
       <FieldGroup>
@@ -709,7 +738,7 @@ function SliderFields() {
           <Slider
             id="slider-volume"
             value={volume}
-            onValueChange={(value) => setVolume(value as number[])}
+            onValueChange={(value: any) => setVolume(value as number[])}
             max={100}
             step={1}
           />
@@ -719,7 +748,7 @@ function SliderFields() {
           <Slider
             id="slider-brightness"
             value={brightness}
-            onValueChange={(value) => setBrightness(value as number[])}
+            onValueChange={(value: any) => setBrightness(value as number[])}
             max={100}
             step={5}
           />
@@ -747,7 +776,7 @@ function SliderFields() {
           <Slider
             id="slider-temperature"
             value={temperature}
-            onValueChange={(value) => setTemperature(value as number[])}
+            onValueChange={(value: any) => setTemperature(value as number[])}
             min={0}
             max={1}
             step={0.1}
@@ -761,7 +790,7 @@ function SliderFields() {
           <Slider
             id="slider-price-range"
             value={priceRange}
-            onValueChange={(value) => setPriceRange(value as number[])}
+            onValueChange={(value: any) => setPriceRange(value as number[])}
             max={100}
             step={5}
           />
@@ -774,7 +803,7 @@ function SliderFields() {
           <Slider
             id="slider-color-balance"
             value={colorBalance}
-            onValueChange={(value) => setColorBalance(value as number[])}
+            onValueChange={(value: any) => setColorBalance(value as number[])}
             max={100}
             step={10}
           />
@@ -817,6 +846,17 @@ function SliderFields() {
 function InputOTPFields() {
   const [value, setValue] = useState("");
   const [pinValue, setPinValue] = useState("");
+
+  const {
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+  } = useDesignSystem();
 
   return (
     <Example title="OTP Input Fields">
@@ -940,6 +980,26 @@ function HorizontalFields() {
     { label: "Banana", value: "banana" },
     { label: "Orange", value: "orange" },
   ];
+
+  const {
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    NativeSelect,
+    NativeSelectOption,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Slider,
+    Switch,
+    Textarea,
+  } = useDesignSystem();
 
   return (
     <Example title="Horizontal Fields">

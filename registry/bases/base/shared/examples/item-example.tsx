@@ -5,19 +5,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemFooter,
-  ItemGroup,
-  ItemHeader,
-  ItemMedia,
-  ItemSeparator,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ItemExample() {
   return (
@@ -51,6 +39,16 @@ export default function ItemExample() {
 }
 
 function DefaultVariantItems() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Default">
       <Item>
@@ -173,6 +171,16 @@ function DefaultVariantItems() {
 }
 
 function OutlineVariantItems() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Outline">
       <Item variant="outline">
@@ -295,6 +303,16 @@ function OutlineVariantItems() {
 }
 
 function MutedVariantItems() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Muted">
       <Item variant="muted">
@@ -417,6 +435,15 @@ function MutedVariantItems() {
 }
 
 function DefaultVariantItemsSmall() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Small">
       <Item size="sm">
@@ -543,6 +570,15 @@ function DefaultVariantItemsSmall() {
 }
 
 function OutlineVariantItemsSmall() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Outline - Small">
       <Item variant="outline" size="sm">
@@ -669,6 +705,15 @@ function OutlineVariantItemsSmall() {
 }
 
 function MutedVariantItemsSmall() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Muted - Small">
       <Item variant="muted" size="sm">
@@ -795,6 +840,15 @@ function MutedVariantItemsSmall() {
 }
 
 function DefaultVariantItemsExtraSmall() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Extra Small">
       <Item size="xs">
@@ -921,6 +975,15 @@ function DefaultVariantItemsExtraSmall() {
 }
 
 function OutlineVariantItemsExtraSmall() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Outline - Extra Small">
       <Item variant="outline" size="xs">
@@ -1047,6 +1110,15 @@ function OutlineVariantItemsExtraSmall() {
 }
 
 function MutedVariantItemsExtraSmall() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Muted - Extra Small">
       <Item variant="muted" size="xs">
@@ -1173,6 +1245,16 @@ function MutedVariantItemsExtraSmall() {
 }
 
 function DefaultLinkItems() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="asChild">
       <ItemGroup>
@@ -1239,6 +1321,16 @@ function DefaultLinkItems() {
 }
 
 function OutlineLinkItems() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Outline - asChild">
       <ItemGroup>
@@ -1305,6 +1397,16 @@ function OutlineLinkItems() {
 }
 
 function MutedLinkItems() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Muted - asChild">
       <ItemGroup>
@@ -1371,6 +1473,8 @@ function MutedLinkItems() {
 }
 
 function DefaultItemGroup() {
+  const { Item, ItemContent, ItemDescription, ItemGroup, ItemTitle } =
+    useDesignSystem();
   return (
     <Example title="ItemGroup">
       <ItemGroup>
@@ -1398,6 +1502,14 @@ function DefaultItemGroup() {
 }
 
 function OutlineItemGroup() {
+  const {
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Outline - ItemGroup">
       <ItemGroup>
@@ -1452,6 +1564,15 @@ function OutlineItemGroup() {
 }
 
 function MutedItemGroup() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Muted - ItemGroup">
       <ItemGroup>
@@ -1494,6 +1615,15 @@ function MutedItemGroup() {
 }
 
 function ItemSeparatorExample() {
+  const {
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemMedia,
+    ItemSeparator,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="ItemSeparator">
       <ItemGroup>
@@ -1566,6 +1696,8 @@ function ItemSeparatorExample() {
 }
 
 function ItemHeaderExamples() {
+  const { Item, ItemContent, ItemDescription, ItemHeader, ItemTitle } =
+    useDesignSystem();
   return (
     <Example title="ItemHeader">
       <Item>
@@ -1609,6 +1741,8 @@ function ItemHeaderExamples() {
 }
 
 function ItemFooterExamples() {
+  const { Item, ItemContent, ItemDescription, ItemFooter, ItemTitle } =
+    useDesignSystem();
   return (
     <Example title="ItemFooter">
       <Item>
@@ -1656,6 +1790,14 @@ function ItemFooterExamples() {
 }
 
 function ItemHeaderAndFooterExamples() {
+  const {
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemFooter,
+    ItemHeader,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="ItemHeader + ItemFooter">
       <Item>
@@ -1714,6 +1856,15 @@ function ItemHeaderAndFooterExamples() {
 }
 
 function DefaultVariantItemsWithImage() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Default - ItemMedia image">
       <Item>
@@ -1778,6 +1929,15 @@ function DefaultVariantItemsWithImage() {
 }
 
 function OutlineVariantItemsWithImage() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Outline - ItemMedia image">
       <Item variant="outline">
@@ -1842,6 +2002,15 @@ function OutlineVariantItemsWithImage() {
 }
 
 function OutlineVariantItemsWithImageSmall() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Outline - ItemMedia image - Small">
       <Item variant="outline" size="sm">
@@ -1906,6 +2075,8 @@ function OutlineVariantItemsWithImageSmall() {
 }
 
 function OutlineVariantItemsWithImageExtraSmall() {
+  const { Button, Item, ItemActions, ItemContent, ItemMedia, ItemTitle } =
+    useDesignSystem();
   return (
     <Example title="Outline - ItemMedia image - Extra Small">
       <Item variant="outline" size="xs">
@@ -1963,6 +2134,15 @@ function OutlineVariantItemsWithImageExtraSmall() {
 }
 
 function MutedVariantItemsWithImage() {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
   return (
     <Example title="Muted - ItemMedia image">
       <Item variant="muted">

@@ -3,51 +3,7 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarInset,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
-  SidebarProvider,
-  SidebarRail,
-  SidebarTrigger,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SidebarIconExample() {
   const data = {
@@ -233,6 +189,44 @@ export default function SidebarIconExample() {
   };
 
   const [activeTeam, setActiveTeam] = React.useState(data.teams[0]);
+
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Button,
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+    Sidebar,
+    SidebarContent,
+    SidebarFooter,
+    SidebarGroup,
+    SidebarGroupLabel,
+    SidebarHeader,
+    SidebarInset,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarMenuSub,
+    SidebarMenuSubButton,
+    SidebarMenuSubItem,
+    SidebarProvider,
+    SidebarRail,
+    SidebarTrigger,
+  } = useDesignSystem();
 
   return (
     <SidebarProvider>

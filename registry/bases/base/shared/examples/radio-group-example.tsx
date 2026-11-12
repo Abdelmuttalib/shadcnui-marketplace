@@ -2,18 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldLabel,
-  FieldLegend,
-  FieldSet,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/bases/base/styles/default/ui/radio-group";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function RadioGroupExample() {
   return (
@@ -29,6 +19,8 @@ export default function RadioGroupExample() {
 }
 
 function RadioGroupBasic() {
+  const { Field, FieldLabel, RadioGroup, RadioGroupItem } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <RadioGroup defaultValue="comfortable">
@@ -56,6 +48,15 @@ function RadioGroupBasic() {
 }
 
 function RadioGroupWithDescriptions() {
+  const {
+    Field,
+    FieldLabel,
+    RadioGroup,
+    RadioGroupItem,
+    FieldContent,
+    FieldDescription,
+  } = useDesignSystem();
+
   return (
     <Example title="With Descriptions">
       <RadioGroup defaultValue="plus">
@@ -96,6 +97,16 @@ function RadioGroupWithDescriptions() {
 }
 
 function RadioGroupWithFieldSet() {
+  const {
+    Field,
+    FieldSet,
+    FieldLegend,
+    FieldLabel,
+    RadioGroup,
+    RadioGroupItem,
+    FieldDescription,
+  } = useDesignSystem();
+
   return (
     <Example title="With FieldSet">
       <FieldSet>
@@ -129,6 +140,8 @@ function RadioGroupWithFieldSet() {
 }
 
 function RadioGroupGrid() {
+  const { Field, FieldLabel, RadioGroup, RadioGroupItem } = useDesignSystem();
+
   return (
     <Example title="Grid Layout">
       <RadioGroup defaultValue="medium" className="grid grid-cols-2 gap-2">
@@ -162,6 +175,8 @@ function RadioGroupGrid() {
 }
 
 function RadioGroupDisabled() {
+  const { Field, FieldLabel, RadioGroup, RadioGroupItem } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <RadioGroup defaultValue="option2" disabled>
@@ -189,6 +204,16 @@ function RadioGroupDisabled() {
 }
 
 function RadioGroupInvalid() {
+  const {
+    Field,
+    FieldSet,
+    FieldLegend,
+    FieldLabel,
+    RadioGroup,
+    RadioGroupItem,
+    FieldDescription,
+  } = useDesignSystem();
+
   return (
     <Example title="Invalid">
       <FieldSet>

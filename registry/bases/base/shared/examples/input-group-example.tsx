@@ -8,56 +8,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  ButtonGroup,
-  ButtonGroupText,
-} from "@/registry/bases/base/styles/default/ui/button-group";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-  InputGroupText,
-  InputGroupTextarea,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import { Kbd, KbdGroup } from "@/registry/bases/base/styles/default/ui/kbd";
-import {
-  Popover,
-  PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
-  PopoverTrigger,
-} from "@/registry/bases/base/styles/default/ui/popover";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/styles/default/ui/tooltip";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function InputGroupExample() {
   const [country, setCountry] = useState("+1");
@@ -76,6 +28,9 @@ export default function InputGroupExample() {
 }
 
 function InputGroupBasic() {
+  const { Field, FieldGroup, FieldLabel, Input, InputGroup, InputGroupInput } =
+    useDesignSystem();
+
   return (
     <Example title="Basic">
       <FieldGroup>
@@ -117,6 +72,18 @@ function InputGroupBasic() {
 }
 
 function InputGroupWithAddons() {
+  const {
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+    InputGroupText,
+  } = useDesignSystem();
+
   return (
     <Example title="With Addons">
       <FieldGroup>
@@ -293,6 +260,16 @@ function InputGroupWithAddons() {
 }
 
 function InputGroupWithButtons() {
+  const {
+    Field,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+  } = useDesignSystem();
+
   return (
     <Example title="With Buttons">
       <FieldGroup>
@@ -363,6 +340,32 @@ function InputGroupWithTooltip({
   country: string;
   setCountry: (value: string) => void;
 }) {
+  const {
+    ButtonGroup,
+    ButtonGroupText,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+    Popover,
+    PopoverContent,
+    PopoverDescription,
+    PopoverHeader,
+    PopoverTitle,
+    PopoverTrigger,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Tooltip, Dropdown, Popover">
       <FieldGroup>
@@ -511,6 +514,19 @@ function InputGroupWithTooltip({
 }
 
 function InputGroupWithKbd() {
+  const {
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Kbd,
+    KbdGroup,
+    Spinner,
+  } = useDesignSystem();
+
   return (
     <Example title="With Kbd">
       <FieldGroup>
@@ -670,6 +686,24 @@ function InputGroupWithKbd() {
 }
 
 function InputGroupInCard() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    InputGroupText,
+    InputGroupTextarea,
+  } = useDesignSystem();
+
   return (
     <Example title="In Card">
       <Card className="w-full">
@@ -743,6 +777,19 @@ function InputGroupInCard() {
 }
 
 function InputGroupTextareaExamples() {
+  const {
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupText,
+    InputGroupTextarea,
+    Textarea,
+  } = useDesignSystem();
+
   return (
     <Example title="Textarea">
       <FieldGroup>

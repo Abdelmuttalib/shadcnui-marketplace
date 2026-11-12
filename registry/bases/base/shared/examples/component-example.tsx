@@ -7,69 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogMedia,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/alert-dialog";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Combobox,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxInput,
-  ComboboxItem,
-  ComboboxList,
-} from "@/registry/bases/base/styles/default/ui/combobox";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export function ComponentExample() {
   return (
@@ -81,6 +20,27 @@ export function ComponentExample() {
 }
 
 function CardExample() {
+  const {
+    Button,
+    Card,
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogMedia,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+    Badge,
+
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Card" className="items-center justify-center">
       <Card className="relative w-full max-w-sm overflow-hidden pt-0">
@@ -166,6 +126,50 @@ function FormExample() {
     push: true,
   });
   const [theme, setTheme] = React.useState("light");
+
+  const {
+    Button,
+    Card,
+
+    CardAction,
+    CardContent,
+    CardDescription,
+
+    CardHeader,
+    CardTitle,
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuPortal,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuTrigger,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Textarea,
+  } = useDesignSystem();
 
   return (
     <Example title="Form">
@@ -329,7 +333,7 @@ function FormExample() {
                   <DropdownMenuLabel>View</DropdownMenuLabel>
                   <DropdownMenuCheckboxItem
                     checked={notifications.email}
-                    onCheckedChange={(checked) =>
+                    onCheckedChange={(checked: any) =>
                       setNotifications({
                         ...notifications,
                         email: checked === true,
@@ -347,7 +351,7 @@ function FormExample() {
                   </DropdownMenuCheckboxItem>
                   <DropdownMenuCheckboxItem
                     checked={notifications.sms}
-                    onCheckedChange={(checked) =>
+                    onCheckedChange={(checked: any) =>
                       setNotifications({
                         ...notifications,
                         sms: checked === true,
@@ -496,7 +500,7 @@ function FormExample() {
                                   </DropdownMenuLabel>
                                   <DropdownMenuCheckboxItem
                                     checked={notifications.push}
-                                    onCheckedChange={(checked) =>
+                                    onCheckedChange={(checked: any) =>
                                       setNotifications({
                                         ...notifications,
                                         push: checked === true,
@@ -514,7 +518,7 @@ function FormExample() {
                                   </DropdownMenuCheckboxItem>
                                   <DropdownMenuCheckboxItem
                                     checked={notifications.email}
-                                    onCheckedChange={(checked) =>
+                                    onCheckedChange={(checked: any) =>
                                       setNotifications({
                                         ...notifications,
                                         email: checked === true,
@@ -636,7 +640,7 @@ function FormExample() {
                   <ComboboxContent>
                     <ComboboxEmpty>No frameworks found.</ComboboxEmpty>
                     <ComboboxList>
-                      {(item) => (
+                      {(item: any) => (
                         <ComboboxItem key={item} value={item}>
                           {item}
                         </ComboboxItem>

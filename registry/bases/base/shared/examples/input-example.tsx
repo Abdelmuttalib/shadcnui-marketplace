@@ -2,26 +2,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function InputExample() {
   return (
@@ -41,6 +22,8 @@ export default function InputExample() {
 }
 
 function InputBasic() {
+  const { Input } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Input type="email" placeholder="Email" />
@@ -49,6 +32,8 @@ function InputBasic() {
 }
 
 function InputInvalid() {
+  const { Input } = useDesignSystem();
+
   return (
     <Example title="Invalid">
       <Input type="text" placeholder="Error" aria-invalid="true" />
@@ -57,6 +42,8 @@ function InputInvalid() {
 }
 
 function InputWithLabel() {
+  const { Field, FieldLabel, Input } = useDesignSystem();
+
   return (
     <Example title="With Label">
       <Field>
@@ -72,6 +59,8 @@ function InputWithLabel() {
 }
 
 function InputWithDescription() {
+  const { Field, FieldDescription, FieldLabel, Input } = useDesignSystem();
+
   return (
     <Example title="With Description">
       <Field>
@@ -90,6 +79,8 @@ function InputWithDescription() {
 }
 
 function InputDisabled() {
+  const { Field, FieldLabel, Input } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Field>
@@ -106,6 +97,8 @@ function InputDisabled() {
 }
 
 function InputTypes() {
+  const { Field, FieldLabel, Input } = useDesignSystem();
+
   return (
     <Example title="Input Types">
       <div className="flex w-full flex-col gap-6">
@@ -159,6 +152,15 @@ function InputTypes() {
 }
 
 function InputWithSelect() {
+  const {
+    Input,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
   return (
     <Example title="With Select">
       <div className="flex w-full gap-2">
@@ -181,6 +183,7 @@ function InputWithSelect() {
 }
 
 function InputWithButton() {
+  const { Button, Input } = useDesignSystem();
   return (
     <Example title="With Button">
       <div className="flex w-full gap-2">
@@ -192,6 +195,8 @@ function InputWithButton() {
 }
 
 function InputWithNativeSelect() {
+  const { Input, NativeSelect, NativeSelectOption } = useDesignSystem();
+
   return (
     <Example title="With Native Select">
       <div className="flex w-full gap-2">
@@ -207,6 +212,21 @@ function InputWithNativeSelect() {
 }
 
 function InputForm() {
+  const {
+    Button,
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Example title="Form">
       <form className="w-full">

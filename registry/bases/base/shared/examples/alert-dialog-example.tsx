@@ -3,28 +3,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogMedia,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/alert-dialog";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function AlertDialogExample() {
   return (
@@ -40,6 +20,20 @@ export default function AlertDialogExample() {
 }
 
 function AlertDialogBasic() {
+  const {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic" className="items-center">
       <AlertDialog>
@@ -65,6 +59,20 @@ function AlertDialogBasic() {
 }
 
 function AlertDialogSmall() {
+  const {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="Small" className="items-center">
       <AlertDialog>
@@ -87,6 +95,20 @@ function AlertDialogSmall() {
 }
 
 function AlertDialogWithMedia() {
+  const {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogMedia,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="With Media" className="items-center">
       <AlertDialog>
@@ -121,6 +143,21 @@ function AlertDialogWithMedia() {
 }
 
 function AlertDialogSmallWithMedia() {
+  const {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogMedia,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="Small With Media" className="items-center">
       <AlertDialog>
@@ -155,6 +192,21 @@ function AlertDialogSmallWithMedia() {
 }
 
 function AlertDialogDestructive() {
+  const {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogMedia,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="Destructive" className="items-center">
       <AlertDialog>
@@ -190,6 +242,28 @@ function AlertDialogDestructive() {
 }
 
 function AlertDialogInDialog() {
+  const {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogMedia,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="In Dialog" className="items-center">
       <Dialog>

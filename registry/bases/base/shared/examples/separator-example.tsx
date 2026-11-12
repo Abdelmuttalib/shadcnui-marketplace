@@ -2,7 +2,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SeparatorExample() {
   return (
@@ -16,6 +16,8 @@ export default function SeparatorExample() {
 }
 
 function SeparatorHorizontal() {
+  const { Separator } = useDesignSystem();
+
   return (
     <Example title="Horizontal">
       <div className="style-lyra:text-xs/relaxed flex flex-col gap-4 text-sm">
@@ -36,6 +38,8 @@ function SeparatorHorizontal() {
 }
 
 function SeparatorVertical() {
+  const { Separator } = useDesignSystem();
+
   return (
     <Example title="Vertical">
       <div className="style-lyra:text-xs/relaxed flex h-5 items-center gap-4 text-sm">
@@ -50,6 +54,8 @@ function SeparatorVertical() {
 }
 
 function SeparatorVerticalMenu() {
+  const { Separator } = useDesignSystem();
+
   return (
     <Example title="Vertical Menu">
       <div className="style-lyra:text-xs/relaxed flex items-center gap-2 text-sm md:gap-4">
@@ -77,6 +83,8 @@ function SeparatorVerticalMenu() {
 }
 
 function SeparatorInList() {
+  const { Separator } = useDesignSystem();
+
   return (
     <Example title="In List">
       <div className="style-lyra:text-xs/relaxed flex flex-col gap-2 text-sm">

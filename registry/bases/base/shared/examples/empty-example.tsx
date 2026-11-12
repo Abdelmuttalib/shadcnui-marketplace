@@ -3,21 +3,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/registry/bases/base/styles/default/ui/empty";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import { Kbd } from "@/registry/bases/base/styles/default/ui/kbd";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function EmptyExample() {
   return (
@@ -33,6 +19,15 @@ export default function EmptyExample() {
 }
 
 function EmptyBasic() {
+  const {
+    Button,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Empty>
@@ -72,6 +67,15 @@ function EmptyBasic() {
 }
 
 function EmptyWithMutedBackground() {
+  const {
+    Button,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="With Muted Background">
       <Empty className="bg-muted">
@@ -105,6 +109,18 @@ function EmptyWithMutedBackground() {
 }
 
 function EmptyWithBorder() {
+  const {
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyTitle,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Kbd,
+  } = useDesignSystem();
+
   return (
     <Example title="With Border">
       <Empty className="border">
@@ -141,6 +157,16 @@ function EmptyWithBorder() {
 }
 
 function EmptyWithIcon() {
+  const {
+    Button,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="With Icon">
       <Empty className="border">
@@ -179,6 +205,18 @@ function EmptyWithIcon() {
 }
 
 function EmptyWithMutedBackgroundAlt() {
+  const {
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyTitle,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Kbd,
+  } = useDesignSystem();
+
   return (
     <Example title="With Muted Background Alt">
       <Empty className="bg-muted/50">
@@ -215,6 +253,16 @@ function EmptyWithMutedBackgroundAlt() {
 }
 
 function EmptyInCard() {
+  const {
+    Button,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="In Card">
       <Empty>

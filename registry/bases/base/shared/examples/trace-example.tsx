@@ -15,55 +15,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Bubble,
-  BubbleContent,
-} from "@/registry/bases/base/styles/default/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  Message,
-  MessageContent,
-} from "@/registry/bases/base/styles/default/ui/message";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/registry/bases/base/styles/default/ui/sheet";
-import {
-  CodeBlock,
-  CodeBlockContent,
-  CodeBlockHeader,
-  CodeBlockTitle,
-} from "@/registry/bases/base/styles/default/ui/code-block";
-import {
-  Trace,
-  TraceCollapsible,
-  TraceCollapsibleContent,
-  TraceCollapsibleTrigger,
-  TraceIcon,
-  TraceLine,
-  TraceTitle,
-} from "@/registry/bases/base/styles/default/ui/trace";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 const REASONING = `The user wants to know why the checkout deploy is slow, so I should start from the build log instead of guessing.
 
@@ -265,6 +218,8 @@ function TraceChat() {
     setMessages(chatbot.get(0));
   }
 
+  const { Button, Trace } = useDesignSystem();
+
   return (
     <Example title="Chat" containerClassName="md:col-span-2">
       <div className="flex min-h-96 w-full max-w-xl flex-col gap-6 text-sm">
@@ -310,6 +265,9 @@ function ChatbotMessageItem({
   isStreaming: boolean;
   onApprovalResponse: (response: ApprovalResponse) => void;
 }) {
+  const { Trace, Bubble, BubbleContent, Message, MessageContent } =
+    useDesignSystem();
+
   if (message.role === "user") {
     return (
       <Message align="end">
@@ -454,6 +412,15 @@ function ReasoningActivity({
   const text = part.text.trim();
   const [open, setOpen] = React.useState<boolean>();
 
+  const {
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   if (!text) {
     return (
       <ActivityRow
@@ -488,6 +455,8 @@ function ToolActivity({
   part: ToolPart;
   isStreaming: boolean;
 }) {
+  const { CodeBlock, CodeBlockContent, Trace } = useDesignSystem();
+
   const props = { part, isStreaming };
 
   switch (part.type) {
@@ -640,6 +609,8 @@ function ToolRow({
   const running = isStreaming ? "running" : undefined;
   const denied = title.denied ?? `Denied: ${title.running}`;
 
+  const { CodeBlock, CodeBlockContent } = useDesignSystem();
+
   switch (part.state) {
     case "input-streaming":
     case "input-available":
@@ -686,6 +657,15 @@ function ActivityRow({
   title: React.ReactNode;
   children?: React.ReactNode;
 }) {
+  const {
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   if (!children) {
     return (
       <TraceLine status={status}>
@@ -717,6 +697,16 @@ function ToolApproval({
   part: ToolPart;
   onApprovalResponse: (response: ApprovalResponse) => void;
 }) {
+  const {
+    Button,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
+
   if (part.state !== "approval-requested" || part.type !== "tool-runCommand") {
     return null;
   }
@@ -752,6 +742,8 @@ function ToolApproval({
 }
 
 function LinkActivity({ href, title }: { href: string; title: string }) {
+  const { TraceIcon, TraceLine, TraceTitle } = useDesignSystem();
+
   return (
     <a href={href} target="_blank" rel="noreferrer">
       <TraceLine>
@@ -771,6 +763,20 @@ function LinkActivity({ href, title }: { href: string; title: string }) {
 }
 
 function FileActivity({ path, content }: { path: string; content: string }) {
+  const {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+    CodeBlock,
+    CodeBlockContent,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Sheet>
       <SheetTrigger>
@@ -806,6 +812,9 @@ function ToolInputOutput({
   input: unknown;
   output: string;
 }) {
+  const { CodeBlock, CodeBlockContent, CodeBlockHeader, CodeBlockTitle } =
+    useDesignSystem();
+
   return (
     <div className="flex flex-col gap-2">
       <CodeBlock size="sm">
@@ -829,6 +838,30 @@ function ToolInputOutput({
 }
 
 function TraceRows() {
+  const {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+    CodeBlock,
+    CodeBlockContent,
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Rows">
       <Trace className="max-w-md">
@@ -925,6 +958,19 @@ function TraceRows() {
 }
 
 function TraceToolCalls() {
+  const {
+    Badge,
+    CodeBlock,
+    CodeBlockContent,
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Tool Calls">
       <Trace className="max-w-md">
@@ -1024,6 +1070,14 @@ const transport = chat.transport({
 function ThinkingTrace({ text, running }: { text: string; running: boolean }) {
   const [open, setOpen] = React.useState<boolean>();
 
+  const {
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <TraceCollapsible
       open={open ?? (running && text.length > 0)}
@@ -1042,6 +1096,16 @@ function ThinkingTrace({ text, running }: { text: string; running: boolean }) {
 }
 
 function TraceReasoning() {
+  const {
+    Button,
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   const { messages, sendMessage, setMessages, status } = useChat({
     messages: initialMessages,
     transport,
@@ -1143,6 +1207,19 @@ function TraceReasoning() {
 }
 
 function TraceChainOfThought() {
+  const {
+    Badge,
+    CodeBlock,
+    CodeBlockContent,
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Chain of Thought">
       <TraceCollapsible className="max-w-md" defaultOpen>
@@ -1207,6 +1284,16 @@ function TraceChainOfThought() {
 }
 
 function TraceTask() {
+  const {
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Task">
       <TraceCollapsible className="max-w-md" defaultOpen>
@@ -1274,6 +1361,16 @@ const SOURCES = [
 ];
 
 function TraceSources() {
+  const {
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Sources">
       <TraceCollapsible className="max-w-md" defaultOpen>
@@ -1313,6 +1410,18 @@ function TraceSources() {
 }
 
 function TraceTurn() {
+  const {
+    CodeBlock,
+    CodeBlockContent,
+    Trace,
+    TraceCollapsible,
+    TraceCollapsibleContent,
+    TraceCollapsibleTrigger,
+    TraceIcon,
+    TraceLine,
+    TraceTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Whole Turn" containerClassName="md:col-span-2">
       <TraceCollapsible className="max-w-md" defaultOpen>

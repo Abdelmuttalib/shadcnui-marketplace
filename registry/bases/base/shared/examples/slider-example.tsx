@@ -6,8 +6,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
-import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SliderExample() {
   return (
@@ -23,6 +22,8 @@ export default function SliderExample() {
 }
 
 function SliderBasic() {
+  const { Slider } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Slider defaultValue={50} max={100} step={1} />
@@ -31,6 +32,8 @@ function SliderBasic() {
 }
 
 function SliderRange() {
+  const { Slider } = useDesignSystem();
+
   return (
     <Example title="Range">
       <Slider defaultValue={[25, 50]} max={100} step={5} />
@@ -39,6 +42,8 @@ function SliderRange() {
 }
 
 function SliderMultiple() {
+  const { Slider } = useDesignSystem();
+
   return (
     <Example title="Multiple Thumbs">
       <Slider defaultValue={[10, 20, 70]} max={100} step={10} />
@@ -47,6 +52,8 @@ function SliderMultiple() {
 }
 
 function SliderVertical() {
+  const { Slider } = useDesignSystem();
+
   return (
     <Example title="Vertical">
       <div className="flex items-center gap-6">
@@ -72,6 +79,8 @@ function SliderVertical() {
 function SliderControlled() {
   const [value, setValue] = React.useState([0.3, 0.7]);
 
+  const { Slider, Label } = useDesignSystem();
+
   return (
     <Example title="Controlled">
       <div className="grid w-full gap-3">
@@ -84,7 +93,7 @@ function SliderControlled() {
         <Slider
           id="slider-demo-temperature"
           value={value}
-          onValueChange={(value) => setValue(value as number[])}
+          onValueChange={(value: any) => setValue(value as number[])}
           min={0}
           max={1}
           step={0.1}
@@ -95,6 +104,8 @@ function SliderControlled() {
 }
 
 function SliderDisabled() {
+  const { Slider } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Slider defaultValue={[50]} max={100} step={1} disabled />

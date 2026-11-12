@@ -5,13 +5,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import { Kbd } from "@/registry/bases/base/styles/default/ui/kbd";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/styles/default/ui/tooltip";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function TooltipExample() {
   return (
@@ -29,6 +24,8 @@ export default function TooltipExample() {
 }
 
 function TooltipBasic() {
+  const { Button, Tooltip, TooltipContent, TooltipTrigger } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Tooltip>
@@ -44,6 +41,8 @@ function TooltipBasic() {
 }
 
 function TooltipSides() {
+  const { Button, Tooltip, TooltipContent, TooltipTrigger } = useDesignSystem();
+
   return (
     <Example title="Sides">
       <div className="flex flex-wrap gap-2">
@@ -74,6 +73,8 @@ function TooltipSides() {
 }
 
 function TooltipWithIcon() {
+  const { Button, Tooltip, TooltipContent, TooltipTrigger } = useDesignSystem();
+
   return (
     <Example title="With Icon">
       <Tooltip>
@@ -96,6 +97,8 @@ function TooltipWithIcon() {
 }
 
 function TooltipLongContent() {
+  const { Button, Tooltip, TooltipContent, TooltipTrigger } = useDesignSystem();
+
   return (
     <Example title="Long Content">
       <Tooltip>
@@ -112,6 +115,8 @@ function TooltipLongContent() {
 }
 
 function TooltipDisabled() {
+  const { Button, Tooltip, TooltipContent, TooltipTrigger } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Tooltip>
@@ -129,6 +134,9 @@ function TooltipDisabled() {
 }
 
 function TooltipWithKeyboard() {
+  const { Button, Kbd, Tooltip, TooltipContent, TooltipTrigger } =
+    useDesignSystem();
+
   return (
     <Example title="With Keyboard Shortcut">
       <Tooltip>
@@ -150,6 +158,8 @@ function TooltipWithKeyboard() {
 }
 
 function TooltipOnLink() {
+  const { Tooltip, TooltipContent, TooltipTrigger } = useDesignSystem();
+
   return (
     <Example title="On Link">
       <Tooltip>
@@ -173,6 +183,8 @@ function TooltipOnLink() {
 }
 
 function TooltipFormatted() {
+  const { Button, Tooltip, TooltipContent, TooltipTrigger } = useDesignSystem();
+
   return (
     <Example title="Formatted Content">
       <Tooltip>

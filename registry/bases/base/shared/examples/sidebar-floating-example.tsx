@@ -1,43 +1,8 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import { Field } from "@/registry/bases/base/styles/default/ui/field";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarHeader,
-  SidebarInput,
-  SidebarInset,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-  SidebarRail,
-  SidebarTrigger,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SidebarFloatingExample() {
   const data = {
@@ -169,6 +134,39 @@ export default function SidebarFloatingExample() {
       },
     ],
   };
+
+  const {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemTitle,
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarHeader,
+    SidebarInput,
+    SidebarInset,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarProvider,
+    SidebarRail,
+    SidebarTrigger,
+    SidebarFooter,
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+
+    Field,
+  } = useDesignSystem();
 
   return (
     <SidebarProvider className="bg-background">

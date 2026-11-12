@@ -7,62 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
-  FieldSet,
-  FieldTitle,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import { Kbd } from "@/registry/bases/base/styles/default/ui/kbd";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectSeparator,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/styles/default/ui/tabs";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/styles/default/ui/tooltip";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function DialogExample() {
   return (
@@ -77,6 +23,22 @@ export default function DialogExample() {
 }
 
 function DialogWithForm() {
+  const {
+    Button,
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+  } = useDesignSystem();
+
   return (
     <Example title="With Form" className="items-center justify-center">
       <Dialog>
@@ -120,6 +82,16 @@ function DialogWithForm() {
 }
 
 function DialogScrollableContent() {
+  const {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Scrollable Content" className="items-center justify-center">
       <Dialog>
@@ -156,6 +128,18 @@ function DialogScrollableContent() {
 }
 
 function DialogWithStickyFooter() {
+  const {
+    Button,
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Sticky Footer" className="items-center justify-center">
       <Dialog>
@@ -197,6 +181,18 @@ function DialogWithStickyFooter() {
 }
 
 function DialogNoCloseButton() {
+  const {
+    Button,
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="No Close Button" className="items-center justify-center">
       <Dialog>
@@ -276,6 +272,47 @@ function DialogChatSettings() {
   const [spokenLanguage, setSpokenLanguage] = React.useState("en");
   const [voice, setVoice] = React.useState("samantha");
 
+  const {
+    Button,
+    Checkbox,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldSeparator,
+    FieldSet,
+    FieldTitle,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+    Kbd,
+    NativeSelect,
+    NativeSelectOption,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Switch,
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+    Textarea,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Chat Settings" className="items-center justify-center">
       <Dialog>
@@ -293,7 +330,7 @@ function DialogChatSettings() {
           <div className="flex flex-col gap-4">
             <NativeSelect
               value={tab}
-              onChange={(e) => setTab(e.target.value)}
+              onChange={(e: any) => setTab(e.target.value)}
               className="w-full md:hidden"
             >
               <NativeSelectOption value="general">General</NativeSelectOption>
@@ -323,7 +360,9 @@ function DialogChatSettings() {
                         <Select
                           items={themes}
                           value={theme}
-                          onValueChange={(value) => setTheme(value as string)}
+                          onValueChange={(value: any) =>
+                            setTheme(value as string)
+                          }
                         >
                           <SelectTrigger id="theme">
                             <SelectValue />
@@ -350,7 +389,7 @@ function DialogChatSettings() {
                         <Select
                           items={accents}
                           value={accentColor}
-                          onValueChange={(value) =>
+                          onValueChange={(value: any) =>
                             setAccentColor(value as string)
                           }
                         >
@@ -386,7 +425,7 @@ function DialogChatSettings() {
                         <Select
                           items={spokenLanguages}
                           value={spokenLanguage}
-                          onValueChange={(value) =>
+                          onValueChange={(value: any) =>
                             setSpokenLanguage(value as string)
                           }
                         >
@@ -413,7 +452,9 @@ function DialogChatSettings() {
                         <Select
                           items={voices}
                           value={voice}
-                          onValueChange={(value) => setVoice(value as string)}
+                          onValueChange={(value: any) =>
+                            setVoice(value as string)
+                          }
                         >
                           <SelectTrigger id="voice">
                             <SelectValue />

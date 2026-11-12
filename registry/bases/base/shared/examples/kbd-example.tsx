@@ -3,18 +3,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import { Kbd, KbdGroup } from "@/registry/bases/base/styles/default/ui/kbd";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/styles/default/ui/tooltip";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function KbdExample() {
   return (
@@ -33,6 +22,8 @@ export default function KbdExample() {
 }
 
 function KbdBasic() {
+  const { Kbd } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <div className="flex items-center gap-2">
@@ -45,6 +36,7 @@ function KbdBasic() {
 }
 
 function KbdModifierKeys() {
+  const { Kbd } = useDesignSystem();
   return (
     <Example title="Modifier Keys">
       <div className="flex items-center gap-2">
@@ -56,6 +48,8 @@ function KbdModifierKeys() {
 }
 
 function KbdGroupExample() {
+  const { Kbd, KbdGroup } = useDesignSystem();
+
   return (
     <Example title="KbdGroup">
       <KbdGroup>
@@ -68,6 +62,8 @@ function KbdGroupExample() {
 }
 
 function KbdArrowKeys() {
+  const { Kbd } = useDesignSystem();
+
   return (
     <Example title="Arrow Keys">
       <div className="flex items-center gap-2">
@@ -81,6 +77,8 @@ function KbdArrowKeys() {
 }
 
 function KbdWithIcons() {
+  const { Kbd, KbdGroup } = useDesignSystem();
+
   return (
     <Example title="With Icons">
       <KbdGroup>
@@ -117,6 +115,8 @@ function KbdWithIcons() {
 }
 
 function KbdWithIconsAndText() {
+  const { Kbd, KbdGroup } = useDesignSystem();
+
   return (
     <Example title="With Icons and Text">
       <KbdGroup>
@@ -146,6 +146,9 @@ function KbdWithIconsAndText() {
 }
 
 function KbdInInputGroup() {
+  const { InputGroup, InputGroupAddon, InputGroupInput, Kbd } =
+    useDesignSystem();
+
   return (
     <Example title="InputGroup">
       <InputGroup>
@@ -159,6 +162,9 @@ function KbdInInputGroup() {
 }
 
 function KbdInTooltip() {
+  const { Button, Kbd, Tooltip, TooltipContent, TooltipTrigger } =
+    useDesignSystem();
+
   return (
     <Example title="Tooltip">
       <Tooltip>
@@ -182,6 +188,7 @@ function KbdInTooltip() {
 }
 
 function KbdWithSamp() {
+  const { Kbd } = useDesignSystem();
   return (
     <Example title="With samp">
       <Kbd>

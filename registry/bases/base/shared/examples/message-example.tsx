@@ -7,42 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Attachment,
-  AttachmentAction,
-  AttachmentActions,
-  AttachmentContent,
-  AttachmentDescription,
-  AttachmentGroup,
-  AttachmentMedia,
-  AttachmentTitle,
-} from "@/registry/bases/base/styles/default/ui/attachment";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import {
-  Bubble,
-  BubbleContent,
-  BubbleGroup,
-  BubbleReactions,
-} from "@/registry/bases/base/styles/default/ui/bubble";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Marker,
-  MarkerContent,
-  MarkerIcon,
-} from "@/registry/bases/base/styles/default/ui/marker";
-import {
-  Message,
-  MessageAvatar,
-  MessageContent,
-  MessageFooter,
-  MessageGroup,
-  MessageHeader,
-} from "@/registry/bases/base/styles/default/ui/message";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 type MessagePartsData = {
   deployment: {
@@ -151,6 +117,8 @@ function MessageTextPart({
   part,
   message,
 }: MessagePartRenderProps<MessagePartsPart, MessagePartsMessage>) {
+  const { Bubble, BubbleContent } = useDesignSystem();
+
   if (part.type !== "text") {
     return null;
   }
@@ -168,6 +136,9 @@ function MessageTextPart({
 }
 
 function MessageDefault() {
+  const { Bubble, BubbleContent, BubbleGroup, Message, MessageContent } =
+    useDesignSystem();
+
   return (
     <Example title="Message">
       <div className="flex w-full max-w-md min-w-0 flex-col gap-10">
@@ -213,6 +184,17 @@ function MessageDefault() {
 }
 
 function MessageWithAvatar() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Bubble,
+    BubbleContent,
+    Message,
+    MessageAvatar,
+    MessageContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Avatar">
       <div className="flex w-full max-w-md flex-col gap-10">
@@ -308,6 +290,18 @@ function MessageWithAvatar() {
 }
 
 function MessageGroupExample() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Bubble,
+    BubbleContent,
+    Message,
+    MessageAvatar,
+    MessageContent,
+    MessageGroup,
+  } = useDesignSystem();
+
   return (
     <Example title="Group">
       <div className="flex w-full max-w-md flex-col gap-10">
@@ -409,6 +403,23 @@ function MessageGroupExample() {
 }
 
 function MessageGroupChat() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Bubble,
+    BubbleContent,
+    Marker,
+    MarkerContent,
+    MarkerIcon,
+    Message,
+    MessageAvatar,
+    MessageContent,
+    MessageGroup,
+    MessageHeader,
+    Spinner,
+  } = useDesignSystem();
+
   return (
     <Example title="Group Chat">
       <div className="flex w-full max-w-md flex-col gap-10">
@@ -489,6 +500,17 @@ Can you check if the users are being created?`}
 }
 
 function MessageHeaderFooter() {
+  const {
+    Bubble,
+    BubbleContent,
+    BubbleReactions,
+    Button,
+    Message,
+    MessageContent,
+    MessageFooter,
+    MessageHeader,
+  } = useDesignSystem();
+
   return (
     <Example title="Header and Footer">
       <div className="flex w-full max-w-md flex-col gap-12">
@@ -593,6 +615,20 @@ function MessageHeaderFooter() {
 }
 
 function MessageAttachment() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentMedia,
+    AttachmentTitle,
+    Bubble,
+    BubbleContent,
+    Message,
+    MessageContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Attachment">
       <div className="flex w-full max-w-sm flex-col gap-8">
@@ -669,6 +705,21 @@ function MessageAttachment() {
 }
 
 function MessageAttachmentGroup() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentGroup,
+    AttachmentMedia,
+    AttachmentTitle,
+    Bubble,
+    BubbleContent,
+    Message,
+    MessageContent,
+  } = useDesignSystem();
+
   return (
     <Example title="Attachment Group">
       <div className="flex w-full max-w-sm flex-col gap-8">
@@ -820,6 +871,19 @@ function MessageAttachmentGroup() {
 }
 
 function MessageActions() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Bubble,
+    BubbleContent,
+    Button,
+    Message,
+    MessageAvatar,
+    MessageContent,
+    MessageFooter,
+  } = useDesignSystem();
+
   return (
     <Example title="Actions">
       <div className="flex w-full max-w-md flex-col gap-10">

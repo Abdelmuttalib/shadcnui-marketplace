@@ -7,27 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Attachment,
-  AttachmentAction,
-  AttachmentActions,
-  AttachmentContent,
-  AttachmentDescription,
-  AttachmentGroup,
-  AttachmentMedia,
-  AttachmentTitle,
-  AttachmentTrigger,
-} from "@/registry/bases/base/styles/default/ui/attachment";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function AttachmentExample() {
   return (
@@ -45,6 +26,17 @@ export default function AttachmentExample() {
 }
 
 function AttachmentFiles() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentGroup,
+    AttachmentMedia,
+    AttachmentTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Files" className="gap-8">
       <div className="flex w-full flex-col gap-2">
@@ -274,6 +266,16 @@ function AttachmentFiles() {
 }
 
 function AttachmentContentOnly() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentTitle,
+    AttachmentTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Content Only" className="gap-8">
       <div className="flex w-full flex-col gap-2">
@@ -394,6 +396,18 @@ function AttachmentContentOnly() {
 }
 
 function AttachmentStates() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentTitle,
+    AttachmentGroup,
+    AttachmentMedia,
+    Spinner,
+  } = useDesignSystem();
+
   return (
     <Example title="States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
@@ -683,6 +697,18 @@ function AttachmentStates() {
 }
 
 function AttachmentImages() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentTitle,
+    AttachmentMedia,
+    AttachmentGroup,
+    AttachmentTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Images" className="gap-8">
       <div className="flex w-full flex-col gap-3">
@@ -968,6 +994,17 @@ function AttachmentImages() {
 }
 
 function AttachmentImageStates() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentTitle,
+    AttachmentGroup,
+    AttachmentMedia,
+  } = useDesignSystem();
+
   return (
     <Example title="Image States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
@@ -1237,6 +1274,14 @@ function AttachmentImageStates() {
 }
 
 function AttachmentSizes() {
+  const {
+    Attachment,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentTitle,
+    AttachmentMedia,
+  } = useDesignSystem();
+
   return (
     <Example title="Sizes" className="gap-3">
       <Attachment size="default" className="w-full">
@@ -1288,6 +1333,17 @@ function AttachmentSizes() {
 }
 
 function AttachmentScrollableGroup() {
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentTitle,
+    AttachmentGroup,
+    AttachmentMedia,
+  } = useDesignSystem();
+
   return (
     <Example title="Scrollable Group" className="gap-4">
       <AttachmentGroup className="w-full">
@@ -1525,6 +1581,26 @@ function AttachmentScrollableGroup() {
 
 function AttachmentTriggers() {
   const [isVisible, setIsVisible] = React.useState(true);
+
+  const {
+    Attachment,
+    AttachmentAction,
+    AttachmentActions,
+    AttachmentContent,
+    AttachmentDescription,
+    AttachmentTitle,
+    AttachmentMedia,
+    AttachmentTrigger,
+
+    Button,
+
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } = useDesignSystem();
 
   return (
     <Example title="Triggers" className="gap-3">

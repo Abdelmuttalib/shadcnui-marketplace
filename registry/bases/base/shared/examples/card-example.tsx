@@ -7,33 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarGroupCount,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 const spacingOptions = [
   {
@@ -78,6 +53,16 @@ export default function CardExample() {
 }
 
 function CardContentEdgeToEdge() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="Content Edge to Edge">
       <Card className="mx-auto w-full max-w-sm">
@@ -123,12 +108,22 @@ function CardCustomSpacing() {
     (option) => option.value === spacing
   );
 
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ToggleGroup,
+    ToggleGroupItem,
+  } = useDesignSystem();
+
   return (
     <Example title="Custom Spacing">
       <div className="mx-auto grid w-full max-w-sm gap-4">
         <ToggleGroup
           value={[spacing]}
-          onValueChange={(value) => {
+          onValueChange={(value: any) => {
             if (value[0]) {
               setSpacing(value[0]);
             }
@@ -169,6 +164,20 @@ function CardCustomSpacing() {
 }
 
 function CardLogin() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+    Button,
+    FieldGroup,
+    Field,
+    FieldLabel,
+    Input,
+  } = useDesignSystem();
+
   return (
     <Example title="Login">
       <Card className="mx-auto w-full max-w-sm">
@@ -225,6 +234,22 @@ function CardLogin() {
 }
 
 function CardMeetingNotes() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+    CardAction,
+    Button,
+    Avatar,
+    AvatarFallback,
+    AvatarGroup,
+    AvatarGroupCount,
+    AvatarImage,
+  } = useDesignSystem();
+
   return (
     <Example title="Meeting Notes">
       <Card className="mx-auto w-full max-w-sm">
@@ -289,6 +314,9 @@ function CardMeetingNotes() {
 }
 
 function CardWithImage() {
+  const { Card, CardDescription, CardHeader, CardTitle, CardFooter, Button } =
+    useDesignSystem();
+
   return (
     <Example title="With Image">
       <Card size="default" className="relative mx-auto w-full max-w-sm pt-0">
@@ -324,6 +352,16 @@ function CardWithImage() {
 }
 
 function CardWithImageSmall() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="With Image (Small)">
       <Card size="sm" className="relative mx-auto w-full max-w-sm pt-0">
@@ -359,6 +397,9 @@ function CardWithImageSmall() {
 }
 
 function CardHeaderWithBorder() {
+  const { Card, CardContent, CardDescription, CardHeader, CardTitle } =
+    useDesignSystem();
+
   return (
     <Example title="Header with Border">
       <Card className="mx-auto w-full max-w-sm">
@@ -380,6 +421,8 @@ function CardHeaderWithBorder() {
 }
 
 function CardFooterWithBorder() {
+  const { Card, CardContent, CardFooter, Button } = useDesignSystem();
+
   return (
     <Example title="Footer with Border">
       <Card className="mx-auto w-full max-w-sm">
@@ -400,6 +443,16 @@ function CardFooterWithBorder() {
 }
 
 function CardDefault() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="Default Size">
       <Card size="default" className="mx-auto w-full max-w-sm">
@@ -426,6 +479,16 @@ function CardDefault() {
 }
 
 function CardSmall() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+    Button,
+  } = useDesignSystem();
+
   return (
     <Example title="Small Size">
       <Card size="sm" className="mx-auto w-full max-w-sm">
@@ -452,6 +515,9 @@ function CardSmall() {
 }
 
 function CardHeaderWithBorderSmall() {
+  const { Card, CardContent, CardDescription, CardHeader, CardTitle } =
+    useDesignSystem();
+
   return (
     <Example title="Header with Border (Small)">
       <Card size="sm" className="mx-auto w-full max-w-sm">
@@ -473,6 +539,8 @@ function CardHeaderWithBorderSmall() {
 }
 
 function CardFooterWithBorderSmall() {
+  const { Button, Card, CardContent, CardFooter } = useDesignSystem();
+
   return (
     <Example title="Footer with Border (Small)">
       <Card size="sm" className="mx-auto w-full max-w-sm">

@@ -9,42 +9,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Bubble,
-  BubbleContent,
-} from "@/registry/bases/base/styles/default/ui/bubble";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupTextarea,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import {
-  Marker,
-  MarkerContent,
-  MarkerIcon,
-} from "@/registry/bases/base/styles/default/ui/marker";
-import {
-  Message,
-  MessageContent,
-} from "@/registry/bases/base/styles/default/ui/message";
-import {
-  MessageScroller,
-  MessageScrollerButton,
-  MessageScrollerContent,
-  MessageScrollerItem,
-  MessageScrollerProvider,
-  MessageScrollerViewport,
-} from "@/registry/bases/base/styles/default/ui/message-scroller";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function MessageScrollerExample() {
   return (
@@ -142,6 +107,33 @@ function MessageScrollerDemo() {
 
     void sendMessage(nextMessage);
   }
+
+  const {
+    Bubble,
+    BubbleContent,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupTextarea,
+    Marker,
+    MarkerContent,
+    MarkerIcon,
+    Message,
+    MessageContent,
+    MessageScroller,
+    MessageScrollerButton,
+    MessageScrollerContent,
+    MessageScrollerItem,
+    MessageScrollerProvider,
+    MessageScrollerViewport,
+    Spinner,
+  } = useDesignSystem();
 
   return (
     <Example title="Chat" containerClassName="self-start">

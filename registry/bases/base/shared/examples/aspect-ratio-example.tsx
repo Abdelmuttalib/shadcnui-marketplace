@@ -4,7 +4,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { AspectRatio } from "@/registry/bases/base/styles/default/ui/aspect-ratio";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function AspectRatioExample() {
   return (
@@ -18,6 +18,8 @@ export default function AspectRatioExample() {
 }
 
 function AspectRatio16x9() {
+  const { AspectRatio } = useDesignSystem();
+
   return (
     <Example title="16:9" className="items-center justify-center">
       <AspectRatio
@@ -36,6 +38,8 @@ function AspectRatio16x9() {
 }
 
 function AspectRatio1x1() {
+  const { AspectRatio } = useDesignSystem();
+
   return (
     <Example title="1:1" className="items-start">
       <AspectRatio
@@ -54,6 +58,8 @@ function AspectRatio1x1() {
 }
 
 function AspectRatio9x16() {
+  const { AspectRatio } = useDesignSystem();
+
   return (
     <Example title="9:16" className="items-center justify-center">
       <AspectRatio
@@ -72,6 +78,8 @@ function AspectRatio9x16() {
 }
 
 function AspectRatio21x9() {
+  const { AspectRatio } = useDesignSystem();
+
   return (
     <Example title="21:9" className="items-center justify-center">
       <AspectRatio

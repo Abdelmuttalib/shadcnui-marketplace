@@ -3,8 +3,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import { Toggle } from "@/registry/bases/base/styles/default/ui/toggle";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function ToggleExample() {
   return (
@@ -22,6 +22,8 @@ export default function ToggleExample() {
 }
 
 function ToggleBasic() {
+  const { Toggle } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <div className="flex flex-wrap items-center gap-2">
@@ -58,6 +60,8 @@ function ToggleBasic() {
 }
 
 function ToggleOutline() {
+  const { Button, Toggle } = useDesignSystem();
+
   return (
     <Example title="Outline">
       <div className="flex flex-wrap items-center gap-2">
@@ -87,6 +91,8 @@ function ToggleOutline() {
 }
 
 function ToggleSizes() {
+  const { Toggle } = useDesignSystem();
+
   return (
     <Example title="Sizes">
       <div className="flex flex-wrap items-center gap-2">
@@ -105,6 +111,8 @@ function ToggleSizes() {
 }
 
 function ToggleWithButtonText() {
+  const { Button, Toggle } = useDesignSystem();
+
   return (
     <Example title="With Button Text">
       <div className="flex flex-col gap-4">
@@ -138,6 +146,8 @@ function ToggleWithButtonText() {
 }
 
 function ToggleWithButtonIcon() {
+  const { Button, Toggle } = useDesignSystem();
+
   return (
     <Example title="With Button Icon">
       <div className="flex flex-col gap-4">
@@ -211,6 +221,8 @@ function ToggleWithButtonIcon() {
 }
 
 function ToggleWithButtonIconText() {
+  const { Button, Toggle } = useDesignSystem();
+
   return (
     <Example title="With Button Icon + Text">
       <div className="flex flex-col gap-4">
@@ -293,6 +305,8 @@ function ToggleWithButtonIconText() {
 }
 
 function ToggleDisabled() {
+  const { Toggle } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <div className="flex flex-wrap items-center gap-2">
@@ -308,6 +322,8 @@ function ToggleDisabled() {
 }
 
 function ToggleWithIcon() {
+  const { Toggle } = useDesignSystem();
+
   return (
     <Example title="With Icon">
       <div className="flex flex-wrap items-center gap-2">

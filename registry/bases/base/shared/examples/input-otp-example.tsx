@@ -8,27 +8,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldDescription,
-  FieldError,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from "@/registry/bases/base/styles/default/ui/input-otp";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function InputOTPExample() {
   return (
@@ -46,6 +27,15 @@ export default function InputOTPExample() {
 }
 
 function InputOTPSimple() {
+  const {
+    Field,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+  } = useDesignSystem();
+
   return (
     <Example title="Simple">
       <Field>
@@ -69,6 +59,9 @@ function InputOTPSimple() {
 }
 
 function InputOTPPattern() {
+  const { Field, FieldLabel, InputOTP, InputOTPGroup, InputOTPSlot } =
+    useDesignSystem();
+
   return (
     <Example title="Digits Only">
       <Field>
@@ -90,6 +83,15 @@ function InputOTPPattern() {
 
 function InputOTPWithSeparator() {
   const [value, setValue] = React.useState("123456");
+
+  const {
+    Field,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+  } = useDesignSystem();
 
   return (
     <Example title="With Separator">
@@ -122,6 +124,16 @@ function InputOTPWithSeparator() {
 }
 
 function InputOTPAlphanumeric() {
+  const {
+    Field,
+    FieldDescription,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+  } = useDesignSystem();
+
   return (
     <Example title="Alphanumeric">
       <Field>
@@ -150,6 +162,15 @@ function InputOTPAlphanumeric() {
 }
 
 function InputOTPDisabled() {
+  const {
+    Field,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+  } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Field>
@@ -173,6 +194,15 @@ function InputOTPDisabled() {
 }
 
 function InputOTPFourDigits() {
+  const {
+    Field,
+    FieldDescription,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSlot,
+  } = useDesignSystem();
+
   return (
     <Example title="4 Digits">
       <Field>
@@ -193,6 +223,17 @@ function InputOTPFourDigits() {
 
 function InputOTPInvalid() {
   const [value, setValue] = React.useState("000000");
+
+  const {
+    Field,
+    FieldDescription,
+    FieldError,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+  } = useDesignSystem();
 
   return (
     <Example title="Invalid State">
@@ -224,6 +265,23 @@ function InputOTPInvalid() {
 }
 
 function InputOTPForm() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    Field,
+    FieldDescription,
+    FieldLabel,
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+  } = useDesignSystem();
+
   return (
     <Example title="Form">
       <Card className="mx-auto max-w-md">

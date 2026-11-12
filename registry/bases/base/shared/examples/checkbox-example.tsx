@@ -6,23 +6,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldTitle,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/bases/base/styles/default/ui/table";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function CheckboxExample() {
   return (
@@ -39,6 +24,8 @@ export default function CheckboxExample() {
 }
 
 function CheckboxBasic() {
+  const { Checkbox, Field, FieldLabel } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Field orientation="horizontal">
@@ -50,6 +37,9 @@ function CheckboxBasic() {
 }
 
 function CheckboxWithDescription() {
+  const { Checkbox, Field, FieldContent, FieldDescription, FieldLabel } =
+    useDesignSystem();
+
   return (
     <Example title="With Description">
       <Field orientation="horizontal">
@@ -66,6 +56,8 @@ function CheckboxWithDescription() {
 }
 
 function CheckboxInvalid() {
+  const { Checkbox, Field, FieldLabel } = useDesignSystem();
+
   return (
     <Example title="Invalid">
       <Field orientation="horizontal" data-invalid>
@@ -77,6 +69,8 @@ function CheckboxInvalid() {
 }
 
 function CheckboxDisabled() {
+  const { Checkbox, Field, FieldLabel } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <Field orientation="horizontal">
@@ -88,6 +82,16 @@ function CheckboxDisabled() {
 }
 
 function CheckboxWithTitle() {
+  const {
+    Checkbox,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldTitle,
+  } = useDesignSystem();
+
   return (
     <Example title="With Title">
       <FieldGroup>
@@ -170,6 +174,16 @@ function CheckboxInTable() {
     setSelectedRows(newSelected);
   };
 
+  const {
+    Checkbox,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <Example title="In Table">
       <Table>
@@ -197,7 +211,7 @@ function CheckboxInTable() {
                 <Checkbox
                   id={`row-${row.id}`}
                   checked={selectedRows.has(row.id)}
-                  onCheckedChange={(checked) =>
+                  onCheckedChange={(checked: any) =>
                     handleSelectRow(row.id, checked === true)
                   }
                 />
@@ -214,6 +228,8 @@ function CheckboxInTable() {
 }
 
 function CheckboxGroup() {
+  const { Checkbox, Field, FieldLabel } = useDesignSystem();
+
   return (
     <Example title="Group">
       <Field>

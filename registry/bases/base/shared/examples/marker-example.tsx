@@ -7,29 +7,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/registry/bases/base/styles/default/ui/accordion";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/registry/bases/base/styles/default/ui/drawer";
-import {
-  Marker,
-  MarkerContent,
-  MarkerIcon,
-} from "@/registry/bases/base/styles/default/ui/marker";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function MarkerExamples() {
   return (
@@ -44,6 +23,8 @@ export default function MarkerExamples() {
 }
 
 function MarkerExample() {
+  const { Marker, MarkerContent, MarkerIcon, Spinner } = useDesignSystem();
+
   return (
     <Example title="Markers" className="gap-8">
       <Marker>
@@ -154,6 +135,8 @@ function MarkerExample() {
 }
 
 function MarkerBorder() {
+  const { Marker, MarkerContent, MarkerIcon } = useDesignSystem();
+
   return (
     <Example title="Border" className="gap-3">
       <Marker variant="border">
@@ -197,6 +180,9 @@ function MarkerBorder() {
 }
 
 function MarkerSeparator() {
+  const { Button, Marker, MarkerContent, MarkerIcon, Spinner } =
+    useDesignSystem();
+
   return (
     <Example title="Separator" className="gap-8">
       <Marker variant="separator">
@@ -247,6 +233,16 @@ function MarkerSeparator() {
 }
 
 function MarkerAccordion() {
+  const {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+    Marker,
+    MarkerContent,
+    MarkerIcon,
+  } = useDesignSystem();
+
   return (
     <Example title="Accordion" containerClassName="min-h-72">
       <Accordion>
@@ -279,6 +275,19 @@ function MarkerAccordion() {
 }
 
 function MarkerDrawer() {
+  const {
+    Button,
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+    Marker,
+  } = useDesignSystem();
+
   return (
     <Example title="Drawer">
       <Drawer swipeDirection="right">

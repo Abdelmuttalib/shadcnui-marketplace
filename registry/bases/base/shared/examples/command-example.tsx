@@ -7,22 +7,7 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Command,
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "@/registry/bases/base/styles/default/ui/command";
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function CommandExample() {
   return (
@@ -37,6 +22,19 @@ export default function CommandExample() {
 }
 
 function CommandInline() {
+  const {
+    Card,
+    CardContent,
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    CommandSeparator,
+    CommandShortcut,
+  } = useDesignSystem();
+
   return (
     <Example title="Inline">
       <Card className="w-full p-0">
@@ -124,6 +122,17 @@ function CommandInline() {
 function CommandBasic() {
   const [open, setOpen] = React.useState(false);
 
+  const {
+    Button,
+    Command,
+    CommandDialog,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+  } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <div className="flex flex-col gap-4">
@@ -154,6 +163,18 @@ function CommandBasic() {
 
 function CommandWithShortcuts() {
   const [open, setOpen] = React.useState(false);
+
+  const {
+    Button,
+    Command,
+    CommandDialog,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    CommandShortcut,
+  } = useDesignSystem();
 
   return (
     <Example title="With Shortcuts">
@@ -215,6 +236,19 @@ function CommandWithShortcuts() {
 
 function CommandWithGroups() {
   const [open, setOpen] = React.useState(false);
+
+  const {
+    Button,
+    Command,
+    CommandDialog,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    CommandSeparator,
+    CommandShortcut,
+  } = useDesignSystem();
 
   return (
     <Example title="With Groups">
@@ -309,6 +343,19 @@ function CommandWithGroups() {
 
 function CommandManyItems() {
   const [open, setOpen] = React.useState(false);
+
+  const {
+    Button,
+    Command,
+    CommandDialog,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    CommandSeparator,
+    CommandShortcut,
+  } = useDesignSystem();
 
   return (
     <Example title="Many Groups & Items">

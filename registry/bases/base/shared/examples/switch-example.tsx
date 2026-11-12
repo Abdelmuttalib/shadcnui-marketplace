@@ -2,15 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldLabel,
-  FieldTitle,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
-import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SwitchExample() {
   return (
@@ -25,6 +18,8 @@ export default function SwitchExample() {
 }
 
 function SwitchBasic() {
+  const { Field, FieldLabel, Switch } = useDesignSystem();
+
   return (
     <Example title="Basic">
       <Field orientation="horizontal">
@@ -36,6 +31,7 @@ function SwitchBasic() {
 }
 
 function SwitchWithLabel() {
+  const { Label, Switch } = useDesignSystem();
   return (
     <Example title="With Label">
       <div className="flex items-center gap-2">
@@ -47,6 +43,14 @@ function SwitchWithLabel() {
 }
 
 function SwitchWithDescription() {
+  const {
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldLabel,
+    FieldTitle,
+    Switch,
+  } = useDesignSystem();
   return (
     <Example title="With Description">
       <FieldLabel htmlFor="switch-focus-mode">
@@ -66,6 +70,8 @@ function SwitchWithDescription() {
 }
 
 function SwitchDisabled() {
+  const { Label, Switch } = useDesignSystem();
+
   return (
     <Example title="Disabled">
       <div className="flex flex-col gap-12">
@@ -85,6 +91,8 @@ function SwitchDisabled() {
 }
 
 function SwitchSizes() {
+  const { Label, Switch } = useDesignSystem();
+
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-12">

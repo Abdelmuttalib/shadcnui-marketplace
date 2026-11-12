@@ -2,23 +2,8 @@ import {
   Example,
   ExampleWrapper,
 } from "@/registry/bases/base/shared/components/example";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/registry/bases/base/styles/default/ui/sheet";
+
+import { useDesignSystem } from "../components/design-system-provider";
 
 export default function SheetExample() {
   return (
@@ -31,6 +16,22 @@ export default function SheetExample() {
 }
 
 function SheetWithForm() {
+  const {
+    Button,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetFooter,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="With Form">
       <Sheet>
@@ -66,6 +67,22 @@ function SheetWithForm() {
 }
 
 function SheetNoCloseButton() {
+  const {
+    Button,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetFooter,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="No Close Button">
       <Sheet>
@@ -89,6 +106,22 @@ function SheetNoCloseButton() {
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
 
 function SheetWithSides() {
+  const {
+    Button,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetFooter,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+  } = useDesignSystem();
+
   return (
     <Example title="Sides">
       <div className="flex flex-wrap gap-2">
