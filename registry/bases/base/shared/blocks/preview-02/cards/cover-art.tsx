@@ -1,15 +1,19 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Item } from "@/registry/bases/base/styles/default/ui/item";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function CoverArt() {
+  const {
+    Button,
+
+    Card,
+    CardFooter,
+    CardContent,
+    CardDescription,
+    Label,
+    Item,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent className="flex flex-col gap-3">

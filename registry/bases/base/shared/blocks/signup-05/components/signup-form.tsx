@@ -3,20 +3,22 @@
 import { cn } from "cn";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SignupForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const {
+    Button,
+    Field,
+    FieldDescription,
+    FieldSeparator,
+    FieldGroup,
+    FieldLabel,
+    Input,
+  } = useDesignSystem();
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <form>

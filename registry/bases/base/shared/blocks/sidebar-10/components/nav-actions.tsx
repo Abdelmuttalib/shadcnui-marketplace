@@ -3,21 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/bases/base/styles/default/ui/popover";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const data = [
   [
@@ -186,6 +173,20 @@ const data = [
   ],
 ];
 export function NavActions() {
+  const {
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    Button,
+  } = useDesignSystem();
+
   const [isOpen, setIsOpen] = React.useState(false);
   React.useEffect(() => {
     setIsOpen(true);

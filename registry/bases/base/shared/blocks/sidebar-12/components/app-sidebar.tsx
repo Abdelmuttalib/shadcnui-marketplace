@@ -3,20 +3,10 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Calendars } from "@/registry/bases/base/styles/default/blocks/sidebar-12/components/calendars";
-import { DatePicker } from "@/registry/bases/base/styles/default/blocks/sidebar-12/components/date-picker";
-import { NavUser } from "@/registry/bases/base/styles/default/blocks/sidebar-12/components/nav-user";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarRail,
-  SidebarSeparator,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { Calendars } from "@/registry/bases/base/shared/blocks/sidebar-12/components/calendars";
+import { DatePicker } from "@/registry/bases/base/shared/blocks/sidebar-12/components/date-picker";
+import { NavUser } from "@/registry/bases/base/shared/blocks/sidebar-12/components/nav-user";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // This is sample data.
 const data = {
@@ -41,7 +31,19 @@ const data = {
   ],
 };
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ ...props }: React.ComponentProps<any>) {
+  const {
+    Sidebar,
+    SidebarContent,
+    SidebarFooter,
+    SidebarHeader,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarRail,
+    SidebarSeparator,
+  } = useDesignSystem();
+
   return (
     <Sidebar {...props}>
       <SidebarHeader className="border-sidebar-border h-16 border-b">

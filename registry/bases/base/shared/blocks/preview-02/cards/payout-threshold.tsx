@@ -3,32 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const CURRENCIES = [
   { label: "USD — United States Dollar", value: "usd" },
@@ -39,6 +15,30 @@ const CURRENCIES = [
 
 export function PayoutThreshold() {
   const [amount, setAmount] = React.useState([2500]);
+
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardFooter,
+    CardDescription,
+    CardAction,
+    CardTitle,
+
+    Button,
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Slider,
+    Textarea,
+  } = useDesignSystem();
 
   return (
     <Card>
@@ -92,7 +92,7 @@ export function PayoutThreshold() {
             <Slider
               id="min-payout"
               value={amount}
-              onValueChange={(value) =>
+              onValueChange={(value: any) =>
                 setAmount(Array.isArray(value) ? [...value] : [value])
               }
               min={50}

@@ -1,4 +1,4 @@
-import { type Registry } from "shadcn/schema"
+import { type Registry } from "shadcn/schema";
 
 export const blocks: Registry["items"] = [
   {
@@ -918,4 +918,4 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["sidebar", "dashboard"],
   },
-]
+];

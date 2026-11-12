@@ -4,31 +4,8 @@ import * as React from "react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 
 import { useIsMobile } from "@/registry/bases/base/styles/default/hooks/use-mobile";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+import { type ChartConfig } from "@/registry/bases/base/styles/default/ui/chart";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export const description = "An interactive area chart";
 
@@ -141,6 +118,25 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function ChartAreaInteractive() {
+  const {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    ToggleGroup,
+    ToggleGroupItem,
+  } = useDesignSystem();
+
   const isMobile = useIsMobile();
   const [timeRange, setTimeRange] = React.useState("90d");
 
@@ -178,7 +174,7 @@ export function ChartAreaInteractive() {
           <ToggleGroup
             multiple={false}
             value={timeRange ? [timeRange] : []}
-            onValueChange={(value) => {
+            onValueChange={(value: any) => {
               setTimeRange(value[0] ?? "90d");
             }}
             variant="outline"
@@ -190,7 +186,7 @@ export function ChartAreaInteractive() {
           </ToggleGroup>
           <Select
             value={timeRange}
-            onValueChange={(value) => {
+            onValueChange={(value: any) => {
               if (value !== null) {
                 setTimeRange(value);
               }
@@ -268,7 +264,7 @@ export function ChartAreaInteractive() {
               cursor={false}
               content={
                 <ChartTooltipContent
-                  labelFormatter={(value) => {
+                  labelFormatter={(value: any) => {
                     return new Date(value).toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",

@@ -3,28 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemGroup,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
-import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const SCENES = {
   cooking: { brightness: [90], colorTemp: [70], volume: [30], fade: [0] },
@@ -34,6 +14,25 @@ const SCENES = {
 } as const;
 
 export function KitchenIsland() {
+  const {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+    Slider,
+    Switch,
+    ToggleGroup,
+    ToggleGroupItem,
+  } = useDesignSystem();
+
   const [enabled, setEnabled] = React.useState(true);
   const [scene, setScene] = React.useState("cooking");
   const [brightness, setBrightness] = React.useState([90]);
@@ -65,7 +64,9 @@ export function KitchenIsland() {
           <span className="sr-only">Scenes</span>
           <ToggleGroup
             value={[scene]}
-            onValueChange={(value) => handleSceneChange(value[0] ?? "cooking")}
+            onValueChange={(value: any) =>
+              handleSceneChange(value[0] ?? "cooking")
+            }
             variant="outline"
             spacing={1}
             className="flex-wrap"
@@ -101,7 +102,7 @@ export function KitchenIsland() {
             <ItemActions className="flex-1">
               <Slider
                 value={brightness}
-                onValueChange={(value) =>
+                onValueChange={(value: any) =>
                   setBrightness(Array.isArray(value) ? [...value] : [value])
                 }
                 max={100}
@@ -126,7 +127,7 @@ export function KitchenIsland() {
             <ItemActions className="flex-1">
               <Slider
                 value={colorTemp}
-                onValueChange={(value) =>
+                onValueChange={(value: any) =>
                   setColorTemp(Array.isArray(value) ? [...value] : [value])
                 }
                 max={100}
@@ -150,7 +151,7 @@ export function KitchenIsland() {
             <ItemActions className="flex-1">
               <Slider
                 value={volume}
-                onValueChange={(value) =>
+                onValueChange={(value: any) =>
                   setVolume(Array.isArray(value) ? [...value] : [value])
                 }
                 max={100}
@@ -174,7 +175,7 @@ export function KitchenIsland() {
             <ItemActions className="flex-1">
               <Slider
                 value={fade}
-                onValueChange={(value) =>
+                onValueChange={(value: any) =>
                   setFade(Array.isArray(value) ? [...value] : [value])
                 }
                 max={100}

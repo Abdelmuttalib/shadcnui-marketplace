@@ -1,31 +1,29 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function ReportBug() {
+  const {
+    Card,
+    Button,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    CardContent,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Textarea,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

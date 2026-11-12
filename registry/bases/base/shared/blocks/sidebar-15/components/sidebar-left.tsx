@@ -3,17 +3,12 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { NavFavorites } from "@/registry/bases/base/styles/default/blocks/sidebar-15/components/nav-favorites";
-import { NavMain } from "@/registry/bases/base/styles/default/blocks/sidebar-15/components/nav-main";
-import { NavSecondary } from "@/registry/bases/base/styles/default/blocks/sidebar-15/components/nav-secondary";
-import { NavWorkspaces } from "@/registry/bases/base/styles/default/blocks/sidebar-15/components/nav-workspaces";
-import { TeamSwitcher } from "@/registry/bases/base/styles/default/blocks/sidebar-15/components/team-switcher";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarHeader,
-  SidebarRail,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { NavFavorites } from "@/registry/bases/base/shared/blocks/sidebar-15/components/nav-favorites";
+import { NavMain } from "@/registry/bases/base/shared/blocks/sidebar-15/components/nav-main";
+import { NavSecondary } from "@/registry/bases/base/shared/blocks/sidebar-15/components/nav-secondary";
+import { NavWorkspaces } from "@/registry/bases/base/shared/blocks/sidebar-15/components/nav-workspaces";
+import { TeamSwitcher } from "@/registry/bases/base/shared/blocks/sidebar-15/components/team-switcher";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // This is sample data.
 const data = {
@@ -342,9 +337,10 @@ const data = {
   ],
 };
 
-export function SidebarLeft({
-  ...props
-}: React.ComponentProps<typeof Sidebar>) {
+export function SidebarLeft({ ...props }: React.ComponentProps<any>) {
+  const { Sidebar, SidebarContent, SidebarHeader, SidebarRail } =
+    useDesignSystem();
+
   return (
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>

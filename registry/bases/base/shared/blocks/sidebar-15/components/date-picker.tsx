@@ -1,12 +1,10 @@
 import * as React from "react";
 
-import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function DatePicker() {
+  const { SidebarGroup, SidebarGroupContent, Calendar } = useDesignSystem();
+
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(new Date().getFullYear(), new Date().getMonth(), 12)
   );

@@ -1,23 +1,23 @@
 import { cn } from "cn";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SignupForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const {
+    Button,
+    Card,
+    CardContent,
+    Field,
+    FieldDescription,
+    FieldSeparator,
+    FieldGroup,
+    FieldLabel,
+    Input,
+  } = useDesignSystem();
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden p-0">

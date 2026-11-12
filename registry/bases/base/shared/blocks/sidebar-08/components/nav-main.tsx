@@ -1,22 +1,7 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function NavMain({
   items,
@@ -32,6 +17,22 @@ export function NavMain({
     }[];
   }[];
 }) {
+  const {
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarGroup,
+    SidebarGroupLabel,
+    SidebarMenuAction,
+    SidebarMenuSub,
+    SidebarMenuSubButton,
+    SidebarMenuSubItem,
+
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+  } = useDesignSystem();
+
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Platform</SidebarGroupLabel>

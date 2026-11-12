@@ -1,11 +1,8 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Skeleton } from "@/registry/bases/base/styles/default/ui/skeleton";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function LoadingCard() {
+  const { Card, CardContent, CardHeader, Skeleton } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

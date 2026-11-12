@@ -1,30 +1,29 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function AccountAccess() {
+  const {
+    CardFooter,
+    Button,
+    Card,
+    CardHeader,
+    CardContent,
+    CardDescription,
+    CardTitle,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

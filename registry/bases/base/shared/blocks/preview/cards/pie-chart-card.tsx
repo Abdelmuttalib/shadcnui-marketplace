@@ -2,25 +2,7 @@
 
 import { Label, Pie, PieChart } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
-import { Progress } from "@/registry/bases/base/styles/default/ui/progress";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const pieChartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -49,9 +31,27 @@ const pieChartConfig = {
     label: "Edge",
     color: "var(--chart-4)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function PieChartCard() {
+  const {
+    Card,
+
+    Badge,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    Progress,
+    ChartLegend,
+    CardAction,
+    CardContent,
+    ChartTooltipContent,
+    ChartContainer,
+    ChartTooltip,
+    ChartLegendContent,
+  } = useDesignSystem();
+
   const totalVisitors = pieChartData.reduce(
     (sum, item) => sum + item.visitors,
     0

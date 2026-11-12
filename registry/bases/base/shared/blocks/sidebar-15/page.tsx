@@ -1,19 +1,20 @@
-import { SidebarLeft } from "@/registry/bases/base/styles/default/blocks/sidebar-15/components/sidebar-left";
-import { SidebarRight } from "@/registry/bases/base/styles/default/blocks/sidebar-15/components/sidebar-right";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-} from "@/registry/bases/base/styles/default/ui/breadcrumb";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { SidebarLeft } from "@/registry/bases/base/shared/blocks/sidebar-15/components/sidebar-left";
+import { SidebarRight } from "@/registry/bases/base/shared/blocks/sidebar-15/components/sidebar-right";
+
+import { useDesignSystem } from "../../components/design-system-provider";
 
 export default function Page() {
+  const {
+    SidebarInset,
+    SidebarProvider,
+    SidebarTrigger,
+    Separator,
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbList,
+    BreadcrumbPage,
+  } = useDesignSystem();
+
   return (
     <SidebarProvider>
       <SidebarLeft />

@@ -2,13 +2,7 @@
 
 import * as React from "react";
 
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function NavSecondary({
   items,
@@ -19,7 +13,15 @@ export function NavSecondary({
     url: string;
     icon: React.ReactNode;
   }[];
-} & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+} & React.ComponentPropsWithoutRef<any>) {
+  const {
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarGroup,
+    SidebarGroupContent,
+  } = useDesignSystem();
+
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>

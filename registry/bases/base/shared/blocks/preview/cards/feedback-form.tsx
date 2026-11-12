@@ -1,23 +1,21 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function FeedbackForm() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardFooter,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    NativeSelect,
+    NativeSelectOption,
+    Textarea,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent>

@@ -1,19 +1,19 @@
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/registry/bases/base/styles/default/ui/empty";
-import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SyncingState() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    Spinner,
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent className="p-0">

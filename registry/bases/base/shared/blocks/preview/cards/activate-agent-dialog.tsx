@@ -1,27 +1,8 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Alert,
-  AlertDescription,
-} from "@/registry/bases/base/styles/default/ui/alert";
 import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Item,
-  ItemContent,
-  ItemGroup,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // Agent feature descriptions.
 const agentFeatures = [
@@ -58,6 +39,25 @@ const agentFeatures = [
 ];
 
 export function ActivateAgentDialog() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+
+    Alert,
+    AlertDescription,
+
+    Item,
+    ItemContent,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

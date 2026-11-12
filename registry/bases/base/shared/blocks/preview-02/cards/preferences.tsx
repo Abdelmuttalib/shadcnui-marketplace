@@ -1,31 +1,6 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const CURRENCIES = [
   { label: "USD — United States Dollar", value: "usd" },
@@ -35,6 +10,30 @@ const CURRENCIES = [
 ];
 
 export function Preferences() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardAction,
+    CardFooter,
+    CardDescription,
+    CardTitle,
+    Button,
+    Switch,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldSeparator,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

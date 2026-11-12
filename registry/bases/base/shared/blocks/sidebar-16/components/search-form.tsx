@@ -1,10 +1,11 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
-import { SidebarInput } from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SearchForm({ ...props }: React.ComponentProps<"form">) {
+  const { SidebarInput, Label } = useDesignSystem();
+
   return (
     <form {...props}>
       <div className="relative">

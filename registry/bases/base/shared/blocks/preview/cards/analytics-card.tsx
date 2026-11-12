@@ -2,21 +2,7 @@
 
 import { Area, AreaChart } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // Monthly visitor data for the area chart.
 const chartData = [
@@ -34,9 +20,23 @@ const chartConfig = {
     label: "Visitors",
     color: "var(--chart-1)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function AnalyticsCard() {
+  const {
+    Button,
+    Badge,
+    Card,
+    CardAction,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+  } = useDesignSystem();
+
   return (
     <Card className="mx-auto w-full max-w-sm data-[size=sm]:pb-0" size="sm">
       <CardHeader>

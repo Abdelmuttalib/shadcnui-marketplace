@@ -1,4 +1,4 @@
-import { LoginForm } from "@/registry/bases/base/styles/default/blocks/login-04/components/login-form";
+import { LoginForm } from "@/registry/bases/base/shared/blocks/login-04/components/login-form";
 
 export default function LoginPage() {
   return (

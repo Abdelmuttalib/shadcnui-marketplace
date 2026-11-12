@@ -1,29 +1,8 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemGroup,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const HOLDINGS = [
   {
@@ -61,6 +40,24 @@ const HOLDINGS = [
 ];
 
 export function ReleaseCatalog() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    ToggleGroup,
+    ToggleGroupItem,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+    Badge,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

@@ -1,25 +1,6 @@
 "use client";
 
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/bases/base/styles/default/ui/table";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const INVOICE_ITEMS = [
   { item: "Design System License", qty: 1, unitPrice: 499 },
@@ -43,6 +24,24 @@ function formatCurrency(value: number) {
 }
 
 export function Invoice() {
+  const {
+    Button,
+    Badge,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    CardAction,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

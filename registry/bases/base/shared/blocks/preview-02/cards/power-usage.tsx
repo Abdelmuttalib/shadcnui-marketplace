@@ -3,22 +3,8 @@
 import { Bar, BarChart, XAxis } from "recharts";
 
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
-import { Progress } from "@/registry/bases/base/styles/default/ui/progress";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const chartData = [
   { hour: "6a", usage: 1.2 },
@@ -36,9 +22,23 @@ const chartConfig = {
     label: "Usage (kW)",
     color: "var(--chart-2)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function PowerUsage() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardFooter,
+    CardDescription,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Progress,
+    Separator,
+  } = useDesignSystem();
+
   const [params] = useDesignSystemSearchParams();
   const isRounded = !["lyra", "sera"].includes(params.style);
 

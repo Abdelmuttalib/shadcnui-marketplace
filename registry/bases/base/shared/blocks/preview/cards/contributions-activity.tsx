@@ -1,26 +1,29 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldLegend,
-  FieldSet,
-} from "@/registry/bases/base/styles/default/ui/field";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function ContributionsActivity() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    FieldGroup,
+
+    Field,
+    FieldDescription,
+    FieldLabel,
+
+    Checkbox,
+    FieldContent,
+    FieldLegend,
+    FieldSet,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

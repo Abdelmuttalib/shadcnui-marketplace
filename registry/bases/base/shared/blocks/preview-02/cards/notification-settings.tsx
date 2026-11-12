@@ -2,23 +2,7 @@
 
 import * as React from "react";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const NOTIFICATIONS = [
   {
@@ -48,6 +32,22 @@ const NOTIFICATIONS = [
 ];
 
 export function NotificationSettings() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardDescription,
+    CardTitle,
+    CardFooter,
+    Button,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Checkbox,
+  } = useDesignSystem();
+
   const [checked, setChecked] = React.useState<Record<string, boolean>>(
     Object.fromEntries(NOTIFICATIONS.map((n) => [n.id, n.defaultChecked]))
   );
@@ -78,7 +78,7 @@ export function NotificationSettings() {
               id="notify-all"
               checked={allChecked}
               indeterminate={someChecked}
-              onCheckedChange={(v) => handleSelectAll(!!v)}
+              onCheckedChange={(v: any) => handleSelectAll(!!v)}
             />
             <FieldContent>
               <FieldLabel htmlFor="notify-all">Select all</FieldLabel>
@@ -89,7 +89,7 @@ export function NotificationSettings() {
               <Checkbox
                 id={`notify-${n.id}`}
                 checked={checked[n.id]}
-                onCheckedChange={(v) => handleToggle(n.id, !!v)}
+                onCheckedChange={(v: any) => handleToggle(n.id, !!v)}
               />
               <FieldContent>
                 <FieldLabel htmlFor={`notify-${n.id}`}>{n.label}</FieldLabel>

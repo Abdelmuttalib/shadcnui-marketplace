@@ -3,17 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import {
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function VersionSwitcher({
   versions,
@@ -23,6 +14,17 @@ export function VersionSwitcher({
   defaultVersion: string;
 }) {
   const [selectedVersion, setSelectedVersion] = React.useState(defaultVersion);
+
+  const {
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <SidebarMenu>
       <SidebarMenuItem>

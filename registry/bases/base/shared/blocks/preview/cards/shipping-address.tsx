@@ -1,31 +1,29 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function ShippingAddress() {
+  const {
+    Card,
+    Button,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    CardContent,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Checkbox,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

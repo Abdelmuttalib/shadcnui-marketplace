@@ -1,18 +1,6 @@
 import * as React from "react";
 
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Item,
-  ItemActions,
-  ItemGroup,
-  ItemHeader,
-  ItemSeparator,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
-import { Kbd } from "@/registry/bases/base/styles/default/ui/kbd";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const shortcuts = [
   { label: "Search", keys: ["⌘", "K"] },
@@ -23,6 +11,18 @@ const shortcuts = [
 ] as const;
 
 export function Shortcuts() {
+  const {
+    Card,
+    CardContent,
+    Item,
+    ItemActions,
+    ItemGroup,
+    ItemHeader,
+    ItemSeparator,
+    ItemTitle,
+    Kbd,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent>

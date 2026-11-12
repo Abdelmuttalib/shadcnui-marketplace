@@ -1,38 +1,6 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-  InputGroupText,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import {
-  Item,
-  ItemContent,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const FROM_ACCOUNTS = [
   { label: "Main Checking (··8402) — $12,450.00", value: "checking" },
@@ -45,6 +13,33 @@ const TO_ACCOUNTS = [
 ];
 
 export function TransferFunds() {
+  const {
+    Button,
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    InputGroupText,
+    Item,
+    ItemContent,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Separator,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

@@ -3,18 +3,10 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { NavMain } from "@/registry/bases/base/styles/default/blocks/sidebar-06/components/nav-main";
-import { SidebarOptInForm } from "@/registry/bases/base/styles/default/blocks/sidebar-06/components/sidebar-opt-in-form";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarRail,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { NavMain } from "@/registry/bases/base/shared/blocks/sidebar-06/components/nav-main";
+import { SidebarOptInForm } from "@/registry/bases/base/shared/blocks/sidebar-06/components/sidebar-opt-in-form";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // This is sample data.
 const data = {
@@ -146,7 +138,18 @@ const data = {
     },
   ],
 };
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ ...props }: React.ComponentProps<any>) {
+  const {
+    Sidebar,
+    SidebarContent,
+    SidebarFooter,
+    SidebarHeader,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarRail,
+  } = useDesignSystem();
+
   return (
     <Sidebar {...props}>
       <SidebarHeader>

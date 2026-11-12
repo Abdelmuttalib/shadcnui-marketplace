@@ -2,15 +2,7 @@
 
 import * as React from "react";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const FITNESS_WEEKLY_LOAD = [
   { day: "M", load: 84 },
@@ -23,6 +15,16 @@ const FITNESS_WEEKLY_LOAD = [
 ];
 
 export function WeeklyFitnessSummary() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

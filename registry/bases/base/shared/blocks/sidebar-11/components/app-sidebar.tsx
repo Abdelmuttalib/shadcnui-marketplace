@@ -3,24 +3,7 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuBadge,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarRail,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // This is sample data.
 const data = {
@@ -65,7 +48,20 @@ const data = {
     "README.md",
   ],
 };
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ ...props }: React.ComponentProps<any>) {
+  const {
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarMenu,
+    SidebarMenuBadge,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarRail,
+  } = useDesignSystem();
+
   return (
     <Sidebar {...props}>
       <SidebarContent>
@@ -108,6 +104,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 }
 type TreeItem = string | TreeItem[];
 function Tree({ item }: { item: TreeItem }) {
+  const {
+    SidebarMenuButton,
+    SidebarMenuItem,
+    Collapsible,
+    CollapsibleTrigger,
+    CollapsibleContent,
+    SidebarMenuSub,
+  } = useDesignSystem();
+
   const [name, ...items] = Array.isArray(item) ? item : [item];
   if (!items.length) {
     return (

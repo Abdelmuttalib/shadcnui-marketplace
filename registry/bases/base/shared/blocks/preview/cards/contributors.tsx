@@ -1,18 +1,6 @@
 "use client";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // GitHub usernames displayed as contributor avatars.
 const usernames = [
@@ -35,6 +23,19 @@ const usernames = [
 ];
 
 export function Contributors() {
+  const {
+    Badge,
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+  } = useDesignSystem();
+
   return (
     <Card className="max-w-sm">
       <CardHeader>

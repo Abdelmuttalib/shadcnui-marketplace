@@ -3,25 +3,9 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { SearchForm } from "@/registry/bases/base/styles/default/blocks/sidebar-05/components/search-form";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
-  SidebarRail,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { SearchForm } from "@/registry/bases/base/shared/blocks/sidebar-05/components/search-form";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // This is sample data.
 const data = {
@@ -163,7 +147,24 @@ const data = {
     },
   ],
 };
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ ...props }: React.ComponentProps<any>) {
+  const {
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarHeader,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarRail,
+    SidebarMenuSub,
+    SidebarMenuSubButton,
+    SidebarMenuSubItem,
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+  } = useDesignSystem();
+
   return (
     <Sidebar {...props}>
       <SidebarHeader>

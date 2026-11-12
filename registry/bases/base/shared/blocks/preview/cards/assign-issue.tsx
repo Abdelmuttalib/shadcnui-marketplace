@@ -3,37 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Combobox,
-  ComboboxChip,
-  ComboboxChips,
-  ComboboxChipsInput,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxItem,
-  ComboboxList,
-  ComboboxValue,
-  useComboboxAnchor,
-} from "@/registry/bases/base/styles/default/ui/combobox";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/styles/default/ui/tooltip";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // Users available for assignment.
 const users = [
@@ -47,6 +18,33 @@ const users = [
 ];
 
 export function AssignIssue() {
+  const {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Button,
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Combobox,
+    ComboboxChip,
+    ComboboxChips,
+    ComboboxChipsInput,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxItem,
+    ComboboxList,
+    ComboboxValue,
+    useComboboxAnchor,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+  } = useDesignSystem();
+
+  // @ts-expect-error: dynamic module export
   const anchor = useComboboxAnchor();
   return (
     <Card className="w-full max-w-sm" size="sm">
@@ -81,7 +79,7 @@ export function AssignIssue() {
         >
           <ComboboxChips ref={anchor}>
             <ComboboxValue>
-              {(values) => (
+              {(values: any) => (
                 <React.Fragment>
                   {values.map((username: string) => (
                     <ComboboxChip key={username}>

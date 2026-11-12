@@ -1,7 +1,7 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { LoginForm } from "@/registry/bases/base/styles/default/blocks/login-02/components/login-form";
+import { LoginForm } from "@/registry/bases/base/shared/blocks/login-02/components/login-form";
 
 export default function LoginPage() {
   return (

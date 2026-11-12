@@ -1,12 +1,15 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Skeleton } from "@/registry/bases/base/styles/default/ui/skeleton";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SkeletonLoading() {
+  const {
+    Card,
+
+    CardContent,
+    Skeleton,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent className="flex flex-col gap-4">

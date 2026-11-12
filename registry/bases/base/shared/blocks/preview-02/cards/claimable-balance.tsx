@@ -1,19 +1,24 @@
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Item,
-  ItemContent,
-} from "@/registry/bases/base/styles/default/ui/item";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function ClaimableBalance() {
+  const {
+    Card,
+    CardFooter,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Item,
+    ItemContent,
+    ItemDescription,
+
+    Separator,
+    Badge,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

@@ -1,39 +1,33 @@
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-  InputGroupText,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemFooter,
-  ItemGroup,
-} from "@/registry/bases/base/styles/default/ui/item";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
-import { Progress } from "@/registry/bases/base/styles/default/ui/progress";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SavingsTargets() {
+  const {
+    Button,
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    InputGroupText,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemFooter,
+    ItemGroup,
+    NativeSelect,
+    NativeSelectOption,
+    Progress,
+  } = useDesignSystem();
+
   return (
     <div className="grid grid-cols-2 gap-(--gap)">
       <Card>

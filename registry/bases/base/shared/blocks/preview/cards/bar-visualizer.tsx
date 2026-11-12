@@ -3,15 +3,7 @@
 import { cn } from "cn";
 import * as React from "react";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 type AgentState =
   "connecting" | "initializing" | "listening" | "speaking" | "thinking";
@@ -464,6 +456,16 @@ BarVisualizer.displayName = "BarVisualizer";
 
 export function BarVisualizerCard() {
   const [state, setState] = React.useState<AgentState>("speaking");
+
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } = useDesignSystem();
 
   return (
     <Card>

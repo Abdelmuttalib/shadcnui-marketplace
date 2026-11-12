@@ -3,33 +3,7 @@
 import * as React from "react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
-import {
-  Combobox,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxInput,
-  ComboboxItem,
-  ComboboxList,
-} from "@/registry/bases/base/styles/default/ui/combobox";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const TICKERS = ["VOO", "VIG", "AAPL", "MSFT", "GOOGL", "AMZN", "TSLA"];
 
@@ -66,9 +40,30 @@ const chartConfig = {
     label: "Price",
     color: "var(--chart-1)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function StockPerformance() {
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Combobox,
+    ComboboxContent,
+    ComboboxEmpty,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Separator,
+  } = useDesignSystem();
+
   const [ticker, setTicker] = React.useState("VOO");
 
   const data = CHART_DATA[ticker] ?? DEFAULT_DATA;
@@ -86,7 +81,7 @@ export function StockPerformance() {
             <Combobox
               items={TICKERS}
               value={ticker}
-              onValueChange={(value) => {
+              onValueChange={(value: any) => {
                 if (value !== null) setTicker(value);
               }}
             >
@@ -97,7 +92,7 @@ export function StockPerformance() {
               <ComboboxContent>
                 <ComboboxEmpty>No tickers found.</ComboboxEmpty>
                 <ComboboxList>
-                  {(item) => (
+                  {(item: any) => (
                     <ComboboxItem key={item} value={item}>
                       {item}
                     </ComboboxItem>

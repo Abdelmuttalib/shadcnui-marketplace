@@ -1,19 +1,21 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/registry/bases/base/styles/default/ui/empty";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function EmptyExploreCatalog() {
+  const {
+    Button,
+    Card,
+    CardContent,
+
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent>

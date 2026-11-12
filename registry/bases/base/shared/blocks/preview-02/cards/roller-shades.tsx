@@ -2,25 +2,25 @@
 
 import * as React from "react";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function RollerShades() {
   const [position, setPosition] = React.useState([50]);
 
   const preset =
     position[0] <= 10 ? "open" : position[0] >= 90 ? "closed" : "half";
+
+  const {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    Slider,
+    ToggleGroup,
+    ToggleGroupItem,
+  } = useDesignSystem();
 
   return (
     <Card>
@@ -41,7 +41,7 @@ export function RollerShades() {
           </span>
           <Slider
             value={position}
-            onValueChange={(value) =>
+            onValueChange={(value: any) =>
               setPosition(Array.isArray(value) ? [...value] : [value])
             }
             max={100}
@@ -55,7 +55,7 @@ export function RollerShades() {
       <CardFooter>
         <ToggleGroup
           value={[preset]}
-          onValueChange={(value) => {
+          onValueChange={(value: any) => {
             const v = value[0];
             if (v === "open") setPosition([0]);
             if (v === "half") setPosition([50]);

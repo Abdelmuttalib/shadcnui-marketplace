@@ -1,16 +1,18 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function EnvironmentVariables() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardDescription,
+    CardTitle,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

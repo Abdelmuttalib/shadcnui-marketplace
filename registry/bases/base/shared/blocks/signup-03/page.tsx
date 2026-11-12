@@ -1,7 +1,7 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { SignupForm } from "@/registry/bases/base/styles/default/blocks/signup-03/components/signup-form";
+import { SignupForm } from "@/registry/bases/base/shared/blocks/signup-03/components/signup-form";
 
 export default function SignupPage() {
   return (

@@ -1,14 +1,8 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function NavMain({
   items,
@@ -19,6 +13,15 @@ export function NavMain({
     icon?: React.ReactNode;
   }[];
 }) {
+  const {
+    Button,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+  } = useDesignSystem();
+
   return (
     <SidebarGroup>
       <SidebarGroupContent className="flex flex-col gap-2">

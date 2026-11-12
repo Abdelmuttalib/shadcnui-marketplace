@@ -1,26 +1,6 @@
 "use client";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/registry/bases/base/styles/default/ui/accordion";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/bases/base/styles/default/ui/tabs";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const GENERAL_QUESTIONS = [
   {
@@ -72,6 +52,9 @@ function QuestionList({
 }: {
   questions: { q: string; a: string }[];
 }) {
+  const { Accordion, AccordionItem, AccordionTrigger, AccordionContent } =
+    useDesignSystem();
+
   return (
     <Accordion defaultValue={[0]}>
       {questions.map((item, index) => (
@@ -85,6 +68,17 @@ function QuestionList({
 }
 
 export function Faq() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardFooter,
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent>

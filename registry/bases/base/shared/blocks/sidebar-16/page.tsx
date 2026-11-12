@@ -1,15 +1,14 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default/blocks/sidebar-16/components/app-sidebar";
-import { SiteHeader } from "@/registry/bases/base/styles/default/blocks/sidebar-16/components/site-header";
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { AppSidebar } from "@/registry/bases/base/shared/blocks/sidebar-16/components/app-sidebar";
+import { SiteHeader } from "@/registry/bases/base/shared/blocks/sidebar-16/components/site-header";
+import { useDesignSystem } from "../../components/design-system-provider";
 
 export const iframeHeight = "800px";
 
 export const description = "A sidebar with a header and a search form.";
 
 export default function Page() {
+  const { SidebarInset, SidebarProvider } = useDesignSystem();
+
   return (
     <div className="[--header-height:calc(--spacing(14))]">
       <SidebarProvider className="flex flex-col">

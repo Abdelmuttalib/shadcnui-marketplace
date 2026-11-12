@@ -1,28 +1,28 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/registry/bases/base/styles/default/ui/native-select";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function GithubProfile() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    CardFooter,
+
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Input,
+    NativeSelect,
+    NativeSelectOption,
+
+    Textarea,
+  } = useDesignSystem();
+
   return (
     <Card className="mx-auto w-full max-w-md">
       <CardHeader>

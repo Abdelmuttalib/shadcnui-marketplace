@@ -3,30 +3,30 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-} from "@/registry/bases/base/styles/default/ui/table";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function RecentTransactions() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardAction,
+    CardDescription,
+    CardTitle,
+    Button,
+
+    Table,
+    TableBody,
+    TableCell,
+    TableRow,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

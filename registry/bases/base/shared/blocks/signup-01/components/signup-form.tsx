@@ -1,20 +1,20 @@
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
-export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
+export function SignupForm({ ...props }: React.ComponentProps<any>) {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Field,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Input,
+  } = useDesignSystem();
+
   return (
     <Card {...props}>
       <CardHeader>

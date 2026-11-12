@@ -1,18 +1,18 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function CatalogToolbar() {
+  const {
+    ToggleGroup,
+    ToggleGroupItem,
+    Button,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+  } = useDesignSystem();
+
   return (
     <div className="flex items-center gap-3">
       <InputGroup className="flex-1">

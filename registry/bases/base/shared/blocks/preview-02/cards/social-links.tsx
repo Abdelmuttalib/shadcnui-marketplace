@@ -1,24 +1,23 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/bases/base/styles/default/ui/input-group";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SocialLinks() {
+  const {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    Button,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+    Field,
+    FieldGroup,
+    FieldLabel,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

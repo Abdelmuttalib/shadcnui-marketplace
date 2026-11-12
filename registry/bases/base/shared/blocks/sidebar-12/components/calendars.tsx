@@ -3,20 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/bases/base/styles/default/ui/collapsible";
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarSeparator,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function Calendars({
   calendars,
@@ -26,6 +14,19 @@ export function Calendars({
     items: string[];
   }[];
 }) {
+  const {
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    Collapsible,
+    CollapsibleTrigger,
+    CollapsibleContent,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarSeparator,
+  } = useDesignSystem();
+
   return (
     <>
       {calendars.map((calendar, index) => (

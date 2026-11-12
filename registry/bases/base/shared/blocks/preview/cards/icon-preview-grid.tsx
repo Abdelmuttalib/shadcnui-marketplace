@@ -3,10 +3,8 @@
 import { type IconLibraryName } from "shadcn/icons";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const PREVIEW_ICONS = [
   {
@@ -124,6 +122,8 @@ const PREVIEW_ICONS = [
 ] satisfies Record<IconLibraryName, string>[];
 
 export function IconPreviewGrid() {
+  const { Card, CardContent } = useDesignSystem();
+
   return (
     <Card>
       <CardContent>

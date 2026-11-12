@@ -1,31 +1,31 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@/registry/bases/base/styles/default/ui/alert";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/bases/base/styles/default/ui/toggle-group";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function BookAppointment() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+
+    Alert,
+    AlertDescription,
+    AlertTitle,
+
+    Field,
+    FieldGroup,
+    FieldLabel,
+
+    ToggleGroup,
+    ToggleGroupItem,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

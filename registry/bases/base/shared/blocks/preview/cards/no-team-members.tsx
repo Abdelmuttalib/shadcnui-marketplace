@@ -1,26 +1,26 @@
 "use client";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarImage,
-} from "@/registry/bases/base/styles/default/ui/avatar";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/registry/bases/base/styles/default/ui/empty";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function NoTeamMembers() {
+  const {
+    Button,
+    Card,
+    CardContent,
+
+    Empty,
+    EmptyContent,
+    EmptyDescription,
+    EmptyHeader,
+    EmptyMedia,
+    EmptyTitle,
+
+    Avatar,
+    AvatarFallback,
+    AvatarGroup,
+    AvatarImage,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent>

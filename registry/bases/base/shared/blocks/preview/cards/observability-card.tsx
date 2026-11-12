@@ -1,17 +1,21 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function ObservabilityCard() {
+  const {
+    Button,
+    Card,
+
+    Badge,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } = useDesignSystem();
+
   return (
     <Card className="relative w-full max-w-md overflow-hidden pt-0">
       <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />

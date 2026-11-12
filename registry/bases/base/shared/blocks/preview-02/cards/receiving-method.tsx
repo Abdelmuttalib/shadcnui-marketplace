@@ -1,33 +1,32 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldLegend,
-  FieldSet,
-  FieldTitle,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/bases/base/styles/default/ui/radio-group";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function ReceivingMethod() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardAction,
+    CardFooter,
+    CardDescription,
+    CardTitle,
+    Button,
+    RadioGroup,
+    RadioGroupItem,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    FieldLegend,
+    FieldSet,
+    FieldTitle,
+    Input,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

@@ -2,20 +2,7 @@
 
 import { Bar, BarChart } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-} from "@/registry/bases/base/styles/default/ui/chart";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const sleepChartData = [
   { hour: "10pm", deep: 0, light: 30, rem: 0 },
@@ -42,9 +29,21 @@ const sleepChartConfig = {
     label: "REM",
     color: "var(--chart-3)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function SleepReport() {
+  const {
+    Badge,
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

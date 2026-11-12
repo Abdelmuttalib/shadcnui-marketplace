@@ -1,16 +1,15 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default/blocks/dashboard-01/components/app-sidebar";
-import { ChartAreaInteractive } from "@/registry/bases/base/styles/default/blocks/dashboard-01/components/chart-area-interactive";
-import { DataTable } from "@/registry/bases/base/styles/default/blocks/dashboard-01/components/data-table";
-import { SectionCards } from "@/registry/bases/base/styles/default/blocks/dashboard-01/components/section-cards";
-import { SiteHeader } from "@/registry/bases/base/styles/default/blocks/dashboard-01/components/site-header";
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { AppSidebar } from "@/registry/bases/base/shared/blocks/dashboard-01/components/app-sidebar";
+import { ChartAreaInteractive } from "@/registry/bases/base/shared/blocks/dashboard-01/components/chart-area-interactive";
+import { DataTable } from "@/registry/bases/base/shared/blocks/dashboard-01/components/data-table";
+import { SectionCards } from "@/registry/bases/base/shared/blocks/dashboard-01/components/section-cards";
+import { SiteHeader } from "@/registry/bases/base/shared/blocks/dashboard-01/components/site-header";
 
 import data from "./data.json";
+import { useDesignSystem } from "../../components/design-system-provider";
 
 export default function Page() {
+  const { SidebarInset, SidebarProvider } = useDesignSystem();
+
   return (
     <SidebarProvider
       style={

@@ -1,14 +1,16 @@
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { SidebarInput } from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SidebarOptInForm() {
+  const {
+    Button,
+    SidebarInput,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+  } = useDesignSystem();
+
   return (
     <Card className="gap-2 py-4 shadow-none">
       <CardHeader className="px-4">

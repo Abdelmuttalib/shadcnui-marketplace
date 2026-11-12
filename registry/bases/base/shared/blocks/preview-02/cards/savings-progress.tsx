@@ -2,18 +2,7 @@
 
 import { Label, Pie, PieChart } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const chartData = [
   { name: "saved", value: 24000, fill: "var(--color-saved)" },
@@ -29,9 +18,19 @@ const chartConfig = {
     label: "Remaining",
     color: "var(--chart-1)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function SavingsProgress() {
+  const {
+    Card,
+    CardContent,
+    CardFooter,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Separator,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent>

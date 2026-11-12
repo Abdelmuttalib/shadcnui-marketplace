@@ -1,4 +1,4 @@
-import { SignupForm } from "@/registry/bases/base/styles/default/blocks/signup-05/components/signup-form";
+import { SignupForm } from "@/registry/bases/base/shared/blocks/signup-05/components/signup-form";
 
 export default function SignupPage() {
   return (

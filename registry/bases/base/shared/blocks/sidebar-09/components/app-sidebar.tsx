@@ -3,22 +3,8 @@
 import * as React from "react";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { NavUser } from "@/registry/bases/base/styles/default/blocks/sidebar-09/components/nav-user";
-import { Label } from "@/registry/bases/base/styles/default/ui/label";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarHeader,
-  SidebarInput,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  useSidebar,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
-import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
+import { NavUser } from "@/registry/bases/base/shared/blocks/sidebar-09/components/nav-user";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // This is sample data
 const data = {
@@ -182,11 +168,28 @@ const data = {
     },
   ],
 };
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ ...props }: React.ComponentProps<any>) {
+  const {
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    useSidebar,
+    Sidebar,
+    SidebarContent,
+    SidebarFooter,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarHeader,
+    SidebarInput,
+    Switch,
+    Label,
+  } = useDesignSystem();
+
   // Note: I'm using state to show active item.
   // IRL you should use the url/router.
   const [activeItem, setActiveItem] = React.useState(data.navMain[0]);
   const [mails, setMails] = React.useState(data.mails);
+  // @ts-expect-error: dynamic module export
   const { setOpen } = useSidebar();
   return (
     <Sidebar

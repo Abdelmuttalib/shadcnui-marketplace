@@ -2,25 +2,24 @@
 
 import * as React from "react";
 
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemGroup,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function UpcomingPayments() {
+  const {
+    Badge,
+    Calendar,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemTitle,
+  } = useDesignSystem();
+
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (

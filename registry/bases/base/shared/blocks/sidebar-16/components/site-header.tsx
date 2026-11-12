@@ -1,20 +1,23 @@
 "use client";
 
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { SearchForm } from "@/registry/bases/base/styles/default/blocks/sidebar-16/components/search-form";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default/ui/breadcrumb";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
-import { useSidebar } from "@/registry/bases/base/styles/default/ui/sidebar";
+import { SearchForm } from "@/registry/bases/base/shared/blocks/sidebar-16/components/search-form";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function SiteHeader() {
+  const {
+    useSidebar,
+    Separator,
+    Button,
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  } = useDesignSystem();
+
+  // @ts-expect-error: dynamic module export
   const { toggleSidebar } = useSidebar();
 
   return (

@@ -96,6 +96,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/registry/bases/base/styles/default/ui/tabs";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // New in v9: declare the features this table uses — anything you don't
 // register is tree-shaken out of the bundle.
@@ -127,6 +128,8 @@ export const schema = z.object({
 
 // Create a separate component for the drag handle
 function DragHandle({ id }: { id: number }) {
+  const { Button } = useDesignSystem();
+
   const { attributes, listeners } = useSortable({
     id,
   });
@@ -377,6 +380,25 @@ export function DataTable({
 }: {
   data: z.infer<typeof schema>[];
 }) {
+  const {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    ToggleGroup,
+    ToggleGroupItem,
+  } = useDesignSystem();
+
   const [data, setData] = React.useState(() => initialData);
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] =
@@ -595,7 +617,7 @@ export function DataTable({
               </Label>
               <Select
                 value={`${table.state.pagination.pageSize}`}
-                onValueChange={(value) => {
+                onValueChange={(value: any) => {
                   table.setPageSize(Number(value));
                 }}
                 items={[10, 20, 30, 40, 50].map((pageSize) => ({

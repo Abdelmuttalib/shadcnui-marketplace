@@ -4,23 +4,8 @@ import * as React from "react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const barChartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -40,7 +25,7 @@ const barChartConfig = {
     label: "Mobile",
     color: "var(--chart-2)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 const desktopTotal = barChartData.reduce((sum, item) => sum + item.desktop, 0);
 const mobileTotal = barChartData.reduce((sum, item) => sum + item.mobile, 0);
@@ -52,6 +37,21 @@ const desktopDeltaPrefix = desktopDelta > 0 ? "+" : "";
 export function BarChartCard() {
   const [params] = useDesignSystemSearchParams();
   const isRounded = !["lyra", "sera"].includes(params.style);
+
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartLegend,
+    ChartLegendContent,
+    ChartTooltip,
+    ChartTooltipContent,
+  } = useDesignSystem();
 
   return (
     <Card>

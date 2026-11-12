@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function NavMain({
   items,
@@ -16,6 +12,8 @@ export function NavMain({
     isActive?: boolean;
   }[];
 }) {
+  const { SidebarMenu, SidebarMenuButton, SidebarMenuItem } = useDesignSystem();
+
   return (
     <SidebarMenu>
       {items.map((item) => (

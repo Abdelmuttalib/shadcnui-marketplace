@@ -4,28 +4,8 @@ import { Bar, BarChart, XAxis } from "recharts";
 
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemGroup,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const HOLDINGS = [
   {
@@ -79,9 +59,28 @@ const miniChartConfig = {
     label: "Dividend",
     color: "var(--chart-2)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function DividendIncome() {
+  const {
+    Button,
+
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Item,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemTitle,
+  } = useDesignSystem();
+
   const [params] = useDesignSystemSearchParams();
   const isRounded = !["lyra", "sera"].includes(params.style);
 

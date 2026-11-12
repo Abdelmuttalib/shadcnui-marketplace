@@ -1,19 +1,6 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemGroup,
-  ItemMedia,
-  ItemTitle,
-} from "@/registry/bases/base/styles/default/ui/item";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 // Usage items with percentage and value.
 const items = [
@@ -98,6 +85,21 @@ function CircularGauge({ percentage }: { percentage: number }) {
 }
 
 export function UsageCard() {
+  const {
+    Card,
+    CardContent,
+
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemTitle,
+
+    CardHeader,
+    CardTitle,
+    ItemGroup,
+    ItemMedia,
+  } = useDesignSystem();
+
   return (
     <Card className="w-full max-w-sm gap-4">
       <CardHeader>

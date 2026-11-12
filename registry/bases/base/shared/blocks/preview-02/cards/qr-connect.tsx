@@ -2,17 +2,19 @@
 
 import QRCode from "react-qr-code";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function QrConnect() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardFooter,
+    CardDescription,
+    CardTitle,
+    Button,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent className="flex justify-center pt-6">

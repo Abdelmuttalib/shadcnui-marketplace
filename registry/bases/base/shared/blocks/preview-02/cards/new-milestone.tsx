@@ -1,22 +1,24 @@
 "use client";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function NewMilestone() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardDescription,
+    CardTitle,
+    CardFooter,
+    Button,
+    Field,
+    FieldContent,
+    FieldDescription,
+    FieldGroup,
+    FieldLabel,
+    Input,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

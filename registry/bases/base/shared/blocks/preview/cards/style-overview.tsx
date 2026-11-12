@@ -4,13 +4,13 @@ import * as React from "react";
 
 import { FONTS } from "@/app/(www)/(create)/lib/fonts";
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import {
-  Card,
-  CardContent,
-} from "@/registry/bases/base/styles/default/ui/card";
+
 import { STYLES } from "@/registry/styles";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function StyleOverview() {
+  const { Card, CardContent } = useDesignSystem();
+
   const [params] = useDesignSystemSearchParams();
 
   const currentFont = React.useMemo(

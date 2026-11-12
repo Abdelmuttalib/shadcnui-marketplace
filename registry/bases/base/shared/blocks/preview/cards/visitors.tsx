@@ -2,21 +2,7 @@
 
 import { Area, AreaChart, XAxis } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const areaChartData = [
   { month: "January", desktop: 186 },
@@ -32,7 +18,7 @@ const areaChartConfig = {
     label: "Desktop",
     color: "var(--chart-1)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 const latestVisitors = areaChartData[areaChartData.length - 1]?.desktop ?? 0;
 const previousVisitors =
@@ -46,6 +32,19 @@ const trendPercent =
 const trendPrefix = trendPercent > 0 ? "+" : "";
 
 export function Visitors() {
+  const {
+    Badge,
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+  } = useDesignSystem();
+
   return (
     <Card className="pb-0">
       <CardHeader>

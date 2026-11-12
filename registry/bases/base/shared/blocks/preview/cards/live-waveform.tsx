@@ -4,15 +4,7 @@ import { cn } from "cn";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const LiveWaveform = ({
   active = false,
@@ -489,6 +481,16 @@ const LiveWaveform = ({
 };
 
 export function LiveWaveformCard() {
+  const {
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } = useDesignSystem();
+
   const [active, setActive] = useState(false);
   const [processing, setProcessing] = useState(true);
   const [mode, setMode] = useState<"static" | "scrolling">("static");

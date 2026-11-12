@@ -1,15 +1,10 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function IndexInvesting() {
+  const { Card, CardContent, CardDescription, CardHeader, CardTitle } =
+    useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

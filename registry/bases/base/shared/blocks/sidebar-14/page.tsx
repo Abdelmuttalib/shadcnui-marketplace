@@ -1,19 +1,19 @@
-import { AppSidebar } from "@/registry/bases/base/styles/default/blocks/sidebar-14/components/app-sidebar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/bases/base/styles/default/ui/breadcrumb";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/registry/bases/base/styles/default/ui/sidebar";
+import { AppSidebar } from "@/registry/bases/base/shared/blocks/sidebar-14/components/app-sidebar";
+import { useDesignSystem } from "../../components/design-system-provider";
 
 export default function Page() {
+  const {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+    SidebarInset,
+    SidebarProvider,
+    SidebarTrigger,
+  } = useDesignSystem();
+
   return (
     <SidebarProvider>
       <SidebarInset>

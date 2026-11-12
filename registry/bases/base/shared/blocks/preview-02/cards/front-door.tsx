@@ -1,15 +1,18 @@
 import { IconPlaceholder } from "@/app/(www)/(create)/components/icon-placeholder";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function FrontDoor() {
+  const {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Badge,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardHeader>

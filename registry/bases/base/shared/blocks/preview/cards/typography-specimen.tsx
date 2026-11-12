@@ -4,39 +4,38 @@ import * as React from "react";
 
 import { FONTS } from "@/app/(www)/(create)/lib/fonts";
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/bases/base/styles/default/ui/dialog";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/registry/bases/base/styles/default/ui/field";
-import { Input } from "@/registry/bases/base/styles/default/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/bases/base/styles/default/ui/select";
-import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function TypographySpecimen() {
+  const {
+    Textarea,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    Input,
+
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+
+    Card,
+    CardContent,
+    CardFooter,
+
+    Button,
+  } = useDesignSystem();
+
   const [params] = useDesignSystemSearchParams();
 
   const currentFont = React.useMemo(

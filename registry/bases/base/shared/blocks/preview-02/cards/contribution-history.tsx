@@ -3,28 +3,8 @@
 import { Bar, BarChart, XAxis } from "recharts";
 
 import { useDesignSystemSearchParams } from "@/app/(www)/(create)/lib/search-params";
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-} from "@/registry/bases/base/styles/default/ui/item";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const chartData = [
   { month: "Dec", amount: 800 },
@@ -40,11 +20,28 @@ const chartConfig = {
     label: "Contribution",
     color: "var(--chart-2)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function ContributionHistory() {
   const [params] = useDesignSystemSearchParams();
   const isRounded = !["lyra", "sera"].includes(params.style);
+
+  const {
+    Button,
+
+    Card,
+    CardFooter,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Item,
+    ItemContent,
+    ItemDescription,
+  } = useDesignSystem();
 
   return (
     <Card>

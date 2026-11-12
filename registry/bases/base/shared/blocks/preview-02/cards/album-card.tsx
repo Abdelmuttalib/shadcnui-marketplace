@@ -1,14 +1,16 @@
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 export function AlbumCard() {
+  const {
+    CardFooter,
+    Card,
+    CardContent,
+    CardDescription,
+    CardTitle,
+    Badge,
+    Separator,
+  } = useDesignSystem();
+
   return (
     <Card>
       <CardContent className="flex flex-col gap-4">

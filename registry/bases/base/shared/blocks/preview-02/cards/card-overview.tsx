@@ -2,20 +2,7 @@
 
 import { Bar, BarChart, XAxis } from "recharts";
 
-import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
-import { Button } from "@/registry/bases/base/styles/default/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/registry/bases/base/styles/default/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/bases/base/styles/default/ui/chart";
+import { useDesignSystem } from "../../../components/design-system-provider";
 
 const activityData = [
   { month: "Jan", amount: 40 },
@@ -37,9 +24,21 @@ const chartConfig = {
     label: "Activity",
     color: "var(--chart-2)",
   },
-} satisfies ChartConfig;
+} satisfies any;
 
 export function CardOverview() {
+  const {
+    Button,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+    Card,
+    CardContent,
+    CardDescription,
+    CardTitle,
+    Badge,
+  } = useDesignSystem();
+
   return (
     <div className="grid grid-cols-2 gap-3">
       <Card>
