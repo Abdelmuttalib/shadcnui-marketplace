@@ -105,6 +105,7 @@ export function TanStackAiHelperDemo() {
   const { messages, append, status, setMessages } = useChat({
     initialMessages,
     connection,
+    threadId: "",
   });
   const nextMessage = chat.next(messages);
   const nextMessageText = nextMessage ? getMessageText(nextMessage) : null;
@@ -113,7 +114,7 @@ export function TanStackAiHelperDemo() {
   return (
     <MessageScrollerProvider>
       <div className="relative flex flex-col gap-4">
-        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
+        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>New Chat</CardTitle>
             <CardDescription>How can I help you today?</CardDescription>
@@ -186,7 +187,7 @@ export function TanStackAiHelperDemo() {
               <InputGroup>
                 <InputGroupTextarea
                   aria-label="Next predefined message"
-                  className="min-h-14 h-14 overflow-hidden px-3 py-2.5 opacity-60 data-[status=ready]:opacity-100"
+                  className="h-14 min-h-14 overflow-hidden px-3 py-2.5 opacity-60 data-[status=ready]:opacity-100"
                   data-status={status}
                   placeholder="No messages queued. Reset the conversation."
                   value={nextMessageText ?? ""}

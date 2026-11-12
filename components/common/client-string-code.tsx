@@ -13,7 +13,9 @@ export function ClientStringCode({
   disableCopyButton?: boolean;
 }) {
   const [code, setCode] = React.useState("");
-  const [codeString, setCodeString] = React.useState<JSX.Element | string>("");
+  const [codeString, setCodeString] = React.useState<
+    React.JSX.Element | string
+  >("");
   // let code = "";
   // let codeString: any | string;
 

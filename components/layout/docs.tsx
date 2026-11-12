@@ -1,125 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { PageContainer } from "@/components/common/page-container";
-import { siteConfig } from "@/config";
 import { cn } from "@/utils/cn";
-
-function GradientBackground() {
-  return (
-    <>
-      {/* <div
-        className="fixed inset-x-0 -top-40 -z-40 transform-gpu overflow-hidden opacity-20 blur-3xl sm:-top-80"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-primary to-[#2449ec] sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        />
-      </div> */}
-
-      <div
-        className="fixed inset-x-0 top-[calc(30%)] -z-40 transform-gpu overflow-hidden opacity-20  blur-3xl sm:top-[calc(30%)]"
-        aria-hidden="true"
-      >
-        <div
-          className="bg-linear-to-tr from-primary relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 to-[#2449ec] sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        />
-      </div>
-    </>
-  );
-}
-
-function getDocsComponentPath(component: string) {
-  return `${siteConfig.paths.docs}${siteConfig.paths.components}/${component}`;
-}
-
-const docsComponentsPaths = Object.entries(siteConfig.paths.components)
-  .map(([key, value]) =>
-    key === "index"
-      ? null
-      : {
-          title: key.replace("-", " "),
-          href: value,
-        }
-  )
-  .filter(Boolean);
-
-const docsLayoutLinks = [
-  {
-    section: "Getting Started",
-    links: [
-      {
-        title: "Introduction",
-        href: "/docs#introduction",
-      },
-      {
-        title: "Installation",
-        href: "/docs#installation",
-      },
-      {
-        title: "Components",
-        href: "/docs#components",
-      },
-      {
-        title: "Guides",
-        href: "/docs#guides",
-      },
-      {
-        title: "CSS",
-        href: "/docs#css",
-      },
-    ],
-  },
-  {
-    section: "Components",
-    links: docsComponentsPaths,
-  },
-];
-
-function DocsLayoutSidebarLink({
-  href,
-  title,
-  active,
-}: {
-  href: string;
-  title: string;
-  active?: boolean;
-}) {
-  return (
-    <Link
-      href={href}
-      // href={href}
-      className={cn(
-        "text-foreground-subtle hover:bg-base-25 hover:border-primary-300 hover:text-foreground dark:hover:bg-card block rounded rounded-l-none border-l-2 px-4 py-2.5 text-sm capitalize",
-        {
-          "text-foreground-light bg-base-25 border-primary dark:bg-card font-medium":
-            active,
-        }
-      )}
-      // className="text-sm rounded text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-    >
-      {title}
-    </Link>
-  );
-}
-
-const headerNavLinks = [
-  { href: "/", title: "Home" },
-  { href: "/components", title: "Components" },
-  { href: "/docs", title: "Docs" },
-  // { href: "/blog", title: "Blog" },
-  // { href: "/about", title: "About" },
-];
 
 export function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -145,10 +29,10 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
           </DocsLayoutContainer>
         </div>
       </header> */}
-      <div className="flex-1 pb-72 pt-12">
+      <div className="flex-1 pt-12 pb-72">
         <PageContainer className="relative flex h-full flex-1 gap-x-8">
           <DocsLayoutSidebar className="fixed pb-72" />
-          <DocsLayoutMain className="mx-auto ml-56 mr-10 max-w-2xl">
+          <DocsLayoutMain className="mx-auto mr-10 ml-56 max-w-2xl">
             {children}
           </DocsLayoutMain>
           {/* <DocsLayoutSidebarReferrer className="fixed bg-red-300">
@@ -182,7 +66,7 @@ function DocsLayoutSidebar({
       )}
     >
       <nav className="pb-40">
-        {docsLayoutLinks.map((link, i) => (
+        {/* {docsLayoutLinks.map((link, i) => (
           <>
             <h5
               key={link.section}
@@ -193,18 +77,14 @@ function DocsLayoutSidebar({
             <ul key={link.section + i} className="mt-3">
               {link.links.map((link) =>
                 link ? (
-                  <li key={link.href}>
-                    <DocsLayoutSidebarLink
-                      {...link}
-                      active={pathname === `/docs${link.href}`}
-                      // active={router.asPath === `/docs${link.href}`}
-                    />
+                  <li key={link.href as any}>
+                    <Link href={link.href as any} />
                   </li>
                 ) : null
               )}
             </ul>
           </>
-        ))}
+        ))} */}
       </nav>
     </aside>
   );
