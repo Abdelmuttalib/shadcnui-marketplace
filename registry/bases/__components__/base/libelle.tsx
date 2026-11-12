@@ -615,7 +615,7 @@ export const Components: Record<string, any> = {
 
   "accordion-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/accordion-example");
+      await import("@/registry/bases/base/shared/examples/accordion-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -625,7 +625,7 @@ export const Components: Record<string, any> = {
 
   "alert-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/alert-example");
+      await import("@/registry/bases/base/shared/examples/alert-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -635,7 +635,7 @@ export const Components: Record<string, any> = {
 
   "alert-dialog-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/alert-dialog-example");
+      await import("@/registry/bases/base/shared/examples/alert-dialog-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -645,7 +645,7 @@ export const Components: Record<string, any> = {
 
   "aspect-ratio-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/aspect-ratio-example");
+      await import("@/registry/bases/base/shared/examples/aspect-ratio-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -655,7 +655,7 @@ export const Components: Record<string, any> = {
 
   "avatar-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/avatar-example");
+      await import("@/registry/bases/base/shared/examples/avatar-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -665,7 +665,7 @@ export const Components: Record<string, any> = {
 
   "badge-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/badge-example");
+      await import("@/registry/bases/base/shared/examples/badge-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -675,7 +675,7 @@ export const Components: Record<string, any> = {
 
   "breadcrumb-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/breadcrumb-example");
+      await import("@/registry/bases/base/shared/examples/breadcrumb-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -685,7 +685,7 @@ export const Components: Record<string, any> = {
 
   "button-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/button-example");
+      await import("@/registry/bases/base/shared/examples/button-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -695,7 +695,7 @@ export const Components: Record<string, any> = {
 
   "button-group-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/button-group-example");
+      await import("@/registry/bases/base/shared/examples/button-group-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -705,7 +705,7 @@ export const Components: Record<string, any> = {
 
   "calendar-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/calendar-example");
+      await import("@/registry/bases/base/shared/examples/calendar-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -715,7 +715,7 @@ export const Components: Record<string, any> = {
 
   "card-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/card-example");
+      await import("@/registry/bases/base/shared/examples/card-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -725,7 +725,7 @@ export const Components: Record<string, any> = {
 
   "carousel-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/carousel-example");
+      await import("@/registry/bases/base/shared/examples/carousel-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -735,7 +735,7 @@ export const Components: Record<string, any> = {
 
   "chart-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/chart-example");
+      await import("@/registry/bases/base/shared/examples/chart-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -745,7 +745,7 @@ export const Components: Record<string, any> = {
 
   "checkbox-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/checkbox-example");
+      await import("@/registry/bases/base/shared/examples/checkbox-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -755,7 +755,7 @@ export const Components: Record<string, any> = {
 
   "collapsible-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/collapsible-example");
+      await import("@/registry/bases/base/shared/examples/collapsible-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -765,7 +765,7 @@ export const Components: Record<string, any> = {
 
   "combobox-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/combobox-example");
+      await import("@/registry/bases/base/shared/examples/combobox-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -775,7 +775,7 @@ export const Components: Record<string, any> = {
 
   "command-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/command-example");
+      await import("@/registry/bases/base/shared/examples/command-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -785,7 +785,7 @@ export const Components: Record<string, any> = {
 
   "context-menu-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/context-menu-example");
+      await import("@/registry/bases/base/shared/examples/context-menu-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -795,7 +795,7 @@ export const Components: Record<string, any> = {
 
   "dialog-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/dialog-example");
+      await import("@/registry/bases/base/shared/examples/dialog-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -805,7 +805,7 @@ export const Components: Record<string, any> = {
 
   "drawer-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/drawer-example");
+      await import("@/registry/bases/base/shared/examples/drawer-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -815,7 +815,7 @@ export const Components: Record<string, any> = {
 
   "dropdown-menu-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/dropdown-menu-example");
+      await import("@/registry/bases/base/shared/examples/dropdown-menu-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -825,7 +825,7 @@ export const Components: Record<string, any> = {
 
   "empty-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/empty-example");
+      await import("@/registry/bases/base/shared/examples/empty-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -835,7 +835,7 @@ export const Components: Record<string, any> = {
 
   "field-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/field-example");
+      await import("@/registry/bases/base/shared/examples/field-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -845,7 +845,7 @@ export const Components: Record<string, any> = {
 
   "hover-card-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/hover-card-example");
+      await import("@/registry/bases/base/shared/examples/hover-card-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -855,7 +855,7 @@ export const Components: Record<string, any> = {
 
   "input-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/input-example");
+      await import("@/registry/bases/base/shared/examples/input-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -865,7 +865,7 @@ export const Components: Record<string, any> = {
 
   "input-group-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/input-group-example");
+      await import("@/registry/bases/base/shared/examples/input-group-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -875,7 +875,7 @@ export const Components: Record<string, any> = {
 
   "input-otp-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/input-otp-example");
+      await import("@/registry/bases/base/shared/examples/input-otp-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -885,7 +885,7 @@ export const Components: Record<string, any> = {
 
   "item-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/item-example");
+      await import("@/registry/bases/base/shared/examples/item-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -895,7 +895,7 @@ export const Components: Record<string, any> = {
 
   "kbd-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/kbd-example");
+      await import("@/registry/bases/base/shared/examples/kbd-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -905,7 +905,7 @@ export const Components: Record<string, any> = {
 
   "label-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/label-example");
+      await import("@/registry/bases/base/shared/examples/label-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -915,7 +915,7 @@ export const Components: Record<string, any> = {
 
   "menubar-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/menubar-example");
+      await import("@/registry/bases/base/shared/examples/menubar-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -925,7 +925,7 @@ export const Components: Record<string, any> = {
 
   "native-select-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/native-select-example");
+      await import("@/registry/bases/base/shared/examples/native-select-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -935,7 +935,7 @@ export const Components: Record<string, any> = {
 
   "navigation-menu-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/navigation-menu-example");
+      await import("@/registry/bases/base/shared/examples/navigation-menu-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -945,7 +945,7 @@ export const Components: Record<string, any> = {
 
   "pagination-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/pagination-example");
+      await import("@/registry/bases/base/shared/examples/pagination-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -955,7 +955,7 @@ export const Components: Record<string, any> = {
 
   "popover-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/popover-example");
+      await import("@/registry/bases/base/shared/examples/popover-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -965,7 +965,7 @@ export const Components: Record<string, any> = {
 
   "progress-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/progress-example");
+      await import("@/registry/bases/base/shared/examples/progress-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -975,7 +975,7 @@ export const Components: Record<string, any> = {
 
   "radio-group-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/radio-group-example");
+      await import("@/registry/bases/base/shared/examples/radio-group-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -985,7 +985,7 @@ export const Components: Record<string, any> = {
 
   "resizable-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/resizable-example");
+      await import("@/registry/bases/base/shared/examples/resizable-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -995,7 +995,7 @@ export const Components: Record<string, any> = {
 
   "scroll-area-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/scroll-area-example");
+      await import("@/registry/bases/base/shared/examples/scroll-area-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1005,7 +1005,7 @@ export const Components: Record<string, any> = {
 
   "select-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/select-example");
+      await import("@/registry/bases/base/shared/examples/select-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1015,7 +1015,7 @@ export const Components: Record<string, any> = {
 
   "separator-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/separator-example");
+      await import("@/registry/bases/base/shared/examples/separator-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1025,7 +1025,7 @@ export const Components: Record<string, any> = {
 
   "sheet-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/sheet-example");
+      await import("@/registry/bases/base/shared/examples/sheet-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1035,7 +1035,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/sidebar-example");
+      await import("@/registry/bases/base/shared/examples/sidebar-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1045,7 +1045,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-icon-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/sidebar-icon-example");
+      await import("@/registry/bases/base/shared/examples/sidebar-icon-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1055,7 +1055,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-inset-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/sidebar-inset-example");
+      await import("@/registry/bases/base/shared/examples/sidebar-inset-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1065,7 +1065,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-floating-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/sidebar-floating-example");
+      await import("@/registry/bases/base/shared/examples/sidebar-floating-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1075,7 +1075,7 @@ export const Components: Record<string, any> = {
 
   "skeleton-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/skeleton-example");
+      await import("@/registry/bases/base/shared/examples/skeleton-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1085,7 +1085,7 @@ export const Components: Record<string, any> = {
 
   "slider-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/slider-example");
+      await import("@/registry/bases/base/shared/examples/slider-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1095,7 +1095,7 @@ export const Components: Record<string, any> = {
 
   "sonner-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/sonner-example");
+      await import("@/registry/bases/base/shared/examples/sonner-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1105,7 +1105,7 @@ export const Components: Record<string, any> = {
 
   "spinner-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/spinner-example");
+      await import("@/registry/bases/base/shared/examples/spinner-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1115,7 +1115,7 @@ export const Components: Record<string, any> = {
 
   "switch-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/switch-example");
+      await import("@/registry/bases/base/shared/examples/switch-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1125,7 +1125,7 @@ export const Components: Record<string, any> = {
 
   "table-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/table-example");
+      await import("@/registry/bases/base/shared/examples/table-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1135,7 +1135,7 @@ export const Components: Record<string, any> = {
 
   "tabs-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/tabs-example");
+      await import("@/registry/bases/base/shared/examples/tabs-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1145,7 +1145,7 @@ export const Components: Record<string, any> = {
 
   "textarea-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/textarea-example");
+      await import("@/registry/bases/base/shared/examples/textarea-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1155,7 +1155,7 @@ export const Components: Record<string, any> = {
 
   "toast-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/toast-example");
+      await import("@/registry/bases/base/shared/examples/toast-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1165,7 +1165,7 @@ export const Components: Record<string, any> = {
 
   "toggle-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/toggle-example");
+      await import("@/registry/bases/base/shared/examples/toggle-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1175,7 +1175,7 @@ export const Components: Record<string, any> = {
 
   "toggle-group-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/toggle-group-example");
+      await import("@/registry/bases/base/shared/examples/toggle-group-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1185,7 +1185,7 @@ export const Components: Record<string, any> = {
 
   "tooltip-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/tooltip-example");
+      await import("@/registry/bases/base/shared/examples/tooltip-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1194,8 +1194,7 @@ export const Components: Record<string, any> = {
   }),
 
   demo: React.lazy(async () => {
-    const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/demo");
+    const mod = await import("@/registry/bases/base/shared/examples/demo");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1205,7 +1204,7 @@ export const Components: Record<string, any> = {
 
   "component-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/component-example");
+      await import("@/registry/bases/base/shared/examples/component-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1215,7 +1214,7 @@ export const Components: Record<string, any> = {
 
   "attachment-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/attachment-example");
+      await import("@/registry/bases/base/shared/examples/attachment-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1225,7 +1224,7 @@ export const Components: Record<string, any> = {
 
   "bubble-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/bubble-example");
+      await import("@/registry/bases/base/shared/examples/bubble-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1235,7 +1234,7 @@ export const Components: Record<string, any> = {
 
   "message-scroller-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/message-scroller-example");
+      await import("@/registry/bases/base/shared/examples/message-scroller-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1245,7 +1244,7 @@ export const Components: Record<string, any> = {
 
   "questionnaire-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/questionnaire-example");
+      await import("@/registry/bases/base/shared/examples/questionnaire-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1255,7 +1254,7 @@ export const Components: Record<string, any> = {
 
   "marker-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/marker-example");
+      await import("@/registry/bases/base/shared/examples/marker-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1265,7 +1264,7 @@ export const Components: Record<string, any> = {
 
   "trace-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/trace-example");
+      await import("@/registry/bases/base/shared/examples/trace-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1275,7 +1274,7 @@ export const Components: Record<string, any> = {
 
   "code-block-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/code-block-example");
+      await import("@/registry/bases/base/shared/examples/code-block-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1285,7 +1284,7 @@ export const Components: Record<string, any> = {
 
   "message-example": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/examples/message-example");
+      await import("@/registry/bases/base/shared/examples/message-example");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1314,7 +1313,7 @@ export const Components: Record<string, any> = {
 
   preview: React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/preview/index");
+      await import("@/registry/bases/base/shared/blocks/preview/index");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1324,7 +1323,7 @@ export const Components: Record<string, any> = {
 
   "preview-02": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/preview-02/index");
+      await import("@/registry/bases/base/shared/blocks/preview-02/index");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1334,7 +1333,7 @@ export const Components: Record<string, any> = {
 
   "preview-03": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/preview-03/index");
+      await import("@/registry/bases/base/shared/blocks/preview-03/index");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1344,7 +1343,7 @@ export const Components: Record<string, any> = {
 
   "login-01": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/login-01/page");
+      await import("@/registry/bases/base/shared/blocks/login-01/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1354,7 +1353,7 @@ export const Components: Record<string, any> = {
 
   "login-02": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/login-02/page");
+      await import("@/registry/bases/base/shared/blocks/login-02/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1364,7 +1363,7 @@ export const Components: Record<string, any> = {
 
   "login-03": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/login-03/page");
+      await import("@/registry/bases/base/shared/blocks/login-03/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1374,7 +1373,7 @@ export const Components: Record<string, any> = {
 
   "login-04": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/login-04/page");
+      await import("@/registry/bases/base/shared/blocks/login-04/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1384,7 +1383,7 @@ export const Components: Record<string, any> = {
 
   "login-05": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/login-05/page");
+      await import("@/registry/bases/base/shared/blocks/login-05/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1394,7 +1393,7 @@ export const Components: Record<string, any> = {
 
   "signup-01": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/signup-01/page");
+      await import("@/registry/bases/base/shared/blocks/signup-01/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1404,7 +1403,7 @@ export const Components: Record<string, any> = {
 
   "signup-02": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/signup-02/page");
+      await import("@/registry/bases/base/shared/blocks/signup-02/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1414,7 +1413,7 @@ export const Components: Record<string, any> = {
 
   "signup-03": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/signup-03/page");
+      await import("@/registry/bases/base/shared/blocks/signup-03/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1424,7 +1423,7 @@ export const Components: Record<string, any> = {
 
   "signup-04": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/signup-04/page");
+      await import("@/registry/bases/base/shared/blocks/signup-04/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1434,7 +1433,7 @@ export const Components: Record<string, any> = {
 
   "signup-05": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/signup-05/page");
+      await import("@/registry/bases/base/shared/blocks/signup-05/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1444,7 +1443,7 @@ export const Components: Record<string, any> = {
 
   "dashboard-01": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/dashboard-01/page");
+      await import("@/registry/bases/base/shared/blocks/dashboard-01/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1454,7 +1453,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-01": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-01/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-01/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1464,7 +1463,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-02": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-02/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-02/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1474,7 +1473,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-03": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-03/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-03/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1484,7 +1483,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-04": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-04/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-04/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1494,7 +1493,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-05": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-05/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-05/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1504,7 +1503,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-06": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-06/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-06/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1514,7 +1513,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-07": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-07/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-07/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1524,7 +1523,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-08": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-08/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-08/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1534,7 +1533,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-09": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-09/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-09/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1544,7 +1543,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-10": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-10/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-10/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1554,7 +1553,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-11": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-11/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-11/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1564,7 +1563,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-12": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-12/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-12/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1574,7 +1573,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-13": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-13/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-13/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1584,7 +1583,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-14": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-14/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-14/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1594,7 +1593,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-15": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-15/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-15/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1604,7 +1603,7 @@ export const Components: Record<string, any> = {
 
   "sidebar-16": React.lazy(async () => {
     const mod =
-      await import("@/registry/bases/base/styles/libelle/blocks/sidebar-16/page");
+      await import("@/registry/bases/base/shared/blocks/sidebar-16/page");
     const exportName =
       Object.keys(mod).find(
         (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
