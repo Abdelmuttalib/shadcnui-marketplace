@@ -22,8 +22,8 @@ import {
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { Checkbox } from "@/styles/base-default/ui/checkbox";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -33,8 +33,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
-import { Input } from "@/styles/base-default/ui/input";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 import {
   Table,
   TableBody,
@@ -42,7 +42,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/styles/base-default/ui/table";
+} from "@/registry/bases/base/styles/default/ui/table";
 
 // New in v9: declare the features this table uses — anything you don't
 // register is tree-shaken out of the bundle.

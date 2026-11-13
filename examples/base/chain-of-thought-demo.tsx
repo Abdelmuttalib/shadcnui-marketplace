@@ -12,14 +12,20 @@ import {
 import * as React from "react";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { Badge } from "@/styles/base-default/ui/badge";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   CodeBlock,
   CodeBlockContent,
-} from "@/styles/base-default/ui/code-block";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/code-block";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -28,7 +34,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
@@ -136,8 +142,8 @@ function StepRow({ part, streaming }: { part: StepPart; streaming: boolean }) {
     part.state === "output-available"
       ? undefined
       : part.state === "output-error" || !streaming
-      ? "error"
-      : "running";
+        ? "error"
+        : "running";
   const verb = (running: string, done: string, failed: string) =>
     status === "running" ? running : status === "error" ? failed : done;
   const error = part.state === "output-error" && (
@@ -289,7 +295,7 @@ export function ChainOfThoughtDemo() {
   const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (

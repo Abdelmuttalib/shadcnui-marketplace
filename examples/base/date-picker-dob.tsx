@@ -2,14 +2,17 @@
 
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { Calendar } from "@/styles/base-default/ui/calendar";
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
+} from "@/registry/bases/base/styles/default/ui/popover";
 
 export function DatePickerSimple() {
   const [open, setOpen] = React.useState(false);

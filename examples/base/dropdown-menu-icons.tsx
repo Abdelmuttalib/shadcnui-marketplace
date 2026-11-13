@@ -7,14 +7,14 @@ import {
   UserIcon,
 } from "lucide-react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 
 export function DropdownMenuIcons() {
   return (

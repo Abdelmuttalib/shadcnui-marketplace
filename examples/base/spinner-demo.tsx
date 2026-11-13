@@ -3,8 +3,8 @@ import {
   ItemContent,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-default/ui/item";
-import { Spinner } from "@/styles/base-default/ui/spinner";
+} from "@/registry/bases/base/styles/default/ui/item";
+import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
 
 export function SpinnerDemo() {
   return (

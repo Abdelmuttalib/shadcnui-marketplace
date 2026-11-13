@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 
 export function ShimmerOnce() {
   const [key, setKey] = React.useState(0);

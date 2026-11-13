@@ -16,7 +16,7 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-default/ui/questionnaire";
+} from "@/registry/bases/base/styles/default/ui/questionnaire";
 
 export function QuestionnaireConditional() {
   const [runtime, setRuntime] = React.useState("local");

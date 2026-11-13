@@ -6,11 +6,11 @@ import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-default/ui/toggle-group";
+} from "@/registry/bases/base/styles/default/ui/toggle-group";
 
 export function ToggleGroupFontWeightSelector() {
   const [fontWeight, setFontWeight] = React.useState("normal");
@@ -27,33 +27,33 @@ export function ToggleGroupFontWeightSelector() {
         <ToggleGroupItem
           value="light"
           aria-label="Light"
-          className="size-16 flex flex-col items-center justify-center rounded-xl"
+          className="flex size-16 flex-col items-center justify-center rounded-xl"
         >
-          <span className="text-2xl font-light leading-none">Aa</span>
+          <span className="text-2xl leading-none font-light">Aa</span>
           <span className="text-muted-foreground text-xs">Light</span>
         </ToggleGroupItem>
         <ToggleGroupItem
           value="normal"
           aria-label="Normal"
-          className="size-16 flex flex-col items-center justify-center rounded-xl"
+          className="flex size-16 flex-col items-center justify-center rounded-xl"
         >
-          <span className="text-2xl font-normal leading-none">Aa</span>
+          <span className="text-2xl leading-none font-normal">Aa</span>
           <span className="text-muted-foreground text-xs">Normal</span>
         </ToggleGroupItem>
         <ToggleGroupItem
           value="medium"
           aria-label="Medium"
-          className="size-16 flex flex-col items-center justify-center rounded-xl"
+          className="flex size-16 flex-col items-center justify-center rounded-xl"
         >
-          <span className="text-2xl font-medium leading-none">Aa</span>
+          <span className="text-2xl leading-none font-medium">Aa</span>
           <span className="text-muted-foreground text-xs">Medium</span>
         </ToggleGroupItem>
         <ToggleGroupItem
           value="bold"
           aria-label="Bold"
-          className="size-16 flex flex-col items-center justify-center rounded-xl"
+          className="flex size-16 flex-col items-center justify-center rounded-xl"
         >
-          <span className="text-2xl font-bold leading-none">Aa</span>
+          <span className="text-2xl leading-none font-bold">Aa</span>
           <span className="text-muted-foreground text-xs">Bold</span>
         </ToggleGroupItem>
       </ToggleGroup>

@@ -9,7 +9,7 @@ import {
   AttachmentMedia,
   AttachmentTitle,
   AttachmentTrigger,
-} from "@/styles/base-default/ui/attachment";
+} from "@/registry/bases/base/styles/default/ui/attachment";
 import {
   Dialog,
   DialogContent,
@@ -17,7 +17,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-default/ui/dialog";
+} from "@/registry/bases/base/styles/default/ui/dialog";
 
 export function AttachmentTriggerDemo() {
   return (

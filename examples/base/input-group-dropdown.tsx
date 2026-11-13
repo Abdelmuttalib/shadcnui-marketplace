@@ -8,13 +8,13 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/input-group";
 
 export function InputGroupDropdown() {
   return (

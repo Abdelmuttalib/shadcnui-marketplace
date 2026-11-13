@@ -3,19 +3,19 @@
 import { AudioLinesIcon, PlusIcon } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { ButtonGroup } from "@/styles/base-default/ui/button-group";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { ButtonGroup } from "@/registry/bases/base/styles/default/ui/button-group";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/input-group";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 export default function ButtonGroupInputGroup() {
   const [voiceEnabled, setVoiceEnabled] = React.useState(false);

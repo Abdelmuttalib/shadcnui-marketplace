@@ -6,7 +6,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-default/ui/item";
+} from "@/registry/bases/base/styles/default/ui/item";
 
 export function ItemVariant() {
   return (

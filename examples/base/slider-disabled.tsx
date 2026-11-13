@@ -1,4 +1,4 @@
-import { Slider } from "@/styles/base-default/ui/slider";
+import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
 
 export function SliderDisabled() {
   return (

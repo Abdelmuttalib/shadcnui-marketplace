@@ -14,7 +14,7 @@ import * as React from "react";
 
 import { MessageAnimated } from "@/components/message-animated";
 import { createChat, getMessageText } from "@/lib/ai";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardAction,
@@ -23,32 +23,32 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
-} from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/input-group";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-default/ui/message-scroller";
-import { Slider } from "@/styles/base-default/ui/slider";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
+import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 const DEFAULT_PEEK = 64;
 
@@ -99,7 +99,7 @@ export function MessageScrollerPreviousContext() {
       scrollPreviousItemPeek={peek}
     >
       <div className="relative flex flex-col gap-4">
-        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
+        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>Keeping Context Visible</CardTitle>
             <CardDescription>

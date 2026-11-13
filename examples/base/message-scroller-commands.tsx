@@ -3,8 +3,11 @@
 import * as React from "react";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardAction,
@@ -12,7 +15,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,8 +23,11 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -30,7 +36,7 @@ import {
   MessageScrollerProvider,
   MessageScrollerViewport,
   useMessageScroller,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 
 const chat = createChat()
   .user(
@@ -66,7 +72,7 @@ export function MessageScrollerCommands() {
   return (
     <MessageScrollerProvider defaultScrollPosition="end">
       <div className="relative flex flex-col gap-4">
-        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
+        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>Commands</CardTitle>
             <CardDescription>
@@ -119,7 +125,7 @@ export function MessageScrollerCommands() {
             </MessageScroller>
           </CardContent>
         </Card>
-        <div className="text-balance text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
+        <div className="text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs text-balance">
           Use the controls to jump to any message in the conversation.
         </div>
       </div>

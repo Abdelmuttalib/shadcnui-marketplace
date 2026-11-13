@@ -10,7 +10,7 @@ import {
   AttachmentMedia,
   AttachmentTitle,
   AttachmentTrigger,
-} from "@/styles/base-default/ui/attachment";
+} from "@/registry/bases/base/styles/default/ui/attachment";
 
 const images = [
   {

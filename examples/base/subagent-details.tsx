@@ -1,6 +1,6 @@
 import { CircleCheckIcon } from "lucide-react";
 
-import { Badge } from "@/styles/base-default/ui/badge";
+import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
 import {
   Trace,
   TraceCollapsible,
@@ -10,7 +10,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 export function SubagentDetails() {
   return (

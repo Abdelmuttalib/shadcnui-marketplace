@@ -2,20 +2,23 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-default/ui/avatar";
+} from "@/registry/bases/base/styles/default/ui/avatar";
 import {
   Bubble,
   BubbleContent,
   BubbleGroup,
   BubbleReactions,
-} from "@/styles/base-default/ui/bubble";
-import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import {
+  Marker,
+  MarkerContent,
+} from "@/registry/bases/base/styles/default/ui/marker";
 import {
   Message,
   MessageAvatar,
   MessageContent,
   MessageFooter,
-} from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/message";
 
 export function MessageDemo() {
   return (

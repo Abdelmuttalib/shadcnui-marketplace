@@ -1,6 +1,10 @@
-import { Button } from "@/styles/base-default/ui/button";
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 import {
   Popover,
   PopoverContent,
@@ -8,7 +12,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
+} from "@/registry/bases/base/styles/default/ui/popover";
 
 export function PopoverForm() {
   return (

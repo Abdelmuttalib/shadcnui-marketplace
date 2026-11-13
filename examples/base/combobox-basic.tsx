@@ -7,7 +7,7 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@/styles/base-default/ui/combobox";
+} from "@/registry/bases/base/styles/default/ui/combobox";
 
 const frameworks = [
   "Next.js",

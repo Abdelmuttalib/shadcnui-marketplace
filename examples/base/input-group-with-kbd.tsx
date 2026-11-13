@@ -5,15 +5,15 @@ import {
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-default/ui/input-group";
-import { Kbd, KbdGroup } from "@/styles/base-default/ui/kbd";
-import { Spinner } from "@/styles/base-default/ui/spinner";
+} from "@/registry/bases/base/styles/default/ui/input-group";
+import { Kbd, KbdGroup } from "@/registry/bases/base/styles/default/ui/kbd";
+import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
 
 export function InputGroupWithKbd() {
   return (
@@ -63,7 +63,7 @@ export function InputGroupWithKbd() {
         <InputGroup>
           <InputGroupInput id="input-username-26" defaultValue="shadcn" />
           <InputGroupAddon align="inline-end">
-            <div className="size-4 flex items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
+            <div className="flex size-4 items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
               <CheckIcon className="size-3 text-white" />
             </div>
           </InputGroupAddon>

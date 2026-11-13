@@ -7,7 +7,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Item,
   ItemActions,
@@ -15,7 +15,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-default/ui/item";
+} from "@/registry/bases/base/styles/default/ui/item";
 
 const translations: Translations = {
   en: {

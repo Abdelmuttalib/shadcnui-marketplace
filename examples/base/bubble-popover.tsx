@@ -4,8 +4,8 @@ import {
   Bubble,
   BubbleContent,
   BubbleReactions,
-} from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Popover,
   PopoverContent,
@@ -13,7 +13,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
+} from "@/registry/bases/base/styles/default/ui/popover";
 
 export function BubblePopoverDemo() {
   return (

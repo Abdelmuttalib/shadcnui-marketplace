@@ -10,8 +10,8 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-default/ui/item";
-import { Progress } from "@/styles/base-default/ui/progress";
+} from "@/registry/bases/base/styles/default/ui/item";
+import { Progress } from "@/registry/bases/base/styles/default/ui/progress";
 
 export function FileUploadList() {
   const files = React.useMemo(

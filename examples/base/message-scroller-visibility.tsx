@@ -1,20 +1,26 @@
 "use client";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-default/ui/hover-card";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/hover-card";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -24,7 +30,7 @@ import {
   MessageScrollerViewport,
   useMessageScroller,
   useMessageScrollerVisibility,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 
 const chat = createChat()
   .user("Review the incident handoff and tell me what to read first.", {
@@ -112,7 +118,7 @@ export function MessageScrollerVisibility() {
               </MessageScroller>
             </CardContent>
           </Card>
-          <div className="absolute -right-12 top-1/2 -translate-y-1/2">
+          <div className="absolute top-1/2 -right-12 -translate-y-1/2">
             <TranscriptOutline />
           </div>
         </div>
@@ -135,7 +141,7 @@ function TranscriptOutline() {
           <button
             type="button"
             aria-label="Open transcript outline"
-            className="focus-visible:ring-3 focus-visible:ring-ring/50 flex h-9 w-9 flex-col items-center justify-center gap-1 rounded-md outline-none transition-colors"
+            className="focus-visible:ring-ring/50 flex h-9 w-9 flex-col items-center justify-center gap-1 rounded-md transition-colors outline-none focus-visible:ring-3"
           />
         }
       >
@@ -160,7 +166,7 @@ function TranscriptOutline() {
             aria-current={
               currentAnchorId === message.id ? "location" : undefined
             }
-            className="min-h-7 hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground aria-current:bg-accent aria-current:text-accent-foreground flex items-center rounded-xl px-2 py-1.5 text-left text-sm outline-none transition-colors"
+            className="hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground aria-current:bg-accent aria-current:text-accent-foreground flex min-h-7 items-center rounded-xl px-2 py-1.5 text-left text-sm transition-colors outline-none"
             onClick={() =>
               scrollToMessage(message.id, {
                 align: "start",

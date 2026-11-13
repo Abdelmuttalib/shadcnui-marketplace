@@ -6,7 +6,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Kbd, KbdGroup } from "@/styles/base-default/ui/kbd";
+import { Kbd, KbdGroup } from "@/registry/bases/base/styles/default/ui/kbd";
 
 const translations: Translations = {
   en: {

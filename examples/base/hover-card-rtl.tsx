@@ -4,12 +4,12 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-default/ui/hover-card";
+} from "@/registry/bases/base/styles/default/ui/hover-card";
 
 const translations: Translations = {
   en: {

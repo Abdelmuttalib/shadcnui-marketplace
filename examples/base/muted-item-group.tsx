@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Item,
   ItemActions,
@@ -6,7 +6,7 @@ import {
   ItemDescription,
   ItemGroup,
   ItemTitle,
-} from "@/styles/base-default/ui/item";
+} from "@/registry/bases/base/styles/default/ui/item";
 
 export function MutedItemGroup() {
   return (

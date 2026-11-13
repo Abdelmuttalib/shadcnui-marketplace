@@ -3,14 +3,14 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/styles/base-default/ui/accordion"
+} from "@/registry/bases/base/styles/default/ui/accordion";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card"
+} from "@/registry/bases/base/styles/default/ui/card";
 
 const items = [
   {
@@ -31,7 +31,7 @@ const items = [
     content:
       "You can cancel your subscription anytime from your account settings. There are no cancellation fees or penalties. Your access will continue until the end of your current billing period.",
   },
-]
+];
 
 export default function AccordionCard() {
   return (
@@ -54,5 +54,5 @@ export default function AccordionCard() {
         </Accordion>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -3,8 +3,11 @@
 import { RotateCwIcon } from "lucide-react";
 import * as React from "react";
 
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardAction,
@@ -13,13 +16,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
-import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
+} from "@/registry/bases/base/styles/default/ui/card";
+import {
+  Marker,
+  MarkerContent,
+} from "@/registry/bases/base/styles/default/ui/marker";
 import {
   Message,
   MessageContent,
   MessageHeader,
-} from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -27,12 +33,12 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 const currentUser = "Grace";
 
@@ -101,8 +107,8 @@ export function MessageScrollerGroupChat() {
     rockyTurn === "message"
       ? [...initialItems, rockyMarker, rockyMessage]
       : rockyTurn === "marker"
-      ? [...initialItems, rockyMarker]
-      : initialItems;
+        ? [...initialItems, rockyMarker]
+        : initialItems;
   const buttonLabel =
     rockyTurn === "idle" ? "Add Rocky" : "Send Message as Rocky";
   const isComplete = rockyTurn === "message";
@@ -110,7 +116,7 @@ export function MessageScrollerGroupChat() {
   return (
     <MessageScrollerProvider>
       <div className="relative flex flex-col gap-4">
-        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
+        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>Group Chat</CardTitle>
             <CardDescription>
@@ -183,7 +189,7 @@ export function MessageScrollerGroupChat() {
             </p>
           </CardFooter>
         </Card>
-        <div className="text-balance text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
+        <div className="text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs text-balance">
           When a user joins, a marker is created. scrollAnchor on the marker
           marks it as the next turn
         </div>
@@ -201,8 +207,8 @@ function GroupChatMessage({
   const variant = isCurrentUser
     ? "muted"
     : item.role === "assistant"
-    ? "ghost"
-    : "tinted";
+      ? "ghost"
+      : "tinted";
 
   return (
     <MessageScrollerItem messageId={item.id} scrollAnchor={item.scrollAnchor}>

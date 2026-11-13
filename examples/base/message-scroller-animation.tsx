@@ -14,7 +14,7 @@ import {
   MESSAGE_ANIMATIONS,
   type MessageAnimationId,
 } from "@/lib/message-animations";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardAction,
@@ -23,21 +23,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-default/ui/empty";
+} from "@/registry/bases/base/styles/default/ui/empty";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 import {
   Select,
   SelectContent,
@@ -45,7 +45,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 const chat = createChat()
   .user("Can user messages pop in like iMessage without breaking anchoring?")
@@ -79,7 +79,7 @@ export function MessageScrollerAnimation() {
 
   return (
     <div className="relative flex flex-col gap-4">
-      <Card className="h-140 mx-auto w-full max-w-sm gap-0">
+      <Card className="mx-auto h-140 w-full max-w-sm gap-0">
         <CardHeader className="border-b">
           <CardTitle>Animation</CardTitle>
           <CardDescription>
@@ -174,7 +174,7 @@ export function MessageScrollerAnimation() {
           </Button>
         </CardFooter>
       </Card>
-      <div className="text-balance text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
+      <div className="text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs text-balance">
         Select an animation then click send to see it in action.
       </div>
     </div>

@@ -1,7 +1,7 @@
 import {
   CodeBlock,
   CodeBlockContent,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 
 const output = `Error: The model "anthropic/claude-sonnet-4.5" returned an error: Request too large. The prompt is 212,431 tokens and the context window is 200,000 tokens. Remove some messages or summarize the conversation and try again.`;
 

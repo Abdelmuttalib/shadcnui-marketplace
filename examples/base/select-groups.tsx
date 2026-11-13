@@ -7,7 +7,7 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 export function SelectGroups() {
   const fruits = [
@@ -27,7 +27,7 @@ export function SelectGroups() {
   ];
   return (
     <Select items={allItems}>
-      <SelectTrigger className="max-w-48 w-full">
+      <SelectTrigger className="w-full max-w-48">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

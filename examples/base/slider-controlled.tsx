@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-import { Label } from "@/styles/base-default/ui/label";
-import { Slider } from "@/styles/base-default/ui/slider";
+import { Label } from "@/registry/bases/base/styles/default/ui/label";
+import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
 
 export function SliderControlled() {
   const [value, setValue] = React.useState([0.3, 0.7]);

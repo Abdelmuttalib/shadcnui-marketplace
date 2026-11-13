@@ -1,5 +1,8 @@
 import { Markdown } from "@/components/markdown";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
 
 export function BubbleMarkdownDemo() {
   return (

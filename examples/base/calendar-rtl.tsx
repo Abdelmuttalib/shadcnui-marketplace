@@ -7,7 +7,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
 
 const translations: Translations = {
   en: {

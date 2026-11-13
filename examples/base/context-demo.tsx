@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-default/ui/hover-card";
-import { Progress } from "@/styles/base-default/ui/progress";
+} from "@/registry/bases/base/styles/default/ui/hover-card";
+import { Progress } from "@/registry/bases/base/styles/default/ui/progress";
 
 const usage = {
   input: 8420,

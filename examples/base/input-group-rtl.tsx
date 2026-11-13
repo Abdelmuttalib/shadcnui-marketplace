@@ -12,7 +12,7 @@ import {
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
@@ -20,8 +20,8 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/styles/base-default/ui/input-group";
-import { Spinner } from "@/styles/base-default/ui/spinner";
+} from "@/registry/bases/base/styles/default/ui/input-group";
+import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
 
 const translations: Translations = {
   en: {

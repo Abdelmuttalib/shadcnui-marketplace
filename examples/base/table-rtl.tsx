@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/styles/base-default/ui/table";
+} from "@/registry/bases/base/styles/default/ui/table";
 
 const translations: Translations = {
   en: {

@@ -18,7 +18,7 @@ import {
   SidebarMenuItem,
   SidebarMenuSkeleton,
   SidebarProvider,
-} from "@/styles/base-default/ui/sidebar";
+} from "@/registry/bases/base/styles/default/ui/sidebar";
 
 const projects = [
   {

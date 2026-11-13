@@ -2,7 +2,7 @@ import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockLine,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 
 const code = `export default {
   experimental: {

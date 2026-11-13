@@ -6,7 +6,7 @@ import {
   AttachmentDescription,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-default/ui/attachment";
+} from "@/registry/bases/base/styles/default/ui/attachment";
 
 export function AttachmentSizes() {
   return (

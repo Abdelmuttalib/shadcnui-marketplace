@@ -11,8 +11,8 @@ import {
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
-import { Switch } from "@/styles/base-default/ui/switch";
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
 
 const translations: Translations = {
   en: {

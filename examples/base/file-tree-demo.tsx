@@ -3,12 +3,12 @@
 import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-default/ui/collapsible";
+} from "@/registry/bases/base/styles/default/ui/collapsible";
 
 type FileNode =
   | { type: "file"; name: string; path: string }
@@ -72,7 +72,7 @@ function FileTreeNode({
               />
             }
           >
-            <ChevronRightIcon className="group-data-panel-open/button:rotate-90 transition-transform" />
+            <ChevronRightIcon className="transition-transform group-data-panel-open/button:rotate-90" />
             <FolderIcon />
             {node.name}
           </CollapsibleTrigger>

@@ -2,14 +2,17 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-default/ui/avatar";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+} from "@/registry/bases/base/styles/default/ui/avatar";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
 import {
   Message,
   MessageAvatar,
   MessageContent,
   MessageGroup,
-} from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/message";
 
 export function MessageGroupDemo() {
   return (

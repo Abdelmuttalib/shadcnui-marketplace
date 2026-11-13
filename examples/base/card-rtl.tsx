@@ -6,7 +6,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardAction,
@@ -15,9 +15,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
-import { Input } from "@/styles/base-default/ui/input";
-import { Label } from "@/styles/base-default/ui/label";
+} from "@/registry/bases/base/styles/default/ui/card";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
+import { Label } from "@/registry/bases/base/styles/default/ui/label";
 
 const translations: Translations = {
   en: {

@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 const STACK = `TypeError: Cannot read properties of undefined (reading 'total')
     at formatInvoice (app/lib/billing.ts:42:31)

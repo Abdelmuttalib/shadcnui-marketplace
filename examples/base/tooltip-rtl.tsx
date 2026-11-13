@@ -4,12 +4,12 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 const translations: Translations = {
   en: {

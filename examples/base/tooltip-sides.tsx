@@ -1,9 +1,9 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 export function TooltipSides() {
   return (

@@ -3,11 +3,11 @@
 import { TerminalIcon } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   CodeBlock,
   CodeBlockContent,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 import {
   TraceCollapsible,
   TraceCollapsibleContent,
@@ -15,7 +15,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 export function TraceOpen() {
   const [open, setOpen] = React.useState(false);

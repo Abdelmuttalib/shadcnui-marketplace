@@ -3,16 +3,16 @@
 import { ArrowRightIcon } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { ButtonGroup } from "@/styles/base-default/ui/button-group";
-import { Input } from "@/styles/base-default/ui/input";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { ButtonGroup } from "@/registry/bases/base/styles/default/ui/button-group";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
   SelectTrigger,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 const CURRENCIES = [
   { label: "US Dollar", value: "$" },

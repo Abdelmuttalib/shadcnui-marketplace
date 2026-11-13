@@ -16,7 +16,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/styles/base-default/ui/navigation-menu";
+} from "@/registry/bases/base/styles/default/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -148,7 +148,7 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink render={<Link href={href} />}>
         <div className="flex flex-col gap-1 text-sm">
-          <div className="font-medium leading-none">{title}</div>
+          <div className="leading-none font-medium">{title}</div>
           <div className="text-muted-foreground line-clamp-2">{children}</div>
         </div>
       </NavigationMenuLink>

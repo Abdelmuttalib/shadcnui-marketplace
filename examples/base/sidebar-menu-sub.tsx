@@ -12,7 +12,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarProvider,
-} from "@/styles/base-default/ui/sidebar";
+} from "@/registry/bases/base/styles/default/ui/sidebar";
 
 const items = [
   {

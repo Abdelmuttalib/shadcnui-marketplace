@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -6,7 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-default/ui/sheet";
+} from "@/registry/bases/base/styles/default/ui/sheet";
 
 export default function SheetNoCloseButton() {
   return (

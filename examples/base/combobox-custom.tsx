@@ -7,13 +7,13 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@/styles/base-default/ui/combobox";
+} from "@/registry/bases/base/styles/default/ui/combobox";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/styles/base-default/ui/item";
+} from "@/registry/bases/base/styles/default/ui/item";
 
 const countries = [
   { code: "", value: "", continent: "", label: "Select country" },

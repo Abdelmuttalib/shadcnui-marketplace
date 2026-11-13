@@ -1,10 +1,13 @@
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
 import {
   Message,
   MessageContent,
   MessageFooter,
   MessageHeader,
-} from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/message";
 
 export function MessageHeaderFooterDemo() {
   return (

@@ -6,7 +6,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/styles/base-default/ui/input-otp";
+} from "@/registry/bases/base/styles/default/ui/input-otp";
 
 export function InputOTPFourDigits() {
   return (

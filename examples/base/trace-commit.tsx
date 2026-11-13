@@ -9,7 +9,7 @@ import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockLine,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 import {
   Sheet,
   SheetContent,
@@ -17,7 +17,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-default/ui/sheet";
+} from "@/registry/bases/base/styles/default/ui/sheet";
 import {
   Trace,
   TraceCollapsible,
@@ -27,7 +27,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 const files = [
   {
@@ -79,8 +79,8 @@ function DiffLines({ diff }: { diff: string }) {
           line.startsWith("+")
             ? "added"
             : line.startsWith("-")
-            ? "removed"
-            : "default"
+              ? "removed"
+              : "default"
         }
       >
         {line.slice(1)}

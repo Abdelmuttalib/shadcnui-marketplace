@@ -6,12 +6,15 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/styles/base-default/ui/input-otp";
+} from "@/registry/bases/base/styles/default/ui/input-otp";
 
 const translations: Translations = {
   en: {

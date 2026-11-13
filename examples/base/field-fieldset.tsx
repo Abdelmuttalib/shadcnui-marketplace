@@ -5,8 +5,8 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 
 export function FieldFieldset() {
   return (

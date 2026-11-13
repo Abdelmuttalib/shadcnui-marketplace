@@ -1,7 +1,7 @@
 import { IconBell } from "@tabler/icons-react";
 import { RefreshCcwIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -9,7 +9,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-default/ui/empty";
+} from "@/registry/bases/base/styles/default/ui/empty";
 
 export function EmptyMuted() {
   return (
@@ -19,7 +19,7 @@ export function EmptyMuted() {
           <IconBell />
         </EmptyMedia>
         <EmptyTitle>No Notifications</EmptyTitle>
-        <EmptyDescription className="text-pretty max-w-xs">
+        <EmptyDescription className="max-w-xs text-pretty">
           You&apos;re all caught up. New notifications will appear here.
         </EmptyDescription>
       </EmptyHeader>

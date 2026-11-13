@@ -5,7 +5,7 @@ import {
   AvatarBadge,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-default/ui/avatar";
+} from "@/registry/bases/base/styles/default/ui/avatar";
 
 export function AvatarBadgeIconExample() {
   return (

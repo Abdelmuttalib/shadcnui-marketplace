@@ -8,7 +8,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -16,7 +16,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-default/ui/empty";
+} from "@/registry/bases/base/styles/default/ui/empty";
 
 const translations: Translations = {
   en: {

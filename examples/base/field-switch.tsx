@@ -1,5 +1,8 @@
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
-import { Switch } from "@/styles/base-default/ui/switch";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Switch } from "@/registry/bases/base/styles/default/ui/switch";
 
 export default function FieldSwitch() {
   return (

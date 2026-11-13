@@ -5,13 +5,16 @@ import {
   ThumbsUpIcon,
 } from "lucide-react";
 
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Message,
   MessageContent,
   MessageFooter,
-} from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/message";
 
 export function MessageActionsDemo() {
   return (

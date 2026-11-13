@@ -1,7 +1,10 @@
 "use client";
 
 import { useHighlightedCode } from "@/registry/bases/base/styles/default/hooks/use-highlighted-code";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -10,8 +13,11 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-default/ui/code-block";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/code-block";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 
 const code = `import { streamText } from "ai"
 

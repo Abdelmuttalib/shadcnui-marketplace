@@ -1,5 +1,9 @@
-import { Checkbox } from "@/styles/base-default/ui/checkbox";
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
+import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 
 export function CheckboxBasic() {
   return (

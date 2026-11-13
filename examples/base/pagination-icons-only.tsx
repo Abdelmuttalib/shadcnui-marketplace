@@ -1,11 +1,14 @@
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationNext,
   PaginationPrevious,
-} from "@/styles/base-default/ui/pagination";
+} from "@/registry/bases/base/styles/default/ui/pagination";
 import {
   Select,
   SelectContent,
@@ -13,7 +16,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 export function PaginationIconsOnly() {
   return (

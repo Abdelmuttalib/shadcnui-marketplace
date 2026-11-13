@@ -6,25 +6,25 @@ import { toast } from "sonner";
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/styles/base-default/ui/button-group";
+} from "@/registry/bases/base/styles/default/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/input-group";
 import {
   Popover,
   PopoverContent,
@@ -32,12 +32,12 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
+} from "@/registry/bases/base/styles/default/ui/popover";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 export function InputGroupWithTooltip({
   country,

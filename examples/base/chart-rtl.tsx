@@ -13,7 +13,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/styles/base-default/ui/chart";
+} from "@/registry/bases/base/styles/default/ui/chart";
 
 const translations: Translations = {
   en: {

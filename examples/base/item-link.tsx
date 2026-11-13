@@ -6,7 +6,7 @@ import {
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/styles/base-default/ui/item";
+} from "@/registry/bases/base/styles/default/ui/item";
 
 export function ItemLink() {
   return (

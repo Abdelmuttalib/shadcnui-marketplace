@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/styles/base-default/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
 import {
   Field,
   FieldContent,
@@ -8,8 +8,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldTitle,
-} from "@/styles/base-default/ui/field";
-import { Label } from "@/styles/base-default/ui/label";
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Label } from "@/registry/bases/base/styles/default/ui/label";
 
 export default function CheckboxDemo() {
   return (

@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 const STACK = `TypeError: Cannot read properties of undefined (reading 'map')
     at UserList (app/components/user-list.tsx:15:23)
@@ -34,7 +34,7 @@ export function StackTraceBasic() {
         </TraceCollapsibleTrigger>
         <TraceCollapsibleContent>
           <div className="bg-muted flex flex-col gap-2 overflow-x-auto rounded-md p-3 font-mono text-xs">
-            <p className="text-destructive whitespace-pre-wrap font-medium">
+            <p className="text-destructive font-medium whitespace-pre-wrap">
               {error}
             </p>
             <ol className="flex flex-col gap-1">

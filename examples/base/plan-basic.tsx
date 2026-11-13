@@ -14,7 +14,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 const steps: { title: string; status: "done" | "running" | "pending" }[] = [
   { title: "Install @base-ui/react", status: "done" },

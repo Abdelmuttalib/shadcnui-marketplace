@@ -1,5 +1,9 @@
-import { Card, CardContent, CardHeader } from "@/styles/base-default/ui/card";
-import { Skeleton } from "@/styles/base-default/ui/skeleton";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/bases/base/styles/default/ui/card";
+import { Skeleton } from "@/registry/bases/base/styles/default/ui/skeleton";
 
 export function SkeletonCard() {
   return (

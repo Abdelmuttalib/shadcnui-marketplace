@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
 
 export function CalendarCaption() {
   return (

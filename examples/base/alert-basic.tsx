@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/styles/base-default/ui/alert";
+} from "@/registry/bases/base/styles/default/ui/alert";
 
 export default function AlertBasic() {
   return (

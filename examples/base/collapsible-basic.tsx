@@ -1,11 +1,14 @@
 import { ChevronDownIcon } from "@/registry/icons/__lucide__";
-import { Button } from "@/styles/base-default/ui/button";
-import { Card, CardContent } from "@/styles/base-default/ui/card";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import {
+  Card,
+  CardContent,
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-default/ui/collapsible";
+} from "@/registry/bases/base/styles/default/ui/collapsible";
 
 export function CollapsibleBasic() {
   return (
@@ -16,7 +19,7 @@ export function CollapsibleBasic() {
             render={<Button variant="ghost" className="w-full" />}
           >
             Product details
-            <ChevronDownIcon className="group-data-panel-open/button:rotate-180 ml-auto" />
+            <ChevronDownIcon className="ml-auto group-data-panel-open/button:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="flex flex-col items-start gap-2 p-2.5 pt-0 text-sm">
             <div>

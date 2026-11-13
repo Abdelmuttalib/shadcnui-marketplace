@@ -1,6 +1,9 @@
-import { Badge } from "@/styles/base-default/ui/badge";
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 
 export function InputBadge() {
   return (

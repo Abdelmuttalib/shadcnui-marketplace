@@ -17,8 +17,11 @@ import {
   ComboboxList,
   ComboboxValue,
   useComboboxAnchor,
-} from "@/styles/base-default/ui/combobox";
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+} from "@/registry/bases/base/styles/default/ui/combobox";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 
 const categories = [
   "technology",

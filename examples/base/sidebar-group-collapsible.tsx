@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-default/ui/collapsible";
+} from "@/registry/bases/base/styles/default/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -17,7 +17,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/styles/base-default/ui/sidebar";
+} from "@/registry/bases/base/styles/default/ui/sidebar";
 
 export default function AppSidebar() {
   return (

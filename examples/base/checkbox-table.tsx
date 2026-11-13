@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Checkbox } from "@/styles/base-default/ui/checkbox";
+import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/styles/base-default/ui/table";
+} from "@/registry/bases/base/styles/default/ui/table";
 
 const tableData = [
   {

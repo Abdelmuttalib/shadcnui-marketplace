@@ -11,9 +11,15 @@ import {
 } from "lucide-react";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -22,7 +28,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
@@ -61,9 +67,9 @@ function todosAt(current: number) {
           index < current
             ? "completed"
             : index === current
-            ? "in_progress"
-            : "pending",
-      } satisfies Todo)
+              ? "in_progress"
+              : "pending",
+      }) satisfies Todo
   );
 }
 
@@ -177,7 +183,7 @@ export function QueueDemo() {
   const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (

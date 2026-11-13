@@ -16,7 +16,7 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 const translations: Translations = {
   en: {

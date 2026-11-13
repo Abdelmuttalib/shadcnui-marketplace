@@ -12,7 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/styles/base-default/ui/sidebar";
+} from "@/registry/bases/base/styles/default/ui/sidebar";
 
 export default function AppSidebar() {
   return (

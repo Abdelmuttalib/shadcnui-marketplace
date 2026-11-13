@@ -8,15 +8,15 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/styles/base-default/ui/breadcrumb";
-import { Button } from "@/styles/base-default/ui/button";
+} from "@/registry/bases/base/styles/default/ui/breadcrumb";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
   return (

@@ -12,8 +12,8 @@ import {
   ComboboxItem,
   ComboboxLabel,
   ComboboxList,
-} from "@/styles/base-default/ui/combobox";
-import { InputGroupAddon } from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/combobox";
+import { InputGroupAddon } from "@/registry/bases/base/styles/default/ui/input-group";
 
 const timezones = [
   {

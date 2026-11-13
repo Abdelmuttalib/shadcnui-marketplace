@@ -8,8 +8,8 @@ import {
   useTranslation,
 } from "@/components/language-selector";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Badge } from "@/styles/base-default/ui/badge";
-import { Button } from "@/styles/base-default/ui/button";
+import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -19,18 +19,18 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/styles/base-default/ui/drawer";
+} from "@/registry/bases/base/styles/default/ui/drawer";
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/styles/base-default/ui/field";
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/styles/base-default/ui/radio-group";
+} from "@/registry/bases/base/styles/default/ui/radio-group";
 
 const translations = {
   en: {

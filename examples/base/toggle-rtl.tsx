@@ -7,7 +7,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Toggle } from "@/styles/base-default/ui/toggle";
+import { Toggle } from "@/registry/bases/base/styles/default/ui/toggle";
 
 const translations: Translations = {
   en: {

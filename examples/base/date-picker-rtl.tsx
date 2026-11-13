@@ -13,13 +13,13 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
-import { Calendar } from "@/styles/base-default/ui/calendar";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
+} from "@/registry/bases/base/styles/default/ui/popover";
 
 const translations: Translations = {
   en: {

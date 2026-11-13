@@ -1,4 +1,4 @@
-import { Badge } from "@/styles/base-default/ui/badge";
+import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
 
 export function BadgeVariants() {
   return (

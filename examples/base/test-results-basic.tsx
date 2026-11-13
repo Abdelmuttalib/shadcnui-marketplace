@@ -3,7 +3,7 @@ import { CheckIcon, FlaskConicalIcon, XIcon } from "lucide-react";
 import {
   CodeBlock,
   CodeBlockContent,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -12,7 +12,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 const tests: { name: string; error?: string }[] = [
   { name: "formats a price in USD" },

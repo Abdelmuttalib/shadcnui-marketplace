@@ -2,8 +2,11 @@
 
 import * as React from "react";
 
-import { Calendar } from "@/styles/base-default/ui/calendar";
-import { Card, CardContent } from "@/styles/base-default/ui/card";
+import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
+import {
+  Card,
+  CardContent,
+} from "@/registry/bases/base/styles/default/ui/card";
 
 export function CalendarWeekNumbers() {
   const [date, setDate] = React.useState<Date | undefined>(

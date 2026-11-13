@@ -1,5 +1,5 @@
-import { Badge } from "@/styles/base-default/ui/badge";
-import { Spinner } from "@/styles/base-default/ui/spinner";
+import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
+import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
 
 export function SpinnerBadge() {
   return (

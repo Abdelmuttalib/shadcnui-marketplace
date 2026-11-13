@@ -6,7 +6,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 const items = [
   { label: "Select a fruit", value: null },
@@ -20,7 +20,7 @@ const items = [
 export function SelectDemo() {
   return (
     <Select items={items}>
-      <SelectTrigger className="max-w-48 w-full">
+      <SelectTrigger className="w-full max-w-48">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

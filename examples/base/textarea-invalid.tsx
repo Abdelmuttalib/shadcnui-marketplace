@@ -2,8 +2,8 @@ import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
-import { Textarea } from "@/styles/base-default/ui/textarea";
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
 
 export function TextareaInvalid() {
   return (

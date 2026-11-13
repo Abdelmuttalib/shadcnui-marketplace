@@ -16,7 +16,7 @@ import {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-} from "@/styles/base-default/ui/menubar";
+} from "@/registry/bases/base/styles/default/ui/menubar";
 
 export function MenubarIcons() {
   return (

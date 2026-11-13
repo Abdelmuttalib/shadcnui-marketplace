@@ -9,7 +9,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/styles/base-default/ui/menubar";
+} from "@/registry/bases/base/styles/default/ui/menubar";
 
 export function MenubarSubmenu() {
   return (

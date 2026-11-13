@@ -1,6 +1,6 @@
 import { IconGitBranch, IconGitFork } from "@tabler/icons-react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 
 export default function ButtonWithIcon() {
   return (

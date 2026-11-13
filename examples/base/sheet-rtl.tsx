@@ -4,9 +4,13 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 import {
   Sheet,
   SheetClose,
@@ -16,7 +20,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-default/ui/sheet";
+} from "@/registry/bases/base/styles/default/ui/sheet";
 
 const translations: Translations = {
   en: {

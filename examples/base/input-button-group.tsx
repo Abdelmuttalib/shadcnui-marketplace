@@ -1,7 +1,10 @@
-import { Button } from "@/styles/base-default/ui/button";
-import { ButtonGroup } from "@/styles/base-default/ui/button-group";
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { ButtonGroup } from "@/registry/bases/base/styles/default/ui/button-group";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 
 export function InputButtonGroup() {
   return (

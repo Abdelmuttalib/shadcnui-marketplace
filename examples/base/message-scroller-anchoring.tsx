@@ -8,7 +8,7 @@ import {
 import * as React from "react";
 
 import { MessageAnimated } from "@/components/message-animated";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardAction,
@@ -17,25 +17,25 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-default/ui/empty";
+} from "@/registry/bases/base/styles/default/ui/empty";
 import {
   MessageScroller,
   MessageScrollerButton,
   MessageScrollerContent,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-default/ui/toggle-group";
+} from "@/registry/bases/base/styles/default/ui/toggle-group";
 
 type AnchorRole = "user" | "assistant";
 
@@ -86,7 +86,7 @@ export function MessageScrollerAnchoring() {
 
   return (
     <div className="relative flex flex-col gap-4">
-      <Card className="h-140 mx-auto w-full max-w-sm gap-0">
+      <Card className="mx-auto h-140 w-full max-w-sm gap-0">
         <CardHeader className="border-b">
           <CardTitle>Anchoring Turns</CardTitle>
           <CardDescription>

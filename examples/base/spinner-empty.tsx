@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -6,8 +6,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-default/ui/empty";
-import { Spinner } from "@/styles/base-default/ui/spinner";
+} from "@/registry/bases/base/styles/default/ui/empty";
+import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
 
 export function SpinnerEmpty() {
   return (

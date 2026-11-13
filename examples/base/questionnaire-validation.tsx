@@ -10,7 +10,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -24,7 +24,7 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-default/ui/questionnaire";
+} from "@/registry/bases/base/styles/default/ui/questionnaire";
 
 const items = [
   { name: "detail", required: true },

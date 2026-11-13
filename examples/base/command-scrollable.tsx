@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Command,
   CommandDialog,
@@ -38,7 +38,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/styles/base-default/ui/command";
+} from "@/registry/bases/base/styles/default/ui/command";
 
 export function CommandManyItems() {
   const [open, setOpen] = React.useState(false);

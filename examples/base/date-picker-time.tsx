@@ -4,15 +4,19 @@ import { format } from "date-fns";
 import { ChevronDownIcon } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { Calendar } from "@/styles/base-default/ui/calendar";
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
+} from "@/registry/bases/base/styles/default/ui/popover";
 
 export function DatePickerTime() {
   const [open, setOpen] = React.useState(false);

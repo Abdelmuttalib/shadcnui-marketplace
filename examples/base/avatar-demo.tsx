@@ -5,7 +5,7 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "@/styles/base-default/ui/avatar";
+} from "@/registry/bases/base/styles/default/ui/avatar";
 
 export default function AvatarDemo() {
   return (

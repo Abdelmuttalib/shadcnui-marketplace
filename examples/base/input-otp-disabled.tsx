@@ -1,10 +1,13 @@
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/styles/base-default/ui/input-otp";
+} from "@/registry/bases/base/styles/default/ui/input-otp";
 
 export function InputOTPDisabled() {
   return (

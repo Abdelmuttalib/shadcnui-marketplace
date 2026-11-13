@@ -11,7 +11,7 @@ import {
   MenubarRadioItem,
   MenubarSeparator,
   MenubarTrigger,
-} from "@/styles/base-default/ui/menubar";
+} from "@/registry/bases/base/styles/default/ui/menubar";
 
 export function MenubarRadio() {
   const [user, setUser] = React.useState("benoit");

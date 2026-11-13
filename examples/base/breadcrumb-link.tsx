@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/styles/base-default/ui/breadcrumb";
+} from "@/registry/bases/base/styles/default/ui/breadcrumb";
 
 export function BreadcrumbLinkDemo() {
   return (

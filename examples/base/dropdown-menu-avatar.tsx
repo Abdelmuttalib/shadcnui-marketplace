@@ -11,8 +11,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-default/ui/avatar";
-import { Button } from "@/styles/base-default/ui/button";
+} from "@/registry/bases/base/styles/default/ui/avatar";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,7 +20,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 
 export function DropdownMenuAvatar() {
   return (

@@ -9,13 +9,13 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/styles/base-default/ui/tabs";
+} from "@/registry/bases/base/styles/default/ui/tabs";
 
 const files = [
   {

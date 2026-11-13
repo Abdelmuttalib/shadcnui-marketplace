@@ -5,10 +5,19 @@ import type { UIMessage } from "ai";
 import * as React from "react";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
-import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import {
+  Marker,
+  MarkerContent,
+} from "@/registry/bases/base/styles/default/ui/marker";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 
 type ChatMessage = UIMessage<
   unknown,
@@ -61,7 +70,7 @@ export function CheckpointDemo() {
   }
 
   return (
-    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         const checkpoint = message.parts.find(
           (part): part is CheckpointPart => part.type === "data-checkpoint"

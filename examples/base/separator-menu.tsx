@@ -1,4 +1,4 @@
-import { Separator } from "@/styles/base-default/ui/separator";
+import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
 
 export function SeparatorMenu() {
   return (

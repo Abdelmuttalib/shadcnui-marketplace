@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -8,10 +8,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-default/ui/dialog";
-import { Field, FieldGroup } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
-import { Label } from "@/styles/base-default/ui/label";
+} from "@/registry/bases/base/styles/default/ui/dialog";
+import {
+  Field,
+  FieldGroup,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
+import { Label } from "@/registry/bases/base/styles/default/ui/label";
 
 export function DialogDemo() {
   return (

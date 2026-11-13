@@ -6,7 +6,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 const northAmerica = [
   { label: "Eastern Standard Time", value: "est" },
@@ -62,7 +62,7 @@ const items = [
 export function SelectScrollable() {
   return (
     <Select items={items}>
-      <SelectTrigger className="max-w-64 w-full">
+      <SelectTrigger className="w-full max-w-64">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

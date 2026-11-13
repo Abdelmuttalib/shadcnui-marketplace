@@ -10,9 +10,15 @@ import {
   AttachmentDescription,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-default/ui/attachment";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/attachment";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 
 export function MessageAttachmentDemo() {
   return (

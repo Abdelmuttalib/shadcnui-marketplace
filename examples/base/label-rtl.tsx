@@ -6,8 +6,8 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Checkbox } from "@/styles/base-default/ui/checkbox";
-import { Label } from "@/styles/base-default/ui/label";
+import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
+import { Label } from "@/registry/bases/base/styles/default/ui/label";
 
 const translations: Translations = {
   en: {

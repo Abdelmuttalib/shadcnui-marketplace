@@ -5,9 +5,15 @@ import type { UIMessage } from "ai";
 import { ArrowUpRightIcon, GlobeIcon } from "lucide-react";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   Trace,
   TraceCollapsible,
@@ -16,7 +22,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 const chat = createChat()
   .user("How do I start an Astro project with pnpm?")
@@ -95,7 +101,7 @@ export function SourcesDemo() {
   const busy = status === "submitted" || status === "streaming";
 
   return (
-    <div className="min-h-72 flex w-full max-w-sm flex-col gap-4 py-6 text-sm">
+    <div className="flex min-h-72 w-full max-w-sm flex-col gap-4 py-6 text-sm">
       {messages.map((message) => {
         if (message.role === "user") {
           return (

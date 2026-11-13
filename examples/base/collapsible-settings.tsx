@@ -3,21 +3,25 @@
 import { MaximizeIcon, MinimizeIcon } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-default/ui/collapsible";
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+} from "@/registry/bases/base/styles/default/ui/collapsible";
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 
 export function CollapsibleSettings() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -47,7 +51,7 @@ export function CollapsibleSettings() {
               </FieldLabel>
               <Input id="radius" placeholder="0" defaultValue={0} />
             </Field>
-            <CollapsibleContent className="grid-cols-subgrid col-span-full grid gap-2">
+            <CollapsibleContent className="col-span-full grid grid-cols-subgrid gap-2">
               <Field>
                 <FieldLabel htmlFor="radius-x" className="sr-only">
                   Radius X

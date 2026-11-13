@@ -13,7 +13,7 @@ import {
   QuestionnaireItem,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-default/ui/questionnaire";
+} from "@/registry/bases/base/styles/default/ui/questionnaire";
 
 const items = [
   {

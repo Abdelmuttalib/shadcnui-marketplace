@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-import { Progress } from "@/styles/base-default/ui/progress";
-import { Slider } from "@/styles/base-default/ui/slider";
+import { Progress } from "@/registry/bases/base/styles/default/ui/progress";
+import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
 
 export function ProgressControlled() {
   const [value, setValue] = React.useState(50);

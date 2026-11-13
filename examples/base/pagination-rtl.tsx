@@ -14,7 +14,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/styles/base-default/ui/pagination";
+} from "@/registry/bases/base/styles/default/ui/pagination";
 
 const translations: Translations = {
   en: {

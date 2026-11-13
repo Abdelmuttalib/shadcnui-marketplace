@@ -3,8 +3,8 @@ import {
   AlertAction,
   AlertDescription,
   AlertTitle,
-} from "@/styles/base-default/ui/alert";
-import { Button } from "@/styles/base-default/ui/button";
+} from "@/registry/bases/base/styles/default/ui/alert";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 
 export default function AlertActionExample() {
   return (

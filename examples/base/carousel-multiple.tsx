@@ -1,11 +1,14 @@
-import { Card, CardContent } from "@/styles/base-default/ui/card";
+import {
+  Card,
+  CardContent,
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/styles/base-default/ui/carousel";
+} from "@/registry/bases/base/styles/default/ui/carousel";
 
 export function CarouselMultiple() {
   return (

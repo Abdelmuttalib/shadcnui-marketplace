@@ -1,5 +1,5 @@
-import { Button } from "@/styles/base-default/ui/button";
-import { Kbd } from "@/styles/base-default/ui/kbd";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Kbd } from "@/registry/bases/base/styles/default/ui/kbd";
 
 export default function KbdButton() {
   return (

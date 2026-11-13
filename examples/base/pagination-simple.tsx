@@ -3,7 +3,7 @@ import {
   PaginationContent,
   PaginationItem,
   PaginationLink,
-} from "@/styles/base-default/ui/pagination";
+} from "@/registry/bases/base/styles/default/ui/pagination";
 
 export function PaginationSimple() {
   return (

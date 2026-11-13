@@ -1,13 +1,21 @@
 import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { Card, CardContent, CardHeader } from "@/styles/base-default/ui/card";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-default/ui/collapsible";
-import { Tabs, TabsList, TabsTrigger } from "@/styles/base-default/ui/tabs";
+} from "@/registry/bases/base/styles/default/ui/collapsible";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/bases/base/styles/default/ui/tabs";
 
 type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] };
 
@@ -81,7 +89,7 @@ export function CollapsibleFileTree() {
             <FolderIcon />
             {fileItem.name}
           </CollapsibleTrigger>
-          <CollapsibleContent className="style-lyra:ml-4 ml-5 mt-1">
+          <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
               {fileItem.items.map((child) => renderItem(child))}
             </div>

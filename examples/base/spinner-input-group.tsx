@@ -6,8 +6,8 @@ import {
   InputGroupButton,
   InputGroupInput,
   InputGroupTextarea,
-} from "@/styles/base-default/ui/input-group";
-import { Spinner } from "@/styles/base-default/ui/spinner";
+} from "@/registry/bases/base/styles/default/ui/input-group";
+import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
 
 export function SpinnerInputGroup() {
   return (

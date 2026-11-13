@@ -7,7 +7,7 @@ import {
   CodeBlockCopyButton,
   CodeBlockHeader,
   CodeBlockTitle,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 
 const output = `$ pnpm add ai @ai-sdk/react zod
 Progress: resolved 412, reused 398, downloaded 14, added 14, done

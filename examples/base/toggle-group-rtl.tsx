@@ -9,7 +9,7 @@ import {
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-default/ui/toggle-group";
+} from "@/registry/bases/base/styles/default/ui/toggle-group";
 
 const translations: Translations = {
   en: {

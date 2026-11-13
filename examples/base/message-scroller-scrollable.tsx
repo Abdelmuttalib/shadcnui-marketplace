@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
+} from "@/registry/bases/base/styles/default/ui/card";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -16,7 +16,7 @@ import {
   MessageScrollerProvider,
   MessageScrollerViewport,
   useMessageScrollerScrollable,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 
 const messages = Array.from({ length: 12 }, (_, index) => ({
   id: `scrollable-${index + 1}`,
@@ -47,7 +47,7 @@ export function MessageScrollerScrollable() {
           <CardContent className="flex-1 overflow-hidden p-0">
             <MessageScroller>
               <MessageScrollerViewport>
-                <MessageScrollerContent className="p-(--card-spacing) gap-4">
+                <MessageScrollerContent className="gap-4 p-(--card-spacing)">
                   <Transcript />
                 </MessageScrollerContent>
               </MessageScrollerViewport>

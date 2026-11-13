@@ -1,12 +1,15 @@
 import { InfoIcon } from "lucide-react";
 
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/input-group";
 
 export function InputInputGroup() {
   return (

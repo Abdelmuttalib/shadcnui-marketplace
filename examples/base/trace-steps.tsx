@@ -1,10 +1,10 @@
 import { ChevronRightIcon, FileTextIcon, SearchIcon } from "lucide-react";
 
-import { Badge } from "@/styles/base-default/ui/badge";
+import { Badge } from "@/registry/bases/base/styles/default/ui/badge";
 import {
   CodeBlock,
   CodeBlockContent,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 import {
   Trace,
   TraceCollapsible,
@@ -13,7 +13,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 export function TraceSteps() {
   return (

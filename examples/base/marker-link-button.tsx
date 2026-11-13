@@ -7,7 +7,7 @@ import {
   Marker,
   MarkerContent,
   MarkerIcon,
-} from "@/styles/base-default/ui/marker";
+} from "@/registry/bases/base/styles/default/ui/marker";
 
 export function MarkerLinkButtonDemo() {
   return (

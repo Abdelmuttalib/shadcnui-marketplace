@@ -7,13 +7,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/base-default/ui/sheet";
+} from "@/registry/bases/base/styles/default/ui/sheet";
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 export function TraceSheet() {
   return (

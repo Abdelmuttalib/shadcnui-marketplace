@@ -6,9 +6,9 @@ import * as React from "react";
 
 import type { MessageAnimationPreset } from "@/lib/message-animations";
 import { MESSAGE_ANIMATIONS } from "@/lib/message-animations";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
-import { MessageScrollerItem } from "@/styles/base-default/ui/message-scroller";
+import { Bubble, BubbleContent } from "@/components/ui/bubble";
+import { Message, MessageContent } from "@/components/ui/message";
+import { MessageScrollerItem } from "@/components/ui/message-scroller";
 
 type MessageAnimatedPart = {
   content?: unknown;
@@ -155,14 +155,14 @@ function getMessageAnimatedContentParts(message: MessageAnimatedMessage) {
         part.type === "reasoning" || part.type === "thinking"
           ? "reasoning"
           : part.type === "text"
-          ? "text"
-          : null;
+            ? "text"
+            : null;
       const text =
         typeof part.text === "string"
           ? part.text
           : typeof part.content === "string"
-          ? part.content
-          : null;
+            ? part.content
+            : null;
 
       if (!type || text === null) {
         return [];

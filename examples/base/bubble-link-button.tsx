@@ -6,7 +6,7 @@ import {
   Bubble,
   BubbleContent,
   BubbleGroup,
-} from "@/styles/base-default/ui/bubble";
+} from "@/registry/bases/base/styles/default/ui/bubble";
 
 export function BubbleLinkButtonDemo() {
   return (

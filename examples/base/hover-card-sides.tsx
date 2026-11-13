@@ -1,9 +1,9 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/base-default/ui/hover-card";
+} from "@/registry/bases/base/styles/default/ui/hover-card";
 
 const HOVER_CARD_SIDES = ["left", "top", "bottom", "right"] as const;
 

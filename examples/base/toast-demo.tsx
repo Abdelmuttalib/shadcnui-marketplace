@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { toast } from "@/styles/base-default/ui/toast";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { toast } from "@/registry/bases/base/styles/default/ui/toast";
 
 export function ToastDemo() {
   function showToast() {

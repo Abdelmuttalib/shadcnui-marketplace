@@ -11,11 +11,11 @@ import {
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/styles/base-default/ui/radio-group";
+} from "@/registry/bases/base/styles/default/ui/radio-group";
 
 const translations: Translations = {
   en: {

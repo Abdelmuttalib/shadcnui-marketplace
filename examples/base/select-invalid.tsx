@@ -1,4 +1,8 @@
-import { Field, FieldError, FieldLabel } from "@/styles/base-default/ui/field";
+import {
+  Field,
+  FieldError,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   Select,
   SelectContent,
@@ -6,7 +10,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 const items = [
   { label: "Select a fruit", value: null },
@@ -17,7 +21,7 @@ const items = [
 
 export function SelectInvalid() {
   return (
-    <Field data-invalid className="max-w-48 w-full">
+    <Field data-invalid className="w-full max-w-48">
       <FieldLabel>Fruit</FieldLabel>
       <Select items={items}>
         <SelectTrigger aria-invalid>

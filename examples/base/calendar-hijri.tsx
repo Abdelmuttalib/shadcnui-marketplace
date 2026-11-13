@@ -11,7 +11,10 @@ import * as React from "react";
 import { type DayButton, getDefaultClassNames } from "react-day-picker";
 import { DayPicker } from "react-day-picker/persian";
 
-import { Button, buttonVariants } from "@/styles/base-default/ui/button";
+import {
+  Button,
+  buttonVariants,
+} from "@/registry/bases/base/styles/default/ui/button";
 
 const vazirmatn = Vazirmatn({ subsets: ["arabic"] });
 

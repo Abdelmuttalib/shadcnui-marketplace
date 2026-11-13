@@ -1,8 +1,8 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   ButtonGroup,
   ButtonGroupSeparator,
-} from "@/styles/base-default/ui/button-group";
+} from "@/registry/bases/base/styles/default/ui/button-group";
 
 export default function ButtonGroupSeparatorDemo() {
   return (

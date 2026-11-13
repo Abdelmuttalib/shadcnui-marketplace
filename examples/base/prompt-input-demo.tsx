@@ -16,7 +16,7 @@ import {
   AttachmentContent,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/base-default/ui/attachment";
+} from "@/registry/bases/base/styles/default/ui/attachment";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,13 +26,13 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/input-group";
 
 type AttachmentFile = {
   id: string;

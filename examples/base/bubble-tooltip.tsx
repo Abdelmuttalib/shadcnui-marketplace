@@ -4,13 +4,13 @@ import {
   Bubble,
   BubbleContent,
   BubbleReactions,
-} from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 export function BubbleTooltipDemo() {
   return (

@@ -6,7 +6,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Skeleton } from "@/styles/base-default/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/styles/default/ui/skeleton";
 
 const translations: Translations = {
   en: {

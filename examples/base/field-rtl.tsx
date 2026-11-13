@@ -6,8 +6,8 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Button } from "@/styles/base-default/ui/button";
-import { Checkbox } from "@/styles/base-default/ui/checkbox";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Checkbox } from "@/registry/bases/base/styles/default/ui/checkbox";
 import {
   Field,
   FieldDescription,
@@ -16,8 +16,8 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 import {
   Select,
   SelectContent,
@@ -25,8 +25,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
-import { Textarea } from "@/styles/base-default/ui/textarea";
+} from "@/registry/bases/base/styles/default/ui/select";
+import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
 
 const months = [
   { label: "MM", value: null },

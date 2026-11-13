@@ -3,7 +3,7 @@
 import * as React from "react";
 import { toast } from "sonner";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -18,7 +18,7 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-default/ui/questionnaire";
+} from "@/registry/bases/base/styles/default/ui/questionnaire";
 
 const items = [
   { name: "change", required: true },

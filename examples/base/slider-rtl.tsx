@@ -6,7 +6,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Slider } from "@/styles/base-default/ui/slider";
+import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
 
 const translations: Translations = {
   en: {

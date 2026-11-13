@@ -1,6 +1,12 @@
 import { Markdown } from "@/components/markdown";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 
 const response = `Here's how to render markdown in a message:
 

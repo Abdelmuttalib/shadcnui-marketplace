@@ -7,7 +7,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { AspectRatio } from "@/styles/base-default/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/bases/base/styles/default/ui/aspect-ratio";
 
 const translations: Translations = {
   en: {
@@ -40,7 +40,7 @@ export function AspectRatioRtl() {
           src="https://avatar.vercel.sh/shadcn1"
           alt="Photo"
           fill
-          className="dark:brightness-20 rounded-lg object-cover grayscale"
+          className="rounded-lg object-cover grayscale dark:brightness-20"
         />
       </AspectRatio>
       <figcaption className="text-muted-foreground mt-2 text-center text-sm">

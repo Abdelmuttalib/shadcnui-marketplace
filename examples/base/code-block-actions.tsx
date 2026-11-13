@@ -3,7 +3,7 @@
 import { DownloadIcon, TerminalIcon, WrapTextIcon } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -11,7 +11,7 @@ import {
   CodeBlockCopyButton,
   CodeBlockHeader,
   CodeBlockTitle,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 
 const output = `$ pnpm lint
 apps/web/components/message-list.tsx

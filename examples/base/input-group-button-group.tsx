@@ -3,13 +3,13 @@ import { Link2Icon } from "lucide-react";
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/styles/base-default/ui/button-group";
+} from "@/registry/bases/base/styles/default/ui/button-group";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/base-default/ui/input-group";
-import { Label } from "@/styles/base-default/ui/label";
+} from "@/registry/bases/base/styles/default/ui/input-group";
+import { Label } from "@/registry/bases/base/styles/default/ui/label";
 
 export default function InputGroupButtonGroup() {
   return (

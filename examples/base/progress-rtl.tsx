@@ -10,7 +10,7 @@ import {
   Progress,
   ProgressLabel,
   ProgressValue,
-} from "@/styles/base-default/ui/progress";
+} from "@/registry/bases/base/styles/default/ui/progress";
 
 const translations: Translations = {
   en: {

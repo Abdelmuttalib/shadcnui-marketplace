@@ -3,19 +3,22 @@
 import { CalendarIcon } from "lucide-react";
 import * as React from "react";
 
-import { Calendar } from "@/styles/base-default/ui/calendar";
-import { Field, FieldLabel } from "@/styles/base-default/ui/field";
+import { Calendar } from "@/registry/bases/base/styles/default/ui/calendar";
+import {
+  Field,
+  FieldLabel,
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/styles/base-default/ui/input-group";
+} from "@/registry/bases/base/styles/default/ui/input-group";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
+} from "@/registry/bases/base/styles/default/ui/popover";
 
 function formatDate(date: Date | undefined) {
   if (!date) {

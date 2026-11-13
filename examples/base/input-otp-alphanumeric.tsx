@@ -7,7 +7,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/styles/base-default/ui/input-otp";
+} from "@/registry/bases/base/styles/default/ui/input-otp";
 
 export function InputOTPAlphanumeric() {
   return (

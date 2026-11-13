@@ -1,4 +1,4 @@
-import { Skeleton } from "@/styles/base-default/ui/skeleton";
+import { Skeleton } from "@/registry/bases/base/styles/default/ui/skeleton";
 
 export function SkeletonTable() {
   return (

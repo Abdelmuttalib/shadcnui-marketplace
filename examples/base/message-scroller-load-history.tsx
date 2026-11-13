@@ -5,8 +5,11 @@ import * as React from "react";
 import { toast } from "sonner";
 
 import { createChat, getMessageText } from "@/lib/ai";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Card,
   CardAction,
@@ -15,9 +18,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
-import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/card";
+import {
+  Marker,
+  MarkerContent,
+} from "@/registry/bases/base/styles/default/ui/marker";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -25,12 +34,12 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 
 const chat = createChat()
   .user("Can you summarize the incident channel?")
@@ -66,7 +75,7 @@ export function MessageScrollerLoadHistory() {
   return (
     <MessageScrollerProvider>
       <div className="relative flex flex-col gap-4">
-        <Card className="h-140 mx-auto w-full max-w-sm gap-0">
+        <Card className="mx-auto h-140 w-full max-w-sm gap-0">
           <CardHeader className="gap-1 border-b">
             <CardTitle>Load History</CardTitle>
             <CardDescription>
@@ -162,7 +171,7 @@ export function MessageScrollerLoadHistory() {
             </p>
           </CardFooter>
         </Card>
-        <div className="text-balance text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs">
+        <div className="text-muted-foreground mx-auto max-w-sm px-0.5 text-center text-xs text-balance">
           Click Load History to load the entire conversation
         </div>
       </div>

@@ -19,7 +19,7 @@ import {
   QuestionnaireSkip,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-default/ui/questionnaire";
+} from "@/registry/bases/base/styles/default/ui/questionnaire";
 
 const items = [
   { name: "task", required: true },
@@ -46,7 +46,7 @@ export function QuestionnaireSkipExample() {
       description: `Task: ${answers.task ?? "None"} · Constraints: ${
         answers.constraintStatus === "skipped"
           ? "Skipped"
-          : answers.constraints ?? "None"
+          : (answers.constraints ?? "None")
       } · Review: ${answers.review ?? "None"}`,
     });
   }

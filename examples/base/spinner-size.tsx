@@ -1,4 +1,4 @@
-import { Spinner } from "@/styles/base-default/ui/spinner";
+import { Spinner } from "@/registry/bases/base/styles/default/ui/spinner";
 
 export function SpinnerSize() {
   return (

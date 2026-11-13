@@ -4,7 +4,7 @@ import { ChevronDownIcon } from "lucide-react";
 import * as React from "react";
 
 import { useHighlightedCode } from "@/registry/bases/base/styles/default/hooks/use-highlighted-code";
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -14,7 +14,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 
 const code = `"use client"
 

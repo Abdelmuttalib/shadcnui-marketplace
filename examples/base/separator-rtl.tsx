@@ -6,7 +6,7 @@ import {
   type Translations,
   useTranslation,
 } from "@/components/language-selector";
-import { Separator } from "@/styles/base-default/ui/separator";
+import { Separator } from "@/registry/bases/base/styles/default/ui/separator";
 
 const translations: Translations = {
   en: {
@@ -44,7 +44,7 @@ export function SeparatorRtl() {
   return (
     <div className="flex max-w-sm flex-col gap-4 text-sm" dir={dir}>
       <div className="flex flex-col gap-1.5">
-        <div className="font-medium leading-none">{t.title}</div>
+        <div className="leading-none font-medium">{t.title}</div>
         <div className="text-muted-foreground">{t.subtitle}</div>
       </div>
       <Separator />

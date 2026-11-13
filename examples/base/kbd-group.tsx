@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "@/styles/base-default/ui/kbd";
+import { Kbd, KbdGroup } from "@/registry/bases/base/styles/default/ui/kbd";
 
 export default function KbdGroupExample() {
   return (

@@ -1,12 +1,12 @@
 import { BotIcon, ChevronDownIcon } from "lucide-react";
 
-import { Button } from "@/styles/base-default/ui/button";
-import { ButtonGroup } from "@/styles/base-default/ui/button-group";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { ButtonGroup } from "@/registry/bases/base/styles/default/ui/button-group";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/styles/base-default/ui/field";
+} from "@/registry/bases/base/styles/default/ui/field";
 import {
   Popover,
   PopoverContent,
@@ -14,8 +14,8 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/base-default/ui/popover";
-import { Textarea } from "@/styles/base-default/ui/textarea";
+} from "@/registry/bases/base/styles/default/ui/popover";
+import { Textarea } from "@/registry/bases/base/styles/default/ui/textarea";
 
 export default function ButtonGroupPopover() {
   return (

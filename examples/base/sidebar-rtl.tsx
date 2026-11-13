@@ -33,13 +33,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/base-default/ui/avatar";
+} from "@/registry/bases/base/styles/default/ui/avatar";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/base-default/ui/collapsible";
-import { DirectionProvider } from "@/styles/base-default/ui/direction";
+} from "@/registry/bases/base/styles/default/ui/collapsible";
+import { DirectionProvider } from "@/registry/bases/base/styles/default/ui/direction";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -48,7 +48,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 import {
   Sidebar,
   SidebarContent,
@@ -68,7 +68,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@/styles/base-default/ui/sidebar";
+} from "@/registry/bases/base/styles/default/ui/sidebar";
 
 const translations: Translations = {
   en: {
@@ -201,7 +201,7 @@ function AppSidebarWithProvider() {
         <LanguageSelector
           value={language}
           onValueChange={setLanguage}
-          className="absolute right-4 top-4 z-10 rtl:left-4 rtl:right-auto"
+          className="absolute top-4 right-4 z-10 rtl:right-auto rtl:left-4"
         />
         <AppSidebar />
       </div>
@@ -324,7 +324,7 @@ function SidebarContentInner({
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" render={<a href="#" />}>
-                <div className="size-8 bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square items-center justify-center rounded-lg">
+                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                   <GalleryVerticalEnd className="size-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
@@ -351,7 +351,7 @@ function SidebarContentInner({
                     >
                       {item.icon && <item.icon />}
                       <span>{item.title}</span>
-                      <ChevronRight className="group-data-open/collapsible:rotate-90 rtl:group-data-open/collapsible:rotate-90 ms-auto transition-transform duration-200 rtl:rotate-180" />
+                      <ChevronRight className="ms-auto transition-transform duration-200 group-data-open/collapsible:rotate-90 rtl:rotate-180 rtl:group-data-open/collapsible:rotate-90" />
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <SidebarMenuSub>
@@ -443,7 +443,7 @@ function SidebarContentInner({
                     <span className="truncate font-medium">{user.name}</span>
                     <span className="truncate text-xs">{user.email}</span>
                   </div>
-                  <ChevronsUpDown className="size-4 ms-auto" />
+                  <ChevronsUpDown className="ms-auto size-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
@@ -508,7 +508,7 @@ function SidebarContentInner({
       </Sidebar>
       <SidebarInset>
         <header
-          className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear"
+          className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12"
           dir={dir}
         >
           <div className="flex items-center gap-2 px-4">

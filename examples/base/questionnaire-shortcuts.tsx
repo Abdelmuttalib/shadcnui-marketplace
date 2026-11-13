@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/styles/base-default/ui/native-select";
+} from "@/registry/bases/base/styles/default/ui/native-select";
 import {
   Questionnaire,
   QuestionnaireActions,
@@ -17,7 +17,7 @@ import {
   QuestionnaireItem,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/base-default/ui/questionnaire";
+} from "@/registry/bases/base/styles/default/ui/questionnaire";
 
 const items = [
   {

@@ -1,14 +1,20 @@
 "use client";
 
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/styles/base-default/ui/card";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/card";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -17,7 +23,7 @@ import {
   MessageScrollerProvider,
   MessageScrollerViewport,
   useMessageScrollerScrollable,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 
 const messages = Array.from({ length: 12 }, (_, index) => ({
   id: `state-${index + 1}`,
@@ -36,7 +42,7 @@ const messages = Array.from({ length: 12 }, (_, index) => ({
 
 export function MessageScrollerState() {
   return (
-    <Card className="h-112 mx-auto w-full max-w-md gap-0">
+    <Card className="mx-auto h-112 w-full max-w-md gap-0">
       <CardHeader className="border-b">
         <CardTitle>Scroll State</CardTitle>
         <CardDescription>

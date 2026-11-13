@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/styles/base-default/ui/button";
+import { buttonVariants } from "@/registry/bases/base/styles/default/ui/button";
 
 export default function ButtonRender() {
   return (

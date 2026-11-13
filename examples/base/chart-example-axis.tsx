@@ -5,7 +5,7 @@ import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 import {
   type ChartConfig,
   ChartContainer,
-} from "@/styles/base-default/ui/chart";
+} from "@/registry/bases/base/styles/default/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

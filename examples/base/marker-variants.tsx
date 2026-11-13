@@ -1,4 +1,7 @@
-import { Marker, MarkerContent } from "@/styles/base-default/ui/marker";
+import {
+  Marker,
+  MarkerContent,
+} from "@/registry/bases/base/styles/default/ui/marker";
 
 export function MarkerVariantsDemo() {
   return (

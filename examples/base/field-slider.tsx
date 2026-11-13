@@ -6,8 +6,8 @@ import {
   Field,
   FieldDescription,
   FieldTitle,
-} from "@/styles/base-default/ui/field";
-import { Slider } from "@/styles/base-default/ui/slider";
+} from "@/registry/bases/base/styles/default/ui/field";
+import { Slider } from "@/registry/bases/base/styles/default/ui/slider";
 
 export default function FieldSlider() {
   const [value, setValue] = React.useState([200, 800]);

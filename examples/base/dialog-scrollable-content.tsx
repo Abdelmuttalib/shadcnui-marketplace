@@ -1,4 +1,4 @@
-import { Button } from "@/styles/base-default/ui/button";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-default/ui/dialog";
+} from "@/registry/bases/base/styles/default/ui/dialog";
 
 export function DialogScrollableContent() {
   return (

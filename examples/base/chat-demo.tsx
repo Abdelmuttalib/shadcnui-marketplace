@@ -20,33 +20,39 @@ import * as React from "react";
 import { Markdown } from "@/components/markdown";
 import { createChat, getMessageText } from "@/lib/ai";
 import { MESSAGE_ANIMATIONS } from "@/lib/message-animations";
-import { Bubble, BubbleContent } from "@/styles/base-default/ui/bubble";
-import { Button } from "@/styles/base-default/ui/button";
+import {
+  Bubble,
+  BubbleContent,
+} from "@/registry/bases/base/styles/default/ui/bubble";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
 import {
   CodeBlock,
   CodeBlockContent,
-} from "@/styles/base-default/ui/code-block";
+} from "@/registry/bases/base/styles/default/ui/code-block";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-default/ui/dropdown-menu";
+} from "@/registry/bases/base/styles/default/ui/dropdown-menu";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-default/ui/empty";
+} from "@/registry/bases/base/styles/default/ui/empty";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/base-default/ui/input-group";
-import { Message, MessageContent } from "@/styles/base-default/ui/message";
+} from "@/registry/bases/base/styles/default/ui/input-group";
+import {
+  Message,
+  MessageContent,
+} from "@/registry/bases/base/styles/default/ui/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -54,12 +60,12 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/base-default/ui/message-scroller";
+} from "@/registry/bases/base/styles/default/ui/message-scroller";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-default/ui/tooltip";
+} from "@/registry/bases/base/styles/default/ui/tooltip";
 import {
   Trace,
   TraceCollapsible,
@@ -68,7 +74,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/base-default/ui/trace";
+} from "@/registry/bases/base/styles/default/ui/trace";
 
 type ChatMessage = UIMessage<
   unknown,
@@ -192,8 +198,8 @@ export function ChatDemo() {
 
   return (
     <MessageScrollerProvider>
-      <div className="[[data-slot=preview]:has(&)]:bg-background [[data-slot=preview]:has(&)>div]:p-0! relative flex w-full flex-col gap-4">
-        <div className="h-200 flex w-full flex-col gap-4">
+      <div className="[[data-slot=preview]:has(&)]:bg-background relative flex w-full flex-col gap-4 [[data-slot=preview]:has(&)>div]:p-0!">
+        <div className="flex h-200 w-full flex-col gap-4">
           <div className="flex items-start justify-between gap-4 p-8 pb-4">
             <div className="flex flex-col gap-1">
               <div className="font-medium">New Thread</div>

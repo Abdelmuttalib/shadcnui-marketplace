@@ -5,7 +5,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/registry/bases/base/styles/default/ui/select";
 
 export function SelectDisabled() {
   const items = [
@@ -18,7 +18,7 @@ export function SelectDisabled() {
   ];
   return (
     <Select items={items} disabled>
-      <SelectTrigger className="max-w-48 w-full">
+      <SelectTrigger className="w-full max-w-48">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

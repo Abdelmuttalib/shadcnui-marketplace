@@ -23,7 +23,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/styles/base-default/ui/command";
+} from "@/registry/bases/base/styles/default/ui/command";
 
 const translations: Translations = {
   en: {

@@ -1,6 +1,6 @@
-import { Button } from "@/styles/base-default/ui/button";
-import { Field } from "@/styles/base-default/ui/field";
-import { Input } from "@/styles/base-default/ui/input";
+import { Button } from "@/registry/bases/base/styles/default/ui/button";
+import { Field } from "@/registry/bases/base/styles/default/ui/field";
+import { Input } from "@/registry/bases/base/styles/default/ui/input";
 
 export function InputInline() {
   return (
