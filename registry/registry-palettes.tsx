@@ -43,8 +43,7 @@ export type ThemeRadius =
   | "0.7rem"
   | "0.8rem"
   | "0.9rem"
-  | "1rem"
-  | "";
+  | "1rem";
 
 export type ThemePaletteVariableKey =
   | "background"
@@ -2072,8 +2071,8 @@ export const RADIIS: ThemeRadius[] = [
   "1rem",
 ];
 
-export const DEFAULT_THEME_PALETTE = "";
-export const DEFAULT_RADIUS = "";
+export const DEFAULT_THEME_PALETTE = undefined;
+export const DEFAULT_RADIUS = undefined;
 
 /* gray */
 // --color-gray: 211.2 10% 49.2%; /* hsl(211.2, 10%, 49.2%) */

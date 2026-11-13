@@ -93,7 +93,7 @@ export function CustomizeUrlSync() {
       paletteStore.setActivePalette(palette);
     }
 
-    if (paletteStore.activeRadius !== radius) {
+    if (paletteStore.activeRadius !== radius && radius) {
       paletteStore.setActiveRadius(radius);
     }
 

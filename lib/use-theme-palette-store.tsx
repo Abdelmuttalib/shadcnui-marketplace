@@ -9,9 +9,9 @@ import {
 } from "@/registry/registry-palettes";
 
 type ThemePaletteState = {
-  activePalette: ThemePaletteName | "";
-  setActivePalette: (value: ThemePaletteName | "") => void;
-  activeRadius: ThemeRadius;
+  activePalette: ThemePaletteName | undefined;
+  setActivePalette: (value: ThemePaletteName | undefined) => void;
+  activeRadius: ThemeRadius | undefined;
   setActiveRadius: (value: ThemeRadius) => void;
   onResetPalette: () => void;
   onResetRadius: () => void;

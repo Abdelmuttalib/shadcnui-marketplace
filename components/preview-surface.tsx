@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { STYLES } from "@/registry/styles";
+import { StyleName, STYLES } from "@/registry/styles";
 import { ExamplePreview } from "./common/example-preview";
 
 export function PreviewSurface() {
@@ -19,7 +19,7 @@ export function PreviewSurface() {
 
   return (
     <div className="h-full w-full">
-      <ExamplePreview style={styleName} aspectRatio="2528 / 1440" />
+      <ExamplePreview style={styleName as any} aspectRatio="2528 / 1440" />
     </div>
   );
 }

@@ -82,7 +82,7 @@ export function ThemePaletteReset() {
       onClick={onResetPalette}
       size={"icon-xs"}
       variant={"secondary"}
-      disabled={activePalette === ""}
+      disabled={!activePalette}
       aria-label="Reset Palette"
       title="Reset Palette"
     >
