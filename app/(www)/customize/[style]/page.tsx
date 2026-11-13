@@ -6,12 +6,6 @@ import { getStyleByName, listStyles } from "@/lib/services/presets";
 type PageParams = { style: string };
 type SearchParams = Record<string, string | string[] | undefined>;
 
-async function getAdjacentLikedForCurrentUser(
-  code: string
-): Promise<{ prev: string | null; next: string | null }> {
-  return { prev: null, next: null };
-}
-
 export async function generateStaticParams() {
   try {
     const { items } = await listStyles();

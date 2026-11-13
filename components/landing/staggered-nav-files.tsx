@@ -309,15 +309,15 @@ interface MobileMenuSection {
 }
 
 const mobileMenuSections: MobileMenuSection[] = [
-  {
-    name: "products",
-    children: products.map((p) => ({
-      name: p.title.toLowerCase(),
-      href: p.href,
-    })),
-  },
-  { name: "resources", children: resourceFiles },
-  { name: "enterprise", href: "/enterprise" },
+  // {
+  //   name: "products",
+  //   children: products.map((p) => ({
+  //     name: p.title.toLowerCase(),
+  //     href: p.href,
+  //   })),
+  // },
+  // { name: "resources", children: resourceFiles },
+  { name: "blocks", href: "/blocks" },
 ];
 
 function closeOnBlurOutside(close: () => void) {
@@ -1089,11 +1089,11 @@ export function StaggeredNavFiles() {
 
               <div className="border-foreground/6 bg-background shrink-0 border-t px-5 py-4">
                 <a
-                  href="https://dash.better-auth.com/sign-in"
+                  href="/customize"
                   onClick={() => setMobileNavigationView("closed")}
                   className="bg-foreground text-background flex w-full items-center justify-center gap-1.5 py-3 font-mono text-sm tracking-wider uppercase transition-opacity hover:opacity-90"
                 >
-                  sign-in
+                  Customize Your UI
                   <svg
                     className="h-2.5 w-2.5 opacity-50"
                     viewBox="0 0 10 10"

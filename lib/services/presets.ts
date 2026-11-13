@@ -65,17 +65,6 @@ export type PresetSummary = {
   createdAt: Date;
 };
 
-function encodeFeedCursor(tie: string | number, id: string): string {
-  return `${tie}|${id}`;
-}
-
-function decodeFeedCursor(cursor: string): { tie: string; id: string } | null {
-  // const idx = cursor.lastIndexOf("|");
-  // if (idx <= 0 || idx === cursor.length - 1) return null;
-  // return { tie: cursor.slice(0, idx), id: cursor.slice(idx + 1) };
-  return null;
-}
-
 type ListStylesResult = {
   items: Style[];
   nextCursor: string | null;
