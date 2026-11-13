@@ -5,7 +5,6 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { useSearchParams, useSelectedLayoutSegment } from "next/navigation";
 import { useQueryStates } from "nuqs";
 import { startTransition, useRef } from "react";
-import { fetchPresetsAction } from "@/app/(actions)/presets";
 import { ListWithPagination } from "@/components/list-with-pagination";
 import { PresetListItem } from "@/components/preset-list-item";
 import { SidebarEmptyState } from "@/components/sidebar-empty-state";
@@ -155,13 +154,7 @@ export function PresetSidebar({ initialItems, initialCursor }: Props) {
         initialItems={initialItems}
         initialCursor={initialCursor}
         queryKey={`${filters.source ?? "all"}:${filters.sort}`}
-        fetchPage={(cursor) =>
-          fetchPresetsAction({
-            source: filters.source ?? undefined,
-            sort: filters.sort,
-            cursor: cursor ?? undefined,
-          })
-        }
+        fetchPage={(cursor) => [] as any}
         getKey={(item) => item.name}
         renderItem={(item) => (
           <PresetListItem

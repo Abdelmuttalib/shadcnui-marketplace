@@ -4,7 +4,6 @@ import { FavouriteIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useAtomValue, useSetAtom } from "jotai";
 import { useEffect, useOptimistic, useRef, useTransition } from "react";
-import { toggleLikeAction } from "@/app/(actions)/like";
 import { Button } from "@/components/ui/button";
 import { loginModalAtom } from "@/lib/atoms/login-modal";
 import { likeTriggerAtom } from "@/lib/atoms/preset-ui";
@@ -41,16 +40,6 @@ export function LikeButton({
     const next = !state.liked;
     startTransition(async () => {
       apply(next);
-      const res = await toggleLikeAction(presetId);
-      if (res.status === "unauthorized") {
-        setLogin({
-          open: true,
-          callbackUrl:
-            typeof window !== "undefined"
-              ? window.location.pathname + window.location.search
-              : "/feed",
-        });
-      }
     });
   }
 
