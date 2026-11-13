@@ -1,0 +1,68 @@
+"use client";
+
+import * as React from "react";
+import { cn } from "cn";
+
+import { Icons } from "@/components/icons";
+
+import { useDesignSystem } from "../../../components/design-system-provider";
+
+export function UserAuthForm({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+
+  async function onSubmit(event: React.SyntheticEvent) {
+    event.preventDefault();
+    setIsLoading(true);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }
+
+  const {
+    Button,
+    Field,
+    FieldGroup,
+    FieldLabel,
+    FieldSeparator,
+    Input,
+    Spinner,
+  } = useDesignSystem();
+
+  return (
+    <div className={cn("grid gap-6", className)} {...props}>
+      <form onSubmit={onSubmit}>
+        <FieldGroup>
+          <Field>
+            <FieldLabel className="sr-only" htmlFor="email">
+              Email
+            </FieldLabel>
+            <Input
+              id="email"
+              placeholder="name@example.com"
+              type="email"
+              autoCapitalize="none"
+              autoComplete="email"
+              autoCorrect="off"
+              disabled={isLoading}
+            />
+          </Field>
+          <Field>
+            <Button disabled={isLoading}>
+              {isLoading && <Spinner />}
+              Sign In with Email
+            </Button>
+          </Field>
+        </FieldGroup>
+      </form>
+      <FieldSeparator>Or continue with</FieldSeparator>
+      <Button variant="outline" type="button" disabled={isLoading}>
+        {isLoading ? <Spinner /> : <Icons.gitHub className="mr-2 h-4 w-4" />}{" "}
+        GitHub
+      </Button>
+    </div>
+  );
+}

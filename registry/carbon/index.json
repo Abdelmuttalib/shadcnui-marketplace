@@ -1,5 +1,0 @@
-{
-  "name": "carbon",
-  "label": "Carbon (IBM-inspired)",
-  "components": ["button", "input", "badge"]
-}

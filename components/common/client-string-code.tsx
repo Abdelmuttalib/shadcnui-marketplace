@@ -13,7 +13,9 @@ export function ClientStringCode({
   disableCopyButton?: boolean;
 }) {
   const [code, setCode] = React.useState("");
-  const [codeString, setCodeString] = React.useState<JSX.Element | string>("");
+  const [codeString, setCodeString] = React.useState<
+    React.JSX.Element | string
+  >("");
   // let code = "";
   // let codeString: any | string;
 
@@ -36,18 +38,8 @@ export function ClientStringCode({
     fetchCode();
   }, [c]);
 
-  // try {
-  //   code = c;
-
-  //   codeString = await highlightCode(code);
-  // } catch (error) {
-  //   console.error("Failed to read file:", error);
-  //   code = "File not found.";
-  //   codeString = code;
-  // }
-
   return (
-    <div className="relative w-full rounded-lg border">
+    <div className="relative w-full border">
       {!disableCopyButton ? <CopyButton code={code} /> : null}
       {codeString}
     </div>

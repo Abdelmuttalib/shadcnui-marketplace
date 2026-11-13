@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "name": "preview-03",
+  "title": "Preview 03",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/preview-03/index.tsx",
+      "content": "export default function Preview03() {\n  return <div>Preview 03</div>\n}\n",
+      "type": "registry:block",
+      "target": ""
+    }
+  ],
+  "type": "registry:block"
+}

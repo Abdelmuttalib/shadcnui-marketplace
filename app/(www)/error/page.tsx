@@ -16,7 +16,7 @@ export default function ErrorPage() {
               <Typography
                 as="span"
                 variant="sm/medium"
-                className="font-mono text-primary"
+                className="text-primary font-mono"
               >
                 400 error
               </Typography>
@@ -26,7 +26,7 @@ export default function ErrorPage() {
           <Typography
             as="p"
             variant="4xl/semibold"
-            className="tracking-tight text-foreground"
+            className="text-foreground tracking-tight"
           >
             Something went wrong
           </Typography>
@@ -41,30 +41,22 @@ export default function ErrorPage() {
         </div>
 
         <div className="mx-auto mt-10 grid w-full max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {/* <div className="group relative flex flex-col gap-2 rounded-lg border p-3.5 py-2 hover:border-primary">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-3">
-                <ArrowLeftIcon className="size-4 text-muted-foreground group-hover:text-primary" />
-                <h3 className="font-medium text-foreground">Back</h3>
-              </div>
-            </div>
-          </div> */}
           {siteConfig.suggestedNotFoundLinks.map((link) => (
             <div
               key={link.label}
-              className="group relative flex flex-col gap-2 rounded-lg border bg-card p-3.5 py-2 hover:border-primary"
+              className="group bg-card hover:border-primary relative flex flex-col gap-2 border p-3.5 py-2"
             >
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3">
-                  <h3 className="font-medium text-foreground">{link.label}</h3>
+                  <h3 className="text-foreground font-medium">{link.label}</h3>
 
-                  <ArrowRightIcon className="size-4 -rotate-45 text-muted-foreground/60 group-hover:text-primary" />
+                  <ArrowRightIcon className="text-muted-foreground/60 group-hover:text-primary size-4 -rotate-45" />
                 </div>
               </div>
 
               <Link
                 href={link.href}
-                className="absolute inset-0  inline-flex items-center gap-x-2 text-sm text-blue-500 hover:underline dark:text-blue-400"
+                className="absolute inset-0 inline-flex items-center gap-x-2 text-sm"
               >
                 <span className="sr-only">{link.label}</span>
               </Link>

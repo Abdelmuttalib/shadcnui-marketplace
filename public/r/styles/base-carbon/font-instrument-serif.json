@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "name": "font-instrument-serif",
+  "title": "Instrument Serif",
+  "type": "registry:font",
+  "font": {
+    "family": "'Instrument Serif', serif",
+    "provider": "google",
+    "import": "Instrument_Serif",
+    "variable": "--font-serif",
+    "weight": ["400"],
+    "subsets": ["latin"],
+    "dependency": "@fontsource/instrument-serif"
+  },
+  "files": []
+}

@@ -4,11 +4,12 @@ import copy from "copy-to-clipboard";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import React from "react";
 
-import { Style, STYLES_DATA, useStyleStore } from "@/hooks/use-style-store";
+import { useStyleStore } from "@/hooks/use-style-store";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { themePalettes } from "@/registry/registry-palettes";
 
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import { StyleName, stylesData } from "@/registry/styles";
 
 export function ThemeCSSGenerator() {
   const { style } = useStyleStore();
@@ -24,8 +25,8 @@ export function ThemeCSSGenerator() {
     setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
   }
 
-  function getStyleDefaultRadius(style: Style) {
-    return STYLES_DATA[style]?.defaultRadius || "0.6rem";
+  function getStyleDefaultRadius(style: StyleName) {
+    return stylesData[style]?.defaultRadius || "0.6rem";
   }
 
   function generateCSS() {
@@ -91,7 +92,7 @@ ${darkVars}
       </div>
       <div className="relative">
         {/* <StringCode c={cssCode} /> */}
-        <pre className="max-h-[500px] overflow-auto rounded-lg border bg-muted p-4 text-sm">
+        <pre className="bg-muted max-h-[500px] overflow-auto rounded-lg border p-4 text-sm">
           <code>{cssCode}</code>
         </pre>
       </div>

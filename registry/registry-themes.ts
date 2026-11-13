@@ -1,4 +1,4 @@
-import { Registry } from "shadcn/registry";
+import { Registry } from "shadcn/schema";
 
 export const themePalettes = {
   "palette-1": {

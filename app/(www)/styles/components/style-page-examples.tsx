@@ -1,15 +1,16 @@
 "use client";
 
 import { StylePageExamplePreview } from "@/components/views/styles/style-page-example-preview";
-import { pageExampleTypes, Style } from "@/hooks/use-style-store";
+import { pageExampleTypes } from "@/hooks/use-style-store";
+import { StyleName } from "@/registry/styles";
 
-export function StylePageExamples({ style = "carbon" }: { style?: Style }) {
+export function StylePageExamples({ style = "carbon" }: { style?: StyleName }) {
   return (
     <>
       {pageExampleTypes.map((pageExampleType) => (
         <StylePageExamplePreview
-          key={`carbon-style-page-example-type-${pageExampleType}`}
-          id="dashboard"
+          key={`${style}-style-page-example-type-${pageExampleType}`}
+          id={pageExampleType}
           styleProp={style}
           pageExampleTypeProp={pageExampleType}
           hideBadge={true}

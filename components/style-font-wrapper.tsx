@@ -1,14 +1,15 @@
 "use client";
 
-import { Style, useStyleStore } from "@/hooks/use-style-store";
+import { useStyleStore } from "@/hooks/use-style-store";
 import { cn } from "@/lib/utils";
+import { StyleName } from "@/registry/styles";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 
 type StyleFontWrapperProps = React.ComponentPropsWithoutRef<"div"> & {
-  sStyle?: Style;
+  sStyle?: StyleName;
 };
 
 export function StyleFontWrapper({
@@ -36,23 +37,9 @@ export function StyleCssWrapper({
 }: Readonly<{
   children: React.ReactNode;
   className?: string;
-  style?: Style;
+  style?: StyleName;
 }>) {
   const { style: _style } = useStyleStore();
-
-  // const styles = {
-  //   default: "bg-dft-background",
-  //   carbon: "bg-cb-background",
-  //   linear: "bg-linear-background",
-  //   material: "bg-material-background",
-  //   catalyst: "bg-catalyst-background",
-  //   wedges: "bg-wedges-background",
-  //   spectrum: "bg-spctm-background",
-  //   moon: "bg-moon-background",
-  //   lucid: "bg-lucid-background",
-  //   snow: "bg-snow-background",
-  //   neon: "bg-neon-background",
-  // };
 
   return (
     <div

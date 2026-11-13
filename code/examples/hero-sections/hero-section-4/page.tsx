@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import type React from "react";
 
-import { AvatarDemo } from "@/components/showcase";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
@@ -56,7 +55,7 @@ export const GradientBlob = () => {
 };
 
 const FeatureIcon = ({ Icon }: { Icon: React.ElementType }) => (
-  <div className="rounded-md bg-primary/20 p-2 text-primary">
+  <div className="bg-primary/20 text-primary rounded-md p-2">
     <Icon size={20} />
   </div>
 );
@@ -66,7 +65,7 @@ export function HeroSectionV3() {
     <div className="relative min-h-screen overflow-hidden">
       {/* <GradientBlob /> */}
 
-      <div className="container relative mx-auto px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
+      <div className="relative container mx-auto px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           {/* Text Content */}
           <div className="lg:col-span-6 lg:mt-0">
@@ -78,7 +77,7 @@ export function HeroSectionV3() {
             <Typography
               as="h1"
               variant="xl/normal"
-              className="mt-3 max-w-md text-muted-foreground md:mt-5 md:max-w-3xl"
+              className="text-muted-foreground mt-3 max-w-md md:mt-5 md:max-w-3xl"
             >
               Boost productivity, streamline collaboration, and make data-driven
               decisions with our cutting-edge SaaS platform.
@@ -100,7 +99,7 @@ export function HeroSectionV3() {
             </div>
 
             {/* CTA Section */}
-            <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
               <Button size="lg">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -115,17 +114,17 @@ export function HeroSectionV3() {
           {/* 3D Element / Product Showcase */}
           <div className="relative mt-12 sm:mt-16 lg:col-span-6 lg:mt-0">
             <div className="relative mx-auto w-full max-w-none lg:max-w-none">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-md border bg-primary/20 shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-accent/20 to-accent/60" />
+              <div className="bg-primary/20 relative aspect-[4/3] overflow-hidden rounded-md border shadow-2xl">
+                <div className="from-primary/60 via-accent/20 to-accent/60 absolute inset-0 bg-linear-to-br" />
                 {/* Replace this with an actual 3D model or product screenshot */}
-                <div className="relative flex h-full flex-col items-center justify-center p-8 text-center text-foreground">
+                <div className="text-foreground relative flex h-full flex-col items-center justify-center p-8 text-center">
                   <h3 className="text-2xl font-bold">Your Product UI</h3>
                   <p className="mt-2">Interactive 3D Model or Screenshot</p>
                 </div>
               </div>
               {/* Floating elements */}
-              <div className="animate-float absolute -left-16 -top-16 h-40 w-40 rounded-full bg-purple-300 opacity-50 mix-blend-multiply blur-2xl" />
-              <div className="animate-float animation-delay-2000 absolute -bottom-16 -right-16 h-40 w-40 rounded-full bg-indigo-300 opacity-50 mix-blend-multiply blur-2xl" />
+              <div className="animate-float absolute -top-16 -left-16 h-40 w-40 rounded-full bg-purple-300 opacity-50 mix-blend-multiply blur-2xl" />
+              <div className="animate-float animation-delay-2000 absolute -right-16 -bottom-16 h-40 w-40 rounded-full bg-indigo-300 opacity-50 mix-blend-multiply blur-2xl" />
             </div>
           </div>
         </div>
@@ -139,7 +138,7 @@ export function HeroSectionV3() {
             {[1, 2, 3, 4, 5].map((_, i) => (
               <div
                 key={i}
-                className="inline-flex items-center gap-2 rounded-md border bg-accent/20 p-2 px-3"
+                className="bg-accent/20 inline-flex items-center gap-2 rounded-md border p-2 px-3"
               >
                 <Avatar className="size-7">
                   <AvatarImage

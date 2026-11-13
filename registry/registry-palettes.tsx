@@ -43,8 +43,7 @@ export type ThemeRadius =
   | "0.7rem"
   | "0.8rem"
   | "0.9rem"
-  | "1rem"
-  | "";
+  | "1rem";
 
 export type ThemePaletteVariableKey =
   | "background"
@@ -2056,9 +2055,24 @@ export const themePalettes: ThemePalette = {
 };
 
 export const themePalettesListEntries = Object.entries(themePalettes);
+export const PALETTES_KEYS = Object.keys(themePalettes) as ThemePaletteName[];
+export const PALETTES = Object.entries(themePalettes);
+export const RADIIS: ThemeRadius[] = [
+  "0rem",
+  "0.1rem",
+  "0.2rem",
+  "0.3rem",
+  "0.4rem",
+  "0.5rem",
+  "0.6rem",
+  "0.7rem",
+  "0.8rem",
+  "0.9rem",
+  "1rem",
+];
 
-export const DEFAULT_THEME_PALETTE = "";
-export const DEFAULT_RADIUS = "";
+export const DEFAULT_THEME_PALETTE = undefined;
+export const DEFAULT_RADIUS = undefined;
 
 /* gray */
 // --color-gray: 211.2 10% 49.2%; /* hsl(211.2, 10%, 49.2%) */

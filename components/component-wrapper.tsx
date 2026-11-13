@@ -2,12 +2,12 @@
 
 import * as React from "react";
 
-import { Style } from "@/hooks/use-style-store";
+import { StyleName } from "@/registry/styles";
 import { cn } from "@/lib/utils";
 import {
   getStyleBackgroundClassname,
   getStyleFontClassname,
-} from "@/registry/styles";
+} from "@/registry/styles-components";
 
 export function ComponentWrapper({
   className,
@@ -76,7 +76,7 @@ export function ComponentShowcaseWrapper({
   style,
   children,
   ...props
-}: React.ComponentPropsWithoutRef<"div"> & { name: string; style: Style }) {
+}: React.ComponentPropsWithoutRef<"div"> & { name: string; style: StyleName }) {
   return (
     <ComponentErrorBoundary name={name}>
       <div
@@ -98,7 +98,7 @@ export function ComponentShowcaseWrapper({
         >
           {children}
         </div>
-        <div className="flex-shrink-0 border-t bg-background px-4 py-3">
+        <div className="bg-background flex-shrink-0 border-t px-4 py-3">
           <div className="text-sm font-medium">{getComponentName(name)}</div>
         </div>
       </div>

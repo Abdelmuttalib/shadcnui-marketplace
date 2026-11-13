@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "name": "spinner",
+  "files": [
+    {
+      "path": "ui/spinner.tsx",
+      "content": "import { cn } from \"cn\"\nimport { Loader2Icon } from \"lucide-react\"\n\nfunction Spinner({ className, ...props }: React.ComponentProps<\"svg\">) {\n  return (\n    <Loader2Icon data-slot=\"spinner\" role=\"status\" aria-label=\"Loading\" className={cn(\"size-4 animate-spin\", className)} {...props} />\n  )\n}\n\nexport { Spinner }\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ],
+  "meta": {
+    "links": {
+      "docs": "https://ui.shadcn.com/docs/components/base/spinner",
+      "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/spinner-example.tsx"
+    }
+  },
+  "type": "registry:ui",
+  "dependencies": ["cn"]
+}

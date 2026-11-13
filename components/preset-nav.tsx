@@ -1,0 +1,94 @@
+"use client";
+
+import {
+  ArrowLeft01Icon,
+  ArrowRight01Icon,
+  ShuffleIcon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useQueryStates } from "nuqs";
+import { useTransition } from "react";
+import { Button } from "@/components/ui/button";
+import { feedFilterParsers, serializeFeedFilters } from "@/lib/feed-filters";
+import { cn } from "@/lib/utils";
+import { pickRandomStyleNameAction } from "./random-preset-button";
+
+type Props = {
+  currentStyleName: string;
+  prev: string | null;
+  next: string | null;
+};
+
+export function PresetNav({ currentStyleName, prev, next }: Props) {
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const [filters] = useQueryStates(feedFilterParsers);
+
+  const queryString = serializeFeedFilters(filters);
+  const hrefFor = (code: string) => `/customize/${code}${queryString}`;
+
+  const goRandom = () => {
+    startTransition(async () => {
+      const code = await pickRandomStyleNameAction({
+        exclude: currentStyleName,
+      });
+      if (!code) return;
+      const href = hrefFor(code);
+      router.prefetch(href);
+      router.push(href);
+    });
+  };
+
+  return (
+    <div className="flex items-center">
+      {prev ? (
+        <Button
+          variant="ghost"
+          size="icon"
+          aria-label="Previous preset"
+          title="Previous preset"
+          render={<Link href={hrefFor(prev)} />}
+        >
+          <HugeiconsIcon icon={ArrowLeft01Icon} size={16} />
+        </Button>
+      ) : (
+        <Button
+          variant="ghost"
+          size="icon"
+          aria-label="Previous preset"
+          disabled
+        >
+          <HugeiconsIcon icon={ArrowLeft01Icon} size={16} />
+        </Button>
+      )}
+      <Button
+        variant="ghost"
+        size="icon"
+        aria-label="Random preset"
+        title="Random preset"
+        onClick={goRandom}
+        disabled={isPending}
+        className={cn(isPending && "animate-pulse")}
+      >
+        <HugeiconsIcon icon={ShuffleIcon} size={16} />
+      </Button>
+      {next ? (
+        <Button
+          variant="ghost"
+          size="icon"
+          aria-label="Next preset"
+          title="Next preset"
+          render={<Link href={hrefFor(next)} />}
+        >
+          <HugeiconsIcon icon={ArrowRight01Icon} size={16} />
+        </Button>
+      ) : (
+        <Button variant="ghost" size="icon" aria-label="Next preset" disabled>
+          <HugeiconsIcon icon={ArrowRight01Icon} size={16} />
+        </Button>
+      )}
+    </div>
+  );
+}

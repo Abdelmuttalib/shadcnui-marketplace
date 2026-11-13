@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "author": "shadcn marketplace (https://shadcnmarketplace.com)",
+  "name": "font-heading-noto-serif",
+  "title": "Noto Serif (Heading)",
+  "type": "registry:font",
+  "font": {
+    "family": "'Noto Serif Variable', serif",
+    "provider": "google",
+    "import": "Noto_Serif",
+    "variable": "--font-heading",
+    "subsets": ["latin"],
+    "dependency": "@fontsource-variable/noto-serif"
+  },
+  "files": []
+}

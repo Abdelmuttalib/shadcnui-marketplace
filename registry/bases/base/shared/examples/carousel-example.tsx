@@ -1,0 +1,121 @@
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/base/shared/components/example";
+import { useDesignSystem } from "../components/design-system-provider";
+
+export default function CarouselExample() {
+  return (
+    <ExampleWrapper className="lg:grid-cols-1">
+      <CarouselBasic />
+      <CarouselMultiple />
+      <CarouselWithGap />
+    </ExampleWrapper>
+  );
+}
+
+function CarouselBasic() {
+  const {
+    Card,
+    CardContent,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } = useDesignSystem();
+  return (
+    <Example title="Basic">
+      <Carousel className="mx-auto max-w-xs sm:max-w-sm">
+        <CarouselContent>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <CarouselItem key={index}>
+              <div className="style-luma:p-2.5 p-1">
+                <Card>
+                  <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <span className="text-4xl font-semibold">{index + 1}</span>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden sm:inline-flex" />
+        <CarouselNext className="hidden sm:inline-flex" />
+      </Carousel>
+    </Example>
+  );
+}
+
+function CarouselMultiple() {
+  const {
+    Card,
+    CardContent,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } = useDesignSystem();
+
+  return (
+    <Example title="Multiple">
+      <Carousel
+        className="mx-auto max-w-xs sm:max-w-sm"
+        opts={{
+          align: "start",
+        }}
+      >
+        <CarouselContent>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
+              <div className="style-luma:p-2.5 p-1">
+                <Card>
+                  <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <span className="text-3xl font-semibold">{index + 1}</span>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden sm:inline-flex" />
+        <CarouselNext className="hidden sm:inline-flex" />
+      </Carousel>
+    </Example>
+  );
+}
+
+function CarouselWithGap() {
+  const {
+    Card,
+    CardContent,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } = useDesignSystem();
+
+  return (
+    <Example title="With Gap">
+      <Carousel className="mx-auto max-w-xs sm:max-w-sm">
+        <CarouselContent className="-ml-1">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <CarouselItem key={index} className="pl-1 md:basis-1/2">
+              <div className="style-luma:p-2.5 p-1">
+                <Card>
+                  <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <span className="text-2xl font-semibold">{index + 1}</span>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden sm:inline-flex" />
+        <CarouselNext className="hidden sm:inline-flex" />
+      </Carousel>
+    </Example>
+  );
+}

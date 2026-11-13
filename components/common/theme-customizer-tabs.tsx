@@ -152,9 +152,9 @@ module.exports = {
             <div className="grid grid-cols-2 gap-3 md:grid-cols-2">
               {stylesDataList.map((style) => (
                 <div
-                  key={`theme-style-${style.name}-${style.styleVariablePrefix}`}
+                  key={`theme-style-${style.name}-${style.cssPrefix}`}
                   className={cn(
-                    "relative flex flex-col overflow-hidden rounded-md border p-2 transition-all hover:border-primary/50 hover:bg-accent/50",
+                    "hover:border-primary/50 hover:bg-accent/50 relative flex flex-col overflow-hidden rounded-md border p-2 transition-all",
                     activeStyle === style.name
                       ? "border-primary bg-accent/80 italic"
                       : "border-border"
@@ -163,9 +163,9 @@ module.exports = {
                   // onClick={() => applyStyle(key)}
                 >
                   <div
-                    className="absolute bottom-0 right-0 size-6 bg-opacity-40 blur-xl"
+                    className="bg-opacity-40 absolute right-0 bottom-0 size-6 blur-xl"
                     style={{
-                      backgroundColor: `oklch(var(--${style.styleVariablePrefix}-primary))`,
+                      backgroundColor: `oklch(var(--${style.cssPrefix}-primary))`,
                     }}
                   ></div>
                   {/* <div
@@ -194,7 +194,7 @@ module.exports = {
                 <button
                   key={key}
                   className={cn(
-                    "relative flex cursor-pointer items-center rounded-md border p-3 outline-none transition-all hover:border-primary/50 hover:bg-accent/50",
+                    "hover:border-primary/50 hover:bg-accent/50 relative flex cursor-pointer items-center rounded-md border p-3 transition-all outline-none",
                     activePalette === key
                       ? "border-primary bg-accent/80"
                       : "border-input"
@@ -206,7 +206,7 @@ module.exports = {
                       <span
                         key={`theme-palette-${key}-${colorKey}`}
                         className={cn(
-                          "h-10 w-12 border-border",
+                          "border-border h-10 w-12",
                           {
                             "border-primary bg-accent/80": key === colorKey,
                             "rounded-l-md": colorIndex === 0,
@@ -636,7 +636,7 @@ module.exports = {
               <Button
                 size="sm"
                 variant="secondary"
-                className="absolute right-2 top-2"
+                className="absolute top-2 right-2"
                 onClick={copyToClipboard}
               >
                 {copied ? (

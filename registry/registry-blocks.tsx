@@ -1,7 +1,5 @@
-import { BlockPlan, RegistryType } from "@/config/types";
-import { type Style } from "@/hooks/use-style-store";
-
-import { registryStyleBlocks as linearStyleBlocks } from "./linear/block";
+import { registryStyleBlocks as linearStyleBlocks } from "./bases/base/linear/block";
+import { StyleName } from "./styles";
 
 export type BlockCategory =
   | "blog-sections"
@@ -28,14 +26,11 @@ export type BlockData = {
 };
 
 export type RegistryItemType =
-  | "blocks"
-  | "examples"
-  | "templates"
-  | "components";
+  "blocks" | "examples" | "templates" | "components";
 
 export type RegistryItemPlan = "free" | "basic" | "pro";
 
-export type RegistryBlocks = Record<Style, any>;
+export type RegistryBlocks = Record<StyleName, any>;
 
 export type BlocksRegistry = Record<BlockCategory, BlockData[]>;
 

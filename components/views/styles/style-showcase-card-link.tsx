@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import { RichBadge } from "@/components/ui/rich-badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Typography } from "@/components/ui/typography";
-import { Style } from "@/hooks/use-style-store";
+import { StyleName } from "@/registry/styles";
 import { loadComponentDemo } from "@/lib/component-loader";
 import { cn } from "@/lib/utils";
-import { getStyleBackgroundClassname } from "@/registry/styles";
+import { getStyleBackgroundClassname } from "@/registry/styles-components";
 
 type Components = {
   Badge: React.ComponentType;
@@ -20,7 +20,7 @@ type Components = {
   Checkbox: React.ComponentType;
 };
 
-export function StyleShowcaseCardLink({ style }: { style: Style }) {
+export function StyleShowcaseCardLink({ style }: { style: StyleName }) {
   const [components, setComponents] = useState<Components | {} | any>({});
 
   const [isLoading, setIsLoading] = useState(true);
@@ -80,7 +80,7 @@ export function StyleShowcaseCardLink({ style }: { style: Style }) {
 
   return (
     <div className="group relative overflow-hidden">
-      {/* <div className="absolute inset-0 z-20 h-full w-full bg-gradient-to-br from-transparent via-background/80 via-90% to-background group-hover:via-100%"></div> */}
+      {/* <div className="absolute inset-0 z-20 h-full w-full bg-linear-to-br from-transparent via-background/80 via-90% to-background group-hover:via-100%"></div> */}
       {/* <p className="group absolute right-2 top-2 z-20 inline-flex items-center gap-1.5 rounded-xl border bg-accent/40 px-1.5 py-1 text-sm capitalize text-foreground">
         {style}
         <ArrowRightIcon className="h-4 w-4 -rotate-45 text-muted-foreground group-hover:text-foreground" />
@@ -90,25 +90,29 @@ export function StyleShowcaseCardLink({ style }: { style: Style }) {
           <Typography
             as="h3"
             variant="xl/semibold"
-            className="max-w-xl capitalize tracking-tight"
+            className="max-w-xl tracking-tight capitalize"
           >
             {style}
           </Typography>
         </div>
         <div>
-          <Button size={"sm"} variant={"outline"} asChild>
-            <Link href={`/styles/${style}`}>
-              Live Preview
-              <ArrowRightIcon className="-rotate-45" />
-            </Link>
-          </Button>
+          <Button
+            size={"sm"}
+            variant={"outline"}
+            render={
+              <Link href={`/styles/${style}`}>
+                Live Preview
+                <ArrowRightIcon className="-rotate-45" />
+              </Link>
+            }
+          ></Button>
         </div>
       </div>
-      <div className="flex flex-col gap-2 rounded-xl border bg-accent p-2 dark:bg-inherit">
+      <div className="bg-accent flex flex-col gap-2 rounded-xl border p-2 dark:bg-inherit">
         <div
           className={cn(
             "flex flex-col gap-4 rounded-lg border px-5 py-7",
-            // bg-gradient-to-br from-accent via-accent/60 to-accent/30
+            // bg-linear-to-br from-accent via-accent/60 to-accent/30
             getStyleBackgroundClassname(style)
           )}
           style={{
@@ -140,7 +144,7 @@ export function StyleShowcaseCardLink({ style }: { style: Style }) {
   );
 }
 
-export function StyleShowcaseCardPlain({ style }: { style: Style }) {
+export function StyleShowcaseCardPlain({ style }: { style: StyleName }) {
   const [components, setComponents] = useState<Components | {} | any>({});
 
   const [isLoading, setIsLoading] = useState(true);
@@ -200,11 +204,11 @@ export function StyleShowcaseCardPlain({ style }: { style: Style }) {
 
   return (
     <div className="group relative overflow-hidden">
-      <div className="flex flex-col gap-2 rounded-xl border bg-accent p-2 dark:bg-inherit">
+      <div className="bg-accent flex flex-col gap-2 rounded-xl border p-2 dark:bg-inherit">
         <div
           className={cn(
             "flex flex-col gap-4 rounded-lg border px-5 py-7",
-            // bg-gradient-to-br from-accent via-accent/60 to-accent/30
+            // bg-linear-to-br from-accent via-accent/60 to-accent/30
             getStyleBackgroundClassname(style)
           )}
           style={{
@@ -246,7 +250,7 @@ export function StyleShowcaseCardLoaderUI({
       className={cn("group relative overflow-hidden rounded-2xl", className)}
     >
       <span className="sr-only">loading Style</span>
-      <div className="rounded-2xl border bg-background p-2">
+      <div className="bg-background rounded-2xl border p-2">
         <div className="relative flex flex-col gap-4 overflow-hidden rounded-xl border px-5 py-7">
           <div className="flex flex-wrap gap-2">
             {[1, 2, 3, 4, 5, 6].map((m) => (
@@ -275,7 +279,7 @@ export function StyleShowcaseCardLoaderUI({
 
 {
   /* <div className="group relative overflow-hidden rounded-2xl">
-      <div className="absolute inset-0 z-20 h-full w-full bg-gradient-to-br from-transparent via-background/80 via-90% to-background group-hover:via-100%"></div>
+      <div className="absolute inset-0 z-20 h-full w-full bg-linear-to-br from-transparent via-background/80 via-90% to-background group-hover:via-100%"></div>
       <Link
         href={`/styles/${style}`}
         target="_blank"
@@ -289,7 +293,7 @@ export function StyleShowcaseCardLoaderUI({
       </p>
       <div className="rounded-2xl border p-2">
         <div
-          className="flex flex-col gap-4 rounded-xl border border-gray-600/50 bg-gradient-to-br from-accent via-accent/60 to-accent/30 px-5 py-7"
+          className="flex flex-col gap-4 rounded-xl border border-gray-600/50 bg-linear-to-br from-accent via-accent/60 to-accent/30 px-5 py-7"
           style={{
             position: "relative",
             overflow: "hidden",

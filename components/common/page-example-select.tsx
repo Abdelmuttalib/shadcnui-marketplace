@@ -11,7 +11,6 @@ import {
 import {
   PageExampleType,
   pageExampleTypes,
-  STYLES,
   useStyleStore,
 } from "@/hooks/use-style-store";
 
@@ -24,30 +23,33 @@ export function PageExampleSelect({
 }) {
   // update search params, 'style'
 
-  const { style, pageExampleType, setPageExampleType } = useStyleStore();
+  const { pageExampleType, setPageExampleType } = useStyleStore();
 
   function onPageExampleChange(v: PageExampleType) {
     setPageExampleType(v);
   }
 
   return (
-    <Select defaultValue={pageExampleType} onValueChange={onPageExampleChange}>
-      <SelectTrigger className="">
+    <Select
+      defaultValue={pageExampleType}
+      onValueChange={onPageExampleChange as any}
+    >
+      <SelectTrigger aria-label="Select example" className="rounded-none">
         <SelectValue
-          placeholder="select a style"
+          placeholder="select an example"
           className="text-muted-foreground"
         >
           <span className="text-muted-foreground">example:</span>{" "}
           <span className="mr-2 font-medium capitalize">{pageExampleType}</span>
         </SelectValue>
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="rounded-none">
         <SelectGroup>
           {pageExampleTypes.map((pageExampleType) => (
             <SelectItem
               value={pageExampleType}
               key={pageExampleType}
-              className="capitalize"
+              className="rounded-none capitalize"
             >
               {pageExampleType}
             </SelectItem>
