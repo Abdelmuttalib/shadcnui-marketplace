@@ -10,14 +10,14 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-default/ui/select";
+} from "@/components/ui/select";
 
 export type Language = "en" | "ar" | "he";
 
 export type Direction = "ltr" | "rtl";
 
 export type Translations<
-  T extends Record<string, string> = Record<string, string>
+  T extends Record<string, string> = Record<string, string>,
 > = Record<
   Language,
   {
@@ -108,7 +108,7 @@ export function LanguageSelector({
       </SelectTrigger>
       <SelectContent
         dir="ltr"
-        className="data-open:animate-none data-closed:animate-none"
+        className="data-closed:animate-none data-open:animate-none"
       >
         <SelectGroup>
           {languageOptions
