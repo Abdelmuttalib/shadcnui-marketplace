@@ -10,22 +10,19 @@ import { Typography } from "@/components/ui/typography";
 import { blocksRegistry } from "@/config/blocks-registry";
 import { blockCategories, BlockCategory } from "@/registry/registry-blocks";
 
-import { HalftoneBackground } from "@/components/landing/halftone-bg";
 import { SignatureMark } from "@/components/landing/signature-mark";
 import Footer from "@/components/landing/footer";
 import { LineFieldBackground } from "@/components/landing/line-field-bg";
 
 interface Props {
-  params: { slug: string };
-}
-
-interface PProps {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams?: Promise<{
+    [key: string]: string | string[] | undefined;
+  }>;
 }
 
 export async function generateMetadata(
-  { params, searchParams }: PProps,
+  { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params

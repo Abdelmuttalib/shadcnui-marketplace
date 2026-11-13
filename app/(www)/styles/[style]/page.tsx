@@ -60,7 +60,7 @@ function StyleHero({ style }: { style: string }) {
 export default async function StylePage({
   params,
 }: {
-  params: { style: string };
+  params: Promise<{ style: string }>;
 }) {
   const { style } = await params;
 
