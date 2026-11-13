@@ -10,21 +10,27 @@ import { cn } from "cn";
 import { ExamplePreviewFrame } from "./example-preview-frame";
 
 import type { ExamplePreviewProps } from "./example-preview.types";
+import { DEFAULT_STYLE } from "@/registry/styles";
 
 export function ExamplePreview({
   style: styleProp,
-  name,
+  name: nameProp,
   className,
   aspectRatio = "2528/1440",
   onLoad,
 }: ExamplePreviewProps) {
   const { resolvedTheme } = useTheme();
 
-  const { style: activeStyle } = useStyleStore();
+  // const activeStyle = useStyleStore((state) => state.style);
+  const activeStyle = useStyleStore((state) => state.style);
+  const activeExample = useStyleStore((state) => state.activeExample);
 
-  const { activePalette, activeRadius } = useThemePaletteStore();
+  const activePalette = useThemePaletteStore((state) => state.activePalette);
 
-  const style = styleProp ?? activeStyle ?? "carbon";
+  const activeRadius = useThemePaletteStore((state) => state.activeRadius);
+
+  const style = styleProp ?? activeStyle ?? DEFAULT_STYLE.name;
+  const name = nameProp ?? activeExample;
 
   const src = `/example/${style}/${name}`;
 

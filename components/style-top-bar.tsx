@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Style } from "@/registry/styles";
+import { ShareCustomizationButton } from "@/app/(www)/customize/components/share-customization-button";
 
 type Props = {
   style: Style;
@@ -57,6 +58,7 @@ export function StyleTopBar({ style, prev, next }: Props) {
       <Badge variant="secondary" className="shrink-0 rounded-full text-[10px]">
         {shortCode}
       </Badge>
+      <ShareCustomizationButton />
       {/* {preset.brandSlug ? (
         <Badge
           variant="outline"

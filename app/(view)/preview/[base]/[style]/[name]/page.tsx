@@ -14,6 +14,7 @@ import {
   getStyleFontClassname,
   getStyleVariablesPrefix,
 } from "@/registry/styles-components";
+import { ItemRenderer } from "@/registry/bases/base/shared/example-renderer";
 
 // import "@/app/style-registry.css";
 // import "streamdown/styles.css";
@@ -151,7 +152,9 @@ export default async function BlockPage({
 
   return (
     <div className={`bg-background relative ${styleFont}`}>
-      <Component />
+      <ItemRenderer style={style.name as any}>
+        <Component />
+      </ItemRenderer>
       {/* <DesignSystemProvider>
         <Component />
       </DesignSystemProvider> */}

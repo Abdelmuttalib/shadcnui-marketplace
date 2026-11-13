@@ -7,9 +7,11 @@ export default function PreviewLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={previewFontVariables}>
-      <PreviewFontVariables className={previewFontVariables} />
-      {children}
-    </div>
+    <>
+      <div className={previewFontVariables}>
+        <PreviewFontVariables className={previewFontVariables} />
+        {children}
+      </div>
+    </>
   );
 }

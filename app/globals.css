@@ -1259,7 +1259,16 @@
   --color-leaf:#007229;
   --color-leaf-text:#4cc27a;
    */
+
+  --landing-topbar-height: 48px;
 }
+
+@media (min-width: 64rem) {
+  :root {
+    --landing-topbar-height: 44px;
+  }
+}
+
 .dark {
   --color-gray-50: oklch(0.97 0 0);
   --color-gray-100: oklch(0.97 0 0);

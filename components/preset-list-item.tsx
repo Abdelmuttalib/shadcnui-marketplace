@@ -129,7 +129,7 @@ function PresetListItemImpl({ style, isActive, queryString }: Props) {
               <div
                 // biome-ignore lint/suspicious/noArrayIndexKey: fixed-length swatch list
                 key={i}
-                className="border-border/60 ring-background size-4 rounded-sm border ring-1 xl:w-5"
+                className="border-border/60 ring-background size-4 ring-1 xl:w-5"
                 style={{ backgroundColor: color }}
               />
             ))

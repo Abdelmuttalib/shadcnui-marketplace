@@ -57,3 +57,71 @@ export function getStylePaletteVariables({
     ])
   );
 }
+
+// export function getStylePaletteCss({
+//   style,
+//   palette,
+// }: {
+//   style: string;
+//   palette: StylePalette;
+// }) {
+//   const paletteDefinition = themePalettes[palette];
+
+//   if (!paletteDefinition) return "";
+
+//   const prefix = getStyleVariablesPrefix(style);
+
+//   function buildDeclarations(variables: Record<string, string>) {
+//     return Object.entries(variables)
+//       .map(([key, value]) => `--${prefix}-${key}: oklch(${value});`)
+//       .join("\n");
+//   }
+
+//   const lightVariables = buildDeclarations(paletteDefinition.light);
+
+//   const darkVariables = buildDeclarations(paletteDefinition.dark);
+
+//   return `
+//     & {
+//       ${lightVariables}
+//     }
+
+//     &.dark,
+//     & .dark {
+//       ${darkVariables}
+//     }
+//   `;
+// }
+
+export function getStylePaletteCss({
+  style,
+  palette,
+  selector,
+}: {
+  style: string;
+  palette: StylePalette;
+  selector: string;
+}) {
+  const paletteDefinition = themePalettes[palette];
+
+  if (!paletteDefinition) return "";
+
+  const prefix = getStyleVariablesPrefix(style);
+
+  function buildDeclarations(variables: Record<string, string>) {
+    return Object.entries(variables)
+      .map(([key, value]) => `--${prefix}-${key}: oklch(${value});`)
+      .join("\n");
+  }
+
+  return `
+    ${selector} {
+      ${buildDeclarations(paletteDefinition.light)}
+    }
+
+    .dark ${selector},
+    ${selector}.dark {
+      ${buildDeclarations(paletteDefinition.dark)}
+    }
+  `;
+}

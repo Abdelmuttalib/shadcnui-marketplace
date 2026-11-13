@@ -24,7 +24,10 @@ import {
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 
 import { DesignSystemPortalContext } from "./design-system-context";
-import { getStylePaletteVariables } from "@/registry/styles-palette";
+import {
+  getStylePaletteCss,
+  getStylePaletteVariables,
+} from "@/registry/styles-palette";
 import { StyleName } from "@/registry/styles";
 
 interface DesignSystemEnvironmentProps {
@@ -79,17 +82,18 @@ export function DesignSystemEnvironment({
 }: DesignSystemEnvironmentProps) {
   const { resolvedTheme } = useTheme();
 
-  const { activePalette, activeRadius } = useThemePaletteStore();
+  const activePalette = useThemePaletteStore((state) => state.activePalette);
+  const activeRadius = useThemePaletteStore((state) => state.activeRadius);
+
+  const [previewTheme, setPreviewTheme] = useState<ThemeMode | undefined>();
 
   const [previewPalette, setPreviewPalette] = useState<
     DesignSystemPalette | undefined
-  >(palette);
+  >(palette ?? activePalette);
 
   const [previewRadius, setPreviewRadius] = useState<string | undefined>(
-    radius
+    radius ?? activeRadius ?? undefined
   );
-
-  const [previewTheme, setPreviewTheme] = useState<ThemeMode | undefined>();
 
   // Explicit theme prop takes priority.
   // Otherwise, use next-themes resolvedTheme.
@@ -105,16 +109,32 @@ export function DesignSystemEnvironment({
 
   const portalContainerRef = useRef<HTMLElement | null>(null);
 
+  const selectedPalette = previewPalette ?? palette ?? activePalette;
+
+  const selectedRadius = previewRadius ?? radius ?? activeRadius ?? undefined;
+
+  // Regular design system variables.
   const variables = useMemo(
     () =>
       getDesignSystemVariables({
         style,
-        palette,
-        radius,
+        palette: undefined,
+        radius: selectedRadius,
         theme,
       }),
-    [style, palette, radius, theme]
+    [style, selectedRadius, theme]
   );
+
+  // const variables = useMemo(
+  //   () =>
+  //     getDesignSystemVariables({
+  //       style,
+  //       palette,
+  //       radius,
+  //       theme,
+  //     }),
+  //   [style, palette, radius, theme]
+  // );
 
   // Create a dedicated portal root for this environment.
   useEffect(() => {
@@ -177,28 +197,37 @@ export function DesignSystemEnvironment({
   //   };
   // }, [variables, style, palette, activePalette, theme, radius, activeRadius]);
 
-  const selectedPalette = previewPalette ?? palette ?? activePalette;
+  // const paletteVariables = useMemo(() => {
+  //   if (!selectedPalette) return {};
 
-  const selectedRadius = previewRadius ?? radius ?? activeRadius ?? undefined;
+  //   return getStylePaletteVariables({
+  //     style,
+  //     palette: selectedPalette,
+  //     theme,
+  //     radius: selectedRadius,
+  //   });
+  // }, [style, selectedPalette, theme, selectedRadius]);
 
-  const paletteVariables = useMemo(() => {
-    if (!selectedPalette) return {};
+  const paletteCss = useMemo(() => {
+    if (!selectedPalette) return "";
 
-    return getStylePaletteVariables({
+    return getStylePaletteCss({
       style,
       palette: selectedPalette,
-      theme,
-      radius: selectedRadius,
+      selector: ".design-system-environment",
     });
-  }, [style, selectedPalette, theme, selectedRadius]);
+  }, [style, selectedPalette]);
 
-  const environmentVariables = useMemo(
-    () => ({
-      ...variables,
-      ...paletteVariables,
-    }),
-    [variables, paletteVariables]
-  );
+  console.log("paletteVariables", paletteCss);
+
+  const environmentVariables = variables;
+
+  // const environmentVariables = useMemo(
+  //   () => ({
+  //     ...variables,
+  //   }),
+  //   [variables]
+  // );
 
   // useEffect(() => {
   //   function handleMessage(event: MessageEvent) {
@@ -287,27 +316,40 @@ export function DesignSystemEnvironment({
     element.style.colorScheme = theme;
   }, [style, theme, environmentVariables]);
 
-  const environmentStyle = {
-    ...environmentVariables,
-    colorScheme: theme,
-  } as CSSProperties;
+  // const environmentStyle = {
+  //   ...environmentVariables,
+  //   colorScheme: theme,
+  // } as CSSProperties;
 
   return (
-    <div
-      data-design-system={style}
-      data-theme={theme}
-      className={cn(
-        "design-system-environment",
-        getDesignSystemClasses(style),
-        theme === "dark" && "dark",
-        theme === "light" && "light",
-        className
-      )}
-      style={environmentStyle}
-    >
-      <DesignSystemPortalContext.Provider value={portalContainer}>
-        {children}
-      </DesignSystemPortalContext.Provider>
-    </div>
+    <>
+      <div
+        data-design-system={style}
+        data-theme={theme}
+        className={cn(
+          "design-system-environment",
+          "design-system-portal-root",
+          getDesignSystemClasses(style),
+          theme === "dark" && "dark",
+          theme === "light" && "light",
+          className
+        )}
+        style={
+          {
+            ...environmentVariables,
+            colorScheme: theme,
+          } as CSSProperties
+        }
+        // style={environmentStyle}
+      >
+        {paletteCss && (
+          <style dangerouslySetInnerHTML={{ __html: paletteCss }} />
+        )}
+
+        <DesignSystemPortalContext.Provider value={portalContainer}>
+          {children}
+        </DesignSystemPortalContext.Provider>
+      </div>
+    </>
   );
 }

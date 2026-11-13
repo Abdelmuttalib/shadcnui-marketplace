@@ -52,7 +52,7 @@ export function Header() {
   };
 
   return (
-    <header className="bg-background/80 sticky top-0 z-40 flex h-14 w-full items-center border-b backdrop-blur">
+    <header className="bg-background/80 sticky top-(--landing-topbar-height) z-40 flex h-14 w-full items-center border-b backdrop-blur">
       <div className="mx-0 flex w-full items-center justify-between gap-4 px-4">
         <Link
           href="/"

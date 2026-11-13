@@ -5,7 +5,7 @@ import type {
 
 export interface ExamplePreviewProps {
   style?: ExampleStyle;
-  name: ExampleName;
+  name?: ExampleName;
 
   className?: string;
 

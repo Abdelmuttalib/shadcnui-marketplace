@@ -61,8 +61,6 @@ export default async function StylePreviewPage({
 
   const [style] = [getStyleByName(styleName)];
 
-  console.log("SSS", style);
-
   if (!style) notFound();
 
   return (

@@ -4,6 +4,7 @@ import { ThemePaletteSelect } from "./common/theme-palette-select";
 import ThemeSwitcher from "./theme-select";
 import { ThemeToggle } from "./common/theme";
 import { PreviewStyleSwitcher } from "./common/preview-style-switcher";
+import { ExampleSelector } from "./common/example-preview/example-selector";
 
 export function DevTools() {
   return (
@@ -25,17 +26,6 @@ function ThemePaletteSelectWrapper() {
   );
 }
 
-function ThemeButtonWrapper() {
-  if (process.env.NODE_ENV === "production") return null;
-
-  return (
-    <div className="fixed top-2 right-2 z-[99999999]">
-      <ThemeSwitcher />
-      {/* <ThemeButton /> */}
-    </div>
-  );
-}
-
 function TailwindIndicator() {
   if (process.env.NODE_ENV === "production") return null;
 
@@ -52,6 +42,7 @@ function TailwindIndicator() {
       <ThemePaletteSelect />
       <StyleSelect />
       <PreviewStyleSwitcher />
+      <ExampleSelector />
       <ThemeToggle />
     </div>
   );

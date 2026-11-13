@@ -2,7 +2,7 @@
 
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { useSearchParams, useSelectedLayoutSegment } from "next/navigation";
 import { useQueryStates } from "nuqs";
 import { startTransition, useRef } from "react";
 import { fetchPresetsAction } from "@/app/(actions)/presets";
@@ -56,7 +56,13 @@ export function PresetSidebar({ initialItems, initialCursor }: Props) {
     startTransition,
   });
 
-  const queryString = serializeFeedFilters(filters);
+  const searchParams = useSearchParams();
+
+  const queryString = searchParams?.toString()
+    ? `?${searchParams.toString()}`
+    : "";
+
+  // const queryString = serializeFeedFilters(filters);
   const activeSource: "all" | PresetView = filters.source ?? "all";
   const activeSort = filters.sort;
 

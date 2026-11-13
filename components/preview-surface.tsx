@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { STYLES } from "@/registry/styles";
+import { ExamplePreview } from "./common/example-preview";
 
 export function PreviewSurface() {
   const params = useParams<{ style?: string }>();
@@ -18,13 +19,7 @@ export function PreviewSurface() {
 
   return (
     <div className="h-full w-full">
-      <iframe src={`/example/${styleName}/music`} className="h-full w-full" />
+      <ExamplePreview style={styleName} aspectRatio="2528 / 1440" />
     </div>
   );
-
-  // return (
-  //   <DesignSystemProvider preset={preset} theme={theme}>
-  //     <Preview02Example />
-  //   </DesignSystemProvider>
-  // );
 }

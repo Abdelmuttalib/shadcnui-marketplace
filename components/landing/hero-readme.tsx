@@ -40,6 +40,11 @@ import { ExamplePreview } from "../common/example-preview";
 import { siteConfig } from "@/config/site-config";
 import { StylePaletteCommand } from "../style-palette-command";
 import { Braces, Code, CodeXml } from "lucide-react";
+import {
+  ExampleSelector,
+  ExampleSelectorInline,
+} from "../common/example-preview/example-selector";
+import { DEFAULT_STYLE } from "@/registry/styles";
 
 const EMPTY_CONTRIBUTORS: ContributorInfo[] = [];
 
@@ -205,34 +210,13 @@ function ReadmeFooter() {
 }
 
 export function HeroReadMe() {
-  const { resolvedTheme } = useTheme();
   const { style, setStyle } = useStyleStore();
 
   function onStyleChange(e: any) {
     setStyle(e);
   }
 
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  const { activePalette, activeRadius } = useThemePaletteStore();
-
-  const defaultStyle = "carbon";
-
-  useEffect(() => {
-    const iframe = iframeRef.current;
-
-    if (!iframe?.contentWindow) return;
-
-    iframe.contentWindow.postMessage(
-      {
-        type: "THEME_UPDATE",
-        palette: activePalette,
-        radius: activeRadius,
-        theme: resolvedTheme,
-      },
-      window.location.origin
-    );
-  }, [activePalette, activeRadius, resolvedTheme]);
+  const defaultStyle = DEFAULT_STYLE.name;
 
   return (
     <motion.div
@@ -381,13 +365,12 @@ export function HeroReadMe() {
                       {style || defaultStyle}.shadcnmarketplace.com
                     </span>
                   </div>
+                  <div>
+                    <ExampleSelectorInline />
+                  </div>
                 </div>
                 <div className="overflow-hidden" suppressHydrationWarning>
-                  <ExamplePreview
-                    style={style || (defaultStyle as any)}
-                    name="mail"
-                    aspectRatio="2528 / 1440"
-                  />
+                  <ExamplePreview aspectRatio="2528 / 1440" />
                 </div>
               </div>
             </div>
