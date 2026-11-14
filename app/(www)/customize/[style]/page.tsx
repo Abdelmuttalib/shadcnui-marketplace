@@ -53,7 +53,7 @@ export default async function StylePreviewPage({
   //     ? getAdjacentLikedForCurrentUser(code)
   //     : getAdjacentCodes(code, { source, sort });
 
-  const [style] = [getStyleByName(styleName)];
+  const style = getStyleByName(styleName);
 
   if (!style) notFound();
 

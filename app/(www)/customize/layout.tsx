@@ -16,7 +16,9 @@ export default async function CustomizeLayout({
 
   return (
     <>
-      <CustomizeUrlSync />
+      <Suspense fallback={null}>
+        <CustomizeUrlSync />
+      </Suspense>
 
       <div className="flex h-full min-h-0 flex-1 flex-col">
         <Header />

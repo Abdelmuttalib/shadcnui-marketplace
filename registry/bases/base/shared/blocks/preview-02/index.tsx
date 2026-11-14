@@ -1,3 +1,5 @@
+"use client";
+
 import { AccountAccess } from "@/registry/bases/base/shared/blocks/preview-02/cards/account-access";
 import { CardOverview } from "@/registry/bases/base/shared/blocks/preview-02/cards/card-overview";
 import { ClaimableBalance } from "@/registry/bases/base/shared/blocks/preview-02/cards/claimable-balance";

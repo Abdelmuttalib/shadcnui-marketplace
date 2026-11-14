@@ -35,31 +35,36 @@ export function StyleTopBar({ style, prev, next }: Props) {
       {next ? (
         <link rel="prefetch" as="document" href={previewHref(next)} />
       ) : null}
-      <PresetContextSync
-        styleName={style.name}
-        presetId={style.name}
-        prev={prev}
-        next={next}
-      />
-      <Link
-        href="/customize"
-        aria-label="Back to presets"
-        className={cn(
-          buttonVariants({ variant: "ghost", size: "icon-sm" }),
-          "md:hidden"
-        )}
-      >
-        <HugeiconsIcon icon={ArrowLeft01Icon} size={16} strokeWidth={1.5} />
-      </Link>
-      <PresetSidebarToggle />
-      <h1 className="truncate text-sm font-medium tracking-tight">
-        {displayName}
-      </h1>
-      <Badge variant="secondary" className="shrink-0 rounded-full text-[10px]">
-        {shortCode}
-      </Badge>
-      <ShareCustomizationButton />
-      {/* {preset.brandSlug ? (
+
+      <Suspense fallback={null}>
+        <PresetContextSync
+          styleName={style.name}
+          presetId={style.name}
+          prev={prev}
+          next={next}
+        />
+        <Link
+          href="/customize"
+          aria-label="Back"
+          className={cn(
+            buttonVariants({ variant: "ghost", size: "icon-sm" }),
+            "md:hidden"
+          )}
+        >
+          <HugeiconsIcon icon={ArrowLeft01Icon} size={16} strokeWidth={1.5} />
+        </Link>
+        <PresetSidebarToggle />
+        <h1 className="truncate text-sm font-medium tracking-tight">
+          {displayName}
+        </h1>
+        <Badge
+          variant="secondary"
+          className="shrink-0 rounded-full text-[10px]"
+        >
+          {shortCode}
+        </Badge>
+        <ShareCustomizationButton />
+        {/* {preset.brandSlug ? (
         <Badge
           variant="outline"
           className="hidden shrink-0 rounded-full text-[10px] sm:inline-flex"
@@ -67,15 +72,16 @@ export function StyleTopBar({ style, prev, next }: Props) {
           {preset.brandSlug}
         </Badge>
       ) : null} */}
-      <div className="ml-auto flex items-center gap-2">
-        <Suspense fallback={null}>
-          <PresetNav currentStyleName={style.name} prev={prev} next={next} />
-        </Suspense>
-        <StyleActions
-          code={style.name}
-          likeSlot={<PresetLikeSlot presetId={style.name} initialLikes={4} />}
-        />
-      </div>
+        <div className="ml-auto flex items-center gap-2">
+          <Suspense fallback={null}>
+            <PresetNav currentStyleName={style.name} prev={prev} next={next} />
+          </Suspense>
+          <StyleActions
+            code={style.name}
+            likeSlot={<PresetLikeSlot presetId={style.name} initialLikes={4} />}
+          />
+        </div>
+      </Suspense>
     </header>
   );
 }
