@@ -37,3 +37,7 @@ export const BASES: RegistryItem[] = [
 ];
 
 export type Base = (typeof BASES)[number];
+export type BaseName = Base["name"];
+
+export const DEFAULT_BASE = BASES[0];
+export const DEFAULT_BASE_NAME = DEFAULT_BASE.name;

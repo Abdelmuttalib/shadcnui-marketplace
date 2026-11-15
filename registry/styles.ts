@@ -174,6 +174,7 @@ export const styles = [
 ];
 
 export const DEFAULT_STYLE = styles[2];
+export const DEFAULT_STYLE_NAME = DEFAULT_STYLE.name;
 
 export const STYLES = styles;
 

@@ -39,9 +39,11 @@ export function ClientStringCode({
   }, [c]);
 
   return (
-    <div className="relative w-full border">
-      {!disableCopyButton ? <CopyButton code={code} /> : null}
-      {codeString}
-    </div>
+    <>
+      <div className="bg-card relative w-full border">
+        {!disableCopyButton ? <CopyButton code={code} /> : null}
+        {codeString}
+      </div>
+    </>
   );
 }

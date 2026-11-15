@@ -94,11 +94,11 @@ export function ExampleSelectorInline() {
         setActiveExample(value as (typeof EXAMPLES)[number])
       }
     >
-      <SelectTrigger className="text-foreground/50 h-6 rounded-none border-transparent bg-transparent py-0 text-xs shadow-none data-[size=default]:h-6 dark:bg-transparent">
+      <SelectTrigger className="text-foreground/50 h-6 rounded-none border-transparent bg-transparent py-0 text-xs capitalize shadow-none data-[size=default]:h-6 dark:bg-transparent data-[size=default]:[&>svg]:size-3.5">
         <SelectValue placeholder="Select example" />
       </SelectTrigger>
 
-      <SelectContent>
+      <SelectContent className="w-full rounded-none">
         <SelectGroup>
           <SelectLabel>Examples</SelectLabel>
 

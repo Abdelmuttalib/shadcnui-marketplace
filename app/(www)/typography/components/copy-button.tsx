@@ -21,9 +21,14 @@ export function CopyButton({ code }: { code: string }) {
       variant="outline"
       size="sm"
       onClick={onCopyCode}
-      className="bg-background absolute top-2 right-2 rounded-none transition-transform duration-300 ease-in-out [&_svg]:size-4 [&_svg]:transition-transform"
+      className="bg-card dark:bg-card absolute top-2 right-12 z-50 rounded-none text-xs transition-transform duration-300 ease-in-out [&_svg]:size-3 [&_svg]:transition-transform"
     >
-      {copied ? <CheckIcon /> : <CopyIcon />} {copied ? "Copied" : "Copy"}
+      {copied ? (
+        <CheckIcon className="size-3" />
+      ) : (
+        <CopyIcon className="size-3" />
+      )}{" "}
+      {copied ? "Copied" : "Copy"}
     </Button>
   );
 }

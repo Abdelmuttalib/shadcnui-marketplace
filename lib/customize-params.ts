@@ -16,12 +16,17 @@ import {
 } from "@/registry/registry-palettes";
 
 import { EXAMPLES } from "@/registry/bases/base/shared/examples-registry";
+import { BASES, DEFAULT_BASE_NAME } from "@/registry/bases";
 
 export const CUSTOMIZE_THEMES = ["light", "dark"] as const;
 
 export type CustomizeTheme = (typeof CUSTOMIZE_THEMES)[number];
 
 export const customizeUrlParsers = {
+  base: parseAsStringLiteral(BASES.map((base) => base.name)).withDefault(
+    DEFAULT_BASE_NAME
+  ),
+
   palette: parseAsStringLiteral(PALETTES_KEYS),
 
   radius: parseAsStringLiteral(RADIIS),

@@ -720,7 +720,7 @@ export function StaggeredNavFiles() {
               className={`group/tab relative flex h-full items-center justify-center gap-1.5 border-r px-2 py-3 xl:px-4 ${tabDividerClass} transition-colors duration-150 ${
                 isActive("/blocks")
                   ? `bg-background border-b-2 ${activeTabBorderClass}`
-                  : "hover:bg-foreground/[0.03] bg-transparent"
+                  : "hover:bg-foreground/3 bg-transparent"
               }`}
             >
               <span

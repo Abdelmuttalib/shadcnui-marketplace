@@ -33,7 +33,10 @@ import {
 } from "@/components/ui/select";
 import { stylesDataList, useStyleStore } from "@/hooks/use-style-store";
 import { getStyleVariablesPrefix } from "@/registry/styles-components";
-import { ThemePaletteSelect } from "../common/theme-palette-select";
+import {
+  PaletteSelectorInline,
+  ThemePaletteSelect,
+} from "../common/theme-palette-select";
 import { Button } from "../ui/button";
 import { useThemePaletteStore } from "@/lib/use-theme-palette-store";
 import { ExamplePreview } from "../common/example-preview";
@@ -45,6 +48,10 @@ import {
   ExampleSelectorInline,
 } from "../common/example-preview/example-selector";
 import { DEFAULT_STYLE } from "@/registry/styles";
+import { StyleSelectorInline } from "../common/style-select";
+import { useInstallCommand } from "@/hooks/use-install-command";
+import { InstallDialog } from "@/app/(www)/customize/components/install-dialog";
+import { InstallCommand } from "../install/install-command";
 
 const EMPTY_CONTRIBUTORS: ContributorInfo[] = [];
 
@@ -104,27 +111,6 @@ function ReadmeFooter() {
   const githubStars = 2;
   return (
     <div className="relative mt-10 overflow-hidden pt-8 pb-16">
-      {/* Watermark logo */}
-      <div
-        className="pointer-events-none absolute top-1/2 -right-10 -translate-y-1/2 opacity-[0.03] select-none dark:opacity-[0.04]"
-        aria-hidden="true"
-      >
-        <svg
-          width="300"
-          height="225"
-          viewBox="0 0 60 45"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M0 0H15V15H30V30H15V45H0V30V15V0ZM45 30V15H30V0H45H60V15V30V45H45H30V30H45Z"
-            className="fill-foreground"
-          />
-        </svg>
-      </div>
-
       {/* Dot grid */}
       <div
         className="pointer-events-none absolute inset-0 select-none"
@@ -227,7 +213,7 @@ export function HeroReadMe() {
     >
       {/* Markdown content */}
       <div className="no-scrollbar flex-1 overflow-x-hidden">
-        <div className="p-5 lg:px-8 lg:pt-20">
+        <div className="bg-background p-4 py-2">
           <motion.article
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -247,9 +233,8 @@ export function HeroReadMe() {
               , inspired by established design systems.
             </p> */}
 
-            <div className="relative mt-2 pt-6 pb-2">
-              {/* Grain noise background — full bleed with fade edges */}
-              <div
+            <div className="relative">
+              {/* <div
                 className="pointer-events-none absolute top-0 bottom-0 z-0"
                 style={{
                   left: "50%",
@@ -279,9 +264,9 @@ export function HeroReadMe() {
                     />
                   </svg>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="relative z-10 mb-6 flex flex-col gap-4">
+              {/* <div className="relative z-10 mb-6 flex flex-col gap-4">
                 <div className="grid grid-cols-2 gap-4 xl:grid-cols-9">
                   <div className="xl:col-span-4">
                     <Select
@@ -347,26 +332,40 @@ export function HeroReadMe() {
                   </div>
                 </div>
 
-                <div className="">
+                <div>
                   <StylePaletteCommand />
                 </div>
+              </div> */}
+
+              <div>
+                <InstallCommand />
               </div>
 
               {/* Dashboard video */}
               <div className="border-foreground/8 relative z-10 overflow-hidden border">
-                <div className="bg-foreground/2 border-foreground/6 flex items-center justify-between border-b px-4 py-2">
+                <div className="bg-foreground/2 border-foreground/6 flex items-center justify-between border-b px-3 py-2">
+                  <div className="flex items-center gap-2">
+                    <div>
+                      <StyleSelectorInline />
+                    </div>
+                    <div className="text-muted-foreground text-xs">/</div>
+                    <div>
+                      <ExampleSelectorInline />
+                    </div>
+                    <div className="text-muted-foreground text-xs">/</div>
+                    <div>
+                      <PaletteSelectorInline />
+                    </div>
+                  </div>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1.5">
-                      <span className="bg-foreground/10 size-2 rounded-full" />
-                      <span className="bg-foreground/10 size-2 rounded-full" />
-                      <span className="bg-foreground/10 size-2 rounded-full" />
+                      <span className="bg-foreground/10 size-2" />
+                      <span className="bg-foreground/10 size-2" />
+                      <span className="bg-foreground/10 size-2" />
                     </div>
-                    <span className="text-foreground/30 ml-2 font-mono text-[10px]">
-                      {style || defaultStyle}.shadcnmarketplace.com
-                    </span>
-                  </div>
-                  <div>
-                    <ExampleSelectorInline />
+                    <div>
+                      <InstallDialog size={"sm"} />
+                    </div>
                   </div>
                 </div>
                 <div className="overflow-hidden" suppressHydrationWarning>

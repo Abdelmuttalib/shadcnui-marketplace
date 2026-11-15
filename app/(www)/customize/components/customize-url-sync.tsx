@@ -56,6 +56,8 @@ export function CustomizeUrlSync() {
   useLayoutEffect(() => {
     if (initializedRef.current) return;
 
+    const base = params.base ?? CUSTOMIZE_DEFAULTS.base;
+
     const palette = params.palette ?? CUSTOMIZE_DEFAULTS.palette;
 
     const radius = params.radius ?? CUSTOMIZE_DEFAULTS.radius;
@@ -65,6 +67,7 @@ export function CustomizeUrlSync() {
     const theme = params.theme ?? "light";
 
     const urlState = {
+      base,
       palette,
       radius,
       example,
@@ -99,6 +102,10 @@ export function CustomizeUrlSync() {
 
     if (styleStore.activeExample !== example) {
       styleStore.setActiveExample(example);
+    }
+
+    if (styleStore.base !== base) {
+      styleStore.setBase(base);
     }
 
     // // Restore theme only when explicitly provided in the URL.
@@ -141,14 +148,18 @@ export function CustomizeUrlSync() {
 
       const { activePalette, activeRadius } = useThemePaletteStore.getState();
 
-      const { activeExample } = useStyleStore.getState();
+      const { activeExample, base } = useStyleStore.getState();
 
       const currentTheme = themeRef.current;
 
       void setParams({
-        palette: activePalette === DEFAULT_THEME_PALETTE ? null : activePalette,
+        base: base === CUSTOMIZE_DEFAULTS.base ? null : base,
 
-        radius: activeRadius === DEFAULT_RADIUS ? null : activeRadius,
+        palette:
+          activePalette === CUSTOMIZE_DEFAULTS.palette ? null : activePalette,
+
+        radius:
+          activeRadius === CUSTOMIZE_DEFAULTS.radius ? null : activeRadius,
 
         example:
           activeExample === CUSTOMIZE_DEFAULTS.example ? null : activeExample,

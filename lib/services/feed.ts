@@ -16,7 +16,7 @@ export type FeedViewResult = {
   nextCursor: string | null;
 };
 
-export function listFeedForView(input: FeedViewInput = {}): FeedViewResult {
+export function listStyleForView(): FeedViewResult {
   const { items, nextCursor } = listStyles();
   return { items: enrichStylesWithColors(items), nextCursor };
 }

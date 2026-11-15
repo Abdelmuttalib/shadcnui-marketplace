@@ -1,11 +1,13 @@
 import { DEFAULT_ACTIVE_EXAMPLE } from "@/hooks/use-style-store";
 import { CustomizeTheme } from "@/lib/customize-params";
+import { DEFAULT_BASE_NAME } from "@/registry/bases";
 import {
   DEFAULT_RADIUS,
   DEFAULT_THEME_PALETTE,
 } from "@/registry/registry-palettes";
 
 export const CUSTOMIZE_DEFAULTS = {
+  base: DEFAULT_BASE_NAME,
   palette: DEFAULT_THEME_PALETTE,
   radius: DEFAULT_RADIUS,
   theme: "light",
@@ -13,6 +15,7 @@ export const CUSTOMIZE_DEFAULTS = {
 } as const;
 
 export const CUSTOMIZE_QUERY_KEYS = [
+  "base",
   "palette",
   "radius",
   "theme",
@@ -22,6 +25,7 @@ export const CUSTOMIZE_QUERY_KEYS = [
 export type CustomizeQueryKey = (typeof CUSTOMIZE_QUERY_KEYS)[number];
 
 export interface CustomizeUrlState {
+  base: string | null;
   palette: string | null;
   radius: string | null;
   theme: CustomizeTheme | null;
@@ -46,6 +50,7 @@ export function getCustomizeUrlState(): CustomizeUrlState {
   const theme = params.get("theme");
 
   return {
+    base: params.get("base"),
     palette: params.get("palette"),
     radius: params.get("radius"),
     theme: isCustomizeTheme(theme) ? theme : null,

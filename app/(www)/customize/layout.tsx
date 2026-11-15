@@ -6,6 +6,7 @@ import { PresetSidebar } from "@/components/preset-sidebar";
 import { listStylesWithColors } from "@/lib/services/presets";
 import { PreviewSurface } from "@/components/preview-surface";
 import { CustomizeUrlSync } from "./components/customize-url-sync";
+import { InstallDialog } from "./components/install-dialog";
 
 export default async function CustomizeLayout({
   children,
@@ -30,6 +31,7 @@ export default async function CustomizeLayout({
           </FeedAside>
           <div className="flex h-full min-w-0 flex-1 flex-col overflow-hidden">
             {children}
+            <InstallDialog />
             <PreviewSurface />
           </div>
         </div>

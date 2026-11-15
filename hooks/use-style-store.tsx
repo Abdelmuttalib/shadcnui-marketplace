@@ -2,7 +2,13 @@
 
 import { create } from "zustand";
 
-import { DEFAULT_STYLE, StyleName, STYLES } from "@/registry/styles";
+import {
+  DEFAULT_STYLE,
+  DEFAULT_STYLE_NAME,
+  StyleName,
+  STYLES,
+} from "@/registry/styles";
+import { BaseName, DEFAULT_BASE_NAME } from "@/registry/bases";
 
 export const stylesDataList = STYLES;
 
@@ -82,6 +88,9 @@ type StyleState = {
   style: StyleName;
   setStyle: (style: StyleName) => void;
 
+  base: BaseName;
+  setBase: (base: BaseName) => void;
+
   pageExampleType: PageExampleType;
   setPageExampleType: (type: PageExampleType) => void;
 
@@ -91,8 +100,11 @@ type StyleState = {
 
 export const useStyleStore = create<StyleState>((set) => ({
   // Default to STYLES[7] as you had it
-  style: DEFAULT_STYLE.name,
+  style: DEFAULT_STYLE_NAME,
   setStyle: (style) => set({ style }),
+
+  base: DEFAULT_BASE_NAME,
+  setBase: (base) => set({ base }),
 
   pageExampleType: DEFAULT_PAGE_EXAMPLE_TYPE,
   setPageExampleType: (type) => set({ pageExampleType: type }),

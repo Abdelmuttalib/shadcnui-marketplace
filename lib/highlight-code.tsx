@@ -6,7 +6,7 @@ import { codeToHast } from "shiki/bundle/web";
 export async function highlightCode(code: string) {
   const out = await codeToHast(code, {
     lang: "tsx",
-    theme: "dark-plus",
+    theme: "vesper",
   });
 
   return toJsxRuntime(out, {

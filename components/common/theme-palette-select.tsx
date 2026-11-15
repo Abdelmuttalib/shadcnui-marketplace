@@ -74,6 +74,62 @@ export function ThemePaletteSelect() {
   );
 }
 
+export function PaletteSelectorInline() {
+  const { resolvedTheme } = useTheme();
+
+  const activePalette = useThemePaletteStore((state) => state.activePalette);
+  const setActivePalette = useThemePaletteStore(
+    (state) => state.setActivePalette
+  );
+
+  return (
+    <Select value={activePalette} onValueChange={setActivePalette as any}>
+      <SelectTrigger
+        aria-label="Select palette"
+        className="text-foreground/50 h-6 rounded-none border-transparent bg-transparent py-0 text-xs shadow-none data-[size=default]:h-6 dark:bg-transparent data-[size=default]:[&>svg]:size-3.5"
+      >
+        <SelectValue placeholder={"Select palette"} />
+      </SelectTrigger>
+      <SelectContent className="w-full rounded-none">
+        {themePalettesListEntries.map(([paletteName, palette], index) => {
+          return (
+            <SelectItem
+              key={`theme-palette-${paletteName}`}
+              className={cn("flex rounded-none lg:flex-row")}
+              value={paletteName as ThemePaletteName}
+            >
+              <div className="border-foreground/15 flex rounded-none border">
+                {mainPaletteColorsKeys.map((color, index) => (
+                  <div
+                    key={`theme-palette-${paletteName}-${color}-${index}`}
+                    className={cn("size-5", {
+                      "rounded-l-none": index === 0,
+                      "rounded-r-none":
+                        index === mainPaletteColorsKeys.length - 1,
+                    })}
+                    style={{
+                      backgroundColor: `oklch(${
+                        palette[
+                          resolvedTheme
+                            ? resolvedTheme === "system"
+                              ? "light"
+                              : (resolvedTheme as "light" | "dark")
+                            : "light"
+                        ][color as ThemePaletteVariableKey]
+                      })`,
+                    }}
+                    title={`${color}`}
+                  ></div>
+                ))}
+              </div>
+            </SelectItem>
+          );
+        })}
+      </SelectContent>
+    </Select>
+  );
+}
+
 export function ThemePaletteReset() {
   const { activePalette, onResetPalette } = useThemePaletteStore();
 
