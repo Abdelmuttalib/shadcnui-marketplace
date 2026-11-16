@@ -13,7 +13,8 @@ import type { StyleName } from "@/registry/styles";
 
 import {
   PACKAGE_MANAGERS,
-  PACKAGE_MANAGER_COMMANDS,
+  getPackageManagerCommand,
+  getShadcnCommand,
   type PackageManager,
 } from "@/registry/package-managers";
 
@@ -60,18 +61,27 @@ export function useInstallCommand({
         ? `${registryUrl}/r/themes/${activePalette}.json`
         : undefined;
 
-    const overwriteFlag = overwrite ? " --overwrite" : "";
+    const overwriteFlag = overwrite ? "--overwrite" : "";
+
+    const styleCommand = [`"${styleUrl}"`, overwriteFlag]
+      .filter(Boolean)
+      .join(" ");
+
+    const paletteCommand = paletteUrl ? `"${paletteUrl}"` : undefined;
 
     return Object.fromEntries(
       PACKAGE_MANAGERS.map((manager) => {
-        const runner =
-          PACKAGE_MANAGER_COMMANDS[manager][local ? "local" : "dlx"];
+        const cli = getPackageManagerCommand(manager, local);
 
-        const shadcnCommand = `${runner} shadcn add`;
+        const shadcnCommand = getShadcnCommand();
 
         const command = [
-          `${shadcnCommand} "${styleUrl}"${overwriteFlag}`,
-          paletteUrl ? `${shadcnCommand} "${paletteUrl}"` : undefined,
+          // style
+          `${cli} ${shadcnCommand} ${styleCommand}`,
+          // palette
+          paletteCommand
+            ? `${cli} ${shadcnCommand} ${paletteCommand}`
+            : undefined,
         ]
           .filter(Boolean)
           .join(" && ");

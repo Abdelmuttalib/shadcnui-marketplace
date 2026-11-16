@@ -94,7 +94,10 @@ export function ExampleSelectorInline() {
         setActiveExample(value as (typeof EXAMPLES)[number])
       }
     >
-      <SelectTrigger className="text-foreground/50 h-6 rounded-none border-transparent bg-transparent py-0 text-xs capitalize shadow-none data-[size=default]:h-6 dark:bg-transparent data-[size=default]:[&>svg]:size-3.5">
+      <SelectTrigger
+        aria-label="Select example"
+        className="group text-foreground/80 hover:border-primary/30 hover:text-foreground focus:ring-primary/20 data-[state=open]:border-primary/30 data-[state=open]:bg-primary/[0.08] data-[state=open]:text-foreground dark:hover:border-primary/25 relative h-9 rounded-none border border-white/20 bg-white/[0.12] px-3.5 text-[13px] font-medium capitalize shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-200 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-white/40 before:to-transparent hover:bg-white/[0.18] focus:ring-1 focus:ring-offset-0 data-[size=default]:h-9 dark:border-white/[0.12] dark:bg-white/[0.045] dark:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.2)] dark:hover:bg-white/[0.08] [&>svg]:size-3.5 [&>svg]:opacity-50 [&>svg]:transition-transform data-[state=open]:[&>svg]:rotate-180"
+      >
         <SelectValue placeholder="Select example" />
       </SelectTrigger>
 

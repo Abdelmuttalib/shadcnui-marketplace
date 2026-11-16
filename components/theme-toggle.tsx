@@ -24,7 +24,7 @@ export function ThemeToggleHeadless() {
   );
 }
 
-export function ThemeToggle() {
+export function ThemeToggle({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
   return (
@@ -34,6 +34,7 @@ export function ThemeToggle() {
       size="icon"
       aria-label="Toggle theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
+      className={className}
     >
       <HugeiconsIcon icon={isDark ? Sun03Icon : Moon02Icon} size={18} />
     </Button>

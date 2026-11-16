@@ -28,3 +28,21 @@ export const PACKAGE_MANAGER_COMMANDS: Record<
     local: "bun",
   },
 };
+
+export function getPackageManagerCommand(
+  manager: PackageManager,
+  local?: boolean
+) {
+  // const commands: Record<PackageManager, string> = {
+  //   pnpm: "pnpm dlx shadcn@latest add",
+  //   npm: "npx shadcn@latest add",
+  //   yarn: "yarn dlx shadcn@latest add",
+  //   bun: "bunx --bun shadcn@latest add",
+  // };
+
+  return PACKAGE_MANAGER_COMMANDS[manager][local ? "local" : "dlx"];
+}
+
+export function getShadcnCommand(version?: string) {
+  return version ? `shadcn@${version} add` : `shadcn add`;
+}

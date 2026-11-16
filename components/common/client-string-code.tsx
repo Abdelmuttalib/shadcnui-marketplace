@@ -40,7 +40,7 @@ export function ClientStringCode({
 
   return (
     <>
-      <div className="bg-card relative w-full border">
+      <div className="bg-card relative w-full">
         {!disableCopyButton ? <CopyButton code={code} /> : null}
         {codeString}
       </div>

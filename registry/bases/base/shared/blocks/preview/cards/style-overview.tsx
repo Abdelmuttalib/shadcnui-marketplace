@@ -33,7 +33,7 @@ export function StyleOverview() {
       <CardContent className="style-lyra:gap-4 style-mira:gap-4 flex flex-col gap-6">
         <div className="flex flex-col gap-1">
           <div className="cn-font-heading style-lyra:text-lg style-mira:text-lg style-sera:text-lg style-sera:font-semibold style-sera:tracking-wide style-sera:uppercase text-2xl font-medium">
-            {currentStyle?.title} -{" "}
+            {currentStyle?.name} -{" "}
             {currentFontHeading?.name &&
             currentFontHeading.name !== currentFont?.name
               ? currentFontHeading.name
