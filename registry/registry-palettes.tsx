@@ -79,10 +79,13 @@ export type ThemePaletteVariableKey =
   | "sidebar-border"
   | "sidebar-ring";
 
-export type ThemePalette = Record<
-  ThemePaletteName,
-  Record<"light" | "dark", Record<ThemePaletteVariableKey, string>>
->;
+export type ThemeMode = "light" | "dark";
+
+export type ThemePaletteColors = Record<ThemePaletteVariableKey, string>;
+
+export type ThemePaletteDefinition = Record<ThemeMode, ThemePaletteColors>;
+
+export type ThemePalette = Record<ThemePaletteName, ThemePaletteDefinition>;
 
 /*
   #FFFCF2
@@ -204,7 +207,7 @@ export type ThemePalette = Record<
 // "color-gray-900": "0.19 0.007 250" /* oklch(0.19 0.007 250) */,
 // "color-gray-950": "0.12 0.005 250" /* oklch(0.12 0.005 250) */,
 
-export const themePalettes: ThemePalette = {
+export const themePalettes = {
   "palette-1": {
     light: {
       primary: "0.56 0.007 250" /* oklch(0.56 0.007 250) */,
@@ -952,6 +955,7 @@ export const themePalettes: ThemePalette = {
       "sidebar-ring": "0.55 0.1337 279.34" /* oklch(0.55 0.1337 279.34) */,
     },
   },
+
   "palette-9": {
     // oklch(1 0 0) #FFFFFF
     // oklch(0 0 0) #000000
@@ -2052,7 +2056,7 @@ export const themePalettes: ThemePalette = {
   },
 
   // secondary #EDE8FF
-};
+} satisfies ThemePalette;
 
 export const themePalettesListEntries = Object.entries(themePalettes);
 export const PALETTES_KEYS = Object.keys(themePalettes) as ThemePaletteName[];

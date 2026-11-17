@@ -13,6 +13,7 @@
     "test": "vitest run",
     "format": "prettier --write .",
     "sort-imports": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
+    "generate:style-palettes": "tsx scripts/generate-style-palettes.ts",
     "generate:registry-prod": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/generate-registry.mts --env=production",
     "generate:registry-local": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/generate-registry.mts --env=development",
     "registry:build": "pnpm --filter=@shadcn/react build && pnpm --filter=@shadcn/helpers build && pnpm --filter=shadcn... build && bun run ./scripts/build-registry.mts",

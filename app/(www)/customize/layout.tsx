@@ -31,7 +31,6 @@ export default async function CustomizeLayout({
           </FeedAside>
           <div className="flex h-full min-w-0 flex-1 flex-col overflow-hidden">
             {children}
-            <InstallDialog />
             <PreviewSurface />
           </div>
         </div>
