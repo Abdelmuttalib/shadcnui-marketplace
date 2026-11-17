@@ -32,7 +32,7 @@ interface NavFileItem {
 }
 
 const navFiles: NavFileItem[] = [
-  { name: "readme", href: "/" },
+  { name: "home", href: "/" },
   { name: "styles", href: "/styles" },
 ];
 
@@ -197,7 +197,7 @@ export function StaggeredNavFiles() {
               logo={<Icons.shadcnMarketplaceWordmark className="h-auto w-7" />}
             />
 
-            <span className="text-foreground text-[13px] font-medium tracking-tight whitespace-nowrap">
+            <span className="text-foreground text-sm font-medium tracking-tight whitespace-nowrap">
               shadcn marketplace
             </span>
           </Link>

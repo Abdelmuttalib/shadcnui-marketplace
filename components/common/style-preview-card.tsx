@@ -22,7 +22,7 @@ export function StylePreviewCard({
     newTab?: boolean;
   };
 }) {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   const stylePrimaryColorCssVariableName = `--${getStyleVariablesPrefix(
     style
@@ -85,9 +85,9 @@ export function StylePreviewCard({
           }}
         ></div>
         <StylePageExamplePreview
-          id={`${style}-${pageExampleType || ""}-example-preview`}
+          id={`${style}-${activeExample}-example-preview`}
           styleProp={style}
-          pageExampleTypeProp={pageExampleType || "dashboard"}
+          pageExampleTypeProp={activeExample}
           hideBadge={true}
           // className="absolute left-1/2 top-0 z-50 w-[1440px] max-w-[1440px] -translate-x-1/2"
           className="absolute top-0 left-0 z-20 w-[1440px] max-w-[1440px]"

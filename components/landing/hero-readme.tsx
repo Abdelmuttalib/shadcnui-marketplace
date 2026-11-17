@@ -32,21 +32,21 @@ export function HeroReadMe() {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="fade-bottom no-scrollbar flex flex-col gap-4 pt-6 pb-0"
           >
-            <div className="flex items-center justify-between px-px py-2">
-              <div className="inline-flex items-center border border-white/20 bg-white/[0.10] shadow-[0_4px_20px_-8px_rgba(0,0,0,0.12)] backdrop-blur-2xl dark:border-white/[0.10] dark:bg-white/[0.035]">
-                <div className="flex items-center">
+            <div className="flex flex-col justify-between gap-6 px-px py-2 md:flex-row md:items-center">
+              <div className="flex flex-wrap items-center gap-1 backdrop-blur-2xl md:inline-flex md:flex-row md:gap-0 md:border md:border-white/20 md:bg-white/10 md:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.12)] md:dark:border-white/10 md:dark:bg-white/[0.035]">
+                <div className="flex md:items-center">
                   <StyleSelectorInline />
                 </div>
 
-                <div className="bg-border/70 h-5 w-px dark:bg-white/10" />
+                <div className="bg-border/70 md:h-5 md:w-px dark:bg-white/10" />
 
-                <div className="flex items-center">
+                <div className="flex md:items-center">
                   <ExampleSelectorInline />
                 </div>
 
-                <div className="bg-border/70 h-5 w-px dark:bg-white/10" />
+                <div className="bg-border/70 md:h-5 md:w-px dark:bg-white/10" />
 
-                <div className="flex items-center">
+                <div className="flex md:items-center">
                   <PaletteSelectorInline />
                 </div>
               </div>

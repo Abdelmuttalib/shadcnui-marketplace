@@ -19,7 +19,7 @@ export function StylePaletteCommand({
   includePalette = true,
   overwrite = true,
 }: StylePaletteCommandProps) {
-  const command = useInstallCommand({
+  const { command } = useInstallCommand({
     base,
     style,
     includePalette,

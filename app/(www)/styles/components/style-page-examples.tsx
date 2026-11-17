@@ -12,7 +12,7 @@ export function StylePageExamples({ style = "carbon" }: { style?: StyleName }) {
           key={`${style}-style-page-example-type-${pageExampleType}`}
           id={pageExampleType}
           styleProp={style}
-          pageExampleTypeProp={pageExampleType}
+          pageExampleTypeProp={pageExampleType as any}
           hideBadge={true}
           // className="w-[70vw] max-w-[70vw]"
         />
