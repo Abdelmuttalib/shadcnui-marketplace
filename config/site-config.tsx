@@ -42,6 +42,12 @@ export const siteConfig = {
 
   githubLink: "https://github.com/Abdelmuttalib/shadcnui-marketplace",
 
+  links: {
+    creator: {
+      twitter: "https://x.com/Abdelmuttalib_",
+    },
+  },
+
   mainNavLinks: mainLinks,
   footerLinks: mainLinks,
 

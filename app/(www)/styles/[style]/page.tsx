@@ -114,7 +114,6 @@ export default async function StylePage({
             <div className="space-y-8 px-5 lg:p-8 lg:pt-20">
               {/* Mobile header */}
               <div className="border-foreground/6 relative -mx-5 mb-5 overflow-hidden border-b px-5 sm:-mx-6 sm:px-6 lg:hidden">
-                <HalftoneBackground />
                 <div className="relative space-y-2 py-16">
                   <div className="flex items-center gap-1.5">
                     {/* <UsersIcon className="text-foreground/60 h-4 w-4" /> */}

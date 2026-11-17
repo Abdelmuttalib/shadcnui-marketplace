@@ -46,28 +46,74 @@ const mobileMenuSections: MobileMenuSection[] = [
   { name: "blocks", href: "/blocks" },
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                                Glass styles                               */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Uses shadcn semantic tokens instead of hardcoded white backgrounds.
+ *
+ * This keeps the glass effect consistent in both light and dark themes.
+ */
 const glassIsland = cn(
   "relative isolate",
-  "border border-white/20",
-  "bg-white/[0.12] backdrop-blur-xl",
+  "border border-border/80",
+  "bg-white/[0.12] backdrop-blur-2xl",
+  "shadow-md shadow-foreground/[0.06]",
   "shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)]",
+  "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px",
+  "before:bg-gradient-to-r before:from-transparent before:via-foreground/15 before:to-transparent",
   "dark:border-white/[0.12]",
   "dark:bg-white/[0.045]",
-  "dark:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.2)]",
-  "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px",
-  "before:bg-gradient-to-r before:from-transparent before:via-white/40 before:to-transparent"
+  "dark:shadow-lg dark:shadow-black/20",
+  "dark:before:via-foreground/20"
 );
 
 const glassButton = cn(
   "group relative flex h-11 items-center justify-center",
-  "rounded-none border border-transparent",
-  "px-3.5 text-[13px] font-medium capitalize",
-  "text-foreground/80",
+  "border border-transparent",
+  "px-4 text-[13px] font-medium capitalize",
+  "text-muted-foreground",
   "transition-all duration-200",
-  "hover:border-primary/30 hover:bg-white/[0.18] hover:text-foreground",
-  "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/20",
-  "dark:hover:border-primary/25 dark:hover:bg-white/[0.08]"
+  "hover:border-border hover:bg-accent hover:text-accent-foreground",
+  "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+  "active:bg-accent/80"
 );
+
+const activeGlassButton = cn(
+  "border-brand/20",
+  "bg-brand/8 text-foreground",
+  "dark:border-brand/25"
+
+  // "border-primary/20 bg-primary/[0.08] text-foreground dark:border-primary/25"
+);
+
+// const glassIsland = cn(
+//   "relative isolate",
+//   "border border-white/20",
+//   "bg-white/[0.12] backdrop-blur-xl",
+//   "shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)]",
+//   "dark:border-white/[0.12]",
+//   "dark:bg-white/[0.045]",
+//   "dark:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.2)]",
+//   "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px",
+//   "before:bg-gradient-to-r before:from-transparent before:via-white/40 before:to-transparent"
+// );
+
+// const glassButton = cn(
+//   "group relative flex h-11 items-center justify-center",
+//   "rounded-none border border-transparent",
+//   "px-3.5 text-[13px] font-medium capitalize",
+//   "text-foreground/80",
+//   "transition-all duration-200",
+//   "hover:border-primary/30 hover:bg-white/[0.18] hover:text-foreground",
+//   "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/20",
+//   "dark:hover:border-primary/25 dark:hover:bg-white/[0.08]"
+// );
+
+/* -------------------------------------------------------------------------- */
+/*                              Navigation                                   */
+/* -------------------------------------------------------------------------- */
 
 export function StaggeredNavFiles() {
   const pathname = usePathname() || "/";
@@ -82,6 +128,10 @@ export function StaggeredNavFiles() {
 
   const isActivePrefix = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
+
+  /* ------------------------------------------------------------------------ */
+  /*                              Mobile behavior                             */
+  /* ------------------------------------------------------------------------ */
 
   useEffect(() => {
     setMobileNavigationView("closed");
@@ -121,9 +171,15 @@ export function StaggeredNavFiles() {
 
   return (
     <>
-      {/* Desktop floating islands */}
-      <div className="pointer-events-none fixed top-2 right-0 left-0 z-[99] hidden items-center justify-between px-4 lg:flex">
-        {/* Left logo island */}
+      {/* ================================================================== */}
+      {/*                         DESKTOP NAVIGATION                         */}
+      {/* ================================================================== */}
+
+      <div className="pointer-events-none fixed top-2 right-0 left-0 z-[100] hidden items-center justify-between px-4 lg:flex">
+        {/* ---------------------------------------------------------------- */}
+        {/*                         Logo island                              */}
+        {/* ---------------------------------------------------------------- */}
+
         <motion.div
           initial={{ opacity: 0, x: -16, y: -6 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
@@ -141,13 +197,16 @@ export function StaggeredNavFiles() {
               logo={<Icons.shadcnMarketplaceWordmark className="h-auto w-7" />}
             />
 
-            <span className="text-foreground/85 text-[13px] font-medium tracking-tight whitespace-nowrap">
+            <span className="text-foreground text-[13px] font-medium tracking-tight whitespace-nowrap">
               shadcn marketplace
             </span>
           </Link>
         </motion.div>
 
-        {/* Right navigation islands */}
+        {/* ---------------------------------------------------------------- */}
+        {/*                       Right navigation                           */}
+        {/* ---------------------------------------------------------------- */}
+
         <motion.div
           initial={{ opacity: 0, x: 16, y: -6 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
@@ -159,11 +218,13 @@ export function StaggeredNavFiles() {
           className="pointer-events-auto flex items-center gap-2"
         >
           {/* Navigation links island */}
+
           <nav
             aria-label="Main navigation"
             className={cn(glassIsland, "flex h-11 items-center")}
           >
             {/* README and STYLES */}
+
             {navFiles.map((item, index) => {
               const active =
                 isActive(item.path || item.href) ||
@@ -184,12 +245,11 @@ export function StaggeredNavFiles() {
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noreferrer" : undefined}
+                    aria-current={active ? "page" : undefined}
                     className={cn(
                       glassButton,
-                      "h-full px-4",
-                      active
-                        ? "border-brand/20 bg-brand/[0.08] text-foreground dark:border-brand/25"
-                        : ""
+                      "h-full",
+                      active && activeGlassButton
                     )}
                   >
                     {item.name}
@@ -199,14 +259,14 @@ export function StaggeredNavFiles() {
             })}
 
             {/* Blocks */}
+
             <Link
               href="/blocks"
+              aria-current={isActivePrefix("/blocks") ? "page" : undefined}
               className={cn(
                 glassButton,
-                "h-full px-4",
-                isActivePrefix("/blocks")
-                  ? "border-primary/20 bg-primary/[0.08] text-foreground dark:border-primary/25"
-                  : ""
+                "h-full",
+                isActivePrefix("/blocks") && activeGlassButton
               )}
             >
               blocks
@@ -214,16 +274,20 @@ export function StaggeredNavFiles() {
 
             {/* Divider */}
 
+            <div className="bg-border mx-1 h-5 w-px" />
+
             {/* Theme toggle */}
+
             <button
               type="button"
               aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
               onClick={() => setTheme(isDark ? "light" : "dark")}
               className={cn(
                 "flex h-11 w-11 items-center justify-center",
-                "text-foreground/70 transition-all duration-200",
-                "hover:text-foreground hover:bg-white/[0.18]",
-                "dark:hover:bg-white/[0.08]"
+                "text-muted-foreground",
+                "transition-all duration-200",
+                "hover:bg-accent hover:text-accent-foreground",
+                "focus-visible:ring-ring focus-visible:ring-1 focus-visible:outline-none"
               )}
             >
               <HugeiconsIcon
@@ -234,6 +298,7 @@ export function StaggeredNavFiles() {
             </button>
 
             {/* GitHub */}
+
             <a
               href={siteConfig.githubLink}
               target="_blank"
@@ -241,9 +306,10 @@ export function StaggeredNavFiles() {
               aria-label="GitHub"
               className={cn(
                 "flex h-11 w-11 items-center justify-center",
-                "text-foreground/70 transition-all duration-200",
-                "hover:text-foreground hover:bg-white/[0.18]",
-                "dark:hover:bg-white/[0.08]"
+                "text-muted-foreground",
+                "transition-all duration-200",
+                "hover:bg-accent hover:text-accent-foreground",
+                "focus-visible:ring-ring focus-visible:ring-1 focus-visible:outline-none"
               )}
             >
               <Icons.gitHub className="size-4" />
@@ -251,15 +317,16 @@ export function StaggeredNavFiles() {
           </nav>
 
           {/* Customize island */}
+
           <Link
             href="/customize"
             className={cn(
               glassIsland,
               "group flex h-11 items-center gap-2 px-4",
-              "text-foreground/90 text-[12px] font-medium",
+              "text-foreground text-[12px] font-medium",
               "transition-all duration-200",
-              "hover:border-primary/30 hover:bg-white/[0.18]",
-              "dark:hover:bg-white/[0.08]"
+              "hover:border-primary/30 hover:bg-accent",
+              "focus-visible:ring-ring focus-visible:ring-1 focus-visible:outline-none"
             )}
           >
             <span className="font-mono tracking-wider uppercase">
@@ -267,7 +334,7 @@ export function StaggeredNavFiles() {
             </span>
 
             <svg
-              className="size-3 opacity-50 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+              className="text-muted-foreground group-hover:text-foreground size-3 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               viewBox="0 0 10 10"
               fill="none"
               aria-hidden="true"
@@ -282,18 +349,44 @@ export function StaggeredNavFiles() {
         </motion.div>
       </div>
 
-      {/* Mobile header */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      {/* ================================================================== */}
+      {/*                           MOBILE HEADER                            */}
+      {/* ================================================================== */}
+
+      {/*
+        IMPORTANT:
+        This header is intentionally unconditional.
+        It must appear on the homepage (/) as well as every other route.
+      */}
+
+      <motion.header
+        initial={{ opacity: 0, y: -5 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.28 }}
-        className="bg-background/75 border-foreground/10 fixed top-0 right-0 left-0 z-[99] flex h-(--landing-topbar-height) items-center justify-between border-b backdrop-blur-xl lg:hidden"
+        className={cn(
+          "fixed top-0 right-0 left-0 z-[101]",
+          "flex h-(--landing-topbar-height) items-center justify-between",
+          "border-border border-b",
+          "bg-background/95 backdrop-blur-2xl",
+          "shadow-foreground/[0.03] shadow-sm",
+          "lg:hidden"
+        )}
       >
-        <Link href="/" className="flex h-full items-center gap-1 px-4">
+        {/* Logo */}
+
+        <Link
+          href="/"
+          aria-label="Home"
+          className="flex h-full items-center gap-1 px-4"
+        >
           <Icons.shadcnMarketplaceWordmark className="h-auto w-7" />
         </Link>
 
-        <div className="flex items-center gap-1 pr-2">
+        {/* Mobile actions */}
+
+        <div className="flex items-center gap-1 pr-3">
+          {/* Search */}
+
           {isDocs && (
             <button
               type="button"
@@ -307,19 +400,33 @@ export function StaggeredNavFiles() {
                 );
               }}
               aria-label="Search documentation"
-              className="text-foreground/55 hover:text-foreground flex size-8 items-center justify-center transition-colors"
+              className={cn(
+                "flex size-9 items-center justify-center",
+                "text-muted-foreground transition-colors",
+                "hover:bg-accent hover:text-accent-foreground"
+              )}
             >
               <Search className="size-4" />
             </button>
           )}
 
-          <div className="flex size-8 items-center justify-center">
+          {/* Theme toggle */}
+
+          <div
+            className={cn(
+              "flex size-9 items-center justify-center",
+              "[&_button]:text-muted-foreground"
+            )}
+          >
             <ThemeToggle />
           </div>
+
+          {/* Menu trigger */}
 
           <button
             type="button"
             data-mobile-navigation-trigger=""
+            aria-expanded={mobileNavigationView !== "closed"}
             aria-label={
               mobileNavigationView === "closed" ? "Open menu" : "Close menu"
             }
@@ -332,7 +439,14 @@ export function StaggeredNavFiles() {
                   : "closed"
               );
             }}
-            className="text-foreground/75 hover:text-foreground flex size-8 items-center justify-center transition-colors"
+            className={cn(
+              "flex size-9 items-center justify-center",
+              "border-border border",
+              "bg-card text-foreground",
+              "shadow-sm transition-all duration-200",
+              "hover:bg-accent hover:text-accent-foreground",
+              "focus-visible:ring-ring focus-visible:ring-1 focus-visible:outline-none"
+            )}
           >
             {mobileNavigationView !== "closed" ? (
               <svg
@@ -340,6 +454,7 @@ export function StaggeredNavFiles() {
                 width="18"
                 height="18"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   fill="currentColor"
@@ -352,6 +467,7 @@ export function StaggeredNavFiles() {
                 width="18"
                 height="18"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   fill="currentColor"
@@ -361,28 +477,49 @@ export function StaggeredNavFiles() {
             )}
           </button>
         </div>
-      </motion.div>
+      </motion.header>
 
-      {/* Mobile navigation overlay */}
+      {/* ================================================================== */}
+      {/*                       MOBILE NAVIGATION                            */}
+      {/* ================================================================== */}
+
       <AnimatePresence>
         {mobileNavigationView === "site" && (
           <motion.div
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15 }}
-            className="bg-background/95 pointer-events-auto fixed inset-0 z-[98] w-full backdrop-blur-xl lg:hidden"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{
+              duration: 0.2,
+              ease: "easeOut",
+            }}
+            className={cn(
+              "pointer-events-auto fixed inset-0 z-[100]",
+              "w-full",
+              "bg-background/95 backdrop-blur-2xl",
+              "lg:hidden"
+            )}
           >
             <div className="flex h-full flex-col pt-(--landing-topbar-height)">
+              {/* Navigation content */}
+
               <div className="min-h-0 flex-1 overflow-y-auto">
+                {/* Back to docs */}
+
                 {isDocs && (
                   <button
                     type="button"
                     onClick={() => setMobileNavigationView("docs")}
-                    className="text-foreground/60 border-foreground/10 hover:text-foreground flex w-full items-center gap-2 border-b px-5 py-3 transition-colors"
+                    className={cn(
+                      "flex w-full items-center gap-2",
+                      "border-border border-b",
+                      "px-5 py-3",
+                      "text-muted-foreground transition-colors",
+                      "hover:bg-accent hover:text-accent-foreground"
+                    )}
                   >
                     <svg width="12" height="12" viewBox="0 0 24 24">
                       <path
@@ -397,23 +534,61 @@ export function StaggeredNavFiles() {
                   </button>
                 )}
 
-                {navFiles.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setMobileNavigationView("closed")}
-                    className={cn(
-                      "border-foreground/[0.08] flex items-center gap-2.5 border-b px-5 py-4",
-                      "font-mono text-sm tracking-wider uppercase transition-colors",
-                      isActive(item.path || item.href) ||
-                        (item.href === "/docs" && isDocs)
-                        ? "bg-foreground/[0.04] text-foreground"
-                        : "text-foreground/65 hover:bg-foreground/[0.03]"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {/* Main navigation links */}
+
+                {navFiles.map((item) => {
+                  const active =
+                    isActive(item.path || item.href) ||
+                    (item.href === "/docs" && isDocs);
+
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setMobileNavigationView("closed")}
+                      className={cn(
+                        "flex items-center gap-2.5",
+                        "border-border border-b",
+                        "px-5 py-4",
+                        "font-mono text-sm tracking-wider uppercase",
+                        "transition-colors duration-200",
+                        active
+                          ? "bg-accent text-accent-foreground"
+                          : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                      )}
+                    >
+                      {item.name}
+
+                      {active && (
+                        <span className="bg-primary ml-auto size-1.5" />
+                      )}
+                    </Link>
+                  );
+                })}
+
+                {/* Blocks */}
+
+                <Link
+                  href="/blocks"
+                  onClick={() => setMobileNavigationView("closed")}
+                  className={cn(
+                    "flex items-center gap-2.5",
+                    "border-border border-b",
+                    "px-5 py-4",
+                    "font-mono text-sm tracking-wider uppercase",
+                    "transition-colors duration-200",
+                    isActivePrefix("/blocks")
+                      ? "bg-accent text-accent-foreground"
+                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  )}
+                >
+                  blocks
+                  {isActivePrefix("/blocks") && (
+                    <span className="bg-primary ml-auto size-1.5" />
+                  )}
+                </Link>
+
+                {/* Additional menu sections */}
 
                 <Accordion
                   defaultValue={mobileMenuSections
@@ -429,35 +604,50 @@ export function StaggeredNavFiles() {
                     <AccordionItem
                       key={section.name}
                       value={section.name}
-                      className="border-foreground/[0.08]"
+                      className="border-border"
                     >
                       {section.children ? (
                         <>
-                          <AccordionTrigger className="text-foreground/70 hover:text-foreground px-5 py-4 font-mono text-sm tracking-wider uppercase hover:no-underline">
+                          <AccordionTrigger
+                            className={cn(
+                              "px-5 py-4",
+                              "font-mono text-sm tracking-wider uppercase",
+                              "text-muted-foreground",
+                              "hover:text-foreground hover:no-underline"
+                            )}
+                          >
                             {section.name}
                           </AccordionTrigger>
 
                           <AccordionContent className="pb-0">
-                            {section.children.map((item) => (
-                              <Link
-                                key={item.name}
-                                href={item.href}
-                                target={item.external ? "_blank" : undefined}
-                                rel={item.external ? "noreferrer" : undefined}
-                                onClick={() =>
-                                  setMobileNavigationView("closed")
-                                }
-                                className={cn(
-                                  "flex items-center gap-2.5 py-3 pr-5 pl-9",
-                                  "font-mono text-sm tracking-wider uppercase transition-colors",
-                                  isActivePrefix(item.path || item.href)
-                                    ? "bg-foreground/[0.04] text-foreground"
-                                    : "text-foreground/55 hover:bg-foreground/[0.03] hover:text-foreground"
-                                )}
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
+                            {section.children.map((item) => {
+                              const active = isActivePrefix(
+                                item.path || item.href
+                              );
+
+                              return (
+                                <Link
+                                  key={item.name}
+                                  href={item.href}
+                                  target={item.external ? "_blank" : undefined}
+                                  rel={item.external ? "noreferrer" : undefined}
+                                  onClick={() =>
+                                    setMobileNavigationView("closed")
+                                  }
+                                  className={cn(
+                                    "flex items-center gap-2.5",
+                                    "py-3 pr-5 pl-9",
+                                    "font-mono text-sm tracking-wider uppercase",
+                                    "transition-colors",
+                                    active
+                                      ? "bg-accent text-accent-foreground"
+                                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                  )}
+                                >
+                                  {item.name}
+                                </Link>
+                              );
+                            })}
                           </AccordionContent>
                         </>
                       ) : (
@@ -465,11 +655,13 @@ export function StaggeredNavFiles() {
                           href={section.href!}
                           onClick={() => setMobileNavigationView("closed")}
                           className={cn(
-                            "flex items-center gap-2.5 px-5 py-4",
-                            "font-mono text-sm tracking-wider uppercase transition-colors",
+                            "flex items-center gap-2.5",
+                            "px-5 py-4",
+                            "font-mono text-sm tracking-wider uppercase",
+                            "transition-colors",
                             isActive(section.href!)
-                              ? "bg-foreground/[0.04] text-foreground"
-                              : "text-foreground/65 hover:text-foreground"
+                              ? "bg-accent text-accent-foreground"
+                              : "text-muted-foreground hover:text-foreground hover:bg-accent"
                           )}
                         >
                           {section.name}
@@ -481,15 +673,30 @@ export function StaggeredNavFiles() {
               </div>
 
               {/* Mobile CTA */}
-              <div className="border-foreground/10 bg-background/80 shrink-0 border-t px-5 py-4">
+
+              <div
+                className={cn(
+                  "border-border shrink-0 border-t",
+                  "bg-card/90 px-5 py-4",
+                  "backdrop-blur-xl"
+                )}
+              >
                 <Link
                   href="/customize"
                   onClick={() => setMobileNavigationView("closed")}
-                  className="bg-foreground text-background flex w-full items-center justify-center gap-2 py-3.5 font-mono text-xs tracking-wider uppercase transition-opacity hover:opacity-85"
+                  className={cn(
+                    "flex w-full items-center justify-center gap-2",
+                    "border-primary border",
+                    "bg-primary text-primary-foreground",
+                    "py-3.5",
+                    "font-mono text-xs tracking-wider uppercase",
+                    "transition-opacity duration-200",
+                    "hover:opacity-85"
+                  )}
                 >
                   Customize Your UI
                   <svg
-                    className="size-3 opacity-50"
+                    className="size-3 opacity-60"
                     viewBox="0 0 10 10"
                     fill="none"
                     aria-hidden="true"

@@ -171,6 +171,31 @@ export function HeroReadMe() {
                   </Link>
                 </div>
               </div>
+
+              <div className="mt-10">
+                {" "}
+                <div className="text-muted-foreground w-full px-1 text-center text-xs leading-loose sm:text-sm">
+                  Built by{" "}
+                  <a
+                    href={siteConfig.links.creator.twitter}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:decoration-brand hover:text-brand font-medium underline underline-offset-4"
+                  >
+                    Abdelmuttalib
+                  </a>{" "}
+                  . The source code is available on{" "}
+                  <a
+                    href={siteConfig.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-foreground hover:decoration-foreground font-medium underline underline-offset-4"
+                  >
+                    GitHub
+                  </a>
+                  .
+                </div>
+              </div>
             </div>
           </motion.article>
         </div>

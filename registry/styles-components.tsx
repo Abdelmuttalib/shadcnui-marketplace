@@ -71,25 +71,8 @@ export function prefixCssVariable(cssVariable: string, prefix: string) {
   return cssVariable.replace(/^--/, `--${prefix}-`);
 }
 
-const PAGE_EXAMPLES: Record<string, ExampleName> = {
-  authentication: "authentication",
-  cards: "cards",
-  dashboard: "dashboard",
-  forms: "forms",
-  mail: "mail",
-  music: "music",
-  playground: "playground",
-  tasks: "tasks",
-};
-
-export function renderStylePageExample(style: StyleName, page: string) {
-  const example = PAGE_EXAMPLES[page];
-
-  if (!example) {
-    return null;
-  }
-
-  return <ExampleRenderer style={style as ExampleStyle} name={example} />;
+export function renderStylePageExample(style: StyleName, page: ExampleName) {
+  return <ExampleRenderer style={style as ExampleStyle} name={page} />;
 }
 
 export function renderStyleHero(style: StyleName) {

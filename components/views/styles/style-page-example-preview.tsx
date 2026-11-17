@@ -12,13 +12,14 @@ import {
 } from "@/registry/styles-components";
 import { cn } from "@/utils/cn";
 import { StyleName } from "@/registry/styles";
+import { ExampleName } from "@/registry/bases/base/shared/example-renderer";
+import Glow from "@/components/ui/glow";
 
 export function StylePageExamplePreview({
   id,
   styleProp = "carbon",
   pageExampleTypeProp,
   className,
-  coloredEdge = false,
   style,
   hideBadge = false,
   screenWidth,
@@ -27,17 +28,17 @@ export function StylePageExamplePreview({
   styleProp?: StyleName;
   className?: string;
   coloredEdge?: boolean;
-  pageExampleTypeProp?: PageExampleType;
+  pageExampleTypeProp?: ExampleName;
   style?: React.CSSProperties;
   hideBadge?: boolean;
   screenWidth?: boolean;
 }) {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   return (
     <div
       className={cn(
-        "w-full max-w-full",
+        "relative w-full max-w-full",
         {
           "w-[1440px] max-w-[1440px]": screenWidth,
         },
@@ -58,30 +59,17 @@ export function StylePageExamplePreview({
           </div>
         ) : null}
         <div
-          className="bg-background relative flex flex-col justify-between gap-2 overflow-x-auto"
+          className="bg-background flex flex-col justify-between gap-2 overflow-x-auto"
           style={{
             borderRadius: getStyleRadius(styleProp),
-            // coloredEdge
-            //   ? {
-            //       backgroundColor: `var(--${getStyleVariablesPrefix(
-            //         styleProp
-            //       )}-primary)`,
-            //     }
-            //   : {}
           }}
         >
-          {/* gradient effect lightning */}
           <div className="flex h-full w-full gap-2 overflow-hidden">
             <div
               className={cn(
-                "h-fit w-full overflow-hidden border dark:shadow dark:shadow-gray-950",
+                "h-fit w-full overflow-hidden border",
                 getStyleFontClassname(styleProp),
                 getStyleBackgroundClassname(styleProp)
-                // {
-                //   "max-w-md": breakpoint === "sm",
-                //   "max-w-screen-md": breakpoint === "md",
-                //   "max-w-full": breakpoint === "lg",
-                // }
               )}
               style={{
                 borderRadius: getStyleRadius(styleProp),
@@ -89,7 +77,7 @@ export function StylePageExamplePreview({
             >
               {renderStylePageExample(
                 styleProp,
-                pageExampleTypeProp || pageExampleType
+                pageExampleTypeProp || activeExample
               )}
             </div>
           </div>

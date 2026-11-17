@@ -47,13 +47,13 @@ export function ThemeModeRadio() {
   const { theme, setTheme, systemTheme } = useTheme();
 
   return (
-    <div className="flex items-center overflow-hidden rounded-full border">
+    <div className="flex items-center overflow-hidden border">
       <span className="sr-only">Select a display theme:</span>
       <span>
         <button
           onClick={() => setTheme("system")}
           className={cn(
-            "text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full p-1",
+            "text-muted-foreground hover:text-foreground flex items-center gap-2 p-1",
             {
               "border-input bg-accent/80 text-foreground border":
                 theme === "system",
@@ -68,7 +68,7 @@ export function ThemeModeRadio() {
         <button
           onClick={() => setTheme("light")}
           className={cn(
-            "text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full p-1",
+            "text-muted-foreground hover:text-foreground flex items-center gap-2 p-1",
             {
               "border-input bg-accent/80 text-foreground border":
                 theme === "light",
@@ -83,7 +83,7 @@ export function ThemeModeRadio() {
         <button
           onClick={() => setTheme("dark")}
           className={cn(
-            "text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full p-1",
+            "text-muted-foreground hover:text-foreground flex items-center gap-2 p-1",
             {
               "border-input bg-accent/80 text-foreground border":
                 theme === "dark",

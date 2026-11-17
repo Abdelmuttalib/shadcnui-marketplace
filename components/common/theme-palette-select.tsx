@@ -2,7 +2,6 @@
 
 import { Undo2 } from "lucide-react";
 import { useTheme } from "next-themes";
-import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -24,7 +23,10 @@ import {
 export function ThemePaletteSelect() {
   const { resolvedTheme } = useTheme();
 
-  const { activePalette, setActivePalette } = useThemePaletteStore();
+  const activePalette = useThemePaletteStore((state) => state.activePalette);
+  const setActivePalette = useThemePaletteStore(
+    (state) => state.setActivePalette
+  );
 
   return (
     <Select value={activePalette} onValueChange={setActivePalette as any}>
@@ -35,7 +37,7 @@ export function ThemePaletteSelect() {
         <SelectValue placeholder={"Select Palette"} />
       </SelectTrigger>
       <SelectContent className="w-full rounded-none">
-        {themePalettesListEntries.map(([paletteName, palette], index) => {
+        {themePalettesListEntries.map(([paletteName, palette]) => {
           return (
             <SelectItem
               key={`theme-palette-${paletteName}`}

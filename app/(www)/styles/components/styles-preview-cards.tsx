@@ -26,13 +26,13 @@ export function StylePreview({
   className?: string;
   s: string;
 }) {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   return (
     <StylePageExamplePreview
-      id={pageExampleType || "dashboard"}
+      id={activeExample}
       styleProp={s}
-      pageExampleTypeProp={pageExampleType || "dashboard"}
+      pageExampleTypeProp={activeExample}
       hideBadge={true}
       className="overflow-auto"
       screenWidth
@@ -42,7 +42,7 @@ export function StylePreview({
 }
 
 export function StylesPreviews({ className }: { className?: string }) {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   return (
     <div
@@ -128,9 +128,9 @@ export function StylesPreviews({ className }: { className?: string }) {
                 </div>
                 <div className="relative">
                   <StylePageExamplePreview
-                    id={pageExampleType || "dashboard"}
+                    id={activeExample}
                     styleProp={style.name}
-                    pageExampleTypeProp={pageExampleType || "dashboard"}
+                    pageExampleTypeProp={activeExample}
                     hideBadge={true}
                     className="overflow-auto"
 
@@ -147,7 +147,7 @@ export function StylesPreviews({ className }: { className?: string }) {
 }
 
 export function StylesPreviewCards({ className }: { className?: string }) {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   return (
     <div
@@ -229,9 +229,9 @@ export function StylesPreviewCards({ className }: { className?: string }) {
                       }}
                     ></div>
                     <StylePageExamplePreview
-                      id={pageExampleType || "dashboard"}
+                      id={activeExample}
                       styleProp={style.name}
-                      pageExampleTypeProp={pageExampleType || "dashboard"}
+                      pageExampleTypeProp={activeExample}
                       hideBadge={true}
                       className="absolute top-0 left-0 z-20 rounded-none"
                     />
@@ -247,7 +247,7 @@ export function StylesPreviewCards({ className }: { className?: string }) {
 }
 
 export function StylePreviewCard({ style }: { style: string }) {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   const s = `--${getStyleVariablesPrefix(style)}-primary`;
   const c = `--${getStyleVariablesPrefix(style)}`;
@@ -315,9 +315,9 @@ export function StylePreviewCard({ style }: { style: string }) {
               }}
             ></div>
             <StylePageExamplePreview
-              id={pageExampleType || "dashboard"}
+              id={activeExample || "dashboard"}
               styleProp={style as any}
-              pageExampleTypeProp={pageExampleType || "dashboard"}
+              pageExampleTypeProp={activeExample || "dashboard"}
               hideBadge={true}
               className="absolute top-0 left-0 z-20 w-[70vw] max-w-[70vw]"
             />
@@ -329,7 +329,7 @@ export function StylePreviewCard({ style }: { style: string }) {
 }
 
 export function StylesPagesExamplesPreviews() {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   return (
     <div className="grid gap-10">
@@ -391,9 +391,9 @@ export function StylesPagesExamplesPreviews() {
                 </div>
                 <div className="grid overflow-scroll p-4 py-0 lg:py-4 xl:col-span-5">
                   <StylePageExamplePreview
-                    id="dashboard"
+                    id={activeExample}
                     styleProp={styleData.name as any}
-                    pageExampleTypeProp={pageExampleType || "dashboard"}
+                    pageExampleTypeProp={activeExample}
                     hideBadge={true}
                     className="overflow-auto"
                     screenWidth
@@ -409,7 +409,7 @@ export function StylesPagesExamplesPreviews() {
 }
 
 export function StylesExamples() {
-  const { pageExampleType } = useStyleStore();
+  const activeExample = useStyleStore((state) => state.activeExample);
 
   return (
     <>
@@ -419,9 +419,9 @@ export function StylesExamples() {
           return (
             <StylePageExamplePreview
               key={styleData.title + styleData.name + index}
-              id={pageExampleType + styleData.title + styleData.name + index}
+              id={activeExample + styleData.title + styleData.name + index}
               styleProp={styleData.name as any}
-              pageExampleTypeProp={pageExampleType || "dashboard"}
+              pageExampleTypeProp={activeExample}
               hideBadge={true}
               className={`sticky top-32 overflow-auto`}
               coloredEdge
